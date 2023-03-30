@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="">
+
+	<definitions>
+	
+			<trailemitter
+				name="zTrails"
+				bone="_bone_overhead"
+				life="1000"
+				spawnrate="10"
+				startminparticlelife="1000"
+				startmaxparticlelife="1000"		
+				endminparticlelife="1"
+				endmaxparticlelife="1" 
+				texpostime="2000"
+			 	texposscale="1.8"
+			 	texstretchscale="0"
+				position="0 0 0"
+				material="/shared/effects/materials/arrow_trail.material"
+			>
+				<particle
+					startcolor=".3 0 .1"
+					midcolor=".3 0 .1"
+					endcolor=".3 0 .1"
+					startsize="0"
+					midsize="10"
+					endsize="0"
+					midcolorpos=".1"
+					midsizepos=".1"
+				/>
+			</trailemitter>	
+
+			
+	
+		<particlesystem name="system0" space="world" scale="1">
+
+			<sound
+				volume=".5"
+				sample="../sounds/cast.wav"
+				linearfalloff="true"
+				falloffstart="0"
+				falloffend="2000"
+			/>
+
+			<sound
+				volume=".5"
+				sample="../sounds/impact.wav"
+				linearfalloff="true"
+				falloffstart="0"
+				falloffend="2000"
+			/>
+
+			<trackeremitter
+				count="15"
+				targetbone="_bone_overhead"
+				tracktype="angular"
+				trackspeed="25"
+				drag="0"
+				spawnrate="1000"
+				particlelife="2000"
+				gravity="-50"
+				offsetsphere="80 80 0"
+				minspeed="10"
+				maxspeed="200"
+				targetposition="0 0 0"
+				acceleration="30"
+				direction="0 0 1"
+				inheritvelocity="0"
+				distancelife="true"
+			>
+				<particle
+					emitter0="zTrails"
+				/>
+			</trackeremitter>
+			
+			<billboard
+				delay="250"
+				bone="_bone_overhead"
+				life="500"
+				color="1 1 1"
+				midalphapos=".25"
+				param=".02"
+				startsize="50"
+				endsize="125"
+				startalpha="0"
+				midalpha="1"
+				endalpha="0"
+				depthbias="-50"
+				position="0 0 0"
+				material="/shared/effects/materials/refract_ring.material"
+				lockup="0"
+				pitch="0"
+			/>
+
+	</particlesystem>
+</definitions>
+
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<spawnmodifier instance="instance1" modifier="modifier0"/>  
+	<waitfordeath instance="instance0" />
+	<!-- <die /> -->
+</thread>
+
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+
+
+
+
+
+
+

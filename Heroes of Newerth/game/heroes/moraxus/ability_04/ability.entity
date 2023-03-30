@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Moraxus4"
+
+	icon="icon.tga"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+	statuseffecttooltip="State_Moraxus_Ability4"
+	
+	casttime="0"
+	castactiontime="0"
+	
+	frontqueue="true"
+
+	actiontype="target_self"
+	casteffect=""
+	targetscheme="organic_enemy_units"
+	targetradius="400"
+	casteffecttype="Magic"
+	manacost="100,150,200"
+	cooldowntime="80000,70000,60000"
+>
+	<onimpact>
+		<applystate target="source_entity" name="State_Moraxus_Ability4" duration="10000" />
+	</onimpact>
+	
+	<modifier key="moraxusulton" modpriority="100"
+	casttime="0"
+	castactiontime="0"
+	manacost="0"
+	ignorecooldown="true"
+	cooldowntime="0"
+	icon="icon2.tga"
+	>
+		<onimpact>
+			<expirestate target="source_entity" name="State_Moraxus_Ability4" />
+		</onimpact>
+	</modifier>
+</ability>

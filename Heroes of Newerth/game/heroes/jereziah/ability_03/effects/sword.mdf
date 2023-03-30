@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="ability_3.max" file="sword.model" type="K2" >
+
+	<anim name="idle" clip="default_1.clip" fps="30" loop="true"/>
+	
+</model>

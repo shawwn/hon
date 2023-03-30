@@ -1,0 +1,3 @@
+IP: 66.240.234.114
+User name: root
+Password: reClinate3

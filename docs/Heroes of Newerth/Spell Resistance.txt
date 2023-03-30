@@ -1,0 +1,9 @@
+There are various levels of magic immunities and resistances.
+
+Each class of modifiers should be able to be resisted by a certain amount. This is NOT IMPORTANT at this stage for implementation, just something we might want as we go further in. So stuff like, stun, movement slow, attack slow, etc These are unique properties. So if i have 10% duration resistance to stuns, all stun durations get reduced by 10%. 
+
+
+The main focus of this file however is to present the concept of Magic Immunity. Each ability that provides magic immunity will provide it like: MagicImmunityType1,MagicImmunityType2,MagicImmunityType3, etc. It can provide multiples of these. In a similar fashion, a spell can list any of these flags as the type of immmunity to ignore when checking legality.
+
+
+So for example, if bash has ignore on MagicImmunityType1, and the target has MagicImmunityType1 and MagicImmunityType2, he will not get bashed, because he has unresisted immunity. 

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="">
+	<definitions>
+		<particlesystem name="system0" space="world">
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2500"
+				volume="1.2"
+				sample="/heroes/gladiator/ability_02/sounds/cast.wav"
+			/>	
+			<simpleemitter
+				count="1"
+				spawnrate="5000"
+				particlelife="750"
+				acceleration="0.0"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+			>
+				<particle
+					turn="1"
+				>
+					<model
+						bone="_bone_center"
+						position="-10 -25 20"
+						life="350"
+						anim="idle"
+						model="whip/model.mdf"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						color="3 3 3"
+						scale="1"
+						pitch="0"
+						yaw="0"
+						roll="0"
+					>
+					</model>
+					
+				</particle>
+			</simpleemitter>
+			
+			<simpleemitter
+				bone="_bone_fx_01"
+				count="1"
+				spawnrate="5000"
+				particlelife="750"
+				acceleration="0.0"
+				minangle="0"
+				maxangle="0"
+				direction="0 -1 0"
+			>
+				<particle
+				>
+					<billboard
+						delay="0"
+						bone="_bone_fx_01"
+						life="500"
+						startcolor=".7 .25 0"
+						midcolor=".35 .125 0"
+						midcolorpos="0.3"
+						endcolor="0"
+						startsize="105"
+						endsize="0"
+						depthbias="0"
+						material="/shared/effects/materials/whitedot.material"
+						position="0 0 0"
+					/>
+					
+					<simpleemitter
+						delay="0"
+						count="55"
+						spawnrate="1500"
+						bone="_bone_fx_01"
+						particlelife="800"
+						gravity="5"
+						minspeed="10"
+						maxspeed="100"
+						drag=".04"
+						position="0 0 0"
+						pitchspeed="79"
+						material="/shared/effects/materials/whitedot.material"
+						offsetsphere="25 25 5"
+						inheritvelocity="0.35"
+						direction="0 0 1"
+					>
+						<particle 
+							startcolor="1 1 .2"
+							midcolor="1 .3 0"
+							endcolor="0 0 0"
+							startheightdistort=".06"
+							endframe="15"
+							startsize="1"
+							midsize="1"
+							endsize="1"
+							startalpha="0"
+							midalpha="0"
+							endalpha="0"
+							midalphapos="0"
+							startstickiness="0"
+							endstickiness="0"
+							turn="1"
+						/>
+					</simpleemitter>
+					
+					<simpleemitter
+						delay="0"
+						count="35"
+						spawnrate="500"
+						bone="_bone_fx_01"
+						particlelife="850"
+						gravity="0"
+						minspeed="100"
+						maxspeed="175"
+						drag="0"
+						position="0 0 0"
+						pitchspeed="79"
+						material="/shared/effects/materials/whitedot.material"
+						offsetsphere="5 15 5"
+						inheritvelocity="0.35"
+						direction="0 1 0"
+						minangle="0"
+						maxangle="15"
+					>
+						<particle 
+							startcolor="1 1 .2"
+							midcolor="1 .3 0"
+							endcolor="0 0 0"
+							startheightdistort=".06"
+							endframe="15"
+							startsize="1"
+							midsize="1"
+							endsize="1"
+							startalpha="0"
+							midalpha="0"
+							endalpha="0"
+							midalphapos="0"
+							startstickiness="0"
+							endstickiness="0"
+							turn="1"
+						/>
+					</simpleemitter>
+				</particle>
+			</simpleemitter>
+		
+
+
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

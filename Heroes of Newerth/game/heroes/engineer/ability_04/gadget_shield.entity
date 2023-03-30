@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Engineer_Ability4_Shield"
+
+	icon="icon.tga"
+	portrait=""
+	model="zapper/shield/shield.mdf"
+	skin=""
+	
+	passiveeffect="zapper/shield.effect"
+	spawneffect=""
+	respawneffect=""
+	selectsound=""
+	orderconfirmedsound=""
+	
+	infoheight="200"
+	infoscale="2"
+	preglobalscale="1.6"
+	modelscale="1.0"
+	effectscale="1.0"
+	boundsheight="64"
+	boundsradius="16"
+	selectionradius="48"
+	targetoffset="0 0 64"
+
+	unitwalking="true"
+	ismobile="false"
+	canrotate="false"
+
+	maxhealth="4"
+	healthregen="0"
+	maxmana="0"
+	manaregen="0"
+
+	armor="0"
+	magicarmor="0"
+	immunity="GadgetImmunity"
+
+	canattack="false"
+	
+	attacktype="none"
+	combattype="Ranged"
+
+	sightrangeday="600"
+	sightrangenight="600"
+
+	experiencebounty="10"
+	
+	goldbountymin="100"
+	goldbountymax="100"
+	
+	drawonmap="false"
+	lifetime="6000,8000,10000"
+	
+	unittype="PseudoPet EnergyFieldEngine"
+	
+	corpsetime="10"
+	corpsefadetime="7500"
+	corpsefadeeffect="/shared/effects/corpse_sinkfast.effect"
+>
+	
+	
+	<onspawn>
+		<areaofeffect
+			radius="475"
+			targetselection="all"
+			targetscheme="enemy_nonboss_units"
+			effecttype=""
+			ignoreinvulnerable="true"
+		>
+			<applystate name="State_Engineer_Ability4_Zap_Immunity" duration="100" proxy="this_entity" />
+		</areaofeffect>
+		<spawnaffector name="Affector_Engineer_Ability4" target="this_entity" proxy="this_entity" />
+	</onspawn>
+	
+	<ondamaged>
+		<changedamage b="1" op="min"/>
+	</ondamaged>
+</gadget>

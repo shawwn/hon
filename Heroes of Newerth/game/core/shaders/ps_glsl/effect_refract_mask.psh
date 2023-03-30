@@ -1,0 +1,41 @@
+// (C)2009 S2 Games
+// effect_refract_mask.psh
+// 
+// ...
+//=============================================================================
+
+//=============================================================================
+// Uniform variables
+//=============================================================================
+uniform vec2 	vScene;
+
+//=============================================================================
+// Varying variables
+//=============================================================================
+varying vec4	v_vColor;
+varying vec4	v_vPositionScreen;
+
+//=============================================================================
+// Sampler
+//=============================================================================
+uniform sampler2D	refraction;
+uniform sampler2D	mask;
+uniform sampler2D	scene;
+
+//=============================================================================
+// Pixel Shader
+//=============================================================================
+void main()
+{
+	vec4 vRefraction = texture2D(refraction, gl_TexCoord[0].xy);
+	vRefraction.xy = vRefraction.xy * 2.0 - 1.0;
+	vRefraction.xy *= vScene;
+	vRefraction *= texture2D(mask, gl_TexCoord[1].xy);
+	
+	vec2 vSceneTexcoord = v_vPositionScreen.xy / v_vPositionScreen.w;
+	vSceneTexcoord += vRefraction.xy * gl_TexCoord[0].w;
+	
+	gl_FragColor.rgb = texture2D(scene, vSceneTexcoord).rgb;
+	gl_FragColor.a = 1.0;
+	gl_FragColor *= v_vColor;
+}

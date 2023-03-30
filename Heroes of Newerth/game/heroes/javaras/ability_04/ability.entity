@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Javaras4"
+
+	icon="icon.tga"
+	
+	anim="ability_4"
+	casttime="1000"
+	castactiontime="500"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_entity"
+	targetscheme="enemy_units"
+	targetradius="325"
+	targetmaterial="/shared/materials/area_cast_indicator_simple.material"
+	casteffecttype="SuperiorMagic"
+	casteffect="cast.effect"
+	
+	manacost="125,200,275"
+	cooldowntime="120000,100000,80000"
+
+	range="600"
+	
+	impacteffect="impact.effect"
+>
+	<onimpact>
+		<applystate name="State_Stunned" duration="100,200,300" />
+		<evaluate a="0.60,0.85,1.10" b="target_missingmana" op="mult" />
+		<spawnaffector name="Affector_Javaras_Ability4" target="target_position" param="result" />
+		<popup name="bonus_damage" a="result" />
+	</onimpact>
+</ability>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Engineer_Ability1"
+
+	lifetime="1000"
+	useexactlifetime="true"
+	gravity="5500"
+
+	model="effects/projectile.mdf"
+	modelscale="1.7"
+	traileffect="effects/trail.effect"
+	impacteffect=""
+>
+</projectile>

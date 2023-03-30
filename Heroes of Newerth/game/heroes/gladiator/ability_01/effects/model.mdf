@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="model_high.max" file="high.model" type="K2" >
+
+	<anim name="spawn" clip="spawn.clip" loop="true" loopbackframe="-1"/>	
+		
+	
+	
+	<anim name="idle" clip="default_1.clip" fps="30" loop="false"  >	
+			
+	</anim>
+
+</model>

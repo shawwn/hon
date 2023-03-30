@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+	
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+			
+			<template name="trail">			
+				<twopointtrailemitter					
+					bone_a="{bone_a}"
+					bone_b="{bone_b}"
+					spawnrate="530"
+					particlelife="300"
+					material="/shared/effects/materials/arrow_trail.material"
+				>
+					<particle 
+						startcolor=".5 .8 .8" 
+						endcolor="0"
+					/>				
+				</twopointtrailemitter>			
+			</template>
+			
+			<simpleemitter	
+				spawnrate="50"
+				particlelife="300"			
+				drag="0.05"
+				material="/shared/effects/materials/snowflake.material"
+			>
+				<particle
+					minangle="-360"
+					maxangle="360"
+					startcolor=".4 .7 1"						
+					endcolor="0"
+					minstartsize="60"
+					maxstartsize="100"
+					endsize="0"
+					midalphapos=".9"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter	
+				count="4"
+				particlelife="500"			
+				position="0 0 3"					
+				material="/shared/effects/materials/snowflake.material"
+				offsetsphere="20"
+			>
+
+				<particle
+					startcolor="1"						
+					endcolor="0"
+					anchor="1"
+					minstartsize="10"
+					maxstartsize="30"
+					endsize="10"
+				/>
+			</simpleemitter>				
+			
+			<simpleemitter	
+				spawnrate="60"
+				particlelife="400"			
+				position="0 0 3"					
+				material="/shared/effects/materials/snowflake.material"
+				offsetsphere="20"
+				inheritvelocity="0.1"
+			>
+				<particle
+					startcolor="1"						
+					endcolor="0"					
+					minstartsize="10"
+					maxstartsize="30"
+					endsize="10"
+				/>
+			</simpleemitter>	
+			
+			<trailemitter	
+				spawnrate="50"
+				startminparticlelife="1200"
+				startmaxparticlelife="1200"		
+				endminparticlelife="1"
+				endmaxparticlelife="1" 
+				texpostime="1200"
+			 	texposscale="1.0"
+			 	texstretchscale="0"
+				material="/shared/effects/materials/arrow_trail.material"
+			>
+				<particle 
+					startsize="0"
+					midsize="40"
+					endsize="0"
+					startcolor=".1 .4 .6" 
+					endcolor="0"
+				/>				
+			</trailemitter>	
+
+			<instance 
+				name="trail"
+				bone_a="_bone_1b"
+				bone_b="_bone_1a"
+			/>
+			<instance 
+				name="trail"
+				bone_a="_bone_2b"
+				bone_b="_bone_2a"
+			/>
+			<instance 
+				name="trail"
+				bone_a="_bone_3b"
+				bone_b="_bone_3a"
+			/>
+			<instance name="trail"	
+				bone_a="_bone_4b"
+				bone_b="_bone_4a"
+			/>
+
+			<simpleemitter
+				spawnrate="50"												
+				particlelife="1200"	
+				material="/shared/effects/materials/whitewater_02.material"
+				offsetsphere="5"
+				minangle="0"
+				maxangle="360"
+				gravity="-2"
+				speed="10"
+				drag=".02"
+				inheritvelocity=".10"				
+			>
+				<particle 
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-50"
+					maxanglespeed="50"
+					startcolor="0"
+					midcolor=".4 .6 .7"
+					endcolor="0"
+					midcolorpos=".1"
+					size="70"
+				/>
+			</simpleemitter> 				
+			
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

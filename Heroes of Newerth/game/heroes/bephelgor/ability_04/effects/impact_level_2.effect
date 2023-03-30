@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world">
+
+			<sound
+				delay="100"
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2200"
+				volume=".4"
+				sample="../sounds/impact_crack_%.wav"
+			/>
+			
+			<simpleemitter
+				count="1"
+				spawnrate="5000"
+				particlelife="750"
+				acceleration="0.0"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+				offsetsphere="0 0 0"
+			>
+				<particle
+				>
+					<template name="cracks">
+						
+						<!-- Larger cracks -->
+
+						<groundsprite
+							position="{position}"
+							life="{life1}"
+							alpha=".9"
+							material="/shared/effects/materials/earth_cracks_reveal.material"
+							size="{size}"
+							startframe="1"
+							midframepos=".2"
+							endframe="0"
+							yaw="{yaw}"
+						/>
+
+						<groundsprite
+							life="4500"
+							position="{position}"
+							delay="{delay1}"
+							startalpha=".9"
+							midalphapos=".9"
+							endalpha="0"
+							material="/shared/effects/materials/earth_cracks_reveal.material"
+							size="{size}"
+							frame="0"
+							yaw="{yaw}"
+						/>
+
+					</template>
+
+					<instance name="cracks" delay2="400" life2="200" position="0 0 0" yaw="310" size="200" delay1="600" life1="600" color1="1 .65 0" color2=".3 .01 0" />
+				</particle>
+			</simpleemitter>
+			
+			<!-- Pulse -->
+
+			<groundsprite
+				material="/shared/effects/materials/ground_fire_ring.material"
+				startsize="25"
+				endsize="200"
+				life="300"
+				startcolor=".7 .4 0"
+				endcolor="0 0 0"
+			/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

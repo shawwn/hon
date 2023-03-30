@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Tundra_Ability1_FlyingPet"
+	
+	icon="icon.tga"
+	
+	passiveeffect=""
+	
+	stealthtype="hero"
+	fadetime="1000"
+	
+	effecttype="StatusStealth"
+>
+</state>

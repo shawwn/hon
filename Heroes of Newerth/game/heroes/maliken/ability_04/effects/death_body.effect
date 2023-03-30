@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1">
+
+	<definitions>
+
+		<modifier 
+			name="modifier0"
+			startcolor="0"
+			midcolor="0"
+			midcolorpos="0.8"
+			endcolor="0"
+			life="15000"
+			startalpha="1"
+			midalpha="0"
+			endalpha="0"
+			midalphapos=".01"
+		/>
+
+		<particlesystem name="system0" space="world" scale=".6">
+
+			<light
+				delay="500"
+				life="800"			
+				startcolor="8 2 0"			
+				endcolor="0 0 0"
+				midcolorpos=".2"
+				falloffstart="100"
+				falloffend="500"
+				position="0 0 20"	
+			/>
+
+			<model
+				parentmodel="true"
+				parentskeleton="true"
+				startcolor="1.9 .2 0"
+				endcolor="0"
+				material="/shared/effects/materials/shell2.material"
+				startalpha="4"
+				midalpha="4"
+				endalpha="0"
+				life="1000"
+			/>
+
+			<twopointemitter
+				timenudge="2000"
+				life="3200"
+				depthbias="-30"
+				bone_a="_bone_head"
+				bone_b="Box05"
+				spawnrate="60"
+				particlelife="1200"
+				offsetsphere="50"
+				speed="25.0"
+				material="/shared/effects/materials/dust.material"
+			>
+				<particle
+					startcolor=".4 0 0"
+					endcolor="-1"
+					midcolorpos="0.3"
+					startalpha=".75"
+					endalpha="0"
+					maxangle="360"
+					startsize="20"
+					endsize="120"
+					startanchor="1"
+					endanchor="0"
+			/>
+			</twopointemitter>
+
+			<twopointemitter
+				timenudge="2000"
+				life="3200"
+				depthbias="-30"
+				bone_a="_bone_head"
+				bone_b="Box05"
+				spawnrate="100"
+				minparticlelife="200"
+				maxparticlelife="1200"
+				offsetsphere="40"
+				speed="25.0"
+				material="/shared/effects/materials/phantom_smoke_03.material"
+			>
+				<particle
+					startcolor="0 .4 0.0"
+					midcolor="1 .3 0"
+					endcolor="0"
+					midcolorpos="0.3"
+					startalpha="1.0"
+					endalpha="1.0"
+					maxangle="360"
+					startsize="20"
+					endsize="120"
+					startanchor="1"
+					endanchor="0"
+				/>
+				<particle
+					startcolor="0"
+					midcolor=".7 .6 0"
+					endcolor="00"
+					midcolorpos="0.5"
+					startalpha="1.0"
+					endalpha="1.0"
+					maxangle="360"
+					startsize="20"
+					endsize="120"
+					startanchor="1"
+					endanchor="0"
+				/>
+			</twopointemitter>
+
+			<simpleemitter
+				life="3200"
+				bone="_bone_back"
+				spawnrate="40"
+				minparticlelife="0"
+				maxparticlelife="2000"
+				offsetsphere="50 50 30"
+				gravity="-1"
+				minspeed="70"
+				maxspeed="140"							
+				direction="0 0 1"
+				minangle="-40"
+				maxangle="40"
+				material="/shared/effects/materials/spark_10.material"
+			>			
+				<particle
+					startcolor="1 .4 0"
+					endcolor="0 0 0"
+					minsize="7"
+					maxsize="25"
+					minangle="-360"
+					maxangle="1"
+					minanglespeed="110"
+					maxanglespeed="-110"
+				/>
+				<particle
+					startcolor=".7 .2 0"
+					endcolor="0 0 0"
+					minsize="15"
+					maxsize="25"
+					minangle="-360"
+					maxangle="1"
+					minanglespeed="110"
+					maxanglespeed="-110"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				life="3200"
+				offsetsphere="75 75 15"
+				bone="Bip01 Spine1"
+				spawnrate="15"
+				minparticlelife="300"
+				maxparticlelife="500"
+				speed="30"
+				material="/shared/effects/materials/refract_outsplash.material"
+			>
+				<particle
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					minangle="0"
+					maxangle="360"
+					startsize="120"
+					endsize="250"
+					param=".1"
+					depthbias="-50"
+					turn="true"
+					startanchor="1"
+					endanchor="0"
+				/>
+			</simpleemitter>
+
+			<billboard
+				life="3200"
+				bone="_bone_lefteye"
+				depthbias="-30"
+				material="/shared/effects/materials/whitedot.material"
+				startcolor="1 .4 0"
+				midcolor="1 .4 0"
+				endcolor="0"	
+				startsize="15"
+				endsize="0"			
+			/>
+
+			<billboard
+				life="3200"
+				bone="_bone_righteye"
+				depthbias="-30"
+				material="/shared/effects/materials/whitedot.material"
+				startcolor="1 .4 0"
+				midcolor="1 .4 0"
+				endcolor="0"	
+				startsize="15"
+				endsize="0"			
+			/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>
+     	 	<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+	</thread>
+
+</effect>

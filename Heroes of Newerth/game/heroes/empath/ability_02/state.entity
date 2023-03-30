@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Empath_Ability2_Boobme2"
+
+	
+	
+	icon="icon.tga"
+	passiveeffect="effects/link.effect"
+
+	effecttype="StatusBuff"
+	modifierkey="Empath_boobsout"
+	
+>
+	<onframe>
+		<setvar0 a="20,30,40,50" b="frametime" op="mult" />
+		<takemana target="this_owner_entity" amount="var0" />
+	</onframe>
+</state>

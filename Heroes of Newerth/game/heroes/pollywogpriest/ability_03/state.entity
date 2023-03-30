@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_PollywogPriest_Ability3"
+	
+	icon="../icons/ability_3.tga"
+	passiveeffect="effects/target.effect"
+
+	revealed="true"
+	stunned="true"
+	frozen="true"
+	
+	effecttype="StatusDebuff"
+>
+	<onframe >
+		<damage effecttype="Magic DOT" amount="40" b="frametime" op="mult"/>
+	</onframe>
+</state>

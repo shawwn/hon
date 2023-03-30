@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect  >
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale=".4">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2200"
+				volume=".33"
+				sample="../sounds/impact_%.wav"
+			/>
+
+			<simpleemitter
+				position="0 150 50"
+				count="1"
+				spawnrate="5000"
+				particlelife="2600"
+				acceleration="0.0"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+			>
+				<particle
+					turn="1"
+				>
+					<model
+						position="0 0 25"
+						life="750"
+						anim="idle"
+						model="motion_rig/model.mdf"
+						startscale="1.1"
+						endscale="1"
+						color="2 1.7 1"
+						startalpha="0"
+						midalpha="0"
+						endalpha="0"
+						midalphapos=".35"
+						midcolorpos=".75"
+						yaw="10"
+					>
+
+						<simpleemitter
+							bone="_bone_root"
+							depthbias="-30"
+							life="300"
+							minparticlelife="450"				
+							maxparticlelife="1200"				
+							spawnrate="150"
+							acceleration="0.0"
+							drag="0.02"
+							minangle="0"
+							maxangle="20"
+							direction="-1 0 0"
+							speed="750"
+							offsetsphere="50 50 50"
+							material="/shared/effects/materials/blood_white.material"
+							collide="1"
+						>
+							<particle 
+								minangle="0"
+								maxangle="160"
+								minanglespeed="-10"
+								maxanglespeed="10"
+								startsize="20"
+								endsize="160"
+								startcolor="1.5"
+								midcolor=".4 .95 1"
+								midcolorpos=".75"
+								endcolor=".2 .6 1"				
+								startalpha="1"
+								midalpha="1"
+								endalpha="0"
+								minscale=".5"
+								maxscale="1"
+							/>
+							<particle 
+								minangle="0"
+								maxangle="160"
+								minanglespeed="-10"
+								maxanglespeed="10"
+								startsize="20"
+								endsize="160"
+								startcolor="1"
+								endcolor=".2 .65 1"				
+								startalpha="1"
+								midalpha="1"
+								endalpha="0"
+								minscale=".5"
+								maxscale="1"
+							/>
+						</simpleemitter>
+
+						<simpleemitter
+							bone="_bone_root"
+							depthbias="-30"
+							life="300"
+							minparticlelife="450"				
+							maxparticlelife="1200"				
+							spawnrate="25"
+							minspeed="10"
+							maxspeed="100"
+							minangle="-90"
+							maxangle="90"
+							drag="0.01"
+							material="/shared/effects/materials/refract_wave.material"
+							offsetsphere="50 50 50"
+						>
+							<particle
+								turn="true"
+							>
+								<billboard
+									startparam=".5"
+									endparam="0"
+									startalpha="0"
+									midalpha="1"
+									endalpha="0"
+									material="/shared/effects/materials/refract_outsplash.material"
+									size="250"
+									life="700"
+									pitch="90"
+									roll="0"
+									lockup="true"
+									lockright="true"
+								/>
+							</particle>
+						</simpleemitter>
+
+						<simpleemitter
+							bone="_bone_root"
+							position="0 0 0"
+							count="10"
+							spawnrate="100"
+							minparticlelife="700"
+							maxparticlelife="1100"
+							acceleration="0.0"
+							drag="0.02"
+							minangle="0"
+							maxangle="20"
+							direction="-1 0 0"
+							speed="750"
+							offsetsphere="50 50 50"
+							material="/shared/effects/materials/wave.material"
+						>
+							<particle
+								minangle="0"
+								maxangle="360"
+								startsize="150"
+								endsize="75"
+								startcolor="0 0 0"
+								midcolor="0 .125 .35"
+								endcolor="0 0 0"
+								startalpha="0"
+								midalpha=".25"
+								endalpha="0"
+							>
+							</particle>
+						</simpleemitter>
+
+						<simpleemitter
+							count="25"
+							minparticlelife="500"
+							maxparticlelife="750"
+							spawnrate="100"
+							minspeed="350"
+							maxspeed="600"
+							gravity="20"
+							minangle="0"
+							maxangle="10"
+							material="/shared/effects/materials/whitewater_02.material"
+							offsetsphere="25 25 0"
+							position="0 0 50"
+							direction="0 1 0"
+							directionalspace="local"
+						>
+							<particle
+								minanglespeed="-100"
+								maxanglespeed="100"
+								minangle="-60"
+								maxangle="60"
+								startcolor="0 0 0"
+								midcolor=".22"
+								endcolor="0 0 0"
+								startsize="60"
+								endsize="135"
+								startalpha="0"
+								midalpha="1"
+								endalpha="0"
+							/>
+						</simpleemitter>
+						
+						<simpleemitter
+							count="25"
+							minparticlelife="500"
+							maxparticlelife="750"
+							spawnrate="100"
+							minspeed="350"
+							maxspeed="600"
+							gravity="20"
+							minangle="0"
+							maxangle="10"
+							material="/shared/effects/materials/whitewater_02.material"
+							offsetsphere="25 25 0"
+							position="0 0 50"
+							direction="0 1 0"
+							directionalspace="local"
+						>
+							<particle
+								minanglespeed="-100"
+								maxanglespeed="100"
+								minangle="-60"
+								maxangle="60"
+								startcolor="0 0 0"
+								midcolor="0 .05 .15"
+								endcolor="0 0 0"
+								startsize="60"
+								endsize="135"
+								startalpha="0"
+								midalpha="1"
+								endalpha="0"
+							/>
+						</simpleemitter>
+
+					</model>
+				</particle>
+			</simpleemitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

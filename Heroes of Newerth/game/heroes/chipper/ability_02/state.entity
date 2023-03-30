@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Chipper_Ability2"
+	
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+	
+	movespeedslow="0.1"
+	movespeedslowpercharge="0.001,0.003,0.005,0.007"
+	attackspeedslowpercharge="0.001,0.002,0.003,0.004"
+	effecttype="StatusDebuff"
+>
+	<onframe />
+	
+	<onexpired>
+		<expirestate name="State_Chipper_Ability1" />
+	</onexpired>
+</state>

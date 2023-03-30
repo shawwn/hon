@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Hellbringer_Ability4"
+
+	radius="600"
+	
+	lifetime="500"
+	impactinterval="500"
+	impactdelay="500"
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype=""
+	destroytrees="true"
+>
+	<oninterval>
+		<spawnunit name="Pet_Hellbringer_Ability4" target="target_position" />
+	</oninterval>
+	<onimpact>
+		<applystate name="State_Stunned" duration="1000"/>
+		<damage effecttype="Magic" amount="100"/>
+	</onimpact>
+</affector>

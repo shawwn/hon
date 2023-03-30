@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Panda_Ability2_Slow"
+
+	
+	
+	icon="icon.tga"
+	
+	movespeedslowstart="0.2,0.3,0.4,0.5"
+	movespeedslowmid="0.2,0.3,0.4,0.5"
+	movespeedslowend="0.0"
+	movespeedslowduration="6000"
+	movespeedslowmidpos="0.33"
+	armor="-2,-4,-6,-8"
+	
+	passiveeffect="effects/passive.effect"
+	
+	effecttype="StatusDebuff"
+>
+	<onframe />
+</state>

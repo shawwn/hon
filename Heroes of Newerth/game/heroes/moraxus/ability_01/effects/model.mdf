@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="rig.max" file="high.model" type="K2" >
+	
+	<anim name="idle" clip="default_1.clip" fps="30" loop="true"/>
+	
+	<anim name="attack_1" clip="clips/attack_1.clip" fps="32" loop="false">
+	<frameevent frame="8" cmd="PlaySoundLinear /heroes/hiro/sounds/attack_%.wav  400 2000 .65"/>
+	</anim>
+	
+	<anim name="attack_2" clip="clips/attack_2.clip" fps="32" loop="false">
+	<frameevent frame="8" cmd="PlaySoundLinear /heroes/hiro/sounds/attack_%.wav  400 2000 .65"/>
+	</anim>
+	
+	<anim name="walk_1" clip="clips/walk_1.clip" fps="31" loop="true">
+	<frameevent frame="2" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="8" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="12" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="17" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		
+		<frameevent frame="2" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+		<frameevent frame="12" cmd="StartEffect /shared/effects/footstep_l_#GetTerrainType()#.effect"/>
+	</anim>
+	
+	<anim name="death_1" clip="clips/death_1.clip" fps="30" loop="false" loopbackframe="-1">
+	</anim>
+	
+	<anim name="ability_1" clip="clips/ability_1.clip" fps="30" loop="false">
+	</anim>
+	
+	<anim name="ability_2" clip="clips/ability_2.clip" fps="30" loop="false">
+	</anim>
+	
+	<anim name="ability_3" clip="ability_3.clip" fps="40" loop="false">
+	</anim>
+	
+	<anim name="ability_4" clip="clips/ability_4.clip" fps="30" loop="false">
+	</anim>
+
+	<anim name="bored_1" clip="clips/bored_1.clip" fps="33" loop="false"/>
+	<anim name="taunt_1" clip="clips/taunt_1.clip" fps="30" loop="false"/>
+	
+</model>

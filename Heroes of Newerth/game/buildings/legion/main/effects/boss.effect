@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+
+			<sound
+				delay="1350"
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume="1" 
+				sample="/buildings/legion/main/sounds/fire_breath.wav"
+			/>
+
+			<template name="hand_impact">
+				<sound
+					delay="{delay}"
+					position="{position}"
+					linearfalloff="true" 
+					falloffstart="1000"
+					falloffend="2500"
+					volume=".6" 
+					sample="../sounds/footstep_%.wav"
+				/>
+
+				<groundsprite
+					delay="{delay}"
+					position="{position}"
+					material="/shared/effects/materials/earth_cracks_overlay.material"				
+					minsize="115"
+					maxsize="175"
+					maxyaw="360"
+					alpha=".5"				
+				/>
+
+				<groundsprite
+					delay="{delay}"
+					position="{position}"
+					material="/shared/effects/materials/handprint_overlay.material"
+					minsize="110"
+					maxsize="120"
+					yaw="-170"
+					alpha="1"	
+				/>
+
+				<groundsprite
+					delay="{delay}"
+					position="{position}"
+					material="/shared/effects/materials/handprint_add.material"
+					minsize="76"
+					maxsize="85"
+					yaw="-180"
+					startcolor=".65 .3 0"
+					midcolor=".65 .1 0"
+					endcolor="0"
+					life="2500"	
+				/>
+
+				<simpleemitter
+					delay="{delay}"
+					position="{position}"								
+					startspawnrate="150"		
+					endspawnrate="0"
+					life="400"
+					minparticlelife="300"
+					maxparticlelife="1000"			
+					gravity="14"
+					direction="0 0 1"
+					minangle="0"
+					maxangle="25"
+					minspeed="6"
+					maxspeed="221"
+					depthbias="-120"
+					offsetsphere="85"
+					material="/shared/effects/materials/whitewater_02.material"				
+				>
+					<particle
+						minagle="-360" 
+						maxangle="360"
+						minanglespeed="-50"
+						maxanglespeed="50"
+						startcolor="0 0 0"
+						midcolor=".6 .3 0"
+						endcolor="0"
+						midcolorpos=".2"
+						startsize="10"
+						endsize="55"
+						minscale="1"
+						maxscale="4"						
+					/>
+					<particle
+						minagle="-360" 
+						maxangle="360"
+						minanglespeed="-50"
+						maxanglespeed="50"
+						startcolor="0"
+						midcolor=".8 .45 0"
+						endcolor="0"
+						midcolorpos=".2"
+						startsize="10"
+						endsize="54.35"
+						minscale="1"
+						maxscale="4"						
+					/>
+				</simpleemitter>
+
+				<simpleemitter
+					delay="{delay}"
+					position="{position}"								
+					startspawnrate="350"		
+					endspawnrate="0"
+					life="400"
+					minparticlelife="300"
+					maxparticlelife="1400"			
+					gravity="25"
+					drag=".02"
+					direction="0 0 1"
+					minangle="0"
+					maxangle="15"
+					minspeed="0"
+					maxspeed="1200"
+					depthbias="-120"
+					offsetsphere="115"
+					material="/shared/effects/materials/blob_add.material"				
+				>
+					<particle
+						minagle="-360" 
+						maxangle="360"
+						minanglespeed="-50"
+						maxanglespeed="50"
+						startcolor="0"
+						midcolor="1 .5 0"
+						endcolor="0"
+						midcolorpos=".2"
+						startsize="4"
+						endsize="1"
+						minscale="1"
+						maxscale="2"						
+					/>
+					<particle
+						minagle="-360" 
+						maxangle="360"
+						minanglespeed="-50"
+						maxanglespeed="50"
+						startcolor="0"
+						midcolor="1 .6 0"
+						endcolor="0"
+						midcolorpos=".2"
+						startsize="2"
+						endsize="1"
+						minscale="1"
+						maxscale="3"						
+					/>
+				</simpleemitter>
+
+				<billboard
+					delay="{delay}"
+					life="400"
+					position="{position}"
+					startcolor=".5 .2 0"
+					endcolor="0"
+					size="350"
+					depthbias="-250"
+					material="/shared/effects/materials/whitedot.material"
+				/>
+
+			</template>
+			
+			<instance name="hand_impact" position="240 120 0" delay="500"/>
+			<instance name="hand_impact" position="-240 180 0" delay="1000"/>
+			<instance name="hand_impact" position="310 00 0" delay="2700"/>
+			<instance name="hand_impact" position="-320 -10 0" delay="3000"/>
+
+			<model
+				timenudge="9000"
+				model="/buildings/legion/main/effects/demon/model.mdf"			
+				anim="idle"
+				yaw="0"
+				scale="1.75"
+				position="0 -80 0"
+			>
+				<!-- Firey skin, oh baby you make me hot -->
+
+				<template name="smoke">
+					<twopointemitter
+						timenudge="2000"
+						bone_a="{a}"
+						bone_b="{b}"
+						spawnrate="20"
+						minparticlelife="1800"
+						maxparticlelife="2200"
+						expirelife="100"
+						material="/shared/effects/materials/pyroclast_01.material"
+						offsetsphere="10"
+						direction="{direction}"
+						minspeed="25"	
+						maxspeed="65"
+						maxangle="40"
+						gravity="-1"
+						depthbias="-30"
+					>
+						<particle
+							startalpha="0"
+							midalpha=".6"
+							endalpha="0"
+							minangle="-30"
+							maxangle="30"
+							minanglespeed="-25"
+							maxanglespeed="25"
+							startcolor=".2"	
+							endcolor="0"
+							startsize="40"							
+							endsize="{size}"
+							minscale=".4"
+							maxscale=".8"
+						/>
+						<particle
+							startalpha="0"
+							midalpha=".7"
+							endalpha="0"
+							minangle="-50"
+							maxangle="50"
+							minanglespeed="-66"
+							maxanglespeed="66"
+							startcolor=".35 .15 0"	
+							midcolor=".1"
+							endcolor="0"
+							startsize="40"							
+							endsize="{size}"
+							minscale=".4"
+							maxscale=".6"
+						/>
+					</twopointemitter>
+
+				</template>
+
+				<instance name="smoke" size="225" a="Bip01 L UpperArm" b="Bip01 R UpperArm" direction="0 -1 1"/>
+				<instance name="smoke" size="125" a="Box01" b="Box08" direction="0 0 1"/>
+
+				<template name="flames">
+					<twopointemitter
+						timenudge="2000"
+						bone_a="{a}"
+						bone_b="{b}"
+						spawnrate="20"
+						minparticlelife="200"
+						maxparticlelife="620"
+						expirelife="100"
+						material="/shared/effects/materials/fire.material"
+						depthbias="40"
+						minspeed="5"	
+						maxspeed="30"
+						offsetsphere="11"
+					>
+						<particle
+							startalpha="0"
+							midalpha="1"
+							endalpha="0"
+							maxangle="360"
+							minanglespeed="-55"
+							maxanglespeed="55"
+							startcolor="1 .4 0"	
+							endcolor="0"
+							startsize="40"							
+							endsize="{size}"
+							minscale=".2"
+							maxscale=".65"
+						/>
+						<particle
+							startalpha="0"
+							midalpha="1"
+							endalpha="0"
+							maxangle="360"
+							minanglespeed="-55"
+							maxanglespeed="55"
+							startcolor="1 .5 .2"	
+							endcolor="0"
+							startsize="40"							
+							endsize="{size}"
+							minscale=".3"
+							maxscale=".7"
+						/>
+					</twopointemitter>
+
+					<twopointemitter
+						timenudge="2000"
+						bone_a="{a}"
+						bone_b="{b}"
+						spawnrate="60"
+						minparticlelife="200"
+						maxparticlelife="720"
+						expirelife="100"
+						material="/shared/effects/materials/soul_projectile2.material"
+						depthbias="-30"
+						offsetsphere="50"
+					>
+						<particle
+							maxangle="360"
+							minanglespeed="-146"
+							maxanglespeed="146"
+							startcolor="0"	
+							midcolor="1 .4 .1"
+							endcolor="0"
+							startsize="30"						
+							endsize="{size}"
+							stickiness=".9"
+							minscale="0.1"
+							maxscale=".3"
+						/>
+					</twopointemitter>
+
+					<twopointemitter
+						timenudge="2000"
+						bone_a="{a}"
+						bone_b="{b}"
+						spawnrate="3"
+						minparticlelife="1000"
+						maxparticlelife="1520"
+						expirelife="100"
+						material="/shared/effects/materials/refract_wave.material"
+					>
+						<particle
+							maxangle="360"
+							startalpha="0"
+							midalpha="1"
+							endalpha="0"
+							startsize="120"						
+							endsize="{size}"
+							stickiness="1"
+							minscale="0.5"
+							maxscale="1"
+							startparam=".05"
+							endparam="0"
+						/>
+					</twopointemitter>
+				</template>
+
+				<template name="sparks">
+					<twopointemitter
+						offsetsphere="20"
+						timenudge="2000"
+						bone_a="{a}"
+						bone_b="{b}"
+						spawnrate="150"
+						minparticlelife="500"
+						maxparticlelife="1500"
+						expirelife="100"
+						material="/shared/effects/materials/spark_10.material"
+						depthbias="-40"
+						minspeed="5"
+						maxspeed="60"
+					>
+						<particle
+							startalpha="0"
+							midalpha="1"
+							endalpha="0"
+							maxangle="360"
+							minanglespeed="-146"
+							maxanglespeed="146"
+							startcolor="1 .65 .4"	
+							endcolor="0"						
+							size="{size}"
+							minscale=".05"
+							maxscale=".1"
+						/>
+						<particle
+							startalpha="0"
+							midalpha="1"
+							endalpha="0"
+							maxangle="0"
+							midcolor="1"
+							startcolor="0"	
+							endcolor="0"						
+							size="{size}"
+							endsize="0"
+							minscale="0.05"
+							maxscale=".1"
+							startheightdistort="2"
+							endheightdistort="0"
+							turn="1"
+						/>
+					</twopointemitter>
+				</template>
+
+				<instance name="sparks" size="105" a="Box04" b="Box02"/>
+				<instance name="sparks" size="105" a="Box13" b="Box12"/>
+				<instance name="sparks" size="225" a="Bip01 L Hand" b="Bip01 L Forearm"/>
+				<instance name="sparks" size="225" a="Bip01 R Hand" b="Bip01 R Forearm"/>
+				<instance name="flames" size="225" a="Bip01 L Hand" b="Bip01 L Forearm"/>
+				<instance name="flames" size="225" a="Bip01 R Hand" b="Bip01 R Forearm"/>
+				<instance name="flames" size="230"  a="Bip01 L Forearm" b="Bip01 Neck"/>
+				<instance name="flames" size="230" a="Bip01 R Forearm" b="Bip01 Neck"/>
+				<instance name="flames" size="135" a="Box04" b="Box02"/>
+				<instance name="flames" size="135" a="Box13" b="Box09"/>
+				<instance name="flames" size="105" a="Bip01 R Hand" b="Bip01 R Finger2"/>
+				<instance name="flames" size="105" a="Bip01 L Hand" b="Bip01 L Finger2"/>
+				<instance name="flames" size="85" a="Box01" b="Box08"/>
+
+				<!-- Dragon breath almost as bad as ur moms -->
+
+				<simpleemitter
+					delay="2900"
+					life="2000"
+					bone="Bip01 Head"
+					minspeed="0"
+					maxspeed="600"
+					angle="40"
+					spawnrate="120"
+					minparticlelife="500"
+					maxparticlelife="900"
+					directionalspace="local"
+					material="/shared/effects/materials/soul_projectile2.material"
+					depthbias="-30"
+					offsetsphere="5"
+					direction="1 -.75 0"
+					position="-20 40 -50"
+					drag=".01"
+					gravity="-2"
+				>
+					<particle
+						maxangle="360"
+						minanglespeed="-246"
+						maxanglespeed="246"
+						startcolor="2"	
+						midcolor=".6 .3 0"
+						endcolor="0"
+						startsize="20"						
+						endsize="155"
+						midsizepos=".6"
+						minscale="0.1"
+						maxscale=".5"
+						anchor=".1"
+						turn="1"
+						endstickiness=".3"
+					/>
+					<particle
+						maxangle="360"
+						minanglespeed="-246"
+						maxanglespeed="246"
+						startcolor="2"	
+						midcolor=".8 .3 .1"
+						midcolorpos=".2"
+						endcolor="0"
+						startsize="10"						
+						endsize="255"
+						midsizepos=".6"
+						minscale="0.1"
+						maxscale=".6"
+						anchor=".2"
+						turn="1"
+						endstickiness=".3"
+					/>
+
+				</simpleemitter>
+
+				<simpleemitter
+					delay="2900"
+					life="2000"
+					bone="Bip01 Head"
+					minspeed="0"
+					maxspeed="400"
+					angle="10"
+					startspawnrate="80"
+					endspawnrate="0"	
+					minparticlelife="400"
+					maxparticlelife="1000"
+					directionalspace="local"
+					material="/shared/effects/materials/whitewater_02.material"
+					depthbias="-40"
+					offsetsphere="15"
+					direction="1 -.75 0"
+					position="-20 70 -50"
+				>
+					<particle
+						maxangle="360"
+						minanglespeed="-146"
+						maxanglespeed="146"
+						startcolor="0"	
+						midcolor="1 .2 0"
+						endcolor="0"
+						startsize="20"						
+						endsize="155"
+						minscale="0.4"
+						maxscale="1"
+					/>
+				</simpleemitter>
+
+				<simpleemitter
+					delay="2900"
+					life="2000"
+					bone="Bip01 Head"
+					minspeed="0"
+					maxspeed="200"
+					angle="10"
+					startspawnrate="120"
+					endspawnrate="0"
+					minparticlelife="200"
+					maxparticlelife="400"
+					directionalspace="local"
+					material="/shared/effects/materials/soul_projectile2.material"
+					depthbias="-30"
+					offsetsphere="5"
+					direction="1 -.75 0"
+					position="-10 10 -50"
+					drag=".01"
+				>
+					<particle
+						maxangle="360"
+						minanglespeed="-55"
+						maxanglespeed="55"
+						startcolor="2"	
+						midcolor="1"
+						endcolor="0"
+						startsize="5"						
+						endsize="15"
+						midsizepos=".6"
+						anchor="1"
+					/>
+				</simpleemitter>
+
+				<simpleemitter
+					delay="2900"
+					life="2000"
+					timenudge="500"
+					bone="Bip01 Head"
+					minspeed="0"
+					maxspeed="500"
+					angle="10"
+					spawnrate="30"
+					minparticlelife="400"
+					maxparticlelife="820"
+					directionalspace="local"
+					material="/shared/effects/materials/refract_wave.material"
+					depthbias="-30"
+					offsetsphere="5"
+					direction="1 -.75 0"
+					position="0 30 -50"
+				>
+					<particle
+						maxangle="360"
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"
+						startsize="10"						
+						endsize="75"
+						startparam=".2"
+						endparam="0"
+					/>
+				</simpleemitter>
+
+				<billboard
+					delay="2400"
+					life="500"
+					bone="Box16"
+					startcolor="0"
+					midcolorpos=".95"
+					endcolor=".5 .3 .2"
+					size="150"
+					depthbias="-150"
+					material="/shared/effects/materials/whitedot.material"
+				/>
+
+				<billboard
+					delay="2900"
+					life="3000"
+					bone="Box16"
+					startcolor=".5 .3 .2"
+					endcolor="0"
+					size="150"
+					depthbias="-150"
+					material="/shared/effects/materials/whitedot.material"
+				/>
+
+			</model>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<wait duration="500"/>
+		<camerashake2 scale="10.0" radius="1000" duration="700" frequency="22" />
+		<wait duration="400"/>
+		<camerashake2 scale="10.0" radius="1000" duration="800" frequency="22" />
+		<wait duration="1500"/>
+		<camerashake2 scale="12.0" radius="1000" duration="1000" frequency="22" />
+		<waitfordeath instance="instance0" />		
+	</thread>
+
+</effect>

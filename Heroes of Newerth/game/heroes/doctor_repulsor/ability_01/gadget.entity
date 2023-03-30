@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_DoctorRepulsor_Ability1"
+	
+	icon=""
+	portrait=""
+	modelscale="1.5"
+	model="model.mdf"
+	skin=""
+	
+	passiveeffect="effects/passive.effect"
+	spawneffect=""
+	respawneffect=""
+	isselectable="false"
+	invulnerable="true"
+	selectsound=""
+	orderconfirmedsound=""
+	unitwalking="true"
+	
+	preglobalscale="1.0"
+	effectscale="1.0"
+	boundsheight="38"
+	boundsradius="24"
+	selectionradius="0"
+	targetoffset="0 0 0"
+
+	canrotate="false"
+	ismobile="false"
+	isflying="false"
+	clearvision="true"
+	drawonmap="false"
+	
+	sightrangeday="800"
+	sightrangenight="800"
+
+	attacktype="none"
+	
+	lifetime="12000"
+	corpsetime="0"
+	deathtime="0"
+	corpsefadetime="250"
+	
+	blocking="false"
+>
+</gadget>

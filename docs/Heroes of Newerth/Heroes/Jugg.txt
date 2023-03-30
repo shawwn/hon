@@ -1,0 +1,22 @@
+Ability 1:
+----------
+Limited duration effect. Deals damage over time in the area around you. Makes you immune to magic. See magic immunity for more information. Your hero can attack while in this mode. I want to try to show some special animation or something to show you hitting a specific unit for extra while doing this, to signify you attacking and damaging a specific unit more. 
+
+
+Ability 2:
+----------
+This gives you a chance to deal a critical strike on each attack. See critical strike for more details.
+
+
+Ability 3:
+----------
+This is a passive. It gives you a chance to counterattack when a target attacks you. This counterattack uses your regular attack, but does not take away or be counted as attack speed usage. This is checked before the success of the attack, but on assignment of it. This means that if you were to evade an enemy unit, you would still counter attack it. See attack flow mechanics for more details.
+
+
+Ultimate:
+----------
+Your hero jumps around for target to target randomly attacking each and dealing bonus magical damage. You are invulnerable during this.
+
+
+
+Agility/Melee

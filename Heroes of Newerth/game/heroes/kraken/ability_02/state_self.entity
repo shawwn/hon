@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Kraken_Ability2_Self"
+	
+	icon="icon.tga"
+	
+	stunned="true"
+	
+	passiveeffect="effects/charge_state.effect"
+	
+	effecttype=""
+>
+</state>

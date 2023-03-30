@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_DoctorRepulsor_Ability3"
+	
+	icon="icon.tga"
+	passiveeffect="effects/passive.effect"
+	
+	effecttype="StatusBuff"
+	
+	modifierkey="DoctorRepulsorAttackboost"
+>
+	<onattack>
+		<playeffect effect="effects/cast.effect" target="source_entity" />
+	</onattack>
+	
+	<onframe />
+
+	<onattackimpact>
+		<playeffect effect="effects/impact.effect" target="" source="target_entity" />
+		<areaofeffect
+			radius="300"
+			targetselection="all"
+			targetscheme="organic_enemy_units"
+			effecttype="Magic"
+		>
+			<damage effecttype="Magic" amount="30,45,60,75" />
+			<applystate name="State_DoctorRepulsor_Ability3_Slow" duration="600" />
+		</areaofeffect>
+		<expire />
+	</onattackimpact>
+</state>

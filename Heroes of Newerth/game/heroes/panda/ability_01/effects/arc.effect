@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect persistent="1" name="ability_01_impact">
+	<definitions>
+		
+		
+		<particlesystem name="system0" space="world"  scale="0.85">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".7"
+				sample="../sounds/impact_%.wav"
+			/>
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".3"
+				sample="../sounds/attack_%.wav"
+			/>
+
+		<simpleemitter
+			delay="0"
+			count="2"
+			spawnrate="110"
+			particlelife="1600"
+			gravity="1.0"
+			speed="10.0"
+			drag="0.0"
+			acceleration="0.0"
+			
+			minangle="0"
+			maxangle="0"
+			position="0 44 0"
+			direction="0 1 0"
+			offsetdirection="0 0 0"
+			offsetradial="0 0 0"
+			particledirectionalspace="local"	
+			inheritvelocity="0"
+			
+		>
+			<particle
+				
+			>
+				<billboard
+					minlife="50"
+					maxlife="200"
+					position="0 0 50"
+					material="/shared/effects/materials/cartoon_arc.material"
+					lockup="1"
+					lockright="1"
+					pitch="90"
+					param=".012"
+					startsize="125"
+					endsize="180"
+					directionalspace="local"
+					minroll="100"					
+					maxroll="220"
+				/>
+					
+			</particle>		
+
+		</simpleemitter>	
+
+
+
+
+
+
+
+
+		
+      </particlesystem>
+   </definitions>
+   <thread>
+   
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>   
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

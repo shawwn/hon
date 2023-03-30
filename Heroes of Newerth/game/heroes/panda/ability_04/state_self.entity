@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Panda_Ability4_Self"
+
+	
+	
+	icon="icon.tga"
+	passiveeffect=""
+	ishidden="false"
+	impactinterval="1000"
+	basedamagemultiplier="0.30,0.70,1.2"
+	truestrike="true"
+>
+
+	<onimpact>
+		<spawnaffector name="Affector_Panda_Ability4" target="proxy_entity" proxy="proxy_entity" />
+	</onimpact>
+</state>

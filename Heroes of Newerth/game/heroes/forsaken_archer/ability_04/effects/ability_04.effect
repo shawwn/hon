@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" deferred="true" useentityeffectscale="true">
+	<definitions>
+
+
+
+	<particlesystem name="system0" space="world" scale=".85">
+
+		<model
+			
+			life="1000"
+			
+			model="spear.mdf"
+			startscale="2.0"
+			endscale="2.0"
+			color=".65"
+			alpha=".5"
+			position="0 0 120"
+		>
+		
+			<template name="moreSkulls">
+					<twopointtrailemitter
+						life="650"
+						position="0 0 0"
+						bone_a="{bonez_a}"
+						bone_b="{bonez_b}"
+						spawnrate="100"
+						particlelife="1000"
+						gravity="0"
+						subframepose="1"
+						drag="0"
+						speed="0"
+						minangle="0"
+						maxangle="0"
+						direction="0 0 0"
+						texpostime="1000"
+						texposscale="0"
+						texstretchscale="1"
+						material="/shared/effects/materials/hide.material"
+					>
+						<particle
+							color="0 1 0"
+							startalpha=".2"
+							endalpha="0"
+						/>
+					</twopointtrailemitter>
+			</template>
+
+			<instance name="moreSkulls" bonez_a="_bone_fx_01" bonez_b="_bone_fx_02"/>
+
+			<billboard
+				life="600"
+				color="1.0 1.0 1.0"
+				position="0 -25 100"
+				startsize="75"
+				endsize="150"
+				material="/shared/effects/materials/refract_wave.material"
+				lockup="1"
+				lockright="1"
+				directionalspace="local"
+				startparam="0"
+				midparam="0.05"
+				endparam="0"
+				roll="180"
+				yaw="0"
+				pitch="90"
+			/>	
+			
+			<billboard
+				life="600"
+				color="1.0 1.0 1.0"
+				position="0 0 00"
+				startsize="100"
+				endsize="300"
+				material="/shared/effects/materials/refract_wave.material"
+				lockup="1"
+				lockright="1"
+				directionalspace="local"
+				startparam="0"
+				midparam="0.05"
+				endparam="0"
+				midparampos=".3"
+				roll="180"
+				yaw="0"
+				pitch="90"
+			/>
+			
+			<billboard
+			life="500"
+				bone="_bone_weaponattach"
+				startsize="100"
+				endsize="0"
+				material="/shared/effects/materials/whitedot.material"
+				color=".1 .5 0"
+				depthbias="-100"
+			/>
+
+			<template name="skulls">
+				<model
+				position="0 0 50"
+					life="500"
+					anim="clip1"
+					model="/heroes/forsaken_archer/ability_04/effects/skulls/skull.mdf"
+					startscale=".75"
+					endscale=".75"
+					color=".5 1 .5"
+					startalpha="0"
+					midalpha=".65"
+					endalpha="0"
+					minroll="-45"
+					maxroll="45"
+				>
+					<twopointtrailemitter
+						life="500"
+						position="0 0 0"
+						bone_a="{boner_a}"
+						bone_b="{boner_b}"
+						spawnrate="100"
+						particlelife="200"
+						gravity="0"
+						subframepose="1"
+						drag="0"
+						speed="200"
+						minangle="0"
+						maxangle="0"
+						direction="0 0 0"
+						texpostime="200"
+						texposscale="0"
+						texstretchscale="1"
+						material="/shared/effects/materials/hide.material"
+					>
+						<particle
+							color="0 1 0"
+							startalpha=".25"
+							endalpha="0"
+						/>
+					</twopointtrailemitter>
+				</model>
+			</template>
+
+			<instance name="skulls" boner_a="_bone_fx_01" boner_b="_bone_fx_02"/>
+			<instance name="skulls" boner_a="_bone_fx_03" boner_b="_bone_fx_04"/>
+			<instance name="skulls" boner_a="_bone_fx_05" boner_b="_bone_fx_06"/>
+
+			<template name="moreSkulls">
+				<model
+					life="650"
+					anim="clip2"
+					model="/heroes/forsaken_archer/ability_04/effects/skulls/skull.mdf"
+					startscale=".75"
+					endscale=".75"
+					color=".5 1 .5"
+					startalpha="0"
+					midalpha=".65"
+					endalpha="0"
+					minroll="-45"
+					maxroll="45"
+				>
+					<twopointtrailemitter
+						life="650"
+						position="0 0 0"
+						bone_a="{bonez_a}"
+						bone_b="{bonez_b}"
+						spawnrate="100"
+						particlelife="250"
+						gravity="0"
+						subframepose="1"
+						drag="0"
+						speed="250"
+						minangle="0"
+						maxangle="0"
+						direction="0 0 0"
+						texpostime="250"
+						texposscale="0"
+						texstretchscale="1"
+						material="/shared/effects/materials/hide.material"
+					>
+						<particle
+							color="0 1 0"
+							startalpha=".25"
+							endalpha="0"
+						/>
+					</twopointtrailemitter>
+				</model>
+			</template>
+
+			<instance name="moreSkulls" bonez_a="_bone_fx_01" bonez_b="_bone_fx_02"/>
+			<instance name="moreSkulls" bonez_a="_bone_fx_03" bonez_b="_bone_fx_04"/>
+			<instance name="moreSkulls" bonez_a="_bone_fx_05" bonez_b="_bone_fx_06"/>
+
+		</model>
+
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

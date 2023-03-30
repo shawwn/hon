@@ -1,0 +1,19 @@
+There are two types of armor, Magical and Physical armor.
+
+Damage reduction is defined as:
+
+|Armor|*0.06
+-------------    * 100 = Percentage Reduction
+1+|Armor|*0.06
+
+
+Examples:
+=========
+0 Armor = 0% Reduction
+5 Armor = 23% Reduction
+10 Armor = 37% Reduction
+-5 Armor = -23% Reduction
+-10 Armor = -37% Reduction
+
+In Warcraft there is actually 2 different equations for positive and negative armor, but for simplicity sake, they will both use the same formula here.
+

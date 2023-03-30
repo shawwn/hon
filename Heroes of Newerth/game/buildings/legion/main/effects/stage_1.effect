@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect>
+
+	<definitions>
+
+		<modifier
+			name="modifier0"
+			color="1 1 1"
+			alpha="0"
+		/>
+
+		<particlesystem name="system0" space="world">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".6" 
+				sample="/buildings/legion/main/sounds/death.wav"
+			/>
+
+			<model
+				life="4000"
+				anim="idle"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".9"
+				model="death/leaves.mdf"
+			/>
+			
+			<trackeremitter
+				delay="1000"
+				life="5000"
+				spawnrate="5"
+				targetbone="_bone_fx_01"
+				tracktype="linear"
+				trackspeed="10"
+				particlelife="3000"
+				offsetsphere="600 600 0"
+				minspeed="400"
+				maxspeed="600"
+				targetposition="0"
+				acceleration="40"
+				direction="0 0 1"
+				distancelife="true"
+				position="0 0 500"
+				depthbias="120"
+			>
+				<particle>
+					<trailemitter
+						life="2300"
+						bone="_bone_fx_01"
+						spawnrate="20"
+						minparticlelife="1000"
+						maxparticlelife="1500"
+						texpostime="2300"
+						texposscale="1"
+						texstretchscale="0"
+						material="/shared/effects/materials/arrow_trail.material"
+					>
+						<particle
+							startcolor="1 0 0"
+							midcolor="1 .5 0"
+							endcolor=".4 0 .4"
+							startsize="0"
+							midsize="30"
+							endsize="0"
+							midcolorpos=".1"
+							midsizepos=".1"
+						/>
+					</trailemitter>
+				</particle>
+			</trackeremitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>
+		<camerashake2 scale="7.0" radius="1000" duration="7000" frequency="22" />
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+	</thread>
+
+</effect>

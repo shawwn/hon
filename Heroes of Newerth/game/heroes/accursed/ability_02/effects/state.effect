@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="fireshield" deferred="true" useentityeffectscale="true">
+	<definitions>
+		<particlesystem name="system0" space="entity" scale=".75">
+
+			<sound
+				linearfalloff="true"
+				falloffstart="1000"
+				falloffend="2000" 
+				volume="0.65" 
+				sample="/heroes/accursed/ability_02/sounds/ability_02_cast.wav"
+			/>
+
+			<!-- shield -->
+
+			<template name="Fire">
+				<model 
+					anim="idle"
+					startalpha="1"
+					endalpha="0"
+					model="shield.mdf"
+					color="1 1 1"
+					scale="1"
+					yawspeed="80"
+					expirelife="500"
+					position="0 0 10"
+				>	
+					
+					<billboard
+						expirelife="200"
+						bone="{bone1}"
+						startcolor="1 .5 .0"
+						endcolor="0 0 0"
+						size="150"
+						depthbias="0"
+						material="/shared/effects/materials/flare_01.material"
+						lockup="true"
+						pitch="90"
+					/>
+
+					<billboard
+						expirelife="200"
+						bone="{bone1}"
+						startcolor="1 .6 .5"
+						endcolor="0 0 0"
+						size="50"
+						maxroll="360"
+						material="/shared/effects/materials/blink.material"
+						lockup="true"
+						pitch="90"
+						life="100"
+						loop="true"
+					/>
+
+				</model>	
+			</template>
+
+			<instance name="Fire" bone1="_bone_fx03" />
+			<instance name="Fire" bone1="_bone_fx01"/>	
+			<instance name="Fire" bone1="_bone_fx02"/>
+	
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

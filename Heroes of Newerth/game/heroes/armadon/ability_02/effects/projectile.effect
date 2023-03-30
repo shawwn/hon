@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect  persistent="1">
+	<definitions>
+
+		
+		<particlesystem name="system0" space="world" scale="2">
+	
+	<trailemitter		
+								bone="_bone_trail"
+								life="1000"							
+								spawnrate="30"
+								startminparticlelife="1000"
+								startmaxparticlelife="1000"									
+								endminparticlelife="1"
+								endmaxparticlelife="1" 
+								texpostime="1000"
+							 	texposscale="1"
+							 	texstretchscale="0"
+								position="0 0 0"
+								material="/shared/effects/materials/arrow_trail_blend.material"
+							>
+								<particle
+									startcolor=".4 .2 0"
+									midcolor=".4 .2 0"
+									endcolor="0 0 0"
+									startalpha="1"
+									midalpha="1"
+									endalpha="0"
+									midalphapos=".2"
+									startsize="4"
+									midsize="3"				
+									endsize=".5"								
+								/>
+							</trailemitter>				
+
+							<trailemitter		
+								bone="_bone_trail01"
+								life="1000"							
+								spawnrate="30"
+								startminparticlelife="1000"
+								startmaxparticlelife="1000"									
+								endminparticlelife="1"
+								endmaxparticlelife="1" 
+								texpostime="1000"
+							 	texposscale="1"
+							 	texstretchscale="0"
+								position="0 0 0"
+								material="/shared/effects/materials/arrow_trail_blend.material"
+							>
+								<particle
+									startcolor=".4 .2 0"
+									midcolor=".4 .2 0"
+									endcolor="0 0 0"
+									startalpha="1"
+									midalpha="1"
+									endalpha="0"
+									midalphapos=".2"
+									startsize="4"
+									midsize="3"				
+									endsize=".5"								
+								/>
+							</trailemitter>		
+							<trailemitter		
+								bone="_bone_trail02"
+								life="1000"							
+								spawnrate="30"
+								startminparticlelife="1000"
+								startmaxparticlelife="1000"									
+								endminparticlelife="1"
+								endmaxparticlelife="1" 
+								texpostime="1000"
+							 	texposscale="1"
+							 	texstretchscale="0"
+								position="0 0 0"
+								material="/shared/effects/materials/arrow_trail_blend.material"
+							>
+								<particle
+									startcolor=".4 .2 0"
+									midcolor=".4 .2 0"
+									endcolor="0 0 0"
+									startalpha="1"
+									midalpha="1"
+									endalpha="0"
+									midalphapos=".2"
+									startsize="4"
+									midsize="3"				
+									endsize=".5"								
+								/>
+							</trailemitter>	
+
+							<trailemitter		
+								bone="_bone_trail03"
+								life="1000"							
+								spawnrate="30"
+								startminparticlelife="1000"
+								startmaxparticlelife="1000"									
+								endminparticlelife="1"
+								endmaxparticlelife="1" 
+								texpostime="1000"
+							 	texposscale="1"
+							 	texstretchscale="0"
+								position="0 0 0"
+								material="/shared/effects/materials/arrow_trail_blend.material"
+							>
+								<particle
+									startcolor=".4 .2 0"
+									midcolor=".4 .2 0"
+									endcolor="0 0 0"
+									startalpha="1"
+									midalpha="1"
+									endalpha="0"
+									midalphapos=".2"
+									startsize="4"
+									midsize="3"				
+									endsize=".5"								
+								/>
+							</trailemitter>									
+	
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+	  
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+
+

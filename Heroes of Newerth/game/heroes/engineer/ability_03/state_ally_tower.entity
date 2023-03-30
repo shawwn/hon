@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Engineer_Ability3_Ally_Tower"
+	
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+	
+	attackspeed=".1,.2,.3,.4"
+	armor="3,5,7,9"
+	
+	effecttype=""
+>
+</state>

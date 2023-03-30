@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Panda_Ability4"
+
+	radius="0"
+	
+	impactdelay="0"
+	targetselection="closest"
+	targetscheme="all_units"
+	effecttype="Physical"
+	maxtotalimpacts="1"
+>
+
+	<onimpact>
+		<attack target="proxy_entity" source="this_owner_entity" />
+	</onimpact>
+</affector>

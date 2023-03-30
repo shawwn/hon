@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_Frosty"
+
+	team="Legion"
+	icon="icon.tga"
+	portrait="icon.tga"
+	model="model.mdf"
+	skin=""
+	
+	passiveeffect="effects/body.effect"
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="sounds/voice/select_%.wav"
+	selectedflavorsound="sounds/voice/select_flavour_%.wav"
+	confirmmovesound="sounds/voice/move_%.wav"
+	confirmattacksound="sounds/voice/attack_%.wav"
+	nomanasound="sounds/voice/no_mana.wav"
+	cooldownsound="sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="sounds/voice/taunt_prior.wav"
+	tauntkillsound="sounds/voice/taunt_after.wav"
+	
+	preglobalscale="1.395"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="112"
+	boundsradius="24"
+	selectionradius="48"
+	targetoffset="0 0 92"
+
+	movespeed="290"
+	turnrate="450"
+	turnsmoothing="0.1"
+
+	maxhealth="150"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="-0.94"
+	magicarmor="5.5"
+
+	inventory0="Ability_Frosty1"
+	inventory1="Ability_Frosty2"
+	inventory2="Ability_Frosty3"
+	inventory3="Ability_Frosty4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8="Ability_Taunt"
+
+	attackduration="1200"
+	attackactiontime="450"
+	attackcooldown="1700"
+	attackdamagemin="22"
+	attackdamagemax="30"
+	attacknumanims="2"
+	attackoffset="0 30 110"
+	attackprojectile="Projectile_Frosty_Attack"
+	attackrange="600"
+	attackstarteffect=""
+	attackactioneffect="effects/attack.effect"
+	attackimpacteffect=""
+	attacktype="ranged"
+	combattype="Hero"
+
+	aggrorange="800"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="Intelligence"
+	strength="16"
+	strengthperlevel="1.7"
+	agility="17"
+	agilityperlevel="1.6"
+	intelligence="21"
+	intelligenceperlevel="2.9"
+	
+	previewmodel="preview.mdf"
+	previewpos="0 0 -150"
+	previewangles="0 0 0"
+	previewscale="1.75"
+>
+	<recommendeditem name="Item_ManaPotion" />
+	<recommendeditem name="Item_MinorTotem" />
+	<recommendeditem name="Item_RunesOfTheBlight" />
+	<recommendeditem name="Item_HealthPotion" />
+	<recommendeditem name="Item_HomecomingStone" />
+	
+	<recommendeditem name="Item_FlamingEye" />	
+	<recommendeditem name="Item_Strength5" />
+	<recommendeditem name="Item_Striders" />
+	<recommendeditem name="Item_PortalKey" />
+	<recommendeditem name="Item_Astrolabe" />
+	<recommendeditem name="Item_Immunity" />
+	<recommendeditem name="Item_Intelligence7" />
+	
+	<modifier key="frost" modpriority="100"
+		attackprojectile="Projectile_Frost"
+		passiveeffect="effects/frost.effect"		
+	/>
+
+	<modifier key="Female" modpriority="1"
+		altavatar="true"
+		
+		icon="alt/icon.tga"
+		portrait="alt/icon.tga"
+		model="alt/model.mdf"
+		
+		preglobalscale="1.65"
+		infoheight="190"
+		
+		selectedsound="alt/sounds/voice/select_%.wav"
+		selectedflavorsound="alt/sounds/voice/select_flavour_%.wav"
+		confirmmovesound="alt/sounds/voice/move_%.wav"
+		confirmattacksound="alt/sounds/voice/attack_%.wav"
+		nomanasound="alt/sounds/voice/no_mana.wav"
+		cooldownsound="alt/sounds/voice/cooldown.wav"
+		announcersound="alt/sounds/voice/hero_select.wav"
+		tauntedsound="alt/sounds/voice/taunt_prior.wav"
+		tauntkillsound="alt/sounds/voice/taunt_after.wav"
+		
+		previewmodel="alt/preview.mdf"
+		previewpos="0 0 -120"
+		previewangles="0 0 0"
+		previewscale="1.75"
+	>
+	</modifier>
+</hero>

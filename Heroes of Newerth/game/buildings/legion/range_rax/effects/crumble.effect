@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="rax_die">
+	<definitions>
+		<particlesystem name="system0" space="world">
+
+
+			<model
+
+				life="9000"
+				model="/buildings/legion/range_rax/effects/range_rax_death/model.mdf"
+				anim="idle"
+				color="1 1 1"
+				startalpha="1 1 1"
+				midalpha=".5 .5 .5"
+				endalpha="0 0 0"
+				midalphapos=".2"							
+
+			/>
+
+		</particlesystem>
+	  
+		<modifier
+
+			alpha="0"
+		/>
+   	</definitions>
+<thread>
+		<spawnparticlesystem instance="instance1" particlesystem="system0" />
+		<spawnmodifier instance="instance0"/>
+		<waitfordeath  instance="instance0"/>
+		<waitfordeath  instance="instance1"/>
+		<!-- <die /> -->
+</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+
+

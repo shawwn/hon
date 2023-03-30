@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Gladiator3"
+	
+	statuseffecttooltip="State_Gladiator_Ability3"
+	icon="icon.tga"
+	
+	anim="ability_3"
+	casttime="400"
+	castactiontime="400"
+	casteffect="effects/cast.effect"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_entity"
+	targetscheme="enemy_and_willing_heroes"
+	
+	casteffecttype="Magic"
+	
+	manacost="80,90,100,110"
+	cooldowntime="30000"
+	
+	range="500,650,800,950"
+>
+	<onimpact>
+		<spawnunit name="Gadget_Gladiator_Ability3" count="1" target="target_position" pushentity="true" />
+		<applystate name="State_Gladiator_Ability3" duration="1000,2000,3000,4000" target="target_entity" proxy="stack_entity" />
+		<applystate name="State_Gladiator_Ability3_Return" duration="1000,2000,3000,4000" target="source_entity" />
+		<spawnunit name="Gadget_Gladiator_Ability3_Vision" count="1" target="target_position" />
+		<setproxy entity="this_entity" target="target_entity" />
+		<starttimer duration="1000,2000,3000,4000" />
+	</onimpact>
+	
+	<modifier key="gladiator_return" modpriority="100"
+		ignorecooldown="true"
+		statuseffecttooltip=""
+		anim="ability_3"
+		icon="../ability_02/icon_b.tga"
+		casttime="1000"
+		castactiontime="0"
+		manacost="50"
+		actiontype="no_target"
+		cooldowntime="0"
+		frontqueue="true"
+		inheritmovement="true"
+	>
+		<onimpact>
+			<expirestate target="proxy_entity" name="State_Gladiator_Ability3" />
+			<expirestate target="source_entity" name="State_Gladiator_Ability3_Return" />
+			<resettimer />
+		</onimpact>
+	</modifier>
+</ability>

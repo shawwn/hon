@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Maliken_Ability1"
+
+	icon=""
+	portrait=""
+	model="effects/swordprojectile.mdf"
+	passiveeffect="effects/body.effect"
+	preglobalscale="1.3"
+	modelscale="1.0"
+	effectscale="1.0"
+	boundsheight="0"
+	boundsradius="0"
+	isselectable="false"
+	selectionradius="0"
+	targetoffset="0 0 0"
+
+	canrotate="false"
+	ismobile="false"
+
+	attacktype="none"
+	combattype="Ranged"
+
+	sightrangeday="700"
+	sightrangenight="700"
+	unitwalking="true"
+	canattack="false"
+	deathtime="0"
+	corpsetime="0"
+	
+	invulnerable="true"
+	flying="false"
+	drawonmap="false"
+	clearvision="true"
+
+>
+	<ondeath>
+		<expirestate name="State_Maliken_Ability1" target="this_owner_entity"/>
+	</ondeath>
+	
+	
+	<modifier key="swordflame1" modpriority="100"
+		passiveeffect="effects/body_flame.effect"
+	>
+	</modifier>
+	
+	<modifier key="swordflame2" modpriority="100"
+		passiveeffect="effects/body_flame.effect"
+	>
+	</modifier>
+	
+	<modifier key="swordflame3" modpriority="100"
+		passiveeffect="effects/body_flame.effect"
+	>
+	</modifier>
+	
+	<modifier key="swordflame4" modpriority="100"
+		passiveeffect="effects/body_flame.effect"
+	>
+	</modifier>
+	
+	<modifier key="swordhealing1" modpriority="100"
+		passiveeffect="effects/body_heal.effect"
+	>
+	</modifier>	
+	
+	<modifier key="swordhealing2" modpriority="100"
+		passiveeffect="effects/body_heal.effect"
+	>
+	</modifier>	
+	
+	<modifier key="swordhealing3" modpriority="100"
+		passiveeffect="effects/body_heal.effect"
+	>
+	</modifier>
+	
+	<modifier key="swordhealing4" modpriority="100"
+		passiveeffect="effects/body_heal.effect"
+	>
+	</modifier>
+	
+	<modifier key="Alt" modpriority="1"
+		model="../alt/ability_01/effects/swordprojectile.mdf"
+	>
+	</modifier>
+	
+	<modifier key="malikenult" modpriority="2"
+		model="effects/swordprojectile.mdf"
+	>
+	</modifier>
+</gadget>

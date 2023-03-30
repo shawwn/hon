@@ -1,0 +1,15 @@
+/.cvsignore/1.1/Fri May 16 23:08:47 2008//
+/README.txt/1.1/Fri May 16 23:08:47 2008//
+/common.c/1.1/Fri May 16 23:08:47 2008//
+/common.h/1.1/Fri May 16 23:08:47 2008//
+/fetch.c/1.1/Fri May 16 23:08:47 2008//
+/fetch.h/1.1/Fri May 16 23:08:47 2008//
+/ftp.c/1.1/Fri May 16 23:08:47 2008//
+/ftp.errors/1.1/Fri May 16 23:08:47 2008//
+/ftperr.h/1.1/Fri May 16 23:08:47 2008//
+/http.c/1.1/Fri May 16 23:08:47 2008//
+/http.errors/1.1/Fri May 16 23:08:47 2008//
+/httperr.h/1.1/Fri May 16 23:08:47 2008//
+/mojosetup_libfetch.h/1.1/Fri May 16 23:08:47 2008//
+/regen_error_headers.sh/1.1/Fri May 16 23:08:47 2008//
+D

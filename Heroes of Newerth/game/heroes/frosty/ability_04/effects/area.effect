@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+	<definitions>
+	
+	
+		
+		<particlesystem name="system0" space="world" scale="1">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume="1" 
+				sample="/heroes/frosty/ability_04/sounds/cast.wav"
+			/>
+
+
+			<simpleemitter	
+			
+				spawnrate="3"
+				particlelife="500"
+						
+
+				acceleration="50"
+				position="0 0 40"
+
+
+				material="/shared/effects/materials/rad_add.material"
+				offsetsphere="0 0 0"
+				minangle="0"
+				maxangle="360"
+				direction="0 0 0"
+				particledirectionalspace="local"
+				
+			>
+
+				<particle 
+					minangle="-20"
+					maxangle="20"
+					minanglespeed="100"
+
+					startcolor="0 0 0"
+					midcolor=".2 .5 1"
+					endcolor="0 0 0"
+					midcolorpos=".7"
+
+					maxanglespeed="0"
+					startframe="0"
+					endframe="1"				
+					
+					
+					minsize="130"		
+					maxsize="310"
+					midsizepos=".7"		
+
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".7"
+					anchor="1"
+				/>
+			</simpleemitter> 
+
+		
+			
+			
+			
+			
+			<!-- snow -->
+			<simpleemitter	
+				spawnrate="322"
+				particlelife="1400"			
+				
+				speed="40"
+				position="0 0 200"
+				offsetsphere="500 500 100"
+				acceleration="0"
+				gravity="2"
+				material="/shared/effects/materials/snowflake.material"
+				timenudge="2000"
+				inheritvelocity="0"
+			>
+
+				<particle
+					minangle="-360"
+					maxangle="360"
+					
+					color=" 1 1 1"								
+					
+					minsize="1"
+					maxsize="22"
+					
+					startalpha="0"
+					midalpha="0.8\\\\\\\\\"
+					endalpha="0"
+					midalphapos="0.9"
+					anchor="0"
+					depthbias="0"							
+			
+				/>
+			</simpleemitter>
+
+
+
+
+
+			<simpleemitter				
+				spawnrate="2"
+				particlelife="1600"				
+				offsetsphere="300 300 0"
+				position="-150 0 500"
+				gravity="0"
+				speed="510"
+				minangle="0"
+				maxangle="10"
+				direction="0 0 -1"
+			>
+				<particle				
+					turn="1"				
+				>	
+					<trailemitter
+						spawnrate="10"
+						startminparticlelife="500"
+						startmaxparticlelife="500"		
+						
+						endminparticlelife="1"
+						endmaxparticlelife="1" 
+						texpostime="800"
+					 	texposscale="0"
+					 	texstretchscale="1"
+						position="0 0 0"
+						material="/shared/effects/materials/arrow_trail.material"
+					>
+						<particle
+						
+							startcolor=".2 .4 1"
+							midcolor=".1 .1 .1"
+							
+							endcolor="0 0 0"
+							startsize="10"
+							midsize="5"
+							endsize=".5"					
+						/>
+					</trailemitter>	
+					
+					
+					
+	
+					
+					<simpleemitter			
+						spawnrate="6"
+						particlelife="300"
+						
+
+						acceleration="50"
+						position="0 0 0"
+						timenudge="000"
+
+						material="/shared/effects/materials/rad_add.material"
+						offsetsphere="0 0 0"
+						minangle="0"
+						maxangle="360"
+						direction="0 0 0"
+						particledirectionalspace="local"
+						
+					>
+
+						<particle 
+							minangle="-20"
+							maxangle="20"
+							minanglespeed="100"
+
+													
+							
+							anchor="1"
+							color=".2 .3 1"
+							
+							midcolorpos=".7"
+
+							maxanglespeed="0"
+							startframe="0"
+							endframe="1"				
+							
+							minsize="30"		
+							maxsize="40"
+							midsizepos=".7"		
+
+							startalpha="0"
+							midalpha="1"
+							endalpha="0"
+							midalphapos=".7"
+					
+						/>
+					</simpleemitter> 					
+
+				</particle>
+			</simpleemitter> 
+			
+			
+			<simpleemitter					
+				spawnrate="3"
+				particlelife="2600"				
+				offsetsphere="300 300 0"
+				position="0 0 20"					
+			>
+				<particle												
+				>
+										
+					<billboard
+						life="1200"
+						startcolor=".1 .4 .8"
+						endcolor="0 0 0"
+						startalpha="1.0"
+						midalpha="1.0"
+						endalpha="0.0"
+						midalphapos="0.75"
+						startparam="0.05"
+						endparam="0.0"
+										
+						startsize="00"
+						midsize="80"
+						endsize="100"
+						midsizepos=".4"
+										
+						depthbias="0"
+						position="0 0 10"
+						material="/shared/effects/materials/shieldstarfish.material"
+						lockup="true"
+						pitch="90"
+					/>						
+					
+					<debris
+						scale=".2"	
+						life="1600"
+						model="ice.mdf"
+						anim="idle"	
+						minspeed="200.0"
+						maxspeed="400.0"
+						minrotationspeed="500.0"
+						maxrotationspeed="600.0"
+						gravity="20.0"
+						minangle="45"
+						maxangle="60"
+						collide="true"
+						midalphapos="0.9"
+						bounce="0.7"
+						reflect="0.6"
+						animpose="false"
+						color=".94 .95 1"
+					/>	
+
+
+
+					<simpleemitter			
+						spawnrate="11"
+						particlelife="500"
+						count="1"		
+
+						acceleration="50"
+						position="0 0 0"
+						timenudge="000"
+
+						material="/shared/effects/materials/rad_add.material"
+						offsetsphere="0 0 0"
+						minangle="0"
+						maxangle="360"
+						direction="0 0 0"
+						particledirectionalspace="local"
+					>
+
+						<particle 
+							minangle="-20"
+							maxangle="20"
+							minanglespeed="100"
+
+							startcolor="0 0 0"
+							midcolor=".2 .5 1"
+							endcolor="0 0 0"
+							midcolorpos=".7"
+
+							maxanglespeed="0"
+							startframe="0"
+							endframe="1"				
+							
+							minsize="50"		
+							maxsize="80"
+							midsizepos=".7"		
+
+							startalpha="0"
+							midalpha="1"
+							endalpha="0"
+							midalphapos=".7"
+							lockup="1"
+							lockright="1"
+							pitch="-90"
+							
+						/>
+					</simpleemitter> 	
+
+					
+				</particle>
+			</simpleemitter> 
+
+	
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />		
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

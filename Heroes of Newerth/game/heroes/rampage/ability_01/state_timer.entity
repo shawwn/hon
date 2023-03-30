@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Rampage_Ability1_Timer"
+	
+	ishidden="true"
+	impactinterval="1000"
+>
+	<oninflict>
+		<addcharges count="1" entity="proxy_entity" />
+	</oninflict>
+
+	<onimpact>
+		<addcharges entity="proxy_entity" />
+		<condition test="result eq 5">
+			<setactivemodifierkey entity="proxy_entity" name="rampage_charge_treewalking" />
+		</condition>
+	</onimpact>
+</state>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1">
+	<definitions>
+
+	<particlesystem name="system0" space="world" scale="1">
+	
+		<billboard
+			bone="_bone_fx1"
+			life="300"
+			color="1 1 1"
+			position="0 0 0"
+			startsize="100"
+			endsize="200"
+			material="/shared/effects/materials/refract_wave.material"
+			lockup="1"
+			lockright="1"
+			directionalspace="local"
+			startparam="0"
+			midparam="0.05"
+			endparam="0"
+			midparampos=".3"
+			roll="0"
+			yaw="0"
+			pitch="90"	
+		/>	
+
+		<billboard
+			bone="Box15"
+			expirelife="250"
+			startcolor=".5 0 .5"
+			endcolor="0 0 0"
+			midcolorpos=".25"
+			position="0 0 50"
+			startsize="150"
+			endsize="350"
+			material="/shared/effects/materials/whitedot.material"
+			directionalspace="world"
+		/>
+		
+		<twopointtrailemitter
+			name="trail01"
+			bone_a="_bone_fx2"
+			bone_b="_bone_fx1"
+			spawnrate="50"
+			particlelife="500"
+			texpostime="500"
+			texposscale="0"
+			texstretchscale="1"
+			material="/shared/effects/materials/soul_projectile.material"
+		>
+			<particle
+				startcolor=".6 0 .3"
+				midcolor=".6 0 .3"
+				endcolor="0"
+				startalpha="0"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".2"
+			/>
+		</twopointtrailemitter>
+
+			<simpleemitter
+				bone="Box15"
+				depthbias="-55"
+				spawnrate="75"
+				particlelife="400"
+				offsetsphere="40"
+				angle="10"
+				speed="10"
+				material="/shared/effects/materials/mana_regen.material"
+			>
+				<particle
+					startcolor=".1 0 .4"
+					endcolor="0"
+					startsize="120"
+					endsize="0"
+					maxangle="360"
+					minendscale="2"
+					maxendscale="4"
+			 	/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="Box15"
+				depthbias="-55"
+				spawnrate="45"
+				minparticlelife="1000"
+				maxparticlelife="1250"
+				offsetsphere="30"
+				angle="10"
+				speed="30"
+				material="/shared/effects/materials/phantom_smoke_03.material"
+			>
+				<particle
+					startcolor=".8 0 .5"
+					endcolor="0"
+					startsize="90"
+					endsize="145"
+					maxangle="360"
+					minendscale="2"
+					maxendscale="4"
+					endstickiness="0"
+			 	/>
+			</simpleemitter>
+
+		
+      </particlesystem>
+   </definitions>
+   <thread>
+     <spawnparticlesystem instance="instance0" particlesystem="system0" />
+
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

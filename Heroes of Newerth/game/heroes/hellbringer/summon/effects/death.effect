@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="">
+
+	<definitions>
+			
+		<!-- fade -->	
+		<modifier
+			name="modifier0"
+			life="12000"
+			color="1 1 1"
+			startalpha="1"
+			midalpha="0"
+			endalpha="0"
+			midalphapos=".1"			
+		/>
+
+		<particlesystem name="system0" space="world" scale=".5">
+
+			<sound
+				volume="0.8" 
+				sample="/heroes/hellbringer/summon/sounds/death_explode.wav"
+				linearfalloff="true"
+				falloffstart="1000"
+				falloffend="2200"
+			/>
+			
+			<simpleemitter
+				bone="Bip01 Spine1"
+				life="600"
+				directionalspace="global"
+				position="0 0 5"
+				spawnrate="200"				
+				particlelife="2500"
+				gravity="-3.0"
+				offsetsphere="30 30 30"
+				minangle="25"
+				maxangle="10"
+				direction="0 0 1"	
+          			material="/shared/effects/materials/smoke_particle.material"
+         	>
+				<particle
+					color=".15 .15 .15"
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="0"
+					midcolorpos=".1"
+					maxanglespeed="0"
+					startsize="89"			
+					endsize="122"			
+					startalpha="0.0"
+					midalpha=".2"
+					endalpha="0.0"
+					midalphapos="0.1"
+					scale="0.7"
+				/>
+			</simpleemitter>
+
+			<billboard
+				delay="500"
+				material="/shared/effects/materials/scorch_02.material"
+				position="0 0 10"
+				startcolor="1 1 0"
+				endcolor="0"
+				startsize="50"					
+				endsize="500"
+				depthbias="-200"
+				lockup="true"
+				lockright="true"
+				pitch="90"
+				yaw="0"
+				life="400"
+			/>
+
+			<trackeremitter
+				delay="500"
+				expirelife="800"
+				life="800"
+				startparticlecolor="1 1 1"
+				endparticlecolor="0 0 0"	
+				position="0.0 0.0 30.0" 
+				targetposition="0.0 0.0 100.0"
+				targetowner="target"
+				tracktype="distance"
+				trackspeed="100.0" 
+				spawnrate="30"
+				particlelife="1200"
+				speed="20"
+				offsetsphere="120"
+				material="/shared/effects/materials/dust_smoke_02.material"
+				inheritvelocity="0.0"
+				distancelife="true"
+				angle="0"
+			>
+				<particle 
+					color="0"
+					midalpha="1"
+					endalpha="0"
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-90"
+					maxanglespeed="90"
+					maxendsize="300"
+					startsize="10"
+					minendsize="200"
+					scale="0.7"
+					
+				/>
+			</trackeremitter>
+
+			<trackeremitter
+				delay="500"
+				life="1800"
+				expirelife="800"
+				startparticlecolor="1 1 1"
+				endparticlecolor="0 0 0"	
+				position="0.0 0.0 0.0" 
+				targetposition="0.0 0.0 500.0"
+				targetowner="target"
+				tracktype="distance"
+				trackspeed="100.0" 
+				spawnrate="40"
+				minparticlelife="900"
+				maxparticlelife="1400"
+				gravity="0.0"
+				offsetsphere="25 25 25"
+				minspeed="0"
+				maxspeed="20.0"
+				drag="0.0"
+				acceleration="100.0"
+				direction="0.0 0.0 1"
+				material="/shared/effects/materials/flame.material"
+				inheritvelocity="0.0"
+				distancelife="true"
+				angle="0"
+				depthbias="-70"
+			>
+				<particle 
+					startcolor="0"
+					midcolor=".5 .16 .0"
+					midcolorpos="0.3"
+					endcolor="0 0 0"
+					endheight="400"
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="-20"
+					maxanglespeed="20"
+					minstartsize="0"
+					maxstartsize="20.0"
+					minendsize="200"
+					maxendsize="425"
+					minendwidth="200"
+					maxendwidth="755"
+					turn="0"
+					flare="1"
+					scale="0.7"
+				/>
+			</trackeremitter>
+
+		<!-- sparks -->
+				<simpleemitter
+					bone="Bip01 Spine1"
+					delay="1000"
+					life="1500"
+					startspawnrate="600"
+					endspawnrate="50"
+					drag=".001"
+					particlelife="3000"
+					gravity="-1.0"
+					minspeed="20"
+					maxspeed="120.0"								
+					direction="0.0 0.0 1.0"
+					offsetsphere="60 60 40"
+					minangle="-40"
+					maxangle="40"
+					material="/shared/effects/materials/spark_10.material"
+					inheritvelocity=".35"				
+				>			
+					<particle
+						startcolor="1 .5 .2"
+						endcolor="0 0 0"
+						alpha="1.0"
+						width="10"
+						height="10"
+						lockup="false"
+						lockright="false"
+						minangle="-360"
+						maxangle="1"
+						minanglespeed="110"
+						maxanglespeed="-110"
+					/>
+				</simpleemitter>
+
+
+	
+		
+				
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>  		
+		
+			<!--	-->
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" /> 
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

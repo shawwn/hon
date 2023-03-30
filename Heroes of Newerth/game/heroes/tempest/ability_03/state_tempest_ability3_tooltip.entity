@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Tempest_Ability3_Tooltip"
+
+	icon="icon.tga"
+	passiveeffect=""
+
+	effecttype="StatusDebuff"
+>
+	<onframe />
+</state>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Gladiator_Ability3_Return"
+	
+	icon=""
+	passiveeffect=""
+	ishidden="true"
+
+	effecttype=""
+	
+	modifierkey="gladiator_return"
+>
+</state>

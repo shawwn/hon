@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Deadwood_Ability2"
+
+	icon="icon.tga"
+	passiveeffect="effects/tree.effect"
+
+	damage="15,30,45,60"
+	effecttype=""
+	modifierkey="deadwood_ihasatree"
+>
+	<oninflict>
+		<addcharges count="5"/>
+	</oninflict>
+	
+	<onrefresh>
+		<setcharges a="5" b="0" op="add" />
+	</onrefresh>
+	
+	<onattackimpact>
+		<removecharge/>
+		<playeffect effect="effects/attack_follow_through.effect" target="source_entity" />
+		<playeffect effect="effects/attack_impact.effect" source="target_entity" />
+		<condition test="charges == 0">
+			<playeffect effect="effects/death.effect" target="source_entity" />
+			<expire/>
+		</condition>
+	</onattackimpact>
+	
+	<onexpired>
+		<setcharges entity="proxy_entity" a="0" />
+	</onexpired>
+</state>

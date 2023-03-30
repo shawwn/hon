@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Behemoth_Ability2"
+
+	
+	
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+	
+	basedamagemultiplier="0.5,1.0,1.5,2.0"
+	
+	effecttype="StatusBuff"
+>
+	<onattack>
+		<expire/>
+	</onattack>
+</state>

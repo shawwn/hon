@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Fairy2"
+
+	icon="icon.tga"
+	
+	anim="ability_2"
+	casttime="1000"
+	castactiontime="500"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_entity"
+	targetscheme="ally_mana_units"
+	casteffecttype=""
+	casteffect=""
+	
+	manacost="40,55,70,85"
+	cooldowntime="19000,18000,17000,16000"
+	
+	range="900"
+
+	doubleactivate="true"
+>
+	<onimpact>
+		<applystate name="State_Fairy_Ability2" target="target_entity" duration="4000" />
+		<playeffect effect="effects/cast.effect" source="target_entity" />
+	</onimpact>
+</ability>

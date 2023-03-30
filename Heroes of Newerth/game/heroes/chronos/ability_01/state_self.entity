@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Chronos_Ability1_Self"
+
+	icon="icon.tga"
+	
+	invulnerable="true"
+	silenced="true"
+	perplexed="true"
+	immobilized="true"
+	disarmed="true"
+	stunned="true"
+	
+	passiveeffect=""
+	
+	effecttype=""
+>
+</state>

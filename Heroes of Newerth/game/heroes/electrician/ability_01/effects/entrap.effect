@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1" useentityeffectscale="1">
+	<definitions>
+
+		<particlesystem name="bridge" space="world" scale=".75">
+
+
+			
+
+			<beam
+				delay="100"
+				owner_b="target"
+				owner_a="source"
+				bone_b="_bone_fx_46"
+				bone_a="_bone_centerofchest"
+				size="75"
+				color="0 1 1"
+				
+				alpha="1.0"
+				material="/shared/effects/materials/femme_lightning_10.material"
+				startframe=".6"
+				framespeed="5"
+			/>
+
+			
+			<beam
+				delay="100"
+				owner_a="target"
+				owner_b="source"
+				bone_a="_bone_fx_46"
+				bone_b="_bone_centerofchest"
+				size="75"
+				color=".5 1 .5"
+				
+				alpha="1.0"
+				material="/shared/effects/materials/femme_lightning_10.material"
+				startframe="0"
+				framespeed="4"
+			/>		
+
+
+			<groundsprite
+				life="300"
+				material="/shared/effects/materials/starlight.material"
+				position="0 0 0"
+				startsize="0"				
+				endsize="65"
+				midsizepos=".5"
+			
+				
+				color=".0 .5 .5"
+
+				midcolorpos=".2"
+				minangle="0"
+				maxangle="0"
+				angles="0 0 0"
+				
+			/>
+
+			<groundsprite
+				delay="300"
+				expirelife="1000"
+				material="/shared/effects/materials/starlight.material"
+				position="0 0 0"
+				startsize="65"				
+				endsize="0"
+				midsizepos=".5"
+				color=".0 .5 .5"
+
+				midcolorpos=".2"
+				minangle="0"
+				maxangle="0"
+				angles="0 0 0"
+				
+			/>
+
+			
+
+			<simpleemitter
+				spawnrate="50"
+				expirelife="1000"
+				startparticlecolor="1 1 1"
+				endparticlecolor="1 1 1"
+				bone="_bone_centerofchest"
+				maxparticlelife="500"
+				minparticlelife="400"
+							
+				gravity="-22"
+				speed="25"
+				drag=".2"
+				acceleration="1"
+				position="0 0 0"
+
+
+				material="/shared/effects/materials/neb_add.material"
+				offsetsphere="40 40 40"
+
+				direction="0 0 0"
+
+			>
+
+				<particle 
+					minangle="90"
+					maxangle="360"
+					minanglespeed="60"
+					maxanglespeed="100"
+					startcolor="0 0 0"
+					midcolor=".0 1 1"
+					endcolor="0 0 0"
+					midcolorpos=".5"
+
+					startframe="0"
+					endframe="1"
+
+					startsize="15"
+					midsize="50"
+					endsize="70"
+
+					midsizepos=".3"
+
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".6"
+					startstickiness="0"
+					endstickiness="0"
+				/>
+			</simpleemitter>
+
+
+			<simpleemitter
+				spawnrate="60"
+				expirelife="1000"
+				startparticlecolor="1 1 1"
+				endparticlecolor="1 1 1"
+				
+				maxparticlelife="500"
+				minparticlelife="400"
+							
+				minspeed="-50"
+				maxspeed="51"
+				
+				acceleration="1"
+				position="0 0 0"
+
+				minangle="0"
+				maxangle="0"
+				material="/shared/effects/materials/electric_impact_add.material"
+				
+				offsetsphere=" 0 0 180"
+
+				direction="0 0 1"
+
+			>
+
+				<particle 
+
+					minangle="-360"
+					maxangle="360"
+					anglespeed="220"
+					lockup="1"
+					pitch="-90"
+					startcolor="0 0 0"
+					midcolor="0 .4 .3"
+					endcolor="0 0 0"
+					midcolorpos=".5"
+
+		
+
+					startsize="60"
+					midsize="180"
+					endsize="60"
+
+					midsizepos=".3"
+
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".6"
+					startstickiness="0"
+					endstickiness="0"
+				/>
+			</simpleemitter>
+
+			
+			
+			<orbiteremitter
+				expirelife="500"
+				startparticlecolor="1 1 1"
+				endparticlecolor="0 0 0"
+				minspawnrate="60"
+				maxspawnrate="81"
+				particlelife="2000"
+				origin="0 0 -50" 
+				orbit="5 0  " 
+				direction="0 0 1" 
+				offset="0 60 0"
+				cylindrical="true"
+				position="0 0 60"				
+				material="/shared/effects/materials/voodoo_03.material"
+				
+			>
+				<particle
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-200"
+					maxanglespeed="200"					
+					color="0 1 1"
+					startalpha="0"
+					minsize="10"
+					maxsize="42"
+					
+					heightdistor="1"
+					
+	
+					
+				/>
+			</orbiteremitter>			
+			
+			
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="bridge" />
+		  <spawnmodifier instance="instance1" modifier="modifier0"/> 
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />	
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

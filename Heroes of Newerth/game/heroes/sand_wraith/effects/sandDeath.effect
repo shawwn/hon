@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="Sandy SandyDeath">
+	<definitions>
+
+	
+		<particlesystem name="system0" space="entity" scale="0.66" >
+
+			<simpleemitter
+				life="1200"
+				particlelife="1300"				
+				spawnrate="30"
+				minspeed="100"
+				maxspeed="750"
+				gravity="10"
+				direction="0 0 1"
+				minangle="0"
+				maxangle="25"
+				drag="0.01"
+				material="/shared/effects/materials/sand_blend.material"
+				offsetsphere="25 25 10"
+				position="0 0 20"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-60"
+					maxanglespeed="60"
+					startsize="40"
+					endsize="120"
+					color=".8 .8 .3"				
+					startalpha=".5"
+					midalpha=".5"
+					endalpha="0"
+					startstickiness="0"
+					endstickiness=".4"
+				/>
+			</simpleemitter>
+
+			
+			<simpleemitter
+				count="2"
+				particlelife="1300"				
+				spawnrate="650"
+				minspeed="100"
+				maxspeed="750"
+				gravity="20"
+				direction="0 0 1"
+				minangle="0"
+				maxangle="1"
+				drag="0.01"
+				material="/shared/effects/materials/pyroclast_03.material"
+				offsetsphere="25 25 10"
+				position="0 0 40"
+			>
+				<particle 
+					depthbias="-100"
+					startcolor=".8 .8 .5 "
+					endcolor=".6 .5 .3"					
+					height="400"
+					startwidth="50"
+					endwidth="200"
+					startscale="1"
+					endscale="2"
+					startalpha="1"
+					endalpha="0"
+					lockup="1"
+					lockright="1"
+				/>
+			</simpleemitter>			
+
+			
+			<simpleemitter
+				life="1200"
+				position="0 0 20"
+				spawnrate="10"
+				bone="_bone_centerofchest"
+				particlelife="800"
+				gravity="-1"
+				material="/shared/effects/materials/pyroclast_03.material"
+				offsetsphere="32 32 0"
+				direction="1 0 0"
+				minangle="-180"
+				maxangle="180"
+				speed="0"
+				directionalspace="global"
+				inheritvelocity=".3"
+				depthbias="-20"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					anglespeed="20"
+					startsize="20"
+					midsize="100"
+					endsize="110"
+					lockup="true"
+					lockright="true"
+					pitch="90"
+					
+					startcolor=".8 .8 .5 "
+					endcolor=".5 .5 .3"					
+					
+					
+					
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".75"
+				/>
+			</simpleemitter >
+									
+			
+			<simpleemitter
+				position="0 0 70"
+				spawnrate="10"
+				life="1200"
+				particlelife="800"
+				gravity="22"
+				material="/shared/effects/materials/pyroclast_02.material"
+				offsetsphere="20 20 20"
+				direction="1 0 0"
+				minangle="-180"
+				maxangle="180"
+				speed=".02"
+				directionalspace="global"
+				inheritvelocity=".5"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					anglespeed="20"
+					startsize="20"
+					midsize="120"
+					endsize="150"
+					lockup="true"
+					lockright="true"
+					pitch="90"
+					startcolor=".8 .8 .5 "
+					endcolor=".5 .5 .3"		
+					midcolorpos=".15"
+					startalpha=".5"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".75"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				delay="800"
+				position="0 0 10"
+				spawnrate="8"
+				life="800"
+				particlelife="1500"
+				gravity="1"
+				material="/shared/effects/materials/pyroclast_02.material"
+				offsetsphere="20 20 20"
+				direction="1 0 0"
+				minangle="-180"
+				maxangle="180"
+				speed=".02"
+				directionalspace="global"
+				inheritvelocity=".5"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					anglespeed="20"
+					startsize="20"
+					
+					endsize="330"
+					lockup="true"
+					lockright="true"
+					pitch="90"
+					startcolor=".8 .8 .5 "
+					endcolor=".5 .5 .3"		
+					midcolorpos=".15"
+					startalpha=".5"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".75"
+				/>
+			</simpleemitter>			
+      </particlesystem>
+   </definitions>
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<spawnmodifier instance="instance1" modifier="modifier0"/>  
+	
+	<waitfordeath instance="instance0" />
+	<wait duration="20000"/>
+	<!-- <die /> -->
+</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->

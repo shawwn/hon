@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="1">
+
+	<definitions>
+
+		<particlesystem name="system0" space="entity" scale="1.3" >
+			
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume="1" 
+				sample="/heroes/armadon/ability_01/sounds/ability_01_impact.wav"
+			/>		
+
+			<simpleemitter
+				delay="0"
+				count="2"
+				particlelife="1100"				
+				spawnrate="11"
+				speed="220"
+				gravity="20"
+				direction="0 0 1"
+				minangle="0"
+				maxangle="15"
+				particledirectionalspace="local"
+				material="/shared/effects/materials/venom_splash.material"
+				offsetsphere="11 11 0"
+				position="0 0 44"
+			>
+				<particle 
+					startsize="20"
+					endsize="100"
+					color=".6 .4 .0 "					
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+				/>
+			</simpleemitter>		
+	
+			<simpleemitter
+				count="5"
+				particlelife="1500"				
+				spawnrate="110"
+				speed="280"
+				gravity="22"
+				minangle="0"
+				maxangle="30"
+				material="/shared/effects/materials/blood_white.material"
+				position="0 0 44"
+			>
+				<particle 
+					minanglespeed="-100"
+					maxanglespeed="100"
+					minangle="-60"
+					maxangle="60"
+					color=".6 .5 .0 "
+					startsize="30"
+					endsize="80"
+					startalpha="1"
+					endalpha="0"
+				/>
+			</simpleemitter>		
+	
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<wait duration="20000"/>
+		<!-- <die /> -->
+	</thread>
+
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->

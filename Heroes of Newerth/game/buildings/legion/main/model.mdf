@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="model.max" file="high.model" type="K2" >
+
+	<spawnevent cmd="StartEffect effects/body.effect 0"/>
+
+	<anim name="idle" clip="clips/default_1.clip" fps="30" loop="true" loopbackframe="1"/>
+	
+	<anim name="death_1" clip="clips/death_1.clip" fps="30" loop="true" loopbackframe="-1">
+		<frameevent frame="1" cmd="StopEffect 0"/>	
+			
+		<frameevent frame="1" cmd="StartEffect effects/stage_1.effect"/>
+		<frameevent frame="1" cmd="StartEffect effects/stage_2.effect"/>
+		<frameevent frame="1" cmd="StartEffect effects/stage_3.effect"/>
+		<frameevent frame="250" cmd="StartEffect effects/stage_5.effect"/>
+		<frameevent frame="300" cmd="StartEffect effects/boss.effect"/>
+	</anim>	
+
+</model>

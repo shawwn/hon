@@ -1,0 +1,21 @@
+Sai Girl:
+==========
+Ability 1:
+----------
+This is a passive ability. It goes off based on cooldown (which is the least of a constant time or after a certain number of attacks have been done). She does a double attack (using an animation with both blades involved).
+
+
+Ability 2:
+----------
+This is a ranged spell. Its should have a dark magic feel to it. It silences and slows a targeted unit.
+
+
+
+Ability 3:
+----------
+This is a unit targetted ranged spell. You target a unit and then your hero moves towards it, very quickly attacking all nearby enemy units as it goes towards the target. The secondary attacks are considered real attacks but are not affecting attack cooldown nor unwantingly triggering the first ability.
+
+
+Ultimate:
+---------
+This is a global spell. All enemy units have their vision reduced and their sight unshared from allied units. 

@@ -1,0 +1,53 @@
+// (C)2006 S2 Games
+// gui_blur.psh
+// 
+// ...
+//=============================================================================
+
+//=============================================================================
+// Global variables
+//=============================================================================
+float	fTexelSize;
+
+//=============================================================================
+// Vertex shader output structure
+//=============================================================================
+struct VS_OUTPUT
+{
+	float4 Color0    : COLOR0;
+	float2 Texcoord0 : TEXCOORD0;
+};
+
+
+//=============================================================================
+// Pixel shader input structure
+//=============================================================================
+struct PS_OUTPUT
+{
+	float4 Color : COLOR;
+};
+
+sampler image;
+
+//=============================================================================
+// Pixel Shader
+//=============================================================================
+PS_OUTPUT PS( VS_OUTPUT In )
+{
+	PS_OUTPUT Out;
+	
+	fTexelSize *= 1.0f;
+	
+	Out.Color = 0.0f;
+	
+	Out.Color += tex2D(image, In.Texcoord0 + float2(-fTexelSize, -fTexelSize));
+	Out.Color += tex2D(image, In.Texcoord0 + float2(-fTexelSize, fTexelSize));
+	Out.Color += tex2D(image, In.Texcoord0 + float2(fTexelSize, fTexelSize));
+	Out.Color += tex2D(image, In.Texcoord0 + float2(fTexelSize, -fTexelSize));
+	
+	Out.Color *= 0.25f;
+	Out.Color *= In.Color0;
+
+	return Out;
+}
+

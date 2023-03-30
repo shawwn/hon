@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Mumra_Ability4"
+
+	gravity="0"
+	useexactlifetime="true"
+	lifetime="500"
+
+	modelscale="1.8"
+	model="/shared/models/invis.mdf"
+	
+	impacteffect="effects/impact.effect"
+	traileffect="effects/projectile.effect"
+	
+	canturn="false"
+	flying="1"
+	flyheight="100"
+	
+	touchradius="96"
+	touchtargetscheme="nonneutral_organic_enemy_units"
+	toucheffecttype="SuperiorMagic"
+	maxtouches="1"
+>
+	<ontouch>
+		<cantarget targetscheme="nonneutral_organic_enemy_units">
+			<condition test="not_target_type Boss">
+				<delete target="this_entity" />
+				<playeffect effect="effects/laser_impact.effect" source="target_entity"/>
+				<applystate name="State_Stunned" duration="500" /> 
+				<spawnunit name="Gadget_Mumra_Ability4_Draglocation" count="1" target="target_entity" pushentity="true"/>
+				<spawnprojectile name="Projectile_Mumra_Ability4_Drag" count="1" proxy="stack_entity" target="stack_entity" bind="this_owner_entity" bindturn="true" bindstate="State_Mumra_Ability4_Drag" />
+				<playanim name="ability_4_fly" source="this_owner_entity" target="this_owner_entity"/>
+			</condition>
+		</cantarget>
+	</ontouch>
+</projectile>

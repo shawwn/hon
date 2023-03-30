@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Panda_Ability2_Selfbind"
+
+	speed="1500"
+	gravity="2500"
+	
+	modelscale="1.0"
+	model=""
+	
+	
+	canturn="false"
+	flying="false"
+	flyheight="0"
+	impactdistance="100"
+>
+	<onimpact>
+		<applystate name="State_Panda_Ability2_Animation" target="source_entity" proxy="proxy_entity" duration="500" />
+		<playanim name="ability_2" target="source_entity" />
+	</onimpact>
+
+</projectile>

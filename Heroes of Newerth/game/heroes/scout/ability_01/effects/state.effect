@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect>
+	<definitions>
+		<modifier
+			name="modifier0"
+			material="refract.material"
+			color="0 2 2"
+			param0=".85"
+		/>
+	</definitions>
+	<thread>
+		<spawnmodifier instance="instance0" modifier="modifier0"/> 
+		<waitfordeath instance="instance0"/>
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Rampage_Ability2"
+	
+	icon="icon.tga"
+	passiveeffect=""
+
+	impactinterval="1000"
+>
+	<oninflict>
+		<playeffect effect="effects/cast.effect" source="source_entity" target="" />
+	</oninflict>
+	
+	<onimpact>
+		<playeffect effect="effects/cast.effect" source="source_entity" target="" />
+	</onimpact>
+
+</state>

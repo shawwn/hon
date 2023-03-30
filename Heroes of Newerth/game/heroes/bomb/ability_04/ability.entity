@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Bombardier4"
+
+	icon="icon.tga"
+	statuseffecttooltip="State_Bombardier_Ability4_Napalm"
+	
+	anim="ability_4"
+	casttime="600"
+	castactiontime="0"
+	
+	inheritmovement="true"
+	frontqueue="true"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_vector"
+	targetmaterial="/shared/materials/vector_cast_indicator_airstrike.material"
+	targetradius="1100"
+	
+	casteffecttype="Magic"
+	targetscheme="enemy_units"
+	casteffect=""
+	
+	manacost="200,300,400"
+	cooldowntime="140000,120000,100000"
+
+	range="99999"
+>
+	<onimpact>
+		<setpos0 position="target_position" positionend="delta_position" positionmodifier="pointonline" positionvalue="1000" />
+		<spawnunit name="Gadget_Bombardier_Ability4_Pos0" target="pos0" pushentity="true" />
+		
+		<setpos0 position="target_position" positionend="delta_position" positionmodifier="pointonline" positionvalue="-200" />
+		<spawnunit name="Gadget_Bombardier_Ability4_Pos" proxy="stack_entity" target="pos0" />
+		
+		<setpos1 position="target_position" positionend="delta_position" positionmodifier="pointonline" positionvalue="1600" />
+		<setpos2 position="target_position" positionend="delta_position" positionmodifier="pointonline" positionvalue="-500" />
+		<spawnunit name="Gadget_Bombardier_Ability4_Reveal" target="pos2" pushentity="true" />
+		<spawnprojectile name="Projectile_Bombardier_Ability4_Art" source="pos2" target="pos1" bind="stack_entity" proxy="stack_entity"/>
+	</onimpact>
+	
+	<modifier key="ult_boost" modpriority="100"
+		displayname="true"
+	>
+		<onimpact>
+			<setpos0 position="target_position" positionend="delta_position" positionmodifier="pointonline" positionvalue="1000" />
+			<spawnunit name="Gadget_Bombardier_Ability4_Pos0" target="pos0" pushentity="true" />
+			
+			<setpos0 position="target_position" positionend="delta_position" positionmodifier="pointonline" positionvalue="-200" />
+			<spawnunit name="Gadget_Bombardier_Ability4_Pos" proxy="stack_entity" target="pos0" />
+			
+			<setpos1 position="target_position" positionend="delta_position" positionmodifier="pointonline" positionvalue="1600" />
+			<setpos2 position="target_position" positionend="delta_position" positionmodifier="pointonline" positionvalue="-500" />
+			<spawnunit name="Gadget_Bombardier_Ability4_Reveal" target="pos2" pushentity="true" />
+			<spawnprojectile name="Projectile_Bombardier_Ability4_Art" source="pos2" target="pos1" bind="stack_entity" proxy="stack_entity"/>
+		</onimpact>
+	</modifier>
+</ability>

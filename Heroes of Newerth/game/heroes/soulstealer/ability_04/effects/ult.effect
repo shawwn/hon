@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1">
+	<definitions>
+		
+		
+	<particlesystem name="system0" space="world" scale="1">
+		<model		
+			model="bones.mdf"
+			life="3200"
+			startscale=".5"
+			
+			endscale="10"
+			anim="idle"
+			position="0 120 50"		
+		>
+			<simpleemitter
+				depthbias="-50"				
+				spawnrate="10"
+				offsetsphere="20 20 20"
+				particlelife="800"
+				material="/shared/effects/materials/dust_smoke_02.material"
+				position="0 -50 0"
+				speed="20"
+				drag="0.05"
+				life="2000"
+				inheritvelocity=".25"
+			>
+				
+				<particle
+					color=".2 0 .4"
+					startscale="24"					
+					endscale="33"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"	
+
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-50"
+					maxanglespeed="50"
+				>					
+				</particle>
+			</simpleemitter>		
+			
+			<twopointtrailemitter		
+				
+				name="trail01"
+				bone_a="_bone_02"
+				bone_b="_bone_01"
+				spawnrate="30"
+				life="1300"
+				particlelife="1300"
+				startparticlecolor="1 1 1"
+				endparticlecolor="0 0 0"
+				texpostime="1300"
+				texposscale="0"
+				texstretchscale="1"				
+				material="/shared/effects/materials/soul_projectile.material"
+				startparticlealpha="1"
+				endparticlealpha="0"
+			>
+				<particle 				
+						
+					startcolor="1 1 1"
+					endcolor="1 1 1"					
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+				/>
+			</twopointtrailemitter>		
+			
+
+		</model>
+
+		
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

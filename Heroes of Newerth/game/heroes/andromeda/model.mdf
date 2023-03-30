@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="rig.max" file="high.model" type="K2" high="high.model" med="med.model" low="low.model" >
+
+	<anim name="idle" clip="clips/default_1.clip" loop="true" blendtime="450"/>
+	
+	<anim name="portrait" clip="clips/portrait_1.clip" fps="30" loop="true"/>
+	
+	<anim name="item_1" clip="clips/item_1.clip" fps="30"/>
+
+	<anim name="bored_1" clip="clips/bored_1.clip" fps="30"/>
+
+	<anim name="walk_1" clip="clips/walk_1.clip" fps="35" loop="true">
+		<frameevent frame="1" cmd="PlaySoundLinear sounds/move.wav 0 1500 1"/>
+	</anim>
+
+	<anim name="taunt_1" clip="clips/default_1.clip"/>
+
+	<anim name="death_1" clip="clips/death_1.clip" fps="30" loop="true" loopbackframe="120">
+		<frameevent frame="10" cmd="StartEffect effects/death.effect"/>
+	</anim>
+
+	<anim name="attack_1" clip="clips/attack_1.clip" fps="34" blendtime="450">
+		<frameevent frame="12" cmd="PlaySoundLinear sounds/attack_%.wav 1000 2000 .6"/>
+	</anim>
+
+	<anim name="attack_2" clip="clips/attack_2.clip" fps="34" blendtime="450">
+		<frameevent frame="12" cmd="PlaySoundLinear sounds/attack_%.wav 1000 2000 .6"/>
+		<frameevent frame="3" cmd="PlaySoundLinear sounds/attack_grunt_%.wav 1000 2000 1"/>
+	</anim>
+
+	<anim name="ability_1" clip="clips/ability_1.clip" fps="30">
+		<frameevent frame="12" cmd="PlaySoundLinear ability_01/sounds/cast.wav 1000 2200 .7"/>
+	</anim>
+
+	<anim name="ability_2" clip="clips/ability_2.clip" fps="30"/>
+
+	<anim name="ability_4" clip="clips/ability_4.clip" fps="30">
+		<frameevent frame="1" cmd="PlaySoundLinear ability_04/sounds/grunt.wav 1000 2200 .55"/>
+	</anim>
+		
+	<anim name="knock_1" clip="clips/knock_1.clip" loop="true" loopbackframe="-1"/>
+	
+	<anim name="getup_1" clip="clips/getup_1.clip"/>
+
+	<anim name="taunt_1" clip="clips/taunt_1.clip"/>
+</model>

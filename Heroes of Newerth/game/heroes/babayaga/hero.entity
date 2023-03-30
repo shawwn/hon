@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_BabaYaga"
+
+	team="Hellbourne"
+	icon="icon.tga"
+	portrait="icon.tga"
+	model="model.mdf"
+	skin=""
+
+	passiveeffect="effects/body.effect"
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="sounds/voice/select_%.wav"
+	selectedflavorsound="sounds/voice/select_flavour_%.wav"
+	confirmmovesound="sounds/voice/move_%.wav"
+	confirmattacksound="sounds/voice/attack_%.wav"
+	nomanasound="sounds/voice/no_mana.wav"
+	cooldownsound="sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="sounds/voice/taunt_prior.wav"
+	tauntkillsound="sounds/voice/taunt_after.wav"
+	
+	preglobalscale="1.5"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="112"
+	boundsradius="24"
+	selectionradius="44"
+	targetoffset="0 0 64"
+
+	movespeed="300"
+	turnrate="450"
+	turnsmoothing="0.05"
+
+	maxhealth="150"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="-1"
+	magicarmor="5.5"
+
+	inventory0="Ability_BabaYaga1"
+	inventory1="Ability_BabaYaga2"
+	inventory2="Ability_BabaYaga3"
+	inventory3="Ability_BabaYaga4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8="Ability_Taunt"
+
+	attackduration="970"
+	attackactiontime="560"
+	attackcooldown="1700"
+	attackdamagemin="16"
+	attackdamagemax="24"
+	attacknumanims="2"
+	attackoffset="0 100 70"
+	attackprojectile="Projectile_BabaYagaAttack"
+	attackrange="550"
+	attackstarteffect="effects/attack.effect"
+	attackactioneffect=""
+	attackimpacteffect="effects/impact.effect"
+	attacktype="ranged"
+	combattype="Hero"
+
+	aggrorange="800"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="Intelligence"
+	strength="16"
+	strengthperlevel="1.7"
+	agility="18"
+	agilityperlevel="2.0"
+	intelligence="24"
+	intelligenceperlevel="2.5"
+	
+	corpsetime="3500"
+	corpsefadetime="1000"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+	
+>
+	<recommendeditem name="Item_ManaPotion" />
+	<recommendeditem name="Item_MinorTotem" />
+	<recommendeditem name="Item_RunesOfTheBlight" />
+	<recommendeditem name="Item_HealthPotion" />
+	<recommendeditem name="Item_HomecomingStone" />
+	
+	<recommendeditem name="Item_Intelligence5" />
+	<recommendeditem name="Item_Strength5" />
+	<recommendeditem name="Item_Steamboots" />
+	<recommendeditem name="Item_Intelligence7" />
+	<recommendeditem name="Item_Morph" />
+	<recommendeditem name="Item_Protect" />
+	<recommendeditem name="Item_FrostfieldPlate" />
+	<recommendeditem name="Item_Silence" />
+	<recommendeditem name="Item_Immunity" />
+	<recommendeditem name="Item_Pierce" />
+	
+	<modifier key="frost" modpriority="100"
+		attackprojectile="Projectile_Frost"
+		passiveeffect="effects/frost.effect"		
+	>
+	</modifier>
+</hero>

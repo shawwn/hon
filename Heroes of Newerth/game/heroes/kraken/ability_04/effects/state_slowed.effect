@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<modifier
+			delay="500"
+			name="modifier0"
+			startcolor="1 2 2.5"
+			midcolor="1 4 5"
+			endcolor="1 2 2.5"
+			loop="true"
+			life="3500"
+		/>
+
+		<particlesystem name="system0" space="world" scale="1.0" entityeffectscale="true" deferred="true">
+			
+			<simpleemitter
+				bone="_bone_centerofchest"
+				delay="500"
+				spawnrate="20"
+				particlelife="1000"
+				gravity="-4"
+				speed="50.0"
+				drag="0.03"
+				direction="0 0 1"
+				material="/shared/effects/materials/bubble_add.material"
+				offsetsphere="15"
+			>
+				<particle
+					startcolor="1 1.5 2"
+					endcolor="0"
+					midcolorpos="0.8"
+					minangle="0"
+					maxangle="360"
+					size="2"
+					param=".1"
+					depthbias="-30"
+					minendscale="2"
+					maxendscale="4"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				delay="500"
+				spawnrate="10"
+				particlelife="900"
+				bone="_bone_centerofchest"
+				gravity="10"
+				speed="50.0"
+				direction="0 0 1"
+				material="/shared/effects/materials/refract_outsplash.material"
+			>
+				<particle
+					startalpha="1.0"
+					endalpha="0.0"
+					startsize="50"
+					endsize="180"
+					param=".1"
+					depthbias="-30"
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+	</thread>
+
+</effect>

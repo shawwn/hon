@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="rig.max" file="high.model" type="K2" high="high.model" med="high.model" low="high.model">
+
+	<anim name="idle" clip="clips/default_1.clip" fps="30" loop="true" />
+	
+	<anim name="attack_1" clip="clips/attack_1.clip" fps="30" loop="false" blendtime="200"/>
+		
+</model>

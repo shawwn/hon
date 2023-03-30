@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect >
+
+	<definitions>
+
+		<particlesystem name="system0" space="entity">
+			
+			
+			<simpleemitter			
+				delay="150"
+				spawnrate="211"
+				particlelife="1000"
+				count="40"		
+				bone="_bone_righthand"
+				acceleration="50"
+				position="0 0 50"
+				timenudge="000"			
+				material="/shared/effects/materials/beetle.material"
+				offsetsphere="30 30 30"
+				minangle="0"
+				maxangle="360"
+				direction="0 0 0"
+				particledirectionalspace="local"
+				inheritvelocity="0.25"
+			>
+
+				<particle 
+					framespeed="8"
+					size="7"
+					turn="1"
+					startalpha="1"
+					endalpha="0"
+					color=".6 .5 .6"
+				/>
+			</simpleemitter> 
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+		<waitfordeath instance="instance0"/>
+		<!-- <die /> -->
+	</thread>
+
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->

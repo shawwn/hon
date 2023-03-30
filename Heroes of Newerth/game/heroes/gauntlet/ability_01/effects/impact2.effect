@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="0" >
+	<definitions>
+
+		<particlesystem name="system0" space="entity" scale=".175">
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				life="400"
+				count="15"
+				spawnrate="200"
+				depthbias="-40"
+				minparticlelife="400"
+				maxparticlelife="500"
+				minspeed="0"
+				maxspeed="650"
+				drag="0.05"
+				offsetsphere="75 75 75"
+				material="/shared/effects/materials/flash.material"
+				expirelife="600"
+				startparticlecolor="1"
+				midparticlecolor="1"
+				endparticlecolor="0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					color=".5 .4 .2"
+					startsize="40"
+					endsize="80"
+					endstickiness=".45"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				count="10"
+				spawnrate="2000"
+				minparticlelife="300"
+				maxparticlelife="600"
+				drag=".01"
+				offsetphere="500"
+				gravity="-3"
+				minspeed="650"
+				maxspeed="1250"
+				direction="0 0 1"
+				depthbias="-50"
+				material="/shared/effects/materials/blob_add.material"
+			>
+				<particle
+					startcolor=".5 .15 0"
+					endcolor="0"
+					startsize="3"
+					endsize="0"
+					minscale="25"
+					maxscale="50"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				life="500"
+				spawnrate="3300"
+				count="35"
+				minparticlelife="400"
+				maxparticlelife="700"
+				gravity="25"
+				minspeed="250"
+				maxspeed="550"
+				drag=".01"
+				material="/shared/effects/materials/spark_10.material"
+				offsetsphere="5"
+				minangle="0"
+				maxangle="90"
+				direction="0 0 1"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="1"
+					midcolor="1"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					minstartsize="5"
+					maxstartsize="25"
+					midsize="12"
+					endsize="6"
+					startalpha="0"
+					midalpha=".7"
+					endalpha="0"
+					midalphapos=".5"
+				/>
+			</simpleemitter>
+
+
+			<billboard
+				bone="_bone_centerofchest"
+				life="1000"
+				startcolor=".5 0 0"
+				midcolor=".5 0 0"
+				midcolorpos="0.25"
+				endcolor="0"
+				startsize="650"
+				endsize="0"
+				depthbias="0"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+			
+			<billboard
+				bone="_bone_centerofchest"
+				delay="0"
+				life="350"
+				param="0.1"	
+				startsize="50"
+				endsize="500"
+				startalpha="0"
+				midalpha=".4"
+				endalpha="0"
+				depthbias="0"
+				material="/shared/effects/materials/refract_swell.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+			/>
+			
+			<billboard
+				bone="_bone_centerofchest"
+				delay="175"
+				life="350"
+				param="0.1"	
+				startsize="50"
+				endsize="500"
+				startalpha="0"
+				midalpha=".4"
+				endalpha="0"
+				depthbias="0"
+				material="/shared/effects/materials/refract_swell.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+			/>
+			
+			<simpleemitter
+				bone="_bone_centerofchest"
+				startspawnrate="500"
+				life="250"				
+				minparticlelife="400"			
+				maxparticlelife="600"	
+				depthbias="-20"			
+				material="/shared/effects/materials/spark_10.material"
+				speed="500"
+				offsetsphere="150 150 150"
+			>
+				<particle 
+					startcolor="2 1 0"
+					endcolor="0"
+					size="10"
+					minscale="1"
+					maxscale="2"
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance2" />
+	</thread>
+
+</effect>

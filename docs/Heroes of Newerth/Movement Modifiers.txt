@@ -1,0 +1,3 @@
+Like Attack Modifiers, you can only have one item with a "Movement Modifier" label. This doesn't mean items can't give movement bonus that stacks, it just means that items with the Movement Modifier label won't stack. In this case, if multiple exist, the one with the highest bonus is assigned.
+
+Example is having Power Treads and Boots of Travel. You gain the Boots of Travel movement bonus. If you have 2 Boots of Travel, you don't gain multiple bonuses.

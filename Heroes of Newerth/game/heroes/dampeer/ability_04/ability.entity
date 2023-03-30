@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Dampeer4"
+
+	icon="icon.tga"
+	
+	anim="ability_4"
+	casttime="500"
+	castactiontime="250"
+	casteffect=""
+	
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_entity"
+	targetscheme="enemy_units"
+	casteffecttype="Magic"
+	
+	range="150"
+	cooldowntime="50000,40000,30000"
+	
+	manacost="100"
+	
+	maxcharges="3"
+	
+>
+	<onlearn>
+		<setactivemodifierkey name="Dampeer_Sub0" />
+	</onlearn>
+
+	<onkill>
+		<condition test="hasstate State_Dampeer_Ability4_Hero">
+			<addcharges count="1,2,3" />
+		</condition>
+		<condition target="target_entity" test="hasstate State_Dampeer_Ability4_Unit">
+			<addcharges count="1" />
+		</condition>
+		
+		<condition test="charges eq 3" >
+			<setactivemodifierkey name="Dampeer_Sub3" />
+		</condition>
+		<condition test="charges eq 2" >
+			<setactivemodifierkey name="Dampeer_Sub2" />
+		</condition>
+		<condition test="charges eq 1" >
+			<setactivemodifierkey name="Dampeer_Sub1" />
+		</condition>
+	</onkill>
+	
+<!--No Souls -->	
+	<onimpact>
+		<damage effecttype="Magic" amount="200,300,400" target="target_entity" />
+		<calculatedamage amount="200,300,400" effecttype="Magic" />
+		<setvar0 a="result" />
+		<heal target="source_entity" a="var0" />
+		<playeffect effect="effects/lifesteal.effect" source="source_entity" target="target_entity"/>
+		<playeffect effect="effects/impact.effect" source="target_entity" target="target_entity"/>
+		<playeffect effect="effects/cast.effect" source="source_entity" target="source_entity"/>
+		<playeffect effect="effects/blood.effect" source="source_entity" target="source_entity"/>
+
+		<targettype target="target_entity" type="hero">
+			<applystate name="State_Dampeer_Ability4_Hero" duration="250" />
+		</targettype>
+		<else>
+			<applystate name="State_Dampeer_Ability4_Unit" duration="250" />
+		</else>
+
+	</onimpact>
+
+<!--Removing Souls on death -->
+	<onkilled>
+		<setcharges a="0" />
+		<setactivemodifierkey name="Dampeer_Soul_0" />
+	</onkilled>
+	
+<!--Sets the overall Soul modifier for other skills -->
+	<modifier key="Dampeer_Sub3" modpriority="90"
+		passiveeffect="effects/state3.effect"
+		modifierkey="Dampeer_Soul_3"
+	>
+		<onimpact>
+			<damage amount="200,300,400" b="120,180,240" op="add" effecttype="Magic" />
+			<calculatedamage amount="200,300,400" b="120,180,240" op="add" effecttype="Magic" />
+			<setvar0 a="result" b="1" op="mult" />
+			<heal target="source_entity" a="var0" />
+			<playeffect effect="effects/lifesteal.effect" source="source_entity" target="target_entity"/>
+			<playeffect effect="effects/cast.effect" source="source_entity" target="source_entity"/>
+			<playeffect effect="effects/impact.effect" source="source_entity" target="target_entity"/>
+			<playeffect effect="effects/blood.effect" source="source_entity" target="source_entity"/>
+
+			<targettype target="target_entity" type="hero">
+				<applystate name="State_Dampeer_Ability4_Hero" duration="250" />
+			</targettype>
+			<else>
+				<applystate name="State_Dampeer_Ability4_Unit" duration="250" />
+			</else>
+			
+		</onimpact>
+	</modifier>
+	
+	<modifier key="Dampeer_Sub2" modpriority="90"
+		passiveeffect="effects/state2.effect"
+		modifierkey="Dampeer_Soul_2"
+	>
+		<onimpact>
+			<damage amount="200,300,400" b="80,120,160" op="add" effecttype="Magic" />
+			<calculatedamage amount="200,300,400" b="80,120,160" op="add" effecttype="Magic" />
+			<setvar0 a="result" />
+			<heal target="source_entity" a="var0" />
+			<playeffect effect="effects/lifesteal.effect" source="source_entity" target="target_entity"/>
+			<playeffect effect="effects/cast.effect" source="source_entity" target="source_entity"/>
+			<playeffect effect="effects/impact.effect" source="target_entity" target="target_entity"/>
+			<playeffect effect="effects/blood.effect" source="source_entity" target="source_entity"/>
+
+			<targettype target="target_entity" type="hero">
+				<applystate name="State_Dampeer_Ability4_Hero" duration="250" />
+			</targettype>
+			<else>
+				<applystate name="State_Dampeer_Ability4_Unit" duration="250" />
+			</else>
+
+				
+
+		</onimpact>
+	</modifier>
+	
+	<modifier key="Dampeer_Sub1" modpriority="90"
+		passiveeffect="effects/state1.effect"
+		modifierkey="Dampeer_Soul_1"
+	>
+		<onimpact>
+			<damage amount="200,300,400" b="40,60,80" op="add" effecttype="Magic" />
+			<calculatedamage amount="200,300,400" b="40,60,80" op="add" effecttype="Magic" />
+			<setvar0 a="result" />
+			<heal target="source_entity" a="var0" />
+			<playeffect effect="effects/lifesteal.effect" source="source_entity" target="target_entity"/>
+			<playeffect effect="effects/cast.effect" source="source_entity" target="source_entity"/>
+			<playeffect effect="effects/impact.effect" source="target_entity" target="target_entity"/>
+			<playeffect effect="effects/blood.effect" source="source_entity" target="source_entity"/>
+
+			<targettype target="target_entity" type="hero">
+				<applystate name="State_Dampeer_Ability4_Hero" duration="250" />
+			</targettype>
+			<else>
+				<applystate name="State_Dampeer_Ability4_Unit" duration="250" />
+			</else>
+		
+
+		</onimpact>
+	</modifier>
+	
+	<modifier key="Dampeer_Sub0" modpriority="90"
+		modifierkey="Dampeer_Soul_0"
+	/>
+	
+</ability>

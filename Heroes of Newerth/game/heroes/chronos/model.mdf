@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="rig.max" file="high.model" type="K2" high="high.model" med="med.model" low="low.model" >
+
+	<anim name="idle" clip="clips/default_1.clip" loop="true"/>
+	
+	<anim name="bored_1" clip="clips/bored_1.clip"/>
+	
+	<anim name="taunt_1" clip="clips/taunt_1.clip"/>
+	
+	<anim name="item_1" clip="clips/item_1.clip"/>
+	
+	<anim name="walk_1" clip="clips/walk_1.clip" fps="31" loop="true">
+		<frameevent frame="2" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="7" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="14" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="19" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		
+		<frameevent frame="2" cmd="PlaySoundLinear /shared/sounds/footsteps/#GetTerrainType()#_%.wav 0 1800 .125"/>
+		<frameevent frame="2" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+		<frameevent frame="14" cmd="PlaySoundLinear /shared/sounds/footsteps/#GetTerrainType()#_%.wav 0 1800 .125"/>
+		<frameevent frame="14" cmd="StartEffect /shared/effects/footstep_l_#GetTerrainType()#.effect"/>
+	</anim>
+	
+	<anim name="attack_1" clip="clips/attack_2.clip" fps="90">
+		<frameevent frame="24" cmd="PlaySoundLinear /shared/sounds/attacks/attack_medium_%.wav 400 1800 .65"/>
+	</anim>
+	
+	<anim name="attack_2" clip="clips/attack_1.clip" fps="90">
+		<frameevent frame="21" cmd="PlaySoundLinear /shared/sounds/attacks/attack_medium_%.wav 400 1800 .65"/>
+		<frameevent frame="3" cmd="PlaySoundLinear /heroes/chronos/sounds/attack_grunt_%.wav 500 2000 .6"/>
+	</anim>
+	
+	<anim name="ability_walk_1" clip="clips/walk_1.clip" fps="150" loop="true">
+		<frameevent frame="2" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="7" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="14" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="19" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		
+		<frameevent frame="2" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+		<frameevent frame="14" cmd="StartEffect /shared/effects/footstep_l_#GetTerrainType()#.effect"/>
+	</anim>
+	
+	<anim name="death_1" clip="clips/death_1.clip" fps="90" loopbackframe="80" loop="true">
+		<frameevent frame="1" cmd="PlaySoundLinear /heroes/chronos/sounds/death.wav 1000 2200 .7"/>
+		<frameevent frame="1" cmd="StartEffect /heroes/chronos/effects/death.effect 0"/>
+		<frameevent frame="79" cmd="starteffect /heroes/chronos/effects/deathPoof.effect"/>
+		<endevent cmd="StopEffect 0" />
+	</anim>
+	
+	<anim name="ability_4" clip="clips/ability_4.clip" fps="22"/>
+	
+	<anim name="knock_1" clip="clips/knock_1.clip" loop="true" loopbackframe="-1"/>
+	
+	<anim name="getup_1" clip="clips/getup_1.clip"/>
+			
+</model>

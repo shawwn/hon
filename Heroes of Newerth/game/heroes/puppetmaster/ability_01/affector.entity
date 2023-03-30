@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_PuppetMaster_Ability1"
+
+	radius="500"
+	
+	innerradiusoffset="100"
+	
+	lifetime="3000,3750,4500,5250"
+
+	targetselection="all"
+	targetscheme="all_units"
+>
+	<onimpact>
+		<condition test="hasstate State_PuppetMaster_Ability1">
+			<condition test="target_type self" source="proxy_entity" target="target_entity">
+				<applystate name="State_PuppetMaster_Ability1_ImmobilePush" duration="500" />
+			</condition>
+		</condition>
+	</onimpact>
+</affector>

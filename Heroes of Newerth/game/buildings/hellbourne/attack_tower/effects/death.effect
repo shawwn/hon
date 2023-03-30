@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect>
+
+	<definitions>
+			
+		<particlesystem name="system0" space="entity" scale=".7">
+
+			<model
+				delay="250"
+				name="ring"
+				life="5000"
+				model="/shared/effects/models/legion_death_rig/model.mdf"
+				anim="idle"
+				yawspeed="0"
+				startscale="10"
+				midscale="10"
+				endscale="0"		
+				position="0 0 30"					
+			/>			
+
+			<template name="spirits">
+				<twopointtrailemitter
+					owner="ring" 
+					life="2100"
+					bone_a="{bone_a}"
+					bone_b="{bone_b}"
+					spawnrate="30"
+					particlelife="2100"
+					startparticlecolor="2 .2 0"
+					midparticlecolor="1 .2 0"
+					endparticlecolor="0 0 0"
+					texpostime="2100"
+					texposscale="0"
+					texstretchscale="1"				
+					material="/shared/effects/materials/phantom_smoke_04.material"
+				>
+					<particle 				
+						startcolor="1"
+						midcolor="1"
+						endcolor="0 0 0"
+						startalpha="1" 
+						midalpha="1" 
+						endalpha="0"
+					/>
+				</twopointtrailemitter>	
+			</template>
+
+			<instance name="spirits" bone_a="_bone_01" bone_b="_bone_02"/>
+			<instance name="spirits" bone_a="_bone_03" bone_b="_bone_04"/>
+			<instance name="spirits" bone_a="_bone_05" bone_b="_bone_06"/>
+			<instance name="spirits" bone_a="_bone_07" bone_b="_bone_08"/>
+			<instance name="spirits" bone_a="_bone_09" bone_b="_bone_10"/>
+			<instance name="spirits" bone_a="_bone_11" bone_b="_bone_12"/>
+			<instance name="spirits" bone_a="_bone_15" bone_b="_bone_16"/>
+			<instance name="spirits" bone_a="_boneSpin_01" bone_b="_boneSpin_02"/>
+			<instance name="spirits" bone_a="_boneSpin_03" bone_b="_boneSpin_04"/>
+			<instance name="spirits" bone_a="_boneSpin_05" bone_b="_boneSpin_06"/>
+			<instance name="spirits" bone_a="_boneSpin_07" bone_b="_boneSpin_08"/>
+			<instance name="spirits" bone_a="_boneSpin01_01" bone_b="_boneSpin01_02"/>
+			<instance name="spirits" bone_a="_boneSpin01_03" bone_b="_boneSpin01_04"/>
+			<instance name="spirits" bone_a="_boneSpin01_05" bone_b="_boneSpin01_06"/>
+			<instance name="spirits" bone_a="_boneSpin01_07" bone_b="_boneSpin01_08"/>
+	
+			<simpleemitter
+				spawnrate="2000"
+				count="20"
+				minparticlelife="1500"
+				maxparticlelife="2500"
+				gravity="0"
+				maxspeed="150"
+				position="0 0 50"
+				drag="0.01"
+				material="/shared/effects/materials/dust_smoke_03.material"
+				offsetsphere="25"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					minanglespeed="0"
+					startcolor=".6 .2 .2"
+					endcolor="0 0 0"
+					startsize="0"
+					midsize="100"
+					endsize="200"
+					startalpha=".4"
+					midalpha=".25"
+					endalpha="0"
+					midalphapos="0.5"
+				/>
+			</simpleemitter>			
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<camerashake2 scale="11.0" radius="1200" duration="400" frequency="22" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

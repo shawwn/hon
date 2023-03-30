@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_BabaYaga_Ability4"
+
+	radiusstart="100"
+	radiusend="300"
+	arcstart="180"
+	arcend="360"
+	
+	speed="1000"
+	
+	lifetime="800"
+	maximpactspertarget="1"
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Magic"
+	persist="true"
+
+	impacteffect="effects/impact.effect"
+>
+	<onimpact>
+		<damage effecttype="Magic" amount="290,430,600" />
+		<applystate name="State_BabaYaga_Ability4" duration="15000" />
+	</onimpact>
+	
+	<modifier key="ult_boost" modpriority="100">
+		<onimpact>
+			<damage effecttype="Magic" amount="340,530,725" />
+			<applystate name="State_BabaYaga_Ability4" duration="15000" />
+		</onimpact>
+	</modifier>
+	
+</affector>

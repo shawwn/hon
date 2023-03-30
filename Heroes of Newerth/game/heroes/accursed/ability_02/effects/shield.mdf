@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="accursed" file="shield.model" type="K2" >
+	<anim name="idle" clip="shield.clip" fps="30" loop="true"/>
+</model>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" deferred="true" useentityeffectscale="1">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".5"
+				sample="../sounds/cast.wav"
+			/>
+
+			<simpleemitter
+				position="0 0 25"
+				minparticlelife="300"
+				maxparticlelife="1000"
+				spawnrate="3500"
+				count="7"
+				gravity="-25"
+				minspeed="1220"
+				maxspeed="1135"
+				minangle="-90"
+				maxangle="90"
+				drag="0.15"
+				offsetsphere="40 40 10"
+				material="/shared/effects/materials/dust_smoke_10.material"
+			>
+				<particle
+					startcolor="1 1 1"
+					midcolor="1 1 1"
+					endcolor=".6 .6 .6"
+					startscale="0.2"
+					endscale="2"
+					startalpha="0"
+					midalpha=".35"
+					endalpha="0"
+					midalphapos=".25"
+					size="200"
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="-50"
+					maxanglespeed="50"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				position="0 0 25"
+				minparticlelife="300"
+				maxparticlelife="1000"
+				spawnrate="3500"
+				count="7"
+				gravity="-35"
+				minspeed="0"
+				maxspeed="35"
+				minangle="0"
+				maxangle="20"
+				drag="0.2"
+				offsetsphere="40 40 10"
+				material="/shared/effects/materials/dust_smoke_10.material"
+			>
+				<particle
+					startcolor="1 1 1"
+					midcolor=".6 .6 .6"
+					endcolor="0 0 0"
+					startscale="0.2"
+					endscale="2"
+					startalpha="0"
+					midalpha=".5"
+					endalpha="0"
+					midalphapos=".25"
+					size="200"
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="-50"
+					maxanglespeed="50"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				delay="50"
+				count="5"
+				spawnrate="30"
+				particlelife="850"
+				gravity="0"
+				speed="0"
+				drag="0"
+				acceleration="0"
+				position="0 0 0"
+				offsetsphere="75 75 0"
+			>
+				<particle>
+					<model
+						position="0 0 0"
+						life="1000"
+						name="emitter0"
+						offsetsphere="10 10 0"
+						anim="idle"
+						model="/heroes/rampage/ability_01/effects/rocks/model.mdf"
+						minscale="1.2"
+						maxscale="2"
+						color=".5 .5 .5"
+						midcolorpos=".75"
+						startalpha=".7"
+						midalpha=".7"
+						endalpha="0"
+						minyaw="0"
+						maxyaw="360"
+					/>
+				</particle>
+			</simpleemitter>
+
+			<simpleemitter
+				offsetsphere="100 100 0"
+				spawnrate="40"
+				count="5"
+				particlelife="1900"
+				gravity="-.5"
+				acceleration="0"
+				speed="10"
+				position="0 0 50"
+				material="/shared/effects/materials/dust_smoke_10.material"
+				inheritvelocity="0"
+			>
+				<particle
+					minangle="-360"
+					maxangle="360"
+					color="0.7 0.65 .56"
+					minstartsize="75"
+					maxstartsize="150"
+					minendsize="200"
+					maxendsize="300"
+					minanglespeed="-30"
+					maxanglespeed="33"
+					startalpha="0"
+					midalpha=".35"
+					endalpha="0"
+					frame="1"
+					framespeed="1"
+					startanchor="0"
+					endanchor=".4"
+					lockup="0"
+					lockright="false"
+					turn="false"
+					startcolor=".3"
+					endcolor="0"
+					midcolorpos="0"
+					startsize="0"
+					endstickiness=".3"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				offsetsphere="50 50 0"
+				spawnrate="44"
+				count="10"
+				particlelife="1500"
+				gravity="-.5"
+				acceleration="0"
+				speed="10"
+				position="0 0 50"
+				material="/shared/effects/materials/pyroclast_01.material"
+				inheritvelocity="0"
+			>
+				<particle
+					minangle="-360"
+					maxangle="360"
+					color=".36 .383 .3"
+					minstartsize="10"
+					maxstartsize="50"
+					minendsize="100"
+					maxendsize="200"
+					minanglespeed="-30"
+					maxanglespeed="33"
+					startalpha="0"
+					midalpha=".25"
+					endalpha="0"
+					frame="1"
+					framespeed="1"
+					startanchor="0"
+					endanchor=".15"
+					lockup="0"
+					lockright="false"
+					turn="false"
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+</effect>
+
+

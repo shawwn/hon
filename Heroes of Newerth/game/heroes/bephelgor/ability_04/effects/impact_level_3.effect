@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world">
+
+			<sound
+				delay="100"
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2200"
+				volume=".7"
+				sample="../sounds/impact_crack_%.wav"
+			/>
+
+			<sound
+				life="2000"
+				fadeout="700"
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2200"
+				volume="1"
+				sample="/shared/sounds/ambiance/volcano_explode_%.wav"
+			/>
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2200"
+				volume=".2"
+				sample="/heroes/pyromancer/sounds/impact_%.wav"
+			/>
+			
+			<simpleemitter
+				count="1"
+				spawnrate="5000"
+				particlelife="750"
+				acceleration="0.0"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+				offsetsphere="0 0 0"
+			>
+				<particle
+				>
+					<template name="cracks">
+						
+						<!-- Larger cracks -->
+
+						<groundsprite
+							position="{position}"
+							life="{life1}"
+							alpha=".9"
+							material="/shared/effects/materials/earth_cracks_reveal.material"
+							size="{size}"
+							startframe="1"
+							midframepos=".2"
+							endframe="0"
+							yaw="{yaw}"
+						/>
+
+						<groundsprite
+							life="4500"
+							position="{position}"
+							delay="{delay1}"
+							startalpha=".9"
+							midalphapos=".9"
+							endalpha="0"
+							material="/shared/effects/materials/earth_cracks_reveal.material"
+							size="{size}"
+							frame="0"
+							yaw="{yaw}"
+						/>
+
+						<!-- Lava filled cracks -->
+
+						<groundsprite
+							delay="{delay2}"
+							position="{position}"
+							startcolor=".3 0 0"
+							midcolorpos=".2"
+							endcolor="{color1}"
+							life="{life2}"
+							material="/shared/effects/materials/earth_cracks_reveal_add.material"
+							size="{size}"
+							startframe="1"
+							midframepos=".5"
+							endframe="0"
+							yaw="{yaw}"
+						/>
+
+						<groundsprite
+							life="3000"
+							position="{position}"
+							startcolor="{color1}"
+							midcolorpos=".6"
+							endcolor="0"
+							delay="{delay1}"
+							material="/shared/effects/materials/earth_cracks_reveal_add.material"
+							size="{size}"
+							frame="0"
+							yaw="{yaw}"
+						/>
+
+						<!-- Extra Glow -->
+
+						<groundsprite
+							position="{position}"
+							life="{life1}"
+							startcolor="0"
+							endcolor="{color2}"
+							material="/shared/effects/materials/whitedot_ground.material"
+							startsize="10"
+							endsize="80"
+						/>				
+
+						<groundsprite
+							life="2000"
+							position="{position}"
+							delay="{delay1}"
+							startcolor="{color2}"
+							midcolorpos=".8"
+							endcolor="0"
+							material="/shared/effects/materials/whitedot_ground.material"
+							size="80"
+						/>
+
+						<!-- Lava Errupting -->
+
+						<simpleemitter
+							timenudge="400"
+							delay="{delay2}"
+							position="{position}"
+							life="2000"
+							count="25"
+							spawnrate="3200"
+							depthbias="-40"
+							minparticlelife="400"
+							maxparticlelife="1200"
+							minspeed="0"
+							maxspeed="350"
+							drag="0.01"
+							offsetsphere="50"
+							angle="30"
+							gravity="2"
+							collide="1"
+								material="/shared/effects/materials/magma_overlay.material"
+							>
+							<particle 
+								minangle="0"
+								maxangle="360"
+								startcolor="1 .55 0"
+								midcolorpos=".15"
+								endcolor="1 .2"
+								startsize="20"
+								endsize="115"
+								scale="1.5"
+								startalpha="0"
+								midalpha="1"
+								endalpha="0"
+								minanglespeed="-50"
+								maxanglespeed="50"
+							/>
+						</simpleemitter>
+
+						<simpleemitter
+							position="{position}"
+							life="2000"
+							count="8"
+							spawnrate="1200"
+							depthbias="-100"
+							minparticlelife="600"
+							maxparticlelife="1400"
+							maxspeed="250"
+							drag="0.01"
+							offsetsphere="20"
+							angle="30"
+							gravity="6"
+							collide="1"
+								material="/shared/effects/materials/soul_projectile2.material"
+							>
+							<particle 
+								minangle="0"
+								maxangle="360"
+								startcolor="1 .4 0"
+								midcolorpos=".15"
+								endcolor="0"
+								startsize="20"
+								endsize="165"
+							/>
+						</simpleemitter>
+
+						<simpleemitter
+							position="{position}"
+							life="2000"
+							count="100"
+							spawnrate="1200"
+							depthbias="-100"
+							minparticlelife="2000"
+							maxparticlelife="3500"
+							maxspeed="450"
+							drag="0.01"
+							offsetsphere="20"
+							angle="20"
+							gravity="5"
+							collide="1"
+								material="/shared/effects/materials/blob_add.material"
+							>
+							<particle 
+								minangle="0"
+								maxangle="360"
+								startcolor="1 .3 0"
+								midcolorpos=".15"
+								endcolor="0"
+								startsize="9"
+								endsize="1"
+							/>
+						</simpleemitter>
+					</template>
+
+					<instance name="cracks" delay2="400" life2="200" position="0 0 0" yaw="120" size="250" delay1="600" life1="600" color1="1 .65 0" color2=".3 .01 0" />
+				</particle>
+			</simpleemitter>
+			<!-- Pulse -->
+
+			<groundsprite
+				material="/shared/effects/materials/ground_fire_ring.material"
+				startsize="25"
+				endsize="200"
+				life="300"
+				startcolor=".7 .5 .4"
+				midcolor=".7 .4 0"
+				endcolor="0 0 0"
+			/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

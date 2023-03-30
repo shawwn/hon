@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<posteffect>
+	<filter material="bright.material" />
+	<filter material="down4.material" />
+	<filter material="bloom_h.material" />
+	<filter material="bloom_v.material" />
+	<filter material="up4_combine_add.material" />
+</posteffect>

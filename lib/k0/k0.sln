@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "k0", "src\k0.vcproj", "{21C8CA32-83C7-488C-8A02-DAC86A896E73}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1C5D6312-8B5A-4898-843E-4E11584C8DFC} = {1C5D6312-8B5A-4898-843E-4E11584C8DFC}
+		{2403054F-348B-4E64-A20E-D0F2211D9660} = {2403054F-348B-4E64-A20E-D0F2211D9660}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlib", "ext\zlib\zlib.vcproj", "{2403054F-348B-4E64-A20E-D0F2211D9660}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "creg", "ext\creg\creg.vcproj", "{1C5D6312-8B5A-4898-843E-4E11584C8DFC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21C8CA32-83C7-488C-8A02-DAC86A896E73}.Debug|Win32.ActiveCfg = Debug|Win32
+		{21C8CA32-83C7-488C-8A02-DAC86A896E73}.Debug|Win32.Build.0 = Debug|Win32
+		{21C8CA32-83C7-488C-8A02-DAC86A896E73}.Release|Win32.ActiveCfg = Release|Win32
+		{21C8CA32-83C7-488C-8A02-DAC86A896E73}.Release|Win32.Build.0 = Release|Win32
+		{2403054F-348B-4E64-A20E-D0F2211D9660}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2403054F-348B-4E64-A20E-D0F2211D9660}.Debug|Win32.Build.0 = Debug|Win32
+		{2403054F-348B-4E64-A20E-D0F2211D9660}.Release|Win32.ActiveCfg = Release|Win32
+		{2403054F-348B-4E64-A20E-D0F2211D9660}.Release|Win32.Build.0 = Release|Win32
+		{1C5D6312-8B5A-4898-843E-4E11584C8DFC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1C5D6312-8B5A-4898-843E-4E11584C8DFC}.Debug|Win32.Build.0 = Debug|Win32
+		{1C5D6312-8B5A-4898-843E-4E11584C8DFC}.Release|Win32.ActiveCfg = Release|Win32
+		{1C5D6312-8B5A-4898-843E-4E11584C8DFC}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

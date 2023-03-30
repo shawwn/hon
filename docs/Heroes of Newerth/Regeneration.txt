@@ -1,0 +1,9 @@
+Regen:
+======
+
+BR= Base Regen
+CB= Constant Bonus
+
+
+Mana Regen = [BR+(INT*0.04)]]*(1+[%PercentageBonus]) + CB
+

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Jereziah4"
+
+	statuseffecttooltip="State_Jereziah_Ability4"
+
+	icon="icon.tga"
+	
+	anim="ability_4"
+	casttime="1000"
+	castactiontime="500"
+	casteffect=""
+
+	
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="self_position"
+	targetradius="600"
+	targetscheme="organic_ally_units"
+	casteffecttype="Magic"
+	frontqueue="true"
+	novoiceresponse="true"
+	
+	manacost="125,175,250"
+	cooldowntime="150000"
+
+>
+	<onimpact>
+		<spawnaffector name="Affector_Jereziah_Ability4" target="source_entity" />
+		<playeffect effect="effects/cast.effect" source="source_entity"/>
+		<playeffect effect="effects/area.effect" source="source_entity"/>
+	</onimpact>
+	
+</ability>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Kraken_Ability2_Self_Killprojectile"
+
+	
+	
+	
+	ishidden="true"
+>
+
+	<oninflict>
+		<spawnunit name="Gadget_Kraken_Ability2" target="source_entity" pushentity="true" />
+		<setproxy entity="this_entity" target="stack_entity" />
+	</oninflict>
+	<onexpired>
+		<unbind target="this_owner_entity" />
+		<kill source="" target="proxy_entity" />
+	</onexpired>
+
+</state>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Tempest_Ability4_Near"
+
+	radius="150"
+	lifetime="-1"
+	effect="effects/whirl.effect"
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Magic"
+	destroytrees="true"
+>
+	<onframeimpact>
+		<damage effecttype="Magic Splash DOT" amount="30,50,70" b="frametime" op="mult"/>
+	</onframeimpact>
+</affector>

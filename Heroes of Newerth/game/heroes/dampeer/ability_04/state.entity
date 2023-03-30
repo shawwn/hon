@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Dampeer_Ability4"
+
+	
+	icon="icon.tga"
+	
+	effecttype="StatusDebuff"
+>
+
+	<ondeath>
+		<applystate name="State_Dampeer_Ability1_Souls" target="target_entity" continuous="true" />
+	</ondeath>
+</state>

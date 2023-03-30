@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Electrician_Ability4_Enemies"
+
+	
+	
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+
+	movespeedslowstart="0.4,0.6,0.8"
+	movespeedslowmid="0.3,0.4,0.5"
+	movespeedslowend="0.0"
+	movespeedslowmidpos="0.33"
+	
+	effecttype="StatusDebuff"
+>
+	<onframe />
+</state>

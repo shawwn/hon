@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Fade4"
+
+	icon="icon.tga"
+	statuseffecttooltip="State_Fade_Ability4_Stealth"
+	statuseffecttooltip2="State_Fade_Ability4_MortalStrike"
+	
+	maxlevel="3"
+	requiredlevel="6,11,16"
+	
+	anim="ability_4"
+	casttime="0"
+	castactiontime="0"
+	frontqueue="true"
+	inheritmovement="true"
+	noninterrupting="true"
+
+	actiontype="target_self"
+	
+	manacost="150,175,200"
+	cooldowntime="90000,75000,60000"
+>
+	<onimpact>
+		<disjoint target="source_entity" />
+		<applystate name="State_Fade_Ability4_Stealth" duration="20000,35000,50000" target="source_entity" />
+	</onimpact>
+</ability>

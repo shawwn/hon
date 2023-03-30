@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Accursed1"
+
+	
+	
+	icon="icon.tga"
+	
+	anim="ability_1"
+	casttime="1000"
+	castactiontime="500"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_entity"
+	targetscheme="all_other_units"
+	casteffecttype="Magic"
+	casteffect="cast.effect"
+	
+	manacost="75"
+	cooldowntime="6000"
+	
+	range="700"
+
+>
+	<onimpact >
+		<cantarget targetscheme="ally_units">
+			<heal a="100,150,200,250" />
+			<playeffect effect="ability_ally.effect" source="target_entity" target="" />
+		</cantarget>
+		<cantarget targetscheme="enemy_units">
+			<damage effecttype="Magic" amount="100,150,200,250" />
+			<playeffect effect="ability.effect" source="target_entity" target="" />
+		</cantarget>
+		<damage effecttype="Magic" amount="50,75,100,125" target="source_entity" />
+	</onimpact>
+</ability>

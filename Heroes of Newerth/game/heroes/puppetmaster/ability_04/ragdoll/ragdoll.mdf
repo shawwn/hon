@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="ragdoll_spawn.max" file="ragdoll.model" type="K2"  >
+
+	<anim name="idle" clip="idle.clip" loop="true"/>
+	
+	<anim name="spawn_1" clip="spawn_idle.clip">
+	<frameevent frame="3" cmd="StartEffect spawn.effect"/>
+	</anim>
+	
+	<anim name="damage_1" clip="damage_1.clip"/>
+	
+	<anim name="damage_2" clip="damage_2.clip"/>
+	
+	<anim name="damage_3" clip="damage_3.clip"/>
+	
+	<anim name="death_1" clip="death_1.clip" loop="true" loopbackframe="-1">
+		
+	</anim>
+	
+</model>
+

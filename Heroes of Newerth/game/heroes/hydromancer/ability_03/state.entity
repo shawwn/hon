@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Hydromancer_Ability3"
+	
+	icon="icon.tga"
+	passiveeffect="effects/passive.effect"
+
+	stunned="true"
+	
+	ishidden="true"
+
+	unitwalking="true"
+	effecttype=""
+>
+</state>

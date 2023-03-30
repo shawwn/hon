@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="rev_die">
+	<definitions>
+		<particlesystem name="system0" space="world">
+
+			<!-- blowin up bits -->
+			<model
+				life="9000"
+				model="/buildings/legion/attack_tower/effects/attack_tower_death/model.mdf"
+				anim="idle"
+				color="1 1 1"
+				startalpha="1 1 1"
+				midalpha=".5 .5 .5"
+				endalpha="0 0 0"
+				midalphapos=".2"
+				
+				
+			/>
+			
+			
+
+		</particlesystem>
+	  
+		<modifier
+			startcolor="1 1 1"
+			alpha="0"
+		/>
+   	</definitions>
+<thread>
+		<spawnparticlesystem instance="instance1" particlesystem="system0" />
+		<spawnmodifier instance="instance0"/>
+		<waitfordeath  instance="instance0"/>
+		<waitfordeath  instance="instance1"/>
+		<!-- <die /> -->
+</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+
+

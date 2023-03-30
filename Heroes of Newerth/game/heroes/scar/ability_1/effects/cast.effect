@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect entityeffectscale="true" deferred="true">
+
+	<definitions>
+
+		<modifier
+			name="modifier1"
+			material="refract.material"
+			life="800"
+			startparam0="0"			
+			endparam0="1"			
+		/>
+	
+		<particlesystem name="system0" space="entity" scale="1.7" >
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".65"
+				sample="../sounds/cast.wav"
+			/>
+
+			<billboard
+				delay="100"
+				life="1000"	
+				bone="_bone_righthand"
+				material="/shared/effects/materials/whitedot.material"
+				startcolor="0 0 0"
+				midcolor="0 0.5 1"
+				endcolor="0 0 0"
+				size="22"
+				depthbias="-30"
+			/>	
+			
+			<billboard
+				delay="100"
+				life="1000"	
+				bone="_bone_lefthand"
+				material="/shared/effects/materials/whitedot.material"
+				startcolor="0 0 0"
+				midcolor="0 0.5 1"
+				endcolor="0 0 0"
+				size="22"
+				depthbias="-30"
+			/>	
+			
+			<billboard
+				delay="100"
+				life="1000"	
+				bone="_bone_centerofchest"
+				material="/shared/effects/materials/whitedot.material"
+				startcolor="0 0 0"
+				midcolor="0 0.5 1"
+				endcolor="0 0 0"
+				size="22"
+				depthbias="-30"
+			/>				
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier1"/> 
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+	</thread>
+
+</effect>

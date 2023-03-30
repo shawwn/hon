@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_ForsakenArcher_Ability3"
+
+	
+	
+	icon="icon.tga"
+	passiveeffect="state.effect"
+
+	deniable="true"
+	
+	effecttype="StatusDebuff"
+>
+	<onframe>
+		<damage effecttype="Magic DOT" amount="6,8,10,12" b="frametime" op="mult"/>
+	</onframe>
+</state>

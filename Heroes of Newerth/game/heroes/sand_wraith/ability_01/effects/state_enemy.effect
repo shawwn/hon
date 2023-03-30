@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" deferred="true" useentityeffectscale="true">
+	<definitions>
+
+
+			
+		<particlesystem name="system0" space="world" scale="0.6">
+
+			<sound
+				soundloop="true"
+				fadein="300"
+				fadeout="500"
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2000"
+				volume=".4"
+				sample="../sounds/state_self.wav"
+			/>
+
+
+			<terrainemitter
+				position="0 0 30"
+				spawnrate="60"
+				bone="_bone_centerofchest"
+				particlelife="700"
+				gravity="-1"
+				material="/shared/effects/materials/pyroclast_03.material"
+				offsetsphere="32 32 0"
+				direction="1 0 0"
+				minangle="-180"
+				maxangle="180"
+				directionalspace="global"
+				inheritvelocity=".3"
+				depthbias="-20"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					anglespeed="20"
+					startsize="20"
+					midsize="100"
+					maxendsize="150"
+					lockup="true"
+					lockright="true"
+					pitch="90"
+					startcolor=".7 .7 .4"
+					endcolor=".5 .5 .3"					
+					startalpha="0"
+					midalpha=".45"
+					endalpha="0"
+					midalphapos=".75"
+				/>
+			</terrainemitter>
+
+			<terrainemitter
+				position="0 0 30"
+				spawnrate="90"
+				bone="_bone_centerofchest"
+				maxparticlelife="800"
+				gravity="-1"
+				material="/shared/effects/materials/sand_blend.material"
+				offsetsphere="33 33 0"
+				direction="1 0 0"
+				minangle="-180"
+				maxangle="180"
+				drag="0.1"
+				speed="250"
+				directionalspace="global"
+				inheritvelocity=".3"
+				depthbias="-20"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					anglespeed="40"
+					startsize="30"
+					midsize="65"
+					endsize="65"
+					lockup="true"
+					lockright="true"
+					pitch="90"
+					color=".6 .5 .3"
+					startalpha=".7"
+					endalpha="0"
+				/>
+			</terrainemitter>	
+			
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

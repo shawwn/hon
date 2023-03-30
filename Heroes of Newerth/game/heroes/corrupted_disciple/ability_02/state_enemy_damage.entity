@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_CorruptedDisciple_Ability2_Enemy_Damage"
+
+	icon="icon.tga"
+	
+	damagepercharge="-5,-10,-15,-20"
+	
+	effecttype="StatusDebuff"
+>
+</state>

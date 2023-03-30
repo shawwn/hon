@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="death_1.max" file="death.model" type="K2" >
+<spawnevent cmd="StartEffect dust.effect"/>
+
+<anim name="idle" clip="death.clip" fps="50" loop="true" loopbackframe="-1"/>
+
+</model>

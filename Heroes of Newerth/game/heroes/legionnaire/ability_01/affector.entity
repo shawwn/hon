@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Legionnaire_Ability1"
+
+	radius="300"
+	
+	targetselection="all"
+	targetscheme="nonneutral_organic_enemy_units"
+>
+	<onimpact>
+		<applystate name="State_Legionnaire_Ability1_Enemy" duration="1500,2000,2500,3000" proxy="proxy_entity" />
+		<order command="attack" force="true" forceduration="1500,2000,2500,3000" source="target_entity" target="proxy_entity" />
+	</onimpact>
+</affector>

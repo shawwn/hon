@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Succubis_Ability1"
+
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+	displaylevel="true"
+	
+	basedamagemultiplier="-0.3,-0.6,-0.9,-1.2"
+
+	effecttype="StatusDebuff"
+>
+</state>

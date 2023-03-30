@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="ability1_proj.max" file="projectile.model" type="K2" >
+	<anim name="idle" clip="projectile.clip" blendtime="0" fps="45"/>
+</model>

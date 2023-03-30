@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Valkyrie_Ability1"
+
+	
+	
+	icon="icon.tga"
+	
+	impactinterval="500"
+	
+	ishidden="true"
+	
+	effecttype=""
+>
+
+
+	<onimpact>
+		<damage effecttype="Magic" amount="75,150,225,300" />
+		<playeffect effect="effects/actual_impact.effect" target="target_entity" source="target_entity"/>
+	</onimpact>
+</state>

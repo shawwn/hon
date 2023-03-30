@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect >
+
+	<definitions>
+
+		<particlesystem name="system0" space="entity">
+
+			<light
+				bone="_bone_locust"
+				startcolor="0.5 1 0.2"
+				endcolor="0 0 0"
+				falloffend="120"
+			/>
+
+			<trackeremitter
+				bone="_bone_locust"
+				targetbone="_bone_locust"
+				tracktype="distance"
+				trackspeed=".4" 
+				spawnrate="200"
+				particlelife="3000"
+				offsetsphere="8 8 8"
+				minspeed="10.0"
+				maxspeed="160"
+				direction="0 0 1"
+				material="locusts.material"
+			>
+				<particle 
+					startalpha="1"
+					endalpha="0"
+					midalphapos=".7"
+					maxangle="359"
+					maxanglespeed="30"
+					minanglespeed="-30"
+					width="24.0" 
+					height="24.0"
+				/>
+			</trackeremitter>
+
+			<simpleemitter
+				bone="_bone_locust"
+				spawnrate="20"
+				particlelife="200"
+				speed="4"
+				offsetsphere="3 3 3"
+				material="/shared/effects/materials/flare1.material"
+			>
+				<particle
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="0"
+					startcolor="0.4 0.7 0.3"
+					endcolor="0 0 0"
+					size="4"
+					startscale="5"
+					endscale="20"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_locust"
+				spawnrate="25"
+				particlelife="300"
+				speed="10"
+				offsetsphere="5 5 5"
+				material="/shared/effects/materials/lightning_02.material"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					minanglespeed="0"
+					startcolor="1 1 1"
+					midcolor="0.4 0.7 0.3"
+					endcolor="0 0 0"
+					size="3"
+					startscale="2"
+					endscale="10"	
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+		<waitfordeath instance="instance0"/>
+		<!-- <die /> -->
+	</thread>
+
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->

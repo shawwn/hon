@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Kraken_Ability2"
+	
+	
+	
+	icon="icon.tga"
+	portrait="icon.tga"
+	model="/shared/models/invis.mdf"
+	skin=""
+	unitwalking="true"
+	diewithowner="true"
+	
+	passiveeffect="effects/ability.effect"
+	spawneffect=""
+	respawneffect=""
+	selectsound=""
+	isselectable="true"
+	orderconfirmedsound=""
+	
+	preglobalscale="1.35"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="64"
+	boundsradius="16"
+	selectionradius="36"
+	targetoffset="0 0 0"
+
+
+
+	invulnerable="true"
+	canattack="false"
+
+	corpsetime="0"
+
+	
+	lifetime="10000"
+
+>
+	<onframe>
+		<condition test="hastrait immobilized" source="this_owner_entity" target="this_owner_entity">
+			<expirestate name="State_Kraken_Ability2_Self_Killprojectile" target="this_owner_entity" />
+		</condition>
+	</onframe>
+</gadget>

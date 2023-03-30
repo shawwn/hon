@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="ability_01_impact">
+	<definitions>
+		<particlesystem name="system0" space="entity" useentityeffectscale="true" scale="1">
+
+
+
+			<sound
+				linearfalloff="true"
+				falloffstart="1000"
+				falloffend="2000" 
+				volume="1.0" 
+				sample="/heroes/hammerstorm/ability_01/sounds/ability_01.wav"
+			/>
+
+
+		
+		
+			<billboard
+				life="500"
+				color="1.0 1.0 1.0"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="0.0"
+				midalphapos="0.75"
+				startparam=".5"
+				endparam="0.0"
+				startsize="128"
+				endsize="368"
+				depthbias="-100"
+				position="0 0 20"
+				material="/shared/effects/materials/refract_ripple.material"
+				lockup="true"
+				pitch="90"
+			/>	
+		
+
+
+
+			<billboard
+				life="1000"
+				startcolor="0 1.0 .5"
+				endcolor="0 0 0"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="0.0"
+				midalphapos="0.75"
+				startparam="0.05"
+				endparam="0.0"
+				
+				
+				startsize="50"
+				midsize="200"
+				endsize="250"
+				midsizepos=".4"
+				
+				
+				depthbias="0"
+				position="0 0 20"
+				material="/shared/effects/materials/stomp_02.material"
+				lockup="true"
+				pitch="90"
+			/>
+		
+	
+
+
+      </particlesystem>
+   </definitions>
+   <thread>
+   
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+	 
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

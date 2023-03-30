@@ -1,0 +1,12 @@
+/.cvsignore/1.1/Fri May 16 23:08:57 2008//
+/__init__.py/1.1/Fri May 16 23:08:57 2008//
+/aix.py/1.1/Fri May 16 23:08:57 2008//
+/cygwin.py/1.1/Fri May 16 23:08:57 2008//
+/darwin.py/1.1/Fri May 16 23:08:57 2008//
+/hpux.py/1.1/Fri May 16 23:08:57 2008//
+/irix.py/1.1/Fri May 16 23:08:57 2008//
+/os2.py/1.1/Fri May 16 23:08:57 2008//
+/posix.py/1.1/Fri May 16 23:08:57 2008//
+/sunos.py/1.1/Fri May 16 23:08:57 2008//
+/win32.py/1.1/Fri May 16 23:08:57 2008//
+D

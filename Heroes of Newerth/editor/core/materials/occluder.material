@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<material>
+	<parameters />
+	<phase name="color" vs="effect" ps="effect" srcblend="BLEND_SRC_ALPHA" dstblend="BLEND_ONE_MINUS_SRC_ALPHA" cull="CULL_NONE" translucent="true">
+		<sampler name="diffuse" texture="$checker" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="1.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false" filtering="true" border="false"></sampler>
+	</phase>
+</material>

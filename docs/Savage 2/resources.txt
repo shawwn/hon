@@ -1,0 +1,32 @@
+Medium Quality
+=======================================
+
+Resource Usage
+---------
+Library            Load Time  Memory
+Materials          0.2413 s   16.00 KB
+Vertex Shaders     4.6012 s   6.30 MB
+Pixel Shaders      3.6301 s   936.00 KB
+Textures           9.0456 s   196.61 MB
+Models             9.3172 s   116.21 MB
+Animation Clips    1.1378 s   17.95 MB
+Font Faces         0.0126 s   20.00 KB
+Fonts              0.2091 s   300.00 KB
+Sound Samples      10.2605 s  174.17 MB
+String Tables      0.0003 s   8.00 KB
+Interfaces         1.9325 s   23.92 MB
+Effects            2.7964 s   2.77 MB
+Npcs               0.0417 s   0 bytes
+Resource Reference 0.0003 s   0 bytes
+Total              43.2267 s  539.16 MB
+>SystemMemoryInfo 
+System:
+-------------------
+Physical: 950.14 MB / 2.00 GB
+Virtual: 1.17 GB / 2.00 GB
+Page File: 4.91 GB / 5.85 GB
+
+This process:
+-------------------
+Physical: 644.03 MB
+Virtual: 666.08 MB

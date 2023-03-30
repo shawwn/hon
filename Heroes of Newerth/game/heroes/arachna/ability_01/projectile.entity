@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Ability_Arachna1"
+
+	speed="1200"
+	gravity="0"
+	scale="1"
+	model="/shared/models/invis.mdf"
+
+	impacteffect=""
+	traileffect="effects/trail.effect"
+>
+</projectile>

@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="good_main_01" pausable="true">
+	<definitions>
+		<particlesystem name="system0" space="entity">
+
+			<light
+				bone="_bone_fx_01"
+				startcolor="1.25 1.5 1.5"
+				endcolor="1.25 1.5 1.5"
+				falloffstart="55"
+				falloffend="150"
+			/>
+
+			<simpleemitter
+				spawnrate="10"
+				bone="_bone_fx_01"
+				particlelife="1550"
+				gravity="0"
+				speed="10"
+				drag="0"
+				acceleration="0"
+				position="0 0 0"
+				mintimenudge="1000"
+				maxtimenudge="1000"
+				material="/shared/effects/materials/flare_07.material"
+				offsetsphere="0 0 0"
+				minangle="0"
+				maxangle="0"
+				direction="0 0 0"
+				offsetdirection="0 0 0"
+				offsetradial="0 0 0"
+				directionalspace="global"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="0"
+					maxanglespeed="0"
+					startcolor="0 0 0"
+					midcolor="1 1 1"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					startframe="0"
+					endframe="1"
+					startwidth="225"
+					midwidth="112.5"
+					endwidth=".1"
+					startheight="5"
+					midheight="10"
+					endheight="20"
+					endheightpos=".6"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".5"
+					startstickiness="1"
+					endstickiness="1"
+					lockup="false"
+					lockright="false"
+					pitch="0"
+					yaw="0"
+				/>
+
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="0"
+					maxanglespeed="0"
+					startcolor="0 0 0"
+					midcolor="1 1 0"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					startframe="0"
+					endframe="1"
+					startwidth="350"
+					midwidth="175"
+					endwidth=".1"
+					startheight="2.25"
+					midheight="4.5"
+					endheight="9"
+					endheightpos=".6"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".5"
+					startstickiness="1"
+					endstickiness="1"
+					lockup="false"
+					lockright="false"
+					pitch="0"
+					yaw="0"
+					weight=".7"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				count="1"
+				particlelife="-1"
+				bone="_bone_fx_01"
+				gravity="0"
+				speed="0"
+				drag="0"
+				acceleration="0"
+				position="0 0 -1"
+				material="/shared/effects/materials/main_ring.material"
+				offsetsphere="0 0 0"
+				minangle="0"
+				maxangle="0"
+				direction="0 0 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="0"
+					minanglespeed="0"
+					startcolor=".5 .5 .5"
+					midcolor=".5 .5 .5"
+					endcolor=".5 .5 .5"
+					midcolorpos=".5"
+					maxanglespeed="0"
+					startframe="0"
+					endframe="0"
+					startsize="145"
+					midsize="145"
+					endsize="145"
+					midsizepos=".5"
+					startalpha="1"
+					midalpha="1"
+					endalpha="1"
+					midalphapos=".5"
+					startstickiness="1"
+					endstickiness="1"
+					yawspeed="100"
+					pitchspeed="-30"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				count="1"
+				particlelife="-1"
+				bone="_bone_fx_01"
+				gravity="0"
+				speed="0"
+				drag="0"
+				acceleration="0"
+				position="0 0 -1"
+				material="/shared/effects/materials/main_ring.material"
+				offsetsphere="0 0 0"
+				minangle="0"
+				maxangle="0"
+				direction="0 0 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="0"
+					minanglespeed="0"
+					startcolor=".5 .5 .5"
+					midcolor=".5 .5 .5"
+					endcolor=".5 .5 .5"
+					midcolorpos=".5"
+					maxanglespeed="0"
+					startframe="0"
+					endframe="0"
+					startsize="145"
+					midsize="145"
+					endsize="145"
+					midsizepos=".5"
+					startalpha="1"
+					midalpha="1"
+					endalpha="1"
+					midalphapos=".5"
+					startstickiness="1"
+					endstickiness="1"
+					yawspeed="-130"
+					pitchspeed="30"
+					
+				/>
+			</simpleemitter>
+<!--
+			<model
+				bone="_bone_fx_01"
+				model="/buildings/legion/main/effects/lights/lights.mdf"
+				anim="idle"
+				scale="0.13"
+				position="90 25 -44"
+				directionalspace="local"
+				pitch="180"
+				yawspeed="0"
+				pitchspeed="0"
+			 />	
+
+
+			<model
+				bone="_bone_fx_01"
+				model="/buildings/legion/main/effects/lights/lights.mdf"
+				anim="idle"
+				scale="0.13"
+				position="-100 25 -14"
+				directionalspace="local"
+				pitch="180"
+				yaw="50"
+				pitchspeed="0"
+			 />	
+
+			<model
+				bone="_bone_fx_01"
+				model="/buildings/legion/main/effects/lights/lights.mdf"
+				anim="idle"
+				scale="0.13"
+				position="-90 0 -14"
+				directionalspace="local"
+				pitch="180"
+				yaw="220"
+				pitchspeed="0"
+			 />	
+
+
+
+
+			<model
+				bone="_bone_fx_01"
+				model="/buildings/legion/main/effects/lights/lights.mdf"
+				anim="idle"
+				scale="0.13"
+				position="50 -120 50"
+				directionalspace="local"
+				pitch="0"
+				yawspeed="0"
+				pitchspeed="0"
+			 />			
+			
+			<model
+				bone="_bone_fx_01"
+				model="/buildings/legion/main/effects/lights/lights.mdf"
+				anim="idle"
+				scale="0.13"
+				position="50 -70 0"
+				directionalspace="local"
+				pitch="180"
+				yawspeed="0"
+				pitchspeed="0"
+			 />
+			 
+			<model
+				bone="_bone_fx_01"
+				model="/buildings/legion/main/effects/lights/lights.mdf"
+				anim="idle"
+				scale="0.13"
+				position="-0 -180 0"
+				directionalspace="local"
+				pitch="180"
+				roll="230"
+				pitchspeed="0"
+			 />
+			 
+			<model
+				bone="_bone_fx_01"
+				model="/buildings/legion/main/effects/lights/lights.mdf"
+				anim="idle"
+				scale="0.13"
+				position="118 -160 0"
+				directionalspace="local"
+				pitch="180"
+				roll="110"
+				pitchspeed="0"
+			 />
+-->
+			<model
+				bone="_bone_fx_01"
+				model="/buildings/legion/main/effects/sphere/model.mdf"
+				anim="idle"
+				scale="0.9"
+				position="0 0 0"
+				directionalspace="local"
+				pitch="-43.5"
+				yawspeed="-50"
+				pitchspeed="20"
+			 />
+
+
+			<simpleemitter
+				spawnrate="8"
+				minparticlelife="1200"
+				maxparticlelife="1800"
+				gravity="0"
+				speed="3"
+				drag="0"
+				acceleration="0"
+				position="-84 44 250"
+				material="/shared/effects/materials/star_05.material"
+				offsetsphere="60 60 25"
+				minangle="0"
+				maxangle="360"
+				direction="0 0 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="0"
+					minanglespeed="100"
+					startcolor="1 1 1"
+					midcolor="1 1 1"
+					endcolor="1 1 1"
+					midcolorpos=".7"
+					maxanglespeed="0"
+					startframe="0"
+					endframe="1"
+					startsize="5"
+					midsize="20"
+					endsize="5"
+					midsizepos=".5"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".3"
+					startstickiness="0"
+					endstickiness="0"
+				/>
+				<particle 
+					minangle="0"
+					maxangle="0"
+					minanglespeed="100"
+					startcolor="1 1 1"
+					midcolor="1 1 1"
+					endcolor="1 1 1"
+					midcolorpos=".7"
+					maxanglespeed="0"
+					startframe="0"
+					endframe="1"
+					startsize="5"
+					midsize="25"
+					endsize="5"
+					midsizepos=".5"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".3"
+					startstickiness="0"
+					endstickiness="0"
+					weight=".3"
+				/>
+
+			</simpleemitter> 
+
+		<simpleemitter
+				spawnrate="8"
+				minparticlelife="1200"
+				maxparticlelife="1800"
+				gravity="0"
+				speed="3"
+				drag="0"
+				acceleration="0"
+				position="100 80 230"
+				material="/shared/effects/materials/star_05.material"
+				offsetsphere="45 45 25"
+				minangle="0"
+				maxangle="360"
+				direction="0 0 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="0"
+					minanglespeed="100"
+					startcolor="1 1 1"
+					midcolor="1 1 1"
+					endcolor="1 1 1"
+					midcolorpos=".7"
+					maxanglespeed="0"
+					startframe="0"
+					endframe="1"
+					startsize="5"
+					midsize="20"
+					endsize="5"
+					midsizepos=".5"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".3"
+					startstickiness="0"
+					endstickiness="0"
+				/>
+
+				<particle 
+					minangle="0"
+					maxangle="0"
+					minanglespeed="100"
+					startcolor="1 1 1"
+					midcolor="1 1 1"
+					endcolor="1 1 1"
+					midcolorpos=".7"
+					maxanglespeed="0"
+					startframe="0"
+					endframe="1"
+					startsize="5"
+					midsize="25"
+					endsize="5"
+					midsizepos=".5"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".3"
+					startstickiness="0"
+					endstickiness="0"
+					weight=".3"
+				/>
+			</simpleemitter> 
+
+		<simpleemitter
+				spawnrate="5"
+				minparticlelife="1200"
+				maxparticlelife="1800"
+				gravity="-0"
+				speed="3"
+				drag="0"
+				acceleration="0"
+				position="60 -60 320"
+				material="/shared/effects/materials/star_05.material"
+				offsetsphere="75 75 20"
+				minangle="0"
+				maxangle="360"
+				direction="0 0 0"
+			>
+
+				<particle 
+					minangle="0"
+					maxangle="0"
+					minanglespeed="100"
+					startcolor="1 1 1"
+					midcolor="1 1 1"
+					endcolor="1 1 1"
+					midcolorpos=".7"
+					maxanglespeed="0"
+					startframe="0"
+					endframe="1"
+					startsize="5"
+					midsize="20"
+					endsize="5"
+					midsizepos=".5"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".3"
+					startstickiness="0"
+					endstickiness="0"
+				/>
+
+				<particle 
+					minangle="0"
+					maxangle="0"
+					minanglespeed="100"
+					startcolor="1 1 1"
+					midcolor="1 1 1"
+					endcolor="1 1 1"
+					midcolorpos=".7"
+					maxanglespeed="0"
+					startframe="0"
+					endframe="1"
+					startsize="5"
+					midsize="25"
+					endsize="5"
+					midsizepos=".5"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".3"
+					startstickiness="0"
+					endstickiness="0"
+					weight=".3"
+				/>
+			</simpleemitter> 
+
+		</particlesystem>
+	</definitions>
+	<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<waitfordeath instance="instance0" />
+	</thread>
+</effect>

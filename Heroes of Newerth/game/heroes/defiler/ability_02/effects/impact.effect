@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="3.5">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2500"
+				volume=".8"
+				sample="../sounds/cast.wav"
+			/>
+
+			<simpleemitter
+				count="45"
+				spawnrate="3005"
+				depthbias="-30"
+				particlelife="2000"
+				offsetsphere="45"
+				speed="2"
+				material="/shared/effects/materials/phantom_smoke_03.material"
+			>
+				<particle
+					startcolor=".25 0 .1"
+					midcolorpos="0.5"
+					endcolor="0"
+					startsize="60"
+					endsize="60"
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-20"
+					maxanglespeed="20"
+					minendscale="3"
+					maxendscale="4"
+					startalpha=".5"
+					endalpha="0"
+			 	/>
+			</simpleemitter>
+
+			<billboard
+				life="600"
+				position="0 0 5"
+				startcolor=".2 0 .1"				
+				endcolor="0"
+				startsize="50"
+				endsize="250"
+				depthbias="-30"
+				material="/shared/effects/materials/corona_07.material"
+				lockup="true"
+				pitch="90"
+			/>
+
+			<billboard
+				life="1500"
+				position="0 0 5"
+				startcolor=".3 0 .2"				
+				endcolor="0"
+				startsize="180"
+				endsize="0"
+				depthbias="-30"
+				material="/shared/effects/materials/whitedot.material"
+				lockup="true"
+				pitch="90"
+			/>
+
+			<simpleemitter
+				spawnrate="25"
+				life="200"
+				depthbias="-20"
+				particlelife="1500"
+				material="/shared/effects/materials/deamon.material"
+				direction="0 0 1"
+				speed="5"
+				angle="0"
+			>
+				<particle
+					startcolor=".3 0 .5"
+					midcolor=".4 0 .2"
+					midcolorpos="0.2"
+					endcolor="0"
+					startsize="65"
+					endsize="100"
+					lockup="true"
+					pitch="-90"
+			 	/>
+			</simpleemitter>
+
+			<simpleemitter
+				spawnrate="25"
+				life="500"
+				depthbias="-30"
+				particlelife="1200"
+				material="/shared/effects/materials/deamon_blend.material"
+				direction="0 0 1"
+				speed="10"
+				angle="0"
+			>
+				<particle
+					color="1"
+					startalpha="1"
+					endalpha="0"
+					size="50"
+					endsize="100"
+					lockup="true"
+					pitch="-90"
+			 	/>
+			</simpleemitter>
+	
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Gauntlet_Ability4_Statis"
+
+	icon="icon.tga"
+	passiveeffect="effects/state_stasis.effect"
+	impacteffect=""
+	
+	immunitytype="IndirectImmunity"
+	nothreat="true"
+	
+	unitwalking="true"
+	stunned="true"
+	frozen="true"
+	revealed="true"
+	
+	impactinterval="1000"
+	
+	effecttype="StatusDebuff"
+>
+<!-- YES I SPELLED THE FILE WRONG. BAH! -->
+	<onimpact>
+		<condition test="accumulator eq 0">
+			<setaccumulator value="1" />
+		</condition>
+	</onimpact>
+
+	<onframe />
+	
+	<onexpired>
+		<playanim name="idle" target="target_entity" />
+	</onexpired>
+	
+	<ondamaged>
+		<condition test="accumulator eq 1">
+			<condition test="source_damage gt 0">
+				<cantarget targetscheme="player_controlled_enemy_units">
+					<expire />
+				</cantarget>
+			</condition>
+		</condition>
+	</ondamaged>
+</state>

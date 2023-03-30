@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Hiro_Ability4"
+
+	radius="450"
+	
+	lifetime="400"
+	impactdelay="400"
+	maxtotalimpacts="1"
+	targetselection="random"
+	targetscheme="visible_organic_enemy_units"
+	effecttype="Physical Splash"
+	persist="true"
+>
+	<onimpact>
+		<applystate name="State_Hiro_Ability4" duration="400" target="source_entity"/>
+		<teleport interpolate="true" facetarget="true"/>
+		<damage effecttype="Physical" min="150" max="250"/>
+<!--		<popup name="bonus_damage" target="source_entity" a="result"/> -->
+		<playanim name="ability_4_attack" variations="4" length="400" target="source_entity"/>
+		<chain count="1,3,6"/>
+		<order command="attack"/>
+	</onimpact>
+	<modifier key="ult_boost" modpriority="100"
+	>
+		<onimpact>
+			<applystate name="State_Hiro_Ability4" duration="400" target="source_entity"/>
+			<teleport interpolate="true" facetarget="true"/>
+			<damage effecttype="Physical" min="150" max="250"/>
+	<!--		<popup name="bonus_damage" target="source_entity" a="result"/> -->
+			<playanim name="ability_4_attack" variations="4" length="400" target="source_entity"/>
+			<chain count="3,5,8"/>
+			<order command="attack"/>
+		</onimpact>
+	</modifier>
+</affector>

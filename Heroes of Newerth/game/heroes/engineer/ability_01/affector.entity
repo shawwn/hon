@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Engineer_Ability1"
+
+	radius="200"	
+	targetselection="all"
+	targetscheme="all_organic_units"
+	effecttype="Magic"
+	destroytrees="true"
+	impactdelay="0"
+	impacteffect=""
+	
+>
+	<onimpact>
+		<condition test="not_target_type Boss">
+			<cantarget targetscheme="enemy_units">
+				<applystate name="State_Engineer_Ability1" duration="1250,1500,1750,2000" />
+				<playanim name="knock_1" target="target_entity" />
+				<damage effecttype="Magic" amount="100,150,200,250" />
+				<push force="1250" duration="200" source="this_entity" />
+			</cantarget>
+			<condition test="target_type self">
+				<push force="1250" duration="200" source="this_entity" />
+			</condition>
+		</condition>
+	</onimpact>
+</affector>

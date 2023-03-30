@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2000"
+				volume="1"
+				sample="../sounds/attack_%.wav"
+			/>
+
+			<simpleemitter
+				life="250"
+				startspawnrate="500"
+				endspawnrate="0"
+				minparticlelife="350"
+				maxparticlelife="500"
+				gravity="0"
+				minspeed="1500"
+				maxspeed="3500"
+				drag="0.01"
+				minangle="0"
+				maxangle="0"
+				offsetsphere="8"
+				position="0 25 50"
+				direction="0 1 0"
+				material="/shared/effects/materials/bad_healing_smoke_12.material"
+			>
+				<particle
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="-250"
+					maxanglespeed="250"
+					turn="1"
+					startcolor="1 .5 0"
+					midcolor=".5 .25 0"
+					endcolor=".5 .25 0"
+					midcolorpos="0.5"
+					startscale="25"
+					endscale="10"
+					startalpha="0"
+					midalpha=".5"
+					endalpha="0"
+					midalphapos="0.1"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				life="100"
+				spawnrate="300"
+				particlelife="200"
+				gravity="0"
+				minspeed="6500"
+				maxspeed="8500"
+				drag="0.016"
+				minangle="0"
+				maxangle="10"
+				offsetsphere="0 0 0"
+				position="0 135 30"
+				direction="0 1 0"
+				material="/shared/effects/materials/flame.material"
+				depthbias="-100"
+			>
+				<particle
+					startcolor="1 0 0"
+					midcolor=".6 .6 0"
+					endcolor="0 0 0"
+					midcolorpos="0.1"
+					heightdistort=".02"
+					startsize="25"
+					endsize="120"
+					turn="1"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				life="100"
+				spawnrate="175"
+				minparticlelife="300"
+				maxparticlelife="400"
+				gravity="0"
+				minspeed="7000"
+				maxspeed="8500"
+				drag="0.0325"
+				minangle="0"
+				maxangle="0"
+				offsetsphere="5 5 0"
+				position="0 50 30"
+				direction="0 1 0"
+				material="/shared/effects/materials/pyroclast_02.material"
+				depthbias="-100"
+			>
+				<particle
+					startalpha="0"
+					midalpha=".25"
+					endalpha="0"
+					midalphapos=".5"
+					startcolor=".25"
+					endcolor="0 0 0"
+					midcolorpos="0.5"
+					heightdistort=".02"
+					startsize="40"
+					endsize="180"
+					turn="1"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				life="100"
+				spawnrate="175"
+				minparticlelife="400"
+				maxparticlelife="600"
+				gravity="0"
+				minspeed="6500"
+				maxspeed="8500"
+				drag="0.016"
+				minangle="0"
+				maxangle="20"
+				offsetsphere="15"
+				position="0 50 30"
+				direction="0 1 0"
+				material="/shared/effects/materials/pyroclast_02.material"
+				depthbias="-100"
+			>
+				<particle
+					startalpha="0"
+					midalpha=".1"
+					endalpha="0"
+					midalphapos=".5"
+					startcolor="1 1 1"
+					midcolor="1 1 1"
+					endcolor="0 0 0"
+					midcolorpos="0.5"
+					heightdistort=".02"
+					startsize="40"
+					endsize="180"
+					turn="1"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				life="100"
+				spawnrate="175"
+				minparticlelife="300"
+				maxparticlelife="500"
+				gravity="0"
+				minspeed="2000"
+				maxspeed="4000"
+				drag="0.016"
+				minangle="0"
+				maxangle="20"
+				offsetsphere="15"
+				position="0 50 30"
+				direction="0 1 0"
+				material="/shared/effects/materials/pyroclast_02.material"
+				depthbias="-100"
+			>
+				<particle
+					startalpha="0"
+					midalpha=".25"
+					endalpha="0"
+					midalphapos=".5"
+					startcolor="1 1 1"
+					midcolor="1 1 1"
+					endcolor="0 0 0"
+					midcolorpos="0.1"
+					heightdistort=".02"
+					startsize="40"
+					endsize="180"
+					turn="1"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				count="3"
+				spawnrate="16"
+				particlelife="600"
+				position="0 0 0"
+				minspeed="1000"
+				maxspeed="1500"
+				minangle="0"
+				maxangle="2"
+				direction="0 1 0"
+				offsetsphere="5"
+				material="/shared/effects/materials/refract_swell.material"
+				particledirectionalspace="local"
+				offsetdirection="0 0 0"
+				offsetradial="0"
+				param=".4"
+			>
+				<particle
+					startsize="100"
+					endsize="500"
+					param="0.5"
+					startalpha="0"
+					midalpha=".25"
+					endalpha="0"
+					midalphapos=".15"
+					lockup="true"
+					lockright="1"
+					pitch="0"
+					flare="0"
+					yaw="00"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				count="3"
+				spawnrate="20"
+				particlelife="550"
+				position="0 0 0"
+				minspeed="1000"
+				maxspeed="1500"
+				minangle="0"
+				maxangle="2"
+				direction="0 1 0"
+				offsetsphere="5"
+				material="/shared/effects/materials/pyroclast_02.material"
+				particledirectionalspace="local"
+				offsetdirection="0 0 0"
+				offsetradial="0"
+				param=".4"
+				depthbias="-75"
+			>
+				<particle
+					color="1"
+					startsize="100"
+					endsize="200"
+					startalpha="0"
+					midalpha=".25"
+					endalpha="0"
+					midalphapos=".05"
+				/>
+			</simpleemitter>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<simpleemitter
+				life="250"
+				startspawnrate="250"
+				endspawnrate="0"
+				minparticlelife="400"
+				maxparticlelife="600"
+				gravity="0"
+				minspeed="1500"
+				maxspeed="3500"
+				drag="0.01"
+				minangle="0"
+				maxangle="15"
+				offsetsphere="8"
+				position="0 50 50"
+				direction="0 1 0"
+				material="/shared/effects/materials/refract_wave2.material"
+			>
+				<particle
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="-250"
+					maxanglespeed="250"
+					turn="1"
+					param="0.1"
+					color="1 1 1"
+					startscale="30"
+					endscale="10"
+					startalpha="0"
+					midalpha=".5"
+					endalpha="0"
+					midalphapos="0.1"
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+		
+		<waitfordeath instance="instance0"/>
+	
+	</thread>
+
+</effect>

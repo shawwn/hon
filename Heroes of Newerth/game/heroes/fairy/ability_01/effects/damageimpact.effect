@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="cyclone" deferred="true" useentityeffectscale="1">
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="2">
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				count="12"
+				minparticlelife="400"
+				maxparticlelife="600"
+				spawnrate="175"
+				gravity="0"
+				drag=".05"
+				speed="50"
+				position="0 0 0"
+				material="/shared/effects/materials/phantom_smoke_04.material"
+				offsetsphere="10 10 0"
+				direction="0 0 1"
+			>
+				<particle
+					anglespeed="25"
+					minangle="0"
+					maxangle="360"
+					startcolor=".5 .25 0"
+					midcolor=".5 .25 0"
+					endcolor="0 0 0"
+					midcolorpos=".5"
+					startsize="30"
+					endsize="15"
+					mindsizepos=".1"
+				/>
+			</simpleemitter>
+	
+			<simpleemitter
+				bone="_bone_centerofchest"
+				count="12"
+				minparticlelife="400"
+				maxparticlelife="600"
+				spawnrate="175"
+				gravity="0"
+				drag=".05"
+				speed="50"
+				position="0 0 0"
+				material="/shared/effects/materials/phantom_smoke_04.material"
+				offsetsphere="20 20 0"
+				direction="0 0 1"
+			>
+				<particle
+					anglespeed="25"
+					minangle="0"
+					maxangle="360"
+					startcolor=".5 .25 0"
+					midcolor=".5 .25 0"
+					endcolor="0 0 0"
+					midcolorpos=".5"
+					startsize="40"
+					endsize="25"
+					mindsizepos=".1"
+				/>
+			</simpleemitter>
+			
+			<billboard
+				life="500"
+				bone="_bone_centerofchest"
+				delay="0"
+				startcolor="0 0 0"
+				midcolor="0.5 0.5 .15"
+				endcolor="0 0 0"
+				position="0 0 0"
+				material="/shared/effects/materials/phantom_smoke_13.material"
+				width="10"
+				startheight="100"
+				midheight="200"
+				endheight="100"
+				directionalspace="local"
+				lockup="1"
+				lockright="0"
+			/>
+			
+			<billboard
+				life="500"
+				bone="_bone_centerofchest"
+				delay="0"
+				startcolor="0 0 0"
+				midcolor="0.5 .35 .15"
+				endcolor="0 0 0"
+				position="0 0 0"
+				material="/shared/effects/materials/phantom_smoke_13.material"
+				width="5"
+				startheight="100"
+				midheight="200"
+				endheight="100"
+				pitch="30"
+				directionalspace="local"
+				lockup="1"
+				lockright="0"
+			/>
+			
+			<billboard
+				life="500"
+				bone="_bone_centerofchest"
+				delay="0"
+				startcolor="0 0 0"
+				midcolor="0.5 .35 .15"
+				endcolor="0 0 0"
+				position="0 0 0"
+				material="/shared/effects/materials/phantom_smoke_13.material"
+				width="5"
+				startheight="100"
+				midheight="200"
+				endheight="100"
+				pitch="65"
+				directionalspace="local"
+				lockup="1"
+				lockright="0"
+			/>
+			
+			<billboard
+				life="500"
+				bone="_bone_centerofchest"
+				delay="0"
+				startcolor="0 0 0"
+				midcolor="0.5 .35 .15"
+				endcolor="0 0 0"
+				position="0 0 0"
+				material="/shared/effects/materials/phantom_smoke_13.material"
+				width="5"
+				startheight="100"
+				midheight="275"
+				endheight="100"
+				pitch="65"
+				directionalspace="local"
+				lockup="1"
+				lockright="0"
+			/>
+
+			<billboard
+				life="500"
+				bone="_bone_centerofchest"
+				startcolor="0 0 0"
+				midcolor="0.5 .25 0"
+				endcolor="0 0 0"
+				position="0 0 00"
+				material="/shared/effects/materials/flare_05.material"
+				startsize="100"
+				endsize="300"
+				depthbias="-80"
+				lockup="1"
+				lockright="1"
+			/>
+			
+			<billboard
+				life="500"
+				bone="_bone_centerofchest"
+				startcolor="0 0 0"
+				midcolor=".25 .15 0"
+				endcolor="0 0 0"
+				midcolorpos=".75"
+				position="0 0 00"
+				material="/shared/effects/materials/flare_05.material"
+				startsize="100"
+				endsize="300"
+				depthbias="-80"
+				lockup="1"
+				lockright="1"
+			/>
+			
+			<simpleemitter
+				bone="_bone_centerofchest"
+				count="15"
+				minparticlelife="500"
+				maxparticlelife="750"							
+				spawnrate="75"
+				gravity="-30"
+				drag=".05"
+				position="0 0 0"
+				material="/shared/effects/materials/phantom_smoke_04.material"
+				offsetsphere="10 10 50"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					startcolor=".5 .25 0"
+					midcolor=".75 .35 0"
+					endcolor="0 0 0"
+					midcolorpos=".85"
+					startsize="40"
+					endsize="25"					
+					mindsizepos=".1"
+				/>
+			</simpleemitter>
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+			<waitfordeath instance="instance0" />
+	</thread>
+</effect>

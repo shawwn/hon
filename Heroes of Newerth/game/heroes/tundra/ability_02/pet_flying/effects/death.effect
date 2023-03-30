@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="">
+	<definitions>
+		<particlesystem deferred="true" name="system0" space="world" scale=".75">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="1500"
+				volume=".5"
+				sample="../sounds/death.wav"
+			/>
+			
+			
+			<!-- feather poof -->
+			<simpleemitter
+				position="0 0 75"
+				life="500"
+				spawnrate="75"
+				particlelife="2500"
+				gravity=".5"
+				speed="150"
+				drag="0.1"
+				acceleration="0.0"
+				material="/shared/effects/materials/blue_feather.material"
+				offsetsphere="45 45 50"
+				direction="0 0 0"
+				minangle="-180"
+				maxangle="180"
+				directionalspace="global"
+				collide="true"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					anglespeed="20"
+					minsize="10"
+					maxsize="30"
+					lockup="true"
+					lockright="true"
+					pitch="90"
+					color="1 1 1"
+					midcolorpos=".15"
+					startalpha=".5"
+					midalpha=".5"
+					endalpha="0"
+					midalphapos=".75"
+				/>
+				
+				<particle
+					minangle="0"
+					maxangle="360"
+					anglespeed="20"
+					minsize="10"
+					maxsize="25"
+					lockup="true"
+					lockright="true"
+					pitch="90"
+					color=".5 .75 1"
+					midcolorpos=".15"
+					startalpha=".5"
+					midalpha=".5"
+					endalpha="0"
+					midalphapos=".75"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+			bone="_bone_centerofchest"
+				count="50"
+				position="0 0 0"
+				life="1500"
+				spawnrate="1000"
+				particlelife="700"
+				gravity=".5"
+				speed="150"
+				drag="0"
+				acceleration="0.0"
+				material="/shared/effects/materials/blue_feather.material"
+				offsetsphere="25 25 25"
+				direction="0 0 0"
+				minangle="-180"
+				maxangle="180"
+				directionalspace="global"
+				collide="true"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					anglespeed="20"
+					minsize="10"
+					maxsize="25"
+					lockup="true"
+					lockright="true"
+					pitch="90"
+					color="1 1 1"
+					midcolorpos=".15"
+					startalpha=".5"
+					midalpha=".5"
+					endalpha="0"
+					midalphapos=".75"
+				/>
+				
+				<particle
+					minangle="0"
+					maxangle="360"
+					anglespeed="20"
+					minsize="10"
+					maxsize="25"
+					lockup="true"
+					lockright="true"
+					pitch="90"
+					color=".5 .75 1"
+					midcolorpos=".15"
+					startalpha=".5"
+					midalpha=".5"
+					endalpha="0"
+					midalphapos=".75"
+				/>
+			</simpleemitter>
+	
+			<simpleemitter
+				offsetsphere="35 35 0"
+				spawnrate="222"
+				count="15"
+				particlelife="1300"
+				gravity="0"
+				acceleration="0"
+				speed="10"
+				position="0 0 50"
+				material="/shared/effects/materials/dust.material"
+			>
+				<particle
+					minangle="-360"
+					maxangle="360"
+					color="0 .5 1"
+					startsize="50"
+					endsize="125"
+					minanglespeed="-25"
+					maxanglespeed="25"
+					startalpha="0"
+					midalpha=".2"
+					endalpha="0"
+					anchor="1"
+					lockup="0"
+					lockright="false"
+					turn="false"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				offsetsphere="75 75 0"
+				spawnrate="500"
+				count="15"
+				particlelife="750"
+				gravity="0"
+				acceleration="0"
+				speed="10"
+				position="0 0 50"
+				material="/shared/effects/materials/pyroclast_01.material"
+			>
+				<particle
+					minangle="-360"
+					maxangle="360"
+					color="0 .25 .5"
+					startsize="100"
+					endsize="150"
+					minanglespeed="-25"
+					maxanglespeed="25"
+					startalpha="0"
+					midalpha=".2"
+					endalpha="0"
+					anchor="1"
+					lockup="0"
+					lockright="false"
+					turn="false"
+				/>
+			</simpleemitter>
+			
+					<billboard
+						bone="_bone_centerofchest"
+						life="1000"
+						startcolor=".75 .75 .75"
+						midcolor="0 .25 .75"
+						midcolorpos="0.85"
+						endcolor="0"
+						startsize="175"
+						endsize="0"
+						depthbias="0"
+						material="/shared/effects/materials/whitedot.material"
+					/>
+					
+					<billboard
+						bone="_bone_centerofchest"
+						life="250"
+						startcolor=".3 .6 1"
+						endcolor="0 0 0"
+						startalpha="1.0"
+						midalpha="1.0"
+						endalpha="0.0"
+						midalphapos="0.75"
+						startparam="0.05"
+						endparam="0.0"
+						startsize="60"
+						endsize="135"
+						midsizepos=".4"
+						depthbias="0"
+						material="/shared/effects/materials/frost_burst.material"
+						lockup="true"
+						pitch="90"
+					/>
+					
+					<billboard
+						bone="_bone_centerofchest"
+						delay="0"
+						life="200"
+						param="0.1"
+						startsize="50"
+						endsize="150"
+						startalpha="0"
+						midalpha=".4"
+						endalpha="0"
+						depthbias="0"
+						material="/shared/effects/materials/refract_swell.material"
+						lockup="1"
+						lockright="1"
+						pitch="90"
+					/>
+					
+					<billboard
+						bone="_bone_centerofchest"
+						delay="88"
+						life="200"
+						param="0.1"
+						startsize="50"
+						endsize="150"
+						startalpha="0"
+						midalpha=".4"
+						endalpha="0"
+						depthbias="0"
+						material="/shared/effects/materials/refract_swell.material"
+						lockup="1"
+						lockright="1"
+						pitch="90"
+					/>
+					
+					<debris
+						life="500"
+						position="0 0 0"
+						scale="0.35"
+						model="/heroes/frosty/ability_02/effects/ice.mdf"
+						anim="idle"
+						minspeed="200.0"
+						maxspeed="400.0"
+						minrotationspeed="100.0"
+						maxrotationspeed="300.0"
+						gravity="41.0"
+						collide="true"
+						startalpha="1.0"
+						midalpha="1.0"
+						endalpha="1.0"
+						midalphapos="0.5"
+						bounce="0.7"
+						reflect="0.6"
+						animpose="true"
+					/>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+
+			<simpleemitter			
+				spawnrate="2211"				
+				particlelife="800"								
+				position="0 0 0"
+				material="/shared/effects/materials/shieldstarfish.material"				
+				particledirectionalspace="local"
+				offsetdirection="0 0 0"
+				offsetradial="0"
+				count="2"
+			>
+
+				<particle 
+					minangle="-15"
+					maxangle="-15"
+					minanglespeed="0"
+					startcolor=".5 .4 1"
+					endcolor="0 0 0"
+					maxanglespeed="00"
+					startframe="0"
+					endframe="1"
+									
+					startsize="20"				
+					endsize="100"				
+
+					startalpha=".3"
+					midalpha=".3"
+					endalpha="0"
+					midalphapos=".5"					
+					
+					lockup="true"
+					lockright="1"
+					pitch="0"
+					flare="0"
+					yaw="00"
+				
+				/>
+			</simpleemitter>
+	
+			<simpleemitter			
+				spawnrate="111"				
+				particlelife="800"								
+				position="0 0 0"
+				material="/shared/effects/materials/refract_swell.material"				
+				particledirectionalspace="local"
+				offsetdirection="0 0 0"
+				offsetradial="0"
+				param=".4"
+				count="1"
+			>
+
+				<particle 		
+					startsize="100"				
+					endsize="200"				
+					param="0.7"
+					startalpha=".3"
+					midalpha=".3"
+					endalpha="0"
+					midalphapos=".5"					
+					lockup="true"
+					lockright="1"
+					pitch="0"
+					flare="0"
+					yaw="00"
+				
+				/>
+			</simpleemitter>		
+
+			<model
+				maxyaw="360"
+				life="250"
+				startalpha="0"
+				midalpha="0"
+				endalpha="0"
+				model="/shared/effects/models/gibs/gib.mdf"
+				anim="death"
+				color="0"
+				startscale=".5"
+				endscale=".85"
+				directionalspace="global"
+			>
+				<template name="trails">
+
+					<simpleemitter	
+						bone="{bone}"
+						startspawnrate="555"
+						life="500"				
+						minparticlelife="500"			
+						maxparticlelife="750"	
+						depthbias="-20"			
+						material="/shared/effects/materials/flash.material"
+						maxspeed="50"
+						offsetsphere="15"
+					>
+						<particle 
+							startcolor=".25 .25 .25"
+							midcolor="0 .25 .5"
+							endcolor="0"
+							minsize="2"
+							maxsize="5"
+							minscale="1"
+							maxscale="2"
+							startalpha="1"
+							midalpha="1"
+							endalpha="0"
+						/>
+					</simpleemitter>
+
+					<billboard	
+						bone="{bone}"
+						life="1000"
+						startcolor="1 1 1"
+						endcolor="0"
+						size="5"
+						depthbias="-30"
+						material="/shared/effects/materials/flash.material"
+						maxyaw="360"
+						rollspeed="2000"
+					/>
+
+				</template>
+
+				<instance name="trails" bone="_bone_gib27" life="600" color=".3 .1 0" />
+				<instance name="trails" bone="_bone_gib24" life="800" color=".2 .1 0"/>
+				<instance name="trails" bone="_bone_gib25" life="800" color=".3 .1 0"/>
+				<instance name="trails" bone="_bone_gib26" life="800" color=".34 .1 0"/>
+				<instance name="trails" bone="_bone_gib39" life="800" color=".55 .15 0"/>
+	
+			</model>
+
+			<billboard
+				life="300"
+				position="0 0 50"			
+				startcolor="0 .25 .5"
+				endcolor="0"
+				endsize="250"
+				depthbias="-100"
+				lockup="1"
+				pitch="90"
+				maxroll="360"
+				material="/shared/effects/materials/pulse.material"
+			/>
+
+		</particlesystem>
+		
+		<modifier
+			alpha="0"
+		/>
+	</definitions>
+<thread>
+		<spawnparticlesystem instance="instance1" particlesystem="system0" />
+		<spawnmodifier instance="instance0"/>
+		<waitfordeath  instance="instance0"/>
+		<waitfordeath  instance="instance1"/>
+</thread>
+</effect>
+
+
+
+
+

@@ -1,0 +1,14 @@
+Ability 1:
+Description: Whenever you kill a unit, you absorb its essence boosting your damage bonus.
+
+Ability 2:
+Description: This is an aura. Nearby enemy units will get reduces armor. I may change this ability at a later date.
+
+Ability 3:
+Description: You can use this ability in 3 seperate independent methods. Each one operates at a specific distance from you. 
+
+Ultimate
+Description: This takes a second to channel and then uses some of the energy of his captured souls outwards, damaging and slowing units based on proximity to him. 
+
+
+This was originally a melee remake of nevermore. However, after chatting with jesse, he has no problem making it range with a different model. 

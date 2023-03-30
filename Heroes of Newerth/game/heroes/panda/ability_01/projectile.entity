@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Panda_Ability1"
+
+	speed="320"
+	gravity="0"
+	lifetime="350"
+
+	modelscale="1.0"
+	model=""
+		
+	canturn="true"
+	flying="false"
+	pathing="true"
+	flyheight="0"
+
+>
+</projectile>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="rig.max" file="high.model" type="K2" >
+
+	<spawnevent cmd="StartEffect effects/legion_tower_fx.effect 0"/>
+
+	<anim name="idle" clip="clips/default_1.clip" fps="30" loop="true" loopbackframe="1">
+	</anim>
+
+	<anim name="death_1" clip="clips/death_1.clip" loop="true" loopbackframe="-1">
+		<startevent cmd="StopSound 0" />
+		<frameevent frame="1" cmd="StartEffect /buildings/legion/attack_tower/effects/death.effect 0"/>
+		<startevent cmd="StartEffect /buildings/legion/attack_tower/effects/crumble.effect 1"/>
+		<frameevent frame="25" cmd="StopEffect 2"/>	
+		<endevent cmd="StopEffect 1" />
+	</anim>
+
+</model>

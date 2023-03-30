@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="">
+
+	<definitions>
+	
+		<modifier
+		life="10000"
+			color="1 1 1"
+			alpha="0"
+		/>
+
+		<particlesystem name="system0" space="world" scale="1.0">
+		
+
+			<simpleemitter
+				spawnrate="2350"
+				count="10"
+				particlelife="300"
+				gravity="-1"
+				maxspeed="5"
+				drag="0.1"
+				position="0 0 35"
+				angle="30"
+				material="/shared/effects/materials/dust_explosion.material"
+				offsetsphere="25 25 10"
+			>
+				<particle
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-50"
+					maxanglespeed="50"
+					startcolor=".25 .8 1"
+					midcolor=".25 .8 1"
+					endcolor="0 0 0"
+					midcolorpos="0.2"
+					size="6"
+					startscale="2"
+					minendscale="5"
+					maxendscale="8"
+					midsizepos=".2"
+					startalpha=".5"
+					midalpha=".5"
+					endalpha="0"
+					midalphapos=".6"
+				/>
+			</simpleemitter>
+
+
+
+			<simpleemitter
+				position="0 0 35"
+				spawnrate="10"
+				life="500"
+				particlelife="750"
+				angle="30"
+				material="/shared/effects/materials/smoke_particle.material"
+				inheritvelocity="0.05"
+				offsetsphere="25 25 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-50"
+					maxanglespeed="50"
+					startcolor=".2 .35 .5"
+					endcolor="0 0 0"
+					size="10"
+					startscale="2.5"
+					endscale="7.5"
+					midsizepos=".2"
+					startalpha=".5"
+					midalpha=".5"
+					endalpha="0"
+					midalphapos=".6"
+				/>
+			</simpleemitter>
+
+
+
+
+			<simpleemitter
+				position="0 0 30"
+				count="5"
+				spawnrate="100"
+				particlelife="250"
+				gravity="1.0"
+				speed="10.0"
+				drag="0.0"
+				acceleration="0.0"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+				offsetdirection="0 0 0"
+				offsetradial="0 0 0"
+				particledirectionalspace="local"
+				inheritvelocity="0"
+				offsetsphere="5 5 40"
+			>
+				<particle
+				>
+					<billboard
+						delay="250"
+						life="100"
+						material="/shared/effects/materials/flash_01.material"
+						lockup="1"
+						lockright="1"
+						pitch="90"
+						param=".012"
+						minsize="35"
+						maxsize="70"
+						directionalspace="local"
+						color=".1 .25 .5"
+					/>
+				</particle>
+			</simpleemitter>
+			
+			<simpleemitter
+				life="500"
+				position="0 0 15"
+				spawnrate="10"
+				minparticlelife="100"
+				maxparticlelife="500"
+				minspeed="0"
+				maxspeed="500"
+				drag="0.05"
+				angle="20"
+				offsetsphere="0 0 0"
+				depthbias="-60"
+				material="/shared/effects/materials/femme_lightning_01.material"
+			>
+				<particle
+					minangle="-70"
+					maxangle="70"
+					minanglespeed="-110"
+					maxanglespeed="110"
+					startcolor="0 .6 1"
+					endcolor="0"
+					size="8"
+					minendscale="5"
+					maxendscale="6"
+					endstickiness=".3"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				life="500"
+				position="0 0 0"
+				spawnrate="20"
+				minparticlelife="100"
+				maxparticlelife="500"
+				minspeed="0"
+				maxspeed="500"
+				drag="0.05"
+				angle="20"
+				offsetsphere="10 10 0"
+				depthbias="-60"
+				material="/shared/effects/materials/femme_lightning_01.material"
+			>
+				<particle
+					minangle="-70"
+					maxangle="70"
+					minanglespeed="-110"
+					maxanglespeed="110"
+					startcolor="0 .6 1"
+					endcolor="0"
+					size="8"
+					minendscale="5"
+					maxendscale="6"
+					endstickiness=".3"
+				/>
+			</simpleemitter>
+
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance1" particlesystem="system0" />
+		<spawnmodifier instance="instance0"/>
+		<waitfordeath  instance="instance0"/>
+		<waitfordeath  instance="instance1"/>
+	</thread>
+</effect>

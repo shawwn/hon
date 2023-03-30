@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Mumra_Ability2"
+
+	radius="200"
+	lifetime="-1"
+	arc="160"
+
+	targetselection="all"
+	targetscheme="enemy_units"
+	maximpactspertarget="1"
+	effecttype="Push"
+>
+	<onimpact>
+		<condition test="target_maxmana gt 0">
+			<condition test="not_hasstate State_Mumra_Ability2_Immunity">
+				<condition test="not_hasstate State_Mumra_Ability2_PushImmunity">
+					<applystate name="State_Mumra_Ability2_PushImmunity" duration="1100" />
+					<push force="250" duration="1100"/>
+					<playeffect effect="effects/impact.effect" source="target_entity" />
+					<damage amount="55,70,85,100" />
+					<takemana amount="55,70,85,100" />
+					<playanim name="push" target="proxy_entity" source="proxy_entity"/>
+					<playeffect effect="pet/effects/push.effect" target="target_entity" source="proxy_entity"/>
+					<delete target="this_entity" />
+				</condition>
+			</condition>
+		</condition>
+	</onimpact>
+</affector>

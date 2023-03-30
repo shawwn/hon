@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<modifier 
+			name="modifier0"
+			startcolor="3 1 1"
+			endcolor="1 1 1"
+			life="650"
+			delay="1300"
+		/>
+
+		<particlesystem name="system0" space="world">
+
+			<sound
+				delay="500"
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2500"
+				volume="1"
+				sample="../sounds/impact.wav"
+			/>
+		
+			<billboard						
+				bone="_bone_weaponattach"
+				material="/shared/effects/materials/whitedot.material"
+				position="0 0 5"
+				size="40"	
+				startcolor=".5 .2 .0"
+				midcolor=".5 .2 .0"					
+				endcolor="0"
+				depthbias="-45"
+				life="650"
+			/>
+		
+			<twopointtrailemitter
+			 	bone_a="_bone_weapon3"
+				bone_b="_bone_weapon2"
+				spawnrate="200"
+				particlelife="500"
+				texpostime="500"
+				texposscale="0.0"
+				texstretchscale="1.0"
+				material="/shared/effects/materials/swoosh_add.material"
+				subframepos="true"
+				life="500"
+			>
+	         		<particle
+					startcolor=".6 .0 .0"
+					midcolor=".5 .2 0"
+					endcolor="0 0 0" 
+				/>
+			</twopointtrailemitter>
+
+			<twopointtrailemitter
+			 	bone_a="_bone_weapon1"
+				bone_b="_bone_weapon2"
+				spawnrate="200"
+				particlelife="500"
+				texpostime="500"
+				texposscale="0.0"
+				texstretchscale="1.0"
+				material="/shared/effects/materials/swoosh_add.material"
+				subframepos="true"
+				life="500"
+			>
+	         		<particle
+					startcolor=".5 .2 "
+					midcolor=".6 .0 .0"
+					endcolor="0 0 0" 
+				/>
+			</twopointtrailemitter>
+			
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>
+      		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+	</thread>
+
+</effect>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="skeleton.max" file="model.model" type="K2" >
+<anim name="idle" clip="default_1.clip" fps="30" loop="true"/>
+<anim name="circle_1" clip="circle_1.clip" fps="30" loop="true"/>
+</model>

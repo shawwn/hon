@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<modifier 
+			name="modifier0"
+			alpha="0"
+		/>
+
+		<particlesystem name="system0" space="world" scale="1">
+
+			<!-- Randomized ground stuff -->
+
+			<simpleemitter
+				life="1500"
+				count="1"
+				spawnrate="1000"
+				offsetsphere="30 30 0"
+			>
+				<particle>
+
+					<model
+						mindelay="0"
+						maxdelay="150"
+						model="seaweed/model.mdf"
+						anim="idle"
+						minscale="2"
+						maxscale="2.8"
+						life="2000"
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".1"
+						position="0 0 0"
+						color=".3 .8 .7"
+						minyaw="0"
+						maxyaw="360"
+					>
+
+						<groundsprite
+							material="/shared/effects/materials/water_overlay.material"
+							minlife="1000"
+							maxlife="1250"
+							midsizepos=".05"
+							startsize="40"
+							endsize="75"
+							startcolor=".4"
+							midcolorcolor=".1 .3 .3"
+							midcolorpos=".1"
+							endcolor=".1 .25 .32"
+							minyaw="0"
+							maxyaw="360"
+							startalpha="0"
+							midalphapos=".1"
+							midalpha="1"
+							endalpha="0"
+							minscale=".3"
+							maxscale=".6"
+						/>	
+
+						<groundsprite
+							material="/shared/effects/materials/outsplash_blend2.material"
+							life="750"
+							midsizepos=".2"
+							startsize="20"
+							endsize="90"
+							color=".8"
+							minyaw="-20"
+							maxyaw="20"
+							startalpha="0"
+							midalphapos=".01"
+							midalpha="1"
+							endalpha="0"
+							minscale=".4"
+							maxscale=".7"
+							lockup="true"
+							lockright="1"
+						/>
+
+						<groundsprite
+							material="/shared/effects/materials/seeweed_ground.material"
+							minlife="1700"
+							maxlife="2000"
+							midsizepos=".05"
+							size="80"
+							color="1 .5 .25"
+							minyaw="0"
+							maxyaw="360"
+							startalpha="1"
+							midalpha="1"
+							endalpha="0"
+							minscale=".2"
+							maxscale=".6"	
+						/>
+
+						<simpleemitter
+							life="500"
+							particlelife="600"
+							spawnrate="12"
+							material="/shared/effects/materials/refract_ripples.material"
+							offsetsphere="15"
+							depthbias="-10"
+							timenudge="200"
+						>
+							<particle
+								minangle="0"
+								maxangle="360"
+								minanglespeed="-60"
+								maxanglespeed="60"
+								startsize="90"
+								endsize="185"
+								startalpha="0"
+								midalpha=".75"
+								endalpha="0"
+								startparam=".05"
+								endparam="0"
+								lockup="true"
+								lockright="1"
+								pitch="90"
+								minscale=".3"
+								maxscale=".6"
+							/>
+						</simpleemitter>
+				
+						<simpleemitter
+							count="20"
+							maxparticlelife="1000"
+							minparticlelife="500"
+							spawnrate="190"
+							minspeed="0"
+							maxspeed="2500"
+							gravity="15"
+							direction="0 0 1"
+							drag="0.1"
+							material="/shared/effects/materials/whitewater_02.material"
+							offsetsphere="20 20 5"
+							angle="45"
+							depthbias="-40"
+						>
+							<particle
+								minangle="0"
+								maxangle="360"
+								minanglespeed="-60"
+								maxanglespeed="60"
+								startsize="40"
+								endsize="115"
+								startcolor=".75"
+								midcolorpos=".2"
+								midcolor=".5"
+								endcolor="0"
+								startalpha="1"
+								midalpha="1"
+								endalpha="0"
+								minscale=".3"
+								maxscale=".6"					
+							/>
+						</simpleemitter>
+
+						<!-- Impact 750ms delay -->
+						<simpleemitter
+							mindelay="700"
+							maxdelay="850"
+							count="25"
+							maxparticlelife="1500"
+							minparticlelife="800"
+							spawnrate="290"
+							minspeed="0"
+							maxspeed="1500"
+							gravity="5"
+							direction="0 0 1"
+							drag="0.045"
+							material="/shared/effects/materials/whitewater_02.material"
+							offsetsphere="10 10 15"
+							minangle="10"
+							maxangle="25"
+							depthbias="-40"
+							position="0 0 30"
+						>
+							<particle
+								minangle="0"
+								maxangle="360"
+								minanglespeed="-60"
+								maxanglespeed="60"
+								startsize="40"
+								endsize="115"
+								startcolor=".3"
+								endcolor="0"
+								startalpha="1"
+								midalpha="1"
+								endalpha="0"
+								minscale=".3"
+								maxscale=".6"					
+							/>
+						</simpleemitter>
+
+						<billboard
+							delay="750"
+							life="500"
+							position="0 0 25"
+							material="/shared/effects/materials/whitedot.material"
+							startcolor=".5"
+							endcolor="0"
+							startsize="45"
+							endsize="85"
+							minscale=".8"
+							maxscale="1.1"
+						/>
+
+						<billboard
+							delay="750"
+							life="400"
+							position="0 0 25"
+							material="/shared/effects/materials/outsplash_blend.material"
+							color="0.4 0.74 0.74"
+							startalpha="0"
+							midalpha=".4"
+							endalpha="0"
+							startsize="45"
+							endsize="85"
+							minscale=".8"
+							maxscale="1.1"
+						/>
+
+						<billboard
+							delay="750"
+							life="400"
+							position="0 0 25"
+							material="/shared/effects/materials/refract_ripples.material"
+							startalpha="0"
+							midalpha="1"
+							endalpha="0"
+							startsize="75"
+							endsize="165"
+							minscale=".5"
+							maxscale="1.5"
+							startparam=".02"
+							endparam="0"
+							depthbias="-30"
+						/>
+					</model>
+				</particle>
+			</simpleemitter>
+			
+			<simpleemitter
+				life="1500"
+				mindelay="750"
+				maxdelay="1000"
+				count="1"
+				spawnrate="5000"
+				particlelife="2500"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+				offsetsphere="20 20 0"
+			>
+				<particle
+					turn="1"
+				>
+
+					<simpleemitter
+						count="10"
+						minparticlelife="350"
+						maxparticlelife="650"
+						spawnrate="60"
+						minspeed="1000"
+						maxspeed="1500"
+						gravity="10"
+						direction="0 0 1"
+						minangle="0"
+						maxangle="25"
+						drag=".005"
+						material="/shared/effects/materials/whitewater_02.material"
+						offsetsphere="10 10 125"
+						position="0 0 50"
+					>
+						<particle
+							minangle="0"
+							maxangle="360"
+							minanglespeed="-60"
+							maxanglespeed="60"
+							startsize="75"
+							endsize="100"
+							startcolor=".6"
+							endcolor="0"
+							startalpha="1"
+							midalpha="1"
+							endalpha="0"
+							startstickiness="0"
+							endstickiness=".4"
+						/>
+					</simpleemitter>
+
+					<simpleemitter
+						life="400"
+						spawnrate="6600"
+						gravity="10"
+						count="10"
+						speed="500"
+						drag=".01"
+						minangle="0"
+						maxangle="20"
+						minparticlelife="500"
+						maxparticlelife="750"
+						direction="0 0 1"
+						offsetsphere="10 10 35"
+						material="/shared/effects/materials/dust.material"
+					>
+						<particle
+							minangle="0"
+							maxangle="360"
+							minanglespeed="-80"
+							maxanglespeed="80"
+							startsize="40"
+							endsize="180"
+							color=".75 .9 1"
+							startalpha=".5"
+							endalpha="0"
+						/>
+					</simpleemitter>
+
+					<simpleemitter
+						life="400"
+						spawnrate="6600"
+						gravity="10"
+						count="20"
+						minspeed="150"
+						maxspeed="500"
+						drag=".01"
+						minangle="0"
+						maxangle="10"
+						minparticlelife="250"
+						maxparticlelife="750"
+						direction="0 0 1"
+						offsetsphere="10 10 35"
+						material="/shared/effects/materials/water_05.material"
+					>
+						<particle
+							minangle="0"
+							maxangle="360"
+							minanglespeed="-20"
+							maxanglespeed="20"
+							startsize="35"
+							endsize="125"
+							color="1"
+							startalpha=".5"
+							endalpha="0"
+						/>
+					</simpleemitter>
+
+					<simpleemitter
+						spawnrate="50"
+						count="15"
+						gravity="-25"
+						minspeed="250"
+						maxspeed="1000"
+						drag=".015"
+						minangle="0"
+						maxangle="20"
+						minparticlelife="250"
+						maxparticlelife="750"
+						direction="0 0 1"
+						offsetsphere="10 10 10"
+						material="/shared/effects/materials/wave.material"
+					>
+						<particle
+							startsize="50"
+							endsize="100"
+							startcolor="0"
+							midcolor=".2 .22 .24"
+							endcolor="0 0 0"
+							midcolorpos=".25"
+							minangle="0"
+							maxangle="180"
+						/>
+					</simpleemitter>
+
+					<simpleemitter
+						life="500"
+						spawnrate="10"
+						particlelife="1000"
+						gravity="5"
+						minspeed="150"
+						maxspeed="300"
+						direction="0 0 1"
+						angle="20"
+						offsetsphere="20 20 75"
+						material="/shared/effects/materials/refract_longsplash.material"
+					>
+						<particle
+							startalpha="0"
+							midalpha=".5"
+							endalpha="0"
+							minangle="0"
+							maxangle="360"
+							minanglespeed="-80"
+							maxanglespeed="80"
+							startsize="100"
+							endsize="110"
+							param=".1"
+							depthbias="-160"
+						/>
+					</simpleemitter>
+
+					<simpleemitter
+						offsetsphere="75 75 0"
+						spawnrate="500"
+						count="1"
+						minparticlelife="750"
+						maxparticlelife="1000"
+						acceleration="0"
+						position="0 0 150"
+						direction="0 0 0"
+						material="/shared/effects/materials/light_rays.material"
+					>
+						<particle
+							startcolor="0 .25 .4"
+							midcolor="0 0 0"
+							endcolor="0 0 0"
+							width="70"
+							startheight="750"
+							endheight="100"
+							anchor="1"
+							lockup="1"
+							lockright="false"
+						/>
+					</simpleemitter>
+
+					<simpleemitter
+						count="1"
+						spawnrate="5000"
+						particlelife="2000"
+						minangle="0"
+						maxangle="0"
+						direction="0 1 0"
+					>
+						<particle
+							turn="1"
+						>
+							<model
+								model="/heroes/moraxus/ability_01/effects/rocks/model.mdf"
+								anim="idle"
+								minscale=".2"
+								maxscale=".35"
+								life="2000"
+								startalpha="1"
+								endalpha="0"
+								position="0 0 0"
+								color="1 1 1"
+								minyaw="0"
+								maxyaw="180"
+							/>
+							
+						</particle>
+					</simpleemitter>
+
+				</particle>
+			</simpleemitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0" />
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+	</thread>
+
+</effect>

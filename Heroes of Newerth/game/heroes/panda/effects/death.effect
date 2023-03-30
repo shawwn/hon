@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<modifier
+			name="modifier0"
+			material="death_material.material"
+			color="1 1 1"
+			startalpha="1"
+			midalpha="0"
+			endalpha="0"
+			midalphapos=".1"
+			life="7500"
+		/>
+
+		<particlesystem name="system0" space="world" scale=".825">
+
+			<simpleemitter
+			delay="150"
+				position="0 0 100"
+				life="1500"
+				spawnrate="50"
+				drag=".001"
+				particlelife="1500"
+				gravity="0"
+				minspeed="25"
+				maxspeed="75"
+				direction="0 -1 0"
+				offsetsphere="50 50 50"
+				minangle="-40"
+				maxangle="40"
+				material="/shared/effects/materials/cherry_blossom.material"
+				inheritvelocity=".35"
+			>
+				<particle
+					startcolor="1 .85 .85"
+					endcolor="1 .85 .85"
+					startalpha="0"
+					midalpha=".5"
+					endalpha="0"
+					lockup="false"
+					lockright="false"
+					minscale="1"
+					maxscale="7"
+					minangle="-360"
+					maxangle="0"
+					minanglespeed="110"
+					maxanglespeed="-110"
+				/>
+			</simpleemitter>
+		
+			<simpleemitter
+				position="0 0 100"
+				life="1500"
+				startspawnrate="600"
+				endspawnrate="25"
+				drag=".001"
+				particlelife="1500"
+				gravity="-1"
+				minspeed="20"
+				maxspeed="120"
+				direction="-1 0 0"
+				offsetsphere="60 60 40"
+				minangle="-40"
+				maxangle="40"
+				material="/shared/effects/materials/cherry_blossom.material"
+				inheritvelocity=".35"
+			>
+				<particle
+					startcolor="1 .85 .85"
+					endcolor="1 .85 .85"
+					startalpha="0"
+					midalpha=".5"
+					endalpha="0"
+					midalphapos=".85"
+					lockup="false"
+					lockright="false"
+					minscale="1"
+					maxscale="7"
+					minangle="-360"
+					maxangle="0"
+					minanglespeed="110"
+					maxanglespeed="-110"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+			delay="150"
+				position="0 0 125"
+				life="1000"
+				count="100"
+				spawnrate="1000"
+				particlelife="1250"
+				gravity=".5"
+				minspeed="50"
+				maxspeed="150"
+				drag="0.1"
+				acceleration="0.0"
+				material="/shared/effects/materials/cherry_blossom.material"
+				offsetsphere="35 35 50"
+				direction="0 0 0"
+			>
+				<particle
+					startcolor="1 .85 .85"
+					endcolor="1 .85 .85"
+					startalpha="0"
+					midalpha=".5"
+					endalpha="0"
+					midalphapos=".25"
+					lockup="false"
+					lockright="false"
+					minscale="5"
+					maxscale="8"
+					minangle="-360"
+					maxangle="0"
+					minanglespeed="110"
+					maxanglespeed="-110"
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0"  particlesystem="system0" />	
+		<spawnmodifier instance="instance1" modifier="modifier0"/>  
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+	</thread>
+
+</effect>

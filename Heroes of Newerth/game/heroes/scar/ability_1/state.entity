@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Scar_Ability1"
+
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+	
+	movespeedmultiplier="0.5"
+	unitwalking="true"
+	
+	stealthtype="hero"
+	fadetime="500"
+	
+	effecttype="StatusStealth"
+>
+	<oninflict>
+		<forgetattacks />
+		<playeffect effect="effects/cast.effect" source="source_entity" />
+		<startfade />
+	</oninflict>
+	
+	<onattackimpact>
+		<expire />
+	</onattackimpact>
+	
+	<onactivatepreimpact>
+		<expire />
+	</onactivatepreimpact>
+
+	<onexpired>
+		<playeffect effect="effects/castback.effect" source="source_entity" />
+	</onexpired>
+	
+	<aura
+		gadget="Gadget_Scar_Ability1"
+		radius="0"
+		targetscheme="self"
+	/>
+	<modifier key="Scary" modpriority="1"
+		altavatar="true"
+		
+		passiveeffect="../alt/ability_1/effects/state.effect"
+	>
+	
+		<oninflict>
+			<forgetattacks />
+			<playeffect effect="../alt/ability_1/effects/cast.effect" source="source_entity" />
+			<startfade />
+		</oninflict>
+		
+		<onexpired>
+			<playeffect effect="../alt/ability_1/effects/castback.effect" source="source_entity" />
+		</onexpired>
+	</modifier>
+</state>

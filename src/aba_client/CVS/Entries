@@ -1,0 +1,20 @@
+/.cvsignore/1.1.2.2/Fri Jan 14 13:31:16 2011//Thon
+/SConscript/1.1.2.1/Wed Sep 22 22:15:27 2010//Thon
+/c_clientcommander.cpp/1.1.2.3/Mon Oct  4 19:11:52 2010//Thon
+/c_clientcommander.h/1.1.2.2/Mon Oct  4 15:12:21 2010//Thon
+/c_cliententity.cpp/1.1.2.1/Wed Sep 22 22:15:27 2010//Thon
+/c_cliententity.h/1.1.2.1/Wed Sep 22 22:15:27 2010//Thon
+/c_cliententitydirectory.cpp/1.1.2.1/Wed Sep 22 22:15:27 2010//Thon
+/c_cliententitydirectory.h/1.1.2.1/Wed Sep 22 22:15:27 2010//Thon
+/c_gameclient.cpp/1.1.2.5/Fri Oct  8 21:00:02 2010//Thon
+/c_gameclient.h/1.1.2.1/Wed Sep 22 22:15:27 2010//Thon
+/c_gameinterfacemanager.cpp/1.1.2.6/Fri Oct 15 01:18:21 2010//Thon
+/c_gameinterfacemanager.h/1.1.2.3/Fri Oct 15 01:18:21 2010//Thon
+/game_client.def/1.1.2.1/Wed Sep 22 22:15:27 2010//Thon
+/game_client.vcproj/1.1.2.1/Wed Sep 22 22:15:28 2010//Thon
+/game_client_actions.cpp/1.1.2.3/Mon Oct  4 19:11:52 2010//Thon
+/game_client_commands.cpp/1.1.2.1/Wed Sep 22 22:15:28 2010//Thon
+/game_client_common.cpp/1.1.2.1/Wed Sep 22 22:15:28 2010//Thon
+/game_client_common.h/1.1.2.1/Wed Sep 22 22:15:28 2010//Thon
+/game_client_main.cpp/1.1.2.1/Wed Sep 22 22:15:28 2010//Thon
+D

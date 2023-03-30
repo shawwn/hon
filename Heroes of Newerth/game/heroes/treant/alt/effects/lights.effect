@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="1" deferred="true">
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="2.25">
+			
+			<template name="red">
+				<billboard
+					bone="{bone}"
+					life="2000"
+					expirelife="300"
+					loop="true"
+					material="/shared/effects/materials/whitedot.material"
+					startcolor=".75 0 0"
+					midcolor=".35 0 0"
+					endcolor="0 0 0"
+					midcolorpos=".25"
+					size="18"
+					depthbias="0"
+					position="0 0 0"
+				/>
+			</template>
+
+			<instance name="red" bone="_bone_red1" />
+			<instance name="red" bone="_bone_red2" />
+			<instance name="red" bone="_bone_red3" />
+			<instance name="red" bone="_bone_red4" />
+			<instance name="red" bone="_bone_red5" />
+			<instance name="red" bone="_bone_red6" />
+			<instance name="red" bone="_bone_red7" />
+			<instance name="red" bone="_bone_red8" />
+			
+			<template name="green">
+				<billboard
+					bone="{bone}"
+					life="1500"
+					expirelife="300"
+					loop="true"
+					material="/shared/effects/materials/whitedot.material"
+					startcolor="0 .75 0"
+					midcolor="0 .35 0"
+					endcolor="0 0 0"
+					midcolorpos=".25"
+					size="18"
+					depthbias="0"
+					position="0 0 0"
+				/>
+			</template>
+
+			<instance name="green" bone="_bone_green1" />
+			<instance name="green" bone="_bone_green2" />
+			<instance name="green" bone="_bone_green3" />
+			<instance name="green" bone="_bone_green4" />
+			<instance name="green" bone="_bone_green5" />
+			
+			<template name="blue">
+				<billboard
+					bone="{bone}"
+					life="1000"
+					expirelife="300"
+					loop="true"
+					material="/shared/effects/materials/whitedot.material"
+					startcolor="0 .1 1"
+					midcolor="0 .1 .5"
+					endcolor="0 0 0"
+					midcolorpos=".25"
+					size="18"
+					depthbias="0"
+					position="0 0 0"
+				/>
+			</template>
+
+			<instance name="blue" bone="_bone_blue1" />
+			<instance name="blue" bone="_bone_blue2" />
+			<instance name="blue" bone="_bone_blue3" />
+			<instance name="blue" bone="_bone_blue4" />
+			<instance name="blue" bone="_bone_blue5" />
+			<instance name="blue" bone="_bone_blue6" />
+			<instance name="blue" bone="_bone_blue7" />
+			<instance name="blue" bone="_bone_blue8" />
+			<instance name="blue" bone="_bone_blue9" />
+			<instance name="blue" bone="_bone_blue10" />
+			<instance name="blue" bone="_bone_blue11" />
+			<instance name="blue" bone="_bone_blue12" />
+			
+			<template name="yellow">
+				<billboard
+					bone="{bone}"
+					life="2500"
+					expirelife="300"
+					loop="true"
+					material="/shared/effects/materials/whitedot.material"
+					startcolor=".5 .5 .25"
+					midcolor=".25 .25 .1"
+					endcolor="0 0 0"
+					midcolorpos=".25"
+					size="18"
+					depthbias="0"
+					position="0 0 0"
+				/>
+			</template>
+
+			<instance name="yellow" bone="_bone_yellow1" />
+			<instance name="yellow" bone="_bone_yellow2" />
+			<instance name="yellow" bone="_bone_yellow3" />
+			<instance name="yellow" bone="_bone_yellow4" />
+			<instance name="yellow" bone="_bone_yellow5" />
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>  
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" /> 
+	</thread>
+
+</effect>

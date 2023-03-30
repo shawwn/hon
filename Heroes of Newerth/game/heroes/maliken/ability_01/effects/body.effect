@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+	
+		<particlesystem name="system0" space="world" scale=".85">
+
+			<twopointtrailemitter
+				bone_a="_bone_weapon1"
+				bone_b="_bone_weaponattach"
+				spawnrate="100"
+				particlelife="800"
+				texpostime="800"
+			 	texposscale="0.0"
+			 	texstretchscale=".5"
+				subframepose="1"
+				material="/shared/effects/materials/soul_trail.material"
+			>
+				<particle startalpha="1.0" endalpha="0.0" color=".3 .3 .3" />
+			</twopointtrailemitter>
+
+			<twopointtrailemitter
+				bone_a="_bone_weapon2"
+				bone_b="_bone_weapon3"
+				spawnrate="100"
+				particlelife="800"
+				texpostime="800"
+			 	texposscale="0.0"
+			 	texstretchscale=".5"
+				subframepose="1"
+				material="/shared/effects/materials/soul_trail.material"
+			>
+				<particle startalpha="1.0" endalpha="0.0" color=".3 .3 .3" />
+			</twopointtrailemitter>
+
+			<billboard
+				bone="Box01"
+				alpha="1"
+				param="0.04"
+				size="320"
+				material="/shared/effects/materials/refract_bubble.material"
+			/>
+
+			<billboard
+				expirelife="300"
+				bone="Box01"
+				startcolor=".5 .5 .5"
+				endcolor="0"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="1.0"
+				midalphapos="0.25"
+				size="164"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+
+			<billboard
+				bone="Box01"
+				color=".1 .1 .1"
+				size="420"
+				material="/shared/effects/materials/corona_07.material"
+				lockup="1"
+				pitch="90"
+			/>
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pet
+	name="Pet_Tempest_Ability2"
+
+	icon="/heroes/tempest/ability_02/icon.tga"
+	portrait="/heroes/tempest/ability_02/icon.tga"
+
+	model="model.mdf"
+	skin=""
+	
+	passiveeffect="effects/body.effect"
+	spawneffect="effects/spawn.effect"
+	respawneffect=""
+	deatheffect=""
+	selectsound=""
+	orderconfirmedsound=""
+	
+	preglobalscale="0.9"
+	modelscale="1.0,1.25,1.65,1.8"
+	effectscale="0.6,.7,.775,.85"
+	boundsheight="96"
+	boundsradius="24"
+	selectionradius="50"
+	targetoffset="0 0 55"
+
+	movespeed="250,250,260,260"
+	turnrate="450"
+	turnsmoothing="0.05"
+
+	maxhealth="200,225,225,275"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0"
+
+	armor="2,3,4,5"
+	magicarmor="17"
+
+	cancarryitems="false"
+	inventory0="Ability_Elemental1"
+	inventory1=""
+	inventory2=""
+	inventory3=""
+
+	attackduration="1170"
+
+	attackactiontime="300"
+
+	attackcooldown="1500"
+	attackdamagemin="16,24,34,43"
+	attackdamagemax="24,32,42,51"
+	attacknumanims="2"
+	attackoffset="0 35 100"
+	attackprojectile="Projectile_Elemental_Attack"
+	attackrange="450"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="effects/impact.effect"
+	attacktype="ranged"
+	combattype="Melee"
+
+	aggrorange="800"
+	sightrangeday="1200"
+	sightrangenight="800"
+	
+	goldbountymin="32"
+	goldbountymax="46"
+	experiencebounty="6"
+	
+	lifetime="35000"
+
+	unittype="summoned"
+	
+	corpsetime="2000"
+	corpsefadetime="10000"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+>
+</pet>

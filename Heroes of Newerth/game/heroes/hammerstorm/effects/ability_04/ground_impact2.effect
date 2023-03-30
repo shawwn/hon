@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="ability_01_impact" persistent="1">
+	<definitions>
+	
+	
+
+			
+		
+			<billboard
+				name="refract"
+				life="200"
+				color="1.0 1.0 1.0"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="0.0"
+				midalphapos="0.75"
+				startparam=".5"
+				endparam="0.0"
+				startsize="88"
+				endsize="168"
+				depthbias="-100"
+				position="0 0 0"
+				material="/shared/effects/materials/refract_ring.material"
+				lockup="true"
+				pitch="90"				
+			/>		
+
+			<billboard
+				name="ring"
+				life="200"
+				startcolor="1.0 1.0 0"
+				midcolor="1.0 0.5 0.0"
+				endcolor="0 0 0"
+			
+			
+				startparam=".5"
+				endparam="0.0"
+				startsize="58"
+				endsize="108"
+				depthbias="-100"
+				position="0 0 0"
+				material="/shared/effects/materials/stomp_01.material"
+				lockup="true"
+				pitch="90"				
+			/>	
+		
+			<simpleemitter
+				name="smoke"
+				spawnrate="1500"			
+				count="10"
+				particlelife="2000"			
+				gravity="0"
+				speed="25"
+				drag="0"
+				acceleration="0"
+				position="0 0 0"
+				timenudge="-100"
+				material="/shared/effects/materials/smoke_particle.material"
+				offsetsphere="5 5 1"
+				minangle="0"
+				maxangle="360"
+				direction="0 0 1"
+				offsetdirection="0 0 0"
+				offsetradial="20 20 0"
+				
+			>
+
+
+				<particle 
+					minangle="0"
+					maxangle="0"
+					minanglespeed="50"
+					maxanglespeed="150"
+					color=".7 .65 .55"
+					
+					midcolorpos=".2"
+
+					startframe="0"
+					endframe="1"
+					startsize="44"
+					
+					endsize="55"
+					startalpha="0"
+					midalpha=".5"
+					endalpha="0"
+					midalphapos=".1"
+					startstickiness="0"
+					endstickiness="0"
+				/>
+			</simpleemitter>		
+		
+		
+
+
+	
+	
+	
+	
+
+
+		<particlesystem name="system0" space="world" scale="1">
+
+			<simpleemitter
+				life="3000"
+				bone="_bone_weapon3"
+				count="1"
+				particlelife="3000"			
+				gravity="0"
+				speed="0"
+				drag="0"
+				acceleration="0"
+				position="0 0 0"
+				timenudge="-100"				
+				
+			>
+
+				<particle 
+					emitter0="groundsmash"
+					emitter1="refract"
+					emitter2="ring"
+					emitter3="smoke"					
+				/>
+			</simpleemitter>	
+
+			
+
+
+
+
+
+      </particlesystem>
+   </definitions>
+   <thread>
+   
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+	   <camerashake2 scale="11.0" radius="700" duration="200" frequency="22" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Legionnaire_Ability3"
+
+	radius="300"
+
+	
+	targetselection="all"
+	targetscheme="organic_enemy_units"
+	effecttype="Physical Splash"
+
+>
+	<onimpact>
+		<damage effecttype="Physical Splash" amount="100,125,150,175" />
+	</onimpact>
+</affector>

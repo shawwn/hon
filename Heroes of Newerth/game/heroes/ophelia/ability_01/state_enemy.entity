@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Ophelia_Ability1_Enemy"
+
+	
+	
+	icon="icon.tga"
+	
+	movespeedslow="0.08,0.16,0.24,0.32"
+	incomingdamagemultiplier="0.07,0.14,0.21,0.28"
+	
+	passiveeffect="projectile/state_enemy.effect"
+	effecttype="StatusDebuff"
+>
+
+	<onframe />
+	
+</state>

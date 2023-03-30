@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" name="orb">
+	<definitions>
+	
+
+
+		<particlesystem name="system0" space="world" scale="1.3">
+	
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume="1.0" 
+				fadein="0"
+				fadeout="0n"
+				soundloop="false"
+				sample="/heroes/chronos/ability_04/sounds/ability_04.wav"
+			/>	
+
+			<groundsprite			
+				life="300"
+				material="/shared/effects/materials/orb_ground.material"
+				startsize="100"
+				endsize="400"
+				position="-15 5 0"
+				color="1.0 1.0 1.0"
+				alpha="1"				
+			/>
+					
+			<groundsprite			
+				delay="300"
+				material="/shared/effects/materials/orb_ground.material"
+				size="400"				
+				position="-15 5 0"
+				color="1.0 1.0 1.0"
+				alpha="1"	
+					
+			/>
+<!--
+
+			<groundsprite	
+					
+					material="/shared/effects/materials/ground_corona_06.material"				
+					size="382"							
+		
+					startcolor="2 .2 0"
+					endcolor=".3 .3 .3"		
+					position="0 0 10"
+			/>	
+			<groundsprite	
+					life="200"
+					material="/shared/effects/materials/ground_orb.material"				
+					startsize="200"								
+					endsize="400"								
+					yawspeed="20"
+					startcolor="1 1 1"
+					endcolor=".3 .3 .3"				
+			/>
+	
+			
+			<groundsprite	
+					delay="200"
+					material="/shared/effects/materials/ground_orb.material"				
+					size="400"								
+					yawspeed="20"
+					color=".3 .3 .3"			
+			/>		
+			<groundsprite	
+					material="/shared/effects/materials/ground_orb.material"				
+					size="150"								
+					yawspeed="50"
+					color=".4 .4 .4"
+					position="0 160 0"
+			/>
+
+			<groundsprite	
+					material="/shared/effects/materials/ground_orb.material"				
+					size="150"								
+					yawspeed="50"
+					color=".4 .4 .4"
+					position="0 -160 0"
+			/>		
+
+			<groundsprite	
+					material="/shared/effects/materials/ground_orb.material"				
+					size="90"								
+					yawspeed="-100"
+					color=".4 .4 .4"
+					position="150 16 0"
+			/>	
+
+			<groundsprite	
+					material="/shared/effects/materials/ground_orb.material"				
+					size="90"								
+					yawspeed="100"
+					color=".4 .4 .4"
+					position="-150 -16 0"
+			/>	
+			-->		
+			<!--
+			<light
+							
+				minlife="40"
+				maxlife="200"
+				startcolor="0 0 0" 
+				midcolor="3 6 8"
+				endcolor="0 0 0" 
+				loop="1"
+				falloffstart="200"
+				falloffend="555"
+				position="0 0 50"	
+			/>-->
+			
+				
+
+			<model			
+				position="0 0 0"			
+				model="orb.mdf"
+				anim="idle"						
+				expirelife="150"
+				startscale="3"
+				endscale="0"
+			>
+			</model>
+				
+		
+		
+			<billboard
+				delay="000"
+				life="300"
+				color="1.0 1.0 1.0"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="0.0"
+				midalphapos="0.75"
+				startparam="0.5"
+				endparam=".0"
+				startsize="328"
+				endsize="2068"
+				depthbias="0"
+				position="0 0 20"
+				material="/shared/effects/materials/refract_ring.material"
+				lockup="true"
+				pitch="90"
+			/>	
+		
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	<!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

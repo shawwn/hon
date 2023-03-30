@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" deferred="true" useentityeffectscale="true">
+	<definitions>
+		
+		<particlesystem name="system0" space="world" scale=".225">
+		
+			<sound
+				soundloop="true"
+				fadein="100"
+				fadeout="200"
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".65"
+				sample="../sounds/state.wav"
+			/>
+
+			<trackeremitter
+				spawnrate="5"
+				bone="_bone_centerofchest"
+				owner="source"
+				targetbone="_bone_centerofchest"
+				targetowner="target"
+				tracktype="linear"
+				trackspeed="250"
+				drag="0"
+				particlelife="3000"
+				gravity="0"
+				speed="5000"
+				acceleration="0"
+			>
+				<particle>
+
+					<model
+						name="skeleton"
+						model="/shared/effects/models/side_to_side/model.mdf"
+						anim="idle"
+						pitch="0"
+						yaw="90"
+						scale="2"
+					>
+						<simpleemitter
+							bone="_bone_fx_01"
+							spawnrate="50"
+							particlelife="500"
+							gravity="-5"
+							speed="200"
+							drag=".1"
+							acceleration="0"
+							position="0 0 0"
+							material="/shared/effects/materials/mysticenergy.material"
+							offsetsphere="6 6 6"
+							minangle="0"
+							maxangle="360"
+						>
+							<particle 
+								minangle="0"
+								maxangle="0"
+								minanglespeed="0"
+								maxanglespeed="0"
+								startcolor="0 0 0"
+								midcolor="0 .75 0"
+								endcolor="0 0 0"
+								midcolorpos=".2"
+								startframe="0"
+								endframe="1"
+								startsize="75"
+								midsize="50"
+								endsize="5"
+								startalpha="0"
+								midalpha=".7"
+								endalpha="0"
+								midalphapos=".5"
+								turn="true"
+							/>
+						</simpleemitter>
+
+						<simpleemitter
+							bone="_bone_fx_01"
+							spawnrate="65"
+							minparticlelife="400"
+							maxparticlelife="600"
+							position="0 0 0"
+							material="/shared/effects/materials/smoke_particle.material"
+							offsetsphere="30 30 30"
+							direction="0 0 0"
+							inheritvelocity="0"
+						>
+							<particle 
+								minangle="-15"
+								maxangle="-15"
+								minanglespeed="0"
+								color=".1 .5 .1"
+								startsize="300"
+								midsize="250"
+								endsize="300"
+								midsizepos=".3"
+								startalpha=".2"
+								endalpha="0"
+								/>
+						</simpleemitter>
+
+					</model>
+
+					<model
+						bone="_bone_centerofchest"
+						name="skeleton"
+						model="/shared/effects/models/side_to_side/model.mdf"
+						anim="idle"
+						pitch="0"
+						yaw="270"
+						scale="1"
+					>
+					
+						<simpleemitter
+							depthbias="-55"
+							spawnrate="75"
+							particlelife="400"
+							offsetsphere="40"
+							angle="10"
+							speed="10"
+							material="/shared/effects/materials/mana_regen.material"
+						>
+							<particle
+								startcolor="0 .4 0"
+								endcolor="0"
+								startsize="120"
+								endsize="0"
+								maxangle="360"
+								minendscale="2"
+								maxendscale="4"
+							/>
+						</simpleemitter>
+
+						<simpleemitter
+							depthbias="-55"
+							spawnrate="45"
+							minparticlelife="1000"
+							maxparticlelife="1250"
+							offsetsphere="30"
+							angle="10"
+							speed="30"
+							material="/shared/effects/materials/phantom_smoke_03.material"
+						>
+							<particle
+								startcolor="0 1 0"
+								endcolor="0"
+								startsize="90"
+								endsize="145"
+								maxangle="360"
+								minendscale="2"
+								maxendscale="4"
+								endstickiness="0"
+							/>
+						</simpleemitter>
+
+						<simpleemitter
+							depthbias="-55"
+							spawnrate="45"
+							minparticlelife="750"
+							maxparticlelife="1250"
+							offsetsphere="50 50 50"
+							angle="10"
+							speed="30"
+							material="/shared/effects/materials/mysticenergy.material"
+						>
+							<particle
+								startcolor="0 .45 0"
+								endcolor="0"
+								startsize="50"
+								endsize="65"
+								maxangle="360"
+								minendscale="2"
+								maxendscale="4"
+								endstickiness="0"
+							/>
+						</simpleemitter>
+
+						<trailemitter
+							life="1000"
+							spawnrate="40"
+							particlelife="1000"
+							texpostime="1000"
+							texposscale="0"
+							texstretchscale=".4"
+							material="/shared/effects/materials/arrow_trail.material"
+							subframepos="true"
+							startparticlecolor="1 1 1"
+							midparticlecolor="1 1 1"
+							endparticlecolor="0 0 0"
+							midparticlecolorpos=".25"
+						>
+							<particle
+								startcolor="0 .45 0"
+								midcolor="0 .45 0"
+								endcolor="0 0 0"
+								startsize="10"
+								midsize="125"
+								endsize="30"
+								midsizepos="0.2"
+							/>
+						</trailemitter>
+						
+						<trailemitter
+							life="1000"
+							spawnrate="40"
+							particlelife="1000"
+							texpostime="1000"
+							texposscale="0"
+							texstretchscale=".4"
+							material="/shared/effects/materials/arrow_trail.material"
+							subframepos="true"
+							startparticlecolor="1 1 1"
+							midparticlecolor="1 1 1"
+							endparticlecolor="0 0 0"
+							midparticlecolorpos=".25"
+						>
+							<particle
+								startcolor="0 .45 0"
+								midcolor="0 .45 0"
+								endcolor="0 0 0"
+								startsize="10"
+								midsize="125"
+								endsize="30"
+								midsizepos="0.2"
+							/>
+						</trailemitter>
+						
+						<trailemitter
+							life="1000"
+							spawnrate="40"
+							particlelife="1000"
+							texpostime="1000"
+							texposscale="0"
+							texstretchscale=".4"
+							material="/shared/effects/materials/arrow_trail.material"
+							subframepos="true"
+							startparticlecolor="1 1 1"
+							midparticlecolor="1 1 1"
+							endparticlecolor="0 0 0"
+							midparticlecolorpos=".25"
+						>
+							<particle
+								startcolor="1 .8 .2"
+								midcolor="1 .8 .2"
+								endcolor="0 0 0"
+								startsize="10"
+								midsize="70"
+								endsize="30"
+								midsizepos="0.2"
+							/>
+						</trailemitter>
+
+						<simpleemitter
+							bone="_bone_fx_01"
+							spawnrate="10"
+							particlelife="800"
+							position="0 0 0"
+							material="/shared/effects/materials/refract_swell.material"
+							particledirectionalspace="local"
+							offsetdirection="0 0 0"
+							offsetradial="0"
+							param=".4"
+						>
+							<particle
+								minangle="0"
+								maxangle="180"
+								startsize="350"
+								endsize="700"
+								param="0.1"
+								startalpha="0"
+								midalpha=".25"
+								endalpha="0"
+								midalphapos=".5"
+								lockup="1"
+								lockright="1"
+								pitch="90"
+								yawspeed="180"
+							/>
+						</simpleemitter>
+
+					</model>
+				</particle>
+			</trackeremitter>
+
+			<simpleemitter
+				life="1000"
+				bone="_bone_centerofchest"
+				owner="source"
+				depthbias="-55"
+				spawnrate="20"
+				minparticlelife="1000"
+				maxparticlelife="1250"
+				offsetsphere="50 50 50"
+				angle="10"
+				speed="30"
+				material="/shared/effects/materials/mysticenergy.material"
+				loop="true"
+			>
+				<particle
+					startcolor=".75 .5 .4"
+					endcolor="0"
+					startsize="50"
+					endsize="100"
+					maxangle="360"
+					minendscale="2"
+					maxendscale="3"
+					endstickiness="0"
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+
+		<particlesystem name="system1" space="world" scale=".15">
+
+			<simpleemitter
+				life="1000"
+				bone="_bone_centerofchest"
+				owner="source"
+				depthbias="-55"
+				spawnrate="20"
+				minparticlelife="1000"
+				maxparticlelife="1250"
+				offsetsphere="50 50 50"
+				angle="10"
+				speed="30"
+				material="/shared/effects/materials/mysticenergy.material"
+				loop="true"
+			>
+				<particle
+					startcolor=".1 .4 .1"
+					endcolor="0"
+					startsize="75"
+					endsize="120"
+					maxangle="360"
+					minendscale="2"
+					maxendscale="3"
+					endstickiness="0"
+				/>
+			</simpleemitter>
+
+			<billboard
+				material="/shared/effects/materials/fresnel_blend.material"
+				bone="_bone_center"
+				owner="source"
+				expirelife="500"
+				startcolor=".1 .4 .1"
+				endcolor=".1 .4 .1"
+				startalpha=".5"
+				endalpha="0"
+				position="0 0 10"
+				size="500"
+				depthbias="-150"
+				pitchspeed="360"
+				lockup="true"
+				pitch="90"
+			/>
+			
+			<billboard
+				material="/shared/effects/materials/fresnel_blend.material"
+				bone="_bone_center"
+				owner="source"
+				expirelife="500"
+				startcolor=".1 .4 .1"
+				endcolor=".1 .4 .1"
+				startalpha=".5"
+				endalpha="0"
+				position="0 0 10"
+				size="500"
+				depthbias="-150"
+				pitchspeed="-360"
+				lockup="true"
+				pitch="-90"
+			/>
+
+			<billboard
+				material="/shared/effects/materials/fresnel_blend.material"
+				bone="_bone_center"
+				owner="source"
+				expirelife="500"
+				startcolor=".1 .4 .1"
+				endcolor=".1 .4 .1"
+				startalpha=".5"
+				endalpha="0"
+				position="0 0 10"
+				size="400"
+				depthbias="-150"
+				pitchspeed="360"
+				lockup="true"
+				pitch="90"
+			/>
+			
+			<billboard
+				material="/shared/effects/materials/fresnel_blend.material"
+				bone="_bone_center"
+				owner="source"
+				expirelife="500"
+				startcolor=".1 .4 .1"
+				endcolor=".1 .4 .1"
+				startalpha=".5"
+				endalpha="0"
+				position="0 0 10"
+				size="400"
+				depthbias="-150"
+				pitchspeed="-360"
+				lockup="true"
+				pitch="-90"
+			/>
+			
+		</particlesystem>
+		
+		<particlesystem name="system2" space="entity" scale=".35">
+			
+			<model
+				owner="source"
+				life="100"
+				parentmodel="true"
+				parentskeleton="true"
+				startcolor="0 0 0"
+				midcolor="0 .5 0"
+				endcolor="0 0 0"
+				startscale="1"
+				midscale="1.05"
+				endscale="1"
+				midscalepos=".4"
+				material="/shared/effects/materials/shell4.material"
+				startalpha="0"
+				endalpha="10"
+				loop="true"
+			/>
+			
+		</particlesystem>
+	  
+	  
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <spawnparticlesystem instance="instance1" particlesystem="system1" />
+      <spawnparticlesystem instance="instance2" particlesystem="system2" />
+      <waitfordeath instance="instance0" />
+      <waitfordeath instance="instance1" />
+      <waitfordeath instance="instance2" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

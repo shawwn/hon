@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_DiseasedRider"
+
+	team="Hellbourne"
+	icon="icon.tga"
+	portrait="icon.tga"
+	model="model.mdf"
+	skin=""
+	
+	passiveeffect="effects/body.effect"
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="sounds/voice/select_%.wav"
+	selectedflavorsound="sounds/voice/select_flavour_%.wav"
+	confirmmovesound="sounds/voice/move_%.wav"
+	confirmattacksound="sounds/voice/attack_%.wav"
+	nomanasound="sounds/voice/no_mana.wav"
+	cooldownsound="sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="sounds/voice/taunt_prior.wav"
+	tauntkillsound="sounds/voice/taunt_after.wav"
+	
+	infoheight="250"
+	preglobalscale="1.6"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="112"
+	boundsradius="24"
+	selectionradius="48"
+	targetoffset="0 0 64"
+
+	movespeed="305"
+	turnrate="450"
+	turnsmoothing="0.1"
+
+	maxhealth="150"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="-1.0"
+	magicarmor="5.5"
+
+	inventory0="Ability_DiseasedRider1"
+	inventory1="Ability_DiseasedRider2"
+	inventory2="Ability_DiseasedRider3"
+	inventory3="Ability_DiseasedRider4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8="Ability_Taunt"
+
+	attackduration="1000"
+	attackactiontime="460"
+	attackcooldown="1700"
+	attackdamagemin="24"
+	attackdamagemax="33"
+	attacknumanims="2"
+	attackoffset="0 120 90"
+	attackprojectile="Projectile_DiseasedRider_Attack"
+	attackrange="550"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect=""
+	attacktype="ranged"
+	combattype="Hero"
+
+	aggrorange="800"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+	
+	corpsetime="3300"
+	corpsefadetime="3000"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+
+	primaryattribute="Intelligence"
+	strength="18"
+	strengthperlevel="1.55"
+	agility="15"
+	agilityperlevel="1.8"
+	intelligence="18"
+	intelligenceperlevel="3.25"
+>
+	<recommendeditem name="Item_MinorTotem" />
+	<recommendeditem name="Item_RunesOfTheBlight" />
+	<recommendeditem name="Item_HealthPotion" />
+	<recommendeditem name="Item_HomecomingStone" />
+	
+	<recommendeditem name="Item_FlamingEye" />
+	<recommendeditem name="Item_Strength5" />
+	<recommendeditem name="Item_Intelligence5" />
+	<recommendeditem name="Item_Astrolabe" />
+	<recommendeditem name="Item_PlatedGreaves" />
+	<recommendeditem name="Item_HealthMana3" />
+	<recommendeditem name="Item_Intelligence7" />
+	<recommendeditem name="Item_BarrierIdol" />
+	<recommendeditem name="Item_Morph" />
+	
+	<!-- Staff of the master upgrade effect-->
+	<modifier key="ult_boost" modpriority="100"
+		passiveeffect="effects/boost.effect"
+	>
+	</modifier>
+</hero>

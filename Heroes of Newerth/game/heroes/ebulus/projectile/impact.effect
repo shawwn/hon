@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1.6">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2000"
+				volume="0.2" 
+				sample="/heroes/arachna/sounds/impact_%.wav"
+			/>
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2000"
+				volume="0.5" 
+				sample="/heroes/ebulus/sounds/impact_%.wav"
+			/>
+
+			<simpleemitter
+				spawnrate="150"
+				count="6"
+				bone="_bone_centerofchest"
+				particlelife="800"			
+				gravity="15"
+				minspeed="50"
+				maxspeed="200"
+				drag=".03"
+				material="/shared/effects/materials/goo.material"
+				offsetsphere="15"
+				minangle="160"
+				maxangle="160"
+				direction="0 0 -1"
+			>
+				<particle 
+					color=".3 .5 0"
+					startalpha="1"
+					endalpha="0"
+					midcolorpos=".2"
+					maxangle="360"
+					startsize="15"
+					endsize="70"
+					minanglespeed="-60"
+					maxanglespeed="60"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				spawnrate="150"
+				count="15"
+				bone="_bone_centerofchest"
+				particlelife="1000"			
+				gravity="15"
+				minspeed="50"
+				maxspeed="200"
+				drag=".02"
+				material="/shared/effects/materials/poison_09.material"
+				offsetsphere="15"
+				minangle="160"
+				maxangle="160"
+				direction="0 0 -1"
+			>
+				<particle 
+					startcolor=".5 1 1"
+					midcolor="1 1 1"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					minangle="0"
+					maxangle="360"
+					startsize="15"
+					endsize="70"
+					minanglespeed="-60"
+					maxanglespeed="60"
+				/>
+
+			</simpleemitter>
+
+ 		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

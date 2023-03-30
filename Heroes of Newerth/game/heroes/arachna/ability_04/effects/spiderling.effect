@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="">
+	<definitions>
+		<particlesystem name="system0" useentityscale="true" space="entity">
+		
+			<groundsprite
+				life="2000"
+				material="/shared/effects/materials/web_aura.material"
+				startsize="18"
+				midsize="24"
+				endsize="18"
+				color="0.5 0.5 .3"
+				loop="1"
+				yawspeed="0"
+			/>
+			
+			<groundsprite
+				life="2000"
+				material="/shared/effects/materials/web_aura.material"
+				startsize="24"
+				midsize="24"
+				endsize="24"
+				color="0.5 0.5 .3"
+				loop="1"
+				yawspeed="0"
+			/>
+
+		</particlesystem>
+	</definitions>
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<waitfordeath instance="instance0" />
+</thread>
+</effect>

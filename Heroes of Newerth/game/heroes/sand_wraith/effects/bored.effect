@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+	
+		<particlesystem name="system0" space="entity">
+			
+			<simpleemitter
+				bone="_bone_weapon3"
+				spawnrate="70"
+				particlelife="1300"
+				gravity="1"
+				material="/shared/effects/materials/pyroclast_02.material"
+				offsetsphere="1"
+				minangle="-180"
+				maxangle="180"
+				speed=".02"
+				directionalspace="global"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					anglespeed="20"
+					startsize="4"
+					endsize="8"
+					lockup="false"
+					lockright="false"
+					startcolor=".8 .7 .2"
+					midcolor=".8 .7 .2"
+					endcolor=".4 .4 .4"
+					midcolorpos=".15"
+					startalpha=".5"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".75"
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

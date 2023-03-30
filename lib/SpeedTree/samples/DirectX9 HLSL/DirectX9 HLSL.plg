@@ -1,0 +1,80 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: DirectX9 HLSL - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release VC 6.0/DirectX9.res" /d "NDEBUG" "C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\samples\DirectX9 HLSL\DirectX9.rc"" 
+Creating temporary file "C:\DOCUME~1\king\LOCALS~1\Temp\RSP9BC.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /I "..\Common Source\\" /I "..\Common Source\SpeedWind\\" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release VC 6.0/DirectX9 HLSL.pch" /YX /Fo"Release VC 6.0/" /Fd"Release VC 6.0/" /FD /c 
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\samples\DirectX9 HLSL\DirectXExample.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\samples\Common Source\Navigation.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\samples\DirectX9 HLSL\SpeedTreeForest.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\samples\DirectX9 HLSL\SpeedTreeForestDirectX9.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\samples\DirectX9 HLSL\SpeedTreeWrapper.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\samples\Common Source\SpeedWind\SpeedWind.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\samples\Common Source\SpeedWind\SpeedWindParser.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\samples\Common Source\Transform.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\samples\DirectX9 HLSL\d3dapp.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\samples\DirectX9 HLSL\d3denumeration.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\samples\DirectX9 HLSL\d3dsettings.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\samples\DirectX9 HLSL\d3dutil.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\samples\DirectX9 HLSL\dxutil.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\king\LOCALS~1\Temp\RSP9BC.tmp" 
+Creating temporary file "C:\DOCUME~1\king\LOCALS~1\Temp\RSP9BD.tmp" with contents
+[
+dsound.lib dinput8.lib dxerr9.lib d3dx9.lib d3d9.lib d3dxof.lib dxguid.lib winmm.lib comctl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib SpeedTreeRT.lib /nologo /subsystem:windows /incremental:no /pdb:"Release VC 6.0/SpeedTreeRT DirectX 9.0 HLSL.pdb" /machine:I386 /out:"..\..\bin\VC 6.0\Release\SpeedTreeRT DirectX 9.0 HLSL.exe" /libpath:"..\..\lib\VC 6.0\Release" 
+".\Release VC 6.0\DirectXExample.obj"
+".\Release VC 6.0\Navigation.obj"
+".\Release VC 6.0\SpeedTreeForest.obj"
+".\Release VC 6.0\SpeedTreeForestDirectX9.obj"
+".\Release VC 6.0\SpeedTreeWrapper.obj"
+".\Release VC 6.0\SpeedWind.obj"
+".\Release VC 6.0\SpeedWindParser.obj"
+".\Release VC 6.0\Transform.obj"
+".\Release VC 6.0\d3dapp.obj"
+".\Release VC 6.0\d3denumeration.obj"
+".\Release VC 6.0\d3dsettings.obj"
+".\Release VC 6.0\d3dutil.obj"
+".\Release VC 6.0\dxutil.obj"
+".\Release VC 6.0\DirectX9.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\king\LOCALS~1\Temp\RSP9BD.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+DirectXExample.cpp
+Navigation.cpp
+SpeedTreeForest.cpp
+C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\samples\DirectX9 HLSL\SpeedTreeForest.cpp(330) : error C2374: 'i' : redefinition; multiple initialization
+        C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\samples\DirectX9 HLSL\SpeedTreeForest.cpp(327) : see declaration of 'i'
+SpeedTreeForestDirectX9.cpp
+SpeedTreeWrapper.cpp
+SpeedWind.cpp
+Add up vector stuff here
+
+SpeedWindParser.cpp
+Transform.cpp
+d3dapp.cpp
+C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\samples\DirectX9 HLSL\d3dapp.cpp(814) : error C2065: 'ULongToHandle' : undeclared identifier
+d3denumeration.cpp
+d3dsettings.cpp
+C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\samples\DirectX9 HLSL\d3dsettings.cpp(274) : error C2664: 'DialogBoxParamA' : cannot convert parameter 4 from 'long (struct HWND__ *,unsigned int,unsigned int,long)' to 'int (__stdcall *)(struct HWND__ *,unsigned int,unsigned int,long)'
+        None of the functions with this name in scope match the target type
+C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\samples\DirectX9 HLSL\d3dsettings.cpp(496) : error C2065: 'ULongToPtr' : undeclared identifier
+C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\samples\DirectX9 HLSL\d3dsettings.cpp(667) : error C2065: 'UlongToPtr' : undeclared identifier
+d3dutil.cpp
+dxutil.cpp
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+SpeedTreeRT DirectX 9.0 HLSL.exe - 5 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

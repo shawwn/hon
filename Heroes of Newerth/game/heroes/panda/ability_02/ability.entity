@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Panda2"
+
+	icon="icon.tga"
+
+	anim="ability_2_leap"
+	casttime="650"
+	castactiontime="350"
+	casteffect=""
+	
+	statuseffecttooltip="State_Panda_Ability2_Slow"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_entity"
+	targetscheme="nonboss_organic_enemy_units"
+	casteffecttype="Physical"
+	
+	manacost="85"
+	cooldowntime="24000,22000,20000,18000"
+	range="350"
+	novoiceresponse="true"
+>
+	<onimpact >
+		<spawnprojectile name="Projectile_Panda_Ability2_Selfbind" source="source_entity" proxy="target_entity" target="target_entity" bind="source_entity" bindstate="State_Panda_Ability2_Selfbind" noresponse="true" />
+	</onimpact>
+	
+	<onframe>
+	</onframe>
+</ability>

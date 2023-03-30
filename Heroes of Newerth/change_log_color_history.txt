@@ -1,0 +1,3283 @@
+Welcome to Heroes of Newerth!
+
+*** For support, visit http://www.heroesofnewerth.com/
+
+*** Report any bugs via the website
+
+*** Discuss the game on the forums at http://forums.heroesofnewerth.com
+
+^970Version 2.0.6.1^*
+-------------
+- Fixed Helga Hammerstorm icon
+
+^970Version 2.0.6^*
+-------------
+^292-^* Added a new Alt Avatar for Gladiator: Adventure Gladiator
+^292-^* Added a new Alt Avatar for Hammerstorm: Helga Hammerstorm
+
+^292-^* Based on player feedback and data from the last month of matches significant improvements to the MM algorithm have been made which should result in matches being much more balanced
+^292-^* Groups waiting more than a few minutes in the queue should now find themselves being placed into a fair match much sooner than previously
+^717*^* This also includes groups with very high or very low MMR that were having to wait much longer than the average queue times
+
+^292-^* Added more icons and another bundle
+^292-^* Vote kick has been re-added to the game
+^717*^* A kick vote against someone can only be called once every 3 minutes
+^292-^* Concede now only requires 4/5 "Yes" votes after 30 minutes instead of normal 5/5
+^292-^* Fixed a bunch of console errors
+^292-^* Fixed an issue on the hero selection screen for the Hellbourne team
+^717*^* Part of the UI was overlapping the hero selected circle and causing issues
+^292-^* Can now click store item icons to view bundle/avatar/announcer preview windows
+^292-^* Add Romanian language to system bar language selection combobox
+^292-^* Tweak to progression interface to display 4-digit cumulative stats
+^292-^* Added a "Back" button [back to player stats] for match stats panel when clicking to view another player's stats for a particular match
+^292-^* Fixed the AFK kick vote to indicate that it is team only
+
+^292-^* Items in the shop now show their total cost by default
+^717*^* To see just the recipe cost, hold down control with the shop open
+^292-^* ^090Wards^* now have a 'Timer' bar above them that shows how much time is left at a glance
+^292-^* Fixed a bug where ^090Striders^* could get charges while on cooldown
+
+^292-^* Re-recorded ^079Gladiator's^* voice
+
+^970Version 2.0.5^*
+-------------
+^292-^* Added new Alt Avatar for Arachna, "Queen Arachna"
+^292-^* Added new Flags, Icons, and Bundles
+^292-^* Fixed up Chipper recommended items
+^292-^* "Ownage" now only plays on the fifth team kill streak, not all kills five or greater
+
+^292-^* Fixed weather effects stopping when joining a new game
+^292-^* Fixed Alt Avatars being selected during hero loading
+^292-^* Fixed a crash when someone selected an invalid Alt Avatar
+^292-^* The Wards stat is now Wards Places instead of Wards Bought
+
+^090Striders^*
+^292-^* Now begins to lose charges (and consequently, speed) when you are within 900 units of a visible enemy hero
+^717*^* The max number of charges is lowered by 1 for every 100 units closer you are to an enemy hero
+
+^079Dampeer^*
+^292-^* Fixed some abilities playing through fog
+^292-^* No longer invulnerable when charging at someone
+
+^079Legionnaire^*
+^292-^* Fixed the no damage charge bug
+
+^079Keeper of the Forest^*
+^292-^* Stealth is now removed when the attack completes, not when it starts
+
+^970Version 2.0.4.2^*
+-------------
+^292-^* Fixed the chest present box
+^292-^* Merry Christmas! :)
+
+^970Version 2.0.4.1^*
+-------------
+^292-^* Fixed an issue with recent matches in the stats page
+
+^970Version 2.0.4^*
+-------------
+^292-^* Added a new Hero, ^079Dampeer^*
+^292-^* Added a new Alt Avatar for ^079Dampeer^* in the store: ^079Vacation Dampeer^*!
+^292-^* Added a new Alt Avatar for ^079Flint Beastwood^* in the store: ^079Captain Flint^*!
+
+^292-^* Added new account icons to the Store
+^292-^* Added more flags upon request to the store
+^292-^* Added new Icons for the minimap
+
+^292-^* Added a new "Terror" overhead icon for When you are feared
+^292-^* Improved feedback in Matchmaking for leavers
+^717*^* This now tells you how many games you need to play to be a non-leaver
+^292-^* Romanian string table update
+^292-^* Fixed crash if you used the mousewheel over a playerlist in a chat channel without clicking, and then hit Up
+^292-^* Fixed a drawSelectedPath crash
+^292-^* Fixed any attempts to auto-follow into matchmaking games
+^292-^* Fix to prevent alt avatars from being selected during hero loading
+^292-^* Fixed Neutrals aggro and added a ZZz effect over their heads when they are asleep
+
+^292-^* Added ^090Spellshards^* as recommended items to some heroes
+^292-^* Fixed ^090Geometer's Bane^* to correctly remove the "Attack this hero!" indicator when used
+
+^292-^* Fixed ^079Maliken's^* weird textures with sword mode on
+^292-^* Fixed ^079Legionnaire's^* ^256Charge^* so it doesn't cancel when you use it on someone on the edge of fog
+^292-^* Fixed ^079Rampage's^* ^256Charge^* so it doesn't cancel when you use it on someone on the edge of fog
+^292-^* Fixed ^079Night Hound's^* ^256Pounce^* so it always does the bonus damage
+^292-^* Fixed up the weird interactions with ^079Pharaoh^* mummy and other heroes. You could get pushed and pulled from weird angles and this fixes that
+^717*^* Also makes the circle around him of mummies slightly more circular
+^292-^* Fixed ^079Bubbles'^* and ^079Gladiator's^* abilities with timers so they reset to 0 correctly if you use the ability early
+^292-^* Fixed ^079Soul Reaper's^* ^256Judgment^*, it was hitting siege units before
+
+^970Version 2.0.3^*
+-------------
+^292-^* Added more Winter/Christmas stuff, including a new courier and three free new Alt Avatars in the store!
+
+^292-^* Maliken, Keeper of the Forest, and Deadwood now have alt avatars in the store that cost 0 coins. Merry Christmas!
+^292-^* Fixed some matchmaking bugs
+^292-^* Fixed some UI bugs with the minimap and RAP
+^717*^* This should fix the FPS issues players have been having
+^292-^* Added some new icons and country flags that were missing
+^292-^* Fixed gold report's GPM calculations (this the popup you get when you hover over your gold)
+^292-^* Fixed Ophelia's targeting with Judgment
+^292-^* Fixed Nymphora and her ultimate on Grimm's
+^292-^* Fixed a few spots on Caldavar you could get perma stuck
+^292-^* Fixed Pollywog's alt shooting lightning from the wrong hand
+
+^970Version 2.0.2^*
+-------------
+^292-^* Fixing up a music track
+^292-^* Tweaked and fixed some UI issues
+
+^970Version 2.0.1^*
+-------------
+^292-^* Winter Maliken and Kongor!
+^292-^* Added snow and snow trees to Caldavar for Christmas
+^292-^* Editor Load Map division by 0 fix
+^292-^* Fixing Night Hound's Alt Avatar display name in the Vault
+^292-^* Nemesis/Payback now only count on direct kills, not assists
+^292-^* Hooked up "mystery hero" icon for blind picking in SD
+^292-^* Fixed music streaming when there is a Unicode character in the path
+^292-^* Fixed interaction with the alt-clicking buildings/heroes and Attack-Moving and other actions
+^292-^* Updated weather effects
+^292-^* Updated several effects and sounds
+
+^079Ophelia^*
+^292-^* Can no longer teleport herself back to base like lawls
+
+^079Slither^*
+^292-^* Wards will no longer be able to hovered over on the minimap
+
+^970Version 2.0.0.1^*
+-------------
+^292-^* Fixed public games list being empty
+^292-^* Cleaned up the 'First Time Purchase' window to clearly show the bonus
+^292-^* "/weather rain" should now always start the rain effect
+^292-^* After a match starts, the game music starts playing immediately after hero loading
+^292-^* Remove the "Voting/etc has moved" box when you hit F6
+^292-^* Fixing Blacksmith's Account Icon name
+^292-^* Fix for the unexpected interaction between pathing and holding Alt
+
+These changes were in 2.0.0, just were not in the changelog:
+
+^079Vindicator^*
+^292-^* Base strength increased from 17 to 20
+^292-^* Master's Incantation cooldown from 3/2/1/0 to 2/1/0/0
+
+^970Version 2.0.0^*
+-------------
+== ^970Team Matchmaking^* ==
+
+^292-^* Find matches faster! Boasting arranged-team or solo play, this innovative and intuitive feature increases the efficiency of game creation by automatically gathering player statistics from a variety of group sizes, formulating teams, then matching those teams in as fair a manner as possible. With the ability to customize game mode, region, and map preferences, as well as group up with players on or off your friends list, the new Matchmaking will not only make it much faster to find a game of HoN, but also maximize the fairness and quality of the match.
+^292-^* Playing Matchmaking rewards you with valuable Goblin Coins! Check out the new end-game scorescreen function after a Matchmaking game.
+^292-^* Matchmaking will be disabled initially, we'll enable it when we're ready to begin public testing on it this week. Once enabled, expect it to have cycles of going up and down as we gather data, iterate, improve the algorithms, and fix any bugs.
+
+== ^970Cosmetic Store^* ==
+
+^292-^* With goblin coin currency, which can be earned or bought, players can purchase in-game brag-worthy cosmetic upgrades. The micro-transaction based store, controlled by Merrick the goblin shopkeeper, lets players customize their experience without affecting game play or allowing the purchases to change the level of competition.
+
+^292-^* Cosmetic upgrades include:
+^717*^* Alternate hero avatars
+^717*^* Taunt
+^717*^* Account icons
+^717*^* Alternate announcer packs
+^717*^* Name color options.
+^717*^* Account Symbols
+
+
+== ^970New 3v3 Map: Grimm's Crossing^* ==
+
+^292-^* A new action-packed and exciting map that includes a two-way teleporter in the middle area, allowing for more innovative fighting strategies and tactics. Grimm's Crossing is a battlefield for the bloodthirsty. The terrain favors the cunning and aggressive, as hidden paths within the trees can provide a quick way to rout unsuspecting enemies. There is precious little territory to be contested over; battles are won and lost at frantic paces, often beginning and ending unexpectedly.
+
+^292-^* Features of the new map:
+^717*^* 2 lanes that are very close together
+^717*^* Only one set of towers outside of each base
+^717*^* Small, tightly packed map
+^717*^* Neutral creeps spawn only in the middle section of the map
+^717*^* No elevation at entrances into bases
+^717*^* 1 rune spawn location in the center
+^717*^* Towers' armor scales with number of players alive; Buildings have 100% of armor when all are alive, scaling to 0 armor when your entire team is dead. This is active if with both Casual and Normal mode on this map.
+^717*^* Twin teleporters for quick transit and fun surprises
+^717*^* It's a winter wonderland! Try the snow weather on this map!
+
+
+== ^970New Game Mode: Casual Mode^* ==
+
+^292-^* This entirely new mode of play will provide new HoN players and casual gamers with a more “fun,” less punishing way to learn and play HoN. Elements in Casual Mode speed up progression and increase rewards in ways that remain true to the game's core identity, delivering a version that can be embraced by new and veteran players alike.
+
+^292-^* Changes from Normal Mode to Casual Mode are as follows
+^717*^* Exp range from 1000 to 1300
+^717*^* Removed gold loss on death
+^717*^* Increased hero bounty
+^717*^*^717*^* Hero base gold bounty: from 200 to 300
+^717*^*^717*^* Hero gold bounty per level: from 5 to 10
+^717*^* First blood bonus: from 200 to 300
+^717*^* Gold bounty per streak: from 50 to 75
+^717*^* Hero assist gold totals 50% of kill amount, split between all assisters
+^717*^* Radius assist gold base: from 30 to 0
+^717*^* Radius assist gold per level: from 5 to 0
+^717*^* Respawn time per level from 4 seconds to 3 seconds
+^717*^* Denies no longer deny experience
+^717*^* Uphill miss chance removed
+^717*^* Creeps give 1.25x of average normal mode value, no gold fluctuation
+^717*^* Buildings give 1.5x of average normal mode value, no gold fluctuation
+^717*^* Towers give global experience when killed, even to dead people, (by tower level): 150,200,250,300
+^717*^* Tower last hit gold bounty: from 470,520,570,620 to 300,350,400,450
+^717*^* Tower Team gold bounty: from 200,240,280,320 to 300,350,400,450
+^717*^* The amount of experience required to reach the next level increases as the game goes on. This means that at the beginning, players level up a lot faster than in Normal Mode, but in the mid and late game they level up at about the same rate as in Normal Mode.
+^717*^* Buyback costs are at 1.75x normal mode values
+^717*^* Towers' armor scales with number of players alive; Buildings have 100% of armor when all are alive, scaling to 0 armor when your entire team is dead.
+
+
+== ^970New Interface Features^* ==
+
+^292-^* We have revamped the in-game interface to be more dynamic, informative, and efficient.
+
+^292-^* Enhancements include:
+^717*^* Advanced mini-map interaction. Try hovering over heroes, buildings, or wards!
+^717*^* Pull down tabs in the upper right for intuitive access to vote functions and game options
+^717*^* Graphic kill messages for feedback when you net a kill in the upper left.
+^717*^* A gold counter to see the breakdown of your gold earnings from different sources. Hover your mouse over your gold count to see the exact breakdown!
+^717*^* Experience range indicators to mark enemies within the experience gain range. You will notice a small purple diamond next a creep's health bar when you are in range and a purple diamond effect will play when they die if you got experience.
+^717*^* Context-sensitive pings to highlight the object and send out alert messages to allies. Try Alt+Clicking an ally, enemy, or building.
+^717*^* A hover-over inventory to allow for quicker inventory feedback on allies and enemies. Hover over an enemy to quickly see their inventory.
+
+
+== ^970BETA Map Editor^* ==
+
+^292-^* With the exact same tool that we used to make HoN, users can now create and edit maps for enhanced single-player experiences. Users who are inspired to create multi-player maps can submit their map designs to the HoN DREAM website for potential inclusion in HoN. Also, in conjunction with scripting manipulation, players can create their own custom modes.
+^292-^* This is still a BETA version of the Map Editor, and as such still has features to be added, polish to be done, and bugs to be fixed. Keep this in mind!
+^292-^* To open the editor, use the editor.bat file in your HoN directory or re-install the game and it will automatically add a shortcut to your start menu as well
+
+
+== ^970Weather Effects^* ==
+
+^292- ^*A storm has arrived on Newerth with HoN 2.0 and it shows! Change the weather of the map you are in at any time through the Options menu and feel free to sing in the rain.
+^292-^* Players can set their preferred weather effect in the interface options or with a chat command. Right now we support "Rain" and "Snow". The default is "Off".
+
+^292-^* Chat commands are as follows:
+^717*^* /weather
+^717*^* /weather None
+^717*^* /weather Rain
+^717*^* /weather Snow
+
+^292-^* We included a text file with instructions on how to make your own weather effects in the HoN directory
+
+
+== ^970New Item: Spellshards^* ==
+
+^292-^* It's time for the magic users of Newerth to show their true power! With Spellshards, they can pierce the defenses of the enemy and burn them to a crisp that much faster.
+^292-^* The wielder's spells ignore a portion of their enemy's magic armor, causing increased magic damage.
+^292-^* After obtaining this item, the recipe may be re-purchased to upgrade it. Can be upgraded two additional times.
+^292-^* Components: Great Arcana (1675) + Recipe (1000)
+
+^292-^* Stats:
+^717*^* 6 Intelligence
+^717*^* 17 Damage
+^717*^* 10 Attack Speed
+^717*^* 3/6/9% Cooldown Reduction
+^717*^* 75% Mana Regeneration
+^717*^* Causes any Magic damage you deal to ignore 2/4/6 of your target's Magic Armor. This effect can never cause their magic armor to go below 0.
+
+^292-^*[I] Note: The item "Trophy Belt" did not make it into this patch.[/I]
+
+
+== ^970Nemesis and Payback^* ==
+
+^292-^* Beat down an opponent hard enough and you will become their Nemesis! Be careful, though, for payback is sweet revenge.
+^292-^* A 'Nemesis' against an opponent is gained when you kill them 4 times in a row without them killing or assisting in a kill against you.
+^292-^* A 'Payback' is given when you kill or help kill your Nemesis.
+
+
+== ^970New Music^* ==
+
+^292-^* Newerth's citizens, every now and then, take the time away from the battlefield to learn new musical scores. They have brought us six new songs to encourage us in battle!
+
+^292-^* New songs:
+^717*^* The Missing Rune
+^717*^* Hope
+^717*^* From The Depths They Rose
+^717*^* The Chase
+^717*^* Overrun Lane
+^717*^* Kongor's Lair
+
+^292-^* Each map now has a custom music soundtrack that plays songs in a pre-determined order.
+
+^292-^* In addition, several music related bugs were fixed:
+^717*^* Fixed music looping
+^717*^* Fixed playlist looping
+^717*^* Fixed music fade-out/fade-in
+^717*^* When a music track is stopped, it defaults to fading out
+^717*^* Music is now streamed rather than loaded upfront. This fixes an issue where lower-end computers would randomly hitch when the music switched.
+^717*^* When a music track ends, its memory is now freed
+
+
+== ^970Other Features^* ==
+
+^292-^* BP bans increased from 3 to 4
+^292-^* Single draft now has blind pick, meaning you won't see the other team's hero picks during hero selection
+^292-^* Banning draft will now switch bans immediately
+^292-^* Mid-bar completely redone for HoN 2.0
+^292-^* Streak stats are no longer recorded for public games
+^292- ^*Fixes for Caldavar so the creeps won't start in tower range in bottom lane and the middle lane will be more even
+
+
+== ^970General^* ==
+
+^292-^* Fixed GPM calculations. Gold that wasn't counted in GPM before:
+^717*^* Passive
+^717*^* First blood bounty
+^717*^* Assists
+^717*^* Radius bounty
+^717*^* Was counting how much a player should have lost on death, rather than what he actually lost if he didn't have enough gold
+
+^292-^* Fixed a spot you can hit Kongor from outside of his pit
+^292-^* You can now also "buy all components" for items without components and it'll just buy the individual item.
+^292-^* Swapping the minimap to right side now also swaps the location of attack modifiers
+^292-^* Added sounds to the pause/unpause countdown
+^292-^* You can no longer transfer items from your stash onto units that can't carry items
+^292-^* Toggling mute on a player no longer /ignores them
+^292-^* Tweaked effects, voices, and animations of several heroes
+^292-^* A code tweak that will increase load time for computers with limited amount of virtual memory, but should help alleviate crashes due to running out of virtual memory (32 bit Vista and 7)
+^292-^* Gold will now max at 65535 instead of looping back to 0
+^292-^* Sped up ^090Frostwolf Skull^* projectile to 1500 (medium speed based on high and low ranges) 
+
+^292-^* Fixed up a lot of the stringtables
+^292-^* Fixed some divide by zero errors
+^292-^* Shrunk some giant textures
+^292-^* Custom Game renamed to Public Game
+^292-^* Fixed some map textures
+^292-^* Fixed follow coloring to update when first displayed
+^292-^* Fixed a crash when viewing match stats containing a null player slot
+^292-^* Added a unit voice delay slider to the options panel. Credit to Bangerz for the initial implementation.
+^292-^* Follow is now removed when removing buddy
+^292-^* Fixed model quality change crash
+^292-^* Fixed Tournament Mode not working on linux client
+^292-^* Replay_autoSkipPause cvar for auto skipping pauses in replays
+^292-^* Deleted un-used voice commands
+
+
+== ^970Bugfixes^* ==
+
+^292-^* Previously, if a ^090courier^* dropped an upgradeable item on you when you had a full inventory, including a recipe for that item, the recipe would be consumed but the item wouldn't upgrade. Fixed.
+^292-^* Fixed a ^079Bombardier^* ^256Boom Dust^* bug relating to casting it from long ranges resulting in quirky behavior
+^292-^* ^079Chipper^* ^256ult^* won't draw on the minimap anymore
+^292-^* ^079Fayde's^* ^256Burning Shadows^* now give small clearvision
+^292-^* ^079Legionnaire's^* ^256ult damage^* when he doesn't kill now correctly does Magic damage (was a script error)
+^292-^* ^079Pharaoh's^* ^256Wall of Mummies^* will now grab people correctly to the middle
+^292-^* ^079Tempest's^* ^256Glacial Blasts^* won't stun magic immune units or invulnerable units anymore
+^292-^* Fixed ^079Arachna's^* ^256ult^* still spawning if the target dies first
+^292-^* ^079Thunderbringer's^* ^256ult^* won't hit illusions anymore
+^292-^* ^079Vindicator's^* illusions won't steal int from him anymore and will get the +2 int popup so it's not obvious who the real one is
+^292-^* ^079Blacksmith^* can now hit himself with ^256Frenzy^* when it multicasts on another target
+^292-^* ^079Gladiator's^* ^256ult^* won't wonk out anymore if he casts it while frozen and can't turn
+^292-^* ^079Gauntlet's^* ^256fist^* won't wonk out anymore if he casts it while frozen and can't turn
+^292-^* Fixed the manacost of ^079Defiler's^* ^256Silence^* to match the tooltip correctly
+^292-^* Fixed ^090Thunderclaw^* and ^090Charged Hammer^* so they won't go off on denies
+^292-^* Added double activate to ^079Blood Hunter^* ^256Blood Crazy^*
+^292-^* Added double activate to ^079Succubus^* ^256Mesmerize^*
+^292-^* Made ^079Succubus^* ^256ult^* undispellable
+^292-^* Made ^090Tablet of Command^* unbind it's target
+^292-^* Warbeast's ^256Wolves^* won't take the craters they come out of with them anymore
+
+
+== ^970Neutrals^* ==
+
+^090-^* Neutrals now sleep at night
+^717*^* They have zero aggro range at night and normal aggro range in the day
+
+^079Minotaur^* Neutral Creep:
+- Fixed a damage/stun event to fix ^079Bubbles^* wasting ^256Take Cover^* autocast
+
+
+== ^970Heroes^* ==
+
+- Fixed some effects playing through fog:
+^717*^* ^079Gladiator^* ^256Pitfall^*
+^717*^* ^079Moraxus ^*^256Stomp^*
+^717*^* ^079Bubbles' ^*teleport-to-^256Shell-Surf^* "water splash"
+^717*^* ^079Bubbles'^* ^256Song of the Sea^*
+
+^079Balphagore^*
+^292-^* Fixed his illusions from eating creeps
+
+^079Chipper^*
+^292-^* Fixed his ^256ult^* from drawing on the minimap like silliness
+
+^079 Devourer^*
+^292-^* Fixed a damage/stun event to fix Bubbles wasting ^256Take Cover^* autocast
+
+^079 Doctor Repulsor^*
+^292-^* Fixed missing tooltip info
+
+^079Electrician^*
+^292-^* Fixed a damage/stun event to fix Bubbles wasting ^256Take Cover^* autocast
+
+^079Engineer^*
+^292-^* Turret now shoots twice as fast and the cap of number of hits removed.
+^717*^* Damage per bullet starts at 40 and is lowered by 10% for every bullet that hits you
+^717*^* The push starts at the same it was, but gets weaker the more you are hit
+^717*^* Snare is still max of 35% from 10 hits
+
+^079Gauntlet^*
+^292-^* Fixed a damage/stun event to fix Bubbles wasting ^256Take Cover^* autocast
+
+:glad:^079Gladiator^*
+^292-^* Fixed a damage/stun event to fix Bubbles wasting ^256Take Cover^* autocast
+^292-^* Added a glow to the whip
+
+^079Legionnaire^*
+^292-^* Fixed a typo in his ^256ult^* damage (was doing 300, should be 350) if you missed with it
+
+^079Maliken^*
+^292-^* Re-exported and cleaned up voice
+
+^079Moraxus^*
+^292-^* ^256Axes^* damage from 80/100/120/140 to 60/80/100/120
+
+^079Myrmidon^*
+^292-^* New sounds
+^292-^* Fixed infinite life ^256weed field^*
+^292-^* Fixed a bug that caused him to have a projectile with ^090Frostwolf Skull^* even in melee form
+^292-^* Fixed a permanent vision bug
+
+^079Nymphora^*
+^292-^* ^256Pod^* is now 250 AOE, 1 second delay, and 60/120/180/240 Damage/Heal. Used to be 325 AOE, 2.5 second delay, 90/180/270/360 Damage/Heal.
+
+^079Pebbles^*
+^292-^* Fixed a damage/stun event to fix Bubbles wasting ^256Take Cover^* autocast
+
+^079Sand Wraith^*
+^292-^* Fixed an issue with ^256Dissipate^* that let him get some long range damage
+^292-^* Fixed a bug with the ult that reset the cooldown to the max length incorrectly when ^256Mirage^* was used
+^292-^* Fixed the illusions incorrectly giving vision the whole duration of the ult instead of just while they are alive
+
+^079Soul Reaper^*
+^292-^* Fixed him getting mana from hero kills correctly
+
+^079Succubus^*
+^292-^* Fixed a damage/stun event to fix Bubbles wasting ^256Take Cover^* autocast
+^292-^* Fixed heroes ulted by her not doing their idle animation after it ends
+
+^079Tundra^*
+^292-^* Fixed his ^256charge^* and interaction with ^256Moraxus' Shield^*
+
+^079Wildsoul^*
+^292-^* Fixed a bug that caused him to have a projectile with ^090Frostwolf Skull^* even in melee form
+
+
+== ^970Console Commands / UI Commands^* ==
+
+ ^717*^* This section is mainly for modders
+
+^292-^* StopMusic(true) will now fade out the current music track
+^717*^* StopMusic() will still stop it instantly
+
+^292-^* New console command 'MusicInfo'
+^717*^* Displays the name of current track, length of current track, and position within current track
+
+^292-^* New console command 'MusicSeek'
+^717*^* Allows you to jump to a specific time index within the current music track
+^717*^* The argument can be in 'mm:ss' format, for example 01:30, or in seconds, for example 90
+^717*^* If the argument begins with '-' then it represents a time offset from the end of the track (for example -10 would seek to 10 seconds from the end of the current track)
+
+^292-^* New console command 'PlaylistStart'
+^717*^* Begins playing the specified tracks in order. Example: PlaylistStart music/track_01.mp3 music/track_02.mp3 music/track_03.mp3
+
+^292-^* New console command 'PlaylistClear'
+^717*^* Clears the current playlist
+
+^292-^* New console command 'PlaylistNext'
+^717*^* Plays the next track in the playlist
+^717*^*^717*^* Fades out the current music track and fades in the next music track
+
+^292-^* New console command 'PlaylistInfo'
+^717*^* Displays information about the current active playlist, including number of tracks, name of each track, and which track is currently active
+
+^970Version 1.0.20^*
+-------------
+^292-^* Added a new strength hero: ^079Moraxus^*
+^292-^* Delay before the other team can unpause lowered from 60s to 30s
+^292-^* Disabled voice responses for a lot of abilities that have custom sounds
+^292-^* New Immortal sound
+
+^090Puzzlebox^*
+^292-^* Spawn order changed so next unit tabs to Puzzlebox Wizard when Hero + summons grouped together
+^292-^* Puzzlebox Mauler's passives moved to slots 2/3/4 so that player can easily distinguish Wizard from Mauler
+^292-^* Fixed Puzzlebox Wizard's Manaburn incorrectly burning 275 instead of 225 at lvl 3
+^292-^* Manaburn popup is now above target instead of Wizard
+^292-^* Tooltips redone/fixed
+
+^970Version 1.0.19.1^*
+-------------
+^292-^* Removed label abuse
+
+^970Version 1.0.19^*
+-------------
+^292-^* Fixed ^079Arachna^*
+^292-^* Fixed ^079Bombardier's^* ^256Air Strike!^* not working with Staff of the Master
+^292-^* ^079Kraken^* Ultimate from 90/80/70 to 110/100/90 second cooldown
+^292-^* Reverted the change to ^079Sand Wraith^* due to a technical issue
+^292-^* ^090Bottle^* now loses ownership when it is dropped from a ^090Courier^* death
+
+^292-^* Missing from 1.0.18 changelog:
+^717*^* Tutorial re-voiced by Ms Pudding
+^717*^* ^090Tablet of Command^* recipe changed to include an ^090Apprentice's Robe^* instead of a ^090Major Totem^*. Now gives +16 int and 10 damage
+
+^970Version 1.0.18^*
+-------------
+
+== ^970General / Bugfixes^* ==
+
+^292-^* Removed Halloween effects
+^292-^* Fixed some water effect problems with ^079Rampage^*
+^292-^* Fixed ^079Nighthound's^* attackscheme when he is in cloud so it functions correctly.
+^292-^* Corrected ^079Valkyrie's^* ^256Javelin^* speed from 837 to 857.14
+^292-^* ^079Andromeda's^* ^256Void Rip^* will now disjoint her as well as her target on use
+^292-^* ^079Bubbles'^* ^256Take Cover^* will now properly trigger from invulnerable sources of damage
+^292-^* ^079Bubbles'^* ^256Kelp Field^* will now properly stun invulnerable units that move out of the radius (Magmus Lava Surge, for example)
+^292-^* Bugfix for ^079Ophelia's^* ^256Judgment^* so it unbinds the target when they are teleported
+^292-^* ^079Ophelia's^* ^256Judgment^* can no longer be cast on allied lane creeps
+^292-^* Fixed an old bug with ^079Ophelia^* that lets her perma-block a neutral creep spawn with illusions
+^292-^* ^079Wildsoul Bear's^* ^256Root^* will now correctly last 9 seconds on non-hero units
+^292-^* ^079Witch Slayer's^* ^256Power Drain^* will now instantly kill illusions on use
+^292-^* Fixed ^079Bombardier's^* ^256Boom Dust^* so it is correctly blocked by Null Stone
+^292-^* Correctly unbind the targets of ^079Nymphora's^* ^256Teleport^*
+^292-^* ^079Nymphora's^* ^256Teleport^* now picks the closest targets to her, not random ones
+^292-^* ^079Puppetmaster's^* ^256Puppet Show^* now silences as well (This is a bugfix for weird situations it can cause)
+^292-^* ^079Pharaoh's^* ^256Soul^* will again reveal around itself while in flight properly
+^292-^* ^079Pharaoh's^* ^256Wrath of the Pharaoh^* is now a Superior Magic instead of Superior Physical touch to fix some issues. No gameplay change.
+^292-^* Bugfix for ^079Kraken's^* ^256Charge^* warping people around
+^292-^* ^079Thunderbringer's^* ^256Bolt's^* reveal is now clearvision
+^292-^* Fix for ^079Pestilence's^* ^256Swarm^* so you can't lose vision on someone in odd situations
+^292-^* Fixed ^079Dark Lady's^* ^256Dark Blades^* so they silence Bubbles correctly when he has Autocast on
+^292-^* ^079Tundra's^* ^256Coeurl^* now has the correct backswing (from 800 to 1000)
+^292-^* Fixed ^079Tempest's^* ^256Glacial Blasts^* from doing 2x damage on the first blast
+^292-^* Fixed ^079Forsaken Archer's^* ^256Skeletons^* so they won't stand around like dorks if she is attacking from max range 
+^292-^* Fixed some effects from playing through the fog
+
+
+== ^970Items^* ==
+
+^292-^* Added ^090Courier^* sounds and some effects
+^292-^* ^090Mana Potion^*, ^090Health Potion^*, ^090Wards^*, and ^090Runes of the Blight^* now lose ownership when dropped from a courier death
+^717*^* This means that if you kill an enemy ^090Courier^* that is carrying wards, you can now use those wards as if you bought them
+
+^090Ring of Sorcery^*
+^292-^* Recipe lowered from 525 to 200
+
+^090Striders^*
+^292-^* They now lose charges if you are within 600 units of a visible enemy hero at the same rate they gained them. You begin to gain the charges back as soon as you run away from the enemy. 
+
+
+== ^970Heroes^* ==
+
+^079Accursed^*
+^292-^* ^256Fire Shield^* cast range from 350 to 450
+
+^079Armadon^*
+^292-^* Buff ^256Quills^* projectile flight speed from 900 to 2700
+
+^079Bombardier^*
+^292-^* ^256Boom Dust^* cast range reduced from 700 to 600
+^292-^* ^256Ultimate^* no longer has a long delay before the bombs drop
+^292-^* Pick sound corrected
+
+^079Blood Hunter^*
+^292-^* ^256Blood Crazy^* from unremovable debuff to removable on enemies, debuff is a "buff" on allies
+
+^079Chipper^*
+^292-^* When you hit someone who is Tar'd with a Rocket, it will put a stacking DoT on them for each Rocket that hits
+^717*^* DoT does 15/20/25/30 Magic Damage per second charge
+
+^079Flint Beastwood^*
+^292-^* ^256Flare^* DoT to smooth damage over the 2 seconds instead of 2 ticks
+
+^079Legionnaire^*
+^292-^* Terrifying ^256Charge^* cooldown from 30 static to 30/26/22/18
+
+^079Kraken^*
+^292-^* ^256sunami Charge^* touch radius from 60 to 80
+^292-^* ^256Splash^* cooldown from 8 secs to 11/10/9/8 seconds, damage type changed from magic to physical
+
+^079Sand Wraith^*
+^292-^* Any valid enemy target hit by the initial sand projectile will leave a sand trail behind them!
+
+^079Voodoo Jester^*
+^292-^* Manacost on ^256Mojo^* from 95/105/115/125 to 110/120/130/140
+
+^970Version 1.0.17^*
+-------------
+^292- ^*Added kill streaks, and other kill events to the player stats page
+^717* ^*This includes Smackdowns and Humiliations (The tracked Humiliation is not a failed attempt at a smackdown, but when you kill someone who taunted you)
+
+^292- ^*Touched up some effects on the main menu background
+^292- ^*Updated stringtables
+^292- ^*Updated Catman Leader effects when he stomps
+
+^090Tablet of Command^*
+^292- ^*Can no longer be used while immobilized
+
+^090Harkon's Blade^*
+^292- ^*Can be toggled while stunned
+
+^079Bombardier^*
+^292- ^*Tweaked sounds and effects slightly
+^292- ^*Added voice
+
+^079Deadwood^*
+^292- ^*Slow from ^256Willowmaker^* is now linear in how it decreases instead of down-up-down weirdness
+
+^079Flint Beastwood^*
+^292- ^*^256Flare^* now does DOT damage over 2 seconds (initial hit, 1 tick after first second, 1 tick after second second)
+
+^079Legionnaire^*
+^292- ^*^256Terrify^* is now properly applied in a cone in-front of him again
+
+^079Pharaoh^*
+^292- ^*Ult (with SOTM only) can now be toggled between targeting enemies only or enemies and allied heroes
+
+^970Version 1.0.16^*
+-------------
+^292- ^*Fix to quick stats
+^292- ^*Candles now fade to smaller versions when in a lobby so they don't block any buttons
+^292- ^*Fix to allow clan tags with a length greater than 3.
+
+^079Bombardier^*
+^292- ^*Added recommended items
+^292- ^*Fixed a hitch in bombardier's portrait animation
+^292- ^*Fixed ^256Boom Dust^* not crediting the damage to Bombardier correctly sometimes
+^292- ^*Fixed ^256Boom Dust^* so the graphics update correctly as you slowly apply charges to someone and they expire
+^292- ^*Fixed ^256Boom Dust^* exploding from DOTs when put on an ally
+
+^079Keeper of the Forest^*
+^292- ^*Updated ^256Root^* effect so it's less nonsense and more pumpkin
+
+^079Vindicator^*
+^292- ^*Fixed the aura not turning off when he dies
+
+^970Version 1.0.15^*
+-------------
+
+== ^970General^* ==
+
+^292- ^*^oHalloween on Newerth has arrived...^*
+
+^292- ^*Increased the number of hero slots on the picking screen.
+^292- ^*Quick stats favorite hero % will now display correctly for accounts with over 32,000 seconds played on that hero
+^292- ^*Added EM % to quickstats
+^292- ^*Fix for that infinite life infinite spawn simpleemitter particle on the background effect
+^292- ^*Fixed almost all of the tooltip bugs and errors thanks to ElementUser
+^292- ^*Removed the "All Heroes" option
+^717* ^*All games are now "All Heroes" by default
+^292- ^*The "selected" buff icons no longer incorrectly pop / blink
+^292- ^*Fixed Bloodlust gold reward from not being logged correctly
+^292- ^*Updated French stringtables for the tutorial, courtesy of QualQuek, Bass, Jelucyr, Tyr00, Neuroleptik.
+^292- ^*Normalized the building gold and Kongor kill gold
+^292- ^*Hid some states that should not have been shown
+
+
+== ^970Neutrals^* ==
+
+^292- ^*Added some new effects to the neutrals who have abilities
+
+^095Kongor^*
+
+^292- ^*^095Kongor^* now has a larger health bar
+^292- ^*^095Kongor^* now has 75% Magic reduction
+^292- ^*^095Kongor^* base armor lowered from 3.5 to 3
+^292- ^*^095Kongor^* attack range increased from 100 to 128
+^292- ^*Added effects and partial tweaks to his stomp
+
+
+== ^970Items^* ==
+
+^090Bottle^*
+^292- ^*Crow ferrying now refills to 2/3 instead of full
+
+^090Insanitarius^*
+^292- ^*Fixed it to be a proper sum of its part
+^717* ^*From 11 Damage to 12 Damage
+^717* ^*From 15 Attack Speed to 25 Attack Speed
+
+^090Logger's Hatchet^*
+^292- ^*No longer works on ^095Kongor^*
+
+^090Mana Battery^*
+^292- ^*AoE radius from 1600 to 1200
+^292- ^*Health gain from 12 to 10 per charge
+^292- ^*Cost from 210 to 200
+
+^090Power Supply^*
+^292- ^*AoE radius from 1600 to 1200
+^292- ^*Health gain from 15 to 10 per charge
+^292- ^*Cost from 290 to 240
+
+^090Ghost Marchers^*
+^292- ^*No longer let you move through Pollywog Priest's Voodoo Wards
+
+
+== ^970Heroes^* ==
+
+^292- ^*New Legion Int hero, ^079Bombardier^*
+^292- ^*Tagged a lot of hero abilities so they will only play the custom voice response instead of two overlapping ones
+^292- ^*Added new debuff states for ^079Swiftblade^*'s ^256Blade Frenzy^*, ^079Magmus^*' ^256Steam Bath^*, and ^079Tempest^*'s ^256Meteor^* so players know when they are taking damage and when they are not
+
+^079Andromeda^*
+^292- ^*Correctly hid her stunned state
+^292- ^*Base agility from 27 to 26
+^292- ^*Strength gain from 2.3 to 2.1
+^292- ^*^256Dimensional Link^* aura radius from 900 to 800
+^292- ^*Aurora AoE from 300 to 275, damage from 25/50/75/100 to 40/65/90/115
+
+^079Blood Hunter^*
+^292- ^*Fixed him gaining health from illusions
+
+^079Bubbles^*
+^292- ^*^256Shell Surf^* now disjoints
+
+^079Chipper^*
+^292- ^*^256Tar Toss^*
+^717* ^*Cooldown from 25/20/15/10 to 18/15/12/9
+^717* ^*Cast action time from 0.25 to 0
+^292- ^*^256Sawblade Showdown^*
+^717* ^*Initial damage increased from 100/200/300 to 200/300/400
+^717* ^*Fixed bug that placed a lingering DoT on enemies who ran through the saws quickly which artifically increased its damage
+^717* ^*Can not take the initial damage again for 2s after leaving the saws even if you re-enter them
+
+^079Corrupted Disciple^*
+^292- ^*No longer can get an infinite damage boost in certain situations
+
+^079Dark Lady^*
+^292- ^*^256Dark Blades'^* damage increase lowered from 50/70/90/110% to 50/60/70/80%
+^292- ^*^256Taint Soul^* cast range from 1200 to 800/900/1000/1100
+
+^079Deadwood^*
+^292- ^*Fixed up ^256Willowmaker^*'s tooltip to list duration of debuffs
+
+^079Devourer^*
+^292- ^*Maximum health gained from devouring from 100/150/200 to 75/125/175 per charge
+^292- ^*Fixed tooltip on ^256Devour^* to display correct duration of charges (7s per charge, incorrectly listed 10s)
+
+^079Electrician^*
+^292- ^*Cooldown on ^256Electric Shield^* from 2 secs to 0.5 secs
+^292- ^*^256Cleansing Shock^* SotM effect changed: instead of bouncing, it purges target and yourself at the same time
+^292- ^*Cleansed now loses its movespeed bonus smoothly over the whole duration
+^292- ^*Purge damage on summoned units is now pure instead of magical
+
+^079Fayde^*
+^292- ^*Fixed ^256Burning Shadows^* so it does not reveal enemies hit for a longer time than intended
+
+^079Flint Beastwood^*
+^292- ^*His ^256Flare^* effect will no longer play in the fog
+^292- ^*Fixing a bug causing him to say several different voice responses when using ^256Flare^*
+
+^079Gauntlet^*
+^292- ^*Fixed ^256Grapple^* hit detection while right next to someone
+
+^079Jereziah^*
+^292- ^*Removed the attack, replaced with a slow aura with 7/14/21/28% 300 radius AOE slow
+
+^079Kraken^*
+^292- ^*Projectile speed of ^256Torrent^* increased from 1000 to 1250
+
+^079Legionnaire^*
+^292- ^*^256Terrifying Charge^*
+^717* ^*Damage is now instant instead of through an attack
+^717* ^*The increased movespeed is kept for an additional second
+^292- ^*^256Decapitate^* range increased from 150 to 175
+
+^079Magmus^*
+^292- ^*Allied units will no longer 'block' the casting of ^256Lava Surge^*
+
+^079Panda^*
+^292- ^*Removed silence from ^256Flick^*, made it a stun instead
+
+^079Puppetmaster^*
+^292- ^*Increased casting speed of ^256Puppet Show^* and ^256Voodoo Puppet^*
+^717* ^*Cast action time lowered from 500ms to 300ms
+
+^079Soulstealer^*
+^292- ^*Will no longer gain charges if he dies and an attack is in midair that kills something
+
+^079Tundra^*
+^292- ^*Shiver is no longer Magic Immune, but is now Splash Immune
+
+^079Vindicator^*
+^292- ^*No longer applies his silence aura to enemy heroes he cannot see
+
+^079Voodoo^*
+^292- ^*^256Mojo^* can now be double activated to cast on self
+
+^090Patch notes^* ^256colored ^*by ^079Warchamp7^*
+
+^970Version 1.0.14^*
+-------------
+== ^970General^* ==
+
+^292- ^*Updated effects for the Vagabond neutrals
+^292- ^*Added Australia region filter to public games and create game interfaces
+^292- ^*Fixed Kongor slain sound anytime Kongor is killed (Only a problem on some systems)
+^292- ^*Quick Stats bad baseline fix.
+^292- ^*Fix quick stats always saying "Player's First Game" on Mac/Linux clients
+^292- ^*When a killstreak of 11 thru 14 is ended, the game now properly displays "X has ended Y's BLOODBATH streak", not "X has ended Y's IMMORTAL streak"
+^292- ^*Fix for the restore button disappearing on the replay scoreboard (the entire scoreboard was moving off screen) when a player is terminated
+
+
+== ^970Heroes^* ==
+
+^079Devourer
+^292- ^*Fixerd him not gaining strength from killing a hero. Logic failure.
+
+^079Nymphora
+^292- ^*Fixed not being able to teleport into your own base
+
+^079Kraken
+^292- ^*Fixed Hellbourne Main Building bounds so ^256Tsunami Charge^* doesn't just go through it
+^292- ^*Fixed ^256Tsunami Charge^* doing too much damage
+^292- ^*^256Tsunami Charge^* no longer brings Invulnerable units along with him
+^292- ^*^256Splash^* no longer propagates to illusions
+
+^079Succubus
+^292- ^*All non-cleave splash damage will now wake up someone slept by Mesmerize
+
+^970Version 1.0.13.1^*
+-------------
+^292- ^* Fix to Deadwood's stringtables
+
+^970Version 1.0.13^*
+-------------
+
+== ^970General^* ==
+
+^292- ^*Darkwood Vale is now a 4v4 map
+^292- ^*Kill streaks of 15 or more now play the "IMMORTAL!" announcer sound / message
+^292- ^*Taunt effect is now more intense and shiny for the first few seconds
+^292- ^*Heroes will now fully turn toward their final goal even when pathing into deeply blocked areas
+^292- ^*Max possible charges are now ~16,000 (Fixes several issues)
+^292- ^*Change default lag threshold to 1000 ms from 500 ms
+^292- ^*Clients no longer precache the voice responses of enemy heroes
+^292- ^*Muting a player will /ignore that player, and unmuting will /unignore.
+^292- ^*Fixes the white icons when someone randoms. The random now happens before the load, not after
+^292- ^*Updated visual effects for some neutrals' skills
+^292- ^*A teammate right clicking on a shop with the courier will open there own shop window now
+^292- ^*Added watery grass to show where fog is blocked yet you can run through
+^292- ^*Added global announcer sounds anytime Kongor is slain
+^292- ^*New Effects for minotaur, catman, and vagabond leader
+^292- ^*Update Frostburn tooltip to show max of 3 charges, instead of 5
+^292- ^*Updated effects and sounds for several items like Blood Chalice, Puzzlebox, and Striders
+^292- ^*Updated sounds to several heroes
+
+^292- ^*Fix some loading bar funkiness
+^292- ^*Fixed game hosts not being able to assign players from Hellbourne to Legion side when right clicking their portrait. Credit to Bangerz for this fix
+^292- ^*Fixed the quick stats
+
+^292- ^*K:D ratio now displays two digits after the decimal (for example K:D will be "1.58" instead of "1.6")
+^292- ^*Fixed client not handling valid clan name tags that are 4 chars long
+^292- ^*Fix for a few of the public game filters (mode, num players, map name, server type) to correctly save their settings. Credit to Bangerz for this fix
+^292- ^*Fixes for Full Game, Advanced Game Option, and Advanced Game Mode Filters
+^292- ^*Fixed a potential crash on the chat server that occured when a user was not able to be resolved during a clan invite
+^292- ^*Cleaned up some of the error messages to properly represent the error occuring
+
+
+== ^970Mod Integration^* ==
+
+^292- ^*Added UI_CMD's GetFPS() and GetPing()
+^292- ^*Hon now natively supports the "Mod Options" mod framework
+^292- ^*HoN now natively supports the "Movable Frames" mod framework
+^717* ^*Movable Frames now supports spectator mode
+^717* ^*Cleanly integrated Movable Frames with Mod Options, so that the user can customize his movable frames the same way he would customize any other mod
+^292- ^*The Replay Stats Button mod is now built in (Credit to BASH)
+^717* ^*Adds a button to the Local Replays list to view the match stats
+^292- ^*The Enhanced Buff Icons mod is now built in
+^292- ^*The Improved Spectator UI mod is now built in
+
+
+== ^970Neutrals^* ==
+
+^095Skeleton Boss^*
+^292- ^*Now a ranged unit. Damage re-adjusted
+^292- ^*His castable root now ministuns on impact
+
+^095Neutral Ogre^*
+^292- ^*Fixed the ^256Ice Shield^* so it doesn't apply when a melee hero casts at someone who has it on
+
+
+== ^970Items^* ==
+
+^090Blood Chalice^*
+^292- ^*Mana returned from 150 to 100
+^292- ^*Now stops all regeneration effects (bottle/health potion) when used
+
+^090Hellflower^*
+^292- ^*Added visual trail to silence state for some anti-juke fun
+
+^090Savage Mace^*
+^292- ^*The proc can no longer propagate to illusions
+
+^090Striders^*
+^292- ^*Will no longer go on cooldown just from looking at someone, you now have to attack
+^292- ^*^090Runes of the Blight^* can now be used and not put the item into cooldown
+^292- ^*Fixed a bug causing them not to reset cooldown when they are picked up or transferred
+
+^090Sword of the High^*
+^292- ^*Cost lowered from 3800 to 3400
+
+^090Tablet of Command^*
+^292- ^*Added to the "nohelp" list, so you can no longer push allies who do not allow you to
+^292- ^*Now applies a ministun on use to the target if it is an enemy
+^292- ^*The target is no longer silenced or perplexed, and can turn while being pushed
+
+^090Void Talisman^*
+^292- ^*Fixed so you cannot activate while magic immune (Can't waste it anymore)
+
+
+== ^970Heroes^* ==
+
+Fixed the following playing through fog:
+^717* ^*^079Magmus'^* ^256Steam Bath^*
+^717* ^*^079Wildsoul's^* ^256Bear Teleport^*
+^717* ^*^079Forsaken's^* ^256Volley^*
+^717* ^*^079Blacksmith's^* ^256Flaming Hammer^*
+^717* ^*^079Chronos'^* ^256Timeleap^*
+
+^079Balphagore^*
+^292- ^*Decreased str gain from 3.1 to 2.7
+^292- ^*^256Hell on Newerth^*
+^717* ^*Damage:
+^717* ^*(Lvl 1) 200/300/400 to 175/250/325
+^717* ^*(Lvl 2/3) 350,450,550 to 300/375/450
+^717* ^*Effects:
+^717* ^*(Lvl 2/3) ^256Hell Snare^* from 6 seconds to 4 seconds
+^717* ^*(Lvl 3) ^256Volatile Minions^* damage from 150/225/300 to 125/200/275
+^717* ^*When ultimate is in cd you no longer gain charges when enemies cast spells near you, instead you decrease the cd of your ultimate by 1 seconds per spell cast
+
+^079Blood Hunter^*
+^292- ^*Clarify ^256Blood Sense's^* tooltip to show that the aura increases by 1500 range per level
+^292- ^*^256Feast^* now leaves a lingering debuff for 1.5s when attacking a hero
+^717* ^*If they die in this time, ^079Blood Hunter^* still gets healed.
+
+^079Chipper^*
+^292- ^*Removed the 0.1s cooldown when a new charge is available for ^256Rockets^*
+
+^079Chronos^*
+^292- ^*^256Curse of Ages^* no longer works on buildings
+
+^079Devourer^*
+^292- ^*^090Striders^* will now be 'turned off' while ^256Decay^* is activated
+^292- ^*No longer gains strength from killing himself. :(
+^292- ^*His own illusions should no longer steal strength from him when someone dies nearby
+^292- ^*Lower strength gain to 1 per kill
+^292- ^*Ult ^256Decay^* increase range rebalanced from 50 per charge/level to 30/40/50 per charge/level
+
+^079Doctor Repulsor^*
+^292- ^*Starting int from 27 to 25
+^292- ^*Level 1 armor lowered from 5.1 to 4.1
+^292- ^*^256Magnetic Contraption^* still happens instantly, just a 400ms backswing. Can anim cancel the backswing like normal
+^292- ^*Attackspeed slow from ^256Electric Frenzy^* is now -50 instead of -50%
+^292- ^*Tree destruction radius on ^256Ludicrous Speed^* reduced from 100 to 75
+^292- ^*Can no longer use ^256Ludicrous Speed^* while immobilized
+
+^079Engineer^*
+^292- ^*Strength gain lowered from 2.3 to 2
+^292- ^*^256Turret^* duration from 6s to 5s
+^717* ^*Can only be hit a max of 5 times now (down from 8)
+^292- ^*Fixed a bug with ^256Energy Field^* that caused units to get owned if they went invulnerable while inside
+
+^079Flint Beastwood^*
+^292- ^*^256Money Shot's^* will now auto-cancel if the target is greater than 1800/2300/2800 units away from you while you're still channeling
+^292- ^*Crosshair on target should be visible to allies only
+
+^079Forsaken Archer^*
+^292- ^*Will no longer spawn skeletons after she dies from a midair arrow
+
+^079Gauntlet^*
+^292- ^*^256Enfeeble^* no longer has charges set to 0 when attacking creeps, only when hitting heroes
+^292- ^*^256Enfeeble^* duration incresed from 3s to 4s
+^292- ^*Now steals 1% of anything hit's total damage per charge and gives that damage to gauntlet for the duration of the slow/steal
+^292- ^*Max charges from 50 to 35
+^292- ^*Fixed his glove getting snagged on buildings when he threw it
+^292- ^*The glove throws no longer disable each other
+
+^079Glacius^*
+^292- ^*^256Tundra Blast^* slow from 5s static to 3/3.5/4/4.5s
+
+^079Kraken^*
+^292- ^*Reworked
+^292- ^*Ability 1: ^256Torrent^*
+^717* ^*Kraken conjures a surge of seawater, drowning an enemy. Deals damage, slows, and reduces armor
+^717* ^*Deals 110/160/210/260 Magic damage and applies Torrent to the target for 3 seconds
+^717* ^*Torrent: 30% Movement Slow, -2/-3/-4/-5 Armor
+^292- ^*Ability 2: ^256Tsunami Charge^*
+^717* ^*Kraken charges with great strength and speed, dragging the first enemy he encounters to sure doom. If Kraken collides with a tree, cliff, or structure, he will stop. If he is dragging someone at that time, they will get stunned.
+^717* ^*Charges 800 units in the targeted direction. Deals 60/90/120/150 Magic damage in a 200 AoE to all enemy units he charges past. On collision with an enemy hero, that hero is picked up and carried along with Kraken. When he hits a cliff, building, or tree he stops charging. If he is carrying an enemy hero, that hero is stunned for 1/1.33/1.66/2 seconds and takes an additional 50/100/150/200 Physical damage.
+^292- ^*Ability 3: ^256Splash^*
+^717* ^*Kraken releases a devastating slam that splits the seven seas, passively dealing additional splash damage on occasion.
+^717* ^*Deals 30/50/70/90 bonus Magical damage to targets in a 325 radius and an additional 30/50/70/90 Magical damage to targets in a 200 radius. Attacking will reduce cooldown by 1 second.
+^292- ^*Ability 4: ^256Release the Kraken!^*
+^717* ^*Every seafarer's nightmare is manifest as this hulk of watery flesh! Summons a Whirlpool that damages and pulls in enemies. If they reach the center, they are damaged and stuned by its lashing tentacles.
+^717* ^*After a delay of 1 second a 300 radius whirlpool spawns, dealing 40/50/70 Magic damage per second, slowing by 50%, and pulling units towards the center with a force of 100/125/150. Any enemies who reach the center are dealt 200/300/400 Magic damage and are stunned for 1.5/1.75/2 seconds. Lasts 3/4/5 seconds.
+
+^079Magmus^*
+^292- ^*^256Steam Bath^* now disjoints on use
+^292- ^*Fixed a bug causing you to not always go to exactly where you click when using ^256Lava Surge^*
+
+^079Panda^*
+^292- ^*Removed the 0.1s cooldown when a new charge is available for ^256Flurry^*
+
+^079Rampage^*
+^292- ^*Updated tooltips to show he gains slow resistance and reveals the target while charging
+^292- ^*Reveal time after ^256Charge^* is over lowered from 4s to 2s
+^292- ^*^256Horned Strike^* damage increased by 20 across all levels
+^292- ^*Damage from ult +5% at all levels
+^292- ^*When ^256Horned Strike^* procs, +15% movespeed for 1.5s
+^292- ^*^256Charge^* slow resistance added instead of treewalking
+^292- ^*Fixed a bug with the ult that caused the target to get endless unitwalking
+
+^079Sand Wraith^*
+^292- ^*^256Deserted^* range check for people being alone lowered from 400 to 300
+
+^079Slither^*
+^292- ^*Removed the 0.1s cooldown when a new charge is available for ^256Wards^*
+
+^079Scout^*
+^292- ^*A 500ms cooldown now starts when using ^256Vanish^* to avoid double activating it
+
+^079Succubus^*
+^292- ^*Anyone who breaks ^256Mesmerize^* and is slept themselves now are immune to damage for the first 1s
+
+^079Torturer^*
+^292- ^*Base strength from 16 to 18
+
+^079Tundra^*
+^292- ^*Fixed infinite buff bug with ^256Cold Shoulder^*
+^292- ^*The "push-away" from ^256Avalanche^* now correctly goes the full distance every time and will not push people who were behind Tundra
+
+^079Vindicator^*
+^292- ^*^079Vindicator^* illusions can no longer steal intelligence
+^292- ^*^256Global Silence^* is now dispellable
+
+^079Voodoo Jester^*
+^292- ^*Fixed the bug causing ^256Acid Cocktail^* to occasionally split into two
+^292- ^*Sped up ^256Acid Cocktail^* from 750 to 800 initial and 450 to 600 for the bounce
+^292- ^*Fixed his tooltips to clarify that his ^256Acid Cocktail^* do no damage to heroes
+
+^079Witch Slayer^*
+^292- ^*Can now only cast ^256Power Drain^* on units with mana
+
+^970Version 1.0.12.1^*
+-------------
+^292- ^*Fix for trial accounts
+
+^970Version 1.0.12^*
+-------------
+^292- ^*Fixed invisible heroes
+^292- ^*Fixed a server crash when moving a flying unit
+
+^970Version 1.0.11^*
+-------------
+== ^970Report Abusive Behavior^* ==
+
+^292- ^*Form fixed
+^292- ^*Griefing category added (please be sure to describe the situation carefully before submitting)
+
+== ^970Hero Resource Unloading^* ==
+
+^292- ^*Mainly some memory management optimizations. If you frequently crash after playing multiple games in a row, this should help
+^292- ^*Please report any issues or crashes on the forums
+
+== ^970General^* ==
+
+^292- ^*Player Controlled minions are now deniable
+^292- ^*Improved chat server stability
+^292- ^*Fixed an issue where players were able to invite other players to  their clan even if the targetted player was already in a clan
+^292- ^*Game lobby now displays more stats about players when you hover over the stats button next to their character portrait
+^292- ^*Fixed an exploit where players could set d_drawAreaAffectors to true, and they could see the effect of Madman's stalk in action while he was invisible. This cvar will only work on practice games or replays from now on
+^292- ^*Fixed drag selection of flying units (Tundra Bird or Courier). Trying to select the bird should no longer cause epic levels of rage.
+^292- ^*Spectators (and players in replays) can now view the shop
+^292- ^*Fixed shop error messages not showing up when shopping from the main shop panel
+^292- ^*Fixed spectator gold/min inaccuracies when players sell items
+^292- ^*Little fix for the tiny icons in spectator mode
+
+
+== ^970Items^* ==
+
+^090Blood Chalice^*
+^292- ^*Cooldown increased from 25 to 35
+
+
+== ^970Heroes^* ==
+
+^079Armadon^*
+^292- ^*Fixed a bug with ^256Spine Burst^* doing too much damage
+
+^079Chronos^*
+^292- ^*Agi Steal from ^256Curse of Ages^* removed
+
+^079Devourer^*
+^292- ^*Fixed a bug that made heroes unbind from projectiles well after he Hooked them
+
+^079Engineer^*
+^292- ^*Range of ^256Keg^* lowered from 1000 to 800
+
+^079Nymphora^*
+^292- ^*Infoheight changed so the healthbar isn't on her face
+^292- ^*^256Grace of the Nymph^* now also increases the target's Movespeed by 25/50/75/100
+^292- ^*^256Zeal^* range lowered from 1200 to 900
+^292- ^*Speed of the ^256Zeal^* projectile lowered from 1100 to 1000
+
+^079Sand Wraith^*
+^292- ^*Fixed ^256Desert's Curse^* to follow correctly
+
+^079Vindicator^*
+^292- ^*^256Glyph of Silence^* can now silence people in the fog again
+^717* ^*This is a temp bugfix to when someone won't get silenced even if you can see them
+^717* ^*It is possible it will be changed back to vision-limited once the code bug is fixed
+
+^970Version 1.0.10^*
+-------------
+== ^970General^* ==
+
+^292- ^*Fixed Flint Beastwood's icon to show up in player stats properly
+^292- ^*Fixed the remaining issues related to watching a replay when skipping past the hero loading portion
+^292- ^*Fixed an issue where the "permanent keybind" feature for control groups was not allowing the camera to center when the control group key was double tapped
+^292- ^*Fixed the "Save Channel" button to work properly
+^292- ^*Fixed an issue with the display of player stats, win percent should once again be accurate
+^292- ^*Fixed advanced game mode filter and advanced game options filter on public game interface to correctly save values
+
+
+== ^970Items^* ==
+
+^090Stormspirit^*
+^292- ^*Using ^090Stormspirit^* on an enemy will now block item usage, for example it will disable a homecoming stone from being used
+^292- ^*Using ^090StormSpirit^* on an ally will no longer be dispellable
+
+^090Striders^*
+^292- ^*^090Striders^* will now go into cool down when channeling a spell
+^717* ^*They will stay in cool down for the duration of a channeled spell or item, meaning that if a player teleports to a lane with a home coming stone, they will have to wait 3 more seconds to get full speed from striders
+^292- ^*^090Striders^* will now remain in cool down while dead
+^292- ^*^090Striders^* will not longer be put into cool down as the result of dealing damage over time (DoT) damage on another player
+^717* ^*Casting the spell that deals DoT damage will still put them into cool down, but the lingering DoT will not keep the boots in cool down if the player has otherwise exited combat
+
+^090Puzzlebox^*
+^292- ^*Added more sound effects for spawn and ability usage
+
+
+== ^970Heroes^* ==
+
+^079Armadon^*
+^292- ^*Fixed an issue causing ^256Spine Burst^* to not always deal its damage
+
+^079Flint Beastwood^*
+^292- ^*Fixed base damage from 39-50 to 36-42
+^292- ^*Lowered base armor from 2.94 to 2
+^292- ^*Adjusted ^256Hollowpoint^* damage from 30/40/50/60 to 20/30/40/50
+^717* ^*Fixed tooltips to show corrrect % chance to proc
+^292- ^*Fixed an issue causing vision to never be lost on a target if Flint used his ult and had his mana drained during the channel time
+^292- ^*Aggro range for Flint Beastwood increases to 850 when Dead Eye is at max level
+^292- ^*Can no longer target Mechanical units with ^256Money Shot^*
+
+^079Sand Wraith^*
+^292- ^*Fixed an issue causing his ^256Desert's Curse^* to not properly track targets when an enemy hero is selected
+
+^079Succubus^*
+^292- ^*Fixed an issue preventing ^256Mesmerize^* from dealing its damage
+
+^970Version 1.0.9^*
+-------------
+== ^970General^* ==
+
+^292- ^*Greatly optimized client performance on all systems
+^292- ^*Optimized various interfaces to run more efficiently (9000% more efficient!)
+^292- ^*Fixed an issue causing F6 to re-set the position of the scoreboard
+^292- ^*Fixed various crashes that could occur during gameplay
+^292- ^*Fixed experience popups to off-set from gold popups, such that they do not overlap
+^292- ^*Added a new music track to Caldavar, entitled "Encounter at the River"
+^292- ^*Fixed in game match stats screen to display the correct XP/Min, such that it will not calculate time spent playing after reaching level 25
+^292- ^*Fixed a crash that could occur when exiting the game
+^292- ^*Fixed an issue causing FPS hitching when new music is loaded
+^292- ^*Added hero selection announcements for bubbles, chipper, doctor repulsor, gauntlet, and tundra
+^292- ^*Pre-match time for all game modes changed from 1 minute 15 seconds to 1 minute 30 seconds
+^292- ^*Fixed several interface crashes
+^292- ^*Fixed advanced game mode filter on public game interface to correctly save values.
+^292- ^*Fixed animations getting stuck when rewinding replays
+^292- ^*Fixed rewinding tree deaths in replays
+^292- ^*Fixed projectile orientations
+^292- ^*Fixed attacking buildings and towers without sight of that building or tower
+^292- ^*Fixed duration of deny animation glow
+
+^292- ^*During modes that use alternating pick (Banning Draft, Banning Pick, etc), once a player selects their hero it will instantly switch to the other team (rather than waiting the remaining time)
+^717* ^*Each player now has 40 seconds to select their hero, from 30
+^717* ^*Transition time between banning and picking is now 15 seconds, from 20
+^717* ^*The time after the hero picks has been reduced from 2 minutes to 45 seconds
+^292- ^*Hero selection time in all pick reduced from 2 minutes to 1 minute
+
+
+== ^970Mac Bug Fixes^* ==
+
+^292- ^*Fixed a crash in OS X when a user quits by closing the HoN window
+^292- ^*Limit AA to 4x on OS X client to avoid all white/black screens caused by higher settings
+
+
+== ^970Items^* ==
+
+New Item - ^090Striders^*
+^292- ^*New boots added to the Initiation shop
+^292- ^*^090Marchers^* + 300 (Recipe)
+^292- ^*50 Movespeed. No other bonuses.
+^292- ^*When out of combat for 6 seconds, increases movespeed by 100 over the next 2 seconds, for a total of +150 movement speed (including the base).
+^292- ^*Bonus movespeed is removed when the owner takes damage, casts a spell, attacks, or uses an item.
+^717* ^*Using Non-combat items such as ^090Wards^*, ^090Bottle^*, ^090Mana^*, or ^090Health Potions^* will not remove the bonus speed
+
+^090Blood Chalice^*
+^292- ^*Now requires a ^090Mark of the Novice^* (+3 int) and ^090Crushing Claws^* (+3 str) instead of a ^090Scarab^*, granting +3 Str/Int
+^292- ^*Grants 150 mana for 150 health. Mana is no longer lost after a duration
+^292- ^*If an enemy hero dies within 15 seconds and 700 AOE of the user, the user is healed for 150 as the chalice uses the enemy's spilt blood to pay the debt.
+^292- ^*Cooldown lowered from 35s to 25s
+
+^090Nullstone^*
+^292- ^*AOE abilities (Such as ^079Witch Slayer^*'s ^256Graveyard^* / ^079Pyromancer^*'s ^256Phoenix Wave^*) no longer proc ^090Nullstone^* when clicking directly on a target
+
+^090Savage Mace^*
+^292- ^*Illusions will no longer proc a ministun. They still can get the +100 damage.
+
+^090Stormspirit^*
+^292- ^*Now only 'stuns' allies, letting them queue up abilities. Enemies it is used on can not queue up abilities or items while cycloned.
+
+
+== ^970Heroes^* ==
+
+^292- ^*Updated many recommended items
+^292- ^*Reworked how many projectile-based abilities interact with eachother
+^717* ^*This fixes strange behavior when two skills that try to move a unit interact, such as a charging Kraken getting hooked by Devourer who gets tossed by Bebbles
+
+^079Flint Beastwood^*
+^292- ^*New Hellbourne Agi hero, based on DotA's Sniper
+^292- ^*Skills:
+^717* ^*^256Explosive Flare^* - Deals damage in an area immediately, then gives vision over that area and slows/reveals any enemies who come within the vicinity
+^717* ^*^256Hollowpoint Shells^* - Gives a chance that an auto-attack will deal bonus damage and apply a mini-stun
+^717* ^*^256Deadeye^* - Increases attack range
+^717* ^*^256Money Shot^* - Channels for a brief time then fires a massive shot, dealing high damage at a long range to a single target
+
+^079Chronos^*
+^292- ^*Damage from ^256Curse of Ages^* proc from 20/40/60/80 Magic to 15/30/45/60 Physical
+
+^079Doctor Repulsor^*
+^292- ^*Increased vision range on first skill to from 300 to 800
+^292- ^*Fixed an issue with sounds on the first skill where some super human players could hear high frequencies
+^292- ^*Radius of tree killing on ult lowered from 150 to 100
+^292- ^*No longer disarmed while using ult
+
+^079Engineer^*
+^292- ^*Turret is now killable, dies in 3 hits. Units can only get hit a maximum of 8 times, down from 10
+
+^079Forsaken Archer^*
+^292- ^*^256Crippling Volley^* range from awful/awful/decent/800 to 800 at all levels
+^292- ^*^256Crippling Volley^* immobilize time from 1.75/2/2.25/2.5 to 1/1.5/2/2.5
+^292- ^*^256Skeletons^* no longer apply the DoT
+
+^079Gladiator^*
+^292- ^*^256Flagellation^* will no longer deal double bonus damage to buildings
+^292- ^*The visual effect on ^256Call to Arms^* now matches the actual area
+^292- ^*Damage taken from ^256Call to Arms^* is now spread over 5/6/7 seconds instead of instant
+^292- ^*Increased speed of ^256Call to Arms^* from 650 to 750
+
+^079Nymphora^*
+^292- ^*^256Nymphora's Zeal^* damage from 55/90/130/160 to 50/85/120/155
+^292- ^*^256Nymphora's Zeal^* stun duration from 1/1.3/1.6/2 to 0.75/1/1.25/1.5
+
+^079Rampage^*
+^292- ^*Can now target and affect Magic Immune heroes with all of his abilities
+
+^079Slither^*
+^292- ^*^256Poison Spray^* range from 1000 at all levels to 600/725/850/1000
+
+^079Soulstealer^*
+^292- ^*Cast time for ^256Soul Burst^* increased from 1s to 1.4s
+
+^079Tundra^*
+^292- ^*Ranged pet attack cooldown from 1.5s to 1s
+^292- ^*^256Coldblooded^* replaced with ^256Cold Shoulder^*
+^717* ^*300,400,500,600 Range, 40 Manacost, 12s cooldown
+^717* ^*Last winter, ^079Tundra^* had two distant relatives teach him how to charge his enemies correctly, coating them in ice on contact. The ice makes them easier to hit, increasing everyone's attack speed against that target.
+^717* ^*On use, charges the target, dealing ^079Tundra^*'s Attack Damage on impact. Applies Cold Shoulder to them for 8 seconds.
+^717* ^*Cold Shoulder Effects: Increases attackspeed against this target by 15/30/45/60
+^717* ^*Attackspeed will linger for 2 seconds after changing targets
+^717* ^*The Brothers of cold send their regards...
+
+^079Vindicator^*
+^292- ^*Silence aura will no longer be disabled by skills like ^079Devourer^*'s hook, ^079Chronos^*' ult, ^079Pebbles^*' ^256Chuck^*, etc
+
+^970Version 1.0.8^*
+-------------
+^292- ^*Fixed Pause, Remake, and AFK votes
+^717* ^*Remake threshold bumped back to 70%, unless someone has been terminated, in which case it's 50%
+^292- ^*Cleaned up some interface errors
+
+^079Devourer^*
+^292- ^*^256Cadaver Armor^* strength gain lowered to 1.5 from 2
+^292- ^*^256Cadaver Armor^* Magic Armor back to 1,2,3,4
+^292- ^*Tweaks to the tweaks to ^256Devour^*
+^717* ^*Health gained from the buff is now added to current health pool. For example if devourer is at 100/1000 hp and uses his ult at level 6, he'll increase to 400/1300 hp
+^717* ^*Each charge now lasts 10 seconds. This means that for 8 seconds after using the ult devourer will be at stage 3/max buff, decreasing by 1 stage per second and wearing off completely at 10 seconds
+^717* ^*Damage per charge increased to 15/25/35
+
+^079Doctor Repulsor^*
+^292- ^*Fixed Teapots
+^292- ^*Added story
+^292- ^*Added recommended items
+^292- ^*Effects optimizations, fixing FPS lag created by his attacks
+^292- ^*Fix some gadgets showing up on the minimap
+^292- ^*^256Ludacrious Speed^* now disjoints properly
+^717* ^*Can no longer use this ability again while it is in flight
+
+^079Gladiator^*
+^292- ^*Fix the timing on his ^256Pitfall^* delay correctly.
+
+^079Nymph^*
+^292- ^*^256Zeal^* damage from 70,100,130,160 to 55,90,130,160
+
+^079Pebbles^*
+^292- ^*Fix ^256Chuck^* targetting. Nohelp now stops you from being thrown, not being thrown to
+
+^079Warbeast^*
+^292- ^*Updated recommended items
+
+^970Version 1.0.7^*
+-------------
+^970In-game^*
+
+^292- ^*Removed general kick vote
+^292- ^*Players who are marked as AFK are no longer auto-kicked, but instead can be vote-kicked via a team-only vote
+^292- ^*Changed AFK detection to include all areas of the map
+^292- ^*Remake time limit extended to 7.5 minutes
+^292- ^*Remake will now pass with a 70% majority vote, 50% if there is a leaver in that time
+^292- ^*Pause vote will now pass with a 70% majority
+^292- ^*Added a green "no help" button to the left of the teammate portraits that will toggle their ability to use certain abilities on your units:
+^717* ^*^079Andromeda^* - ^256Void Rip^*
+^717* ^*^079Blood Hunter^* - ^256Blood Crazy^*
+^717* ^*^079Nymphora^* - ^256Teleport^*
+^717* ^*^079Glacius^* - ^256Ice Imprisonment^*
+^717* ^*^079Ophelia^* - ^256Ophelia's Judgement^*
+^717* ^*^079Tempest^* - ^256Elemental^*
+^717* ^*^079Succubus^* - ^256Mesmerize^*
+^717* ^*^079Pebbles^* - ^256Chuck^*
+^717* ^*^079Gladiator^* - ^256Showdown^*
+^717* ^*Item - ^090Stormspirit^*
+^292- ^*Updated shop icons to more clearly indicate their categories
+^292- ^*Updated several jukespots on Caldavar
+^292- ^*Added three new music tracks to the ingame music
+^292- ^*Fixed Hellbourne ranged super creeps having the same icon/portrait as Hellbourne melee super creeps
+^292- ^*If a player is Taunted and picks up an illusion rune, those illusions will have the taunted icon play above their heads
+^292- ^*Players attempting to spam game servers  with courier sharing messages will now have their sharing messages  blocked and subsequent requests they send will be ignored. Waiting a few  seconds before sending another share request will eventually remove  this block.
+^292- ^*Kongor
+^717* ^*Fixed so wards/gadgets can properly attack him
+^717* ^*Increased the size of the area in which you can attack without missing slightly
+
+^970Lobby/Pregame^*
+
+^292- ^*Added /pingall (and /pa) chat commands
+^717* ^*These commands display the ping for other  users in the game. This is intended primarily for settling ping  disputes in tournament matches. Note that another player's ping does not  affect the quality of the game for anyone other than that player
+^292- ^*Added "fs_disablemods" console command.  When set to true, HoN will ignore custom archives/files (mods) the next  time it starts up
+^717* ^*This is for players having difficulty using tournament mode. More support for this will be added in the future.
+^292- ^*Fixed an issue where players could  connect to the same game server  using the same account.  The server  will now disconnect the connecting  player with an appropriate message  if it finds two account_ids that are  the same.
+
+^970General^*
+
+^292- ^*Some updates to the Report a Player interface and functionality
+^292- ^*Fixed a crash relating to when a check for match stats fail
+^717* ^*This mainly fixes the issue some players had of crashing after a game ends, when they go back to the main menu
+^292- ^*Fixed a few other miscellaneous crashes
+^292- ^*"Invite to Clan" requests will no longer  notify players in "Invisible Mode" or in "/dnd" mode. If the player is  invisible, the player inviting them to a clan will receive a message  indicating they are offline. If they are in /dnd mode the player  inviting them will receive a message indicating they are in /dnd mode.
+^292- ^*"Add Buddy" requests will no longer work  on players in "/dnd" mode. Players inviting them will receive a message  indicating they are in /dnd mode.
+^292- ^*Un-checking the Options -> Interface  -> Friends -> Request checkbox will now disable the message  printed out to chat, in addition to the notification.
+^292-^* Non server game clients will now print additional system details towards the end of the  console.log
+
+^970Items^*
+
+^090Bottle^*
+^292- ^*Fixed an issue causing ^095Double Damage^* to only last 30 seconds when used. Now lasts the correct 45 seconds
+
+^090Codex^*
+^292- ^*Recipe from ^090Neophyte's Book^* + ^090Punch Dagger^* changed to ^090Neophyte's Book^* + 2x ^090Punch Dagger^*
+^292- ^*Recipe cost from 1350 to 1000
+^292- ^*Passive damage bonus from 9 to 18
+
+^090Insanitarius^*
+^292- ^*Cooldown from 10 secs to 7 secs
+
+^090Geometer's Bane^*
+^292- ^*Lower strength from 15 to 10
+^292- ^*Changed total agility to be equal to the sum of its parts, from 30 to 26
+
+^090Restoration Stone^*
+^292- ^*Will now refresh ^090Shrunken Head^*
+
+
+^970Heroes^*
+
+^292- ^*New Hellbourne Intelligence Hero: ^079Doctor Repulsor^*
+^717* ^*Based on Storm Spirit from DotA
+
+^079Accursed^*
+^292- ^*^256Fire Shield^* casting range from 400 to 350
+^292- ^*^256Fire Shield^* mana cost from 100/105/110/115 to 100/110/120/130
+^292- ^*^256Cauterize^* range from 750 to 700
+
+^079Arachna^*
+^292- ^*Strength gain lowered from 1.9 to 1.7
+^292- ^*^256Hardened Carapace^* duration reduced from 6s to 3s
+
+^079Balphagore^*
+^292- ^*Movement speed from 290 to 295
+^292- ^*^256Hell on Newerth^* will no longer reset to zero after dying with ^090Token of Life^*
+
+^079Blacksmith^*
+^292- ^*^256Flaming Hammer^*'s negative magic armor debuff is now in the tooltip properly
+^292- ^*^256Flaming Hammer^* projectile speed from 800 to 950
+
+^079Bubbles^*
+^292- ^*Base damage from 38-49 to 45-50
+^292- ^*^256Shell Surf^* will leave vision behind properly when teleported to that spot
+^292- ^*Increase speed of the shell from 600 to 850
+^717* ^*Will still only go a max of 1800 units, timer updated accordingly
+
+^079Devourer^*
+^292- ^*^256Cadaver Armor^* strength gain per hero kill from 0.9/1.2/1.5/1.8 to 2 at all levels
+^292- ^*^256Cadaver Armor^* strength gain per non-hero kill removed
+^292- ^*^256Cadaver Armor^* Magic Armor from 1/2/3/4 to 0/1.35/2.7/4.0
+^292- ^*^256Devour^* slightly reworked. While channeling ^256Devour^*, 1 charge is added each second, which last 10 seconds. Each charge:
+^717* ^*Increases the size of ^079Devourer^*
+^717* ^*Increases the radius of Decay by 50
+^717* ^*Adds 15/25/35 attack damage
+^717* ^*Max health increased by 100/150/200
+
+^079Engineer^*
+^292- ^*Increase the projectile speed of the turret's deployment by 50% and remove cast time
+^292- ^*Limit to the number of times someone can be hit by the Turret from 5 to 10
+^717* ^*Max snare of 35% is still achieved at 5 hits, slowing 7% per hit
+
+^079Fayde^*
+^292- ^*^256Cull^* cooldown from 10 secs to 11 secs
+^292- ^*^256Cull^* radius from 350 to 300
+^292- ^*^256Stance^* blocking from 50 damage to 40 damage
+^292- ^*^256Reflection^* no longer leaves behind an illusion
+^292- ^*^256Shadow Cripple^* now deals the first tick of damage immediately, second at end of 1, third at end of 2 (used to be end of 1, end of 2, end of 3)
+^292- ^*^256Shadow Cripple^* still reduces healing by 50% for 3 seconds
+
+^079Forsaken Archer^*
+^292- ^*Agility gain from +2.7 to +2.5
+^292- ^*^256Call of the Damned^* skeletons poison from 4/8/12/16 to 6/8/10/12
+
+^079Gauntlet^*
+^292- ^*^256Infernal Instability^* no longer snares
+^292- ^*^256Infernal Instability^* no longer applies its buff to ult or second ability
+^292- ^*^256Infernal Instability^* on use will give max charges on Enfeeble
+^292- ^*^256Grapple^* cast time lowered from 400ms to 200ms
+^292- ^*^256Grapple^* projectile speed increased from 1500 to 1600
+^292- ^*Max charges on ^256Enfeeble^* now scale from 30 to 20/25/30/35
+^292- ^*Duration of ^256Enfeeble^* slow decreased from 5 seconds to 3 seconds
+^292- ^*Max slow on an enemy by ^256Enfeeble^* is now 50%
+^292- ^*^256Gauntlet Blast^* damage reduced from 300/450/600 to 300/400/500
+^292- ^*^256Gauntlet Blast^* range from 600/700/800 to 600 at all levels
+^292- ^*^256Gauntlet Blast^* cooldown from 75/65/55 to 80/70/60
+^292- ^*^256Gauntlet Blast^* Consumed by Power AoE from 200 to 200/225/250
+
+^079Gladiator^*
+^292- ^*^256Call to Arms^* now uses the same cast animation as ^256Pitfall^*
+^292- ^*Removed the backswing time on his abilities
+^292- ^*Lowered the 'trigger time' from 2s to 1.6s on Pitfall
+^292- ^*^256Showdown^* now issues a stop command to whoever is teleported back
+^292- ^*^256Call to Arms^* now plays no sounds other than at the impact time
+
+^079Keeper of the Forest^*
+^292- ^*^256Camouflage^* cast range from 300 to 500, cast time halved
+^292- ^*^256Nature's Protection^* cooldown from 7 secs to 5 secs, cast time halved
+
+^079Legionnaire^*
+^292- ^*^256Terrifying Charge^* from +40/80/120/MAX to +60/100/140/MAX, charge will last max of 5 seconds
+^292- ^*Movement speed from 290 to 295
+
+^079Madman^*
+^292- ^*^256Barrel Roll^* no longer slows attack speed
+^292- ^*^256Barrel Roll^* cooldown increased from 11s to 13s
+^292- ^*^256Barrel Roll^*'s debuff is now dispellable
+
+^079Magebane^*
+^292- ^*Base strength from 16 to 17
+^292- ^*Strength gain from 1.6 to 1.7
+
+^079Night Hound^*
+^292- ^*Added a third variation for the attack animation on his third ability
+
+^079Nymph^*
+^292- ^*Damage from the stun from 25/50/75/100 to 70/100/130/160
+^292- ^*Stun duration increased to 1/1.3/1.6/2
+
+^079Rampage^*
+^292- ^*Lower base armor by 1
+^292- ^*^256Stampede^* cooldown from 25 to 30
+^292- ^*Movespeed slow from ^256Might of the Herd^*  (when used) is now static -35/50/65/80 MS as long as they stay around  him. Lasts for 4 seconds at all levels from 1/2/3/4. 1 second timeout  when moving out of the affector.
+^292- ^*Damage from ^256Horned Strike^* rescaled from 100 to 40/60/80/100
+
+^079Soul Reaper^*
+^292- ^*Strength gain from 2.0 to 1.7
+^292- ^*^256Withering Presence^* from 1000 radius flat to 700/800/900/1000
+
+^079Tundra^*
+^292- ^*Speed up the ice spikes from 1.25s lifetime to 1s lifetime
+^292- ^*Bird is now magic immune
+
+^079Vindicator^*
+^292- ^*^256Sage's Lore^* duration changed from 5/6/7/8 to 7s
+^292- ^*^256Sage's Lore^* damage/burn from 20/10,30/15,40/20,50/25 to 14/7,26/13,40/20,57/28.5
+^292- ^*^256Sage's Lore^* cooldown from 14 to 15
+^292- ^*^256Sage's Lore^* manacost from 75/95/115/135 to 80/100/120/140
+^292- ^*^256Glyph of Silence^* AoE from 950 to 800
+^292- ^*^256Glyph of Silence^* will no longer silence heroes that Vindicator does not have vision of
+^292- ^*^256Glyph of Silence^* int gain from 1 Intelligence to 2 Intelligence per kill
+^292- ^*^256Glyph of Silence^* silence duration from 0.75/1.5/2.25/3 to 1/1.75/2.5/3.25
+
+^970Version 1.0.6.1^*
+-------------
+^292- ^*^079Gladiator^* Voice
+
+^970Version 1.0.6^*
+-------------
+^292- ^*Improved pathfinding most noticeable during the laning phase.
+^292- ^*Some effects tweaks to heroes to clean things up
+^292- ^*Some tooltip fixes
+^292- ^*Added note about AudaciousSam's Blood Chalice to the 1.0.5 patch notes
+
+^095Vulture Lord^*
+^292- ^*Removed armor aura
+
+^090Nullstone^*
+^292- ^*Recipe price from 825 to 1000
+^292- ^*No longer reduces cooldown if hit by a spell while in cooldown
+
+^090Steamstaff^*
+^292- ^*Damage increased by 2
+^717* ^*This means any item that uses a ^090Steamstaff^* in some way was increased accordingly
+
+^079Chronos^*
+^292- ^*Fixed ^256Curse of Ages^* level 2/3/4, it will now properly stun and reset charges
+^292- ^*^256Curse of Ages^* now counts "down" in charges rather than up, always stunning when no charges are left
+
+^079Gauntlet^*
+^292- ^*Fix to make sure when gauntlet activates ^256Infernal Instability^* while the glove is in midair it works properly after it's return and can still go off
+
+^079Glacius^*
+^292- ^*Ally-freeze through ^256Ice Imprisonment^* damage reduction from 20/40/60/80 to 20/30/40/50%
+
+^079Gladiator^*
+^292- ^*Fixed ^256Showdown^* so it does not teleport magic immune units
+^292- ^*Fixed ^256Flagellation^* going on cooldown correctly when you attack gadgets
+
+^079Rampage^*
+^292- ^*Fixed the instant death bug
+
+^970Version 1.0.5^*
+-------------
+^970General^*
+
+^292- ^*"Report A Player" added
+^717* ^*Upper left on the System Bar, ^r!^* symbol
+^717* ^*Fill out the form to report another player for inappropriate actions
+^717* ^*False reporters will be punished
+
+^292- ^*Tons of tool tip updates and fixes
+^292- ^*Fixed a bug allowing ^090Post Haste^* to teleport to couriers. ^090Post Haste^* can teleport to player owned pets, such as War Beast's wolves
+^292- ^*Gave Vulture Lord's second ability an icon (means the aura no longer displays a black and white checkerboard)
+^292- ^*Stores will no longer remove the 'can buy from me' state if you or a courier goes invulnerable
+^292- ^*Decreased in-game font size slightly
+^292- ^*Added a new message when the courier is killed by a non-hero unit, it will now show a minimap ping along with the appropriate game message indicating which team the courier was killed by
+
+^292- ^*Fixed an issue where players would add a chat channel to auto connect to upon startup, and then later be unable to remove this channel from their list because they were banned from the channel. Players attempting to join channels they are set to auto connect to and are also banned from will have that channel automatically removed from their list if they attempt to connect to the channel they are banned from
+^292- ^*Pressing the "Alt" key (or whatever key the player has defined as chat_gameLobbyChatToggle) when in the game lobby will no longer toggle the chat type like it used to. It now must be held down and used in conjunction with the enter key, or with the mouse click of the "Send" button
+^292- ^*Fixed a Mac/Linux crash
+^292- ^*Fixed issue preventing players from selecting a potential hero during the banning phase.
+^292- ^*Disconnected players will no longer random when it becomes their turn to pick, unless they run out of time.
+^717* ^*Disconnected players are not allowed to use "extra time" in BP mode (if it is their turn, and they are disconnected, then they will pick their potential hero or a random hero)
+^292- ^*Fixed an issue in duplicate hero mode where if two players had the same hero "potentially" selected, only one would get it and the other would random
+^292- ^*Misc server optimizations to improve stability
+^292- ^*News is hidden when choosing to follow a player
+^292- ^*The client will no longer display a message indicating the player will get a leave for disconnecting if they are in a replay or a practice game
+
+^095Invis Rune^*
+^292- ^*Now has a 2s fade time. Any spell, ability, or item can be used in this fade time without ending the stealth.
+
+
+^970Items^*
+
+^292- ^*^090Mana Battery^* is now in Supplies
+^292- ^*^090Power Supply^* is now in both Supplies and Initiation
+
+New Item: ^090Blood Chalice^* (Initiation)
+^717* ^*On use, grants 150 temporary mana in exchange for 150 health. Mana will disappear slowly if not used. Damage cannot kill.
+^717* ^* Special thanks to user AudaciousSam, who originally suggested the concept for this item in DotA and gave us permission to use it in HoN.
+
+^090Astrolabe^*
+^292- ^*Fixed a bug so the debuff cannot be dispelled
+
+^090Bottle^*
+^292- ^*Fixed it so when you have illusion bottled and use it, the illusions still don't have it bottled!
+^292- ^*^095Double Damage^* will now correctly last 45 seconds instead of 30 seconds when used out of a bottle
+
+^090Frostfield Plate^*
+^292- ^*Can no longer be used by ^090Couriers^*
+
+^090Geometer's Bane^*
+^292- ^*Illusions now gain the 0.1s invulnerability as well
+
+^090Ground Courier^*
+^292- ^*Will be attacked by creeps/towers again
+
+^090Loggers Hatchet^*
+^292- ^*No longer works on splash damage
+
+^090Puzzlebox^*
+^292- ^*Melee minion abilities moved to slots 2,3,4 to make it clear which is which
+^292- ^*Puzzlebox Minions will no longer be able to attack towers unless the owner is within 925 units of them
+
+^090Void Talisman^*
+^292- ^*Applies -5.5 Magic Armor for the duration
+
+^090Whispering Helm^*
+^292- ^*Can no longer be used by ^090Couriers^*
+
+
+^970Heroes^*
+
+^292- ^*New Legion Strength hero, ^079Gladiator^*, based off DotA's Kunkka
+^292- ^*Updated recommended items for several heroes
+
+^079Balphagore^*
+^292- ^*^079Balphagore^*'s third ability will no longer consume gadgets. Om nom nom.
+^292- ^*^256Hell on Newerth^*
+^717* ^*Cast time removed
+^717* ^*Expanding ring now 'sticks' on ^079Balphagore^* as he moves and expands to max distance 300ms faster
+
+^079Behemoth^*
+^292- ^*^256Shockwave^* will no longer hit couriers
+
+^079Bubbles^*
+^292- ^*When toggled on, ^256Take Cover^* will now automatically be used if the source of damage is owned by an enemy hero (enemy pets/gadgets will trigger it)
+
+^079Blacksmith^*
+^292- ^*Fixed an issue causing ^256Frenzy^* multicast to not apply to the correct number of targets (usually one less than it should)
+
+^079Chipper^*
+^292- ^*Players are now deny-able if they are burning from the ^256Tar Toss^* + ^256Rocket^* combo
+^292- ^*^256Tar Toss^* duration lowered from 5s to 2/3/4/5 secs
+
+^079Chronos^*
+^292- ^*^256Rewind^* heal rate doubled (max 50% per second)
+^292- ^*^256Curse of Ages^*
+^717* ^*Buff/Debuff time lowered from 10s to 8.5s
+^717* ^*Bashes every 8/7/6/5 hits
+^717* ^*Deals 20/40/60/80 magic damage on bash hit
+^717* ^*Bash stun from .25/.5/.75/1 to 1s all levels
+^717* ^*Agi steal from 1/1/2/3 to 1/2/2/3 agility per hit against heroes
+^717* ^*Can now build charges between targets for ^256Curse of Ages^*
+^717* ^*Can now gain charges from denies
+
+^079Devourer^*
+^292- ^*^256Devour^* now reveals any target bit for the duration
+
+^079Electrician^*
+^292- ^*^256Shield^* is now a self target cast instead of a toggle
+^717* ^*Cast time removed
+^717* ^*Costs 20% of max mana to cast, if mana is less than that, uses all of it
+^717* ^*Mana consumed is applied as the shield for 12s
+^717* ^*Absorbs 50% of damage at the cost of 2/1.66/1.25/0.75 mana consumed per damage taken
+^717* ^*DPS of the shield AOE increased from 12/24/36/48 to 15/30/45/60
+^717* ^*^256Shield^* is unremovable
+
+^079Engineer^*
+^292- ^*^256Turret^* reworked
+^717* ^*Changed to a vector targeting ability to decide the direction it is facing
+^717* ^*Manacost lowered from 120 to 100
+^717* ^*No longer controllable and only lasts 6 seconds
+^717* ^*No longer gets a copy of ^079Engineer^*'s items
+^717* ^*Lays down suppressive cover fire in a cone shooting 6 times across the cone's 800 range, 400 unit spread, 30 shots total
+^717* ^*Each bullet deals 25/40/55/70 Physical damage and applies a 7% stacking movespeed snare (5s duration) to all targets hit
+^717* ^*Units hit are pushed 25 units away from the turret
+^717* ^*Can only be hit by a max of 5 bullets
+^292- ^*^256Energy Field^*
+^717* ^*Will no longer hit couriers
+^717* ^*Duration lowered from 6/9/12 to 6/8/10
+^717* ^*Hits to kill lowered from 5 to 4
+
+^079Forsaken Archer^*
+^292- ^*^256Crippling Volley^*
+^717* ^*Ministun removed
+^717* ^*Radius lowered from 225 to 200
+^717* ^*Damage done increased from 85/140/195/250 to 85/150/215/280
+
+^079Fayde^*
+^292- ^*Strength growth from 2.2 to 2.0
+^292- ^*Base agility from 21 to 19
+^292- ^*Lowered movement speed from 305 to 300
+^292- ^*Charges from ^256Scythe^*/^256Shadow Stance^* lowered from 2/3/4/5 and 1/2/3/4
+^292- ^*^256Reflection^*
+^717* ^*Movespeed while stealthed rebalanced from 10/20/30% to 10/15/20%
+^717* ^*Duration rebalanced from 30/35/40 to 20/35/50
+
+^079Gauntlet^*
+^292- ^*Undev
+^292- ^*Reworked
+^292- ^*Base STR reduced by 2 (24 to 22) and armor decreased by 0.5
+^292- ^*^256Infernal Instability^*
+^717* ^*Applies ^256Infernal Instability^* to self for 4 seconds. Granting 10/20/30/40 movement speed for the duration
+^717* ^*While Infernal Instability is active, ^079Gauntlet^*'s hand will detonate on the first target that it comes in contact with.
+^717* ^*This includes auto attacks, ^256Grapple^*, or ^256Gauntlet Blast^*. This ability can be activated while the glove is in mid flight.
+^717* ^*Upon detonation, deals 120/180/260/320 Magic damage in the radius, pushing back units near the hit target and applying a short minor snare for 1.5s
+^292- ^*^256Grapple^*
+^717* ^*Hand goes 800 range
+^717* ^*Can only hit heroes, goes through creeps
+^717* ^*Now only grabs units on the way out, not the way back
+^717* ^*Moves both ^079Gauntlet^* and the target to where you click, dealing 100/140/180/220 Magic damage to the target and stunning him for 1/1.2/1.4/1.6 seconds
+^292- ^*^256Cripple^* renamed to ^256Enfeeble^*
+^717* ^*30 Max charges
+^717* ^*0.8/0.6/0.4/0.2 time between a charge is gained
+^717* ^*On attack, transfers all charges to the target, slowing 1% Move, Attack, and Cast speeds per charge for 5 seconds.
+^292- ^*^256Gauntlet Blast^*
+^717* ^*75/65/55s Cooldown
+^717* ^*600/700/800 Range
+^717* ^*100/150/200 Manacost
+^717* ^*Shoots the glove out at the target unit. Any enemies within 200 units of the glove as it flies are stunned for 4 seconds. This stun is broken if they take any damage after 1 second of being stunned.
+^717* ^*When the glove strikes the target, they take 300/450/600 Magic damage and all buffs are purged
+^717* ^*The target hero is stunned and revealed for 1.5 seconds.
+
+^079Legionnaire^*
+^292- ^*Int gain increased from 1.6 to 1.9
+^292- ^*^256Terrify^*
+^717* ^*Cast time removed (0.6 -> 0)
+^717* ^*Now grants vision of the target for the duration of the charge
+^717* ^*Now reveals target for the duration of the charge
+^717* ^*Now grants 40/80/120/MAX movespeed (used to be max at all levels)
+
+^079Madman^*
+^292- ^*Base strength increased from 17 to 18
+^292- ^*^256Barrel Roll^*
+^717* ^*Stun removed
+^717* ^*Manacost lowered from 130 to 110
+^717* ^*Applies a 30/37/44/50% snare for 3.5s
+^717* ^*Damage increased from 100/150/200/250 to 100/160/220/280
+
+^079Nymphora^*
+^292- ^*^256Nymphora's Zeal^* now deals 25/50/75/100 Magic damage when hitting someone
+^717* ^*Can be hit on both the send and return trip
+^717* ^*No longer grants bonus AS / MS
+
+^079Pebbles^*
+^292- ^*Can no longer throw invisible units
+
+^079Plague Rider^*
+^292- ^*^256Extinguish^* is now a true deny (awards the stat)
+
+^079Puppetmaster^*
+^292- ^*^256Puppeteer's Hold^*
+^717* ^*Fixed a rare bug causing Puppet Strings' floating handles to never disappear
+^717* ^*"Snare" effect while under the effect halved from 155 force to 80 force
+^717* ^*Negative Attackspeed removed
+^717* ^*Cast point sped up from 500ms to 300ms
+
+^079Rampage^*
+^292- ^*All Magic damage changed to Physical
+^292- ^*^256Stampede^* Reworked
+^717* ^*9001 Range
+^717* ^*Same mechanic, charges target unit
+^717* ^*Gains 15/20/25/30 Movespeed per second
+^717* ^*Gains Treewalking after 4 seconds
+^717* ^*Does not gain Magic Immunity and no reveal state is placed on enemies
+^717* ^*When ^079Rampage^* gets within 450 units of his target, he pounces on them almost instantly
+^717* ^*Causes a Stun and Pushback upon impact instead of just a stun
+^717* ^*Movespeed boost retained for 3s after impact
+^292- ^*^256Might of the Herd^* Reworked
+^717* ^*No longer has a team aura
+^717* ^*50 Manacost
+^717* ^*Gives self 4/6/8/10% Movespeed
+^717* ^*Gains 3/6/9/12% of movespeed in attack damage
+^717* ^*On use, stomps the ground every second for 1/2/3/4 seconds, applying Herded (-15 Movespeed) to all enemies in the radius for 5 seconds. This stacks.
+^292- ^*^256Horned Strike^* Reworked
+^717* ^*10/9/8/7 second cooldown
+^717* ^*Still stuns and pushes back the target on attack. 100 Physical damage at all levels
+^717* ^*While in cooldown, one second is subtracted for every 1000 units traveled by Rampage
+^292- ^*^256Favor of Sol^* removed
+^292- ^*New Ultimate: ^256The Chains that Bind^*
+^717* ^*^079Rampage^* can use chains he carries around to grab an enemy hero, stunning them and dragging them behind himself for a limited time
+^717* ^*200 Range
+^717* ^*175/200/225 Manacost
+^717* ^*105/90/75 second cooldown
+^717* ^*Binds the target to ^079Rampage^* for 3/3.5/4 seconds and the target will be dragged behind him as he moves
+^717* ^*^079Rampage^* is Disarmed while dragging someone and the dragged target will take 20/30/40% of the distance they are dragged in Physical damage
+^717* ^*If ^079Rampage^* and the target he is dragging get separated by more than 500 units the chains are broken
+
+^079Slither^*
+^292- ^*^256Toxin Wards^* will no longer apply their movement speed slow when they miss
+
+^079Soul Reaper^*
+^292- ^*^256Demonic Execution^* will no longer be usable on couriers
+
+^079Soulstealer^*
+^292- ^*^256Demon Hand^* now has a better indicator to its actual radius
+
+^079Tempest^*
+^292- ^*Purge should now affect ^079Tempest^*'s elementals after they split
+
+^079Thunderbringer^*
+^292- ^*Third ability's damage marked as splash (so it doesn't break ^079Succubus^*' sleep, ^079Gauntlet^*'s ult etc.)
+
+^079Vindicator^*
+^292- ^*^256Glyph of Silence^* will properly silence heroes that go invulnerable during casts (^079Magmus^*, ^079Madman^*, etc.)
+
+^079Wildsoul^*
+^292- ^*Illusions will properly copy themselves when he is under the effects of Bear Form
+
+^079War Beast^*
+^292- ^*Illusions will properly copy themselves when he is under the effects of ^256Metamorphosis^*
+^292- ^*Hellhounds will no longer be able to attack towers unless ^079War Beast^* is within 925 units of them
+
+^079Zephyr^*
+^292- ^*^256Gust^*
+^717* ^*Stun Removed
+^717* ^*Damage increased from 75/125/175/250 to 75/150/225/300
+
+^970Version 1.0.4^*
+-------------
+^970General^*
+
+^292- ^*Tournament mode updated to not allow mods to be used
+^717* ^*Players with mods installed cannot play in tournament mode games, however they can spectate
+^717* ^*Tournament mode games are forced invitation-only games, meaning the host must invite the other players into the match
+^717* ^*Tournament mode will still allow teams to specify who gets first ban so teams can decide between first ban/team pick
+
+^292- ^*Reworked how health and mana lerps work so they are cleaner overall
+^292- ^*You can now press tab after typing /r to  rotate through a list of people who have whispered you recently
+^292- ^*The score screen can now be toggled (default [ key)
+^292- ^*Fixed an extremely rare case where a player could be terminated after the game ended (counting as a leave)
+^292- ^*Fixed an issue causing gold/min and exp/min stats to become inaccurate when game was paused
+^292- ^*Fixed an issue causing gold/min and exp/min to become inaccurate when a player disconnected/reconnected
+^292- ^*Removed an unnecessary option from options menu
+^292- ^*Gold lerping removed
+^292- ^*Fix to a bug that allowed people to pick a hero during a banning phase or in an all-random game
+
+^970Darkwoodvale^*
+^292- ^*Moved outside tier 1 neutral camps to where the outposts were
+^292- ^*Moved outposts to where the tier 1 outside neutral camps were
+^292- ^*Building health increased to be -20% of normal, from -25% of normal
+
+^079Chronos^*
+^292- ^*Fixed ^256Time Lock^* not applying to enemies
+
+^079Electrician^*
+^292- ^*^256Cleansing Shock^* can now be cast on self via double-activate
+
+^970Version 1.0.3^*
+-------------
+Join the discussion about this patch on the forums:
+http://forums.heroesofnewerth.com/showthread.php?t=136292
+
+^970Darkwood Vale^*
+
+^292- ^*Removed two neutral spawns, replaced them with outposts
+^292- ^*Replaced two of the higher tier neutral camps with tier 1 neutrals
+^292- ^*Outermost towers are now level 1 towers (instead of level 2)
+^717* ^*This means they will do slightly less damage and less starting health, same as the outer most towers on Caldavar
+^292- ^*Lowered building health on this map by 25%
+^292- ^*Moved some trees to allow better ward spots to cover runes
+
+
+^970In-game^*
+
+^292- ^*Players will no longer see trees die in fog
+^717* ^*Meaning, juking with ^090Logger's Hatchet^* / ^090Runes of Blight^* is now much more fun!
+^292- ^*Added an interface option for "Double Activate." When enabled, certain items and abilities may be double-clicked (or double-activated) for automatic use:
+^717* ^*^090Homecoming Stone^* and ^090Post Haste^* teleports you home
+^717* ^*^090Health Potion^*s and ^090Mana Potion^*s are used on self
+^717* ^*^090Tablet of Command^*, ^090Stormspirit^*, ^090Charged Hammer^*, and ^090Nullfire Blade^* are used on self
+^717* ^*^090Portal Key^* blinks towards home
+^717* ^*^256Grace of the Nymph^*, ^256Inner Light^*, ^256Protective Charm^*, ^256Camouflage^*, ^256Nature's Protection^*, ^256Arcane Hide^*, ^256Healing Wave^*, ^256Cursed Shield^*, ^256Fire Shield^*, ^256Frenzy^*, and ^256Focus Buffer^* are used on self
+^292- ^*Added new game interface option "Move To Spawn On Disconnect"
+^717* ^*When enabled, the server will automatically issue a move command to your hero to move back to base whenever you crash, freeze, or lose your internet connection
+^292- ^*Added new keybind: "Cancel And Hold Position"
+^717* ^*Functions exactly like "Hold Position", except it also cancels animations
+^717* ^*Players who want this functionality can replace their current Hold keybinding with the new Cancel and Hold keybinding
+^292- ^*A unit in the air no longer gains the 25% "uphill miss chance" evasion
+^717* ^*Units stunned by ^079Witch Slayer^* or ^079Magmus^* or tossed by ^079Pebbles^* won't gain extra evasion
+^717* ^*Couriers and ^079Tundra^*'s bird won't gain extra evasion
+^292- ^*Health and Mana bars for heroes will now show the damage they take
+^717* ^*This new 'shadowed' bar can be turned off in the options menu
+^292- ^*If the player drag-selects, and the current active control entity is not a hero, and the selection contains a hero, then the active control entity will become the first hero in the selection.
+^717* ^*This allows players to drag-select ophelia + her creeps and ALWAYS have Ophelia as active, regardless of the last active unit.
+
+^292- ^*Scorescreen now contains voting options (kick, pause, concede, remake) and add friend functionality
+^292- ^*The camera will no longer shake when an effect (such as homecoming stone) is played in fog
+^292- ^*Fix to properly calculate a player's exp/min, even if he reached max level
+^292- ^*Neutral creep agro range for allc reeps set to 300 (some were 250, some were 300)
+^292- ^*Vulture Lord now has a +3 AOE armor aura
+^292- ^*Fix to Kongor so he won't wonk out and no one can hit him anymore
+^292- ^*Added a visual effect for Main health bars, they now course with energy
+^292- ^*Modified the internal random number generator to use a much higher quality distribution of random number
+^292- ^*Dual target abilities now properly ignore trees if their target scheme ignores them
+^292- ^*Hero health/mana bars are now shadowed with 500ms delay on the shadows
+^292- ^*Gold lerps to its actual value over 350m
+^292- ^*Toggles are correctly propagated to illusions
+^717* ^*Fixes illusion steamboots, illusion fayde stance, etc
+
+
+^970Pre-Game^*
+
+^292- ^*Added "Potential Hero Selection" functionality
+^717* ^*At the hero selection screen, you can right-click on any hero to make it your "Potential Hero"
+^717* ^*Spectators and anyone on your team can see your potential hero (the enemy team can't)
+^717* ^*If you run out of time, you will select that hero rather than randoming
+^292- ^*Prevent the "5... 4... 3... 2... 1... Let's get it on" countdown from happening after the hero selection screen
+^292- ^*Loading bar now courses with energy
+^292- ^*The game lobby will no longer display the message "PlayerName has connected." once for their initial connection, and again when they have finished loading
+^717* ^*It will now say "PlayerName is connecting." and "PlayerName has connected." to distinguish the different events
+^292- ^*Set the max channel chat message (250), max game chat message (150), chat channel topic (140), and channel name length (30).
+^292- ^*Channel messages will only play sounds when receiving a message in the current channel that has focus
+^717* ^*This fixes all the sounds that used to play when a user was in multiple channels at the same time
+^292- ^*The channel name + topic area of the channel is now truncated off properly and no longer wraps off the panel onto the rest of the UI for long channel topics
+^292- ^*Added a hovertip to the channel name + topic so if the topic is 95+ chars, if you hover over it it displays the full topic, similar to how long game names work in the Public Game interface
+^292- ^*The game lobby will now play the epic lobby.mp3 music
+^292- ^*Moved the voip mute button/icon things to the small colored circle to the side of the player slot (which normally is only used for the right-click menu) in all game phases
+^717* ^*The normal right-click menu (which is only available pre-hero-picker) now occupies the same spot used to show the player's avatar/left-click to join button)
+
+
+^970General^*
+
+^292- ^*Fixed a bunch of random crashes caused from clicking the "Disconnect" button
+^717* ^*Before, clicking the button had a small random chance to corrupt a random place in memory that caused you to crash at a random time doing something random
+^292- ^*Updated the wording of some of the tooltips to be a bit more clear
+^292- ^*When viewing a player's stats, "Public Statistics" is now selected by default (previously "Ranked Statistics")
+^292- ^*Prevent a buddylist bug when the user loses connection to the chat server, then reconnects to the chat server
+^292- ^*Russian stringtables updated
+^292- ^*Fixed lock camera on player not turning off after a replay
+^292- ^*Profanity filter is now optional
+^292- ^*Follow fix: If two players are following each other and one of them joins a game, the other one will now join that game instead of both of them disconnecting
+^292- ^*Fixed a spelling error in the matchmaking interface
+^292- ^*Fixed crash when CLIPBOARD selection is unowned and an attempt is made to paste
+^292- ^*Fixed an issue that disconnected a user if they typed a player's name into the IM window
+^292- ^*Fix to the close button of the MOTD so you can click it easier
+^292- ^*Fixed mousewheel events not having the correct coordinates in windowed mode
+^292- ^*Re-organized the options menu slightly
+^292- ^*The game list is no longer cleared when closed
+^717* ^*The list will only auto-refresh when it is opened for the first time or a game starts
+^292- ^*Fixed Official Stats or No Stats showing up when you invite someone to a game
+
+
+^970Taunt^*
+^292- ^*Cast time removed
+
+
+^970Items^*
+
+^090Courier^*
+^292- ^*Will now be attacked by Towers and the Well
+
+^090Geometer's Bane^*
+^292- ^*Grants 0.1sec invulnerability on activation
+
+^090Hellflower^*
+^292- ^*Damage increased from 40 to 45
+
+^090Plated Greaves^*
+^292- ^*Will no longer apply it's buff to Wildsoul's bear
+
+^090Puzzlebox^*
+^292- ^*Recipe increased from 1100 to 1250
+
+^090Shrunken Head^*
+^292- ^*Added to the tooltip that it cannot be dispelled
+
+^090Steamstaff^*
+^292- ^*Price lowered to 800 from 900
+
+^090Stormspirit^*
+^292- ^*No longer silences or perplexes, just stuns
+^717* ^*This allows you to queue up orders while under it's effects
+
+
+^970Heroes^*
+
+^292- ^*^079Maliken^*, ^079Warbeast^*, and ^079Wildsoul^* transformations will no longer act stupid when ^079Dark Lady^* Ults
+^292- ^*^079Valkyrie^*'s ^256Javelin^*, ^079Devourer^*'s ^256Hook^*, and ^079Voodoo Jester^*'s ^256Casks^* will no longer hit couriers
+
+^292- ^*Added new Legion Strength hero, ^079Tundra^*
+^717* ^*Based on Rexxar the Beastmaster from DotA
+
+^079Accursed^*
+^292- ^*Fire Shield dispels stuns once again
+^292- ^*Flame Consumption will no longer automatically activate below 400hp. Must be cast manually.
+^717* ^*This means that silences/stuns/etc will prevent Accursed from triggering his ult
+^292- ^*Staff of the Master now lets Accursed use Flame Consumption while silenced
+
+^079Arachna^*
+^292- ^*Spiderling will no longer stand there like a dummy if a hero blinked while the projectile was midair
+
+^079Behemoth^*
+^292- ^*Initial 200/275/350 Magic damage on the ult is now Superior Magic, meaning it will go through magic immunity
+
+^079Bubbles^*
+^292- ^*^256Shell Surf^* vision increased from 600 to 800 units and now keeps granting vision if it goes the max distance for 3.34 seconds.
+^292- ^*Fixed a bug with ^256Shell Toss^* that was resetting the cooldown incorrectly
+^292- ^*^256Song of the Sea^* now hits units in fog and invisible units
+^292- ^*^256Take Cover^* no longer perplexes
+^292- ^*^256Kelp Field^* will no longer deal damage or stun magic immune heroes
+
+^079Chipper^*
+^292- ^*Attack time increased from 350ms to 450ms
+
+^079Corrupted Disciple^*
+^292- ^*^256Electric Tide^* now is now correctly displayed when originating from a position within fog
+
+^079Deadwood^*
+^292- ^*Base strength increased from 23 to 25
+^292- ^*Base Armor increased from 2.24 to 2.74
+^292- ^*Creeps will no longer dispel the tree
+
+^079Engineer^*
+^292- ^*Fixed the Turret's attacks eating ^090Nullstone^*
+^292- ^*^256Tinker^* cooldown increased from 15 to 20
+^292- ^*^256Tinker^* manacost increased from 25 to 50
+
+^079Forsaken Archer^*
+^292- ^*^256Skeletons^* will no longer trigger neutrals to use their abilities
+
+^079Gauntlet^*
+^292- ^*Ability 1 now has an instant cast time
+^292- ^*Cast range on second ability increased from 625/800/975/1150 to 725/850/975/1150
+
+^079Hammerstorm^*
+^292- ^*^256Mighty Swing^* can now be toggled on and off
+
+^079Hellbringer^*
+^292- ^*Base armor lowered from 2.4 to 1.4
+^292- ^*^256Life Void^* cooldown increased from 7 seconds to 10 seconds
+
+^079Magmus^*
+^292- ^*^256Volcanic Touch^* now correctly deals damage to Mechanical units
+
+^079Maliken^*
+^292- ^*Fixed tooltips
+^292- ^*^256Possession^* manacost lowered from 150 to 100
+
+^079Nymphora^*
+^292- ^*Number of people taken with her ^256Teleport^* increased from 0,1,2 to 1,2,3 additional targets per level
+
+^079Pandamonium^*
+^292- ^*Slow from missing a ^256Cannonball^* lowered from 4s to 2s
+
+^079Pollywog Priest^*
+^292- ^*Max distance of ^256Jolt^* lowered by 200
+
+^079Pyromancer^*
+^292- ^*^256Phoenix Wave^* can now target both units and the ground
+
+^079Sand Wraith^*
+^292- ^*Using ^256Manifest^* no longer kills all active illusions
+
+^079Soul Reaper^*
+^292- ^*Added to the ult tooltip to correctly state the cooldown changes to 70s at all levels with it
+
+^079Soulstealer^*
+^292- ^*Fixed the "being knocked down" while using an item bug
+
+^079Succubus^*
+^292- ^*Fixed a bug causing sleep to sometimes be removed instantly by a creep
+^292- ^*^256Succubus' Hold^* cooldown lowered from 120s at all levels to 120/110/100
+
+^079Swiftblade^*
+^292- ^*Base movespeed increased from 300 to 305
+^292- ^*Returned attack no longer triggers responses like ^079Corrupted Disciple^*'s ^256Static Discharge^*
+
+^079Valkyrie^*
+^292- ^*^256Javelin^* will now leave lingering vision if it hits nothing
+^292- ^*Tweaked ^256Prism^* to correctly hit invulnerable allied heroes
+
+^079Wildsoul^*
+^292- ^*Damage when the bear dies now properly goes through immunities
+^292- ^*Updated his tooltip to reflect that he takes damage when his bear dies
+^292- ^*Beardulon abilities reworked very slightly
+^717* ^*Gains ^256Return^* at level 1
+^717* ^*Gains ^256Entangling Claws^* at level 2
+^717* ^*Gains ^256Demolish^* at level 3
+^717* ^*Gains ^256Magic Resist^* at level 4
+^292- ^*^256Wild^* cast time removed, letting him cast it on the run
+^292- ^*Base movespeed while in Bear form increased from 270 to 285
+
+^079Wretched Hag^*
+^292- ^*^256Bat Blast^* can now target both units and the ground
+
+^079Zephyr^*
+^292- ^*^256Cyclone^* damage halved against non-hero units
+
+^970Version 1.0.2^*
+-------------
+Join the discussion about this patch on the forums:
+http://forums.heroesofnewerth.com/showthread.php?t=128034
+
+^970General^*
+
+^292- ^*^090Marchers^* are now in the outpost
+^292- ^*Implemented functionality for "Buy All Components"
+^717* ^*Clicking this button will attempt to purchase all components and sub-components needed to complete the recipe.
+^292- ^*Fixed several stringtable entries
+^292- ^*Fixed blockers behind the Legion fountain to help people who teleport back there
+^292- ^*Updated some cliffs so wards will not sink into them anymore
+^292- ^*Fixed "^090Helm of the Black Legion^*" appearing incorrectly on the shop due to it's length
+^292- ^*Tweaked some weirdness with collisions in the pathing code
+^292- ^*Fixed the pause dropdown so it now has the correct title
+
+^292- ^*Following functionality added: Right click on a buddy or clanmate and select "Follow" to follow them. You will join and leave any games they join or leave until you unfollow them, quit the game, or are in a game that starts.
+^717* ^*Thanks to __VIking for the idea
+^292- ^*Players attempting to re-connect to servers they got disconnected from will no longer be unable to join them due to PSR restrictions for times when they have recently played a game and their PSR was not updated before connecting to the server.
+^292- ^*Fixed matchmaking to auto focus the channel they join in on
+^292- ^*Removed the "stats reset by release" notification from the reset stats form
+^292- ^*Fixed an issue where blank lines would appear on IMs when one of the players chatting would join or leave a game.
+^292- ^*Fixed a bug where the No Stats icon would not show up in notifications for games that were "No Stats"
+^292- ^*The game will no longer display an additional disconnect message indicating that the hero was removed and assets distributed to their team when a player with no team is kicked from the game
+^292- ^*Rearranged the icons on the bottom of Public Games interface to make more space and fix alignments
+^292- ^*Updated Min/Max PSR Filter to be a little more lenient, for example selecting <1500 and >1600 now checks if it the server is <=1500 or >=1600.
+^292- ^*The Public Game interface so that it can now display the actual advanced game options when hovering over the "Advanced Options" icon
+^292- ^*Added a "Hide Restricted Games" option to the Public Game interface
+^717* ^*When enabled any games a player is ineligible for due to having a leaver status or having a PSR outside the range of that game will be hidden
+^717* ^*Credit to Bangerz for the implementation
+^292- ^*Added the Premium Account icon to the Icon Key tooltip
+^292- ^*Added more ping filter values (from a max of 270 to a max of 360) and added more PSR values (1900 and 1950).
+^292- ^*Added game hint indicating players can disable notifications in game via the options menu
+^292- ^*Logging in with "Invisible Mode" will now always bring focus to the "Status" channel, previously it wouldn't the first time logging in
+^292- ^*Removed requirement to enter a reason when banning someone via "/bl add nickname", it now defaults to the reason "None" if none is specified
+^292- ^*Fixed an issue where the banlist reason was not updated properly unless the player logged out first
+^292- ^*Using "/r" will only reply to the last whisper received, and will no longer reply to the last buddy or clan whisper
+
+
+^970Matchmaking^*
+
+^292- ^*Added maximum spread setting for matchmaking
+^292- ^*Restrict matchmaking regions to just USW, USE, EU
+^292- ^*Improve tracking of matchmaking failure rates and player disconnections
+
+
+^970Heroes^*
+
+^079Bubbles^*
+^292- ^*Fixed a glitch when you had a body effect on and threw the shell
+^292- ^*Can now use ^256Shell Surf^*'s teleport while under the effects of ^256Take Cover^*
+^292- ^*^256Take Cover^* now triggers off tower hits
+^292- ^*Initial radius of ^256Kelp Field^* changed from 600 to 400
+
+^079Chipper^*
+^292- ^*^256Rocket Barrage^* damage reduced from 105/130/155/180 to 85/115/145/180
+^292- ^*^256Sawblade Showdown^* cooldown set to 50 seconds at all levels (from 60/45/30)
+
+^079Fayde^*
+^292- ^*^256Stances^* will no longer reset when she dies
+
+^079Gauntlet^*
+^292- ^*Completely reworked, still a dev hero. Let us know what you think on the forums.
+
+^079Night Hound^*
+^292- ^*Updated the tooltip for ^256Smoke Bomb^* to explain that he cannot attack towers while in the cloud
+
+^079Scout^*
+^292- ^*^256Marksman Shot^* will no longer place an infinite life state on the target
+
+^970Version 1.0.1^*
+-------------
+
+^970Matchmaking^*
+^292- ^*Fixed average wait time and percent  successful matches stat tracking for matchmaking
+^292- ^*Added some matchmaker logging
+^292- ^*Fixed substitutions not working properly
+
+
+^292- ^*Tweaked some oddities in the pathing code
+^717* ^*Heroes might 'stick' on each other  slightly again. We are developing a more permanent solution
+^292- ^*Toggling autocast and attack abilities no  longer interrupt any current actions
+
+
+^970Items^*
+
+^090Harkon's Blade^*
+^292- ^*No longer stacks with Lifeleech &  other attack modifiers
+
+^090Nome's Wisdom^*
+^292- ^*Recipe cost from 600 to 200
+
+^090Plated Greaves^*
+^292- ^*The activated effect can now apply to all  allied non-hero units (including player controlled units).
+
+^090Puzzlebox^*
+^292- ^*Recipe cost from 1000 to 1100
+
+
+^970Heroes^*
+
+Added New Legion Int hero, ^079Bubbles^*, inspired by Puck the Faerie  Dragon
+^717* ^*Fun Fact: The voice of this hero was  recorded by [I]Robert Jadah[/I], who also voiced Morla The Thousand Year-Old  Turtle for 'The Neverending Story'
+
+^079Balphagore^*
+^292- ^*Un-Dev
+^292- ^*Fixed Recommended Items
+^292- ^*Base armor lowered by 2
+^292- ^*^256Demonic Pathogen^* silence from 1/1.5/2/2.5 seconds to 1/2/3/4 seconds
+^292- ^*^256Demonic Pathogen^* damage from 100 magic DPS to 60 magic DPS
+^292- ^*^256Corpse Conversion^* cooldown from 30 to 20
+^292- ^*Gold bounty from minions from 21/26/36/41  to 10/13/18/20
+^292- ^*Minions now have 3 Magic Armor
+^292- ^*Now takes 30 seconds for charges on his  ult to start disappearing
+^292- ^*His ultimate now gains 0.6 charges per 1%  of enemy mana spent (increased from 0.5)
+
+^079Bloodhunter^*
+^292- ^*Blood Sense now grants full vision of low  HP targets
+
+^079Deadwood^*
+^292- ^*^256Uproot^*'s  Mana Cost from 60 to 30
+^292- ^*^256Uproot^*'s  charges from 5/6/7/8 to 5 at all levels
+^292- ^*^256Willowmaker^*  now casts 100ms faster
+
+^079Devourer^*
+^292- ^*Armor from 1.96 to 2.96
+
+^079Engineer^*
+^292- ^*Base STR from 22 to 20
+^292- ^*Base INT from 19 to 21
+
+^079Fayde^*
+^292- ^*^256Scythe Stance^*  now causes ^256Cull^* to stun and ^256Burning Shadows^* to destroy mana
+^292- ^*^256Shadow Stance^*  now causes ^256Cull^* to destroy mana and ^256Burning Shadows^* to stun
+^292- ^*Fayde now starts in Scythe Stance by  default (this makes Reflection deal Physical damage by default, even  when stances are unleveled)
+
+^079Hellbringer^*
+^292- ^*STR growth from 2.5 to 2.1
+^292- ^*AGI growth from 1.0 to 1.2
+^292- ^*INT growth from 2.7 to 2.9
+
+^079Legionnaire^*
+^292- ^*Armor from 1.8 to 2.8
+
+^079Madman^*
+^292- ^*^256Stalk^*  cooldown lowered by 1
+
+^079Nymphora^*
+^292- ^*^256Grace of the Nymph^*  now only dispels from player-controlled unit damage
+^292- ^*^256Teleport^* no longer displays graphic/sfx to enemies when in fog
+
+^079Pandamonium^*
+^292- ^*^256Cannonball^*  now snares by 60% for 4 seconds instead of stunning when missed
+
+^079Slither^*
+^292- ^*^256Toxin Wards^*  now have 1/1/2/2 charges for placement, decreased from 1/2/2/3
+^292- ^*^256Toxin Wards^*  attack effect changed from -10% Movespeed to -25 Movespeed at all levels
+^292- ^*Fixed tool tip of ^256Toxin  Wards^* displaying the incorrect amount of health
+
+^079Swiftblade^*
+^292- ^*^256Counter-Attack^*  no longer uses real attacks, meaning it will not trigger things like  critical strike, life steal, or ^090Frostburn^*.  It now simply deals damage equal to ^079Swiftblade^*'s  base attack damage.
+
+^970Version 1.0.0.1^*
+-------------
+^292- ^* Fixing a minor UI issue with the new F6 menu while ingame
+
+^970Version 1.0.0^*
+-------------
+^970Release Build^*
+
+^292- ^* Fixed terminating players properly ingame when they left
+^292- ^* Fixed disconnection caused by the terminated player message
+^292- ^* Fixed upside down taskbar icon under Linux
+^292- ^* Fixed matchmaking giving improper point values
+^292- ^* Fixed the black and white box when picking a dev hero
+^292- ^* Fixed MinPSR/MaxPSR not being reset back to 0 when a game ends
+^292- ^* Rate of passive income is now adjusted when a player terminates (Higher with less players)
+^292- ^* Cleaned up create game dialog
+^292- ^* Added a frame that holds the disconnect button on the loading screen
+^292- ^* Updated tooltip description for hardcore mode so it doesn't say items are dropped
+^292- ^* Tweaked Linux resource auto-reloading
+
+^079Balphagore^*
+- Minions spawned by ^256Hell on Newerth^* will now die if their target dies
+- Won't eat ^090Items^*, ^256Wildsoul's Bear^*, or Mechanical units anymore
+
+^970Version 0.3.6^*
+-------------
+
+^970Game Modes^*
+
+^292- ^*Added Dev Hero Mode
+^717* ^*When enabled, Dev Hero Mode allows work-in-progress "development" heroes to be played
+^717*^* All future S2 Hero additions are going to be added as "dev heroes," this allows us to get feedback on a large scale and evaluate balance before including the hero in the stable hero pool
+^717*^* Dev hero mode must be enabled when hosting games. It can be filtered in the game list. Dev heroes will not be used in matchmaking or competitive tournaments
+^292-^* Added new advanced game option "Tournament Rules"
+^717*^* When enabled, allows the host to specify in the game lobby which team gets first ban
+^717*^* Only affects BP and BD gamemodes
+^292-^* Added "Hardcore Mode" advanced game option
+^717*^* No passive gold/sec gain
+^717*^* A creep/hero deny results in 0 experience for the enemy team
+^717*^* A tower deny results in 0 gold for the enemy team
+^292-^* "Item Drop" advanced game option now drops all items on death.
+^717*^* Items dropped on death cannot be picked up by couriers, sold, or killed on the ground.
+^717*^* Items dropped on death can be picked up and used by anyone.
+^292-^* Added 5 seconds to each players pick time in Random Draft (25 -> 30)
+^292-^* Added 5 seconds to transition between bans and picks in Random Draft (15 -> 20)
+
+^970Important Bug Fixes^*
+
+^292-^* When using Runes of Blight on a tree, heroes will now approach from the correct side. (Will now no longer go all the way around a tree to eat it)
+^292-^* Heroes are much less likely to keep blocking each other as they try to run past each other (HUGS!)
+^292-^* Fixed ability tooltips sometimes getting stuck on screen
+^292-^* Fixed an issue causing buying while dead to sometimes not work
+^292- ^*Abilities used from in the fog will no longer originate from the 0,0 position
+^717*^* This includes Devourer's Hook, Electrician's Grip, Pollwog Priest's Tongue Tied, Puppet Master's Puppeteer's Hold and Voodoo Puppet, and Witch Slayer's Mana Drain
+^292-^* Fixed sound system/voicemanager interactions that were causing crashes upon sound system restart
+^292-^* You can now drop an item into an inventory spot with a building under it
+
+
+^970Matchmaking 2.0^*
+
+^292-^* Matchmaking has received some serious revisions that should drastically improve match making quality. Please help us further perfect our match making system by giving it a try and leaving feedback on the forums
+^717*^* Reworked how matches are formed to more consistently replace players who fail to load and to decrease time to find matches for players with exceptionally high or low SMR ratings
+^717*^* Players new to matchmaking must complete 5 provisional matches, in which they will be matched with other new players. If not enough new players are available, they will eventually be matched with regular players. 
+^717*^* Players now have the option to set their initial standing according to general skill level, which affects the types of players they will be matched against. The three options are Beginner, Intermediate, and advanced.
+^717*^* Solo matchmaking uses Banning Draft (BD)
+
+
+^970Ingame Changes^*
+ 
+^292- ^*Added a new keybinding: Direct Pathing (Modifer 3)
+^717*^* When held down and an order is given (Move, Attack, Cast, etc) will move the hero in a direct path towards where you click no matter what is in the way. Ignores cliffs, heroes, and creeps. Useful for chasing through the woods or pushing yourself against a cliff to cast into the river!
+^292-^* Re-arranged some of the shop to put modifers into the correct (bottom) shop. This includes all lifesteal items. Brutalizer and Lightning items are now in the Combat shop. Be wary of your hotkeys!
+^292-^* If you buy an item on a courier then transfer that item to your hero, you can now sell that item for its full value within the 15sec sellback period
+^292-^* Added game option "Minimap Rightclick" (default on). When disabled, the player cannot rightclick on the minimap.
+^292-^* The game will no longer display an incorrect disconnect message indicating that the hero was removed and assets distributed to their team if the disconnected player was a referee or spectator
+^292-^* Fixed disconnect messages appearing twice when a player disconnects in game
+^292-^* Calling a vote to remake, pause or kick (through the console) before the pre-match game phase will no longer work. (ie. only after the players are loaded into the map can they call these.)
+^292-^* If displaying chat timestamps were enabled in game, various game messages sent to both teams were not being timestamped (disconnects, Kongor kills, Barracks destruction, etc). These messages now display the timestamp properly if the client has this option enabled.
+^292-^* New death for the legion main building
+^292-^* Finally took down our Christmas lights...
+^292-^* New Hellbourne sounds and effects for buildings
+^292-^* Random small chest sound/model fixes
+^292-^* The game option "Show exp numbers" is now on by default for new installations.
+^292-^* Added an option "Center Camera on Respawn" that allows users to toggle whether or not the camera will automatically focus on their hero after respawning
+^292-^* Unpause now plays a noise so players are aware
+^292-^* Fixed some neutral NPC sounds playing globally
+^292-^* Updated map to remove texture seams
+^292-^* Added a visible 'corpse' for NPCs dying
+^292-^* Heroes can no longer pickup runes while stunned
+^292-^* Referees are now treated as spectators
+^717*^* Fixes the fog issue, allows them to see the scoreboard, allows them to talk with other referees and spectators
+^292-^* Added some environmental sound effects on Caldavar
+^292-^* Double Tap returns!
+^292-^* Fixed the sound bug where muting someone might not always work
+^292-^* Restrict most actions while the game is paused
+^292-^* Fixed the "Share All" courier button to reset its state at the start of every game
+^292-^* Fixed a bug that occurred when spectators used the "Disable Fog of War" or "Lock Camera" options would see those settings carry over into the the next game they joined or played
+^292-^* Fixed some tooltips for items in the shop
+^292-^* Fixed spectators at 1920x1080 resolution
+
+^970Pre-Game Changes^*
+
+^292-^* Hero icons no-longer react to mouseovers/clicks when there's no hero
+^292-^* The loading race values now start at 1 and end at 10, the old race values should no longer appear when loading the next game
+^292-^* Pressing ALT in the game lobby will now toggle the chat mode between "Team" and "All" chat modes.
+^292-^* Moved the Ping/Players/Version labels in the game lobby a bit to the right as we weren't making use of the space and server names with long names like those we use for South Africa overlapped into these labels
+^292-^* Voice chat indicator/mute button shows up in the hero picker/etc. now (on the inner side of the hero name)
+^292-^* Pressing the "All/Team" button in the game lobby will now set focus to the chat input line
+^292-^* Lobby now has sounds for actions (kick, join etc)
+^292-^* Increase the max spectator slots to 10
+^292-^* Fixed the Alternate Picking crash
+^292-^* The host option "Disband" has been changed to "Disconnect", Upon disconnecting the game server will assign another  player as the host and print a message to the game lobby indicating the transfer of hosting privileges
+
+
+^970General Changes^*
+
+^292-^* Replays now begin recording during the picking phase
+^292-^* Removed the "Tier" filters, columns and inputs from the game browser and create game interface
+^292-^* Added filters, sortable columns and all inputs for Min/Max PSR to the game browser and create game interface
+^717*^* Players may now specify a Min/Max PSR range when creating a game. Min/Max PSR games will appear normally as they would in the game browser and other players may join a game if their PSR falls within 2% of the range the game server Min/Max PSR is set to. (This means a player with 1471 PSR should be able to make it into a game marked Min 1500, and a 1734 player would be able to join a game marked as Max 1700, but those are the very edge of the 2% tolerance, so anything higher or lower would be rejected.)
+^292-^* Games outside of a player's PSR range are grayed out in the game browser similar to the way "No Leaver" games appear to a player with leaver status. If no range is specified when the game is created then no range is enforced. If a player is invited to a game, the server ignores the PSR restrictions for them allowing friends to play in games they may not normally be able to be playing
+^292-^* Added Min/Max PSR to the /gi or /gameinfo commands
+^292-^* The players PSR is now retrieved stored locally on the client when logging in, and is accessible through the UI_CMD() GetPSR()
+^292-^* Removed the ticks, grinds, and blips and whatnot that were playing when the game started up
+^292-^* Added an option "Disable Background Effects" that allows users to toggle whether or not all the background lobby effects and animations are played. (Credit to Pancakeslp for the original mod)
+^292-^* Fixed some buddy request/add notifications playing sounds a bunch of times when logging in if a player had those notifications saved in their history
+^292-^* The Notification Duration slider under options->interface now sets the duration (1-15 seconds) a notification is displayed for
+^292-^* Fixed a number of incorrectly labeled tooltips on the options menu. Disabled the "Health/Mana Bar Scale" in the options
+^292-^* Removed the "Options" menu from the F10 in game menu
+^292-^* Fixed "Add PlayerName" buttons on options menu to align properly and correctly add the player clicked on
+^292-^* Increased max size of joinable channels to 30
+^292-^* Using the slash command /join <channelname> "password" will now attempt to join the channel with the password specified. (Anything in between the quotes at the end becomes the password)
+^292-^* Fixed some issues in the client/interface causing the change password dialogue to not work
+^292-^* Fixed the lock/unlocked tooltip for hosts to display the correct tip (was previously showing the opposite tooltip it should have been showing)
+^292-^* Players can now select Logon/Logoff and Join/Leave Game notification settings for clan members separately from the notifications they select for their friends
+^292-^* Fixed an issue where notifications were not being saved to the history properly
+^292-^* Fixed the default notification time to be 10 seconds instead of 10000
+^292-^* Updated sub-account description
+^292-^* Removed "Show Menu Transitions" from the options menu as the option is not currently being used
+^292- ^*Fixed iris closing sound being heard on disconnect
+^292-^* Fixed "/r" to not reply to a clan whisper automatically with "/c m", instead it will reply directly to the sender with a "/w PlayerName" just like how "/b m" works
+^292-^* Trying out new color for the selected item in listboxes
+^292-^* Fixed the "Show Winner" button on the match stats screen to correctly display and announce the team who won
+^292-^* Fixed sound driver list sometimes showing the current driver incorrectly
+^717*^* This means the sound system will only restart if it is indeed necessary
+^292-^* Fixed a couple places where linux system class was using incorrect character conversions
+^292-^* Added console command "precacheworld <mapname>". So for example type "precacheworld caldavar" to precache its resources
+^292-^* Removed cvar browser_maxPing as it was not being used
+^292-^* Invisible Mode will now remember its state the next time the game re-loads
+^292- ^*Players in "Invisible Mode" will no longer auto join default HoN or Clan channels when leaving a game, allowing them to properly remain in a hidden state
+^292-^* Clicking on the clock in the system bar now toggles between 12 hour and 24 hour display
+^292-^* Re-arranged Public and Create Game interfaces to make more space and added icons/checkboxes for the new "Hardcore" and  "Dev Heroes" game options
+^292- ^*Moved "Alt Hero Picking" on the Create Game interface to an Advanced Option, which is what it is actually categorized as
+
+
+^970Items^*
+
+^090Bananas^*
+^292-^* Can now be sold for 500 gold
+
+^090Doombringer^*
+^292-^* Can no longer be transferred to your stash, manually dropped on the ground, or given to teammates.
+
+^090Frostburn^*
+^292- ^*Snare is now 5% a charge and stacks 3 times
+
+^090Frostwolf Skull^*
+^292-^* Recipe cost increased by 500
+
+^090Geometer's Bane^*
+^292- ^*Now spawns illusions in a triangle and randomizes the position of the hero on use
+
+^090Nome's Wisdom^*
+^292-^* Rebalanced
+^717*^* Strength lowered from 6 to 4
+^717* ^*Agility lowered from 6 to 4
+^717*^* Intelligence lowered from 16 to 14
+^717*^* +Damage lowered from 10 to 6
+^717*^* % Mana Regen removed
+^717*^* Aura armor lowered from 4 to 3
+^717*^* Healing from the Aura tweaked so that if the healing exceeds your max health, a shield of equal value is applied for 10 seconds.
+
+^090Nullfire Blade^*
+^292-^* Fixed so it can now properly dispel Jeraziah's Protective Charm
+^292-^* Recipe will sell for the correct value again
+
+^090Plated Greaves^*
+^292-^* Cooldown increased to 30s, duration lowered to 15s
+^292-^* AOE effect now grants +20% damage but only affects allied non-player controlled creeps
+^292-^* AOE effect no longer grants armor
+
+^090Stormspirit^*
+^292-^* Can now target all heroes (allied and enemy). Can no longer target Kongor.
+
+^090Tokens^*
+^292-^* Can no longer be sold
+
+
+^970Heroes^*
+
+^292-^* Added ^079Balphagore^* as a dev hero. Must host games with the dev hero option enabled to play him
+^717*^* Feedback on this hero is appreciated, as we are still fine-tuning balance and making necessary adjustments
+
+^079Behemoth^* 
+^292-^* Fixed weird shadows with ^256Fissure^*
+
+^079Blacksmith^*
+^292-^* Fixed some issues with multicast and ^256Frenzy
+^* 
+^079Chipper^*
+^292-^* Voice added. Nuts.
+^292-^* ^256Tar Toss^* will no longer apply its slow to Magic Immune units
+^292- ^*^256Sawblade's ^*staff of the master upgrade no longer provides a static 70% movement speed slow. Instead, units who walk into the saw blades will have a 4 second snare applied to them that starts at 90% and quickly reduces in strength over the duration.
+^292-^* ^256Sawblade^* Showdown won't slow couriers anymore
+
+^079Deadwood^*
+^292-^* ^256Clearcutting^* now causes trees to die with a cooler animation.
+
+^079Madman^*
+^292-^* ^256Barrel Roll^* will once again grant invulnerability during the duration of the roll
+
+^079Magmus^*
+^292- ^*^256Lava Surge^* once again provides invulnerability during travel time
+
+^079Engineer^*
+^292-^* Ult to 85s at all levels from 90/75/60
+
+^079Fayde^*
+^292- ^*Voice added
+^292-^* Updated description
+^292- ^*A ton of effect changes
+^292-^* ^256Slice^* renamed ^256Cull^*
+^292-^* Illusions from ^256Burning Shadows ^*now attacks much faster
+^292-^* Illusions from ^256Burning Shadows ^*are back to full size
+^292- ^*Illusions from^256 Burning Shadows^* can no longer be selected or show healthbars
+^292-^* Cooldown on switching between ^256Scythe^* and ^256Shadow Stanc^*e removed
+^292-^* Fayde now starts in ^256Shadow Stance^*
+^292-^* Charges on ^256Shadow/Scythe Stance^* increased to 2,3,4,5
+^292-^* ^256Reflection^*
+^717* ^*Manacost increased to 150,175,200 from 150
+^717*^* Duration changed to 30,35,40 from 40 at all levels
+^717*^* ^256Reflection^* stealth state will no longer have charges that do nothing
+^717*^* Shadow Cripple now reduces all healing on the target by 50% while it's active
+^717*^* Shadow Cripple is no longer dispellable
+
+^079Glacius^* 
+^292-^* Updated ^256Ice Imprisonment^* tooltip to explain that it lasts 10 seconds when casted on creeps
+
+^079Keeper of the Forest^*
+^292-^* Updated ^256Root^* effect to match the area better
+
+^079Legionnaire^*
+^292-^* Added custom sounds for his charge
+
+^079Maliken^*
+^292-^* Updated recommended items
+
+^079Ophelia^*
+^292-^* ^256Command^* will no longer give the bonus HP to couriers she has bought or to heroes/herself in weird situations
+
+^079Pandamonium^*
+^292-^* Voice added
+
+^079Plague Rider^*
+^292-^* Voice added
+
+^079Pollywog^*
+^292-^* Units under the effects of ^256Morph^* can no longer evade or deflect attacks
+^292-^* Cooldown of ^256Wards^* changed from 110/95/80 to 100
+
+^079Pyromancer^*
+^292-^* Fixed a bug causing ult to trigger Nullstone twice (causing the cool down to decrease too much)
+
+^079Soul Reaper^* 
+^292-^* Rewrote some tooltips
+
+^079Witch Slayer^*
+^292- ^*Units under the effects of ^256miniaturization^* can no longer evade or deflect attacks
+^292-^* Fixed a bug causing ult to trigger Nullstone twice (causing the cool down to decrease too much)
+
+^079Valkyrie^*
+^292-^* ^256Call of the Valkyrie^* will now determine the close-range target to get hit twice at the time the ability is used, rather than after a 0.5 second delay
+^292- ^*Tweak leap distance from 630,690,780,840 to 630,720,780,870
+
+^079Vindicator^*
+^292-^* Voice added
+
+^079Voodoo Jester^*
+^292-^* ^256Cask^* now bounces for 2/4/6/8 times, instead of the incorrect 2/4/5/8 times
+
+^079Warbeast
+^*^292-^* ^256Metamorphosis ^*will no longer apply to his courier
+
+^079Wildsoul^*
+^292-^* ^256Wild^* will no longer apply to his courier
+
+^079Zephyr^*
+^292-^* Correctly credit him for damage that his ult does
+
+^970Version 0.3.5^*
+-------------
+^292-^* Fixed the 'terrain being black' bug
+
+^970Items^*
+
+^292-^* Tweaked effects on ^090Frostfield Plate^* to better match the area (thanks to Warchamp7)
+^292-^* ^090Kuldra's Sheep^* stick will now dispel stealth on its target
+^292-^* ^090Monkey Courier^* now has a three second cool down between purchases
+^292-^* ^090Nullfire Blade's^* purge no longer passes through Magic Immunity
+
+^090Tablet of Command^*
+^292-^* No longer be castable on Magic Immune units
+^292-^* Cooldown lowered from 25s to 16s
+
+^090Icebrand^*
+^292-^* Reduced recipe cost by 200
+^292-^* Now uses a ^090Bolstering Armband^* rather than ^090Fleetfeet^*
+^292-^* Removed agility bonus, increased strength to +16 from +15
+^292-^* The movement speed slow now lasts 2.5 seconds when wielded by a melee hero, still 1.5 seconds when wielded by ranged
+^292-^* The slow now stacks in strength with consecutive applications
+^717*^* Each attack applies a stacking 3% movement speed slow. Stacks a maximum of 5 times, for a 15% slow
+
+^090Firebrand^*
+^292-^* Reduced recipe cost by 200
+^292-^* Now uses a ^090Fleetfeet^* rather than ^090Bolstering Armband^*
+^292-^* Removed Strength bonus, increased agility to +16 from +15
+
+^090Frostburn^*
+^292-^* Total cost reduced by 400 (as a result of ^090IceBrand^* and ^090FireBrand^* changes)
+^292-^* Agility and Strength bonuses lowered to +16 each (from +21)
+^292-^* Attackspeed bonus lowered to +20 from +30
+^292-^* The movement speed slow now lasts 3.5 seconds when wielded by a melee hero, 2.5 seconds when wielded by ranged
+^292-^* The slow now stacks in strength with consecutive applications
+^717*^* Each attack applies a stacking 3% movement speed slow. Stacks a maximum of 5 times, for a 15% slow
+
+
+^970Heroes^*
+
+^079Behemoth^*
+^292-^* Tweaked ^256Fissure's^* effects to improve performance
+
+^079Chipper^*
+^292-^* Delay on casting ^256Tar Toss^* reduced to 0.25 seconds (from 0.4), projectile travel time increased to 0.75 seconds (from 0.35)
+^717*^* Increases total delay on the impact by 0.25 seconds
+
+^079Corruped Disciple^*
+^292-^*  Base damage changed to 44^292-^*48 from 44^292-^*52
+
+^079Engineer^*
+^292-^* Damage on ^256Energy Field^* will no longer harm couriers or other splash^292-^*immune units
+
+^079Fayde^*
+^292-^* ^256Guillotine^* is now renamed to ^256Slice^*
+^717*^* The mana destruction is now reduced based on the number of hero targets hit. Destroys 6/12/18/24% of maximum mana, minus 1/2/3/4% per additional target hit (hitting 2 targets would destroy 20% mana each, hitting 3 targets would destroy 16% mana, etc).
+^717*^* Shadow Stance: Stuns for 1/1.5/2/2.5 s
+^717*^* Scyth Stance: Burns Mana
+^292-^* ^256Burning Shadows^*
+^717*^* Now travels 160 units farther
+^717*^* Illusions now attack 1,2,3,4 times and deal 70 damage per attack
+^717*^* Illusions are now smaller so they don't stack over heroes
+^717*^* Illusions will now chase heroes properly
+^717*^* Shadow Stance: Burns Mana instantly when they are hit (same % at Slice)
+^717*^* Scythe Stance: Stuns
+^292-^* ^256Dark Shield^* removed. Replaced with ^256Scythe Stance^* and ^256Shadow Stance^*
+^717*^* On use, switches between Shadow and Scythe Stance
+^717*^* Starts in ^256Scythe Stance^*
+^717*^* No Manacost. 48/36/24/12s cooldown.
+^717*^* Cannot switch Stances if either ^256Slice^* or ^256Burning Shadows^* are in cooldown
+^717*^* Passive component: Blocks damage based on Stance. 50 damage per charge (max 1,2,3,4 charges, gains one charge every 10 seconds). Ignores damage less than 25.
+^717*^* Blocks magic in Shadow Stance. Blocks physical in Scythe Stance
+^717*^* Example: You have 4 charges and are in Shadow Stance. Get nuked by a 300 dmg nuke. All charges removed and nuke damage lowered to 100.
+^292-^* ^256Reflection^* reworked
+^717*^* Still grants stealth and the seamless illusion. Manacost/cooldown/duration unchanged
+^717*^* Illusion no longer gives experience to Fayde
+^717*^* Applies 3 second DoT on attack from stealth and stealth is removed/illusion killed. No longer has extra stealth (exits stealth immediately).
+^717*^* DoT no longer snares
+^717*^* DoT damage set to 75/125/175 DPS. Deals Physical damage by default (in Scythe Stance), deals Magic damage in Shadow Stance.
+^717*^* Invibility from the ult is not removed when changing between Shadow/Scythe Stances
+
+^079Forsaken Archer^*
+^292-^* Base damage tweaked to 44^292-^*50 from 40^292-^*51
+^292-^* ^256Call of the Damned^* can now be toggled to prevent skeletons from instantly spawning when killing units. Instead, it will build up charges which can be used at will to spawn skeletons at a later time.
+
+^079Hellbringer^*
+^292-^* ^256Unholy Shackles^* attack + movement speed slow lowered to 20/30/40/50% from 30/40/50/60%
+^292-^* ^256Summon Malphas^* mana cost increased to 200/300/400 from 200/250/300
+
+^079Ophelia^*
+^292-^* Number of controllable creeps reduced to 1/1/2/3 from 1/2/2/3
+
+^079Thunderbringer^*
+^292-^* Fixed an issue causing the passive third ability to play an overly loud sound
+
+^970Version 0.3.4.1^*
+-------------
+^292-^* Fixed Fayde's tooltip for Reflection to correctly state that the Illusion is killed when she lands her first attack from stealth.
+^292-^* Fixed Fayde's model to not be a teapot. Sorry if you like teapots.
+
+^970Version 0.3.4^*
+-------------
+Join the discussion about this patch on the forums:
+http://forums.heroesofnewerth.com/showthread.php?t=107393
+
+^970General^*
+
+^292-^* Life Steal items, except for ^090Abyssal Skull^*, are now exclusive attack modifiers (will not stack with ^090Frostburn^*, ^090Frostwolf's Skull^*, etc)
+^292-^* Dominating neutral creeps (using ^079Ophelia^* or ^090Whispering Helm^*) will no longer cause the dominated creep's camp to stack less than 3 times total
+^292-^* :Doombringer: A ^090Doombringer^* can no longer be killed, transferred to your stash, sold, or held by a courier / Wildsoul bear. Once someone buys a ^090Doombringer^*, it's in the game for good!
+^717*^* NOTE: This means that if you buy a ^090Doombringer^* on a courier / Wildsoul bear, then it will immediately drop the Doombringer. Beware!
+
+^292-^* Matchmaking will now sort players from top to bottom according to SMR
+^292-^* Fixed an issue where the loading race number carries over to the next game, it should be reset properly each match now
+^292-^* Right clicking images for the various game mode/options on the "Join Game" notification should now close the notification properly
+^292-^* "Official" and "Official - No Stats" icons properly appear in the first column in the game browser now with their appropriate tooltip
+^292-^* Hovering over locked or unlocked slots in the game lobby will display the appropriate "Locked" or "Unlocked" tooltip now
+^292-^* Fixed the Jail Bars appearing mis-aligned when a player is locked on the Hellbourne side in the game lobby
+^292-^* Fixed the right click host visible menu appearing half cut-off if used on the Hellbourne side of the game lobby
+^292-^* Added an tooltip to the host's lock/unlock button indicating that slots can not be locked in the "Auto Balanced" game mode
+^292-^* Empty hero picker icons no longer react to mouseover/clicks as if they're active
+
+^292-^* Fixed an issue where players who tried to add friends during the first few days of open beta experienced issues trying to request new friends got a message indicating they had already requested them and needed to wait. They should no longer need to wait any longer than 60 seconds to re-request their a friend
+^292-^* Fixed an issue where certain players would always be flagged with a PSR of "N/A", resulting in 100% win chance for their team
+^292-^* The notification history now adds the most recent notifications to the top of the list
+^292-^* Fixed a small animation on the effect indicators
+^292-^* Fixed a bug which caused music to not loop
+^292-^* Removed that non working update button
+^292-^* Sending buddy/clan whispers to players in /afk mode will no longer return a response indicating that the player was AFK with the reason
+^292-^* If a player wishes to not see buddy/clan whispers they can use /dnd mode and it will stop those messages from being delivered to them
+
+^292-^* Startup.cfg fixes (credit to Notausgang)
+^717*^* SetSave is now properly quoted and escaped
+^717*^* BindButton, BindImpulse, etc is now properly escaped
+^717*^* Alias is now properly quoted and escaped
+
+UI modding enhancements (credit to Notausgang/Tisser):
+^292-^* Added new UI function IsEnabled. (Credit to Tisser)
+^292-^* Added a new UI function EscapeString(str). It scans the input string for any \ or ' characters and adds a backslash before them
+^717*^* Don't do this twice to the same string! That will likely cause the result to be invalid
+^292-^* Added new UI_CMD() AddTemplateListItemWithSortReversed() that takes the same parameters as AddTemplateListItemWithSort() but adds the newest elements to the top of the list instead of the end (so the newest item appears at the top of the widget.)
+
+
+^970Items^*
+
+^090Barbed Armor^*
+^292-^* Fixed it returning damage to owners of gadgets that deal damage (^079Voodoo's^* ^256Ward^*, ^079Defiler^* ^256Spirits^*, etc)
+
+^090Hellflower^*
+^292-^* Damage multiplier is now constant while the effect is on them (+20%), not a burst at the end
+^292-^* Now perplexes
+
+^090Mock of Brilliance^*
+^292-^* Damage will not be dealt if a Courier holds the Mock
+
+^090Nomes Wisdom^*
+^292-^* Recipe cost increased to 600 from 260
+
+^090Restoration Stone^*
+^292-^* Now properly gives the sum of it's parts in bonuses
+
+^090Savage Mace^*
+^292-^* Damage increased to 88 (proper sum of it's parts)
+
+
+^970Heroes^*
+
+New Hellbourne Agi Hero ^079Fayde^*
+
+^079Armadon^*
+^292-^* Sped up the quills for his ^256quill spray^*
+
+^079Behemoth^*
+^292-^* Fixed Announcer
+
+^079Blacksmith^*
+^292-^* Fixed a small ^256Multicast^* issue
+
+^079Chipper^*
+^292-^* Reduce walk noises by 66%
+^292-^* Tweak footsteps, more organic sounding
+^292-^* Mana cost of ^256rockets^* set to 50/60/70/85 from 50/65/80/95
+^292-^* Hitting a target with ^256rockets^* within 175 units will now deal full damage, rather than half
+^292-^* ^256Tar Toss^* is now Physical instead of Magic, but can be removed by Purge, Shrunken Head activation, etc
+^292-^* Reworked ^256Focus Buffer^*
+^717*^* Now absorbs 150/300/450/600 Magic damage
+^717*^* Buff lasts 20 seconds
+^717*^* 20 second cooldown
+^292-^* ^256Sawblade Showdown^* can now be boosted by Staff of the Master
+^717*^* Increases range to 1000 from 700
+^717*^* Applies a 70% snare to all enemies inside of the saws
+
+^079Corrupted Disciple^*
+^292-^* Recommended Item tweaks
+
+^079Engineer^*
+^292-^* Fixed the ^256turret^* sometimes not being able to fire the last 2 shots of the burst
+^292-^* Fixed the ^256turret^* not using 1/16th of its mama per shot when it got more mana
+
+^079Pharaoh^*
+^292-^* ^256Tormented Soul^* no longer draws on the minimap
+
+^079Slither^*
+^292-^* ^256Ward^* health lowered to 60/110/160/210
+
+^079Swiftblade^* 
+^292-^* Movespeed lowered by 5
+
+^079Torturer^*
+^292-^* Radius of the stun is now consistent across all levels at 225
+
+^079Valkyrie^*
+^292-^* ^256Call of the Valkyrie^* cast time reduced from 1.33s to 0.6s
+
+^970Version 0.3.3.2^*
+-------------
+^292- ^* Units that can't carry items can no longer pick up chests
+^292- ^* Fixed -1 bug... AGAIN.
+^292- ^* Fix not receiving the proper experience for killing heroes.
+^292- ^* Sage's Lore will now be properly dispelled from Wildsoul if he activates Wild or Battle Cry
+^292- ^* Wildsoul will now properly be silenced when activating Wild or Battle Cry and is standing within range of Vindicator's aura
+
+^970Version 0.3.3^*
+-------------
+^292- ^* Sending a whisper to a player who is not online will now return a message indicating the player is not online
+^292- ^* The updater no longer crashes when a file doesn't exist (such as tos.txt)
+
+^079The Chipper^*
+^292- ^* Fixed a bug with Focus Buffer. I was dividing by zero. The universe almost ceased to exist. You can thank me later.
+
+^970Version 0.3.2^*
+-------------
+^970General^*
+^292- ^*Neutral Creep camps (Normal and Ancient)  can now only be stacked up to 2 additional times (3 Stacks Total)
+^717* ^*Exception are the smallest camps, which  have no limit still
+
+^292-^* Selling wards of sight / puzzlebox recipe within the 15s grace period  will now restock the shop.
+^292- ^*The weak neutral creep camp on Hellborne  side can no longer be pulled into the lane.
+^292- ^*Any teammate can now take ^090Wards of Sight^* and ^090Wards of  Revelation^* from a courier, regardless of who purchased them
+^717* ^*Previously either the courier owner or  the purchaser of the wards had to manually give the wards to a teammate;  now the teammates can take it by themselves
+^292- ^*Activating a courier's "^256Transfer Items to Hero^*" ability (3rd ability)  will automatically transfer any ^090Wards of Sight^*  and ^090Wards of Revelation^* from the courier  to your inventory, regardless of who purchased them
+^292- ^*Pets can no longer pick up ^090Token of Life^*, ^090Token of  Sight^*, ^090Token of Stealth^*, or ^090Bananas^*
+^717* ^*No more ninja'ing the token with a flying  courier / ^079Wildsoul^*'s bear
+^292- ^*Consumables (^090Health  Potions^*, etc) purchased by different teammates will no longer  combine together on couriers
+^292-^* Ordering multiple units at a time will no  longer artificially inflate your APM
+
+^292- ^*Added a Message of the Day upon logging  in
+^292- ^*The following changes pertain to players  using "invisible" mode:
+^717* ^*They will now appears as "offline" if a  /whois or "User Information" is done on them
+^717* ^*They will no longer be able to  send/receive whispers, send/receive IM's, and send buddy/clan whispers,  however they will still be able to receive buddy/clan whispers.
+^717* ^*They will now properly see all their  online buddies/clan members when logging in
+^292- ^*Removing yourself as a buddy now fails  with an appropriate error message.
+^292- ^*When a buddy approves a friendship  request, the person who requested it will no longer see "You are now  friends with <yourname>." They will correctly see "You are now  friends with <buddyname>."
+^292- ^*Fixed right clicking a buddy to display  the appropriate menu choices the first time they are clicked (instead of  the second)
+^292- ^*Fixed Team/All chat to remember it's  previous state, so when navigating to another channel and coming back to  the game lobby it will properly show the last chat type that was used
+^292- ^*When in the game lobby, clicking the  "Send" button will now return focus to the text input
+^292- ^*Fixed some of the right click menu  options either not appearing or not working
+^292- ^*Fixed banning/unbanning someone from a  chat channel, it should now work properly when used
+^292- ^*Adding a user to your ignore list will  stop all incoming buddy requests from the ignored user
+^292- ^*Players can only request the same person  as a buddy once every 5 minutes now
+^292- ^*Fixed joining and leaving clan channels  with long names
+^292- ^*IM notifications only pop up once every 2  minutes now, however the IM count and any IM conversations will still  be updated real time.
+^292- ^*Fixed chat channels saving
+^292- ^*Added additional flood protection to the  chat server when requesting a buddy or approving a buddy.
+^292-^* Arranged matches should now be reported  to clan members and buddies, but the join notification  will not show a  "Join Game" button, it will merely be informational
+^292-^* Using a /whois or "User Info" on another  player in a matchmaking game should display their  information correctly  now
+
+^292- ^*Implemented the community mod "Chat  Textbox Improvements" for the game lobby, credit to slime73 for this  contribution
+^717* ^*Clicking anywhere on the chat window will  set focus to the text input
+^717* ^*Pressing escape will remove focus from  the text input if it has no text, if there is text it will clear it  without removing focus. You can then press escape again to remove focus
+^717* ^*This fixes an issue where currently focus  is forced to the chat window and doesn't allow players to use VOIP for  the in the game lobby
+
+^292- ^*Fixed matchmaking epic clock ticks
+^292- ^*Fixed matchmaking ratings being -1 (For  reals this time)
+
+
+^970Heroes^*
+
+New Legion Intelligence  Hero: ^079The Chipper^*
+http://i39.tinypic.com/52vc3.jpg
+
+^079Devourer^*
+^292- ^*^256Hook^* cast  time decreased to .3 from .41
+
+^079Engineer^*
+^292-^* Tokens and Bananas are no longer cloned  to the ^256Turret^*
+
+^079Kraken^*
+^292- ^*Fixed Ult grabbing gadgets/PsuedoPets
+
+^079Maliken^*
+^292- ^*Texture fixes
+
+^079Pollywog Priest^*
+^292- ^*Fixed the weird LOD model stuff
+
+^079Slither^*
+^292- ^*^256Toxin Ward^*  health rebalanced to 100,150,200,250 from 75,150,225,300
+
+^079Swiftblade^*
+^292- ^*Debuff while using level 4 ^256Blade Frenzy^* is now -50% Attack Speed instead of  -55 Attackspeed
+
+^970Version 0.3.1.1^*
+-------------
+^292- ^* Fixed replay compatizing to hot-fixed server versions (0.1.66.1)
+^292- ^* Fixed instances of list items staying highlighted when they shouldn't
+
+^970Version 0.3.1^*
+-------------
+
+^970General^*
+
+^292- ^* Fixed disassembled items losing owner information, thus not letting them combine with other items
+^292- ^* Fixed a crash when selecting a chest containing a token of life or cheese
+^292- ^* Fixed unable to purchase from the shop while dead
+^292- ^* Reconnect window will no longer show if game is over (conceded) and you leave
+^292- ^* Show disconnect button in interface as soon as there is a winner (i.e. when a concede vote passes)
+
+^292- ^* Updated French stringtables
+^292- ^* Fixed downloading backwards compatibility archives after using the 0.3.0 installer
+^292- ^* Fixed issues with out of sync backwards compatibility archives
+^292- ^* Fixed a crash when starting old version replays
+^292- ^* Reset playback speed when closing a replay
+^292- ^* Updated how the "Automatic" create game functionality works
+^717*^* Previously it used the first server it recieved a valid response back from. Now it grabs a server only from the region last selected
+
+^970Interface^*
+
+^292- ^* Fix Team/All chat switching on phase changes during hero slection (Yes, this was just as annoying to us)	
+^292- ^* Player Stats screen now has a dropdown box to show Ranked Stats and normal play stats, which are now seperate
+^292- ^* Added functionality to the UI option "Disable All Notifications" that turns off all popup  notifications, but still records notifications to the history.
+^292- ^* Added new  option "Disable Notifications In Game" that turns off popup notifications in game,  but still fires them when not in a game.
+^292- ^* Added a "Remove All Notifications" button to the bottom of the notification history, clears out  all notifications when used
+^292- ^* Fixed buddy invites so when a user ignores or accepts the other persons friendship, the original  buddy request notification in their history is removed
+^292- ^* Added space to buddy/clan/notification count to allow for counts 3 digits in length
+^292- ^* Fixed "Disband Game" confirmation popping up for players who clicked "Disconnect" in their game and were not the host
+^717*^* Added a "Disconnect from Game" confirmation instead for players who are in the game and not currently hosts when they click "Disconnect"
+^292- ^* Added SMR/TMR listing in a player's stats
+^292- ^* Fixed a problem where users could become silenced for excessively long times
+^717*^* So for example a user types /silence "name" 9999999999, and they end up getting silenced in the channel for over a month. Now, /silence name 999999999 will silence them for a month, but if /silence name 1 is used afterwards, they will only be silenced for 1 minute.
+^292- ^* Added Russian back to lang selector
+^292- ^* Fixed EM % in stats page rounding correctly
+
+^970Matchmaking^*
+
+^292- ^* Fixed leavers able to join matchmaking
+^292- ^* Players who try to join matchmaking with no region selected will now be given an error and told to select a region
+^292- ^* Fixed server not reading the proper rating value for matchmaking
+^717*^* Caused -1 rating and players always gaining/losing 20 points no matter what
+^292- ^* Added better feedback and information for when someone fails to load and how long the game will wait before disbanding
+
+^970Mac/Linux^*
+
+^292- ^* Added Exclusive mode for OS X
+^292- ^* Fixed a memory leak that was crashing OS X client
+^292- ^* Mac mods should now be installed to /Users/<username>/Library/Application Support/Heroes of Newerth
+^292- ^* Linux mods should now be installed to ~/.Heroes of Newerth
+
+^970Heroes^*
+
+^079Pharaoh^*
+^292- ^* Slight tweak to how the 'mummy grab' works to fix a control issue
+
+^970Version 0.3.0.2^*
+-------------
+^292- ^*Fixed the US Regions for Matchmaking
+^292- ^*Disabled custom avatars...
+
+^970Version 0.3.0.1^*
+-------------
+^292- ^*Fix joining game on the game list
+^292- ^*Fix game lobby enter key not working sometimes
+
+^970Version 0.3.0^*
+-------------
+
+^292- ^*New Front End Interface
+^292- ^*Solo Automatic Matchmaking
+^717* ^*With one button you can enter the queue  for as many different regions as you want and play with random other  people automatically. This does not use PSR, it uses SMR (Solo  Matchmaking Rating) and everyone starts at 1500. Mode is Banning Pick.
+^717* ^*Players tagged as "leavers" can not join  Matchmaking
+^717* ^*Players who leave a game before it starts  (during the 'loading' phase of a game) will automatically be replaced  by someone else.
+^717* ^*If you leave a Matchmaking game at the  hero selection screen, you will get a leave
+^292- ^*Tutorial
+^717* ^*New ingame interactive Tutorial to help  new players learn the basics of the game before diving in. Even  experienced players might learn something!
+^292- ^*New Player Stats screen
+^717* ^*Including your most played heroes!
+^292- ^*Hero Compendium
+^717* ^*See detailed stats and recommended items  about every hero
+^292- ^*Ingame Ladder page
+^717* ^*Search and filter the ladder to compare  yourself to those at the top. Any number of options can be turned on and  filtered!
+^292- ^*New Game Lobby
+^292- ^*New Hero Picking screen
+^717* ^*Now with 12 more slots for new heroes! How did we do that?!?
+
+
+^970General^*
+
+^292- ^*You can now swap the placement of the  minimap from the bottom left to bottom right hand corner
+^292- ^*Leaver threshold lowered to 5%
+^292- ^*Fix for StatusStealth
+^717* ^*This fixed an issue that was causing ^079Witch Slayer^* and ^079Pollywog  Priest^*'s crowd control abilities to dispel all states off  the target
+^292- ^*Updated br stringtables, thanks to  Trilles
+^292- ^*Recommended Items Updated
+^292- ^*Item cursor now changes to a targeting  cursor when hovering over an allied unit
+^292- ^*Stacked items (runes of blight, mana  potions, health potions) will now sell for their full total value within  15 seconds of purchasing them. (e.g. if you buy two health potions for  200g then sell them within 15sec, you will now correctly gain 200g)
+^292- ^*^090Logger's Hatchet^*  can now be sold within 15 seconds of buying it (but not if you used it)
+^292- ^*Added "Host:" and "Version:" to the  /gameinfo and /gi commands in game, also added the server version for  display in the game lobby screen
+^292- ^*Fixed when heroes were 'running in place'  after using a Homecoming Stone
+^292- ^*Added messages to the game lobby for the  following actions:
+1) When the host assigns someone as the new host
+2) When the host assigns someone as a spectator
+3) When the host assigns someone as a referee
+4) When the host locks or unlocks a slot
+^292- ^*Removed 'remove hero' button in practice  mode for now
+^292-^* Tweaked the position of ancients
+
+^292- ^*Invisible Mode added
+^292- ^*Fixed a bug in the game setup interface  where referee count was incorrectly being set to the count of spectators  chosen
+^292- ^*Fixed a bug in the game lobby where the  current player count exceeded the max player count in games with  spectators(2) and referees(1). e.g. "Players: 13/10". Now shows the  correct max player count to match the main lobby game browser numbers.  e.g. "Players: 13/13"
+^292- ^*Added flood protection to the chat server  to protect against invite to clan spam and create clan attempts
+^292- ^*Fixed an issue causing the change  password functionality in game to not work correctly.
+^292- ^*Fixed an issue on the chat server where  in certain cases players were not properly being promoted/demoted
+^292- ^*Optimized client code so game server  refreshes should no longer hang the client or user interface.
+^292- ^*Chat channels can now be saved via the  interface and will be automatically joined when logging in.
+^292- ^*Added new "Ping" filter next to the "Full  Games" checkbox. It filters the results on the client so only pings  less the chosen number populate the game list
+^292- ^*Added a new filter option to the server  browser "Game Mode:" section called "Advanced". It allows players to  filter multiple game modes (ie. SD, BD, BP) all at once locally in the  client. Upon selecting 'Advanced' a small panel pops up and the player  can choose the game modes they want to see in the game list just by  selecting the appropriate checkbox then clicking OK
+^292- ^*Default SFX volume down to 0.6 from 0.7
+^292-^* Fixed an issue with the chat server where if a user sent a message   using /b or /m and someone on one of those lists was in /dnd mode, it   wouldn't send the message to all the people on the list.
+^292-^* Overhauled how adding buddies/friends works.  You now must request   friendship before someone is actually added as your friend.
+^717*^* You can request friends when offline and they will get the  notifications  upon logging in, and approve at their convenience
+^717*^* We might have to wipe current friends lists at some point in the  future for this to work correctly.
+
+^292- ^*Added new search support for filtering  games by name:
+^717* ^*Added feature to allow players to type in  multiple search phrases. By typing a search phrase and adding a ?|? the  client will distinguish one phrase from another. The browser will then  search the available games and show any games showing any one of the  phrases separated by a "|".
+^717* ^*Added feature to allow players to exclude  certain games based on the search phrase. By typing in a "-" at the  beginning of the search phrase the client will automatically filter any  games with "Phrase" to not show up. Note that exclusion of search terms  takes precedence over inclusion. (Excluding a term, and then trying to  include the same term will cause it not to appear, ie ?noobs|-noobs?)
+^717* ^*The "|" and "-" can be escaped with a "\"  should the player want to search on a game with the pipe or hyphen in  it.
+^717* ^*All searches are color and case  insensitive, and the order that the search phrases are entered have no  effect on how they will display. So "1500|-no ab" is the same as "-no  ab|1500".
+
+Some examples:
+^717*^*Search Phrase: "1550|1600|1650|-no  ab|-noobs" - This searches on any game with "1550", "1600", and "1650"  in the name, and if it has the words "no ab" or "noobs" in it it will  not display.
+^717*^*Search Phrase: "-no  ab|1500|1550|-countryname|ab" - This searches on any game with "1500",  "1550" and "ab" in the name, and if it has the words "no ab" or  "countryname" in it it will not display.
+^717*^*Search Phrase: "1500|\-SDEM|pipe\|test" -  This searches on any game with "1500", "-sdem" and "pipe|test" in the  name.
+
+Kongor
+^292- ^*If you attack him from outside of his  lair you will have 100% miss now
+^292- ^*After leaving his lair, 1.5 seconds later  he retreats to go back in and is invuln on the run back
+^292- ^*Is now 40% angrier
+
+Ice Ogre
+^292- ^*Cooldown of the frost shield increased by  4 seconds (to 5s)
+
+
+^970Items^*
+
+^090Barrier Idol^*
+^292- ^*Fixed a bug that caused it to absorb huge  damage when damage taken was all at once
+^090Elder Parasite^*
+^292- ^*Incoming damage multiplier reduced to  20%, from 30%
+^090Harkon's Blade^*
+^292- ^*Increases manacost per attack to 75 from  50
+^090Nullstone^*
+^292- ^*Recipe cost reduced to 825 from 1325
+^292- ^*Mana regen increased to 200% from 150%
+^292- ^*Now grants +10 damage
+^090Runes of the Blight^*
+^292- ^*Heal over time is no longer dispellable
+^090Wards of Sight^*
+^292- ^*Now have a 50 gold bounty when killed
+
+
+^970Heroes^*
+
+The following auras can now be toggled between all units and heroes  only:
+^292- ^*^079Andromeda^*'s  ^256Dimensional Link^*
+^292- ^*^079Arachna^*'s  ^256Precision^*
+^292- ^*^079Moon Queen^*'s  ^256Lunar Glow^*
+
+^079Accursed^*
+^292- ^*Fixed ^256Flame  Consumption^* to go off anytime he is below 400 health and takes  non-fatal damage
+^292- ^*Fixed ^256Flame  Consumption^* to properly dispel himself when it automatically goes  off
+^292- ^*Fixed ^256Sear^*  so it continues to apply the slow and the buff while his ultimate is  active
+
+^079Andromeda^*
+^292- ^*Rescaled ult range to 750/975/1200 from  600/900/1200
+
+^079Armadon^*
+^292- ^*Added cast effect for throwing snot
+^717* ^*This is a visual effects change
+^292- ^*Charges gained from ^256Restless^*  are not longer capped at 4
+
+^079Behemoth^*
+^292- ^*"Voice"
+
+^079Blacksmith^*
+^292- ^*Lowered base armor by 1
+^292- ^*Base Damage lowered to 54-60 from 58-64
+^292- ^*^256Flaming Hammer^*'s  projectile speed lowered to 800 from 1100
+^292- ^*^256Flaming Hammer^*'s  negative magic armor starts at -1/-2/-3/-4 for the first 1 second, then  reduces to 0 over its duration.
+^292- ^*Base Manacost of ^256Flaming  Hammer^* increased to 95/110/125/140 from 95/105/115/125
+
+^079Blood Hunter^*
+^292- ^*^256Blood Sense^*  now reveals stealth targets
+
+^079Chronos^*
+^292- ^*Manacost on ^256Time  Leap^* increased to 135 from 120
+^292- ^*^256Time Leap^*  damage lowered by 25 at all levels
+^292- ^*^256Curse of Ages^*  now steals 1/1/2/3 agility per charge, decreased from 1/2/3/4
+^292- ^*^256Curse of Ages^*  now stuns the target after 5 attacks, increased from 4
+^292- ^*Targets stunned by ^256Curse  of Ages^* will now properly play their attack animation when the  stun wears off
+^292- ^*Stun from ^256Curse of  Ages^* now scales as a .25,.5,.75,1 second stun from 1 second at  all levels
+^292- ^*^256Chronofield^*  won't freeze invulnerable targets anymore (Such as ^079Swiftblade^*  ulting or ^079Defiler^*'s ult)
+^292- ^*^256Chronofield^*  now freezes everyone by default, with ^090Staff of the  Master^* lets allies move at -80% speed in the field
+
+^079Corrupted Disciple^*
+^292-^* Top end base damage lowered by 5
+
+^079Dark Lady^*
+^292- ^*Turn rate increased to 900 from 360
+^292- ^*^256Dark Blades^*  don't interrupt movement, cast time removed
+
+^079Deadwood^*
+^292- ^*Proper announcement at hero selection
+^292- ^*Rebalanced:
+^292- ^*Base strength lowered to 23 (from 25)
+^292- ^*Strength Gain lowered to 2.7 from 3.0
+^292- ^*Agility Gain increased to 2.0 from 1.6
+^292- ^*Base Armor increased to 2.24 from 1.24
+^292- ^*Slow from throwing the log increased to  75% max from 60% max
+^292- ^*^256Oakbolt^*'s  slow now lasts for 1.5/2/2.5/3 seconds, from 3 seconds at all levels.
+^292- ^*Projectile speed when throwing a log  increased to 1200 from 1000
+^292- ^*^256Willowmaker^*
+^717* ^*Cooldown rescaled to 85,75,65
+^717* ^*Cast point lowered to 500ms from 750ms
+^717* ^*Damage rescaled to 350, 650, 950 from  400,600,800
+^717* ^*Debuff is now a constant 20% strength  reduction at all levels from 20,30,40%
+^717* ^*No longer splashes the debuff in a cone,  only the single target
+^717* ^*Stun duration increased to 1.5s from 1s
+
+^079Demented Shaman^*
+^292- ^*Base Intelligence lowered to 24 from 27
+^292- ^*Strength Gain lowered to 1.8 from 1.9
+^292- ^*Intelligence Gain lowered to 3.0 from 3.4
+^292- ^*Damage rescaled to 44-56 from 41-59
+^292- ^*The snare from Entangle will now give  assists
+
+^079Devourer^*
+^292- ^*No longer gains strength from illusions
+^292- ^*Touch radius of ^256Hook^*  changed from 60 to 75 and will consistently hit targets with a 75  radius regardless of what angle it is being thrown
+
+^079Electrician^*
+^292- ^*Damage of ^256Clensing  Shock^* against summoned units increased to 600,800,1000 from 600  at all levels
+
+^079Engineer^*
+^292- ^*Voice
+^292- ^*Fixed a ^256Turret^*  bug that a bullet from the ^256Turret^* doing  200+ damage
+^292- ^*Fixed a bug causing the splash damage  when a siege unit debuffed by Tinker to not deal AOE damage
+^292- ^*^256Energy Field^*  will only not purge a target if they are under the effects of ^090Shrunken Head^*
+^717* ^*This means the shield will purge off ^079Jeraziah^*'s ^256Charm^*,  for example.
+
+^079Forsaken Archer^*
+^292- ^*Voice
+^292- ^*^256Skeletons^*  now display a timer on the third ability indicating the time remaining  for the next skeleton to expire (Thanks to Tisser)
+
+^079Glacius^*
+^292- ^*Base Agility increased to 17 from 16
+^292- ^*Damage rescaled to 43-51 from 38-44
+^292- ^*Base Armor increased to 1.44 from 1.24
+
+^079Hellbringer^*
+^292- ^*^256Summon Malphas^*  now has new ground effects
+^292- ^*Negative Magic Armor is now -3,-4,-5,-6  from -2.7,-5.1,-6.9,-8.3
+
+^079Jeraziah^*
+^292- ^*Fixed tooltips (a few errors)
+^292- ^*Range of ^256Inner  Light^* increased to 500 from 400
+
+^079Keeper of the Forest^*
+^292- ^*Eyes are now stealthed and become  revealed when a hero comes into the 450 reveal range (from 300)
+^717* ^*This stops couriers from killing eyes  unless a hero is nearby to spot them
+^292- ^*^256Root^* can now  be seen even when he is invisible
+^292- ^*^256Root^* now  hits units in fog
+
+^079Legionnaire^*
+^292-^* Base Int increased to 17 from 14
+^292- ^*^256Terrify^*  removed
+^292- ^*^256Terrifying Charge^*  Added
+^717* ^*The ^079Legionnaire^*  charges very quickly at a target foe and swings wide with his mighty  axe upon reaching them, dealing damage and Terrifying those unfortunate  enough to be standing there. Terrified enemies attack very quickly, but  do less damage per attack.
+^717* ^*1000 Range, 40/50/60/70 Manacost, 30s  Cooldown
+^717* ^*Charges at max movespeed towards the  target. Being stunned, losing sight of the target, or issuing another  command will cancel the charge early. Upon reaching the target, forces  an attack that deals 150/200/250/300% of your base damage and applies  Terrify for 4/5/6/7 seconds to all enemies in a 110 degree 240 distance  cone.
+^717* ^*If the target gets more then 2000 units  away (Such as from using teleport) the charge will cancel
+^717* ^*Terrify debuff: -50% Attack Damage, +50%  Attack Speed
+
+^079Madman^*
+^292- ^*Snare debuff stuff removed from ^256Stalk^*
+^292- ^*Manacost of ^256Berserk^*  changed to 50,80,110 from 100,150,205
+
+^079Maliken^*
+^292- ^*Model cleaned up
+^292- ^*Voice
+^292- ^*Stats tweaks:
+^717* ^*Base Strength increased to 24 from 22
+^717* ^*Strength gain increased to 2.6 from 2.4
+^717* ^*Agility gain lowered to 2.0 from 2.4
+^717* ^*Base Intelligence lowered to 17 from 18
+^292- ^*Speed of ^256Sword  Throw^* projectile increased to 850 from 700
+^292- ^*Radius of ^256Sword  Throw^* lowered to 200 from 225
+^292- ^*Manacost on ^256Sword  of the Damned^*'s heal mode removed
+^292- ^*Self hurt from ^256Sword  of the Damned^*'s flame mode changed to 6,9,12,15 from 5,10,15,20
+^292- ^*Range while under the effects of ^256Possession^* reduced to 550 from 600
+
+^079Night Hound^*
+^292- ^*Base movement speed increased to 305 from  300
+^292- ^*Smoke Bomb cast range increased to 425  from 350
+^292- ^*Smoke Bomb cast point reduced to 200 from  400
+^292- ^*Pounce cooldown rescaled to 20,15,10,5  from 30,20,10,5
+
+^079Nymphora^*
+^292- ^*Fixed targeting circle radius
+^292- ^*Base Agility lowered to 18 from 22
+^292- ^*Base Armor lowered to 2.00 from 2.08
+^292- ^*Stun from ^256Nymphora's  Zeal^* is now 1200 range at all ranks (from bad)
+^717* ^*Charges Nymphora gains rescaled slightly  so the bonuses are zero at level 1 and the same at level 4
+
+^079Ophelia^*
+^292- ^*New effects for first ability
+^292- ^*^256Command^* now  allows ^079Ophelia^* to control 1/2/2/3  creeps at once, from 1/2/3/3
+^292- ^*Level 4 of ^256Command^*  no longer grants Magic armor to Ophelia's creeps
+
+^079Pebbles^*
+^292- ^*New death
+
+^079Pharaoh^*
+^292- ^*Anyone within 175 units of ^079Pharaoh^* will be gauranteed to be caught  inside of his mummy wall on use
+
+^079Plague Rider^*
+^292- ^*Agility Gain lowered to 1.8 from 2.0
+^292- ^*Damage rescaled to 42-51 from 37-56
+
+^079Pollywog Priest^*
+^292- ^*Remodeled and effects redone
+^292- ^*Range increased to 550 from 500
+^292- ^*Base Armor increased from 1.14 to 1.30
+^292- ^*Number of targets hit by ^256Electric Jolt^* is no longer capped
+^292- ^*Cooldown of ^256Voodoo  Wards^* is now 110/95/80 from 110 at all levels
+
+^079Predator^*
+^292- ^*"Voice"
+
+^079Puppetmaster^*
+^292- ^*^256Puppeteer's Hold^*  duration lowered by .5 seconds at all levels
+
+^079Pyromancer^*
+^292- ^*Fixed ^256Fervor^*  doing 1 DPS too much to buildings
+^292- ^*^256Fervor^* set  not to propagate to illusions
+
+^079Slither^*
+^292- ^*Wards bounty to 10-15 from 3-9
+
+^079Soul Reaper^*
+^292- ^*Base Agility increased to 16 from 15
+
+^079Soulstealer^*
+^292- ^*Dread can no longer be toggled. This  fixes the keybinding issues.
+
+^079Succubus^*
+^292- ^*Voice
+^292- ^*Manacost of ^256Succubus'  Hold^* is now 150/250/350 from 200/300/400
+
+^079Thunderbringer^*
+^292- ^*Cast times of all abilities lowered to  300ms from 400ms
+^292- ^*Damage from ^256Chain  Lightning^* is now instant on the first target
+^292- ^*AOE of ^256Lightning  Rod^* increased to 1000 from 800
+
+^079Valkyrie^*
+^292- ^*Increase turn speed to 900 (from 360)
+^292- ^*After hitting a target with ^256Javelin of Light^*, an 800 area around the target  will continue to be revealed for 3.34 seconds
+^292- ^*Reworked collision on the ^256Javelin of Light^*. It now has a radius of 80  (reduced from 110) and will consistently hit targets with an 80 radius  regardless of what angle it is being thrown
+^717* ^*Previously, it was using a rectangle 110  units wide to calculate collision, so when thrown on an angle it would  often hit targets greater than 110 units away
+^292- ^*^256Javelin of Light^*  is no longer "Physical"
+^717* ^*This means it will hit someone who has  void talisman active
+^292- ^*^256Javelin of Light^*  plays a popup indicating the length of the stun
+^292- ^*Removed cast noise on casting ^256Javelin of Light^*
+^292- ^*Removed glow from ^256Javelin  of Light^*
+
+^079Vindicator^*
+^292- ^*Base Armor increased from 1.30 to 1.50
+^292- ^*Damage rescaled to 45-55 from 39-61
+
+^079Voodoo Jester^*
+^292- ^*Base Agility increased to 14 from 13
+^292- ^*Base Intelligence increased to 22 from 19
+^292- ^*Intelligence Gain increased to 3.0 from  2.9
+^292- ^*Initial projectile speed of ^256Acid Cocktail^* increased to 750 from 650
+^292- ^*Cast time on ^256Cursed  Ground^* reduced to 0.35 seconds (from 0.5)
+
+^079Warbeast^*
+^292- ^*Manacost of ^256Battle  Cry^* reduced to 15,10,5,0 from 15,20,25,30
+
+^079Witch Slayer^*
+^292- ^*Base Agility increased to 16 from 15
+^292- ^*Base Intelligence increased to 23 from 22
+
+^079Zephyr^*
+^292- ^*The gust of wind from ^256Gust^* now travels 540 total distance (reduced from  640)
+^292- ^*^256Cyclones^* now  display the time remaining before the next cyclone expires (thanks to  Tisser)
+^292- ^*^256Typhoon^*  damage lowered to 60,80,100 from 60,90,120
+^292- ^*^256Typhoon^* no  longer spawns max ^256Cyclones^* instantly.  Instead, it spawns one cyclone per second for the duration of the ^256Typhoon^*

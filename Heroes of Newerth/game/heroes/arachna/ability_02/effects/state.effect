@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1" useentityeffectscale="1">
+	<definitions>
+
+		
+		
+		<particlesystem name="system0" space="world" scale="5.5">
+
+	
+		<template name="beam">
+
+			<model
+				parentmodel="true"
+				parentskeleton="true"
+				startcolor=".5 .1 .5"
+				endcolor="0"
+				material="/shared/effects/materials/shell4.material"
+				startalpha=".5"
+				endalpha="0"
+				expirelife="500"
+			/>
+
+			<beam
+				expirelife="1000"
+				delay="100"			
+				bone_a="{a}"
+				bone_b="{b}"
+				size="{size}"
+				startcolor="1 0 1"
+				endcolor="0 0 0"
+				startalpha="1"
+				endalpha="0"
+				position="0 0 0"				
+				position_b="0 0 0"
+				material="/shared/effects/materials/goo.material"
+				startframe="{frame}"
+				framespeed="5"
+			/>	
+			<billboard
+				material="/shared/effects/materials/whitedot.material"
+				bone="{a}"
+				startscale="0"
+				midscale=".1"
+				endscale=".2"
+				midcolor="1 0 1"
+				endcolor="0 0 0"
+				life="1000"
+			/>		
+
+			<billboard
+				material="/shared/effects/materials/whitedot.material"
+				bone="{b}"
+				startscale="0"
+				midscale=".1"
+				endscale=".2"
+				midcolor="1 0 1"
+				endcolor="0 0 0"
+				life="1000"
+			/>				
+			
+
+		</template>		
+		
+			<instance name="beam" a="_bone_fx_lefthand" b="_bone_fx_righthand" size="2" frame=".6"/>
+			<instance name="beam" a="_bone_fx_01" b="_bone_fx_04" size="2" frame=".6"/>
+			<instance name="beam" a="_bone_fx_02" b="_bone_fx_05" size="2" frame=".6"/>
+			<instance name="beam" a="_bone_fx_03" b="_bone_fx_06" size="2" frame=".6"/>
+			
+			<billboard	
+				size="15"
+				bone="_bone_centerofchest"
+				life="1000"
+				loop="1"
+				material="/shared/effects/materials/web_blend.material"
+				startcolor="1 .3 1"
+				midcolor="1 0 1"
+				endcolor="1 .3 1"
+				expirelife="200"		
+			>
+			</billboard>		
+
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

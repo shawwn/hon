@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+
+			<sound
+				delay="2000"
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".65"
+				sample="/heroes/rocky/ability_01/sounds/ability_01_impact_%.wav"
+			/>
+
+			<sound
+				delay="2000"
+				fadein="100"
+				fadeout="4500"
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				life="4000"
+				volume=".65"
+				sample="../sounds/state.wav"
+			/>
+		
+			<simpleemitter
+				delay="2000"
+				count="1"
+				spawnrate="5000"
+				particlelife="2600"
+				acceleration="0.0"
+				angle="0"
+				direction="0 0 1"
+				life="1000"
+			>
+				<particle
+					turn="1"
+				>
+					<model
+						position="0 0 30"
+						life="1500"
+						anim="idle"
+						model="/heroes/deadwood/ability_04/effects/splinters/explode.mdf"
+						scale="1.2"
+						color="1.75 1.5 1.25"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".6"
+					>
+						<template name="lights">
+							<billboard
+								expirelife="100"
+								bone="{bone}"
+								life="1000"
+								startcolor=".15 .075 .025"
+								midcolor=".15 .075 .025"
+								endcolor="0 0 0"
+								midcolorpos=".25"
+								size="75"
+								material="/shared/effects/materials/whitedot.material"
+								directionalspace="world"
+							/>
+						</template>
+			
+						<instance name="lights" bone="Box01"/>	
+						<instance name="lights" bone="Box02"/>
+						<instance name="lights" bone="Box03"/>
+						<instance name="lights" bone="Box04"/>
+						<instance name="lights" bone="Box05"/>
+						<instance name="lights" bone="Box06"/>
+						<instance name="lights" bone="Box07"/>
+						<instance name="lights" bone="Box08"/>
+						<instance name="lights" bone="Box09"/>
+
+						<template name="dustTrails">
+							<simpleemitter
+								bone="{bone}"
+								spawnrate="25"
+								particlelife="1000"
+								offsetsphere="15 15 0"
+								material="/shared/effects/materials/dust_smoke_02.material"
+							>
+								<particle 
+									color="0.35 0.325 .275"
+									minangle="0"
+									maxangle="360"
+									startsize="45"
+									midsize="35"
+									endsize="15"
+									midsizepos=".5"
+									startalpha="0"
+									midalpha=".25"
+									endalpha="0"
+									startanchor="1"
+									endanchor=".5"
+								/>
+							</simpleemitter>
+						</template>
+			
+						<instance name="dustTrails" bone="Box01"/>	
+						<instance name="dustTrails" bone="Box02"/>
+						<instance name="dustTrails" bone="Box03"/>
+						<instance name="dustTrails" bone="Box04"/>
+						<instance name="dustTrails" bone="Box05"/>
+						<instance name="dustTrails" bone="Box06"/>
+						<instance name="dustTrails" bone="Box07"/>
+						<instance name="dustTrails" bone="Box08"/>
+						<instance name="dustTrails" bone="Box09"/>
+
+						<simpleemitter
+							bone="_bone_root"
+							count="25"
+							spawnrate="100"
+							minparticlelife="250"
+							maxparticlelife="750"
+							drag="0.02"
+							minangle="0"
+							maxangle="45"
+							direction="-1 0 0"
+							speed="1200"
+							material="/shared/effects/materials/whitedot.material"
+						>
+							<particle
+								startsize="20"
+								endsize="0"
+								startcolor=".5 .25 0"
+								midcolor=".5 .25 0"
+								endcolor="0 0 0"
+							>
+							</particle>
+						</simpleemitter>
+						
+						<simpleemitter
+							bone="_bone_root"
+							count="10"
+							spawnrate="100"
+							minparticlelife="250"
+							maxparticlelife="750"
+							drag="0.02"
+							minangle="0"
+							maxangle="50"
+							direction="-1 0 0"
+							speed="1200"
+							material="/shared/effects/materials/refract_wave.material"
+						>
+							<particle
+								minangle="0"
+								maxangle="360"
+								startparam="0"
+								midparam="0.2"
+								endparam="0"
+								midparampos=".3"
+								startsize="100"
+								endsize="0"
+							>
+							</particle>
+						</simpleemitter>
+						
+						<simpleemitter
+							bone="_bone_root"
+							count="15"
+							spawnrate="100"
+							minparticlelife="500"
+							maxparticlelife="1000"
+							drag="0.02"
+							minangle="0"
+							maxangle="45"
+							direction="-1 0 0"
+							speed="1200"
+							material="/shared/effects/materials/leaf_01.material"
+						>
+							<particle
+								startsize="30"
+								endsize="0"
+								startcolor="1 .5 0"
+								midcolor="1 .5 0"
+								endcolor="1 .5 0"
+								startalpha="1"
+								midalpha="1"
+								endalpha="0"
+							>
+							</particle>
+						</simpleemitter>
+						
+						<simpleemitter
+							bone="_bone_root"
+							count="15"
+							spawnrate="100"
+							minparticlelife="700"
+							maxparticlelife="1100"
+							drag="0.02"
+							minangle="0"
+							maxangle="20"
+							direction="-1 0 0"
+							speed="1200"
+							material="/shared/effects/materials/dust_smoke_02.material"
+						>
+							<particle
+								startsize="150"
+								endsize="50"
+								color="0.35 0.325 .275"
+								startalpha=".25"
+								midalpha=".25"
+								endalpha="0"
+							>
+							</particle>
+						</simpleemitter>
+
+					</model>
+					
+					<billboard
+						bone="Box03"
+						life="650"
+						startcolor=".25 .125 .05"
+						midcolor=".25 .125 .05"
+						endcolor="0 0 0"
+						startsize="175"
+						endsize="75"
+						material="/shared/effects/materials/whitedot.material"
+					/>
+					
+					<model
+						position="0 0 50"
+						life="1000"
+						anim="idle"
+						model="/heroes/deadwood/ability_04/effects/sharp_splinters/explode.mdf"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".6"
+					/>
+					
+				</particle>
+			</simpleemitter>
+		
+			<simpleemitter
+				delay="2000"
+				life="2000"
+				position="0 0 50"
+				spawnrate="5"
+				particlelife="1500"
+				offsetsphere="200 200 40"
+				angle="180"
+				depthbias="-20"
+				material="/shared/effects/materials/dust_smoke_02.material"
+			>
+				<particle 
+					color="0.35 0.325 .275"
+					minangle="0"
+					maxangle="360"
+					startsize="120"
+					endsize="600"
+					startalpha="0"
+					midalpha=".25"
+					endalpha="0"
+					startanchor="1"
+					endanchor=".5"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				count="1"
+				spawnrate="1"
+				expirelife="30"
+				particlelife="3000"
+			>
+				<particle>
+					<model
+						delay="1000"
+						position="-3 -3 0"
+						life="2900"
+						anim="idle"
+						model="model.mdf"
+						scale="1.2"
+						startalpha=".85"
+						midalpha=".85"
+						midalphapos="0.9"
+						endalpha="0"
+					>
+					
+					<template name="glows">
+						<billboard
+							bone="{bone}"
+							life="3000"
+							startcolor=".5 .3 .0"
+							midcolor=".5 .3 0"
+							midcolorpos="0.9"
+							endcolor="0"	
+							size="0"
+							depthbias="-20"
+							material="/shared/effects/materials/whitedot.material"
+						/>
+					</template>
+			
+					<instance name="glows" bone="Box14"/>	
+					<instance name="glows" bone="Box03"/>
+					<instance name="glows" bone="Box68"/>
+					<instance name="glows" bone="Box79"/>
+					<instance name="glows" bone="Box50"/>
+					<instance name="glows" bone="Box39"/>
+					
+					</model>
+
+				</particle>	
+				
+			</simpleemitter>
+			
+			
+			
+			
+
+
+			<billboard
+				delay="2000"
+				life="500"
+				color="1.0 1.0 1.0"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="0.0"
+				midalphapos="0.75"
+				startparam=".07"
+				endparam="0"
+				startsize="0"
+				endsize="850"
+				depthbias="-100"
+				material="/shared/effects/materials/refract_ring.material"
+				lockup="true"
+				pitch="90"				
+			/>
+			
+			<simpleemitter
+				delay="2000"
+				position="0 0 50"
+				count="20"
+				life="400"
+				spawnrate="500"
+				speed="25"
+				drag="0.15"
+				minparticlelife="1000"
+				maxparticlelife="2000"
+				offsetsphere="45"
+				depthbias="-100"
+				gravity="12"
+          		material="/shared/effects/materials/pyroclast_01.material"
+         	>
+				<particle
+					minangle="0"
+					maxangle="360"
+					color="0.35 0.325 .275"
+					startalpha=".5"
+					endalpha="0"
+					startsize="20"
+					endsize="65"
+					flare="1"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				delay="2000"
+				position="0 0 50"
+				count="20"
+				life="400"
+				spawnrate="500"
+				speed="25"
+				drag="0.15"
+				minparticlelife="1000"
+				maxparticlelife="2000"
+				offsetsphere="25"
+				depthbias="-100"
+				gravity="12"
+          		material="/shared/effects/materials/dust_smoke_10.material"
+         	>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					color="0.35 0.325 .275"
+					startalpha=".5"
+					endalpha="0"
+					startsize="20"
+					endsize="65"
+					flare="1"
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

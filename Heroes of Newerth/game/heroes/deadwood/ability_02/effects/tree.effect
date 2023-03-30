@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+		
+			<model
+				expirelife="100"
+				bone="Bip01 L Hand"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0" 
+				model="projectile.mdf"
+				anim="default"
+				scale="1"
+				roll="90"
+				pitch="90"
+			>
+			</model>
+			
+
+				<simpleemitter
+					position="0 75 50"
+					count="20"
+					gravity="-2"
+					spawnrate="65"
+					minparticlelife="800"
+					maxparticlelife="1650"
+					offsetsphere="50 50 30"
+					material="/shared/effects/materials/dust_smoke_10.material"
+					depthbias="-55"
+					inheritvelocity="-0.1"
+				>
+					<particle 
+						minangle="-180"
+						maxangle="180"		
+						color="0.5 0.5 .4"
+						size="10"
+						minstartscale="5"
+						maxstartscale="10"
+						minendscale="15"
+						maxendscale="20"
+						startalpha="0"
+						midalpha=".25"
+						midalphapos="0.2"
+						endalpha="0"
+					/>
+				</simpleemitter>
+			
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<camerashake2 scale="2" radius="1200" duration="400" frequency="22" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

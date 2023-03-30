@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Soul"
+
+	speed="1180"
+	gravity="1100"
+
+	modelscale="0.7"
+	model="bones.mdf"
+
+	traileffect="trail.effect"
+	impacteffect="impact.effect"
+>
+</projectile>

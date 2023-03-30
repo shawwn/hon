@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Gauntlet_Ability2_Link"
+
+	ishidden="true"
+	passiveeffect="effects/trail.effect"
+>
+
+</state>

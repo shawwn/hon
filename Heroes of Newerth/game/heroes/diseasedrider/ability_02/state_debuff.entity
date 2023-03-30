@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_DiseasedRider_Ability2_Debuff"
+	
+	icon="icon.tga"
+	passiveeffect=""
+	
+	movespeedslow="0.3"
+	attackspeed="-0.2"
+	
+	effecttype="StatusDebuff"
+>
+</state>

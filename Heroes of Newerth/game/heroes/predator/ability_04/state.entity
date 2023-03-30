@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Predator_Ability4"
+
+	
+
+	icon="icon.tga"
+	
+	armor="-2,-4,-6"
+	
+	effecttype="StatusDebuff"
+	
+	passiveeffect="effects/state_enemy.effect"
+	
+
+>
+	<onframe />
+	<oninflict>
+		<playeffect effect="effects/state_enemy.effect" source="target_entity" target="target_entity" />
+	</oninflict>
+	
+	<onattackedpreimpact>
+		<combateffecttype effecttype="AbilityBasedProjectile" />
+		<else>
+			<cantarget targetscheme="organic_enemy_units">
+				<applystate name="State_Predator_Ability4_Buff" duration="4500" />
+			</cantarget>
+		</else>
+	</onattackedpreimpact>
+	
+
+</state>

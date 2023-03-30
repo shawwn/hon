@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1.3">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2200"
+				volume=".4"
+				sample="../sounds/impact_%.wav"
+			/>
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2200"
+				volume=".5"
+				fadeout="200"
+				sample="/heroes/pollywogpriest/sounds/impact_%.wav"
+			/>
+
+<!-- circular flash -->
+				<billboard
+					bone="_bone_centerofchest"				
+					material="/shared/effects/materials/star_04.material"
+					startcolor=".5 1 .75"
+					endcolor="0  0 0"
+					scale="2.5"
+					depthbias="-20"
+					life="400"
+				/>
+<!-- refraction ball -->
+				<billboard
+					bone="_bone_centerofchest"				
+					material="/shared/effects/materials/refract_ring.material"
+					param="0.075"
+					startalpha="1"
+					endalpha="0"
+					endscale="3"
+					depthbias="-20"
+					life="400"
+				/>
+
+<!--yellow Sprites  -->
+			<simpleemitter
+				spawnrate="500"
+				bone="_bone_centerofchest"
+				count="8"
+				particlelife="600"
+				gravity="4"
+				speed="75"
+				drag=".02"
+				acceleration="0"
+				position="0 0 10"
+				material="/shared/effects/materials/star_03.material"
+				offsetsphere="1 1 1"
+				minangle="0"
+				maxangle="3600"
+				direction="0 0 1"
+				offsetdirection="0 0 0"
+				offsetradial="0 0 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					color=".4 .7 0"
+					midcolorpos=".2"
+					startframe="0"
+					endframe="1"
+					startsize="1"
+					midsize="12"
+					endsize="1"
+					startalpha=".5"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".3"
+					anchor="1"
+				/>
+			</simpleemitter>
+
+			<!--starlikeSprite  pointy-->
+			<simpleemitter
+				spawnrate="100"
+				particlelife="500"
+				bone="_bone_centerofchest"
+				count="12"
+				material="/shared/effects/materials/star_03.material"
+				speed="10"
+				offsetsphere="0 0 0"
+				position="0 0 10"
+			>
+				<particle
+					startcolor="1 1 1"
+					midcolor="0 .1 .5"
+					endcolor="0 0 0"
+					midcolorpos="0.5"
+					startalpha="1.0"
+					endalpha="0.0"
+					minangle="0"
+					maxangle="360"
+					width="3.5"
+					startheight="1.0"
+					endheight="70."
+					flare="true"
+					turn="false"
+					anchor="1"
+				/>
+			</simpleemitter>
+		
+			<!--moreBlueGreenSprites  last long time -->
+			<simpleemitter
+				spawnrate="500"
+				bone="_bone_centerofchest"
+				count="6"
+				particlelife="400"
+				gravity="-10"
+				speed="150"
+				drag=".02"
+				acceleration="0"
+				position="0 0 10"
+				material="/shared/effects/materials/flare_01.material"
+				offsetsphere="1 1 1"
+				minangle="0"
+				maxangle="3600"
+				direction="0 0 1"
+				offsetdirection="0 0 0"
+				offsetradial="0 0 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor=".2 .75 .5"
+					midcolor=".2 .75 .5"
+					endcolor=".2 .75 0.5"
+					midcolorpos=".2"
+					startframe="0"
+					endframe="1"
+					startsize="1"
+					midsize="20"
+					endsize=".1"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".3"
+					anchor="1"
+				/>
+			</simpleemitter>
+
+
+
+<!--	little sparks up top	
+			<simpleemitter
+				life="1800"
+				delay="0"
+				spawnrate="500"
+				bone="_bone_centerofchest"
+				count="25"
+				particlelife="1400"			
+				gravity="50"
+				minspeed="220"
+				maxspeed="780"
+				drag=".03"
+				acceleration="0"
+				position="0 0 0"
+				material="/shared/effects/materials/flare_02.material"
+				offsetsphere="1 1 1"
+				minangle="-10"
+				maxangle="20"
+				direction="0 0 1"
+				offsetdirection="0 0 0"
+				offsetradial="0 0 0"
+				directionalspace="global"
+			>
+					<particle 
+						startcolor=".5 1 .5"
+						midcolor=".5 1 .5"
+						endcolor="0 0 0"
+						midcolorpos=".2"
+						startframe="0"
+						endframe="1"
+						startsize="5"
+						midsize="3"
+						endsize="1"
+						startalpha="0"
+						midalpha=".7"
+						endalpha="0"
+						midalphapos=".5"
+						anchor="1"
+						turn="false"
+					/>
+			</simpleemitter>
+-->
+
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

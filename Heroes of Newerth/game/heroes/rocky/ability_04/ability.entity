@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Rocky4"
+
+	
+	
+	
+	icon="icon.tga"
+	
+	maxlevel="3"
+	requiredlevel="6,11,16"
+	movespeed="5,10,15"
+	actiontype="passive"
+	attackspeed="-0.2,-0.35,-0.5"
+	modifierkey="Rocky_Grow1,Rocky_Grow2,Rocky_Grow3"
+>
+	<onlearn>
+		<playeffect effect="effects/cast.effect" source="source_position" target="" occlude="true" />
+	</onlearn>
+	<onupgrade>
+		<playeffect effect="effects/cast_big.effect" source="source_position" target="" occlude="true" />
+	</onupgrade>
+	
+
+</ability>

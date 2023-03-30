@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="elec_eye">
+	<definitions>
+		<particlesystem name="system0" space="world">
+		
+			<model
+				life="2000"
+				loop="true"
+				parentmodel="true"
+				parentskeleton="true"
+				startcolor=".1 .25 .5"
+				endcolor=".1 .25 .5"
+				material="/shared/effects/materials/shell4.material"
+				startscale="1"
+				midscale="1.1"
+				endscale="1"
+			/>
+
+			<model
+				position="0 0 40"
+				model="/items/basic/mana_eye/eyeball.mdf"
+				anim="idle"
+				scale=".5"
+				color=".75"
+				pitch="45"
+				yawspeed="90"
+				alpha="0"
+			>
+			
+				<simpleemitter
+					spawnrate="2"
+					particlelife="800"
+					gravity="0"
+					minspeed="2"
+					maxspeed="10"
+					drag=".1"
+					position="0 0 5"
+					material="/shared/effects/materials/blink.material"
+					offsetsphere="0 0 0"
+					direction="0 0 1"
+				>
+					<particle 
+						startcolor="0 0 0"
+						midcolor=".1"
+						endcolor="0 0 0"
+						minsize="50"
+						maxsize="100"
+						startalpha="0"
+						midalpha="0"
+						endalpha="0"
+						midalphapos="0"
+						turn="true"
+					/>
+				</simpleemitter>
+
+				
+				<billboard
+					bone="eyeBallCTRL"
+					life="1250"
+					size="100"
+					position="0 0 0"
+					material="/shared/effects/materials/flare_01.material"
+					lockup="true"
+					pitch="90"
+					startcolor="0 0 0"
+					midcolor=".25 .3 .5"				
+					endcolor="0 0 0"
+					loop="true"
+				/>
+
+			</model>
+
+	
+			<simpleemitter
+				position="0 0 5"
+				spawnrate="20"
+				minparticlelife="100"
+				maxparticlelife="500"
+				minspeed="0"
+				maxspeed="500"
+				drag="0.05"
+				angle="10"
+				offsetsphere="0 0 0"
+				depthbias="0"
+				material="/shared/effects/materials/femme_lightning_01.material"
+			>
+				<particle
+					minangle="-90"
+					maxangle="90"
+					minanglespeed="-110"
+					maxanglespeed="110"
+					startcolor="0 .2 1"
+					endcolor="0 .6 1"
+					size="3"
+					minendscale="4"
+					maxendscale="5"
+					endstickiness=".3"
+				/>
+			</simpleemitter>
+        
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->

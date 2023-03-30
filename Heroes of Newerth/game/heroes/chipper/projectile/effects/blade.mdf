@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="sawbladeprojectile.max" file="blade.model" type="K2" >
+	<anim name="idle" clip="blade.clip" loop="1"/>
+</model>

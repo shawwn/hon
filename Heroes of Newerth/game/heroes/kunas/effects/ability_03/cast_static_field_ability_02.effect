@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="static_field_ability_02">
+	<definitions>
+		<particlesystem name="system0" space="entity">
+
+
+
+	<skeletonemitter
+			life="2000"
+			delay="875"
+			spawnrate="140"
+			count="68"
+			
+			particlelife="70"			
+			gravity="0"
+			speed="40"
+			drag="0"
+			acceleration="0"
+			position="0 0 0"
+
+			material="/shared/effects/materials/lightning_02.material"
+			offsetsphere="7 16 10"
+			minangle="360"
+			maxangle="180"
+			direction="1 0 0"
+			offsetdirection="0 0 0"
+			offsetradial="0 0 0"
+		>
+
+
+			<particle 
+				minangle="0"
+				maxangle="360"
+				minanglespeed="50"
+				maxanglespeed="190"
+				startcolor=".5 .75 1"
+				midcolor=".5 .75 1"
+				endcolor=".5 .75 1"
+				midcolorpos=".8"
+
+				startframe="0"
+				endframe="1"
+				startsize="1"
+				midsize="50"
+				endsize="50"
+				startalpha="0"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".5"
+				startstickiness=".2"
+				endstickiness=".2"
+
+
+			/>
+
+			<particle 
+				minangle="0"
+				maxangle="360"
+				minanglespeed="50"
+				maxanglespeed="180"
+				startcolor="0 .75 1"
+				midcolor="0 .75 1"
+				endcolor="0 .75 1"
+				midcolorpos=".8"
+
+				startframe="0"
+				endframe="1"
+				startsize="1"
+				midsize="52"
+				endsize="7"
+				startalpha="0"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".5"
+				startstickiness=".2"
+				endstickiness=".2"
+
+
+			/>
+
+	</skeletonemitter>
+
+
+
+
+<!--		<simpleemitter
+		
+			spawnrate="28"
+			bone="_bone_centerofchest"
+			particlelife="80"			
+			gravity="0"
+			speed="40"
+			drag="0"
+			acceleration="0"
+			position="0 0 0"
+
+
+			material="/shared/effects/materials/lightning_02.material"
+			offsetsphere="18 20 25"
+			minangle="360"
+			maxangle="180"
+			direction="1 0 0"
+			offsetdirection="0 0 0"
+			offsetradial="0 0 0"
+		>
+
+
+			<particle 
+				minangle="0"
+				maxangle="360"
+				minanglespeed="50"
+				maxanglespeed="190"
+				startcolor="1 1 1"
+				midcolor=".5 .8 .8"
+				endcolor=".1 .4 .4"
+				midcolorpos=".8"
+
+				startframe="0"
+				endframe="1"
+				startsize="1"
+				midsize="38"
+				endsize="10"
+				startalpha="0"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".5"
+				startstickiness=".2"
+				endstickiness=".2"
+
+
+			/>
+
+			<particle 
+				minangle="0"
+				maxangle="360"
+				minanglespeed="50"
+				maxanglespeed="180"
+				startcolor="1 1 1"
+				midcolor=".5 .8 .8"
+				endcolor=".1 .4 .4"
+				midcolorpos=".8"
+
+				startframe="0"
+				endframe="1"
+				startsize="1"
+				midsize="32"
+				endsize="8"
+				startalpha="0"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".5"
+				startstickiness=".2"
+				endstickiness=".2"
+
+
+			/>
+
+		</simpleemitter>
+
+-->
+
+<!--		<simpleemitter
+		
+			spawnrate="28"
+			bone="_bone_centerofchest"
+			particlelife="80"			
+			gravity="0"
+			speed="40"
+			drag="0"
+			acceleration="0"
+			position="0 0 0"
+
+
+			material="/shared/effects/materials/lightning_02.material"
+			offsetsphere="18 20 25"
+			minangle="360"
+			maxangle="180"
+			direction="1 0 0"
+			offsetdirection="0 0 0"
+			offsetradial="0 0 0"
+		>
+
+
+			<particle 
+				minangle="0"
+				maxangle="360"
+				minanglespeed="50"
+				maxanglespeed="180"
+				startcolor="1 1 1"
+				midcolor=".5 .8 .8"
+				endcolor=".1 .4 .4"
+				midcolorpos=".8"
+
+				startframe="0"
+				endframe="1"
+				startsize="1"
+				midsize="32"
+				endsize="8"
+				startalpha="0"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".5"
+				startstickiness=".2"
+				endstickiness=".2"
+
+
+			/>
+
+		</simpleemitter>
+
+-->
+
+<!--		<simpleemitter
+		
+			spawnrate="20"
+			bone="_bone _fx_09"
+			particlelife="120"			
+			gravity="0"
+			speed="40"
+			drag="0"
+			acceleration="0"
+			position="0 0 0"
+
+
+			material="/shared/effects/materials/lightning_02.material"
+			offsetsphere="18 18 18"
+			minangle="360"
+			maxangle="180"
+			direction="1 0 0"
+			offsetdirection="0 0 0"
+			offsetradial="0 0 0"
+		>
+
+
+			<particle 
+				minangle="0"
+				maxangle="360"
+				minanglespeed="50"
+				maxanglespeed="150"
+				startcolor="1 1 1"
+				midcolor=".5 .5 .5"
+				endcolor=".1 .1 .1"
+				midcolorpos=".8"
+
+				startframe="0"
+				endframe="1"
+				startsize="1"
+				midsize="16"
+				endsize="8"
+				startalpha="0"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".5"
+				startstickiness=".2"
+				endstickiness=".2"
+
+
+			/>
+
+		</simpleemitter>
+-->
+
+<!--		<simpleemitter
+			count="1"
+			particlelife="-1"
+			bone="_bone_fx_10"	
+			gravity="0"
+			speed="0"
+			drag="0"
+			acceleration="0"
+			position="0 0 0"
+
+
+			material="/shared/effects/materials/whitedot.material"
+			offsetsphere="0 0 0"
+			minangle="0"
+			maxangle="0"
+			direction="0 0 0"
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+
+				startcolor=".2 .2 .2"
+				midcolor=".2 .2 .2"
+				endcolor=".2 .2 .2"
+				midcolorpos=".5"
+
+				maxanglespeed="0"
+				startframe="0"
+				endframe="0"
+
+				height="30"
+				width="30"
+
+				startalpha="1"
+				midalpha="1"
+				endalpha="1"
+				midalphapos=".5"
+				startstickiness="1"
+				endstickiness="1"
+			/>
+		</simpleemitter>
+
+-->
+
+<!--		<simpleemitter
+			count="1"
+			particlelife="-1"
+			bone="_bone_fx_11"	
+			gravity="0"
+			speed="0"
+			drag="0"
+			acceleration="0"
+			position="0 0 0"
+
+
+			material="/shared/effects/materials/whitedot.material"
+			offsetsphere="0 0 0"
+			minangle="0"
+			maxangle="0"
+			direction="0 0 0"
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+
+				startcolor=".2 .2 .2"
+				midcolor=".2 .2 .2"
+				endcolor=".2 .2 .2"
+				midcolorpos=".5"
+
+				maxanglespeed="0"
+				startframe="0"
+				endframe="0"
+
+				height="30"
+				width="30"
+
+				startalpha="1"
+				midalpha="1"
+				endalpha="1"
+				midalphapos=".5"
+				startstickiness="1"
+				endstickiness="1"
+			/>
+		</simpleemitter>
+
+-->
+
+<!--		<simpleemitter
+			count="1"
+			particlelife="-1"
+			bone="_bone _fx_09"	
+			gravity="0"
+			speed="0"
+			drag="0"
+			acceleration="0"
+			position="0 0 0"
+
+
+			material="/shared/effects/materials/whitedot.material"
+			offsetsphere="0 0 0"
+			minangle="0"
+			maxangle="0"
+			direction="0 0 0"
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+
+				startcolor=".2 .2 .2"
+				midcolor=".2 .2 .2"
+				endcolor=".2 .2 .2"
+				midcolorpos=".5"
+
+				maxanglespeed="0"
+				startframe="0"
+				endframe="0"
+
+				height="30"
+				width="30"
+
+				startalpha="1"
+				midalpha="1"
+				endalpha="1"
+				midalphapos=".5"
+				startstickiness="1"
+				endstickiness="1"
+			/>
+		</simpleemitter>
+
+-->
+
+<!--		<simpleemitter
+			count="1"
+			particlelife="-1"
+			bone="_bone _fx_04"	
+			gravity="0"
+			speed="0"
+			drag="0"
+			acceleration="0"
+			position="0 0 0"
+
+
+			material="/shared/effects/materials/whitedot.material"
+			offsetsphere="0 0 0"
+			minangle="0"
+			maxangle="0"
+			direction="0 0 0"
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+
+				startcolor=".2 .2 .2"
+				midcolor=".2 .2 .2"
+				endcolor=".2 .2 .2"
+				midcolorpos=".5"
+
+				maxanglespeed="0"
+				startframe="0"
+				endframe="0"
+
+				height="25"
+				width="25"
+
+				startalpha="1"
+				midalpha="1"
+				endalpha="1"
+				midalphapos=".5"
+				startstickiness="1"
+				endstickiness="1"
+			/>
+		</simpleemitter>
+
+-->
+
+<!--		<simpleemitter
+			count="1"
+			particlelife="-1"
+			bone="_bone_fx_03"	
+			gravity="0"
+			speed="0"
+			drag="0"
+			acceleration="0"
+			position="0 0 0"
+
+
+			material="/shared/effects/materials/whitedot.material"
+			offsetsphere="0 0 0"
+			minangle="0"
+			maxangle="0"
+			direction="0 0 0"
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+
+				startcolor=".125 .125 .125"
+				midcolor=".125 .125 .125"
+				endcolor=".125 .125 .125"
+				midcolorpos=".5"
+
+				maxanglespeed="0"
+				startframe="0"
+				endframe="0"
+
+				height="25"
+				width="25"
+
+				startalpha="1"
+				midalpha="1"
+				endalpha="1"
+				midalphapos=".5"
+				startstickiness="1"
+				endstickiness="1"
+			/>
+		</simpleemitter>
+
+-->
+
+<!--		<simpleemitter
+			count="1"
+			particlelife="-1"
+			bone="_bone_fx_02"	
+			gravity="0"
+			speed="0"
+			drag="0"
+			acceleration="0"
+			position="0 0 0"
+
+
+			material="/shared/effects/materials/whitedot.material"
+			offsetsphere="0 0 0"
+			minangle="0"
+			maxangle="0"
+			direction="0 0 0"
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+
+				startcolor=".075 .075 .075"
+				midcolor=".075 .075 .075"
+				endcolor=".075 .075 .075"
+				midcolorpos=".5"
+
+				maxanglespeed="0"
+				startframe="0"
+				endframe="0"
+
+				height="25"
+				width="25"
+
+				startalpha="1"
+				midalpha="1"
+				endalpha="1"
+				midalphapos=".5"
+				startstickiness="1"
+				endstickiness="1"
+			/>
+		</simpleemitter>
+
+-->
+
+<!--		<simpleemitter
+			count="1"
+			particlelife="-1"
+			bone="_bone_fx_01"	
+			gravity="0"
+			speed="0"
+			drag="0"
+			acceleration="0"
+			position="0 0 0"
+
+
+			material="/shared/effects/materials/whitedot.material"
+			offsetsphere="0 0 0"
+			minangle="0"
+			maxangle="0"
+			direction="0 0 0"
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+
+				startcolor=".025 .025 .025"
+				midcolor=".025 .025 .025"
+				endcolor=".025 .025 .025"
+				midcolorpos=".5"
+
+				maxanglespeed="0"
+				startframe="0"
+				endframe="0"
+
+				height="25"
+				width="25"
+
+				startalpha="1"
+				midalpha="1"
+				endalpha="1"
+				midalphapos=".5"
+				startstickiness="1"
+				endstickiness="1"
+			/>
+		</simpleemitter>
+
+-->
+
+
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

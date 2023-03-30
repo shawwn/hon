@@ -1,0 +1,3 @@
+:/base/core/cursors/*.tga
+:/game/core/cursors/*.tga
+:/editor/core/brushes/standard/*.tga

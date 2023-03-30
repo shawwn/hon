@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1" useentityeffectscale="1">
+	<definitions>
+
+		
+		
+		<particlesystem name="system0" space="world" scale="3.5">
+
+			<sound
+				volume="0.55"
+				sample="../sounds/impact.wav"
+				linearfalloff="true"
+				falloffstart="1000"
+				falloffend="2200"
+			/>
+
+	
+		<template name="beam">
+			<beam
+				expirelife="1000"					
+				bone_a="{a}"
+				bone_b="{b}"
+				size="{size}"
+				startcolor=" .7 .7 .7"
+				endcolor="0 0 0"
+				startalpha="1"
+				endalpha="0"
+				position="0 0 0"				
+				position_b="0 0 0"
+				material="/shared/effects/materials/goo.material"
+			/>	
+		</template>		
+		
+
+		
+			<instance name="beam" a="_bone_righthand" b="_bone_lefthand" size="15" frame=".6"/>
+			<instance name="beam" a="_bone_righthand" b="_bone_rightfoot" size="15" frame="5"/>
+			<instance name="beam" a="_bone_lefthand" b="_bone_leftfoot" size="15" frame="5"/>
+			<instance name="beam" a="_bone_centerofchest" b="_bone_origin" position_b="20 22 0" size="14" frame="1"/>
+			<instance name="beam" a="_bone_head" b="_bone_origin" position_b="20 34 0" size="12" frame="1"/>
+			<instance name="beam" a="_bone_head" b="_bone_origin" position_a="12 44 0" size="12" frame="1"/>
+			<instance name="beam" a="_bone_lefthand" b="_bone_origin" position_b="-30 20 0" size="12" frame="5"/>
+				
+			<instance name="beam" a="_bone_leftfoot" b="_bone_rightfoot" size="15" frame="5"/>
+			<instance name="beam" a="_bone_lefthand L ForeArm" b="Bip01 Spine" size="15" frame="5"/>
+			
+			<instance name="beam" a="_bone_righthand" b="_bone_head" size="15" frame="5"/>			
+			<instance name="beam" a="_bone_lefthand" b="_bone_head"  size="15" frame="5"/>
+			
+			<instance bame="beam" a="_bone_leftfoot" b="_bone_origin" size="13" position_b="20 20 500"/>			
+			
+			<instance name="beam" a="" b="_bone_leftfoot" size="15" frame=".8"/>
+		
+		
+		
+
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

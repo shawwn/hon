@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1.4">
+
+			<billboard
+				bone="_bone_centerofchest"
+				life="300"
+				startcolor=".2 .4 .2"
+				endcolor="0"
+				startsize="80"
+				endsize="150"
+				material="/shared/effects/materials/corona_07.material"
+				maxroll="360"
+			/>
+
+			<billboard
+				bone="_bone_centerofchest"
+				life="300"
+				startcolor="0 2 .1"
+				endcolor="0"
+				startsize="150"
+				endsize="26"
+				material="/shared/effects/materials/shock_01.material"
+				maxroll="360"
+			/>
+		
+			<billboard
+				bone="_bone_centerofchest"
+				life="300"
+				startcolor="0 2 .1"
+				endcolor="0"
+				startsize="150"
+				endsize="26"
+				material="/shared/effects/materials/shock_01.material"
+				maxroll="360"
+			/>
+
+			<billboard
+				bone="_bone_centerofchest"
+				life="300"
+				startalpha="1"
+				endalpha="0"
+				startsize="30"
+				endsize="150"
+				material="/shared/effects/materials/refract_pinch.material"
+				param="1.1"
+			/>
+
+			<billboard
+				bone="_bone_centerofchest"
+				life="300"
+				startcolor="0 1 .5"
+				endcolor="0"
+				startsize="150"
+				endsize="26"
+				material="/shared/effects/materials/blink.material"
+				maxroll="360"
+			/>	
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				depthbias="-10"
+				count="1"
+				particlelife="350"
+				material="/shared/effects/materials/starlight.material"
+			>
+				<particle
+					startcolor="0"
+					midcolor="0 .5 .2"
+					endcolor="0"
+					midcolorpos=".2"
+					maxangle="360"
+					startsize="110"
+					endsize="200"
+				/>
+			</simpleemitter>		
+
+ 		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

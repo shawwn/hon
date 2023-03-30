@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Rampage_Ability2"
+	
+	radius="300"
+	lifetime="4000"
+	
+	targetscheme="organic_enemy_units"
+	effecttype="Physical"
+	persist="false"
+	
+	effect=""
+>
+	<onframeimpact>
+		<applystate name="State_Rampage_Ability2_Slow" duration="1000" continuous="true" timeout="frametime" />
+	</onframeimpact>
+</affector>

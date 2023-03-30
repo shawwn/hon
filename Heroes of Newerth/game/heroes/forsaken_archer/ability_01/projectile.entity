@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_ForsakenArcher_Ability1"
+
+	gravity="6000"
+	lifetime="700"
+	useexactlifetime="true"
+	deatheffect="effects/aoe1.effect"
+	modelscale="1"
+	model="/shared/models/invis.mdf"
+	traileffect="effects/trail.effect"
+	effectscale="1.0"
+	impacteffect=""
+>
+	<onimpact>
+		<areaofeffect
+			radius="200"
+			targetselection="all"
+			targetscheme="enemy_units"
+			effecttype="Magic"
+		>
+			<applystate name="State_ForsakenArcher_Ability1" duration="1000,1500,2000,2500" />
+			<damage effecttype="Magic" amount="85,150,215,280" />
+		</areaofeffect>
+	</onimpact>
+</projectile>

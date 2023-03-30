@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" useentityeffectscale="true">
+
+	<definitions>
+	
+		<particlesystem name="system0" space="world" scale=".75">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2500"
+				volume=".3"
+				sample="/heroes/hydromancer/ability_02/sounds/water_%.wav"
+			/>
+
+			<groundsprite
+				material="/shared/effects/materials/seeweed_ground.material"
+				expirelife="500"
+				midsizepos=".05"
+				size="135"
+				color="1 .5 .25"
+				minyaw="0"
+				maxyaw="360"
+				startalpha="1"
+				endalpha="0"	
+			/>
+			
+			<billboard
+				expirelife="200"
+				bone="_bone_overhead"
+				position="0 0 16"
+				material="/shared/effects/materials/stun_01.material"
+				roll="0"
+				rollspeed="-400"
+				color="0.4 0.4 0.4"
+				endcolor="0"
+				size="85"
+				lockup="true"
+				pitch="90"
+				yaw="0"
+			/>
+
+			<billboard
+				expirelife="200"
+				bone="_bone_overhead"
+				position="0 0 8"
+				material="/shared/effects/materials/stun_01.material"
+				roll="30"
+				rollspeed="-500"
+				color="0.4 0.4 0.4"
+				endcolor="0"
+				size="59"
+				lockup="true"
+				pitch="90"
+				yaw="0"
+			/>
+
+			<billboard
+				expirelife="200"
+				bone="_bone_overhead"
+				position="0 0 0"
+				material="/shared/effects/materials/stun_01.material"
+				roll="60"
+				rollspeed="-600"
+				color="0.4 0.4 0.4"
+				endcolor="0"
+				size="32"
+				lockup="true"
+				pitch="90"
+				yaw="0"
+			/>
+		
+			<simpleemitter
+				particlelife="1000"
+				spawnrate="10"
+				direction="0 0 1"
+				speed="90"
+				material="/shared/effects/materials/outsplash_blend2.material"
+				offsetsphere="5 5 0"
+				position="0 0 5"
+				depthbias="-20"
+				angle="0"
+				expirelife="200"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					startsize="115"
+					endsize="125"
+					startcolor=".55"
+					endcolor="0"
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					lockup="true"
+					lockright="false"
+					pitch="90"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				spawnrate="5"
+				minparticlelife="350"
+				maxparticlelife="650"
+				gravity="1"
+				minspeed="50"
+				maxspeed="100"
+				direction="0 0 1"
+				angle="15"
+				drag=".01"
+				depthbias="-30"
+				offsetsphere="25 25 0"
+				material="/shared/effects/materials/refract_longsplash.material"
+			>
+				<particle
+					startalpha="0"
+					midalpha=".5"
+					endalpha="0"
+					minangle="0"
+					maxangle="360"
+					startsize="85"
+					endsize="145"
+					startparam=".04"
+					endparam=".3"
+				/>
+			</simpleemitter>
+			
+			<model
+				life="1500"
+				model="seaweed/model.mdf"
+				anim="idle"
+				startscale="5"
+				midscale="3.5"
+				endscale="2.25"
+				midscalepos=".25"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".9"
+				color=".3 .8 .7"
+				minyaw="0"
+				maxyaw="360"
+				yawspeed="45"
+				position="0 0 15"
+			/>
+			
+			<model
+				expirelife="500"
+				model="seaweed/model.mdf"
+				anim="idle"
+				scale="3"
+				midscalepos=".25"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".1"
+				color=".3 .8 .7"
+				minyaw="0"
+				maxyaw="360"
+				yawspeed="0"
+				position="0 0 15"
+			/>
+			
+			<groundsprite
+				material="/shared/effects/materials/seeweed_ground.material"
+				expirelife="500"
+				midsizepos=".05"
+				size="135"
+				color="1 .5 .25"
+				minyaw="0"
+				maxyaw="360"
+				startalpha="1"
+				endalpha="0"	
+			/>
+
+			<billboard
+				expirelife="500"
+				startcolor="0 .1 .3"
+				midcolor="0 .1 .3"
+				endcolor="0"
+				startsize="500"
+				endsize="100"
+				depthbias="0"
+				material="/shared/effects/materials/whitedot.material"
+				position="0 0 20"
+				lockup="true"
+				lockright="true"
+				pitch="90"
+			/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

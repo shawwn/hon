@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="rig.max" file="high.model" type="K2" high="high.model" med="med.model" low="low.model" >
+
+	<anim name="idle" clip="clips/default_1.clip" loop="true"/>
+
+	<anim name="portrait" clip="clips/portrait_1.clip" fps="15" loop="true"/>
+	
+	<anim name="knock_1" clip="clips/knock_1.clip" loop="true" loopbackframe="-1"/>
+	
+	<anim name="bored_1" clip="clips/bored_1.clip" />
+	
+	<anim name="taunt_1" clip="clips/taunt_1.clip"/>
+		
+	<anim name="item_1" clip="clips/item_1.clip"/>
+
+	<anim name="death_1" clip="clips/death_1.clip" loop="true" loopbackframe="-1">
+		<frameevent frame="1" cmd="PlaySoundLinear sounds/death.wav 400 1800 .85"/>
+	</anim>
+	
+	<anim name="ability_1" clip="clips/ability_1.clip">
+		<frameevent frame="1" cmd="PlaySoundLinear ability_01/sounds/cast2.wav 400 1800 .65"/>
+		<frameevent frame="1" cmd="PlaySoundLinear /shared/sounds/attacks/attack_medium_%.wav 400 1800 .65"/>
+	</anim>
+
+	<anim name="ability_2" clip="clips/ability_2.clip">
+		<frameevent frame="10" cmd="PlaySoundLinear /shared/sounds/attacks/attack_medium_%.wav 400 1800 .65"/>
+	</anim>
+
+	<anim name="ability_3" clip="clips/ability_3.clip">
+		<frameevent frame="19" cmd="PlaySoundLinear /shared/sounds/attacks/attack_medium_%.wav 0 1800 .1"/>
+		<frameevent frame="21" cmd="StartEffect ability_03/effects/spark.effect"/>
+		<frameevent frame="39" cmd="PlaySoundLinear /shared/sounds/attacks/attack_medium_%.wav 0 1800 .1"/>
+		<frameevent frame="41" cmd="StartEffect ability_03/effects/spark.effect"/>
+	</anim>
+	
+	<anim name="ability_4" clip="clips/ability_4.clip">
+		<frameevent frame="1" cmd="PlaySoundLinear ability_04/sounds/cast2.wav 400 2200 1"/>
+	</anim>
+
+	<anim name="attack_1" clip="clips/attack_1.clip">
+		<frameevent frame="15" cmd="PlaySoundLinear sounds/attack.wav 400 1800 .65"/>
+		<frameevent frame="15" cmd="PlaySoundLinear ability_02/sounds/attack_%.wav 400 1800 .35"/>
+		<frameevent frame="15" cmd="StartEffect projectile/effects/cast.effect"/>
+	</anim>
+
+	<anim name="attack_2" clip="clips/attack_2.clip">
+		<frameevent frame="15" cmd="PlaySoundLinear sounds/attack.wav 400 1800 .65"/>
+		<frameevent frame="15" cmd="PlaySoundLinear ability_02/sounds/attack_%.wav 400 1800 .35"/>
+		<frameevent frame="15" cmd="StartEffect projectile/effects/cast.effect"/>
+		<frameevent frame="15" cmd="PlaySoundLinear sounds/attack_grunt_%.wav 400 1800 .85"/>
+	</anim>
+
+	<anim name="walk_1" clip="clips/walk_1.clip" loop="true" blendtime="200">
+		<frameevent frame="3" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="8" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="18" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="23" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+
+		<frameevent frame="12" cmd="PlaySoundLinear /heroes/electrician/sounds/move_%.wav 0 800 .1"/>
+		<frameevent frame="3" cmd="PlaySoundLinear /heroes/witch_slayer/sounds/move_%.wav 0 800 .2"/>
+		<frameevent frame="12" cmd="PlaySoundLinear /heroes/jereziah/sounds/move_%.wav 0 800 .01"/>
+		
+		<frameevent frame="3" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+		<frameevent frame="18" cmd="StartEffect /shared/effects/footstep_l_#GetTerrainType()#.effect"/>
+	</anim>
+
+</model>

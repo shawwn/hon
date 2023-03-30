@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Hydromancer_Ability3_Slow"
+
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+	movespeedslow="0.15,0.25,0.35,0.45"
+	magicarmor="-1,-2,-3,-4"
+>
+</state>

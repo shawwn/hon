@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_TempestAttack"
+
+	speed="900"
+	gravity="1000"
+
+        model="effects/spinner.mdf"
+	scale="1"
+	impacteffect="effects/impact.effect"
+	traileffect="effects/trail.effect"
+>
+</projectile>

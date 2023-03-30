@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Bombardier_Ability4_Napalm"
+
+	icon=""
+	portrait=""
+	model="/shared/effects/models/updown_rig/model.mdf"
+	passiveeffect="effects/gadget.effect"
+	impacteffect=""
+	
+	boundsheight="0"
+	boundsradius="0"
+	selectionradius="0"
+	targetoffset="0 0 0"
+
+	canrotate="false"
+	ismobile="false"
+
+	attacktype="none"
+	combattype="Ranged"
+
+	sightrangeday="350"
+	sightrangenight="350"
+	clearvision="true"
+	
+	unitwalking="true"
+	canattack="false"
+	deathtime="0"
+	corpsetime="0"
+	invulnerable="true"
+	isselectable="false"
+	flying="false"
+	drawonmap="false"
+	
+	lifetime="5000"
+>
+	<aura state="State_Bombardier_Ability4_Napalm" radius="200" targetscheme="enemy_units" />	
+</gadget>

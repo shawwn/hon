@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_SandWraith_Ability1_VisionSticky"
+	
+	lifetime="8000"
+>
+	<onframe>
+		<condition test="proxy_entity eq 0">
+			<spawnunit name="Gadget_SandWraith_Ability1_RevealSticky" target="target_position" fixedposition="true" pushentity="true" />
+			<setproxy target="stack_entity" />
+		</condition>
+		<else>
+			<condition source="proxy_entity" target="target_entity" test="distance ge 250">
+				<spawnunit name="Gadget_SandWraith_Ability1_RevealSticky" target="target_position" fixedposition="true" pushentity="true" />
+				<setproxy target="stack_entity" />
+			</condition>
+		</else>
+	</onframe>
+</affector>

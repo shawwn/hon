@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Gladiator_Ability1_Toss"
+	
+	icon="icon.tga"
+	ishidden="true"
+	
+	stunned="true"
+	
+	impactinterval="150"
+>
+	<onimpact>
+		<damage target="this_owner_entity" effecttype="Magic DOT" amount="6,9,12,15" />
+	</onimpact>
+
+	<onexpired>
+		<applystate name="State_Gladiator_Ability1" duration="1000,2000,3000,4000" />
+	</onexpired>
+</state>

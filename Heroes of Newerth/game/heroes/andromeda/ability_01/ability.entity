@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Andromeda1"
+	
+	icon="icon.tga"
+	
+	anim="ability_1"
+	casttime="800"
+	castactiontime="300"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_entity"
+	casteffecttype="Magic"
+	targetscheme="enemy_units"
+	
+	manacost="95,110,125,140"
+	cooldowntime="10000"
+	
+	projectile="Projectile_Andromeda_Ability1"
+	range="500"
+>
+	<onimpact >
+		<applystate name="State_Stunned" duration="1750"/>
+		<damage effecttype="Magic" amount="100,175,250,325"/>
+		<applystate name="State_Andromeda_Stunned_Visual" duration="1750"/>
+	</onimpact>
+</ability>

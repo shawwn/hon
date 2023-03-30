@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Tundra_Ability1"
+
+	icon=""
+	passiveeffect=""
+	ishidden="true"
+>
+	<oninflict>
+		<playeffect effect="effects/impact.effect" source="target_entity" target=""/>
+		<damage effecttype="SuperiorMagic SuperiorPhysical" amount="90,120,150,180" />
+		<addcharges count="1" />
+	</oninflict>
+
+	<onrefresh>
+		<condition test="charges lt 2">
+			<playeffect effect="effects/impact.effect" source="target_entity" target=""/>
+			<damage effecttype="SuperiorMagic SuperiorPhysical" amount="90,120,150,180" />
+		</condition>
+		<addcharges count="1" />
+	</onrefresh>
+</state>

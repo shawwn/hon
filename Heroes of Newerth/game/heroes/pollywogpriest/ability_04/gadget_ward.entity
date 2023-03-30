@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_PollywogPriestWard"
+
+	icon="../icons/ability_4.tga"
+	portrait="../icons/ability_4.tga"
+	model="wards/top.mdf"
+	skin=""
+	
+	passiveeffect="wards/base.effect"
+	spawneffect="wards/effects/spawn.effect"
+	respawneffect=""
+	selectsound=""
+	isselectable="true"
+	orderconfirmedsound=""
+	expirenumanims="0"
+	
+	preglobalscale="2"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="64"
+	boundsradius="16"
+	selectionradius="26"
+	targetoffset="0 0 64"
+
+	blocking="true"
+
+	movespeed="0"
+	turnrate="540"
+	turnsmoothing="0.05"
+	ismobile="false"
+	canrotate="true"
+
+	maxhealth="135,150"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0"
+
+	armor="0"
+	magicarmor="0"
+	immunity="GadgetImmunity"
+
+	canattack="true"
+	
+	attackduration="1500"
+	attackactiontime="550"
+	attackcooldown="1500"
+	attackdamagemin="39,54,69"
+	attackdamagemax="43,58,73"
+	attacknumanims="1"
+	attackoffset="0 0 135"
+	attackprojectile="Projectile_PollywogPriestWardAttack"
+	attackrange="600"
+	attackstarteffect="/heroes/pollywogpriest/ability_04/wards/effects/laser_start.effect"
+	attackactioneffect=""
+	attackimpacteffect=""
+	attackeffecttype=""
+	attacktype="ranged"
+	combattype="Ranged"
+
+	aggrorange="600"
+	sightrangeday="1200"
+	sightrangenight="800"
+
+	experiencebounty="15"
+	goldbountymin="23"
+	goldbountymax="38"
+	
+	lifetime="45000"
+>
+	<onattackimpact >
+		<spawnaffector name="Affector_PollywogPriest_Ward" target="target_position" proxy="target_entity" param="total_adjusted_damage" />
+	</onattackimpact>
+</gadget>

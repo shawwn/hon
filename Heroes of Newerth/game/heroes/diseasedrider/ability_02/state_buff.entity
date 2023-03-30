@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_DiseasedRider_Ability2_Buff"
+	
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+	
+	armor="3,6,9,12"
+	
+	effecttype="StatusBuff"
+>
+	<onattackedpreimpact>
+		<cantarget targetscheme="enemy_melee_units" effecttype="Magic" >
+			<combatsupertype supertype="attack">
+				<combateffecttype effecttype="Attack">
+					<applystate name="State_DiseasedRider_Ability2_Debuff" duration="2000" />
+				</combateffecttype>
+			</combatsupertype>
+		</cantarget>
+	</onattackedpreimpact>
+	<onframe />
+</state>

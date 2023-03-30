@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_ArachnaAttack"
+
+	speed="1200"
+	gravity="0"
+	modelscale="2.5"
+	model="effects/model.mdf"
+
+	impacteffect="effects/impact.effect"
+	traileffect="effects/trail.effect"
+>
+</projectile>

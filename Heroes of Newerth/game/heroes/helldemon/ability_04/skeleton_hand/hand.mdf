@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="anim.max" file="hand.model" type="K2" >
+	<anim name="idle" clip="default_1.clip" fps="15" loop="0"/>
+</model>

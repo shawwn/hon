@@ -1,0 +1,10 @@
+Contents
+
+build_toolchain:
+	- contains the scripts used to build the toolchains in the toolchain directory
+
+scons:
+	- contains the modified version of SCons I'm using to build Savage 2
+
+toolchain:
+	- contains the toolchain/libs

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Ebulus_Ability_03_Seed"
+
+	speed="2000"
+	gravity="15000"
+
+	modelscale="1.5"
+	model="../ability_01/effects/model.mdf"
+	
+	traileffect="effects/trail.effect"
+>
+	<onimpact>
+		<spawnunit name="Gadget_Ebulus_Ability3" count="1" target="target_position" />
+	</onimpact>
+</projectile>

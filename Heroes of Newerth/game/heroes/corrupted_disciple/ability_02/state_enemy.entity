@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_CorruptedDisciple_Ability2_Enemy"
+
+	icon="icon.tga"
+	
+	damagepercharge="-5,-10,-15,-20"
+	impactinterval="1000"
+	passiveeffect="effects/state_enemy.effect"
+	maxcharges="10"
+	
+	effecttype="StatusDebuff"
+>
+	<oninflict>
+		<addcharges count="1" />
+	</oninflict>
+	
+	<onimpact>
+		<addcharges count="1" />
+	</onimpact>
+	
+	<aura
+		gadget="Gadget_CorruptedDisciple_Ability2"
+		radius="0"
+		targetscheme="self"
+	/>
+	
+	<onframe>
+		<distance target="target_entity" source="source_entity" />
+		<condition test="result gt 700">
+			<expire entity="this_proxy_entity" />
+			<expire />
+		</condition>
+		<condition test="charges eq 10">
+			<expire />
+		</condition>
+		<condition test="not_target_type visible">
+			<expire />
+		</condition>
+	</onframe>
+	
+	<onexpired>
+		<expire entity="this_proxy_entity" />
+		<setproxy entity="this_entity" target="" />
+		<applystate name="State_CorruptedDisciple_Ability2_Enemy_Damage" target="target_entity" duration="13000" pushentity="true" />
+		<setcharges entity="stack_entity" a="charges" />
+	</onexpired>
+</state>

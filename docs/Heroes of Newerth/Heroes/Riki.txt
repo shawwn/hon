@@ -1,0 +1,22 @@
+Ability 1:
+----------
+This is an AOE effect. It slows, silences and causes enemy units to miss while under it.
+
+
+Ability 2:
+----------
+Targets a unit and leaps towards it. This is technically not a teleportation ability, the unit will physically pass through the distance at a much higher speed with a special animation. Upon reaching the target, if it is an enemy unit, you will trigger an attack of yours on the target while adding an extra magical bonus damage to your attack for that one hit.
+
+
+Ability 3:
+----------
+Passive. Deals magical bonus damage to the target when he is attacked from behind.
+
+
+Ultimate:
+----------
+Passive. This gives you permanent invisibility, when you take an action like attacking or casting, you become visible with a fade time before gaining invisibility again. If you are halted, you won't auto attack, if you move normally, you will autoacquire as usual.
+
+
+
+Agility/Melee

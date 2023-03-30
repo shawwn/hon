@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" useentityeffectscale="true">
+
+	<definitions>
+
+		<modifier
+			name="modifier0"
+		/>
+
+		<particlesystem name="system0" space="world" scale="2">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume="1"
+				sample="../sounds/impact.wav"
+			/>
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".5"
+				sample="/heroes/rocky/ability_01/sounds/ability_01_impact_%.wav"
+			/>
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume="1"
+				sample="/shared/sounds/impacts/flesh_%.wav"
+			/>
+
+
+
+			<simpleemitter
+				minangle="-90"
+				maxangle="-90"
+				bone="_bone_centerofchest"
+				life="400"
+				spawnrate="650"
+				count="25"
+				minparticlelife="230"
+				maxparticlelife="2000"
+				speed="2000"
+				drag=".08"
+				gravity="-1"
+				offsetsphere="15"
+				material="/shared/effects/materials/bad_healing_smoke_12.material"
+			>
+				<particle
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="-150"
+					maxanglespeed="150"
+					turn="1"
+					color=".175 .165 .15"
+					startsize="40"
+					minendscale="6"
+					maxendscale="10"
+					startalpha="0"
+					midalpha=".5"
+					endalpha="0"
+					midalphapos="0.1"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				minangle="-90"
+				maxangle="-90"
+				bone="_bone_centerofchest"
+				life="400"
+				spawnrate="650"
+				count="25"
+				minparticlelife="230"
+				maxparticlelife="2000"
+				speed="2000"
+				drag=".08"
+				gravity="-1"
+				offsetsphere="15"
+				material="/shared/effects/materials/dust_smoke_10.material"
+			>
+				<particle
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="-150"
+					maxanglespeed="150"
+					turn="1"
+					color="0.7 0.65 .56"
+					startsize="40"
+					minendscale="6"
+					maxendscale="10"
+					startalpha="0"
+					midalpha=".5"
+					endalpha="0"
+					midalphapos="0.1"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				count="3"
+				particlelife="5000"
+				spawnrate="2000"
+				offsetsphere="50 50 0"
+			>
+				<particle>
+					<model
+						position="0 0 0"
+						life="2000"
+						model="rocks/model.mdf"
+						anim="default_2"
+						color="1 1 1"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".5"
+						scale="1"
+						minyaw="0"
+						maxyaw="180"
+					/>
+				</particle>
+			</simpleemitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+		<spawnmodifier instance="instance1" modifier="modifier0"/> 
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+	</thread>
+
+</effect>

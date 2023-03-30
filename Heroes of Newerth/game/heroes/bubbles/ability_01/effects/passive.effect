@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="1.0">
+
+		<!-- floating little things -->
+		<simpleemitter		
+								bone="shell_high"			
+								spawnrate="30"
+								minparticlelife="800"
+								maxparticlelife="1600"
+								gravity="-10"
+								speed="500"
+								offsetsphere="20 20 0"
+								drag="0.1"
+								inheritvelocity=".1"
+								direction="0 0 0"
+								material="/shared/effects/materials/star_03.material"
+		>
+				<particle 
+									startcolor="0 0 0"
+									midcolor="1 1 .2"
+									endcolor=".2 .8 1"
+									midcolorpos=".2"				
+									minangle="0"
+									maxangle="360"
+									startsize="0"
+									midsize="10"				
+									endsize="0"							
+				/>			
+		</simpleemitter>
+		
+
+		
+			<!-- refraction -->
+		<billboard
+				bone="shell_high"
+				life="1000"
+				color="1 1 1"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="1.0"
+				startparam="0.05"
+				endparam="0.0"
+				midalphapos="0.25"
+				startsize="128"
+				endsize="256"
+				material="/shared/effects/materials/refract_wave.material"
+				position="0 0 50"
+		/>
+			
+			<!-- straight trail -->
+		<trailemitter
+				bone="_bone_fx03"
+				spawnrate="50"
+				particlelife="800"
+				life="2000"
+				texpostime="400"
+			 	texposscale="0.0"
+			 	texstretchscale=".5"
+				subframepose="1"
+				speed="0"
+				material="/shared/effects/materials/soul_trail.material"
+		>
+			
+			<particle
+					startalpha="1.0"
+					midalpha="0.8"
+					endalpha="0.0"
+					startcolor=".5 5 0"
+					endcolor="0 0 5"
+					midcolorpos=".5"
+					startsize="35"
+					endsize="20"
+			/>
+		</trailemitter>
+
+		<!-- spirally trail 
+		<trailemitter
+				bone="_bone_fx08"
+				spawnrate="150"
+				particlelife="900"
+				life="2000"
+				texpostime="400"
+			 	texposscale="0.0"
+			 	texstretchscale=".5"
+				subframepose="1"
+				speed="0"
+				material="/shared/effects/materials/mysticenergy.material"
+		>
+				
+			<particle
+					startalpha=".30"
+					midalpha="0.2"
+					endalpha="0.0"
+					color=".3 0.4 1.0"
+					startsize="30"
+					endsize="10"
+			/>
+			
+		</trailemitter>
+		
+		<trailemitter
+				bone="_bone_fx01"
+				spawnrate="150"
+				particlelife="900"
+				life="2000"
+				texpostime="400"
+			 	texposscale="0.0"
+			 	texstretchscale=".5"
+				subframepose="1"
+				speed="0"
+				material="/shared/effects/materials/mysticenergy.material"
+		>
+				
+			<particle
+					startalpha="0.30"
+					midalpha="0.2"
+					endalpha="0.0"
+					color=".3 0.4 1.0"
+					startsize="30"
+					endsize="10"
+			/>
+			
+		</trailemitter>
+		
+				<trailemitter
+				bone="_bone_fx09"
+				spawnrate="150"
+				particlelife="900"
+				life="2000"
+				texpostime="400"
+			 	texposscale="0.0"
+			 	texstretchscale=".5"
+				subframepose="1"
+				speed="0"
+				material="/shared/effects/materials/mysticenergy.material"
+		>
+				
+			<particle
+					startalpha="0.30"
+					midalpha="0.2"
+					endalpha="0.0"
+					color=".3 0.4 1.0"
+					startsize="30"
+					endsize="10"
+			/>
+			
+		</trailemitter>
+		
+				<trailemitter
+				bone="_bone_fx05"
+				spawnrate="150"
+				particlelife="400"
+				life="2000"
+				texpostime="400"
+			 	texposscale="0.0"
+			 	texstretchscale=".5"
+				subframepose="1"
+				speed="0"
+				material="/shared/effects/materials/mysticenergy.material"
+		>
+				
+			<particle
+					startalpha="0.30"
+					midalpha="0.2"
+					endalpha="0.0"
+					color=".3 0.4 1.0"
+					startsize="30"
+					endsize="10"
+			/>
+			
+		</trailemitter>
+-->
+		<!-- green glow under shell -->
+		<billboard
+				material="/shared/effects/materials/whitedot.material"
+				bone="shell_high"
+				color="0 1 0"
+				loop="1"
+				life="1000"
+				startalpha=".2"
+				midalpha=".7"
+				endalpha=".2"
+				position="0 0 10"
+				size="90"	
+		/>
+				
+				<!-- refraction cone -->
+			<twopointtrailemitter
+				life="600"
+				name="trail07"
+				bone_a="_bone_fx08"
+				bone_b="_bone_fx09"
+				spawnrate="50"		
+				
+				startminparticlelife="600"
+				startmaxparticlelife="600"		
+				
+				endminparticlelife="1"
+				endmaxparticlelife="1" 
+				texpostime="1000"
+			 	texposscale="1"
+			 	texstretchscale="0"				
+				material="/shared/effects/materials/refract_swell_directional.material"
+			>
+				<particle 
+					color="1 1 1"
+					startparam=".15"
+					endparam="0.15"
+				/>
+			</twopointtrailemitter>			
+			
+			
+				
+			
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+

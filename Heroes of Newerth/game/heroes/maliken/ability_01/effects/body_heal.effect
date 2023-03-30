@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+		
+		<simpleemitter
+			name="lifeStealTrail"
+			spawnrate="200"
+			startminparticlelife="1250"
+			startmaxparticlelife="1750"
+			endminparticlelife="0"
+			endmaxparticlelife="0"
+			position="0 0 0"
+			material="/shared/effects/materials/phantom_smoke_04.material"
+		>
+			<particle
+				startcolor="0 0 0"
+				midcolor="0 .25 0"
+				endcolor="0 0 0"
+				startsize="0"
+				midsize="10"
+				endsize="0"
+				midcolorpos=".4"
+				midsizepos=".1"
+			/>
+		</simpleemitter>
+		
+		<modifier
+			name="modifier0"
+			material="/heroes/maliken/ability_02/material_heal.material"
+			startcolor="1 1 1"
+			midcolor="1 1 1"
+			endcolor="1 1 1"
+			midcolorpos=".5"
+			alpha="1"
+		/>
+	
+		<particlesystem name="system0" space="world" scale=".8">
+
+			<billboard
+				bone="Box01"
+				alpha="1"
+				param="0.04"
+				size="320"
+				material="/shared/effects/materials/refract_bubble.material"
+			/>
+
+			<billboard
+				expirelife="300"
+				bone="Box01"
+				startcolor=".2 .5 .2"
+				endcolor="0"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="1.0"
+				midalphapos="0.25"
+				size="164"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+
+			<billboard
+				bone="Box01"
+				color=".05 .1 .05"
+				size="420"
+				material="/shared/effects/materials/corona_07.material"
+				lockup="1"
+				pitch="90"
+			/>
+			
+			<twopointtrailemitter
+				bone_a="_bone_weapon2"
+				bone_b="_bone_weapon3"
+				spawnrate="100"
+				particlelife="400"
+				texpostime="400"
+			 	texposscale="0.0"
+			 	texstretchscale=".5"
+				subframepose="1"
+				material="/shared/effects/materials/soul_trail.material"
+			>
+				<particle startalpha="1.0" endalpha="0.0" color="0.1 0.5 0.0" />
+			</twopointtrailemitter>
+
+			<twopointtrailemitter
+				bone_a="_bone_weapon1"
+				bone_b="_bone_weaponattach"
+				spawnrate="100"
+				particlelife="400"
+				texpostime="400"
+			 	texposscale="0.0"
+			 	texstretchscale=".5"
+				subframepose="1"
+				material="/shared/effects/materials/soul_trail.material"
+			>
+				<particle startalpha="1.0" endalpha="0.0" color="0.1 0.5 0.0" />
+			</twopointtrailemitter>
+
+			<twopointemitter
+				bone_a="_bone_weaponattach"
+				bone_b="_bone_weapon1"
+				spawnrate="25"
+				particlelife="500"
+				angle="0.0"
+				offsetsphere="10"
+				material="/shared/effects/materials/fire_green_add.material"
+			>
+				<particle
+					startcolor="0"
+					midcolor=".25"
+					endcolor="0"
+					midcolorpos="0.5"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".85"
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-45"
+					maxanglespeed="45"
+					startsize="50"
+					endsize="50"
+					flare="0"
+					startanchor="1"
+					endanchor=".5"
+				/>
+			</twopointemitter>
+
+			<twopointemitter
+				bone_a="_bone_weaponattach"
+				bone_b="_bone_weapon2"
+				spawnrate="25"
+				particlelife="500"
+				angle="0.0"
+				offsetsphere="10 10 10"
+				material="/shared/effects/materials/fire_green_blend.material"
+			>
+				<particle
+					color="1 1 1"
+					midcolorpos="0.5"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".85"
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-45"
+					maxanglespeed="45"
+					startsize="65"
+					endsize="10"
+					flare="true"
+					startanchor="1"
+					endanchor="1"
+				/>
+			</twopointemitter>
+			
+			<twopointemitter
+				bone_a="_bone_head"
+				bone_b="_bone_centerofchest"
+				spawnrate="25"
+				particlelife="500"
+				angle="0.0"
+				offsetsphere="0 0 0"
+				material="/shared/effects/materials/fire_green_blend.material"
+			>
+				<particle
+					color="1 1 1"
+					midcolorpos="0.5"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".85"
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-180"
+					maxanglespeed="180"
+					startsize="40"
+					endsize="10"
+					flare="true"
+					startanchor="1"
+					endanchor="1"
+				/>
+			</twopointemitter>
+			
+			<twopointemitter
+				bone_a="_bone_weapon3"
+				bone_b="_bone_weapon1"
+				spawnrate="25"
+				particlelife="500"
+				angle="0.0"
+				offsetsphere="15"
+				material="/shared/effects/materials/phantom_black.material"
+			>
+				<particle
+					color="1 1 1"
+					midcolorpos="0.5"
+					startalpha="0"
+					midalpha=".8"
+					endalpha="0"
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-45"
+					maxanglespeed="45"
+					startsize="125"
+					endsize="50"
+					flare="false"
+					startanchor=".75"
+					endanchor=".25"
+				/>
+			</twopointemitter>
+
+			<twopointemitter
+				bone_a="_bone_weapon3"
+				bone_b="_bone_weapon2"
+				spawnrate="140"
+				particlelife="300"
+				offsetsphere="2"
+				material="/shared/effects/materials/fire_green_add.material"
+			>
+				<particle
+					color="1 1 1"
+					midcolorpos="0.5"
+					startalpha="1.0"
+					endalpha="1.0"
+					maxangle="360"
+					minanglespeed="-45"
+					maxanglespeed="45"
+					minendsize="5"
+					startsize="5"
+					maxendsize="15"
+					flare="true"
+					anchor="1"
+				/>
+			</twopointemitter>
+
+			<beam
+				bone_a="_bone_weapon3"
+				bone_b="_bone_weapon1"
+				startsize="100"
+				endsize="110"
+				loop="true"
+				life="150"
+				startcolor="0 .5 0"
+				midcolor="0 .7 0"
+				endcolor="0 .5 0"
+				midcolorpos=".8"
+				material="/shared/effects/materials/bow_glow_03.material"
+				framespeed="5"
+				depthbias="-30"
+				anchor="1"
+			/>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				spawnrate="5"
+				particlelife="500"
+				gravity="-2"
+				speed="20"
+				drag=".01"
+				depthbias="-50"
+				material="/shared/effects/materials/refract_wellwave.material"
+				offsetsphere="35 35 0"
+				minangle="-360"
+				maxangle="360"
+				direction="0 0 -1"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-10"
+					maxanglespeed="10"
+					color="1 1 1"
+					startsize="40"
+					endsize="50"
+					param=".0175"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+				/>
+			</simpleemitter>
+			
+			<twopointemitter
+				bone_a="_bone_weaponattach"
+				bone_b="_bone_weapon1"
+				spawnrate="10"
+				particlelife="500"
+				offsetsphere="25 25 0"
+				material="/shared/effects/materials/refract_wellwave.material"
+				depthbias="-50"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-10"
+					maxanglespeed="10"
+					color="1 1 1"
+					startsize="50"
+					endsize="40"
+					param=".015"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+				/>
+			</twopointemitter>
+
+			<trackeremitter
+				bone="_bone_centerofchest"
+				owner="source"
+				targetbone="_bone_centerofchest"
+				targetowner="target"
+				tracktype="angular"
+				trackspeed="7"
+				drag="0"
+				spawnrate="4"
+				particlelife="3000"
+				gravity="-50"
+				offsetsphere="5"
+				minspeed="10"
+				maxspeed="200"
+				acceleration="50"
+				direction="0 0 1"
+				inheritvelocity="0"
+				distancelife="true"
+			>
+				<particle
+					emitter0="lifeStealTrail"
+				/>
+			</trackeremitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>  
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" /> 
+	</thread>
+
+</effect>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pet
+	name="Pet_Bephelgor_Ability3"
+		
+	icon=""
+	portrait=""
+	model="/shared/models/invis.mdf"
+	skin=""
+	
+	passiveeffect="/shared/effects/corpse.effect"
+	spawneffect=""
+	respawneffect=""
+	isselectable="false"
+	invulnerable="true"
+	selectsound=""
+	orderconfirmedsound=""
+	
+	preglobalscale="0.9"
+	modelscale="1.0"
+	effectscale="1.0"
+	boundsheight="38"
+	boundsradius="42"
+	selectionradius="0"
+	targetoffset="0 0 0"
+
+	canrotate="false"
+	ismobile="false"
+	isflying="false"
+	clearvision="false"
+	drawonmap="false"
+
+	attacktype="none"
+	
+	unittype="pseudo_corpse"
+	
+	lifetime="15000"
+	unitwalking="true"
+>
+</pet>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" deferred="true" useentityeffectscale="1">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+
+			<simpleemitter
+				count="1"
+				spawnrate="1000"
+				particlelife="2600"
+				acceleration="0.0"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+				position="0 0 50"
+			>
+				<particle
+					turn="1"
+				>
+					<model
+						position="0 150 0"
+						life="2500"
+						anim="gib"
+						model="bones/model.mdf"
+						startscale="1"
+						endscale="1"
+						startcolor=".85 .75 .75"
+						midcolor=".85 .75 .5"
+						endcolor=".85 .75 .5"
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".1"
+						midcolorpos=".2"
+					>
+					</model>
+					
+				</particle>
+			</simpleemitter>
+
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

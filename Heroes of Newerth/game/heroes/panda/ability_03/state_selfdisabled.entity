@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Panda_Ability3_SelfDisable"
+	
+	ishidden="true"
+	movespeedslow=".6"
+	effecttype=""
+	
+	passiveeffect="effects/state_self.effect"
+>
+</state>

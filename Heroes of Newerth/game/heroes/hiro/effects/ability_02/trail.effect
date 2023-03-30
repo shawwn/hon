@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="tower_projectile" deferred="true">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="2">
+		
+			<model
+				model="model.mdf"
+				color="1 1 1"
+				midcolorpos=".2"
+				alpha="1"
+				scale="1"
+				yawspeed="720"
+			>
+				<simpleemitter
+					bone="_bone_weapon3"
+					count="2"
+					spawnrate="1000"
+					particlelife="400"
+					gravity="-6"
+					speed="0.0"
+					acceleration="0.0"
+					position="0 0 0"
+					offsetsphere="0"
+					material="/shared/effects/materials/blink.material"
+				>
+					<particle
+						startcolor="0 0 0"
+						midcolor="1 .5 0"
+						endcolor="0 0 0"
+						minangle="0"
+						maxangle="360"
+						minanglespeed="0"
+						maxanglespeed="90"
+						startsize="50"
+						midsize="20"
+						endsize="5"
+						lockup="true"
+						pitch="90"
+						anchor="1"
+					/>
+				</simpleemitter>
+				
+				<simpleemitter
+					bone="_bone_weapon3"
+					count="5"
+					spawnrate="1000"
+					particlelife="400"
+					gravity="-6"
+					speed="0.0"
+					acceleration="0.0"
+					position="0 0 0"
+					offsetsphere="10"
+					material="/shared/effects/materials/blink.material"
+					inheritvelocity=".5"
+				>
+					<particle
+						startcolor="0 0 0"
+						midcolor="1 .5 0"
+						endcolor="0 0 0"
+						minangle="0"
+						maxangle="360"
+						minanglespeed="0"
+						maxanglespeed="90"
+						startsize="35"
+						midsize="12"
+						endsize="5"
+						lockup="true"
+						pitch="90"
+					/>
+				</simpleemitter>
+				
+				
+			</model>
+			
+			
+
+		</particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

@@ -1,0 +1,50 @@
+Immediate:
+Model Exporter for mirrored normalmaps
+Game settings based game code
+
+Before First 10:
+Effects bug
+Entity snapshot changes
+Unit blockers
+Network tree system
+Entity XML Definitions
+Fix stuck keys
+Interface game module
+
+
+After First 10:
+Effects features
+Path-finding optimizations
+Low end renderer
+Window widget
+progress bar widget
+Automatically combine reliable, reliable acks, and unreliable packets
+Client snapshot diffing
+Reliable user commands in client snapshots
+Entity filtering based on visibilty
+Team based private data
+FIELD_CONSTANT CPU optimization
+Voice communication
+Time of day
+Regional environment settings
+Web interface for entity editing
+Cliff system
+Camera foliage
+Observer and ref server slots
+
+
+Wish List:
+Interface floating improvements
+Interface animations (fading, moving, etc)
+UIScript improvments (typed tokens, others)
+Post processing
+Texture cache improvements
+Minimap optimizations
+map widget
+graph widget for stat displays
+label cleanups
+UIScript namespace for entity and map scripting
+Relay Server for spectating
+Customizable world components
+
+

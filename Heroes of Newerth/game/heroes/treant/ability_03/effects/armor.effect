@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" useentityeffectscale="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".85"
+				sample="../sounds/cast.wav"
+			/>
+			
+			<model
+				life="500"
+				bone="_bone_center"
+				model="armor/model.mdf"
+				anim="spawn_1"
+				scale="2"
+				yawspeed="0"
+				yaw="0"
+				startalpha=".65"
+				midalpha=".65"
+				endalpha=".65"
+			/>
+
+			<model
+				delay="500"
+				bone="_bone_center"
+				model="armor/model.mdf"
+				anim="idle"
+				expirelife="1000"
+				yawspeed="0"
+				scale="2"
+				yaw="0"
+				startalpha=".65"
+				endalpha="0"
+			/>
+
+			<simpleemitter
+				bone="_bone_center"
+				minparticlelife="750"
+				maxparticlelife="1000"
+				spawnrate="15"
+				gravity="-5"
+				speed="65"
+				drag="0"
+				position="0 0 0"
+				material="/shared/effects/materials/leaf_01.material"
+				offsetsphere="40 40 0"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					startcolor="1 .25 .1"
+					midcolor="1 .5 .1"
+					endcolor="0 0 0"
+					midcolorpos=".5"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".4"
+					startsize="40"
+					endsize="20"
+					mindsizepos=".1"
+				/>
+			</simpleemitter>
+			
+			
+			<simpleemitter
+				bone="_bone_center"
+				count="15"
+				minparticlelife="500"
+				maxparticlelife="750"
+				spawnrate="1000"
+				gravity="-5"
+				speed="150"
+				drag="0"
+				position="0 0 0"
+				material="/shared/effects/materials/leaf_01.material"
+				offsetsphere="40 40 0"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					startcolor="1 .25 .1"
+					midcolor="1 .5 .1"
+					endcolor="0 0 0"
+					midcolorpos=".5"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".4"
+					startsize="40"
+					endsize="20"
+					mindsizepos=".1"
+				/>
+			</simpleemitter>
+			
+			<!--leavesGoingOut-->
+			<simpleemitter
+				delay="0"
+				spawnrate="500"
+				count="50"
+				bone="Bip01 Spine2"
+				particlelife="1000"
+				gravity="4"
+				speed="100"
+				drag=".01"
+				acceleration="0"
+				position="0 0 0"
+				material="/shared/effects/materials/leaf.material"
+				offsetsphere="50 50 0"
+				minangle="0"
+				maxangle="360"
+				direction="0 0 1"
+				offsetdirection="0 0 0"
+				offsetradial="10 10 10"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-50"
+					maxanglespeed="-150"
+					startcolor="1 .5 0"
+					midcolor="1 .5 0"
+					endcolor="0 .5 0"
+					midcolorpos=".4"
+					startframe="0"
+					endframe="1"
+					startsize="10"
+					midsize="20"
+					endsize="10"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".25"
+					startstickiness=".4"
+					endstickiness="0"
+				/>
+			</simpleemitter>
+			
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		
+	</thread> 
+</effect>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_PollywogPriest_Ability1"
+
+	radiusstart="200"
+	radiusend="300"
+
+	speed="2500"
+	lifetime="312"
+	maximpactspertarget="1"
+	targetselection="random"
+	repeattargetimpacts="false"
+	targetscheme="visible_enemy_units"
+	effecttype="Magic"
+	
+	impacteffect="effects/impact.effect"
+	bridgeeffect="effects/cast.effect"
+>
+	<onimpact>
+		<damage effecttype="Magic" amount="75,150,225,300"/>
+	</onimpact>
+	
+	<modifier key="Chieftain" modpriority="1"
+		impacteffect="effects/impact_alt.effect"
+		bridgeeffect="effects/cast_alt.effect"
+	>
+	</modifier>
+</affector>

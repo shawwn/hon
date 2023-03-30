@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="dragon_slave" persistent="true" useentityeffectscale="true">
+	<definitions>
+
+				
+	
+		
+	<particlesystem name="system0" space="world" scale="1">
+
+	<sound
+		linearfalloff="true" 
+		falloffstart="1000"
+		falloffend="2500"
+		volume=".7"
+		sample="../sounds/cast2.wav"
+	/>
+		
+		<simpleemitter
+			delay="0"
+			life="400"
+			startparticlecolor="1"
+			endparticlecolor="0"
+			startparticlealpha="1"
+			endparticlealpha="0"
+			spawnrate="33"
+			particlelife="600"
+			drag="0.0"
+			acceleration="0.0"			
+			minangle="0"
+			maxangle="0"			
+		>
+			<particle>		
+				
+				<groundsprite
+					delay="0"
+					life="1000"
+					loop="false"			
+					material="/shared/effects/materials/coals_add.material"
+					startsize="140"
+					midsize="10"
+					endsize="10"
+					midsizepos=".6"
+					maxyaw="360"
+					startcolor="2 .5 0"
+					endcolor="0 0 0"
+				/>
+			
+				<groundsprite
+					delay="0"
+					life="1000"
+					material="/shared/effects/materials/ground_smash_overlay.material"
+					startsize="140"
+					midsize="10"
+					endsize="10"
+					midsizepos=".6"
+					color="1.0 1.0 1.0"
+					startalpha="0.75"
+					midalpha="0.75"
+					midalphapos="0.5"
+					endalpha="0"
+					maxyaw="360"
+				/>
+		
+	
+				
+				
+			</particle>	
+		</simpleemitter>
+		
+
+<!--				<billboard
+					position="0 0 10"
+					delay="0"
+					life="500"
+					param="0.1"	
+					startsize="160"
+					endsize="350"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"				
+					depthbias="0"
+					material="/shared/effects/materials/refract_swell.material"
+					lockup="1"
+					lockright="1"
+					pitch="90"
+				/>		
+	
+-->
+
+	
+
+
+
+		
+
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

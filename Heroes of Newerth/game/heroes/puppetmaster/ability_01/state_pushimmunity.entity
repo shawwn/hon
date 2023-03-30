@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_PuppetMaster_Ability1_PushImmunity"
+
+	ishidden="true"
+>
+	<oninflict>
+		<expirestate name="State_PuppetMaster_Ability1_ImmobilePush" />
+	</oninflict>
+</state>

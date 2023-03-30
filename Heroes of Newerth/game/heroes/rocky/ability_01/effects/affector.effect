@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect  persistent="1">
+	<definitions>
+
+
+		
+		<particlesystem name="system0" space="world" scale="1">
+
+		<sound
+			linearfalloff="true" 
+			falloffstart="0"
+			falloffend="2200"
+			volume=".65" 
+			sample="/heroes/rocky/ability_01/sounds/ability_01_impact_%.wav"
+		/>
+		
+		<billboard
+			name="ring"
+			life="200"
+			startcolor=".2 .7 0"
+			midcolor="0 .5 0.0"
+			endcolor="0 0 0"
+		
+		
+			startparam=".5"
+			endparam="0.4"
+			startsize="258"
+			endsize="608"
+			depthbias="-100"
+			position="0 0 0"
+			material="/shared/effects/materials/stomp_01.material"
+			lockup="true"
+			pitch="90"				
+		/>
+		
+		<simpleemitter	
+			delay="000"		
+			spawnrate="50"
+			count="2"			
+			particlelife="5500"		
+				
+			offsetsphere=" 200 200 0"
+			position="0 0 -0"
+		>
+			<particle>
+				<debris
+					position="0 0 10"
+					delay="0"
+					scale=".8"
+					life="3000"
+					model="/shared/effects/models/debris/debris.mdf"
+					anim="idle"	
+					minspeed="100.0"
+					maxspeed="400.0"
+					minrotationspeed="500.0"
+					maxrotationspeed="600.0"
+					gravity="20.0"
+					minangle="0"
+					color=".6 .6 .3"
+					maxangle="20"
+					collide="true"
+					startalpha="1.0"
+					midalpha="1.0"
+					endalpha="0.0"
+					midalphapos="0.9"
+					bounce="0.7"
+					reflect="0.6"
+					animpose="false"
+				/>	
+			</particle>
+		</simpleemitter>
+		
+		
+		<simpleemitter	
+			delay="000"		
+			spawnrate="50"
+			count="02"			
+			particlelife="5500"		
+				
+			offsetsphere=" 200 200 0"
+			position="0 0 -0"
+		>
+
+		
+		
+		
+			<particle>
+
+
+				<groundsprite	
+					delay="0"				
+					life="5400"
+					material="/shared/effects/materials/ground_smash_overlay.material"
+					size="60"			
+					color="1.0 1.0 1.0"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos="0.05"
+				/>	
+				
+			
+				
+				<model
+					color=".7.65 .4 "
+					model="rock_1.mdf"	
+					minyaw="-220"
+					maxyaw="220"
+					
+					minroll="-30"
+					maxroll="30"
+					
+					minpitch="-30"
+					maxpitch="30"
+					
+					startscale="0"
+					
+					minmidscale="1"
+					maxmscale="2"
+					
+					endscale="2"
+					midscalepos="0.1"
+					
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".8"
+					life="2000"				
+				/>	
+				
+				
+			</particle>			
+		</simpleemitter>			
+	
+
+		<simpleemitter				
+			spawnrate="50"
+			count="5"			
+			particlelife="5500"					
+			offsetsphere=" 200 200 0"
+			position="0 0 -0"
+		>
+			<particle>
+				<model
+					model="rock_3.mdf"	
+					minyaw="-220"
+					maxyaw="220"
+					
+					minroll="-30"
+					maxroll="30"
+					
+					minpitch="-30"
+					maxpitch="30"
+					color=".7.65 .4 "
+
+					
+					startscale="0"
+					
+					minmidscale="1"
+					maxmscale="2"
+					
+					endscale="2"
+					midscalepos="0.1"
+					
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".8"
+					life="2000"				
+				/>					
+			</particle>			
+		</simpleemitter>
+
+		<simpleemitter
+			delay="0"
+			offsetsphere="250 250 0"
+			spawnrate="222"			
+			count="14"
+			particlelife="1900"			
+			gravity="-.5"					
+			acceleration="0"
+			speed="20"
+			position="0 0 20"
+			material="/shared/effects/materials/pyroclast_01.material"	
+		>
+			<particle
+					minangle="-360"
+					maxangle="360"
+					color=".36 .383 .3"
+					minstartsize="10"
+					maxstartsize="50"
+					
+					minendsize="100"
+					maxendsize="200"
+					
+					minanglespeed="-30"
+					maxanglespeed="33"
+					
+					startalpha="0"
+					midalpha=".5"
+					endalpha="0"
+		
+					frame="1"
+					framespeed="1"
+
+				
+					anchor="1"
+	
+					lockup="0"
+					lockright="false"
+
+					
+					turn="false"
+			/>
+
+		</simpleemitter>
+
+	
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+	  
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+
+

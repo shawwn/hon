@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="dragon_slave" persistent="true" useentityeffectscale="true">
+	<definitions>
+
+
+				
+		<billboard
+			name="emitter2"
+			
+			life="600"								
+			color="1.0 1.0 1.0"				
+			position="0 -40 140"
+			startsize="200"
+			endsize="400"
+			material="/shared/effects/materials/refract_wave.material"
+			lockup="1"
+			lockright="1"
+			directionalspace="local"			
+			param=".15"	
+			roll="180"
+			yaw="0"
+			pitch="90"
+			
+		/>	
+		
+		<billboard
+			name="emitter3"
+			
+			life="600"								
+			color="1.0 1.0 1.0"				
+			position="0 0 00"
+			startsize="200"
+			endsize="600"
+			
+			material="/shared/effects/materials/refract_wave.material"
+			lockup="1"
+			lockright="1"
+			directionalspace="local"
+			startparam="0"
+			midparam="0.05"
+			endparam="0"
+			midparampos=".3"
+			roll="180"
+			yaw="0"
+			pitch="90"
+			
+			
+		/>	
+					
+				
+		
+			<twopointtrailemitter
+				life="600"
+				name="trail01"
+				bone_a="_bone_leftwingtip"
+				bone_b="Box09"
+				spawnrate="50"
+				
+				startminparticlelife="600"
+				startmaxparticlelife="600"		
+				
+				endminparticlelife="1"
+				endmaxparticlelife="1" 
+
+				texpostime="1000"
+			 	texposscale="1"
+			 	texstretchscale="0"				
+				material="/shared/effects/materials/arrow_trail.material"
+			>
+				<particle 
+					startcolor=".2 0.2 1" 
+					midcolor="1 .3 0"
+					endcolor="0 0 0"
+				/>
+			</twopointtrailemitter>
+			
+			<trailemitter
+				life="700"
+				name="trail02"
+				bone="_bone_leftwingtip"
+				spawnrate="50"
+				startminparticlelife="700"
+				startmaxparticlelife="700"		
+				
+				endminparticlelife="1"
+				endmaxparticlelife="1" 
+				texpostime="700"
+			 	texposscale="1.8"
+			 	texstretchscale="0"
+				position="10 0 0"
+				material="/shared/effects/materials/arrow_trail.material"
+			>
+				<particle
+					startcolor="0 1 1"
+					midcolor="1 0 0"
+					endcolor="0 0 0"
+					startsize="0"
+					midsize="10"
+					endsize=".5"					
+				/>
+			</trailemitter>			
+			
+			<twopointtrailemitter
+				life="600"
+				name="trail03"
+				bone_a="Box05"
+				bone_b="_bone_rightwingtip"
+				spawnrate="50"		
+				startminparticlelife="600"
+				startmaxparticlelife="600"		
+				
+				endminparticlelife="1"
+				endmaxparticlelife="1" 
+				texpostime="1000"
+			 	texposscale="1"
+			 	texstretchscale="0"				
+				material="/shared/effects/materials/arrow_trail.material"
+			>
+				<particle 
+					startalpha="1.0" 
+					endalpha="0.0" 
+					startcolor=".2 0.2 1" 
+					midcolor="1 .3 0"
+					endcolor="0 0 0"
+				/>
+			</twopointtrailemitter>	
+			
+			<trailemitter
+				life="700"
+				name="trail04"
+				bone="_bone_rightwingtip"
+				spawnrate="50"
+				startminparticlelife="700"
+				startmaxparticlelife="700"		
+				
+				endminparticlelife="1"
+				endmaxparticlelife="1" 
+				texpostime="700"
+			 	texposscale="1.8"
+			 	texstretchscale="0"
+				position="-10 0 0"
+				material="/shared/effects/materials/arrow_trail.material"
+			>
+				<particle
+					startcolor="1 1 1"
+					midcolor="1 0 0"
+					endcolor="0 0 0"
+					startsize="3"
+					endsize=".5"
+					midsizepos="0.0"
+				/>
+			</trailemitter>		
+
+			<trailemitter
+				name="trail05"
+				life="600"
+				bone="Box03"
+				spawnrate="50"
+				startminparticlelife="600"
+				startmaxparticlelife="600"		
+				
+				endminparticlelife="1"
+				endmaxparticlelife="1" 
+				texpostime="1000"
+			 	texposscale="1.8"
+			 	texstretchscale="0"
+				position="0 0 0"
+				material="/shared/effects/materials/arrow_trail.material"
+			>
+				<particle
+					startcolor="1 1 1"
+					midcolor="1 .5 0"
+					endcolor="0 0 0"
+					startsize="3"
+					midsize="10"				
+					endsize=".5"
+					
+				/>
+			</trailemitter>	
+			
+			<trailemitter
+				life="600"
+				name="trail06"
+				bone="Box02"
+				spawnrate="20"
+				startminparticlelife="600"
+				startmaxparticlelife="600"		
+				
+				endminparticlelife="1"
+				endmaxparticlelife="1" 
+				texpostime="1000"
+			 	texposscale="1"
+			 	texstretchscale="0"
+				position="0 0 0"
+				material="/shared/effects/materials/arrow_trail.material"
+			>
+				<particle
+					startcolor="1 1 1"
+					midcolor="1 0.5 0"
+					endcolor="0 0 0"
+					startsize="0"
+					midsize="10"				
+					endsize=".5"
+					
+				/>
+			</trailemitter>				
+
+		
+		
+		
+			<twopointtrailemitter
+				life="600"
+				name="trail07"
+				bone_a="_bone_leftwingtip"
+				bone_b="_bone_rightwingtip"
+				spawnrate="50"		
+				
+				startminparticlelife="600"
+				startmaxparticlelife="600"		
+				
+				endminparticlelife="1"
+				endmaxparticlelife="1" 
+				texpostime="1000"
+			 	texposscale="1"
+			 	texstretchscale="0"				
+				material="/shared/effects/materials/refract_swell_directional.material"
+			>
+				<particle 
+					color="1 1 1"
+					startparam=".15"
+					endparam="0.15"
+				/>
+			</twopointtrailemitter>			
+			
+		
+		
+		
+		<model
+			life="600"
+			name="emitter0" 
+			anim="idle"
+			model="projectile.mdf"			
+			startscale="1.5"
+			endscale="3.2"			
+			startcolor="1 1 1"
+			midcolor="1 1 1"
+			endcolor="0 0 0"
+			midcolorpos=".75"				
+			emitter0="trail01"
+			emitter1="trail02"
+			emitter2="trail03"
+			emitter3="trail04"	
+			emitter4="trail05"	
+			emitter5="trail06"	
+			emitter6="trail07"						
+		/>	
+
+		
+		<light
+			name="emitter1"
+			life="400"
+			delay="0"
+			startcolor="0 0 0"
+			midcolor="7 2.8 .2"
+			endcolor="0 0 0"
+			midcolorpos="0.75"
+			falloffstart="50"
+			falloffend="200"
+			position="0 130 90"
+		/>		
+		
+	<particlesystem name="system0" space="entity" scale="1">
+
+
+		<simpleemitter
+			delay="0"
+			count="1"
+			spawnrate="5000"
+			particlelife="600"
+			gravity="1.0"
+			speed="1250.0"
+			drag="0.0"
+			acceleration="0.0"
+			
+			minangle="0"
+			maxangle="0"
+			
+			direction="0 1 0"
+			offsetdirection="0 0 0"
+			offsetradial="0 0 0"
+			particledirectionalspace="local"		
+			
+		>
+			<particle
+				emitter0="emitter0"		
+				emitter1="emitter1"		
+				emitter2="emitter2"					
+			/>		
+
+		</simpleemitter>
+		
+		<simpleemitter
+			delay="0"
+			count="3"
+			spawnrate="6"
+			particlelife="600"
+			gravity="1.0"
+			speed="1250.0"
+			drag="0.0"
+			acceleration="0.0"
+			
+			minangle="0"
+			maxangle="0"
+			
+			direction="0 1 0"
+			offsetdirection="0 0 0"
+			offsetradial="0 0 0"
+			particledirectionalspace="local"		
+			
+		>
+			<particle
+		
+				emitter0="emitter3"					
+			/>		
+
+		</simpleemitter>		
+		
+		
+
+
+
+		
+
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

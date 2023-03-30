@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Mumra_Ability_03_Soul"
+
+	speed="1200"
+	gravity="0"
+	flying="true"
+	flyheight="100"
+	pitch="90"
+	modelscale="2.2"
+	model="../ability_02/pet/proj.mdf"
+	anim="fly"
+	deatheffect="effects/explode.effect"
+	traileffect="effects/trail.effect"
+>
+	<onimpact>
+		<spawnunit name="Gadget_Mumra_Ability3_LocationReveal" count="1" target="target_position" />
+		<spawnaffector name="Affector_Mumra_Ability3_Explosion" target="target_position" />
+		
+		<kill source="" target="proxy_entity" />
+		
+	</onimpact>
+</projectile>

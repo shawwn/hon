@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="ability_02">
+	<definitions>
+	
+	
+
+		<particlesystem name="system0" space="world">
+
+		
+	
+		<orbiteremitter	
+			
+			delay="300"
+			bone="_bone_fx_03"
+			spawnrate="11"
+			particlelife="1000"
+			gravity="0.0"
+			minspeed="2"
+			maxspeed="2.5"
+			acceleration="0" 
+			drag="0.0"
+			minangle="-90" 
+			maxangle="90" 
+			position="0.0 0.0 4" 
+			origin="0 0 0" 
+			orbit="1.0 0.0 1.0" 
+			direction="0.0 0.0 1.0" 
+			offset="12 11 10"
+			cylindrical="false" 
+			material="/shared/effects/materials/bat.material"
+			
+		>
+			<particle
+							color="1 1 1"
+							midcolorpos="0.5"
+							startalpha="1"
+							midalpha="1"
+							endalpha="0"
+							minframe="0"
+							maxframe="1"
+							framespeed="2"		
+							minscale="11"
+							maxscale="12"								
+							turn="true"
+			/>
+		</orbiteremitter>
+		
+		<orbiteremitter	
+			
+			delay="300"
+			bone="_bone_fx_03"
+			spawnrate="11"
+			particlelife="1000"
+			gravity="0.0"
+			minspeed="2"
+			maxspeed="2.5"
+			acceleration="0" 
+			drag="0.0"
+			minangle="-90" 
+			maxangle="90" 
+			position="0.0 0.0 -10" 
+			origin="0 0 0" 
+			orbit="1.0 0.0 1.0" 
+			direction="0.0 0.0 1.0" 
+			offset="12 11 10"
+			cylindrical="false" 
+			material="/shared/effects/materials/bat.material"
+			
+		>
+			<particle
+				color="1 1 1"
+				midcolorpos="0.5"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				minframe="0"
+				maxframe="1"
+				framespeed="2"		
+				minscale="11"
+				maxscale="12"								
+				turn="true"
+			/>
+		</orbiteremitter>	
+
+		<billboard	
+			bone="_bone_fx_03"
+			
+			
+			material="/shared/effects/materials/whitedot.material"
+			position="0 0 0"
+			color=".2 0 .4"					
+		
+			size="90"
+			depthbias="-0"
+		/>
+		
+		<billboard	
+			bone="_bone_fx_01"
+			
+			
+			material="/shared/effects/materials/whitedot.material"
+			position="0 0 0"
+			color=".2 0 .4"					
+		
+			size="30"
+			depthbias="-0"
+		/>	
+
+		<billboard	
+			bone="_bone_fx_02"
+			
+			
+			material="/shared/effects/materials/whitedot.material"
+			position="0 0 0"
+			color=".2 0 .4"					
+		
+			size="30"
+			depthbias="-0"
+		/>
+		
+<!--
+-->
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+	  <spawnmodifier instance="instance1" modifier="modifier0"/> 
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="tower_projectile" deferred="true">
+	<definitions>
+	
+			<modifier
+			life="750"
+			name="modifier0"
+			alpha="0"
+			color=".5 .5 .5"
+			endcolor="1"
+			/>
+			
+		<particlesystem name="system0" space="world" scale="1">
+		
+			<model
+			life="750"
+				parentmodel="true"
+				parentskeleton="true"
+				startcolor=".75 .1 .1"
+				endcolor="0"
+				material="/shared/effects/materials/shell4.material"
+				startalpha=".5"
+				endalpha="0"
+			/>
+
+			<simpleemitter
+				position="0 20 0" 
+				spawnrate="35"
+				particlelife="850"
+				gravity="0.0"
+				offsetsphere="3 3 3"
+				minspeed="5"
+				maxspeed="15"
+				drag="0.0"
+				acceleration="0.0"
+				direction="0.0 0.0 1.0"
+				material="/shared/effects/materials/phantom_smoke_03.material"
+				inheritvelocity="0.25"
+			>
+					<particle 
+						startcolor="0 0 0"
+						midcolor=".4 0 .2"
+						endcolor="0 0 0"
+						midcolorpos="0.4"				
+						minangle="0"
+						maxangle="360"
+						startsize="55"
+						midsize="40"				
+						endsize="15"
+						midsizepos=".8"
+						minanglespeed="-90"
+						maxanglespeed="90"
+					/>			
+			</simpleemitter>
+			
+			<simpleemitter
+				position="0 20 0" 
+				spawnrate="35"
+				particlelife="850"
+				gravity="0.0"
+				offsetsphere="3 3 3"
+				minspeed="5"
+				maxspeed="15"
+				drag="0.0"
+				acceleration="0.0"
+				direction="0.0 0.0 1.0"
+				material="/shared/effects/materials/phantom_smoke_03.material"
+				inheritvelocity="0.25"
+				minangle="0"
+				maxangle="5"
+			>
+					<particle 
+						startcolor="0 0 0"
+						midcolor=".4 0 .05"
+						endcolor="0 0 0"
+						midcolorpos="0.4"				
+						minangle="0"
+						maxangle="360"
+						startsize="55"
+						midsize="40"				
+						endsize="15"
+						midsizepos=".8"
+						minanglespeed="-90"
+						maxanglespeed="90"
+					/>			
+			</simpleemitter>
+			
+			<simpleemitter
+				position="0 0 0" 
+				spawnrate="35"
+				particlelife="750"
+				gravity="0.0"
+				offsetsphere="0 0 0"
+				minspeed="5"
+				maxspeed="15"
+				drag="0.5"
+				acceleration="0.0"
+				direction="0.0 0.0 1.0"
+				material="/shared/effects/materials/blood1.material"
+				inheritvelocity="0.5"
+			>
+					<particle 
+						startcolor="0 0 0"
+						midcolor=".4 0 .2"
+						endcolor="0 0 0"
+						midcolorpos="0.4"				
+						minangle="0"
+						maxangle="360"
+						startsize="30"
+						midsize="20"				
+						endsize="10"
+						startalpha="0"
+						midalpha=".5"
+						endalpha="0"
+						midalphapos=".1"
+						midsizepos=".8"
+						minanglespeed="-90"
+						maxanglespeed="90"
+					/>			
+			</simpleemitter>
+			
+			<simpleemitter
+				spawnrate="20"
+				minparticlelife="900"
+				maxparticlelife="1200"
+				material="/shared/effects/materials/bad_healing_smoke_12.material"
+				offsetsphere="10"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="0"
+					startcolor=".2 0 .1"
+					midcolor=".2 0 .1"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					startsize="20"
+					maxendsize="75"
+					midsizepos=".3"
+					startalpha="1"
+					endalpha="0 0 0"
+					midalphapos=".5"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				spawnrate="20"
+				particlelife="350"
+				offsetsphere="10"
+				material="/shared/effects/materials/phantom_smoke_04.material"
+				inheritvelocity="-.25"
+			>
+				<particle 
+					startcolor="0"
+					midcolor=".25 0 .1"
+					endcolor="0 0 0"
+					midcolorpos="0.4"
+					minangle="0"
+					maxangle="360"
+					startsize="50"
+					endsize="0"
+					midsizepos=".8"
+					minanglespeed="-90"
+					maxanglespeed="90"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				depthbias="-40"
+				spawnrate="20"
+				particlelife="600"
+				offsetsphere="10"
+				material="/shared/effects/materials/dust.material"
+			>
+				<particle 
+					startcolor=".25 0 .25"
+					midcolor=".25 0 .25"
+					midcolorpos="0.2"
+					endcolor="0 0 0"
+					minangle="0"
+					maxangle="360"
+					startsize="0"
+					endsize="50"
+					minanglespeed="-90"
+					maxanglespeed="90"
+					anchor=".65"
+					startalpha=".75"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				spawnrate="15"
+				particlelife="600"
+				position="0 0 0"
+				material="/shared/effects/materials/refract_wellwave.material"
+				offsetsphere="10"
+				angle="20"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					startsize="0"
+					endsize="35"
+					startparam="1.25"
+					endparam="0"
+					startalpha="1"
+					endalpha="0"
+					anglespeed="-90"
+				/>
+			</simpleemitter>
+
+			<twopointtrailemitter
+				name="trail01"
+				position="0 0 0"
+				bone_a="Bip01 L UpperArm"
+				bone_b="Bip01 L Hand"
+				spawnrate="120"
+				particlelife="200"
+				gravity="5"
+				subframepose="1"
+				drag="0.01"
+				speed="100"
+				direction="0 -1 0"
+				minangle="0"
+				maxangle="0"
+				texpostime="200"
+				texposscale="0"
+				texstretchscale="1"
+				material="/shared/effects/materials/hide.material"
+			>
+				<particle
+					color=".2 .1 .3"
+					alpha=".4"
+				/>
+			</twopointtrailemitter>
+			
+			<twopointtrailemitter
+				name="trail01"
+				position="0 0 0"
+				bone_a="Bip01 Spine2"
+				bone_b="Bip01 R Forearm"
+				spawnrate="120"
+				particlelife="150"
+				gravity="5"
+				subframepose="1"
+				drag="0.01"
+				speed="100"
+				direction="0 -1 0"
+				minangle="0"
+				maxangle="0"
+				texpostime="150"
+				texposscale="0"
+				texstretchscale="1"
+				material="/shared/effects/materials/hide.material"
+			>
+				<particle
+					color=".3 .1 .2"
+					alpha=".5"
+				/>
+			</twopointtrailemitter>
+			
+			<twopointtrailemitter
+				name="trail01"
+				position="0 0 0"
+				bone_a="Bip01 L UpperArm"
+				bone_b="Bip01 R UpperArm"
+				spawnrate="120"
+				particlelife="275"
+				gravity="5"
+				subframepose="1"
+				drag="0.01"
+				speed="100"
+				direction="0 -1 0"
+				minangle="0"
+				maxangle="0"
+				texpostime="275"
+				texposscale="0"
+				texstretchscale="1"
+				material="/shared/effects/materials/hide.material"
+			>
+				<particle
+					color=".3 .1 .1"
+					alpha=".4"
+				/>
+			</twopointtrailemitter>
+			
+			
+			
+
+			
+		</particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

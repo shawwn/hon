@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" useentityeffectscale="true" scale="1.45">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume="1"
+				sample="../sounds/impact_%.wav"
+			/>
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".5"
+				sample="/shared/sounds/impacts/impact_heavy_%.wav"
+			/>
+	
+			<simpleemitter
+				bone="_bone_centerofchest"
+				count="20"
+				life="400"
+				spawnrate="500"
+				speed="25"
+				drag="0.15"
+				minparticlelife="300"
+				maxparticlelife="700"
+				offsetsphere="45"
+				depthbias="-100"
+				gravity="12"
+          			material="/shared/effects/materials/pyroclast_01.material"
+         	>
+				<particle
+					minangle="0"
+					maxangle="360"
+					color="0.35 0.325 .275"
+					startalpha=".2"
+					endalpha="0"
+					startsize="20"
+					endsize="65"
+					flare="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				count="20"
+				life="200"
+				spawnrate="1200"
+				minspeed="0"
+				maxspeed="325"
+				drag="0.02"
+				minparticlelife="200"
+				maxparticlelife="500"
+				offsetsphere="45"
+				depthbias="-20"
+				gravity="12"
+          			material="/shared/effects/materials/woodchunk.material"
+         	>
+				<particle
+					minangle="0"
+					maxangle="360"
+					color=".2"
+					startalpha=".2"
+					endalpha="0"
+					size="2"
+					minendscale="1"
+					maxendscale="3"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				count="20"
+				life="400"
+				spawnrate="500"
+				speed="25"
+				drag="0.15"
+				minparticlelife="200"
+				maxparticlelife="900"
+				offsetsphere="25"
+				depthbias="-100"
+				gravity="12"
+          			material="/shared/effects/materials/dust_smoke_10.material"
+         	>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					color="0.35 0.325 .275"
+					startalpha=".5"
+					endalpha="0"
+					startsize="20"
+					endsize="65"
+					flare="1"
+				/>
+			</simpleemitter>
+
+			
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+		<waitfordeath instance="instance0"/>
+	</thread>
+
+</effect>

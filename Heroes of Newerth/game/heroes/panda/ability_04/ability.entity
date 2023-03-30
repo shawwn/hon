@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Panda4"
+
+	statuseffecttooltip="State_Panda_Ability4"
+	icon="icon.tga"
+	
+	anim="ability_4"
+	casttime="500"
+	castactiontime="500"
+	channeltime="4500"
+	
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_entity"
+	ischanneling="true"
+	targetscheme="nonboss_organic_enemy_units"
+	casteffecttype="Physical"
+	
+	manacost="100,175,250"
+	cooldowntime="120000,100000,80000"
+	
+	novoiceresponse="true"
+	
+	range="100"
+	channelrange="350"
+>
+	<onchannelstart>
+		<applystate name="State_Panda_Ability4" target="target_entity" ischannel="true"/>
+		<applystate name="State_Panda_Ability4_Self" target="source_entity" proxy="target_entity" ischannel="true"/>
+	</onchannelstart>
+	<onimpact>
+		<damage effecttype="Magic" amount="0.000001"/>
+	</onimpact>
+</ability>

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1" >
+
+	<definitions>
+		
+		<particlesystem name="system0" space="world" scale="1.0">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2500"
+				volume=".95"
+				sample="../sounds/cast.wav"
+			/>
+		
+			<simpleemitter
+				count="1"
+				spawnrate="5000"
+				particlelife="2000"
+				acceleration="0.0"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+			>
+				<particle
+					turn="1"
+				>
+						<billboard
+							position="0 0 25"
+							life="100"
+							color="0 0 0"
+							startalpha="0"
+							midalpha=".5"
+							endalpha="0"
+							midalphapos=".2"
+							startsize="275"
+							endsize="275"
+							rollspeed="-1250"
+							depthbias="-50"
+							material="/shared/effects/materials/shadow_cut.material"
+							lockright="true"
+							lockup="true"
+							pitch="-90"
+							directionalspace="local"
+						/>
+						
+						<billboard
+							position="0 0 25"
+							life="75"
+							color=".5 .2 .95"
+							startsize="275"
+							endsize="275"
+							rollspeed="-1250"
+							depthbias="-50"
+							material="/shared/effects/materials/shadow_cut_add.material"
+							lockright="true"
+							lockup="true"
+							pitch="-90"
+							directionalspace="local"
+						/>
+				</particle>
+
+			</simpleemitter>
+
+			<simpleemitter
+				delay="100"
+				bone="_bone_fx_05"
+				spawnrate="175"
+				count="35"
+				particlelife="750"
+				gravity="5"
+				speed="10"
+				acceleration="0"
+				material="/shared/effects/materials/phantom_black.material"
+				offsetsphere="5 5 0"
+				minangle="0"
+				maxangle="180"
+				direction="0 0 1"
+				offsetdirection="0 0 0"
+				offsetradial="0 0 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="0"
+					maxanglespeed="180"
+					color="0 0 0"
+					startframe="0"
+					endframe="35"
+					minsize="85"
+					maxsize="110"
+					midsizepos=".8"
+					startalpha="0"
+					midalpha=".65"
+					endalpha="0"
+					midalphapos=".3"
+				/>
+			</simpleemitter>
+		
+			<terrainemitter
+				position="0 0 0"
+				spawnrate="1000"
+				count="1"
+				particlelife="2500"
+				range="100"
+				direction="0 1 0.1"
+			>
+				<particle
+				>
+					<groundsprite
+						life="2500"
+						material="/shared/effects/materials/ground_crater.material"
+						startsize="80"
+						endsize="95"
+						startalpha=".5"
+						midalpha=".5"
+						endalpha="0"
+						midalphapos=".5"
+						maxyaw="360"
+					/>
+					
+					<groundsprite
+						life="2500"
+						material="/shared/effects/materials/ground_crater.material"
+						startsize="150"
+						endsize="185"
+						startalpha=".25"
+						midalpha=".25"
+						endalpha="0"
+						midalphapos=".5"
+						maxyaw="360"
+					/>
+				
+					<groundsprite
+						life="2500"
+						material="/shared/effects/materials/ground_scorch.material"
+						startsize="180"
+						endsize="195"
+						startalpha=".5"
+						midalpha=".5"
+						endalpha="0"
+						midalphapos=".5"
+						maxyaw="360"
+					/>
+
+					<groundsprite
+						position="50 0 0"
+						life="2500"
+						material="/shared/effects/materials/tar_groundsprite.material"
+						startsize="50"
+						endsize="55"
+						startalpha=".5"
+						midalpha=".5"
+						endalpha="0"
+						midalphapos=".5"
+						maxyaw="360"
+						color="1 1 1"
+					/>
+					
+					<groundsprite
+						position="-50 50 0"
+						life="2500"
+						material="/shared/effects/materials/tar_groundsprite.material"
+						startsize="50"
+						endsize="55"
+						startalpha=".5"
+						midalpha=".5"
+						endalpha="0"
+						midalphapos=".5"
+						maxyaw="360"
+						color="1 1 1"
+					/>
+				</particle>
+				
+			</terrainemitter>
+			
+			<billboard
+				delay="200"
+				position="0 0 25"
+				life="75"
+				color=".25 .1 .45"
+				startsize="250"
+				endsize="250"
+				rollspeed="-1250"
+				depthbias="-50"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+			
+			<billboard
+				bone="_bone_fx_03"
+				position="0 0 0"
+				life="75"
+				color=".5 .2 .9"
+				startsize="90"
+				endsize="90"
+				rollspeed="-1250"
+				depthbias="-50"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+			
+			<billboard
+				position="0 0 10"
+				delay="0"
+				life="350"
+				param="0.1"	
+				startsize="175"
+				endsize="375"
+				startalpha="0"
+				midalpha=".4"
+				endalpha="0"				
+				depthbias="0"
+				material="/shared/effects/materials/refract_swell.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+			/>
+			
+			<billboard
+				position="0 0 10"
+				delay="175"
+				life="350"
+				param="0.1"	
+				startsize="175"
+				endsize="375"
+				startalpha="0"
+				midalpha=".4"
+				endalpha="0"				
+				depthbias="0"
+				material="/shared/effects/materials/refract_swell.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+			/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

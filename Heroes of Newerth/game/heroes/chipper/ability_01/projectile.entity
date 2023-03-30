@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Chipper_Ability1"
+
+	speed="1000"
+	gravity="0"
+
+	modelscale="2.25"
+	model="effects/missile/model.mdf"
+	traileffect="effects/trail.effect"
+	canturn="0"
+	deatheffect="effects/death.effect"
+	
+	flying="true"
+	flyheight="120"
+	
+	touchradius="70"
+	touchradiusdiradjust="true"
+	maxtouches="1"
+	touchtargetscheme="nonneutral_organic_enemy_units"
+	toucheffecttype="Physical"
+>
+	<onimpact>
+		<kill target="proxy_entity" source="" />
+	</onimpact>
+	
+	<ontouch>
+		<playeffect effect="effects/impact.effect" target="target_entity" source="target_entity" />
+		<combatevent effecttype="AbilityBasedProjectile">
+			<onimpact>
+				<cantarget effecttype="Magic">
+					<applystate name="State_Stunned" duration="100"/>
+				</cantarget>
+				<damage effecttype="Magic" amount="85,115,145,180" />
+				<condition target="target_entity" test="hasstate State_Chipper_Ability2">
+					<applystate name="State_Chipper_Ability1" duration="5000" />
+				</condition>
+			</onimpact>
+		</combatevent>
+		<delete target="this_entity" />
+		<kill target="proxy_entity" source="" />
+		<spawnunit name="Gadget_Chipper_Ability1_Reveal_Linger" count="1" target="target_position" />
+	</ontouch>
+</projectile>

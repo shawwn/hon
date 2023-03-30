@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="ghostface">
+	<definitions>
+		<particlesystem name="system0" space="world" scale=".5">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".8" 
+				sample="../sounds/cast.wav"
+			/>
+
+			<simpleemitter
+				count="4"
+				life="1000"
+				spawnrate="100"
+				particlelife="2000"
+				gravity="0"
+				speed="100"
+				drag=".01"
+				acceleration="0.0"
+				position="0 0 110"
+				angle="360"
+				direction="0 0 0"
+				material="/shared/effects/materials/dust.material"
+				offsetsphere="0 0 150"
+			>
+				<particle
+					minangle="0"
+					maxangle="180"
+					minanglespeed="0"
+					startcolor="0 0 0"
+					midcolor=".25 0 0"
+					endcolor="0 0 0"
+					maxanglespeed="50"
+					startframe="0"
+					endframe="1"
+					size="8"
+					startscale="20"
+					endscale="40"
+					midcolorpos=".5"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					lockup="1"
+					pitch="-90"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				
+				count="1"
+				life="1500"
+				spawnrate="20"
+				particlelife="1500"
+				gravity="0"
+				speed="800"
+				drag="0"
+				acceleration="0.0"
+				position="0 0 150"
+				minangle="0"
+				maxangle="0"
+				direction="0 0 0"
+				material="/shared/effects/materials/blood_08.material"
+				offsetsphere="0 0 0"
+			>
+				<particle
+					minangle="0"
+					maxangle="0"
+					minanglespeed="0"
+					startcolor="0 0 0"
+					midcolor="0 0 0"
+					endcolor="0 0 0"
+					maxanglespeed="0"
+					startframe="0"
+					endframe="1"
+					size="5"
+					startscale="50"
+					endscale="85"
+					midcolorpos=".5"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					lockup="1"
+					pitch="-90"
+					depthbias="-40"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				
+				count="1"
+				life="1000"
+				spawnrate="20"
+				particlelife="1500"
+				gravity="0"
+				speed="800"
+				drag="0"
+				acceleration="0.0"
+				position="0 0 150"
+				minangle="0"
+				maxangle="0"
+				direction="0 0 0"
+				material="/shared/effects/materials/smokey_skull.material"
+				offsetsphere="0 0 0"
+			>
+				<particle
+					minangle="0"
+					maxangle="0"
+					minanglespeed="0"
+					startcolor="0 0 0"
+					midcolor=".5 0 0"
+					endcolor="0 0 0"
+					maxanglespeed="0"
+					startframe="0"
+					endframe="1"
+					size="5"
+					startscale="10"
+					endscale="35"
+					midcolorpos=".5"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					lockup="1"
+					pitch="-90"
+					depthbias="-40"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				
+				count="1"
+				life="1000"
+				spawnrate="1000"
+				particlelife="1500"
+				gravity="0"
+				speed="800"
+				drag="0"
+				acceleration="0.0"
+				position="0 0 150"
+				minangle="0"
+				maxangle="0"
+				direction="0 0 0"
+				material="/shared/effects/materials/smokey_skull.material"
+				offsetsphere="0 0 0"
+			>
+				<particle>
+					<billboard
+						delay="250"
+						life="700"
+						color="1.0 1.0 1.0"
+						startalpha="1.0"
+						midalpha="1.0"
+						endalpha="0.0"
+						midalphapos="0.75"
+						startparam=".05"
+						endparam="0.0"
+						startsize="128"
+						endsize="400"
+						depthbias="-100"
+						position="0 0 120"
+						material="/shared/effects/materials/refract_ring.material"
+						lockup="true"
+						pitch="90"
+					/>
+				</particle>
+			</simpleemitter>
+
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+
+	</thread>
+</effect>

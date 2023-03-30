@@ -1,0 +1,43 @@
+// (C)2006 S2 Games
+// skybox_bias.psh
+// 
+// Sky-box pixel shader
+//=============================================================================
+
+//=============================================================================
+// Global variables
+//=============================================================================
+float fAlphaLeak;
+
+//=============================================================================
+// Vertex shader output structure
+//=============================================================================
+struct VS_OUTPUT
+{
+	float4 Position  : POSITION;
+	float4 Color0    : COLOR0;
+	float3 Texcoord0 : TEXCOORD0;
+};
+
+//=============================================================================
+// Pixel shader input structure
+//=============================================================================
+struct PS_OUTPUT
+{
+	float4 Color : COLOR;
+};
+
+sampler skybox;
+
+//=============================================================================
+// Pixel Shader
+//=============================================================================
+PS_OUTPUT PS( VS_OUTPUT In )
+{
+	PS_OUTPUT Out;
+	
+	Out.Color = texCUBE(skybox, In.Texcoord0) * In.Color0;
+	Out.Color.a = saturate(Out.Color.a * (1.0 - fAlphaLeak) + fAlphaLeak);
+	
+	return Out;
+}

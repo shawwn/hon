@@ -1,0 +1,8 @@
+Items that currently say "orb effect" are now going to be called Attack Modifiers.
+
+Each hero can have only 1 attack modifier. I was considering doing indexes of attack modifiers, so you can have only 1 of attack modifier of a given index, but for now i think i'll just stick with no indexes. 
+
+If you have multiple attack modifiers in your inventory, the one in the top left (first) inventory slot will be the one with priority. 
+
+
+As i discussed with some of you before, i want items and abilities to have right click menu options. Right click menu options will be used throughout the interface and game. In order to choose an ability to have attack modifier priority, you will have to select it manually through the right click on its icon. 

@@ -1,0 +1,79 @@
+// (C)2009 S2 Games
+// post_bloom.psh
+// 
+// ...
+//=============================================================================
+
+//=============================================================================
+// Uniform variables
+//=============================================================================
+
+//=============================================================================
+// Varying variables
+//=============================================================================
+
+//=============================================================================
+// Sampler
+//=============================================================================
+uniform sampler2D	image;
+
+//=============================================================================
+// Pixel Shader
+//=============================================================================
+void main()
+{	
+	const int KERNEL_SIZE = 13;
+
+#if 0
+	float BLUR_WEIGHTS[KERNEL_SIZE] = 
+	float[]
+	(
+		0.003450,
+		0.012483,
+		0.035351,
+		0.078353,
+		0.135933,
+		0.184604,
+		0.099654,
+		0.184604,
+		0.135933,
+		0.078353,
+		0.035351,
+		0.012483,
+		0.003450
+	);
+	
+	gl_FragColor = vec4(0.0);
+	
+	gl_FragColor += texture2D(image, gl_TexCoord[0].xy) * BLUR_WEIGHTS[0];
+	gl_FragColor += texture2D(image, gl_TexCoord[1].xy) * BLUR_WEIGHTS[1];
+	gl_FragColor += texture2D(image, gl_TexCoord[1].zw) * BLUR_WEIGHTS[2];
+	gl_FragColor += texture2D(image, gl_TexCoord[2].xy) * BLUR_WEIGHTS[3];
+	gl_FragColor += texture2D(image, gl_TexCoord[2].zw) * BLUR_WEIGHTS[4];
+	gl_FragColor += texture2D(image, gl_TexCoord[3].xy) * BLUR_WEIGHTS[5];
+	gl_FragColor += texture2D(image, gl_TexCoord[3].zw) * BLUR_WEIGHTS[6];
+	gl_FragColor += texture2D(image, gl_TexCoord[4].xy) * BLUR_WEIGHTS[7];
+	gl_FragColor += texture2D(image, gl_TexCoord[4].zw) * BLUR_WEIGHTS[8];
+	gl_FragColor += texture2D(image, gl_TexCoord[5].xy) * BLUR_WEIGHTS[9];
+	gl_FragColor += texture2D(image, gl_TexCoord[5].zw) * BLUR_WEIGHTS[10];
+	gl_FragColor += texture2D(image, gl_TexCoord[6].xy) * BLUR_WEIGHTS[11];
+	gl_FragColor += texture2D(image, gl_TexCoord[6].zw) * BLUR_WEIGHTS[12];
+#else 
+// Because apple is retarded
+	gl_FragColor = vec4(0.0);
+	
+	gl_FragColor += texture2D(image, gl_TexCoord[0].xy) * 0.003450;
+	gl_FragColor += texture2D(image, gl_TexCoord[1].xy) * 0.012483;
+	gl_FragColor += texture2D(image, gl_TexCoord[1].zw) * 0.035351;
+	gl_FragColor += texture2D(image, gl_TexCoord[2].xy) * 0.078353;
+	gl_FragColor += texture2D(image, gl_TexCoord[2].zw) * 0.135933;
+	gl_FragColor += texture2D(image, gl_TexCoord[3].xy) * 0.184604;
+	gl_FragColor += texture2D(image, gl_TexCoord[3].zw) * 0.099654;
+	gl_FragColor += texture2D(image, gl_TexCoord[4].xy) * 0.184604;
+	gl_FragColor += texture2D(image, gl_TexCoord[4].zw) * 0.135933;
+	gl_FragColor += texture2D(image, gl_TexCoord[5].xy) * 0.078353;
+	gl_FragColor += texture2D(image, gl_TexCoord[5].zw) * 0.035351;
+	gl_FragColor += texture2D(image, gl_TexCoord[6].xy) * 0.012483;
+	gl_FragColor += texture2D(image, gl_TexCoord[6].zw) * 0.003450;
+#endif
+}

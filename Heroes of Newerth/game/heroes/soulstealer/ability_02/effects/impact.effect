@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="tracker"  deferred="true" scale="2">
+	<definitions >
+		
+			<trailemitter
+				name="trail_01"
+				life="2000"
+				bone="Box03"
+				spawnrate="50"
+				startminparticlelife="2000"
+				startmaxparticlelife="2000"		
+				
+				endminparticlelife="1"
+				endmaxparticlelife="1" 
+				texpostime="2000"
+			 	texposscale="0"
+			 	texstretchscale="1"
+				position="0 0 0"
+				material="/shared/effects/materials/soul_projectile.material"
+			>
+				<particle
+					startcolor="1 1 1"
+					midcolor="1 1 1"
+					endcolor="0 0 0"
+					startsize="22"
+									
+					midsize="30"
+					endsize="0"
+					
+					midcolorpos=".1"
+					midsizepos=".1"
+					
+				/>
+			</trailemitter>			
+		
+		<particlesystem name="system0" space="world" >
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="1800"
+				volume="0.65" 
+				sample="../sounds/impact_%.wav"
+			/>
+			
+			
+			<trackeremitter
+				
+				count="1"
+				
+				bone="_bone_centerofchest"
+				owner="target"
+				targetbone="_bone_centerofchest"
+				targetowner="source"
+				
+				tracktype="distance"
+				trackspeed="22.0" 				
+				drag="0"
+				spawnrate="250"
+				particlelife="3000"
+				gravity="-50"
+				offsetsphere="5 5 5"
+				minspeed="10.0"
+				maxspeed="220.0"
+				
+				acceleration="30.0"
+				direction="0.0 0.0 1.0"
+				
+				inheritvelocity="0.0"
+				distancelife="true"
+			>
+				<particle		
+						
+						emitter0="trail_01"
+				/>
+				
+				
+			</trackeremitter>	
+
+			
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+

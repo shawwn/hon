@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1" useentityeffectscale="1">
+
+	<definitions>
+	
+		<template name="trail">
+
+			<trailemitter				
+				bone="{bone}"
+				spawnrate="20"
+				startminparticlelife="800"
+				startmaxparticlelife="800"		
+				endminparticlelife="1"
+				endmaxparticlelife="1" 
+				texpostime="800"
+			 	texposscale="1"
+			 	texstretchscale="0"
+				position="10 0 0"
+				material="/shared/effects/materials/arrow_trail.material"
+				inheritvelocity=".1"	
+			>
+				<particle
+					startcolor=".1 .5 .5"
+					midcolor=".0 .2 .3"
+					endcolor="0"
+					startsize="50"
+					midsize="55"
+					endsize=".5"					
+				/>
+			</trailemitter>	
+
+		</template>
+
+		<particlesystem name="system0" space="entity" scale="1.2">
+
+			<model
+				expirelife="1000"
+				model="shield.mdf"
+				anim="idle"
+				scale=".081"
+				bone="_bone_overhead"
+				position="0 0 -33"
+				startcolor="1 1 .5"
+				midcolor="1 1 .5"
+				endcolor="0"
+				midcolorpos=".8"
+			>
+				<instance name="trail" bone="Line02"/>
+				<instance name="trail" bone="Line01"/>
+			
+				<billboard				
+					size="500"	
+					expirelife="1000"					
+					bone="Line02"				
+					material="/shared/effects/materials/whitedot.material"		
+					startcolor=".2 .4 .8"
+					endcolor="0"
+				/>
+	
+				<billboard				
+					size="500"	
+					expirelife="1000"
+					bone="Line01"				
+					material="/shared/effects/materials/whitedot.material"		
+					startcolor=".2 .4 .8"
+					endcolor="0"
+				/>	
+			
+				<billboard				
+					width="1200"				
+					height="100"				
+					position="0 0 -33"
+					bone="Line01"
+					life="510"
+					material="/shared/effects/materials/whitedot.material"				
+					startcolor=".2 .4 .8"
+					endcolor="0"
+				>		
+				</billboard>	
+
+				<billboard				
+					width="1200"				
+					height="100"				
+					position="0 0 -33"
+					bone="Line02"
+					life="510"
+					material="/shared/effects/materials/whitedot.material"				
+					startcolor=".2 .4 .8"
+					endcolor="0"
+				>		
+				</billboard>				
+			
+			</model>
+			
+			<billboard				
+				width="100"				
+				height="10"				
+				position="0 0 -33"
+				bone="_bone_overhead"
+				life="510"
+				material="/shared/effects/materials/whitedot.material"				
+				startcolor=".2 .4 .8"
+				endcolor="0"
+			>		
+			</billboard>
+			
+			<billboard				
+				width="100"				
+				height="10"				
+				position="0 0 -33"
+				bone="_bone_overhead"
+				life="510"
+				material="/shared/effects/materials/whitedot.material"				
+				startcolor=".2 .4 .8"
+				endcolor="0"
+			>		
+			</billboard>
+			
+			<simpleemitter	
+				bone="_bone_overhead"			
+				count="1"
+				particlelife="300"			
+				position="0 0 -33"					
+				material="/shared/effects/materials/whitedot.material"
+			>
+				<particle
+					startcolor=".2 .5 1"						
+					endcolor="0 0 0"						
+					midalphapos="0.9"
+					startsize="200"
+					endsize="0"
+				/>
+			</simpleemitter>	
+				
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnparticlesystem instance="instance1" particlesystem="system1" />
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+	</thread>
+
+</effect>

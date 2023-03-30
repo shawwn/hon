@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Javaras_Ability2_Self"
+
+	icon="icon_buff.tga"
+
+	magicarmor="3,6,10,15"
+
+	effecttype="StatusBuff"
+	passiveeffect="state.effect"
+>
+</state>

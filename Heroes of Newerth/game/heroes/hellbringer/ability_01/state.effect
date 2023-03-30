@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" useentityeffectscale="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1.2">
+
+			<simpleemitter
+				expirelife="300"
+	         		bone="_bone_centerofchest"			
+				directionalspace="global"
+				spawnrate="20"
+				particlelife="500"
+				direction="0 0 1"
+          			material="/shared/effects/materials/flame.material"
+         	>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					color="0 0 1"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					startsize="50"
+					endsize="95"
+					anchor="0"
+						
+					flare="1"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				expirelife="300"
+	         		bone="_bone_centerofchest"			
+				directionalspace="global"
+				spawnrate="30"
+				particlelife="900"
+				direction="0.2 0 1"
+				depthbias="30"	
+          			material="/shared/effects/materials/flames_10.material"
+         	>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					color="0.0"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					startsize="45"
+					endsize="55"
+					startanchor="1.0"
+					endanchor="0.3"
+					flare="1"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				expirelife="300"
+	         		bone="_bone_centerofchest"			
+				directionalspace="global"
+				spawnrate="40"
+				particlelife="700"
+				direction="0 0 1"	
+          			material="/shared/effects/materials/smash_add.material"
+         	>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="0"
+					midcolor="0.2 .7 0"
+					endcolor="0"
+					midcolorpos="0.25"
+					startsize="40"
+					endsize="75"
+					startanchor="1.0"
+					endanchor="0.3"
+					flare="1"
+					startheight="50"
+					endheight="50"
+					scale=".5"
+					
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				expirelife="300"
+	         		bone="_bone_centerofchest"			
+				directionalspace="global"
+				spawnrate="40"
+				particlelife="700"
+				direction="0 0 1"
+				depthbias="-10"	
+          			material="/shared/effects/materials/flame.material"
+         	>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="0"
+					midcolor="0.2 .7 0"
+					endcolor="0"
+					midcolorpos="0.25"
+					startsize="40"
+					endsize="75"
+					anchor="0.8"
+					flare="1"
+					startheight="50"
+					endheight="50"
+					scale=".5"
+				/>
+			</simpleemitter>
+
+			<beam
+				expirelife="300"
+				bone_a="_bone_righthand"
+				bone_b="_bone_rightfoot"
+				size="10"
+				material="/shared/effects/materials/clothlink.material"
+			/>
+
+			<beam
+				expirelife="300"
+				bone_a="_bone_lefthand"
+				bone_b="_bone_leftfoot"
+				size="10"
+				material="/shared/effects/materials/clothlink.material"
+			/>
+
+			<beam
+				expirelife="300"
+				bone_a="_bone_lefthand"
+				bone_b="_bone_righthand"
+				size="10"
+				material="/shared/effects/materials/clothlink.material"
+			/>
+
+			<beam
+				bone_a="_bone_head"
+				bone_b="_bone_righthand"
+				size="10"
+				material="/shared/effects/materials/clothlink.material"
+			/>
+
+			<beam
+				expirelife="300"
+				bone_a="_bone_head"
+				bone_b="_bone_lefthand"
+				size="10"
+				material="/shared/effects/materials/clothlink.material"
+			/>
+			
+			<beam
+				expirelife="300"
+				bone_a="Bip01 L Forearm"
+				bone_b="_bone_leftfoot"
+				size="10"
+				material="/shared/effects/materials/clothlink.material"
+			/>
+
+			<beam
+				expirelife="300"
+				bone_a="Bip01 R Forearm"
+				bone_b="_bone_rightfoot"
+				size="10"
+				material="/shared/effects/materials/clothlink.material"
+			/>
+
+			<beam
+				expirelife="300"
+				bone_a="Bip01 R Forearm"
+				bone_b="Bip01 L Forearm"
+				size="10"
+				material="/shared/effects/materials/clothlink.material"
+			/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

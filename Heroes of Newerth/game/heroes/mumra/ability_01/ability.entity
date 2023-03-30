@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Mumra1"
+
+	
+	
+	icon="icon.tga"
+	
+	anim="ability_1"
+	casttime="1000"
+	castactiontime="300"
+	casteffect="effects/cast.effect"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_self"
+	targetscheme="visible_enemy_units" 
+	targetradius="300"
+	
+	manacost="75"
+	cooldowntime="32000,28000,24000,20000"
+>
+	<onimpact >
+		<spawnaffector name="Affector_Mumra_Ability1" target="source_entity"/>
+	</onimpact>
+</ability>

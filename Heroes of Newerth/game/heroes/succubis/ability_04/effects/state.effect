@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" deferred="true" useentityeffectscale="1">
+	<definitions>
+	
+		<modifier
+			name="modifier0"
+			expirelife="750"
+			startcolor="1 .65 .65"
+			endcolor="1 1 1"
+		/>
+		
+		<simpleemitter
+			name="manaTrail"
+			life="2000"
+			spawnrate="100"
+			startminparticlelife="1000"
+			startmaxparticlelife="1500"
+			endminparticlelife="1"
+			endmaxparticlelife="2"
+			position="0 0 0"
+			material="/shared/effects/materials/phantom_smoke_04.material"
+		>
+			<particle
+				startcolor="0 .4 .8"
+				midcolor="0 .2 .8"
+				endcolor="0 0 0"
+				startsize="0"
+				midsize="8"
+				endsize="0"
+				midcolorpos=".1"
+				midsizepos=".1"
+			/>
+		</simpleemitter>
+	
+		<particlesystem name="system0" space="world" scale="1">
+
+			<sound
+				volume=".5"
+				sample="../sounds/cast.wav"
+				linearfalloff="true"
+				falloffstart="0"
+				falloffend="2000"
+			/>
+
+			<sound
+				soundloop="true"
+				fadein="1500"
+				fadeout="500"
+				volume=".5"
+				sample="../sounds/state.wav"
+				linearfalloff="true"
+				falloffstart="0"
+				falloffend="2000"
+			/>
+		
+			<simpleemitter
+				count="1"
+				bone="_bone_overhead"
+				spawnrate="1000"
+				position="0 0 0"
+				offsetsphere="0 0 0"
+				expirelife="500"
+				startparticlealpha="1"
+				endparticlealpha="0"
+			>
+				<particle>
+					<model
+						bone="_bone_overhead"
+						life="1500"
+						startcolor="2 2 2"
+						midcolor="1.0 1.0 2"
+						endcolor="2 2 2"
+						loop="true"
+						scale="2"
+						model="model.mdf"
+						position="0 0 0"
+						anim="idle"
+						yaw="180"
+						startparam0="0"
+						midparam0="1"
+						endparam0="0"
+					/>
+				</particle>
+			</simpleemitter>
+			
+			<billboard
+				life="1500"	
+				bone="_bone_centerofchest"
+				material="/shared/effects/materials/whitedot.material"
+				startcolor="0 0 0"
+				midcolor="0 0 .5"
+				endcolor="0 0 0"
+				size="75"
+				depthbias="-30"
+				loop="true"
+			/>
+			
+			<simpleemitter
+				bone="_bone_centerofchest"
+				minparticlelife="2000"
+				maxparticlelife="2500"
+				spawnrate="6"
+				mingravity="-25"
+				maxgravity="-75"
+				drag=".2"
+				position="0 0 0"
+				material="/shared/effects/materials/heart_01.material"
+				offsetsphere="30 30 0"
+			>
+				<particle
+					minangle="-45"
+					maxangle="45"
+					startcolor="1 1 1"
+					midcolor="1 0 0"
+					endcolor="1 0 0"
+					midcolorpos=".5"
+					startsize="35"
+					endsize="15"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				bone="_bone_centerofchest"
+				particlelife="950"
+				spawnrate="10"
+				speed="180"
+				gravity="22"
+				minangle="0"
+				maxangle="30"
+				material="/shared/effects/materials/blood1.material"
+				offsetsphere="25 25 0"
+				position="0 0 0"
+			>
+				<particle 
+					minanglespeed="-100"
+					maxanglespeed="100"
+					minangle="-60"
+					maxangle="60"
+					color=".4 0 0"
+					startsize="110"
+					endsize="75"
+					startalpha="0"
+					midalpha=".5"
+					endalpha="0"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				spawnrate="1"
+				offsetsphere="65 65 0"
+				position="0 0 0"
+				particlelife="3000"
+			>
+				<particle>
+
+						<simpleemitter
+							life="1500"
+							particlelife="950"				
+							spawnrate="10"
+							speed="180"
+							gravity="22"
+							minangle="0"
+							maxangle="30"
+							material="/shared/effects/materials/blood1.material"
+							offsetsphere="0 0 0"
+							position="0 0 0"
+						>
+							<particle 
+								minanglespeed="-100"
+								maxanglespeed="100"
+								minangle="-60"
+								maxangle="60"
+								color=".4 0 0"
+								startsize="35"			
+								endsize="75"
+								startalpha="0"
+								midalpha=".6"
+								endalpha="0"
+							>
+								<groundsprite
+									material="/shared/effects/materials/splatter_blend.material"
+									life="3000"
+									startsize="20"
+									endsize="35"
+									minyaw="-360"
+									maxyaw="360"
+									startcolor=".3 0 0"
+									endcolor=".3 0 0"
+									startalpha="0"
+									midalpha="1"
+									endalpha="0"
+								/>
+							</particle>
+						</simpleemitter>
+					
+
+				</particle>
+			</simpleemitter>
+			
+			<trackeremitter
+				bone="_bone_centerofchest"
+				owner="source"
+				targetbone="_bone_fx_01"
+				targetowner="target"
+				tracktype="angular"
+				trackspeed="8"
+				drag="0"
+				spawnrate="25"
+				particlelife="3000"
+				gravity="-50"
+				offsetsphere="5 5 5"
+				minspeed="10"
+				maxspeed="220"
+				acceleration="30"
+				direction="0 0 1"
+				inheritvelocity="0"
+				distancelife="true"
+			>
+				<particle
+					emitter0="manaTrail"
+				/>
+			</trackeremitter>
+			
+			
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<wait duration="600"/>
+		<spawnmodifier instance="instance1" modifier="modifier0"/>
+
+			<waitfordeath instance="instance0" />
+		
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

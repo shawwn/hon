@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_CorruptedDisciple_Ability1_Return"
+
+	radiusstart="700"
+	radiusend="0"
+	lifetime="700"
+	innerradiusoffset="50"
+	
+	targetselection="all"
+	targetscheme="enemy_units"
+	maximpactspertarget="1"
+	effecttype="Magic"
+	persist="true"
+	canturn="false"
+	impacteffect="effects/impact.effect"
+>
+	<onimpact>
+		<distance target="target_entity" source="source_entity" />
+		<setvar0 a="result" />
+		<setvar1 a="40,60,80,100" />
+		<setvar2 a="70,105,140,175" />
+		<setvar3 a="var0" b="700" op="div" />
+		<setvar0 a="var2" b="var1" op="sub" />
+		<setvar0 a="var3" b="var0" op="mult" />
+		<setvar0 a="var1" b="var0" op="add" />
+		<damage effecttype="Magic" amount="1" b="var0" op="mult" />
+	</onimpact>
+</affector>

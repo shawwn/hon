@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect>
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale=".75">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2500"
+				volume=".4"
+				sample="/heroes/bephelgor/ability_02/sounds/spawn.wav"
+			/>
+		
+			<simpleemitter
+				delay="-300"
+				life="1000"
+				spawnrate="16"
+				particlelife="1000"
+				gravity="-1.0"
+				speed="3"
+				drag="0.01"
+				depthbias="-20"
+				material="/shared/effects/materials/phantom_smoke_06.material"
+				offsetsphere="45"
+				angle="10"
+				position="0 0 25"
+			>
+				<particle
+					startcolor="0 0 0"
+					midcolor=".5 .1 0.0"
+					endcolor="0 0 0"
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-100"
+					maxanglespeed="100"
+					startsize="30"
+					endsize="185"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				delay="-300"
+				life="1000"
+				spawnrate="16"
+				particlelife="500"
+				gravity="-1.0"
+				speed="3"
+				drag="0.01"
+				material="/shared/effects/materials/phantom_smoke_04.material"
+				offsetsphere="45"
+				angle="10"
+				position="0 0 25"
+			>
+				<particle
+					startcolor="1 .5 .2"
+					midcolor=".5 .1 0"
+					endcolor="0 0 0"
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-20"
+					maxanglespeed="20"
+					startsize="40"
+					endsize="115"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				delay="400"
+				life="1500"
+				bone="_bone_back"
+				spawnrate="50"
+				drag=".05"
+				particlelife="1000"
+				offsetsphere="30"
+				gravity="-1.0"
+				minspeed="10"
+				maxspeed="50.0"							
+				direction="0 0 1"
+				minangle="-40"
+				maxangle="40"
+				material="/shared/effects/materials/spark_10.material"
+				inheritvelocity=".55"				
+			>			
+				<particle
+					startcolor="1 .5 .2"
+					endcolor="0 0 0"
+					minsize="1"
+					maxsize="7"
+					minangle="-360"
+					maxangle="1"
+					minanglespeed="110"
+					maxanglespeed="-110"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				spawnrate="500"
+				count="20"
+				particlelife="300"
+				gravity="-55"
+				speed="40"
+				drag=".08"
+				acceleration="0"
+				position="0 0 0"
+				material="/shared/effects/materials/phantom_smoke_10.material"
+				offsetsphere="20 20 70"
+				minangle="90"
+				maxangle="-90"
+			>
+				<particle 
+					startcolor="0 0 0"
+					midcolor=".75 .25 0"
+					endcolor="0"
+					midcolorpos=".1"
+					startframe="0"
+					endframe="1"
+					startwidth="20"
+					midwidth="15"
+					endwidth="6"
+					midwidthpos=".5"
+					startheight="0"
+					endheight="1000"
+					lockup="true"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				spawnrate="100"
+				particlelife="500"
+				gravity="-50"
+				count="20"
+				material="/shared/effects/materials/mysticenergy.material"
+				position="0 0 20"
+			>
+				<particle
+					startcolor=".5 0 0"
+					midcolor=".5 .25 0"
+					endcolor="0 0 0"
+					midcolorpos="0.5"
+					startalpha="1"
+					endalpha="0"
+					minangle="0"
+					maxangle="360"
+					minanglespeed="0"
+					maxanglespeed="0"
+					width="25"
+					startheight="0"
+					endheight="50"
+					flare="true"
+					turn="true"
+				/>
+			</simpleemitter>
+
+			<billboard
+				life="1000"
+				startcolor=".25 .125 0"
+				midcolor=".5 .25 0"
+				midcolorpos="0.3"
+				endcolor="0"
+				startsize="350"
+				endsize="0"
+				depthbias="-50"
+				material="/shared/effects/materials/whitedot.material"
+				position="0 0 25"
+			/>
+			
+			<billboard
+				position="0 0 50"
+				delay="0"
+				life="350"
+				param="0.1"	
+				startsize="75"
+				endsize="175"
+				startalpha="0"
+				midalpha=".4"
+				endalpha="0"				
+				depthbias="0"
+				material="/shared/effects/materials/refract_swell.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+			/>
+			
+			<billboard
+				position="0 0 50"
+				delay="175"
+				life="350"
+				param="0.1"	
+				startsize="75"
+				endsize="175"
+				startalpha="0"
+				midalpha=".4"
+				endalpha="0"				
+				depthbias="0"
+				material="/shared/effects/materials/refract_swell.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+			/>
+
+		</particlesystem>
+
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->

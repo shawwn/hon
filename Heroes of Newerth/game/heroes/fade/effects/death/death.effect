@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" deferred="1" useentityeffectscale="1">
+
+<definitions>
+	<particlesystem name="system0" space="world" scale="1">
+
+		<simpleemitter
+			spawnrate="1000"
+			count="1"
+			particlelife="750"
+			gravity="0"
+			speed="0"
+			drag="0"
+			acceleration="0"
+			position="0 0 25"
+			material="/shared/effects/materials/phantom_black.material"
+			offsetsphere="0 0 0"
+		>
+			<particle>
+				<model
+					life="8000"
+					model="/heroes/xalynx/ability_04/effects/model.mdf"
+					anim="up"
+					startscale="5"
+					endscale="10"
+					expirelife="500"
+					startparticlealpha="1"
+					endparticlealpha="0"
+					minyaw="0"
+					maxyaw="360"
+					yawspeed="720"
+					position="0 0 50"
+					directionalspace="world"
+				>
+
+					<template name="spirits">
+						<twopointtrailemitter
+							life="1000"
+							bone_a="{bone01}"
+							bone_b="{bone02}"
+							spawnrate="40"
+							minparticlelife="450"
+							maxparticlelife="600"
+							texpostime="400"
+							texposscale="0"
+							texstretchscale="1"
+							material="/shared/effects/materials/phantom_black.material"
+							minexpirelife="200"
+							maxexpirelife="500"
+							particlecolor="1 1 1"
+							width="1000"
+							
+						>
+							<particle
+							/>
+						</twopointtrailemitter>
+					</template>
+					
+					<instance name="spirits" bone01="_bone_01" bone02="_bone_02" />
+					<instance name="spirits" bone01="_bone_05" bone02="_bone_06" />
+					<instance name="spirits" bone01="_bone_07" bone02="_bone_08" />
+					<instance name="spirits" bone01="_bone_11" bone02="_bone_12" />
+					
+				</model>
+
+		</particle>
+		</simpleemitter>
+		
+		<simpleemitter
+			spawnrate="1000"
+			count="1"
+			particlelife="750"
+			gravity="0"
+			speed="0"
+			drag="0"
+			acceleration="0"
+			position="0 0 25"
+			material="/shared/effects/materials/phantom_black.material"
+			offsetsphere="0 0 0"
+		>
+			<particle>
+				<model
+					life="5000"
+					model="/heroes/xalynx/ability_04/effects/model.mdf"
+					anim="up"
+					scale="15"
+					expirelife="500"
+					startparticlealpha="1"
+					endparticlealpha="0"
+					minyaw="0"
+					maxyaw="360"
+					yawspeed="360"
+					position="0 0 50"
+					directionalspace="world"
+				>
+
+					<template name="spirits">
+						<twopointtrailemitter
+							life="1000"
+							bone_a="{bone01}"
+							bone_b="{bone02}"
+							spawnrate="30"
+							minparticlelife="500"
+							maxparticlelife="500"
+							texpostime="400"
+							texposscale="0"
+							texstretchscale="1"
+							material="/shared/effects/materials/phantom_black.material"
+							minexpirelife="200"
+							maxexpirelife="500"
+							startparticlecolor="0 0 .2"
+							midparticlecolor=".2 0 .1"
+							endparticlecolor="0 0 0"
+							midparticlecolorpos=".7"
+						>
+							<particle
+							/>
+						</twopointtrailemitter>
+					</template>
+					
+					<instance name="spirits" bone01="_bone_01" bone02="_bone_02" />
+					<instance name="spirits" bone01="_bone_05" bone02="_bone_06" />
+					<instance name="spirits" bone01="_bone_07" bone02="_bone_08" />
+					<instance name="spirits" bone01="_bone_11" bone02="_bone_12" />
+					
+				</model>
+				
+		</particle>
+		</simpleemitter>
+
+		<simpleemitter
+			delay="150"
+			spawnrate="75"
+			count="7"
+			particlelife="750"
+			gravity="-55"
+			speed="40"
+			drag=".08"
+			acceleration="0"
+			position="0 0 0"
+			material="/shared/effects/materials/phantom_black.material"
+			offsetsphere="30 30 0"
+			minangle="90"
+			maxangle="-90"
+		>
+			<particle 
+				startcolor="0 0 0"
+				midcolor=".75 0 .25"
+				endcolor="0 0 0"
+				midcolorpos=".1"
+				startframe="0"
+				endframe="1"
+				startwidth="85"
+				midwidth="40"
+				endwidth="20"
+				midwidthpos=".5"
+				startheight="0"
+				endheight="1050"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".1"
+				lockup="true"
+			/>
+		</simpleemitter>
+		
+		<simpleemitter
+			delay="150"
+			spawnrate="75"
+			count="10"
+			particlelife="750"
+			gravity="-55"
+			speed="40"
+			drag=".08"
+			acceleration="0"
+			position="0 0 0"
+			material="/shared/effects/materials/black_spot2.material"
+			offsetsphere="30 30 0"
+			minangle="90"
+			maxangle="-90"
+		>
+			<particle 
+				startcolor="0 0 0"
+				midcolor=".5 0 .2"
+				endcolor="0 0 0"
+				midcolorpos=".1"
+				startframe="0"
+				endframe="1"
+				startwidth="85"
+				midwidth="50"
+				endwidth="30"
+				midwidthpos=".5"
+				startheight="0"
+				endheight="1050"
+				startalpha="0"
+				midalpha=".1"
+				endalpha="0"
+				midalphapos=".1"
+				lockup="true"
+			/>
+		</simpleemitter>
+		<billboard
+				life="600"
+				delay="0"
+				position="0 0 40"
+				material="/shared/effects/materials/phantom_black.material"
+				startsize="120"
+				endsize="0"
+				color=".5 .5 .5"
+				
+				midcolorpos=".1"
+				expirelife="250"
+				depthbias="-52"
+				
+				
+				
+			/>
+			
+			<billboard
+				life="600"
+				delay="0"
+				position="0 0 60"
+				material="/shared/effects/materials/phantom_black.material"
+				startsize="150"
+				endsize="0"
+				color=".5 .5 .5"
+				
+				midcolorpos=".1"
+				expirelife="250"
+				depthbias="-52"
+				
+				
+				
+			/>
+				<billboard
+				life="700"
+				delay="0"
+				position="0 0 50"
+				material="/shared/effects/materials/phantom_black.material"
+				startsize="250"
+				endsize="50"
+				color="1 1 1 "
+				
+				midcolorpos=".1"
+				expirelife="250"
+				depthbias="-52"
+				
+				
+				
+			/>
+			
+			<groundsprite
+				delay="700"
+				life="4400"
+				material="/shared/effects/materials/earth_cracks_02.material"
+				startsize="80"
+				endsize="80"		
+				startalpha=".8"
+				midalpha=".8"
+				endalpha="0"
+				maxyaw="360"
+				position="-40 0 0"
+			/>	
+	
+	</particlesystem>
+</definitions>
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	<!-- <die /> -->
+</thread>
+
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+

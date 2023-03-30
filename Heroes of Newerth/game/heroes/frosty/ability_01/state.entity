@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Frosty_Ability1"
+
+	
+	
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+
+	movespeedslow="0.3"
+	attackspeed="-.2"
+
+	effecttype="StatusDebuff"
+>
+</state>

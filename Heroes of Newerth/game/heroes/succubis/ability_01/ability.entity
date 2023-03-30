@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Succubis1"
+
+	icon="icon.tga"
+	statuseffecttooltip="State_Succubis_Ability1"
+	statuseffectheader="true"
+	
+	anim="ability_1"
+	casttime="1000"
+	castactiontime="500"
+	casteffect=""
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_entity"
+	casteffecttype="Magic"
+	targetscheme="enemy_nonboss_units"
+	
+	manacost="125"
+	cooldowntime="15000"
+	
+	range="1000"
+	
+>
+	<onimpact >
+		<applystate name="State_Succubis_Ability1" duration="20000"/>
+	</onimpact>
+</ability>

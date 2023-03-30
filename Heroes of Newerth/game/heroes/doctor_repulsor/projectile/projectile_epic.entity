@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_DoctorRepulsorEpicAttack"
+
+	speed="1100"
+	gravity="0"
+	canturn="false"
+	
+	modelscale="0.75"
+	model="effects/projectile.mdf"
+
+	traileffect="effects/epic_trail.effect"
+	impacteffect="effects/epic_impact.effect"
+>
+	<onimpact>
+	
+	</onimpact>
+</projectile>

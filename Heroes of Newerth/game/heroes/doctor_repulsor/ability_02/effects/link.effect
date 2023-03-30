@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" persistent="true" deferred="true">
+	<definitions>
+		
+		<particlesystem name="system0" space="world" scale=".45">
+
+			<sound
+				linearfalloff="true"
+				falloffstart="0"
+				falloffend="2000"
+				volume=".65"
+				sample="../sounds/cast.wav"
+			/>
+
+			<trackeremitter
+				count="1"
+				spawnrate="5000"
+				bone="_bone_origin"
+				owner="source"
+				targetbone="Scene Root"
+				targetowner="target"
+				tracktype="lerp"
+				trackspeed="1"
+				drag="0"
+				particlelife="1000"
+				gravity="0"
+				speed="350"
+				acceleration="0"
+			>
+				<particle
+					turn="true"
+				>
+					<model
+						model="/shared/models/invis.mdf"
+						anim="idle"
+						pitch="0"
+						yaw="0"
+						scale="1.5"
+					>
+						
+						<simpleemitter
+							life="1000"
+							spawnrate="10"
+							minparticlelife="400"
+							maxparticlelife="600"
+							position="0 0 0"
+							material="/shared/effects/materials/ripple_01.material"
+							particledirectionalspace="local"
+							minspeed="10"
+							maxspeed="50"
+							offsetsphere="25 0 25"
+						>
+							<particle
+								color=".25 .5 2"
+								startsize="60"
+								endsize="60"
+								param=".5"
+								startalpha="0"
+								midalpha="1"
+								endalpha="0"
+								midalphapos=".15"
+								lockup="true"
+								lockright="1"
+								pitch="90"
+								yaw="0"
+							/>
+						</simpleemitter>
+					
+						<simpleemitter
+							life="1000"
+							spawnrate="6"
+							particlelife="400"
+							position="0 0 0"
+							material="/shared/effects/materials/refract_swell.material"
+							particledirectionalspace="local"
+							offsetdirection="0 0 0"
+							offsetradial="0"
+							param=".5"
+						>
+							<particle
+								startsize="125"
+								endsize="250"
+								param="0.5"
+								startalpha="0"
+								midalpha=".5"
+								endalpha="0"
+								midalphapos=".5"
+								lockup="true"
+								lockright="1"
+								pitch="0"
+								flare="0"
+								yaw="0"
+							/>
+						</simpleemitter>
+						
+						<simpleemitter
+							life="1000"
+							spawnrate="6"
+							particlelife="400"
+							position="0 0 0"
+							material="/shared/effects/materials/refract_swell.material"
+							particledirectionalspace="local"
+							offsetdirection="0 0 0"
+							offsetradial="0"
+							param=".5"
+						>
+							<particle
+								startsize="35"
+								endsize="100"
+								param="0.5"
+								startalpha="0"
+								midalpha=".5"
+								endalpha="0"
+								midalphapos=".5"
+								lockup="true"
+								lockright="1"
+								pitch="90"
+								yaw="0"
+							/>
+						</simpleemitter>
+						
+						<simpleemitter
+							position="0 0 0"
+							life="1000"
+							spawnrate="25"
+							depthbias="-70"
+							minparticlelife="250"
+							maxparticlelife="750"
+							minspeed="75"
+							maxspeed="150"
+							drag="0.1"
+							offsetsphere="0 0 0"
+							material="/shared/effects/materials/phantom_smoke_03.material"
+						>
+							<particle 
+								minangle="0"
+								maxangle="360"
+								startcolor="0 1 1"
+								endcolor="0 0 0"
+								startsize="100"
+								endsize="100"
+								minanglespeed="-80"
+								maxanglespeed="80"
+							/>
+						</simpleemitter>
+						
+						<simpleemitter
+							position="0 0 0"
+							life="1000"
+							spawnrate="25"
+							depthbias="-70"
+							minparticlelife="250"
+							maxparticlelife="250"
+							minspeed="75"
+							maxspeed="150"
+							drag="0.1"
+							offsetsphere="25 25 0"
+							material="/shared/effects/materials/mysticenergy.material"
+						>
+							<particle 
+								minangle="0"
+								maxangle="360"
+								startcolor="0 1 1"
+								midcolor="0 1 1"
+								endcolor="0 0 0"
+								startsize="10"
+								endsize="10"
+								minanglespeed="-80"
+								maxanglespeed="80"
+							/>
+						</simpleemitter>
+						
+						<simpleemitter
+							position="0 0 0"
+							life="1000"
+							spawnrate="50"
+							depthbias="-70"
+							minparticlelife="250"
+							maxparticlelife="250"
+							minspeed="75"
+							maxspeed="150"
+							drag="0.1"
+							offsetsphere="25 25 0"
+							material="/shared/effects/materials/whitedot.material"
+						>
+							<particle 
+								minangle="0"
+								maxangle="360"
+								startcolor=".25 .65 1"
+								midcolor=".25 .65 1"
+								endcolor="0 0 0"
+								startsize="4"
+								endsize="2"
+								minanglespeed="-80"
+								maxanglespeed="80"
+							/>
+						</simpleemitter>
+						
+						
+
+					</model>
+				</particle>
+			</trackeremitter>
+			
+			<trackeremitter
+				count="1"
+				spawnrate="1"
+				bone="_bone_origin"
+				owner="source"
+				targetbone="Scene Root"
+				targetowner="target"
+				tracktype="lerp"
+				trackspeed="1"
+				drag="0"
+				particlelife="1000"
+				gravity="0"
+				speed="350"
+				acceleration="0"
+			>
+				<particle
+					turn="true"
+				>
+					<model
+						model="/shared/models/invis.mdf"
+						anim="idle"
+						pitch="0"
+						yaw="0"
+						scale="1.5"
+					>
+						
+						<simpleemitter
+							life="1000"
+							spawnrate="10"
+							minparticlelife="400"
+							maxparticlelife="600"
+							position="0 0 0"
+							material="/shared/effects/materials/ripple_01.material"
+							particledirectionalspace="local"
+							minspeed="10"
+							maxspeed="50"
+							offsetsphere="25 0 25"
+						>
+							<particle
+								color=".25 .5 2"
+								startsize="60"
+								endsize="60"
+								param=".5"
+								startalpha="0"
+								midalpha="1"
+								endalpha="0"
+								midalphapos=".15"
+								lockup="true"
+								lockright="1"
+								pitch="90"
+								yaw="0"
+							/>
+						</simpleemitter>
+					
+						<simpleemitter
+							life="1000"
+							spawnrate="6"
+							particlelife="400"
+							position="0 0 0"
+							material="/shared/effects/materials/refract_swell.material"
+							particledirectionalspace="local"
+							offsetdirection="0 0 0"
+							offsetradial="0"
+							param=".5"
+						>
+							<particle
+								startsize="125"
+								endsize="250"
+								param="0.5"
+								startalpha="0"
+								midalpha=".5"
+								endalpha="0"
+								midalphapos=".5"
+								lockup="true"
+								lockright="1"
+								pitch="0"
+								flare="0"
+								yaw="0"
+							/>
+						</simpleemitter>
+						
+						<simpleemitter
+							life="1000"
+							spawnrate="6"
+							particlelife="400"
+							position="0 0 0"
+							material="/shared/effects/materials/refract_swell.material"
+							particledirectionalspace="local"
+							offsetdirection="0 0 0"
+							offsetradial="0"
+							param=".5"
+						>
+							<particle
+								startsize="35"
+								endsize="100"
+								param="0.5"
+								startalpha="0"
+								midalpha=".5"
+								endalpha="0"
+								midalphapos=".5"
+								lockup="true"
+								lockright="1"
+								pitch="90"
+								yaw="0"
+							/>
+						</simpleemitter>
+						
+						<simpleemitter
+							position="0 0 0"
+							life="1000"
+							spawnrate="25"
+							depthbias="-70"
+							minparticlelife="250"
+							maxparticlelife="750"
+							minspeed="75"
+							maxspeed="150"
+							drag="0.1"
+							offsetsphere="0 0 0"
+							material="/shared/effects/materials/phantom_smoke_03.material"
+						>
+							<particle 
+								minangle="0"
+								maxangle="360"
+								startcolor="0 1 1"
+								endcolor="0 0 0"
+								startsize="100"
+								endsize="100"
+								minanglespeed="-80"
+								maxanglespeed="80"
+							/>
+						</simpleemitter>
+						
+						<simpleemitter
+							position="0 0 0"
+							life="1000"
+							spawnrate="25"
+							depthbias="-70"
+							minparticlelife="250"
+							maxparticlelife="250"
+							minspeed="75"
+							maxspeed="150"
+							drag="0.1"
+							offsetsphere="25 25 0"
+							material="/shared/effects/materials/mysticenergy.material"
+						>
+							<particle 
+								minangle="0"
+								maxangle="360"
+								startcolor="0 1 1"
+								midcolor="0 1 1"
+								endcolor="0 0 0"
+								startsize="10"
+								endsize="10"
+								minanglespeed="-80"
+								maxanglespeed="80"
+							/>
+						</simpleemitter>
+						
+						<simpleemitter
+							position="0 0 0"
+							life="1000"
+							spawnrate="50"
+							depthbias="-70"
+							minparticlelife="250"
+							maxparticlelife="250"
+							minspeed="75"
+							maxspeed="150"
+							drag="0.1"
+							offsetsphere="25 25 0"
+							material="/shared/effects/materials/whitedot.material"
+						>
+							<particle 
+								minangle="0"
+								maxangle="360"
+								startcolor=".25 .65 1"
+								midcolor=".25 .65 1"
+								endcolor="0 0 0"
+								startsize="4"
+								endsize="2"
+								minanglespeed="-80"
+								maxanglespeed="80"
+							/>
+						</simpleemitter>
+
+					</model>
+				</particle>
+			</trackeremitter>
+
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

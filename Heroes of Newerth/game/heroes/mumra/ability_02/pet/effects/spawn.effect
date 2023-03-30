@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="0.5">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="1000"
+				volume=".1"
+				sample="/heroes/rocky/ability_01/sounds/ability_01_impact_%.wav"
+			/>
+
+			<groundsprite	
+				delay="0"
+				life="5900"
+				material="/shared/effects/materials/earth_cracks_02.material"
+				minsize="65"
+				maxsize="75"			
+				color="1"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos="0.80"
+				maxyaw="360"
+			/>
+
+			<groundsprite	
+				delay="0"
+				life="6000"
+				material="/shared/effects/materials/ground_smash_overlay.material"
+				minsize="35"
+				maxsize="50"			
+				color="1"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos="0.80"
+				maxyaw="360"
+			/>
+		
+			<simpleemitter
+				delay="-300"
+				life="1000"
+				spawnrate="16"
+				particlelife="1000"
+				gravity="-1.0"
+				speed="3"
+				drag="0.01"
+				material="/shared/effects/materials/dust.material"
+				offsetsphere="35 35 35"
+				angle="30"
+				position="0 0 25"
+			>
+				<particle
+					startcolor=".5"
+					endcolor="0 0 0"
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-20"
+					maxanglespeed="20"
+					startsize="40"
+					endsize="115"
+					startalpha="1"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				life="1000"
+				spawnrate="600"
+				count="6"
+				particlelife="1000"
+				gravity="-1.0"
+				speed="3"
+				drag="0.01"
+				material="/shared/effects/materials/dust_smoke_02.material"
+				offsetsphere="45"
+				angle="40"
+				position="0 0 25"
+			>
+				<particle
+					startcolor=".2"
+					endcolor=".25 .2 .2"
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-20"
+					maxanglespeed="20"
+					startsize="40"
+					endsize="115"
+					startalpha="1"
+					endalpha="0"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				life="1000"
+				spawnrate="600"
+				count="120"
+				particlelife="1000"
+				gravity="25.0"
+				speed="83"
+				material="/shared/effects/materials/dust.material"
+				offsetsphere="45"
+				position="0 0 25"
+			>
+				<particle
+					startcolor=".3"
+					endcolor=".3"
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-20"
+					maxanglespeed="20"
+					startsize="11"
+					endsize="10"
+					startalpha="1"
+					endalpha="1"
+				/>
+			</simpleemitter>
+
+			<groundsprite
+				life="3000"
+				loop="false"			
+				material="/shared/effects/materials/coals_add.material"
+				size="22"
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="0 0 0 "
+				midcolorpos=".9"
+
+			/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+     	 	<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="1.0">
+
+			<terrainemitter
+				spawnrate=".75"
+				
+				particlelife="3000"
+				gravity="0"
+				offsetsphere="130 130 0"
+				life="5000"
+				loop="true"
+			>
+				<particle
+				>
+					<model
+						life="2000"
+						color=".7 .7 1"
+						model="model.mdf"
+						anim="default_1"
+						scale="1.3"
+						expirelife="500"
+						startalpha="1"
+						midalpha="1"
+						endalpha="1"
+						midalphapos=".5"
+					>
+					<simpleemitter		
+				delay="600"
+				spawnrate="2"			
+				particlelife="1500"			
+				gravity="-10"
+				speed="20"
+				drag=".01"
+				depthbias="-10"
+				material="/shared/effects/materials/phantom_smoke_13.material"
+				offsetsphere="0"
+				minangle="0"
+				maxangle="0"
+				direction="0 0 1"
+				
+			>
+				<particle 
+					minangle="0"
+					maxangle="0"
+					
+					startheight="0"
+					endheight="250"
+					startwidth="50"
+					endwidth="10"
+					startcolor="0 .2 0.5"
+					endcolor="0 0 0"
+					startalpha="1.0"
+					
+					endalpha="0"
+					lockup="true"
+					lockright="true"
+				/>
+			</simpleemitter>
+			
+			<billboard
+				delay="700"
+				material="/shared/effects/materials/flare_02.material"
+				startcolor=".0 .3 0.5"
+				endcolor="0"
+				life="500"
+				startsize="50"
+				endsize="100"
+				
+				depthbias="-30"
+				
+				position="0 0 0"
+				
+			/>
+					</model>
+				</particle>
+			</terrainemitter>
+			
+			<terrainemitter
+				delay="300"
+				spawnrate="4"
+				particlelife="1000"
+				gravity="0"
+				offsetsphere="200 200 0"
+				life="5000"
+				loop="true"
+			>
+				<particle
+				>
+					<model
+						life="1000"
+						color=".7 .7 1"
+						model="model.mdf"
+						anim="default_1"
+						scale="1"
+						expirelife="500"
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".5"
+					/>
+				</particle>
+			</terrainemitter>
+			
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+

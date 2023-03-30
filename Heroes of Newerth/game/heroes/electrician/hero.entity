@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_Electrician"
+	
+	team="Hellbourne"
+	icon="icons/hero.tga"
+	portrait="icons/hero.tga"
+	model="model.mdf"
+	skin=""
+	
+	passiveeffect="effects/body.effect"
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="sounds/voice/select_%.wav"
+	selectedflavorsound="sounds/voice/select_flavour_%.wav"
+	confirmmovesound="sounds/voice/move_%.wav"
+	confirmattacksound="sounds/voice/attack_%.wav"
+	nomanasound="sounds/voice/no_mana.wav"
+	cooldownsound="sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="sounds/voice/taunt_prior.wav"
+	tauntkillsound="sounds/voice/taunt_after.wav"
+	
+	preglobalscale="1.8"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="112"
+	boundsradius="24"
+	selectionradius="48"
+	targetoffset="0 0 64"
+
+	movespeed="300"
+	turnrate="360"
+	turnsmoothing="0.05"
+
+	maxhealth="150"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="0"
+	magicarmor="5.5"
+
+	inventory0="Ability_Electrician1"
+	inventory1="Ability_Electrician2"
+	inventory2="Ability_Electrician3"
+	inventory3="Ability_Electrician4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8="Ability_Taunt"
+
+	attackduration="950"
+	attackactiontime="500"
+	attackcooldown="1700"
+	attackdamagemin="30"
+	attackdamagemax="38"
+	attacknumanims="2"
+	attackoffset="0 30 100"
+	attackprojectile=""
+	attackrange="100"
+	attackstarteffect=""
+	attackactioneffect="effects/attack.effect"
+	attackimpacteffect="effects/impact.effect"
+	attacktype="melee"
+	combattype="Hero"
+
+	aggrorange="600"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="Strength"
+	strength="23"
+	strengthperlevel="2.4"
+	agility="15"
+	agilityperlevel="2.0"
+	intelligence="25"
+	intelligenceperlevel="1.3"
+>
+	<recommendeditem name="Item_ManaPotion" />
+	<recommendeditem name="Item_MinorTotem" />
+	<recommendeditem name="Item_RunesOfTheBlight" />
+	<recommendeditem name="Item_HealthPotion" />
+	<recommendeditem name="Item_HomecomingStone" />
+
+	<recommendeditem name="Item_FlamingEye" />
+	<recommendeditem name="Item_Strength5" />
+	<recommendeditem name="Item_PlatedGreaves" />
+	<recommendeditem name="Item_Shield2" />
+	<recommendeditem name="Item_Astrolabe" />
+	<recommendeditem name="Item_PortalKey" />
+	<recommendeditem name="Item_BarrierIdol" />
+	<recommendeditem name="Item_HealthMana3" />
+	<recommendeditem name="Item_Immunity" />
+	<recommendeditem name="Item_FrostfieldPlate" />
+	<recommendeditem name="Item_BehemothsHeart" />
+</hero>

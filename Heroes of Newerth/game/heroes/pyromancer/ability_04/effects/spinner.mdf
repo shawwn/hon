@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="" file="spinner.model" type="K2" >
+	<spawnevent cmd="StartEffect trail.effect" /> 
+	<anim name="idle" clip="idle.clip" loop="true" fps="150" />
+</model>

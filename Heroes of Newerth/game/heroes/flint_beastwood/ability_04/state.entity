@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_FlintBeastwood_Ability4"
+
+	icon="icon.tga"
+	passiveeffect=""
+	
+	ishidden="false"
+	sighted="true"
+	revealed="true"
+>
+	<aura
+		gadget="Gadget_FlintBeastwood_Ability4"
+		radius="0"
+		targetscheme="self"
+	/> 
+</state>

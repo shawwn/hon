@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<linearaffector
+	name="Affector_Behemoth_Ability1"
+
+	radius="250"
+	minlength="1200"
+	maxlength="1200"
+	
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Magic"
+	
+	effect=""
+	impacteffect=""
+>
+	<onimpact>
+		<applystate name="State_Stunned" duration="1000,1250,1500,1750"/>
+		<damage effecttype="Magic" amount="125,175,225,275"/>
+	</onimpact>
+</linearaffector>

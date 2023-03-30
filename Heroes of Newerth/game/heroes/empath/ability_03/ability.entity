@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Empath3"
+
+	icon="icon.tga"
+	
+	anim="ability_3"
+	casttime="300"
+	castactiontime="300"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+	
+	actiontype="target_entity"
+	casteffecttype="Physical Push"
+	targetscheme="enemy_and_willing_ally_heroes"
+	casteffect="effects/cast.effect"
+	
+	manacost="100"
+	cooldowntime="30000,25000,20000,15000"
+	
+	range="1200"
+	
+
+>
+
+	<activatecost>
+		<condition target="this_owner_target_entity" test="hasstate State_Empath_Boobable">
+		</condition>
+		<else>
+			<invalidate />
+		</else>
+	</activatecost>
+	
+	<onimpact>
+		<spawnaffector name="Affector_Empath_Ability3" target="source_entity" />
+		<spawnaffector name="Affector_Empath_Ability3" target="target_entity" />
+		<spawnunit name="Gadget_Empath_Ability3" target="source_position" pushentity="true" />
+		<playeffect effect="effects/appear.effect" source="source_position" occlude="true"/>
+		<!--<playeffect effect="effects/beam.effect" source="source_position" target="target_position" occlude="true"/>-->
+		
+		<unbind target="source_entity" />
+		<unbind target="target_entity" />
+		<teleport source="source_entity" target="target_position" interpolate="false" />
+		<teleport source="target_entity" target="stack_position" interpolate="false" />
+		<disjoint target="source_entity" />
+		<disjoint target="target_entity" />
+		<playeffect effect="effects/appear.effect" source="source_position"/>
+	</onimpact>
+	
+	<ondamaged propagatetoillusions="false">
+		<setvar0 a="source_damage" />
+		<cantarget targetscheme="enemy_heroes" >
+			<spawnaffector name="Affector_Empath_Ability3_More_Titties" target="source_position" param="var0" />
+		</cantarget>
+	</ondamaged>
+
+</ability>

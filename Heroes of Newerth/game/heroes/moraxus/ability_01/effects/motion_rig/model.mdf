@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="" file="model.model" type="K2" >
+
+	<anim name="idle" clip="default_1.clip" fps="70" loop="true">
+	</anim>
+</model>

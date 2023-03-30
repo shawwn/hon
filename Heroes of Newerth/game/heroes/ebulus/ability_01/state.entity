@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Ebulus_Ability1"
+
+	icon="icon.tga"
+	
+	movespeedslowstart="0.5"
+	movespeedslowmid="0.5"
+	movespeedslowend="0.0"
+	movespeedslowduration="6000"
+	movespeedslowmidpos="0.33"
+	
+	impactinterval="3000"
+	deniable="true"
+	
+	passiveeffect="effects/state.effect"
+	
+	effecttype="StatusDebuff"
+>
+	<onframe >
+	</onframe>
+
+	<onimpact>
+		<playeffect effect="effects/impact.effect" source="target_entity"/>
+		<damage effecttype="Magic DOT" amount="10,20,40,50" />
+		<popup name="poison" a="result" source="target_entity" target="source_entity"/>
+	</onimpact>
+</state>

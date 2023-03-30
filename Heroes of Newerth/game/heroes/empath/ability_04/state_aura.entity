@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Empath_Ability4_Aura"
+	
+	icon="icon.tga"
+	passiveeffect=""
+	ishidden="true"
+>
+	<oninflict>
+		<condition target="target_entity" test="not_target_type illusion">
+			<condition target="target_entity" test="not_hasstate State_Empath_Ability4_Illusion" >
+				<spawnillusion owner="target_entity" source="target_entity" count="1" lifetime="20000" receivedamagemultiplier="3.5,3,2.5" inflictdamagemultiplier="0.3,0.45,0.6" spawneffect="" deatheffect="" />
+				<applystate target="target_entity" name="State_Empath_Ability4_Illusion" duration="8000"/>
+			</condition>
+		</condition>
+	</oninflict>
+</state>

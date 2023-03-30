@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Succubis_Ability3"
+
+	icon="icon.tga"
+	
+	impactinterval="1000"
+	
+	immunitytype="IndirectImmunity"
+	
+	passiveeffect="effects/state.effect"
+	stunned="true"
+	frozen="true"
+	smackable="true"
+
+	nothreat="true"
+	
+	effecttype="StatusDebuff"
+>
+	<onframe/>
+	
+	<onattackedstart>
+		<condition test="accumulator eq 1">
+			<cantarget targetscheme="all" effecttype="Magic">
+				<applystate name="State_Succubis_Ability3" duration="4000,5000,6000,7000" />
+				<applystate name="State_Succubis_Ability3_Invulnerable" duration="1000" />
+				<playeffect effect="effects/impact.effect" source="target_entity"/>
+				<expirestate name="State_Succubis_Ability3" target="source_entity" />
+			</cantarget>
+		</condition>
+	</onattackedstart>
+
+	<ondamaged>
+		<condition test="accumulator eq 1">
+			<condition test="source_damage gt 0">
+				<condition test="not_entity_type State_Succubis_Ability3" target="inflictor_entity" >
+					<expire />
+				</condition>
+			</condition>
+		</condition>
+	</ondamaged>
+	
+	<onimpact>
+		<setaccumulator value="1" />
+		<damage effecttype="" amount="20"  />
+	</onimpact>
+	
+	<onexpired>
+		<playanim name="idle" target="target_entity" />
+	</onexpired>
+</state>

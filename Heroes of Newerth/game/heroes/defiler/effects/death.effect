@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<modifier
+			name="modifier0"
+			startcolor="0"
+			endcolor="0"
+			startalpha="1"
+			midalpha="0"
+			endalpha="0"
+			midalphapos=".15"
+			life="7500"
+		/>
+
+		<particlesystem name="system0" space="world" scale="1">
+
+			<billboard
+				life="4500"
+				delay="400"
+				bone="_bone_centerofchest"
+				startcolor=".7 0 .3"
+				midcolor=".7 0 .3"
+				midcolorpos=".9"				
+				endcolor="0"
+				size="150"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+
+			<simpleemitter
+				life="4500"
+				spawnrate="45"
+				depthbias="-30"
+				particlelife="2000"
+				offsetsphere="15 15 45"
+				bone="_bone_centerofchest"
+				speed="2"
+				material="/shared/effects/materials/phantom_smoke_02.material"
+			>
+				<particle
+					startcolor=".3"
+					midcolorpos="0.3"
+					endcolor="0"
+					startsize="0"
+					endsize="30"
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-30"
+					maxanglespeed="30"
+					minendscale="3"
+					maxendscale="4"
+					startalpha="1"
+					endalpha="0"
+			 	/>
+			</simpleemitter>
+
+			<simpleemitter
+				life="4500"
+				delay="200"
+				spawnrate="45"
+				depthbias="-30"
+				particlelife="400"
+				bone="Bip01 Spine1"
+				speed="2"
+				material="/shared/effects/materials/phantom_smoke_10.material"
+			>
+				<particle
+					startcolor="1"
+					midcolorpos="0.3"
+					endcolor="0"
+					startsize="0"
+					endsize="30"
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-30"
+					maxanglespeed="30"
+					minendscale="1"
+					maxendscale="4"
+					startalpha="1"
+					endalpha="0"
+					width="100"
+					height="2"
+					anchor="0.6"
+			 	/>
+			</simpleemitter>
+
+			<simpleemitter
+				delay="300"
+				spawnrate="45"
+				depthbias="-30"
+				particlelife="1000"
+				offsetsphere="15"
+				bone="Bip01 Spine1"
+				angle="40"
+				speed="2"
+				life="1600"
+				material="/shared/effects/materials/phantom_smoke_10.material"
+			>
+				<particle
+					startcolor="1"
+					midcolorpos="0.3"
+					endcolor="0"
+					startsize="0"
+					endsize="30"
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-30"
+					maxanglespeed="30"
+					minendscale="3"
+					maxendscale="4"
+					startalpha="1"
+					endalpha="0"
+					anchor="0.6"
+			 	/>
+			</simpleemitter>
+		
+			<trackeremitter	
+				life="4500"
+				bone="_bone_center"
+				position="0 0 40"
+				targetbone="_bone_center"
+				inheritvelocity="0.25"
+				tracktype="distance"
+				trackspeed=".5" 
+				spawnrate="10"
+				particlelife="2400"
+				offsetsphere="65 65 5"
+				speed="180"
+				direction="0 0 1"
+				material="/shared/effects/materials/soul_projectile.material"
+			>
+				<particle 
+					startsize="16"
+					endsize="0"
+					height="5"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".1"
+					angle="90"
+					minscale="1"
+					maxscale="3"
+					color="0"					
+					turn="true"
+				/>
+			</trackeremitter>
+
+			<trackeremitter	
+				life="4500"
+				bone="_bone_center"
+				position="0 0 40"
+				targetbone="_bone_center"
+				inheritvelocity="0.25"
+				tracktype="distance"
+				trackspeed=".5" 
+				spawnrate="10"
+				particlelife="3000"
+				offsetsphere="65 65 5"
+				speed="100"
+				direction="0 0 1"
+				material="/shared/effects/materials/blink.material"
+			>
+				<particle 
+					startsize="4"
+					endsize="0"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".1"
+					maxangle="360"
+					minscale="1"
+					maxscale="2"
+					color="1 .2 .6"					
+					
+				/>
+			</trackeremitter>
+		
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0"  particlesystem="system0" />	
+		<spawnmodifier instance="instance1" modifier="modifier0"/>  
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+	</thread>
+
+</effect>

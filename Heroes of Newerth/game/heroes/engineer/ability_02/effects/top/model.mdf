@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="export.max" file="model.model" type="K2" >
+
+	<anim name="spawn_1" clip="assemble.clip" loop="0"/>
+	
+	<anim name="idle" clip="default_1.clip" fps="30"  loop="true"/>
+	
+	<anim name="attack_1" clip="attack_1.clip" fps="100" loop="false"/>
+	
+	<anim name="shutdown_1" clip="shutdown_1.clip" fps="35" loop="true" loopbackframe="-1"/>
+	
+	<anim name="death_1" clip="attack_1.clip" fps="35" loop="false">
+		<frameevent frame="1" cmd="starteffect effects/death.effect 0"/>
+	</anim>
+
+</model>

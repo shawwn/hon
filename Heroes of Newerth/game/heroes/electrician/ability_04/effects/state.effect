@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="purgeEffect" deferred="true" useentityeffectsscale="true">
+	<definitions>
+		<particlesystem name="system1" space="world" scale="1.5">
+
+			<sound
+				soundloop="true"
+				linearfalloff="true"
+				falloffstart="0"
+				falloffend="2000"
+				volume=".6"
+				fadein="100"
+				fadeout="400"
+				sample="../sounds/state.wav"
+			/>
+
+			<model
+				bone="_bone_centerofchest"
+				name="ring"
+				model="manaburn1_sphere/shield.mdf"
+				anim="idle"
+				yawspeed="0"
+				scale=".6"
+				color=".0 .2 .2"
+			/>
+		
+			<!--blueSmoke-->
+			<simpleemitter
+				timenudge="1000"
+				bone="_bone_centerofchest"			
+         			spawnrate="15"				
+				minparticlelife="1500"
+          			maxparticlelife="3000"
+				offsetsphere="20 20 0"
+				material="/shared/effects/materials/phantom_smoke_17.material"
+			>
+  				<particle 
+					maxangle="360"			
+					minanglespeed="-6"
+					maxanglespeed="6"
+					startcolor="0 0 0"
+					midcolor=".02 .04 .035"
+					endcolor="0 0 0"
+					startalpha=".5 1 1"
+					endalpha="0 0 0"
+					startsize="0"
+					endsize="175"
+					endanchor="0"
+					stickiness="1"
+				/>
+        	</simpleemitter>
+
+			<!--blueBoltSmoke-->
+			<simpleemitter
+				timenudge="1000"
+				bone="_bone_centerofchest"
+         			spawnrate="15"
+				minparticlelife="1500"
+          			maxparticlelife="3000"
+				offsetsphere="110 110 110"
+				material="/shared/effects/materials/lightning_10.material"
+			>
+  				<particle 
+					maxangle="360"
+					minanglespeed="-6"
+					maxanglespeed="6"
+					startcolor="0 0 0"
+					midcolor=".00 .03 .03"
+					endcolor="0 0 0"
+					startalpha=".5 1 1"
+					endalpha="0 0 0"
+					startsize="0"
+					endsize="150 0 0"
+					endanchor="0"
+					stickiness="1"
+				/>
+        	</simpleemitter>
+
+			<!-- white to light -->
+			<simpleemitter
+				spawnrate="50"
+				bone="_bone_centerofchest"
+				particlelife="300"
+				gravity="0"
+				speed="70"
+				drag="0"
+				acceleration="0"
+				position="0 0 0"
+				material="/shared/effects/materials/lightning_02.material"
+				offsetsphere="1 1 1"
+				minangle="360"
+				maxangle="180"
+				direction="1 0 0"
+				offsetdirection="0 0 0"
+				offsetradial="0 0 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="50"
+					maxanglespeed="150"
+					startcolor=".5 1 1"
+					midcolor="0 .1 .1"
+					endcolor="0 0 0"
+					midcolorpos=".8"
+					startframe="0"
+					endframe="1"
+					startsize="1"
+					midsize="30"
+					endsize="50"
+					startalpha="0"
+					midalpha=".3"
+					endalpha="0"
+					midalphapos=".5"
+					startstickiness="0"
+					endstickiness="0"
+				/>
+
+
+			</simpleemitter>
+
+			<!--white lightning -->
+			<simpleemitter
+				spawnrate="50"
+				bone="_bone_centerofchest"
+				maxparticlelife="500"
+				gravity="0"
+				speed="70"
+				drag="0"
+				acceleration="0"
+				position="0 0 0"
+				material="/shared/effects/materials/lightning_02.material"
+				offsetsphere="25"
+				minangle="360"
+				maxangle="180"
+				direction="1 0 0"
+				offsetdirection="0 0 0"
+				
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="50"
+					maxanglespeed="150"
+					startcolor=".5 1 .8"
+					midcolor=".5 1 .8"
+					endcolor="0 0 0"
+					midcolorpos=".8"
+
+					startsize="1"
+					midsize="10"
+					maxendsize="15"
+
+					startstickiness="0"
+					endstickiness="1"
+					flare="1"
+				/>
+			</simpleemitter>
+			
+		</particlesystem>
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnparticlesystem instance="instance1" particlesystem="system1" />	
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+	</thread>
+</effect>
+
+
+
+
+
+
+

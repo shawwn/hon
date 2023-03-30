@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Scar_Ability2_Self"
+
+	
+	
+	icon="icon.tga"
+	passiveeffect="effects/cast.effect"
+	invulnerable="true"
+	silenced="true"
+	perplexed="true"
+	immobilized="true"
+	disarmed="true"
+>
+	<onexpired>
+		<playanim name="idle" target="source_entity" />
+	</onexpired>
+</state>

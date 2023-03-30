@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1" useentityeffectscale="1">
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+
+
+			<sound
+				linearfalloff="true"
+				falloffstart="400"
+				falloffend="2000"
+				volume=".6"
+				sample="../sounds/impact2.wav"
+			/>
+		
+			<model
+				life="650"
+				parentmodel="true"
+				parentskeleton="true"
+				startcolor=".35 .75 2"
+				midcolor=".35 .75 2"
+				endcolor="0 0 0"
+				midcolorpos=".25"
+				startscale="1"
+				midscale="1.1"
+				endscale="1"
+				midscalepos=".25"
+				material="/shared/effects/materials/shell2.material"
+				startalpha="0"
+				endalpha="10"
+				position="0 0 0"
+			/>
+			
+			<simpleemitter
+				count="2"
+				spawnrate="5000"
+				particlelife="750"
+				acceleration="0.0"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+				offsetsphere="50 50 0"
+			>
+				<particle
+					turn="1"
+				>
+					<groundsprite
+						delay="150"
+						life="2000"
+						material="/shared/effects/materials/earth_cracks_02.material"
+						minsize="135"
+						maxsize="175"
+						color="1.0 1.0 1.0"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos="0.05"
+						minyaw="0"
+						maxyaw="360"
+					/>
+				</particle>
+			</simpleemitter>
+			
+			<simpleemitter
+				count="6"
+				spawnrate="25"
+				particlelife="750"
+				acceleration="0.0"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+				offsetsphere="125 125 0"
+			>
+				<particle
+					turn="1"
+				>
+					<groundsprite
+						delay="150"
+						life="200"
+						material="/shared/effects/materials/earth_cracks_add_blue.material"
+						startsize="75"
+						midsize="125"
+						endsize="125"
+						startcolor=".5 .5 1"
+						midcolor=".5 .5 1"
+						endcolor="0 0 0"
+						midalphapos="0.05"
+						minyaw="0"
+						maxyaw="360"
+					/>
+				</particle>
+			</simpleemitter>
+			
+		</particlesystem>
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+
+

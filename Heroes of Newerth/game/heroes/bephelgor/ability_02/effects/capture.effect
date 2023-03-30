@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect>
+
+	<definitions>
+
+		<modifier
+			name="modifier0"
+			startcolor="2 1 1"
+			endcolor="1 1 1"
+			life="1000"
+		/>
+
+		<particlesystem name="system0" space="world" scale=".4">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="1500"
+				volume=".4"
+				sample="../sounds/cast.wav"
+			/>
+
+			<simpleemitter
+				position="0 0 40"
+				life="200"
+				count="20"
+				spawnrate="2000"
+				depthbias="-40"
+				minparticlelife="400"
+				maxparticlelife="800"
+				speed="430"
+				drag="0.05"
+				offsetsphere="160"
+          			material="/shared/effects/materials/phantom_smoke_04.material"
+         	>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="1 .45 0"
+					endcolor="0"
+					startsize="30"
+					endsize="125"
+					minanglespeed="-80"
+					maxanglespeed="80"
+									startstickiness="0"
+				endstickiness="1"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				life="1000"
+				spawnrate="1100"
+				count="55"
+				minparticlelife="400"
+				maxparticlelife="1200"			
+				gravity="35"
+				minspeed="1400"
+				maxspeed="1900"
+				drag=".015"
+				material="/shared/effects/materials/spark_10.material"
+				offsetsphere="225"
+				minangle="0"
+				maxangle="90"
+		
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="1"
+					midcolor="1 .4 0"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					minstartsize="18"
+					maxstartsize="26"
+					midsize="12"
+					endsize="6"
+					startalpha="0"
+					midalpha=".7"
+					endalpha="0"
+					midalphapos=".5"
+					startstickiness="0"
+				endstickiness="1"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				position="0 0 40"
+				life="300"
+				count="10"
+				spawnrate="2000"
+				depthbias="-40"
+				minparticlelife="400"
+				maxparticlelife="800"
+				speed="430"
+				drag="0.05"
+				offsetsphere="190"
+          		material="/shared/effects/materials/bone_shaded.material"
+         	>
+				<particle 
+					minangle="0"
+					maxangle="360"								
+					
+					width="22"
+					height="30"
+					alpha="1.0"
+					color=".8 .8 .6"
+					minscale="0.5"
+					maxscale="2"
+					minanglespeed="-480"
+					maxanglespeed="480"
+					startstickiness="0"
+					endstickiness="1"
+				/>
+			</simpleemitter>			
+				
+			
+			<billboard
+				position="0 0 40"
+				life="300"
+				startcolor="1 .25 0"
+				endcolor="0"
+				size="300"
+				depthbias="-50"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+
+			<billboard
+				position="0 0 40"
+				life="250"
+				startalpha=".5"
+				endalpha="0"
+				startsize="600"
+				endsize="100"
+				depthbias="-20"
+				startparam=".015"
+				endparam="0"
+				material="/shared/effects/materials/refract_ripples.material"
+			/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	  	<spawnmodifier instance="instance1" modifier="modifier0"/>  
+		<waitfordeath instance="instance0" />
+	 	<waitfordeath instance="instance1" />
+	</thread>
+
+</effect>

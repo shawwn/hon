@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Hiro_Ability1_Tooltip"
+
+	icon="icons/ability_1.tga"
+	passiveeffect=""
+
+	effecttype="StatusDebuff"
+>
+	<onframe />
+</state>

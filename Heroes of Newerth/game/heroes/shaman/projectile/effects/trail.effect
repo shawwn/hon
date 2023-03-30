@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+	<definitions>
+		<particlesystem name="system0" space="local" scale="2">
+		
+			<model
+				model="/heroes/shaman/projectile/effects/hammer.mdf"
+				anim="idle"
+				scale="1"
+				position="0 0 0"
+				alpha="1"
+			>
+				<template name="trails">
+					<twopointtrailemitter
+						life="500"
+						bone_a="_bone_weapon3"
+						bone_b="_bone_weaponattach"
+						spawnrate="200"
+						particlelife="500"
+						material="/shared/effects/materials/arrow_trail.material"
+					>
+						<particle
+							startcolor="0 0 0"
+							midcolor="0 0 .15"
+							endcolor="0 0 0"
+							micolorpos=".25"
+							startsize="50"
+							midsize="25"
+							endsize="8"
+							midsizepos="0.2"
+					/>
+					</twopointtrailemitter>
+				</template>
+
+				<instance name="trails" bone="_bone_weapon3" />
+				<instance name="trails" bone="_bone_weapon1" />
+
+				<simpleemitter
+					bone="_bone_weapon3"
+					material="/shared/effects/materials/phantom_smoke_04.material"
+					spawnrate="100"
+					particlelife="650"
+					gravity="7"
+					speed="30"
+					inheritvelocity="0.21"
+					offsetsphere="10 10 10"
+					drag="0.1"
+				>
+					<particle
+						roll="180"
+						heightdistort="0.01"
+						turn="1"
+						startcolor="0 0 1"
+						endcolor="0 0 0"
+						startsize="40"
+						endsize="20">
+					</particle>
+				</simpleemitter>
+		
+				<simpleemitter
+					bone="_bone_weapon3"
+					material="/shared/effects/materials/phantom_smoke_04.material"
+					spawnrate="100"
+					particlelife="400"
+					gravity="7"
+					speed="30"
+					inheritvelocity="0.21"
+					offsetsphere="10 10 10"
+					drag="0.1"
+				>
+					<particle
+						roll="180"
+						heightdistort="0.01"
+						turn="1"
+						startcolor="0 1 0"
+						endcolor="0 0 0"
+						startsize="40"
+						endsize="20">
+					</particle>
+				</simpleemitter>
+				
+				<simpleemitter
+					bone="_bone_weapon3"
+					material="/shared/effects/materials/phantom_smoke_04.material"
+					spawnrate="100"
+					particlelife="500"
+					gravity="7"
+					speed="30"
+					offsetsphere="10 10 10"
+					drag="0.1"
+					inheritvelocity=".25"
+				>
+					<particle
+						roll="180"
+						heightdistort="0.01"
+						turn="1"
+						startcolor="0 0 .25"
+						endcolor="0 0 0"
+						startsize="75"
+						endsize="25">
+					</particle>
+				</simpleemitter>
+
+				<simpleemitter
+					bone="_bone_weapon3"
+					position="0 10 0"			
+					spawnrate="25"
+					particlelife="500"
+					gravity="0"
+					offsetsphere="0 0 0"
+					drag="0"
+					acceleration="0"
+					direction="0 0 0"
+					material="/shared/effects/materials/phantom_smoke_04.material"
+				>
+						<particle 
+							startcolor="0 0 1"
+							midcolor="0 0 1"
+							endcolor="0 0 0"
+							midcolorpos="0.4"				
+							minangle="0"
+							maxangle="360"
+							startsize="90"
+							midsize="20"				
+							endsize="15"
+							startalpha=".2 .2 .2"
+							midsizepos=".8"
+							minanglespeed="-90"
+							maxanglespeed="90"
+							anchor=".25"
+						/>			
+				</simpleemitter>
+
+				<billboard
+					material="/shared/effects/materials/whitedot.material"
+					color="0 0 .5"
+					size="50"
+				/>
+			</model>
+		
+			<model
+				model="/heroes/pyromancer/ability_04/effects/spinner.mdf"
+				anim="idle"
+				scale=".25"
+				position="0 0 0"
+				alpha="0"
+			>
+
+				<twopointtrailemitter
+					life="1000"
+					bone_a="_bone_1b"
+					bone_b="_bone_1a"
+					spawnrate="200"
+					particlelife="500"
+					material="/shared/effects/materials/dragon.material"
+				>
+					<particle 
+						alpha="1.0"
+						startcolor="0 0 .5" 
+						endcolor="0 0 0"
+					/>
+				</twopointtrailemitter>
+				
+				<twopointtrailemitter
+					life="1000"
+					bone_a="_bone_2b"
+					bone_b="_bone_2a"
+					spawnrate="200"
+					particlelife="500"
+					material="/shared/effects/materials/dragon.material"
+				>
+					<particle 
+						alpha="1.0"
+						startcolor="0 0 .5" 
+						endcolor="0 0 0"
+					/>
+				</twopointtrailemitter>
+
+				<twopointtrailemitter
+					life="1000"
+					bone_a="_bone_3b"
+					bone_b="_bone_3a"
+					spawnrate="200"
+					particlelife="500"
+					material="/shared/effects/materials/dragon.material"
+				>
+					<particle 
+						alpha="1.0"
+						startcolor="0 0 .5" 
+						endcolor="0 0 0"
+					/>
+				</twopointtrailemitter>
+				
+				<twopointtrailemitter
+					life="1000"
+					bone_a="_bone_4b"
+					bone_b="_bone_4a"
+					spawnrate="200"
+					particlelife="500"
+					material="/shared/effects/materials/dragon.material"
+				>
+					<particle 
+						alpha="1.0"
+						startcolor="0 0 .5"
+						endcolor="0 0 0"
+					/>
+				</twopointtrailemitter>
+			</model>
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+</effect>

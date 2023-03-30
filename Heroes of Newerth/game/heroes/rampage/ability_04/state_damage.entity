@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Rampage_Ability4_Damage"
+
+	icon="icon.tga"
+	passiveeffect=""
+>
+	<onframe>
+		<damage target="proxy_entity" amount="0.25,0.35,0.45" b="movement" op="mult" effecttype="Physical DOT" />
+	</onframe>
+</state>

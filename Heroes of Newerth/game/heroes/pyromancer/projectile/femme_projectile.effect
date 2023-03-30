@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="local" scale=".9">
+
+			<trailemitter
+				spawnrate="100"
+				particlelife="500"
+				texpostime="500"
+			 	texposscale="0.0"
+			 	texstretchscale=".4"
+				material="/shared/effects/materials/arrow_trail.material"
+			>
+				<particle
+					 startcolor="1 1 .2"
+					 midcolor=".9 .2 0"
+					 endcolor="0 0 0"
+					 startsize="40"
+					 endsize="30"
+				 />
+			</trailemitter>
+
+			<simpleemitter
+				spawnrate="30"
+				bone="_bone_fx_01"
+				minparticlelife="400"
+				maxparticlelife="700"				
+				material="/shared/effects/materials/whitewater_01.material"
+				offsetsphere="15"
+				angle="20"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="0"
+					startcolor="1 .5 .1"
+					endcolor="0 0 0"
+					startsize="35"
+					midsize="60"
+					endsize="20"
+					midsizepos=".3"
+					startalpha=".3"
+					midalpha=".3"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_fx_01"
+				spawnrate="40"
+				particlelife="650"			
+				acceleration="50"
+				offsetsphere="25"
+				material="/shared/effects/materials/mysticenergy2.material"
+				angle="50"
+       			 >
+				<particle 
+					minangle="-360"
+					maxangle="360"
+					startcolor="1 .6 0"
+					midcolor="1 .25 0"
+					endcolor="0 0 0"
+					midcolorpos=".4"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos="0.2"
+					startsize="60"
+					midsize="35"
+					endsize="0"
+					midsizepos=".8"
+				/>
+			</simpleemitter>
+
+			<billboard
+				startcolor=".3 .1 0"
+				endcolor="0"
+				size="255"
+				depthbias="-40"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+
+			<simpleemitter
+				spawnrate="20"
+				particlelife="750"			
+				offsetsphere="25"
+				material="/shared/effects/materials/starlight.material"
+				angle="0"
+       			>
+				<particle 
+					maxangle="360"
+					startsize="110"
+					startcolor=".5 .1 0"
+					endcolor="0"
+					endsize="0"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				spawnrate="80"
+				bone="_bone_fx_01"
+				particlelife="1000"			
+				gravity="-5"
+				speed="240"
+				material="/shared/effects/materials/spark_10.material"
+				offsetsphere="10 10 10"
+				minangle="0"
+				maxangle="120"
+			>
+				<particle 
+					startcolor="1 .5 .5"
+					endcolor="0 0 0"
+					startsize="32"
+					midsize="16"
+					endsize="3"
+					startalpha="0"
+					midalpha=".7"
+					endalpha="0"
+					midalphapos=".5"
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+
+   	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

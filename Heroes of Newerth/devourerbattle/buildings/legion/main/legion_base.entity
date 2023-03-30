@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<building
+	name="Building_LegionBase"
+	
+	icon="icon.tga"
+	portrait=""
+	model="model.mdf"
+	skin=""
+	
+	unittype="MainBaseStructure"
+	
+	passiveeffect=""
+	destroyedsound=""
+	lowhealtheffect=""
+	lowhealthsound=""
+	selectsound=""
+	
+	preglobalscale="0.5"
+	modelscale="1.0"
+	effectscale="1.35"
+	boundsheight="128"
+	boundsradius="60"
+	selectionradius="80"
+	targetoffset="0 0 0"
+
+	immunity="DisableImmunity"
+	noheroarmorreduction="true"
+	
+	maxhealth="10000"
+	healthregen="3"
+
+	armor="15"
+	magicarmor="0"
+
+	attacktype="none"
+	combattype="Structure"
+
+	aggrorange="800"
+	sightrangeday="900"
+	sightrangenight="600"
+	drawonmap="true"
+	isbase="true"
+	
+	sharedinventory0="Ability_Glyph_Legion"
+	sharedremoteshopaccess="Shop_Supplies Shop_Accessories Shop_Weapons Shop_Relics Shop_Recipes1 Shop_Recipes2 Shop_Recipes3 Shop_Recipes4 Shop_Recipes5"
+>
+</building>

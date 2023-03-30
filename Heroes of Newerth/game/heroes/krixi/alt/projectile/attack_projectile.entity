@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_KrixiAttackAlt"
+
+	speed="900"
+	gravity="0"
+
+	modelscale="1.8"
+	model="model.mdf"
+
+	effectscale="1.8"
+	impacteffect="effects/impact.effect"
+	traileffect="effects/tail.effect"
+>
+</projectile>

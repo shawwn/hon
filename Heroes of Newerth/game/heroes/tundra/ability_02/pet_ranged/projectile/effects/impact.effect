@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="true" deferred="true">
+
+	<definitions>
+<!--
+		<modifier
+			name="modifier0"
+			startcolor="1 2 3"
+			endcolor="1"
+			life="2500"
+		/>
+-->
+		<particlesystem name="system0" space="world" scale=".5">
+
+			<model
+				parentmodel="true"
+				parentskeleton="true"
+				material="shell_ice.material"
+				life="2500"
+				startalpha="1"
+				endalpha="0"
+			/>
+
+			<sound
+				linearfalloff="true"
+				falloffstart="0"
+				falloffend="1500"
+				volume=".5"
+				sample="../../sounds/impact_%.wav"
+			/>
+
+			<billboard
+				bone="_bone_centerofchest"
+				life="800"
+				startcolor="0"
+				midcolor=".1 .25 .35"
+				endcolor="0"
+				size="240"
+				material="/shared/effects/materials/blink.material"
+				maxroll="360"
+				endwidth="500"
+			/>
+
+			<billboard
+				depthbias="-30"
+				bone="_bone_centerofchest"
+				life="800"
+				startcolor="0"
+				midcolor=".1 .25 .35"
+				endcolor="0"
+				size="160"
+				material="/shared/effects/materials/blink.material"
+				maxroll="360"
+			/>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				count="5"
+				particlelife="1000"
+				material="/shared/effects/materials/whitewater_02.material"
+				offsetsphere="50 50 30"
+				minangle="0"
+				maxangle="360"
+				gravity="-2"
+				speed="10"
+				inheritvelocity="0.25"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					maxanglespeed="0"
+					minanglespeed="100"
+					startcolor=".4 .6 .7"
+					startsize="25"
+					endsize="180"
+					endcolor="0"
+					startanchor=".8"
+					endanchor="0"
+				/>
+			</simpleemitter>
+
+			<billboard
+				bone="_bone_centerofchest"
+				life="800"
+				startcolor="0"
+				midcolor=".1 .2 .35"
+				endcolor="0"
+				size="210"
+				depthbias="-100"
+				material="/shared/effects/materials/whitedot.material"
+				lockup="true"
+				pitch="90"
+			/>
+
+			<simpleemitter
+				life="1800"
+				spawnrate="500"
+				bone="_bone_centerofchest"
+				count="25"
+				minparticlelife="200"
+				maxparticlelife="1400"
+				gravity="20"
+				minspeed="500"
+				maxspeed="1500"
+				drag=".05"
+				material="/shared/effects/materials/flare_01.material"
+				offsetsphere="25"
+				minangle="0"
+				maxangle="20"
+				direction="0 0 1"
+			>
+				<particle
+					startcolor="1"
+					midcolor="1"
+					endcolor="0"
+					midcolorpos=".2"
+					startsize="12"
+					midsize="10"
+					endsize="6"
+					anchor=".75"
+				/>
+				<particle
+					startcolor="1"
+					midcolor="1"
+					endcolor="0"
+					midcolorpos=".2"
+					startsize="1"
+					midsize="10"
+					endsize=".1"
+					anchor=".75"
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+		<spawnmodifier instance="instance1" modifier="modifier0"/> 
+		<waitfordeath instance="instance0"/>
+		<waitfordeath instance="instance1"/> 
+	</thread>
+
+</effect>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Shaman_Ability4"
+
+	
+	
+	icon="icon.tga"
+	
+	armorpercharge="1"
+	impactinterval="1000"
+	
+	passiveeffect="effects/state.effect"
+	
+	effecttype="StatusBuff"
+>
+	<onframe >
+	</onframe>
+
+	<oninflict>
+		<addcharges count="1" />
+	</oninflict>
+
+	<onimpact>
+		<addcharges count="1" />		
+	</onimpact>
+	
+	<onrefresh>
+		<setcharges a="0" />
+	</onrefresh>
+</state>

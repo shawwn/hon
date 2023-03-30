@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Behemoth1"
+	
+	icon="icon.tga"
+	
+	anim="ability_1"
+	casttime="1190"
+	castactiontime="600"
+	casteffect="effects/cast.effect"
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_dual_position"
+	casteffecttype="Magic"
+	targetscheme="all_other_units"
+	
+	manacost="125,140,155,170"
+	cooldowntime="15000"
+	
+	range="1200"
+>
+	<onimpact>
+		<spawnlinearaffector name="Affector_Behemoth_Ability1" target="source_position" direction="target_position" firsttarget="" />
+		<spawnlinearaffector name="Affector_Behemoth_Ability1_Wall" target="source_position" direction="target_position" firsttarget="" />
+	</onimpact>
+</ability>

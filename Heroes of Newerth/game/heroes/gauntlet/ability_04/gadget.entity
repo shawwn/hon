@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Gauntlet_Ability4"
+	
+	icon=""
+	portrait=""
+
+	modelscale="2.45"
+	model="../ability_02/projectile/model.mdf"
+	passiveeffect="effects/trail.effect"
+
+	preglobalscale="1"
+
+	effectscale="1.0"
+	boundsheight="0"
+	boundsradius="0"
+	selectionradius="0"
+	targetoffset="0 0 0"
+
+	isselectable="false"
+	canrotate="false"
+	ismobile="false"
+
+	attacktype="none"
+	combattype="Ranged"
+
+	sightrangeday="600"
+	sightrangenight="600"
+	unitwalking="true"
+	canattack="false"
+	deathtime="0"
+	corpsetime="0"
+	
+	invulnerable="true"
+	flying="false"
+	drawonmap="false"
+	clearvision="true"
+
+	unittype="Gauntlet_Gadget"
+>
+	<onspawn>
+		<playanim name="hand_open" target="this_entity" />
+	</onspawn>
+	
+	<ondeath>
+		<playanim name="idle" target="this_owner_entity" />
+	</ondeath>
+	
+	<onframe>
+		<killtrees radius="75" />
+	</onframe>
+</gadget>

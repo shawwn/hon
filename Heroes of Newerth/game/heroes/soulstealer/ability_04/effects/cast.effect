@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect persistent="0">
+	<definitions>
+		
+		
+	<particlesystem name="system0" space="world" scale=".3">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume="0.75" 
+				sample="../sounds/cast.wav"
+			/>
+		<terrainemitter
+				position="0 0 10"
+				spawnrate="60"
+				count="36"
+				particlelife="200"
+				range="110"
+				direction="0 0 1"
+				minangle="-30"
+				maxangle="30"
+			>
+				<particle
+					
+				>				
+					<billboard
+						material="/shared/effects/materials/light_rays.material"
+						bone="_bone_center"
+						scale="1"
+						width="70"
+						minheight="330"
+						maxheight="566"
+						startcolor=".2 0 .5"
+						endcolor="0 0 0"
+						position="0 0 156"						
+						lockup="1"
+						expirelife="1000"
+					/>	
+									
+				</particle>		
+		</terrainemitter>	
+		<simpleemitter
+			speed="340"
+			count="22"
+			spawnrate="400"
+			life="2500"
+			position="0 0 100"
+			minangle="0"
+			maxangle="180"
+		>
+			<particle>
+				<model
+					model="bones.mdf"
+					life="2500"
+					startscale=".5"
+					
+					endscale="2"
+					anim="idle"
+					position="0 0 50"
+				
+				>
+				<twopointtrailemitter		
+						
+						name="trail01"
+						bone_a="_bone_02"
+						bone_b="_bone_01"
+						spawnrate="30"
+						life="1300"
+						particlelife="1300"
+						startparticlecolor="1 1 1"
+						endparticlecolor="0 0 0"
+						startparticlealpha="1"
+						endparticlealpha="0"
+						texpostime="1300"
+						texposscale="0"
+						texstretchscale="1"				
+						material="/shared/effects/materials/soul_projectile.material"
+					>
+						<particle 				
+								
+							startcolor="1 1 1"
+							endcolor="1 1 1"
+							
+							startalpha="1"
+							midalpha="1"
+							endalpha="0"
+						/>
+					</twopointtrailemitter>		
+				</model>		
+			
+			</particle>
+		</simpleemitter>
+		
+		<billboard			
+			life="400"
+			yaw="0"
+			startcolor=".3 0 .6"
+			endcolor="0 0 0"							
+			startsize="0"
+			endsize="1800"
+			midsizepos=".4"							
+			depthbias="-50"
+			position="0 0 150"
+			material="/shared/effects/materials/frost_burst.material"
+			lockup="true"
+			lockright="1"
+			pitch="90"
+		/>	
+		<billboard			
+			life="400"
+			roll="40"
+			startcolor=".4 .0 .6"
+			endcolor="0 0 0"							
+			startsize="0"
+			endsize="1800"
+			midsizepos=".4"							
+			depthbias="-50"
+			position="0 0 150"
+			material="/shared/effects/materials/frost_burst.material"
+			lockup="true"
+			lockright="1n"
+			pitch="90"
+		/>			
+		
+		<billboard
+			life="400"
+			color="1.0 1.0 1.0"
+			startalpha="1.0"
+			midalpha="1.0"
+			endalpha="0.0"
+			midalphapos="0.75"
+			startparam=".05"
+			endparam="0.0"
+			startsize="0"
+			endsize="2068"
+			depthbias="0"
+			position="0 0 20"
+			material="/shared/effects/materials/refract_swell.material"
+			lockup="true"
+			pitch="90"
+		/>
+		
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

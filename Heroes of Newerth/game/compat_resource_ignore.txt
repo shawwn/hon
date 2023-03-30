@@ -1,0 +1,10 @@
+*.h
+*.psh
+*.vsh
+*.tga
+*.cursor
+/ui/*
+/core/post/*
+/stringtables/client_messages*.str
+/stringtables/game_messages*.str
+/stringtables/interface*.str

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="1.0">
+			<simpleemitter
+				spawnrate="1"
+				count="50"
+				gravity="0"
+				speed="0.0"
+				drag="0.0"
+				acceleration="0.0"
+				inheritvelocity="0.5"
+				offsetsphere="1000 1000  0"
+			>
+				<particle
+					turn="true"
+					minangle="-20"
+					maxangle="20"
+				>
+					<model
+						
+						model="model.mdf"
+						anim="idle"
+						scale=".5"
+						position="0.0 0.0 0.0"
+						directionalspace="local"
+						startalpha="1.0"
+						endalpha="0.0"
+					/>
+				</particle>
+			</simpleemitter>
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>

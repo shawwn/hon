@@ -1,0 +1,24 @@
+Import(['getCPPFiles', 'env', 'project', 'build_type', 'arch'])
+
+# precompiled header
+env['GchSh'] = env.GchSh(target = '../k0_common.h.gch/'+build_type+'-'+arch, source = 'k0_common.h')[0]
+
+# libs to link against
+env.Append(LIBS = ['z'])
+
+# cpp defines
+#env.Append(CPPDEFINES = ['K2_DLL', 'K2_EXPORTS'])
+
+if build_type == 'debug':
+	libname = 'k0_debug-'+arch
+else:
+	libname = 'k0-'+arch
+
+# source files
+src = [getCPPFiles('../src/k0.vcproj'), 'tchar_linux.cpp']
+
+# create the library
+env.StaticLibrary(target = libname, source = src)
+
+# target
+Alias('k0-' + build_type + '-' + arch, 'lib' + libname + '.a')

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Engineer_Ability2_Snare"
+	
+	icon="icon.tga"
+	passiveeffect=""
+
+	movespeedslowpercharge="0.035"
+	maxcharges="10"
+	
+	effecttype="StatusDebuff"
+>
+	<onframe />
+
+	<oninflict>
+		<addcharges count="1" />
+		<damage effecttype="Physical" amount="10,20,30,40" />
+		<push force="200,300,400,500" duration="50" source="this_proxy_entity" />
+		<setaccumulator value=".9" />
+	</oninflict>
+
+	<onrefresh>
+		<addcharges count="1" />
+		
+		<evaluate a="accumulator" b="10,20,30,40" op="mult" />
+		<damage effecttype="Physical" amount="1" b="result" op="mult" />
+		
+		<evaluate a="accumulator" b="200,300,400,500" op="mult" />
+		<push force="result" duration="50" source="this_proxy_entity" />
+		
+		<evaluate a="accumulator" b="0.9" op="mult" />
+		<setaccumulator value="result" />
+	</onrefresh>
+</state>

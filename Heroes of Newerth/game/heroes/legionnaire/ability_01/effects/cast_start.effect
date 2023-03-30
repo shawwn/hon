@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+	
+		<particlesystem name="system0" space="entity" >
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".75"
+				sample="../sounds/cast.wav"
+			/>
+
+			<model
+				life="650"
+				parentmodel="true"
+				parentskeleton="true"
+				startcolor="2.5 1 0"
+				endcolor="0 0 0"
+				startscale="1.5"
+				midscale="1"
+				endscale="1"
+				midscalepos=".4"
+				material="/shared/effects/materials/shell2.material"
+				position="0 0 0"
+			/>
+			
+			<model
+				delay="500"
+				life="2000"
+				parentmodel="true"
+				parentskeleton="true"
+				startcolor="0 0 0"
+				midcolor="2.5 1 0"
+				endcolor="0 0 0"
+				startscale="1"
+				midscale="1"
+				endscale="1"
+				midscalepos=".25"
+				material="/shared/effects/materials/shell2.material"
+				position="0 0 0"
+			/>
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+

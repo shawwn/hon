@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_HellbourneHealingWell"
+
+	
+	
+	icon="icon.tga"
+	passiveeffect="effects/tarheal.effect"
+	
+	healthregenpercent="0.04"
+	manaregen="7"
+	manaregenpercent="0.04"
+	
+	effecttype="StatusBuff"
+>
+</state>

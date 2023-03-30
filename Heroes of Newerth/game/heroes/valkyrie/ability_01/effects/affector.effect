@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1">
+	<definitions>
+
+		
+		
+		<particlesystem name="system0" space="world" scale="1.0">
+
+		
+			<groundsprite
+				
+				life="300"						
+				material="/shared/effects/materials/leap.material"
+				position="0 0 0"				
+				startcolor=".2 .2  0"	
+				endcolor="0 0 0"		
+				startsize="100"					
+				endsize="400"
+			/>	
+
+			
+			<billboard
+				delay="000"
+				life="500"
+				startcolor=".2 .2 0"	
+				endcolor="0 0 0"
+				midalphapos="0.75"
+				startparam="0.05"
+				endparam="0.0"	
+				
+				startsize="000"
+				
+				endsize="800"
+				midsizepos=".4"
+					
+				depthbias="0"
+				position="0 0 50"
+				material="/shared/effects/materials/corona_06.material"
+				lockup="true"
+				pitch="90"
+			/>
+			
+					
+
+
+
+			
+				
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

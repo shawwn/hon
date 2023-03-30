@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Treant_Ability2"
+	
+	icon=""
+	portrait=""
+	model="/shared/models/invis.mdf"
+	skin=""
+	
+	passiveeffect="effects/state.effect"
+	spawneffect=""
+	respawneffect=""
+	isselectable="true"
+	invulnerable="true"
+	selectsound=""
+	orderconfirmedsound=""
+	
+	preglobalscale="1.35"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="64"
+	boundsradius="16"
+	selectionradius="20"
+	targetoffset="0 0 0"
+	drawonmap="false"
+
+	canrotate="false"
+	ismobile="false"
+	isflying="false"
+	clearvision="true"
+	
+	stealthtype="Unrevealable"
+	fadetime="0"
+	
+	immunity="MagicImmunity1"
+
+	attacktype="none"
+
+	sightrangeday="600,630,660,690"
+	sightrangenight="600,630,660,690"
+
+	revealtype="ward"
+	revealrange="600,630,660,690"
+>
+	<onrelease>
+		<kill target="source_entity" />
+	</onrelease>
+	<aura
+		state="State_Treant_Ability2_Enemy_Reflect"
+		radius="450"
+		targetscheme="enemy_heroes"
+	/>
+</gadget>

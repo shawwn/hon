@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_CorruptedDisciple_Ability4_Enemy"
+
+	icon="icon.tga"
+	
+	armorpercharge="-1"
+	
+	effecttype="StatusDebuff"
+>
+	<oninflict>
+		<addcharges count="1" />
+	</oninflict>
+	
+	<onrefresh>
+		<addcharges count="1" />
+	</onrefresh>
+</state>

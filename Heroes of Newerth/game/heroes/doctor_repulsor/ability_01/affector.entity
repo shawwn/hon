@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_DoctorRepulsor_Ability1"
+
+	radius="235"
+	lifetime="-1"
+	targetselection="all"
+	targetscheme="organic_enemy_units"
+	effecttype="Magic"
+>
+	<onimpact>
+		<condition target="proxy_entity" test="not_hasstate State_DoctorRepulsor_Ability1">
+			<condition test="param eq 0">
+				<setparam a="1" />
+				<areaofeffect
+					center="proxy_entity"
+					radius="260"
+					targetselection="all"
+					targetscheme="organic_enemy_units"
+					effecttype="Magic"
+				>
+					<damage effecttype="Magic" amount="140,180,220,260" />
+				</areaofeffect>
+				<kill target="proxy_entity" source="" />
+			</condition>
+		</condition>
+	</onimpact>
+</affector>

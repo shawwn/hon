@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1" useentityeffectscale="1">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1.10" >
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2200"
+				volume=".85" 
+				sample="../sounds/cast.wav"
+			/>
+
+			<sound
+				soundloop="true"
+				fadein="300"
+				fadeout="500"
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2200"
+				volume=".55" 
+				sample="../sounds/state.wav"
+			/>
+
+			<billboard
+				life="500"
+				bone="_bone_centerofchest"
+				material="/shared/effects/materials/whitedot.material"
+				position="0 0 0"
+				color=".5 .2 0"
+				size="225"
+				endsize="0"
+				midsizepos=".3"
+				depthbias="-100"
+			/>
+			
+			<billboard
+				delay="500"
+				bone="_bone_centerofchest"
+				material="/shared/effects/materials/whitedot.material"
+				position="0 0 0"
+				startcolor=".25 .1 0"
+				endcolor="0"
+				expirelife="500"
+				size="200"
+				depthbias="-100"
+			/>
+
+			<model
+				bone="_bone_centerofchest"
+				delay="400" 
+				expirelife="1000"
+				position="0 0 0"
+				model="model.mdf"
+				yawspeed="-179"
+				yaw="0"
+				pitchspeed="89"
+				startscale="1.20"
+				midscale="1.2"
+				endscale="1"
+				color="1 1 1"
+				anim="idle"
+				loop="1"
+				startalpha=".75"
+				endalpha="0"
+			>
+				<billboard
+					expirelife="500"
+					bone="_bone_fx_05"
+					material="/shared/effects/materials/whitedot.material"
+					startcolor=".175 .05 0"
+					endcolor="0 0 0"
+					size="50"
+					depthbias="-100"
+				/>
+				
+				<template name="trail">
+					<twopointtrailemitter
+						life="1000"
+						bone_a="{bone_a}"
+						bone_b="{bone_b}"
+						spawnrate="50"
+						position="0 0 0"
+						startminparticlelife="1000"
+						startmaxparticlelife="1000"
+						endminparticlelife="1"
+						endmaxparticlelife="1" 
+						texpostime="1000"
+						texposscale="0"
+						texstretchscale="1"
+						material="/shared/effects/materials/arrow_trail_blend.material"
+					>
+						<particle
+							color=".5 .2 0"
+							startalpha=".35"
+							endalpha="0"
+							startsize="86"
+							midsize="60"
+							endsize="62"
+						/>
+					</twopointtrailemitter>
+				</template>
+
+				<instance name="trail" bone_a="_bone_fx_01" bone_b="_bone_fx_03"/>
+				<instance name="trail" bone_a="_bone_fx_03" bone_b="_bone_fx_05"/>
+				<instance name="trail" bone_a="_bone_fx_05" bone_b="_bone_fx_07"/>
+				<instance name="trail" bone_a="_bone_fx_07" bone_b="_bone_fx_09"/>
+			
+			</model>
+			
+			<model
+				bone="_bone_centerofchest"
+				delay="400"
+				expirelife="1000"
+				position="0 0 0"
+				model="model.mdf"
+				yawspeed="-179"
+				yaw="0"
+				pitch="90"
+				pitchspeed="-179"
+				startscale="1.20"
+				midscale="1.2"
+				endscale="1"
+				color="1 1 1"
+				anim="idle"
+				loop="1"
+				startalpha=".75"
+				endalpha="0"
+			>
+				<billboard
+					expirelife="500"
+					bone="_bone_fx_05"
+					material="/shared/effects/materials/whitedot.material"
+					startcolor=".175 .05 0"
+					endcolor="0 0 0"
+					size="50"
+					depthbias="-100"
+				/>
+				
+				<template name="trail01">
+					<twopointtrailemitter
+					life="1000"
+						bone_a="{bone_a}"
+						bone_b="{bone_b}"
+						spawnrate="50"
+						position="0 0 0"
+						startminparticlelife="1000"
+						startmaxparticlelife="1000"
+						endminparticlelife="1"
+						endmaxparticlelife="1" 
+						texpostime="1000"
+						texposscale="0"
+						texstretchscale="1"
+						material="/shared/effects/materials/arrow_trail_blend.material"
+					>
+						<particle
+							color=".5 .2 0"
+							startalpha=".35"
+							endalpha="0"
+							startsize="86"
+							midsize="60"
+							endsize="62"
+						/>
+					</twopointtrailemitter>
+				</template>
+
+				<instance name="trail01" bone_a="_bone_fx_01" bone_b="_bone_fx_03"/>
+				<instance name="trail01" bone_a="_bone_fx_03" bone_b="_bone_fx_05"/>
+				<instance name="trail01" bone_a="_bone_fx_05" bone_b="_bone_fx_07"/>
+				<instance name="trail01" bone_a="_bone_fx_07" bone_b="_bone_fx_09"/>
+			</model>
+
+		</particlesystem>
+
+	</definitions>
+
+   <thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+ 	<waitfordeath instance="instance0" />
+   </thread>
+
+</effect>

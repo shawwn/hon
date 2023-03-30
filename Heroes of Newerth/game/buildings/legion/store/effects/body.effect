@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" pausable="true"  >
+	<definitions>
+
+
+	<particlesystem name="system0" space="entity" >
+
+		<sound
+			linearfalloff="true" 
+			falloffstart="0"
+			falloffend="900"
+			volume="0.25" 
+			soundloop="true"
+			fadein="300"
+			fadeout="300"
+			sample="/buildings/legion/store/sounds/idle.wav"
+		/>
+		<light
+			position="0 0 40"
+			color="0 1 2"
+			falloffstart="100"
+			falloffend="180"
+		/>
+		
+		<billboard
+			bone="_bone_lt09"
+			color="0 .31 0"			
+			size="10"			
+			depthbias="-50"
+			position="-2.2 -12.9 -2"
+			material="/shared/effects/materials/whitedot.material"
+
+		/>	
+
+		
+		<simpleemitter
+			bone="_bone_lt09"
+			spawnrate="100"
+			particlelife="300"			
+			gravity="0"
+			speed="1"
+
+			position="-2.2 -12.9 -2"
+			direction="0 1 0"
+			
+
+			material="/shared/effects/materials/whitedot.material"
+			offsetsphere="0 0 0"
+	
+			
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="-40"
+
+				startcolor="0 1 0"
+				midcolor="0 1 0"
+				endcolor="0 0 0"
+				midcolorpos=".3"
+				
+				width=".4"
+				maxheight="10"
+				minheight="3"
+				
+				maxanglespeed="0"
+				startsize="4"
+				midsize="14"
+				endsize="0"
+				
+				turn="1"
+				
+				
+				startanchor="1"
+				midanchor=".8"
+				endachor=".4"
+			/>
+		</simpleemitter>		
+		
+		
+		
+		
+		
+		
+		<simpleemitter
+			bone="_bone_lt09"
+			spawnrate="4"
+			particlelife="900"			
+			gravity="-2"
+			speed="00"
+
+			position="0 0 -2"
+			direction="0 1 0"
+			
+
+			material="/shared/effects/materials/flame.material"
+			offsetsphere="2 2 0"
+	
+			
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="-40"
+
+				startcolor="1 .2 .5"
+				midcolor="1 .2 .3"
+				endcolor="0 0 0"
+				midcolorpos=".3"
+
+				maxanglespeed="0"
+				startsize="4"
+				midsize="14"
+				endsize="0"
+				
+				
+				
+				startanchor="1"
+				midanchor=".8"
+				endachor=".4"
+			/>
+		</simpleemitter>		
+		
+		<simpleemitter
+			bone="_bone_lt08"
+			spawnrate="4"
+			particlelife="900"			
+			gravity="-.5"
+			speed="00"
+
+			position="0 0 2"
+			direction="0 1 0"
+			
+
+			material="/shared/effects/materials/flame.material"
+			offsetsphere="0 0 0"
+	
+			
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="-40"
+
+				startcolor="1 .2 .5"
+				midcolor="1 .2 .3"
+				endcolor="0 0 0"
+				midcolorpos=".3"
+
+				maxanglespeed="0"
+				startsize="0"
+				midsize="7"
+				endsize="0"
+				
+				
+				
+				startanchor="1"
+				midanchor=".8"
+				endachor=".4"
+			/>
+		</simpleemitter>
+		
+		<simpleemitter
+			bone="_bone_lt06"
+			spawnrate="4"
+			particlelife="1900"			
+			gravity="-.5"
+			speed="00"
+
+			position="0 0 0"
+			direction="0 1 0"
+			
+
+			material="/shared/effects/materials/neb_add.material"
+			offsetsphere="0 0 0"
+	
+			
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="-40"
+
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="0 0 0"
+				midcolorpos=".3"
+
+				maxanglespeed="0"
+				startsize=""
+				midsize="7"
+				endsize="0"
+				
+				
+				
+				startanchor="1"
+				midanchor=".8"
+				endachor=".4"
+			/>
+		</simpleemitter>	
+
+		<simpleemitter
+			bone="_bone_lt07"
+			spawnrate="4"
+			particlelife="1900"			
+			gravity="-.5"
+			speed="00"
+
+			position="0 0 0"
+			direction="0 1 0"
+			
+
+			material="/shared/effects/materials/neb_add.material"
+			offsetsphere="0 0 0"
+	
+			
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="-40"
+
+				startcolor="1 1 0"
+				midcolor="1 1 0"
+				endcolor="0 0 0"
+				midcolorpos=".3"
+
+				maxanglespeed="0"
+				startsize=""
+				midsize="7"
+				endsize="0"
+				
+				
+				
+				startanchor="1"
+				midanchor=".8"
+				endachor=".4"
+			/>
+		</simpleemitter>				
+			
+		<billboard
+			bone="_bone_lt01"
+			color="0 .1 .2"			
+			size="70"			
+			depthbias="50"
+			position="0 0 00"
+			material="/shared/effects/materials/whitedot.material"
+
+		/>	
+		
+		<billboard
+			bone="_bone_lt02"
+			color="0 .1 .2"			
+			size="70"			
+			depthbias="-60"
+			position="0 0 00"
+			material="/shared/effects/materials/whitedot.material"
+
+		/>
+
+		<billboard
+			bone="_bone_lt03"
+			color="0 .1 .2"			
+			size="70"			
+			depthbias="-20"
+			position="0 0 00"
+			material="/shared/effects/materials/whitedot.material"
+
+		/>			
+		<billboard
+			bone="_bone_lt04"
+			color="0 .1 .2"			
+			size="70"			
+			depthbias="-20"
+			position="0 0 00"
+			material="/shared/effects/materials/whitedot.material"
+
+		/>	
+        
+      </particlesystem>	  
+	  
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+
+	<waitfordeath instance="instance0" />
+	
+	
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1">
+
+	<definitions>
+
+		<modifier 
+			name="modifier0"
+			startcolor="1"
+			midcolor="0"
+			midcolorpos="0.9"
+			endcolor="2 1 1"
+			startalpha="1"
+			midalpha="1"
+			endalpha="1"
+			midalphapos=".9"
+			life="1000"
+		/>
+
+		<particlesystem name="system0" space="world" scale=".75">
+
+			<light
+				life="700"			
+				startcolor="8 1.2 0"			
+				endcolor="0 0 0"
+				midcolorpos=".2"
+				falloffstart="100"
+				falloffend="200"
+				position="0 0 80"	
+			/>
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".8"
+				sample="../sounds/cast.wav"
+			/>
+
+			<twopointemitter
+				timenudge="2000"
+				life="1000"
+				depthbias="-30"
+				bone_a="Bip01 Spine"
+				bone_b="Box05"
+				spawnrate="60"
+				particlelife="1200"
+				offsetsphere="50"
+				speed="25.0"
+				material="/shared/effects/materials/dust.material"
+				expirelife="1000"
+				startparticlealpha="0"
+				midparticlealpha="0"
+				endparticlealpha="1"
+			>
+				<particle
+					startcolor=".4 0 0"
+					endcolor="-1"
+					midcolorpos="0.3"
+					startalpha=".5"
+					endalpha="0"
+					maxangle="360"
+					startsize="20"
+					endsize="120"
+					startanchor="1"
+					endanchor="0"
+			/>
+			</twopointemitter>
+
+			<twopointemitter
+				life="600"
+				depthbias="-30"
+				bone_a="Bip01 Spine"
+				bone_b="Box05"
+				spawnrate="100"
+				minparticlelife="200"
+				maxparticlelife="1200"
+				offsetsphere="60"
+				speed="25.0"
+				material="/shared/effects/materials/phantom_smoke_03.material"
+				expirelife="1000"
+				startparticlealpha="0"
+				midparticlealpha="0"
+				endparticlealpha="1"
+			>
+				<particle
+					startcolor="0 .4 0.0"
+					midcolor="1 .3 0"
+					endcolor="0"
+					midcolorpos="0.3"
+					startalpha="1.0"
+					endalpha="1.0"
+					maxangle="360"
+					startsize="20"
+					endsize="120"
+					startanchor="1"
+					endanchor="0"
+				/>
+				<particle
+					startcolor="0"
+					midcolor=".7 .6 0"
+					endcolor="00"
+					midcolorpos="0.5"
+					startalpha="1.0"
+					endalpha="1.0"
+					maxangle="360"
+					startsize="20"
+					endsize="120"
+					startanchor="1"
+					endanchor="0"
+				/>
+			</twopointemitter>
+
+			<billboard
+				life="1200"
+				bone="Bip01 Spine"
+				depthbias="-60"
+				material="/shared/effects/materials/whitedot.material"
+				startcolor="0"
+				midcolor=".5 .1 0"
+				midcolorpos="0.75"
+				endcolor=".5 .1 0"	
+				startsize="430"
+				endsize="0"			
+				maxangle="360"
+			/>
+
+			<simpleemitter
+				expirelife="1000"
+				startparticlealpha="0"
+				midparticlealpha="0"
+				endparticlealpha="1"
+				life="1000"
+				bone="Bip01 Spine"
+				spawnrate="40"
+				minparticlelife="0"
+				maxparticlelife="1200"
+				offsetsphere="50 50 30"
+				gravity="-1"
+				minspeed="70"
+				maxspeed="140"							
+				direction="0 0 1"
+				minangle="-40"
+				maxangle="40"
+				material="/shared/effects/materials/spark_10.material"
+			>			
+				<particle
+					startcolor="1 .4 0"
+					endcolor="0 0 0"
+					minsize="7"
+					maxsize="25"
+					minangle="-360"
+					maxangle="1"
+					minanglespeed="110"
+					maxanglespeed="-110"
+				/>
+				<particle
+					startcolor=".7 .2 0"
+					endcolor="0 0 0"
+					minsize="15"
+					maxsize="25"
+					minangle="-360"
+					maxangle="1"
+					minanglespeed="110"
+					maxanglespeed="-110"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				expirelife="2000"
+				life="500"
+				offsetsphere="75 75 15"
+				bone="Bip01 Spine"
+				spawnrate="15"
+				minparticlelife="300"
+				maxparticlelife="1000"
+				speed="30"
+				material="/shared/effects/materials/refract_outsplash.material"
+			>
+				<particle
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					minangle="0"
+					maxangle="360"
+					startsize="120"
+					endsize="450"
+					param=".1"
+					depthbias="-50"
+					stickiness="0"
+					endstickiness="1"
+				/>
+			</simpleemitter>
+
+			<billboard
+				life="500"
+				bone="Bip01 Spine"
+				material="/shared/effects/materials/refract_swell.material"
+				startsize="350"
+				endsize="140"			
+				startparam=".05"
+				endparam="0"
+				startalpha=".5"
+				endalpha="0"
+			/>
+
+			<billboard
+				delay="200"
+				life="300"
+				bone="Bip01 Spine"
+				material="/shared/effects/materials/refract_bubble.material"
+				startsize="50"
+				endsize="340"			
+				startparam=".1"
+				endparam="0"
+				startalpha="1"
+				endalpha="0"
+			/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>
+     	 	<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+	</thread>
+
+</effect>

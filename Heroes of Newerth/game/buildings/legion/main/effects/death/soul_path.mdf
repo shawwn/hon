@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="model_dead_high06.max" file="soul_path.model" type="K2" >
+	<anim name="idle" clip="soul_path.clip" loop="1" fps="20"/>
+</model>

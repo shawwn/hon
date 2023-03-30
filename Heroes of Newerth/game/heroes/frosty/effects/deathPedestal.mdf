@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="Autobak5.max" file="deathPedestal.model" type="K2">
+
+	<anim name="idle" clip="pedestal.clip" loop="true" loopbackframe="-1"/>
+
+</model> 

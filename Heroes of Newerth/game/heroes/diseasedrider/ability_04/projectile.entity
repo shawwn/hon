@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_DiseasedRider_Ability4"
+
+	speed="522"
+	gravity="0"
+	
+	flying="true"
+	flyheight="48"
+
+	modelscale="1.2"
+	model="effects/model.mdf"
+
+	impacteffect=""
+	invalideffect=""
+	traileffect="effects/trail.effect"
+>
+	<onimpact>
+		<!-- Deal damage and apply state if the target is still valid -->
+				
+		<combatevent source="source_entity" target="proxy_entity" effecttype="AbilityBasedProjectile">
+			<onimpact>
+				<cantarget targetscheme="nonstealth_organic_enemy_units" target="proxy_entity">
+					<!-- Boost with SotM -->
+					<hasmodifier name="ult_boost">
+						<damage effecttype="Magic" amount="370,460,550" target="proxy_entity" />
+					</hasmodifier>
+					<else>
+						<damage effecttype="Magic" amount="280,370,460" target="proxy_entity" />
+					</else>
+					<applystate name="State_DiseasedRider_Ability4" target="proxy_entity" duration="4000" />
+				</cantarget>
+			</onimpact>
+		</combatevent>
+		<!-- Impact effect -->
+		<playeffect effect="effects/impact.effect" target="proxy_position" source="proxy_position" occlude="true"/>
+
+		<!-- Bounce -->
+		<condition test="param gt 0">
+			<setvar0 a="param" b="1" op="sub" />
+			<areaofeffect
+				radius="600"
+				maxtotalimpacts="1"
+				targetselection="random"
+				targetscheme="nonstealth_organic_enemy_units"
+				center="proxy_position"
+				ignore="proxy_entity"
+			>
+				<spawnprojectile name="Projectile_DiseasedRider_Ability4" source="proxy_position" target="target_position" proxy="target_entity" param="var0" />
+			</areaofeffect>
+		</condition>
+	</onimpact>
+</projectile>

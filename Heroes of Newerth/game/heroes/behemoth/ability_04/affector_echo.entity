@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Behemoth_Ability4_Echo"
+
+	radiusstart="0"
+	radiusend="500"
+	lifetime="300"
+	
+	targetselection="all"
+	targetscheme="visible_enemy_units"
+	maximpactspertarget="1"
+	effecttype="Magic"
+	persist="true"
+	
+	effect="effects/subripple.effect"
+>
+	<onimpact>
+		<damage effecttype="Magic" amount="35,45,65"/>
+	</onimpact>
+</affector>

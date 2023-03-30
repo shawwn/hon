@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale=".9">
+
+			<sound
+				life="9500"
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2500"
+				volume=".2"
+				sample="../sounds/cast.wav"
+			/>
+			
+			<simpleemitter
+				count="1"
+				spawnrate="1000"
+				offsetsphere="25 25 0"
+			>
+				<particle>
+					
+					<model
+						delay="250"
+						model="big_saw_stationary/model.mdf"
+						anim="idle"
+						minscale="1.25"
+						maxscale="2"
+						color="1 .86 .7"
+						minyaw="-180"
+						maxyaw="180"
+						minroll="-25"
+						maxroll="25"
+						position="0 0 -10"
+						expirelife="500"
+						startalpha="1"
+						endalpha="0"
+					>
+						<simpleemitter
+							bone="_bone_fx_03"
+							spawnrate="50"
+							particlelife="450"			
+							gravity="0"
+							speed="35"
+							drag="0"
+							acceleration="0"
+							position="0 0 15"
+							pitchspeed="79"
+							material="/shared/effects/materials/spark_10.material"
+							offsetsphere="5 5 0"
+							direction="0 0 1"
+							minangle="0"
+							maxangle="90"
+						>
+							<particle 
+								minangle="0"
+								maxangle="360"
+								minanglespeed="50"
+								maxanglespeed="150"
+								startcolor="0 0 0"
+								midcolor="0 0 0"
+								endcolor="1 1 1"
+								midcolorpos=".4"
+								startframe="10"
+								endframe="15"
+								startsize="5"
+								midsize="7"
+								endsize="10"
+								startalpha="0"
+								midalpha="0"
+								endalpha="0"
+								midalphapos="0"
+								startstickiness="0"
+								endstickiness="0"
+								minheight="15"
+								maxheight="30"
+							/>
+						</simpleemitter>
+						
+						<simpleemitter
+							bone="_bone_fx_03"
+							spawnrate="50"
+							particlelife="450"			
+							gravity="0"
+							speed="35"
+							drag="0"
+							acceleration="0"
+							position="0 0 15"
+							pitchspeed="79"
+							material="/shared/effects/materials/spark_10.material"
+							offsetsphere="5 5 0"
+							direction="0 0 1"
+							minangle="0"
+							maxangle="90"
+						>
+							<particle 
+								minangle="0"
+								maxangle="360"
+								minanglespeed="50"
+								maxanglespeed="150"
+								startcolor="0 0 0"
+								midcolor="0 0 0"
+								endcolor="1 1 1"
+								midcolorpos=".4"
+								startframe="10"
+								endframe="15"
+								startsize="5"
+								midsize="7"
+								endsize="10"
+								startalpha="0"
+								midalpha="0"
+								endalpha="0"
+								midalphapos="0"
+								startstickiness="0"
+								endstickiness="0"
+							/>
+						</simpleemitter>
+						
+						<simpleemitter
+							bone="_bone_fx_03"
+							spawnrate="50"
+							particlelife="450"			
+							gravity="-15"
+							speed="35"
+							drag="0"
+							acceleration="0"
+							position="0 0 15"
+							pitchspeed="79"
+							material="/shared/effects/materials/spark_10.material"
+							offsetsphere="0 0 0"
+							direction="0 0 1"
+							minangle="0"
+							maxangle="90"
+						>
+							<particle 
+								minangle="0"
+								maxangle="360"
+								minanglespeed="50"
+								maxanglespeed="150"
+								startcolor="0 0 0"
+								midcolor="0 0 0"
+								endcolor="1 1 1"
+								midcolorpos=".4"
+								startframe="10"
+								endframe="15"
+								startsize="5"
+								midsize="7"
+								endsize="10"
+								startalpha="0"
+								midalpha="0"
+								endalpha="0"
+								midalphapos="0"
+								startstickiness="0"
+								endstickiness="0"
+							/>
+						</simpleemitter>
+						
+						<billboard
+							loop="true"
+							life="500"
+							delay="0"
+							position="0 0 20"
+							bone="_bone_fx_03"
+							material="/shared/effects/materials/starlight.material"
+							startsize="40"
+							midsize="40"
+							endsize="40"
+							startcolor="1 .73 0"
+							midcolor="1 .43 0"
+							endcolor="0 0 0"
+							midcolorpos=".15"
+							expirelife="250"
+							minroll="0"
+							maxyaw="360"
+						/>
+						
+					</model>
+				</particle>
+			</simpleemitter>
+			
+			<simpleemitter
+				count="1"
+				spawnrate="1000"
+				offsetsphere="25 25 0"
+			>
+				<particle>
+					<model
+						life="1300"
+						model="big_saw/model.mdf"
+						anim="idle"
+						minscale="1.65"
+						maxscale="2.25"
+						color="1 .86 .7"
+						minyaw="-180"
+						maxyaw="180"
+						minroll="-25"
+						maxroll="25"
+						position="0 0 -10"
+						expirelife="500"
+						startalpha="1"
+						endalpha="0"
+					/>
+				</particle>
+			</simpleemitter>
+			
+			<simpleemitter
+				count="1"
+				spawnrate="1000"
+				offsetsphere="25 25 0"
+			>
+				<particle>
+					<model
+						model="small_saw_stationary/model.mdf"
+						anim="idle"
+						minscale="2"
+						maxscale="3"
+						color="1 .86 .7"
+						minyaw="-180"
+						maxyaw="180"
+						minroll="-25"
+						maxroll="25"
+						position="0 0 15"
+						expirelife="500"
+						startalpha="1"
+						endalpha="0"
+					/>
+				</particle>
+			</simpleemitter>
+			
+			<simpleemitter
+				life="500"
+				count="2"
+				spawnrate="1000"
+				offsetsphere="10 10 0"
+			>
+				<particle>
+					<groundsprite	
+						delay="300"
+						life="7500"
+						material="/shared/effects/materials/ground_smash_overlay.material"
+						minsize="75"
+						maxsize="80"			
+						color="1"
+						startalpha=".5"
+						midalpha=".5"
+						endalpha="0"
+						midalphapos="0.9"
+						minwidth="75"
+						maxwidth="150"
+						expirelife="1000"
+						minyaw="0"
+						maxyaw="360"
+					/>
+
+					<groundsprite	
+						delay="300"
+						life="7500"
+						material="/shared/effects/materials/ground_crater.material"
+						minsize="70"
+						maxsize="75"			
+						color="1"
+						startalpha=".5"
+						midalpha=".5"
+						endalpha="0"
+						midalphapos="0.9"
+						minwidth="75"
+						maxwidth="150"
+						expirelife="1000"
+						minyaw="0"
+						maxyaw="360"
+					/>
+				</particle>
+			</simpleemitter>
+
+			<simpleemitter
+				count="1"
+				spawnrate="1000"
+				offsetsphere="25 25 0"
+			>
+				<particle>
+					<model
+						model="arm_saw/model.mdf"
+						anim="idle"
+						minscale="1.1"
+						maxscale="2"
+						position="0 0 -8"
+						minyaw="0"
+						maxyaw="360"
+						minpitch="-25"
+						maxpitch="25"
+						minroll="-20"
+						maxroll="20"
+						color="1 .86 .7"
+						expirelife="500"
+						startalpha="1"
+						endalpha="0"
+					>
+
+					</model>
+				</particle>
+			</simpleemitter>
+
+			<simpleemitter
+				delay="250"
+				minparticlelife="1000"			
+				maxparticlelife="2000"
+				spawnrate="3"
+				gravity="5"
+				speed="250"
+				material="/shared/effects/materials/dust.material"
+				offsetsphere="50 50 0"
+				angle="10"
+				position="0 0 25"
+				direction="0 0 1"
+				expirelife="500"
+				drag="0.15"
+				depthbias="-30"
+			>
+				<particle 
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-50"
+					maxanglespeed="50"
+					color=".3 .3 .3"
+					startsize="75"
+					endsize="250"
+					startalpha="0"
+					midalpha=".35"
+					endalpha="0"
+				/>
+				<particle 
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-50"
+					maxanglespeed="50"
+					color=".64 .6 .6"
+					startsize="75"
+					endsize="250"
+					startalpha="0"
+					midalpha=".25"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<camerashake2 scale="1" radius="1200" duration="1000" frequency="22" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

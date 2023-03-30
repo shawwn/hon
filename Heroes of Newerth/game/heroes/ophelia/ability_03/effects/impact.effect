@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" useentityeffectscale="true">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="1.35">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume="0.65"
+				sample="../sounds/cast.wav"
+			/>
+
+			<simpleemitter
+				count="12"
+				bone="_bone_overhead"
+         			spawnrate="100"
+				minparticlelife="1500"
+          			maxparticlelife="3000"
+          			gravity="10"
+          			drag=".25"
+				position="0 0 0"
+				offsetsphere="10 10 0"
+				material="/shared/effects/materials/phantom_smoke_03.material"
+			>
+  				<particle 
+					maxangle="360"
+					minanglespeed="-6"
+					maxanglespeed="6"
+					startcolor="0 0 0"
+					midcolor="0 1 0"
+					endcolor="0 0 0"
+					startsize="0"
+					endsize="165"
+					startanchor="1"
+					endanchor="1"
+				/>
+        	</simpleemitter>
+		
+			<model
+				bone="_bone_overhead"
+				life="1400"
+				scale=".4"
+				model="brain.mdf"
+				anim="idle"
+				startcolor="0 0 0"
+				midcolor=".5 .2 0"
+				endcolor="0 0 0"
+				midcolorpos=".5"
+			/>
+
+			<model
+				bone="_bone_overhead"
+				life="1400"
+				scale=".5"
+				model="brain.mdf"
+				anim="idle"
+				startcolor="0 0 0"
+				midcolor="0 1 0"
+				endcolor="0 0 0"
+				midcolorpos=".5"
+			/>
+
+			<model
+				life="600"
+				parentmodel="true"
+				parentskeleton="true"
+				startcolor="0 1 0"
+				endcolor="0 0 0"
+				material="/shared/effects/materials/shell2.material"
+				startalpha="0"
+				endalpha="10"
+			/>
+
+			<model
+				life="600"
+				delay="200"
+				parentmodel="true"
+				parentskeleton="true"
+				startcolor="0 1 0"
+				endcolor="0 0 0"
+				material="/shared/effects/materials/shell2.material"
+				startalpha="0"
+				endalpha="10"
+			/>
+	
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnparticlesystem instance="instance1" particlesystem="system1" />
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+	</thread>
+</effect>

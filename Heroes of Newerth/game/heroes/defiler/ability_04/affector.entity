@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Defiler_Ability4"
+
+	radius="100"
+	lifetime="30000"
+	impactinterval="100"
+	maxintervals="5,10,16"
+>
+	<oninterval>
+		<spawnunit name="Pet_Defiler_Ability4" maxactive="5,10,16" target="source_position"/>
+	</oninterval>
+	
+	<modifier key="Defiler_Ability3_1" modpriority="100"
+		lifetime="600,1100,1600"
+		maxintervals="6,11,16"
+	>
+		<oninterval>
+			<spawnunit name="Pet_Defiler_Ability4" maxactive="6,11,16" target="source_position"/>
+		</oninterval>
+	</modifier>
+	
+	<modifier key="Defiler_Ability3_2" modpriority="100"
+		lifetime="700,1300,1800"
+		maxintervals="7,13,18"
+	>
+		<oninterval>
+			<spawnunit name="Pet_Defiler_Ability4" maxactive="7,13,18" target="source_position"/>
+		</oninterval>
+	</modifier>
+	
+	<modifier key="Defiler_Ability3_3" modpriority="100"
+		lifetime="800,1400,2000"
+		maxintervals="8,14,20"
+	>
+		<oninterval>
+			<spawnunit name="Pet_Defiler_Ability4" maxactive="8,14,20" target="source_position"/>
+		</oninterval>
+	</modifier>
+	
+	<modifier key="Defiler_Ability3_4" modpriority="100"
+		lifetime="900,1600,2300"
+		maxintervals="9,16,23"
+	>
+		<oninterval>
+			<spawnunit name="Pet_Defiler_Ability4" maxactive="9,16,23" target="source_position"/>
+		</oninterval>
+	</modifier>
+</affector>

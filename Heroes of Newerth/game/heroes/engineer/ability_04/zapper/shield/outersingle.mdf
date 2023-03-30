@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="singleguard.max" file="outersingle.model" type="K2" >
+	<anim name="idle" clip="outer_single.clip" loop="1"/>
+	
+	<anim name="death_1" clip="outer_single.clip" fps="35" loop="false">
+		<frameevent frame="1" cmd="starteffect ../outer_single_death/death.effect 0"/>
+	</anim>
+	
+</model>

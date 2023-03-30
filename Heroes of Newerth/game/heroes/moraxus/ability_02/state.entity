@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Moraxus_Ability2"
+	
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+	effecttype="StatusBuff"
+	modifierkey="moraxus2ready"
+	
+>
+	<onattackedpreimpact priority="1">
+		<condition test="target_type enemy">
+			<combatsupertype supertype="spell">
+				<negate>
+					<playeffect effect="effects/impact.effect" target="source_entity" source="source_entity" />
+					<applystate name="State_Moraxus_Ability2_Buff" target="source_entity" duration="5000" />
+					<expire />
+				</negate>
+			</combatsupertype>
+		</condition>
+	</onattackedpreimpact>
+
+</state>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Moraxus_Ability3_Slow"
+	
+	icon="icon.tga"
+	passiveeffect="effects/state_slow.effect"
+	effecttype="StatusDebuff"
+	maxcharges="3"
+	
+	movespeedslowpercharge="0.15"
+>
+	<oninflict>
+		<addcharges count="1" />
+	</oninflict>
+	
+	<onrefresh>
+		<addcharges count="1" />
+	</onrefresh>
+	
+	<onframe />
+</state>

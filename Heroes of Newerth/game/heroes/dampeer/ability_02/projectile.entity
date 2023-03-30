@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Dampeer_Ability2"
+
+	speed="1300"
+
+	modelscale="1.0"
+	model=""
+	
+	canturn="false"
+	flying="false"
+	deatheffect=""
+	impacteffect=""
+	traileffect=""
+	
+	maxtouchespertarget="1"
+	touchradius="145"
+	touchtargetscheme="enemy_units"
+	toucheffecttype="Magic"
+>
+	<ontouch>
+		<playeffect effect="effects/impact.effect" target="" source="target_entity"/>
+		<hasmodifier name="Dampeer_Soul_3">
+			<compare a="param" b="0" op="eq">
+				<playeffect effect="effects/impact_sound.effect" target="" source="target_entity"/>
+				<setparam a="1" />
+			</compare>
+			<damage amount="50,90,130,170" b="60" op="add" effecttype="Magic" />
+			<heal target="source_entity" a="10,20,30,40" b="15" op="add" />
+		</hasmodifier>
+		<else>
+			<hasmodifier name="Dampeer_Soul_2">
+				<compare a="param" b="0" op="eq">
+					<playeffect effect="effects/impact_sound.effect" target="" source="target_entity"/>
+					<setparam a="1" />
+				</compare>
+				<damage amount="50,90,130,170" b="40" op="add" effecttype="Magic" />
+				<heal target="source_entity" a="10,20,30,40" b="10" op="add" />
+			</hasmodifier>
+			<else>
+				<hasmodifier name="Dampeer_Soul_1">
+					<compare a="param" b="0" op="eq">
+						<playeffect effect="effects/impact_sound.effect" target="" source="target_entity"/>
+						<setparam a="1" />
+					</compare>
+					<damage amount="50,90,130,170" b="20" op="add" effecttype="Magic" />
+					<heal target="source_entity" a="10,20,30,40" b="5" op="add" />
+				</hasmodifier>
+				<else>
+					<compare a="param" b="0" op="eq">
+						<playeffect effect="effects/impact_sound.effect" target="" source="target_entity"/>
+						<setparam a="1" />
+					</compare>
+					<damage amount="50,90,130,170" effecttype="Magic" />
+					<heal target="source_entity" a="10,20,30,40" />
+				</else>
+			</else>
+		</else>
+	</ontouch>
+</projectile>

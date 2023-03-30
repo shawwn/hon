@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<model name="spear.max" file="spear.model" type="K2">
+<spawnevent cmd="StartEffect trail.effect" /> 
+<anim name="idle" clip="spear.clip" fps="120" loop="1"/>
+</model>

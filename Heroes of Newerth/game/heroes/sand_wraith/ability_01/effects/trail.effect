@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="	" deferred="1">
+	<definitions>
+
+	
+		<particlesystem name="system0" space="world" scale="0.75">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2500"
+				volume=".6"
+				sample="../sounds/cast2.wav"
+			/>
+
+			<sound
+				soundloop="true"
+				fadein="300"
+				fadeout="500"
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2500"
+				volume=".55"
+				sample="../sounds/trail.wav"
+			/>
+			
+			<simpleemitter
+				
+				position="0 0 -20"
+				spawnrate="100"
+				bone="_bone_fx"
+				particlelife="500"
+				gravity="3"
+				material="/shared/effects/materials/sand_blend.material"
+				offsetsphere="10 10 10"
+				direction="0 0 0"
+				minangle="0"
+				maxangle="180"
+				speed="112"
+
+				directionalspace="local"
+				inheritvelocity="0.2"
+				
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-70"
+					maxanglespeed="70"
+					startsize="30"
+					midsize="77"
+					endsize="77"
+	
+					startcolor="1 1 .6 "
+					endcolor="0 0 0"		
+					
+					
+					
+					startalpha=".5"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".75"
+				/>
+			</simpleemitter>
+		
+		
+		
+		<simpleemitter
+				position="0 40 -20"
+				spawnrate="30"
+				bone="_bone_main"
+				particlelife="300"
+				gravity="13"
+				material="/shared/effects/materials/pyroclast_03.material"
+				offsetsphere="20 20 20"
+				direction="1 0 0"
+				minangle="-180"
+				maxangle="180"
+				speed=".02"
+				directionalspace="global"
+				inheritvelocity=".3"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					anglespeed="20"
+					startsize="30"
+					midsize="50"
+					endsize="80"
+	
+					startcolor="1 1 .6 "
+					endcolor="0 0 0"		
+					
+					
+					
+					startalpha=".5"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".75"
+				/>
+			</simpleemitter>
+
+
+			<simpleemitter
+				position="0 20 0"
+				spawnrate="30"
+				bone="_bone_main"
+				particlelife="300"
+				gravity="33"
+				material="/shared/effects/materials/pyroclast_03.material"
+				offsetsphere="10 10 5"
+				direction="1 0 0"
+				minangle="-180"
+				maxangle="180"
+				speed=".02"
+				directionalspace="global"
+				inheritvelocity=".3"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					anglespeed="20"
+					startsize="30"
+					midsize="30"
+					endsize="30"
+	
+					startcolor="1 1 .6 "
+					endcolor="0 0 0"		
+					
+					
+					
+					startalpha=".5"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".75"
+				/>
+			</simpleemitter>
+	
+	
+	
+
+			<simpleemitter
+				position="0 0 00"
+				spawnrate="50"
+				bone="_bone_fx"
+				particlelife="300"
+				gravity="13"
+				material="/shared/effects/materials/pyroclast_03.material"
+				offsetsphere="11 11 42"
+				direction="1 0 0"
+				minangle="-180"
+				maxangle="180"
+				speed=".02"
+				directionalspace="global"
+				inheritvelocity=".3"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					anglespeed="20"
+					startsize="40"
+					midsize="50"
+					endsize="80"
+	
+					startcolor="1 1 .6 "
+					endcolor="0 0 0"		
+					
+					
+					
+					startalpha=".5"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".75"
+				/>
+			</simpleemitter>	
+					
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			<simpleemitter
+				
+				position="0 0 -20"
+				spawnrate="20"
+				
+				particlelife="1200"
+				gravity="0"
+				material="/shared/effects/materials/pyroclast_03.material"
+				offsetsphere="0 0 0"
+				direction="0 0 0"
+				minangle="0"
+				maxangle="10"
+				speed="112"
+				directionalspace="local"
+				inheritvelocity="0.2"
+				collide="0"
+				
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-70"
+					maxanglespeed="70"
+					startsize="88"
+					midsize="110"
+					endsize="110"
+	
+					startcolor="1 .9 .6 "
+					endcolor=".5 .48 .3"		
+					
+					
+					
+					startalpha=".5"
+					midalpha=".4"
+					endalpha="0"
+					midalphapos=".3"
+				/>
+			</simpleemitter>
+			
+	
+		
+			
+				
+			
+			
+      </particlesystem>
+   </definitions>
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<spawnmodifier instance="instance1" modifier="modifier0"/>  
+	
+	<waitfordeath instance="instance0" />
+	<wait duration="20000"/>
+	<!-- <die /> -->
+</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->

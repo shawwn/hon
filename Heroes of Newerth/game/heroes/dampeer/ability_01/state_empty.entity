@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Dampeer_Ability1_Souls"
+
+	
+	
+	icon="icon.tga"
+	passiveeffect=""
+	ishidden="true"
+	
+	deathpersist="true"
+
+
+	effecttype=""
+	maxcharges="3"
+	modifierkey="Dampeer_Soul_0"
+	
+>	
+	<onrefresh>
+		<addcharges />
+		<condition test="charges eq 3" >
+			<setactivemodifierkey name="Dampeer_Sub3" />
+		</condition>
+		<condition test="charges eq 2" >
+			<setactivemodifierkey name="Dampeer_Sub2" />
+		</condition>
+		<condition test="charges eq 1" >
+			<setactivemodifierkey name="Dampeer_Sub1" />
+		</condition>
+	</onrefresh>
+	
+	<ondeath>
+		<setcharges a="0" />
+		<setactivemodifierkey name="" />
+	</ondeath>
+
+	
+	<modifier key="Dampeer_Sub3" modpriority="100"
+		modifierkey="Dampeer_Soul_3"
+		ishidden="false"
+	/>
+	
+	<modifier key="Dampeer_Sub2" modpriority="100"
+		modifierkey="Dampeer_Soul_2"
+		ishidden="false"
+	/>
+	
+	<modifier key="Dampeer_Sub1" modpriority="100"
+		modifierkey="Dampeer_Soul_1"
+		ishidden="false"
+	/>
+	
+</state>

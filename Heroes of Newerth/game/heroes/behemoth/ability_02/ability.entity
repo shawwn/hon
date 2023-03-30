@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Behemoth2"
+
+	
+	
+	
+	statuseffecttooltip="State_Behemoth_Ability2"
+	icon="icon.tga"
+	anim="ability_2"
+	casttime="1000"
+	castactiontime="690"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_self"
+	frontqueue="true"
+	casteffecttype=""
+	
+	manacost="50"
+	cooldowntime="7000"
+	
+	targetscheme=""
+>
+	<onimpact >
+		<applystate name="State_Behemoth_Ability2" duration="14000" target="source_entity"/>
+		<playeffect effect="effects/cast.effect" source="target_position" occlude="true"/>
+	</onimpact>
+</ability>

@@ -1,0 +1,12 @@
+/test/*
+/kellogs/*
+/heroes/chick/*
+/game/world/terrain/textures/sand2_d.tga
+/game/world/terrain/textures/sand2_n.tga
+/game/world/terrain/textures/sand3_d.tga
+/game/world/terrain/textures/sand3_n.tga
+/game/world/terrain/textures/sandyrocks.tga
+/game/world/terrain/textures/sandyrocks.tga
+/game/world/terrain/textures/tileodd_d.tga
+/game/world/terrain/textures/tileodd_n.tga
+/world/sky/hell/*

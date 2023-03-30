@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Ebulus_Ability1"
+
+	speed="1500"
+	gravity="0"
+	
+	effectscale="1 "
+	traileffect="effects/trail.effect"
+	model="/shared/models/invis.mdf"
+	
+	canturn="true"
+	flying="true"
+	flyheight="100"
+>
+</projectile>

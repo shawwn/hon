@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="ability_01_projectile" deferred="true">
+	<definitions>
+	
+		
+		<groundsprite
+			name="emitter1"
+			life="5000"
+			material="/shared/effects/materials/ground_smash_overlay.material"
+			startsize="128"
+			endsize="128"
+			color="1.0 1.0 1.0"
+			minroll="0"
+			maxroll="360"
+		/>		
+	
+		
+	<particlesystem name="system0" space="world">
+	
+	
+			<trailemitter
+				spawnrate="50"
+				particlelife="800"
+				texpostime="800"
+			 	texposscale="0.0"
+			 	texstretchscale=".4"
+				material="/shared/effects/materials/arrow_trail.material"
+			>
+				<particle
+					 startcolor="0 .6 .3"
+					 midcolor="0 0.6 .2"
+					 endcolor="0 0 0"
+					 startsize="5"
+					 midsize="15"
+					 endsize="0"
+					 midsizepos="0.2"
+			 />
+
+			</trailemitter>		
+	
+	
+		<!--
+		<simpleemitter
+			life="5000"
+			spawnrate="15"				
+			particlelife="5000"								
+			position="0 0 0"							
+			direction="0 1 1"
+			offsetdirection="0 0 0"
+			offsetradial="0"
+		>
+			<particle
+				
+				emitter="emitter1"				
+			/>					
+		</simpleemitter>			
+		-->
+			
+		<billboard
+			life="500"						
+			color="1.0 1.0 1.0"				
+			width="150"
+			height="200"
+			
+			startparam=".10"	
+			endparam="0.05"
+			depthbias="-200"				
+			material="/shared/effects/materials/refract_wave2.material"
+			lockup="true"
+			lockright="true"
+			directionalspace="local"
+			roll="180"
+			pitch="90"
+			turn="true"
+			position="0 0 0"
+		/>				
+			
+			
+			
+		<twopointtrailemitter
+			life="1000"
+			bone_a="_bone_1b"
+			bone_b="_bone_1a"
+			spawnrate="200"
+			particlelife="1000"
+			
+			material="/shared/effects/materials/dragon.material"
+		>
+			<particle 
+				alpha="1.0"
+				startcolor="1 .7 0" 
+				endcolor="0 0 0"
+			/>				
+		</twopointtrailemitter>	
+		
+		
+		<!--		
+		<billboard
+			life="500"						
+			startcolor="0 1.0 0.5"				
+			endcolor="0 0 0"
+			width="50"
+			height="120"
+			
+			startparam=".15"				
+			depthbias="100"		
+									
+			material="/shared/effects/materials/arc_add.material"
+			lockup="true"
+			lockright="true"
+			directionalspace="local"
+			roll="180"
+			pitch="90"
+			turn="true"
+			position="0 25 0"
+			
+		/>		
+	-->
+        
+      </particlesystem>
+   </definitions>
+   <thread>
+   
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<spawnparticlesystem instance="instance1" particlesystem="system1" />
+      <waitfordeath instance="instance0" />
+	 <waitfordeath instance="instance1" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resourcelist>
+	<fontface file="/core/fonts/system.ttf" name="System">
+		<fontmap name="system" size="12" />
+		<fontmap name="system_small" size="10" />
+		<fontmap name="system_medium" size="12" />
+		<fontmap name="system_large" size="22" />
+	</fontface>
+
+	<texture name="alphagrad" file="$alphagrad" />
+	<texture name="console_background" file="/core/textures/console_blank.tga" />
+</resourcelist>
+

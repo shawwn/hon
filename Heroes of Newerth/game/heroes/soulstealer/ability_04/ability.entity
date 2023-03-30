@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Soulstealer4"
+
+	icon="icon.tga"
+	statuseffecttooltip="State_Soulstealer_Ability4"
+	
+	maxlevel="3"
+	requiredlevel="6,11,16"
+	
+	anim="ability_4"
+	casttime="1400"
+	castactiontime="1400"
+
+	actiontype="target_self"
+	targetradius="700"
+	casteffecttype="Magic"
+	targetscheme="enemy_units"
+	
+	manacost="150,175,200"
+	cooldowntime="120000,110000,100000"
+>
+	<onimpact>
+		<spawnaffector name="Affector_SoulStealer_Ability4" count="0.5" countb="owner_counter" countop="mult" distribute="even" target="source_position" distance="75,100,125" />
+		<spawnaffector name="Affector_SoulStealer_Ability4_State" target="source_position"/>
+		<playeffect effect="effects/cast.effect" />
+	</onimpact>
+</ability>

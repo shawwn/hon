@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Dampeer_Ability2_Self"
+	
+	icon="icon.tga"
+	
+	passiveeffect=""
+	stunned="true"
+	
+
+
+>
+	<onexpired>
+		
+	</onexpired>
+</state>

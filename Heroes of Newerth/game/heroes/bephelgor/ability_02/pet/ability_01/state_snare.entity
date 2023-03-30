@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Bephelgor_Ability2_Pet_Snare"
+
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+	
+	movespeedslowpercharge="0.01,0.02,0.03,0.04"
+	maxcharges="6"
+	
+	effecttype="StatusDebuff"
+>
+	<oninflict>
+		<addcharges count="1" />
+	</oninflict>
+	<onrefresh>
+		<addcharges count="1" />
+	</onrefresh>
+
+	<onframe />
+</state>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Rampage_Ability4_Disarm"
+
+	icon="icon.tga"
+	passiveeffect=""
+
+	disarmed="true"
+	
+	modifierkey="rampage_dragging"
+>
+	<onkilled>
+		<expire entity="this_proxy_entity" />
+	</onkilled>
+</state>

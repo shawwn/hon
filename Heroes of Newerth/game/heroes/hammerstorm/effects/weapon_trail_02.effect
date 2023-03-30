@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="weapon_trail_02">
+	<definitions>
+		<particlesystem name="system0" space="world">
+
+			<trailemitter
+				life="150"
+				bone="_bone_weapon3"
+				spawnrate="300"
+				particlelife="155"
+				texpostime="800"
+				texposscale="0"
+				texstretchscale=".8"
+				timenudge="0"
+				material="/shared/effects/materials/whitedot.material"
+				subframepose="true"
+			>
+				<particle
+					startsize="50"
+					midsize="20"
+					endsize="1"
+					midsizepos=".3"
+
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+
+					startcolor="0 0 0"
+					midcolor="0 .4 0"
+					endcolor="0 0 0"
+				/>
+			</trailemitter>
+
+			<trailemitter
+				life="150"
+				bone="_bone_weapon3"
+				spawnrate="300"
+				particlelife="125"
+				texpostime="800"
+				texposscale="0"
+				texstretchscale=".8"
+				timenudge="0"
+				material="/shared/effects/materials/shock_01.material"
+				subframepose="true"
+			>
+				<particle
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					size="30"
+					startcolor="0 0 0"
+					midcolor="0 1 0"
+					endcolor="0 0 0"
+				/>
+			</trailemitter>
+			
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

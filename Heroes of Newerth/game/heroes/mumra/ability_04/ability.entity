@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Mumra4"
+
+	icon="icon.tga"
+
+	anim="ability_4_eyes"
+	casttime="100"
+	castactiontime="100"
+	
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_position"
+	casteffecttype="Magic"
+	targetscheme="nonneutral_organic_enemy_units"
+	manacost="150"
+	cooldowntime="80000,60000,40000"
+	casteffect="effects/cast.effect"
+	
+	projectile="Projectile_Mumra_Ability4"
+	
+	range="2000,2500,3000"
+	forcerange="2000,2500,3000"
+	allowoutofboundscast="true"
+>
+	<onimpact />
+	<modifier key="ult_boost" modpriority="100"
+		cooldowntime="20000"
+		allowautocast="true"
+		projectile=""
+	>
+		<onimpact>
+			<condition test="istoggled">
+				<spawnprojectile name="Projectile_Mumra_Ability4" source="source_entity" target="target_position" param="1" />
+			</condition>
+			<else>
+				<spawnprojectile name="Projectile_Mumra_Ability4_Boost" source="source_entity" target="target_position" />
+			</else>
+		</onimpact>
+	</modifier>
+</ability>

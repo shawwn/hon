@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="" file="shield.model" type="K2" >
+	<anim name="idle" clip="shield.clip" loop="1" loopbackframe="20"/>
+</model>

@@ -1,0 +1,71 @@
+// (C)2008 S2 Games
+// post_motionblur.psh
+// 
+// ...
+//=============================================================================
+
+//=============================================================================
+// Constants
+//=============================================================================
+static const int KERNEL_SIZE = 16;
+float4		vTexelSize;
+
+//=============================================================================
+// Global variables
+//=============================================================================
+
+//=============================================================================
+// Vertex shader output structure
+//=============================================================================
+struct VS_OUTPUT
+{	
+	float2 Texcoord0 : TEXCOORD0;
+	float4 Texcoord1 : TEXCOORD1;
+};
+
+//=============================================================================
+// Pixel shader input structure
+//=============================================================================
+struct PS_OUTPUT
+{
+	float4 Color : COLOR;
+};
+
+sampler image_scene;
+sampler image_velocity;
+
+//=============================================================================
+// Pixel Shader
+//=============================================================================
+PS_OUTPUT PS( VS_OUTPUT In )
+{
+	PS_OUTPUT Out;
+	
+	float4 vVelocity = tex2D(image_velocity, In.Texcoord0) * 2.0f - 1.0f;
+	
+	vVelocity *= 128.0f;
+	
+	float4 vSceneColor = tex2D(image_scene, In.Texcoord0);
+
+	Out.Color = vSceneColor;
+	
+	float4 vBlurColor = 0.0f;
+	float fAlpha = 0.0f;
+	
+	[unroll(KERNEL_SIZE)] for (int i = 0; i < KERNEL_SIZE; i++)
+	{
+		float fLerp = float(float(i) / (KERNEL_SIZE - 1.0f));
+	
+		float4 vSampleColor = tex2D(image_scene, In.Texcoord0 + lerp(-vTexelSize.xy, vTexelSize.xy, fLerp) * vVelocity.xy);
+		
+		vBlurColor += vSampleColor;
+		fAlpha += (1.0f - vSampleColor.a);
+	}
+	
+	//Out.Color = vBlurColor / KERNEL_SIZE;
+	//Out.Color = fAlpha / KERNEL_SIZE * 2.0f + (1.0f - vSceneColor.a);
+	Out.Color = lerp(vSceneColor, vBlurColor / KERNEL_SIZE, saturate(fAlpha / KERNEL_SIZE * 2.0f + (1.0f - vSceneColor.a)));
+	
+	return Out;
+}
+

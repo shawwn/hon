@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pet
+	name="Gadget_Arachna_Ability4_Spiderling"
+
+	icon="icon.tga"
+	portrait="icon.tga"
+	model="../summon/model.mdf"
+	skin=""
+	
+	isunit="false"
+	
+	passiveeffect="effects/spiderling.effect"
+	spawneffect="../summon/effects/spawn.effect"
+	respawneffect=""
+	selectsound=""
+	orderconfirmedsound=""
+	
+	preglobalscale="2.5"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="64"
+	boundsradius="16"
+	isselectable="true"
+	iscontrollable="false"
+	selectionradius="40"
+	targetoffset="0 0 0"
+	
+	maxhealth="3"
+	armor="5"
+	healthregen="0"
+
+	movespeed="522"
+	turnrate="900"
+	turnsmoothing="0.05"
+
+	cancarryitems="false"
+	unitwalking="true"
+	
+	diewithowner="true"
+	deathtime="0"
+	corpsetime="2000"
+
+	deathnumanims="1"
+	deathanim="death_%"
+	
+	expirenumanims="1"
+	expireanim="death_%"	
+	immunity="GadgetImmunity"
+	
+	canattack="true"
+	ismobile="true"
+	attackduration="1000"
+	attackactiontime="500"
+	attackcooldown="1000"
+	attackdamagemin="75,150,225"
+	attackdamagemax="75,150,225"
+	attacknumanims="1"
+	attackoffset="0 60 100"
+	attackprojectile=""
+	attackrange="100"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="../summon/effects/impact.effect"
+	attacktype="melee"
+	combattype="Hero"
+	drawonmap="true"
+	sightrangeday="600"
+	
+	unittype="PseudoPet"
+	goldbountymin="60"
+	goldbountymax="70"
+	
+	lifetime="15000"
+>
+
+	<onframe>
+		<condition test="not_hasorder" target="this_entity" source="this_entity">
+			<order command="attack" force="true" forceduration="15000" source="target_entity" target="proxy_entity" />
+		</condition>
+	</onframe>
+	
+	<ondamaged>
+		<changedamage b="1" op="min"/>
+	</ondamaged>
+	
+	<onspawn>
+		<order command="attack" force="true" forceduration="15000" source="target_entity" target="proxy_entity" />
+	</onspawn>
+	
+	<onattackimpact>
+		<applystate name="State_Arachna_Ability4" target="target_entity" duration="1500" />
+	</onattackimpact>
+	
+	<ondeath>
+		<expirestate name="State_Arachna_Ability4_ExpirePet" target="proxy_entity" />
+	</ondeath>
+</pet>

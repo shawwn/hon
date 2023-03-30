@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Tundra_Ability4"
+
+	radius="250"
+	lifetime="-1"
+	
+	targetselection="all"
+	targetscheme="organic_enemy_units"
+	effecttype="Magic"
+	
+	maximpactspertarget="1"
+
+	effect=""
+	impacteffect=""
+>
+	<onimpact>
+		<push force="600" duration="400" perpendicular="true" />
+		<cantarget effecttype="Magic">
+			<applystate name="State_Tundra_Ability4_Slow" duration="2000,3000,4000"/>
+			<damage effecttype="Magic" amount="100,200,300" />
+		</cantarget>
+	</onimpact>
+</affector>

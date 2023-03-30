@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1">
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+			
+			<simpleemitter	
+				particlelife="3000"				
+				spawnrate="4"
+				speed="0"
+				gravity="0"
+				direction="0 0 0"			
+				
+				particledirectionalspace="local"
+				material="/shared/effects/materials/splatter_blend.material"
+				offsetsphere="30 30 0"
+				position="0 0 0"	
+			>
+				<particle> 
+					<groundsprite
+						life="3000"						
+						material="/shared/effects/materials/splatter_blend.material"
+
+						minyaw="-360"	
+						maxyaw="360"
+						minsize="5"
+						maxsize="40"
+
+						position="0 0 0"
+
+						color=".22 .4 0"
+					
+						midcolorpos=".1"
+
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".1"
+							
+					/>						
+				</particle>
+			</simpleemitter>		
+		
+			<simpleemitter
+				particlelife="1500"
+				spawnrate="1"
+				speed="10"
+				gravity="10"
+						
+				bone="_bone_centerofchest"
+				particledirectionalspace="local"
+				material="/shared/effects/materials/splatter_add.material"
+				offsetsphere="0 0 0"
+				position="0 0 0"
+		
+			>
+				<particle>
+					<simpleemitter
+						count="10"
+						particlelife="1100"				
+						spawnrate="111"
+						speed="90"
+						gravity="14"
+						inheritvelocity="0.25"		
+						bone="_bone_centerofchest"
+						particledirectionalspace="local"
+						material="/shared/effects/materials/splatter_add.material"
+						offsetsphere="0 0 0"
+						position="0 0 0"
+					>
+						<particle 
+							minanglespeed="-100"
+							maxanglespeed="100"				
+							
+							minangle="-360"
+							maxangle="360"
+							startcolor=".2 .5 0"
+							endcolor="0 0 0"
+							startsize="20"
+							minendsize="40"				
+							maxendsize="80"
+							startalpha="1"
+							midalpha="1"
+							endalpha="0"
+						/>
+					</simpleemitter>			
+				</particle>
+			</simpleemitter>	
+			
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

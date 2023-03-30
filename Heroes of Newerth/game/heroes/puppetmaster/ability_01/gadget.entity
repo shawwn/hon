@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_PuppetMaster_Ability1_DummyPush"
+
+	icon=""
+	portrait=""
+	model="effects/cross.mdf"
+
+	preglobalscale="2.34"
+	modelscale="1.0"
+	effectscale="0.81"
+	boundsheight="0"
+	boundsradius="0"
+	isselectable="false"
+	selectionradius="0"
+	targetoffset="0 0 0"
+
+	canrotate="false"
+	ismobile="false"
+
+	attacktype="none"
+	combattype="Ranged"
+
+	sightrangeday="800"
+	sightrangenight="500"
+
+
+	deathtime="0"
+	corpsetime="0"
+	unitwalking="true"
+	
+	invulnerable="true"
+	flying="false"
+	drawonmap="false"
+	
+	lifetime="5000"
+>
+	<aura state="State_PuppetMaster_Ability1_PushImmunity" radius="30" targetscheme="all_units" />
+	<onspawn>
+		<playeffect effect="effects/beam.effect" source="this_entity" target="proxy_entity"/>
+	</onspawn>	
+	<ondeath>
+		<expirestate name="State_PuppetMaster_Ability1_ImmobilePush" target="proxy_entity" />
+	</ondeath>
+</gadget>

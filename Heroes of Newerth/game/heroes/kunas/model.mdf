@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="rig.max" file="high.model" type="K2" high="high.model" med="med.model" low="low.model" >
+
+	<anim name="idle" clip="clips/default_1.clip" fps="32" loop="true">
+	</anim>
+	
+	<anim name="portrait" clip="clips/portrait.clip" fps="32" loop="true"/>
+
+	<anim name="taunt_1" clip="clips/taunt_1.clip" />
+	
+	<anim name="item_1" clip="clips/ability_1.clip" fps="30" loop="false">
+		
+	</anim>
+	
+	<anim name="ability_1" clip="clips/ability_1.clip" fps="20" loop="false">
+		<frameevent frame="0" cmd="StartEffect effects/static_field/static_field_ability_01.effect" />
+	</anim>
+
+	<anim name="ability_2" clip="clips/ability_2.clip" fps="30" loop="false">
+		<frameevent frame="0" cmd="StartEffect effects/ability_02/cast.effect" />
+	</anim>
+
+	<anim name="ability_4" clip="clips/ability_4.clip" fps="30" loop="false">
+		<frameevent frame="0" cmd="StartEffect effects/static_field/static_field_ability_04.effect" />
+		<frameevent frame="0" cmd="StartEffect effects/ability_04/light_strike_cast.effect" />
+	</anim>
+
+	<anim name="attack_1" clip="clips/attack_2.clip" fps="100" loop="false">
+		<frameevent frame="3" cmd="PlaySoundLinear /heroes/kunas/sounds/move_%.wav 0 800 0.1"/>	
+		<frameevent frame="136" cmd="PlaySoundLinear /heroes/kunas/sounds/move_%.wav 0 800 0.1"/>
+		<frameevent frame="19" cmd="PlaySoundLinear /heroes/kunas/sounds/attack_1.wav 400 1800 0.35"/>
+	</anim>
+
+	<anim name="attack_2" clip="clips/attack_1.clip" fps="100" loop="false">
+		<frameevent frame="80" cmd="PlaySoundLinear /heroes/kunas/sounds/move_%.wav 0 800 0.1"/>
+		<frameevent frame="138" cmd="PlaySoundLinear /heroes/kunas/sounds/move_%.wav 0 800 0.1"/>
+		<frameevent frame="13" cmd="PlaySoundLinear /heroes/kunas/sounds/attack_grunt_%.wav 500 2000 0.75"/>
+		<frameevent frame="22" cmd="PlaySoundLinear /heroes/kunas/sounds/attack_2.wav 400 1800 0.35"/>
+	</anim>
+
+	<anim name="walk_1" clip="clips/walk_1.clip" fps="31" loop="true" loopbackframe="1">
+		<!-- WaterRipples-->
+		<frameevent frame="1" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="5" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="13" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="25" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="36" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="49" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="65" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="70" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="91" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="103" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="127" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="152" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="170" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="190" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		
+		<frameevent frame="2" cmd="PlaySoundLinear /heroes/kunas/sounds/move_%.wav 0 800 0.15"/>
+		<frameevent frame="2" cmd="PlaySoundLinear /shared/sounds/footsteps/heavy_%.mp3 0 2500 0.15"/>
+		<frameevent frame="2" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+
+		<frameevent frame="13" cmd="PlaySoundLinear /shared/sounds/footsteps/heavy_%.mp3 0 2500 0.15"/>
+		<frameevent frame="13" cmd="StartEffect /shared/effects/footstep_l_#GetTerrainType()#.effect"/>
+
+		<frameevent frame="25" cmd="PlaySoundLinear /heroes/kunas/sounds/move_%.wav 0 800 0.15"/>
+		<frameevent frame="25" cmd="PlaySoundLinear /shared/sounds/footsteps/heavy_%.mp3 0 2500 0.15"/>
+		<frameevent frame="25" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+		<frameevent frame="37" cmd="PlaySoundLinear /shared/sounds/footsteps/heavy_%.mp3 0 2500 0.15"/>
+		<frameevent frame="37" cmd="StartEffect /shared/effects/footstep_l_#GetTerrainType()#.effect"/>
+
+		<frameevent frame="49" cmd="PlaySoundLinear /shared/sounds/footsteps/heavy_%.mp3 0 2500 0.15"/>
+		<frameevent frame="49" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+
+		<frameevent frame="65" cmd="PlaySoundLinear /heroes/kunas/sounds/move_%.wav 0 800 0.15"/>
+		<frameevent frame="65" cmd="PlaySoundLinear /shared/sounds/footsteps/heavy_%.mp3 0 2500 0.15"/>
+		<frameevent frame="65" cmd="StartEffect /shared/effects/footstep_l_#GetTerrainType()#.effect"/>
+		<frameevent frame="60" cmd="PlaySoundLinear /heroes/kunas/sounds/run_1.wav 0 1200 0.3"/>
+
+		<frameevent frame="71" cmd="PlaySoundLinear /shared/sounds/footsteps/heavy_%.mp3 0 2500 0.15"/>
+		<frameevent frame="71" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+
+		<frameevent frame="91" cmd="PlaySoundLinear /heroes/kunas/sounds/move_%.wav 0 800 0.15"/>
+		<frameevent frame="91" cmd="PlaySoundLinear /shared/sounds/footsteps/heavy_%.mp3 0 2500 0.15"/>
+		<frameevent frame="91" cmd="StartEffect /shared/effects/footstep_l_#GetTerrainType()#.effect"/>
+
+		<frameevent frame="103" cmd="PlaySoundLinear /shared/sounds/footsteps/heavy_%.mp3 0 2500 0.15"/>
+		<frameevent frame="103" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+		<frameevent frame="115" cmd="PlaySoundLinear /shared/sounds/footsteps/heavy_%.mp3 0 2500 0.15"/>
+		<frameevent frame="115" cmd="StartEffect /shared/effects/footstep_l_#GetTerrainType()#.effect"/>
+
+		<frameevent frame="115" cmd="PlaySoundLinear /heroes/kunas/sounds/move_%.wav 0 800 0.15"/>
+		<frameevent frame="127" cmd="PlaySoundLinear /shared/sounds/footsteps/heavy_%.mp3 0 2500 0.15"/>
+		<frameevent frame="127" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+
+		<frameevent frame="142" cmd="PlaySoundLinear /shared/sounds/footsteps/heavy_%.mp3 0 2500 0.15"/>
+		<frameevent frame="142" cmd="StartEffect /shared/effects/footstep_l_#GetTerrainType()#.effect"/>
+		<frameevent frame="136" cmd="PlaySoundLinear /heroes/kunas/sounds/run_2.wav 0 1200 0.3"/>
+
+		<frameevent frame="144" cmd="PlaySoundLinear /heroes/kunas/sounds/move_%.wav 0 800 0.15"/>
+		<frameevent frame="148" cmd="PlaySoundLinear /shared/sounds/footsteps/heavy_%.mp3 0 2500 0.15"/>
+		<frameevent frame="148" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+
+		<frameevent frame="168" cmd="PlaySoundLinear /shared/sounds/footsteps/heavy_%.mp3 0 2500 0.15"/>
+		<frameevent frame="168" cmd="StartEffect /shared/effects/footstep_l_#GetTerrainType()#.effect"/>
+		<frameevent frame="160" cmd="PlaySoundLinear /heroes/kunas/sounds/run_1.wav 0 1400 0.3"/>
+		<frameevent frame="169" cmd="PlaySoundLinear /heroes/kunas/sounds/move_%.wav 0 800 0.15"/>
+
+		<frameevent frame="174" cmd="PlaySoundLinear /shared/sounds/footsteps/heavy_%.mp3 0 2500 0.15"/>
+		<frameevent frame="174" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+		<frameevent frame="187" cmd="PlaySoundLinear /heroes/kunas/sounds/move_%.wav 0 800 0.15"/>
+
+		<frameevent frame="191" cmd="PlaySoundLinear /shared/sounds/footsteps/heavy_%.mp3 0 2500 0.15"/>
+		<frameevent frame="191" cmd="StartEffect /shared/effects/footstep_l_#GetTerrainType()#.effect"/>
+	</anim>
+
+	<anim name="bored_1" clip="clips/bored_1.clip" fps="30" loop="false"/>
+
+	<anim name="death_1" clip="clips/death_1.clip" fps="22" loop="true" loopbackframe="-1">
+	</anim>
+
+	<anim name="knock_1" clip="clips/knock_1.clip" loop="true" loopbackframe="-1"/>
+	
+	<anim name="getup_1" clip="clips/getup_1.clip"/>		
+</model>

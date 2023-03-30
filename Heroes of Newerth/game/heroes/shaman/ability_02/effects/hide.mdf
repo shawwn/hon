@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="rig.max" file="hide.model" type="K2">
+
+	<anim name="cast" clip="hide.clip"/>
+	
+	<anim name="idle" clip="hide2.clip"  loop="true" loopbackframe="15"/>
+
+</model>

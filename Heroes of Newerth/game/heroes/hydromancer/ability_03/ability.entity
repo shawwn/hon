@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Hydromancer3"
+	statuseffecttooltip="State_Hydromancer_Ability3_Slow"
+	
+	icon="icon.tga"	
+	anim="ability_3"
+	
+	casttime="100"
+	castactiontime="100"
+	casteffect=""
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_position"
+	activatescheme="movement"
+	
+	targetradius="200"
+	targetscheme="enemy_units"
+	casteffecttype="Magic"
+	
+	manacost="70,75,80,85"
+	cooldowntime="24000,20000,16000,12000"
+	
+	range="1000"
+	usepathforrange="true"
+>
+	<onimpact>
+		<spawnprojectile name="Projectile_Hydromancer_Ability3" source="source_entity" target="target_position" bind="source_entity" bindturn="true" bindstate="State_Hydromancer_Ability3" unbindondeath="true" />
+	</onimpact>
+</ability>
+

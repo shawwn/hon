@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="ability_01_impact" >
+	<definitions>
+	
+	
+
+
+
+	
+	
+	
+	
+
+
+		<particlesystem name="system0" space="world" scale="1">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2000"
+				volume=".6"
+				sample="../sounds/spawn.wav"
+			/>
+
+	
+
+			<groundsprite
+				
+				life="1200"
+				color=".7 .7 .7"			
+			
+				startalpha="0"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".1"
+			
+				startsize="38"
+				endsize="38"
+				
+				
+				material="/shared/effects/materials/web_ground.material"
+				
+			/>	
+
+			<groundsprite
+				
+				life="1200"
+				color=".7 .7 .7"			
+				position="15 15 0"
+				startalpha="0"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".1"
+				yaw="210"
+				startsize="38"
+				endsize="38"
+				
+				
+				material="/shared/effects/materials/web_ground.material"
+				
+			/>	
+			<groundsprite
+				
+				life="1200"
+				color=".7 .7 .7"			
+				
+				yaw="50"
+				
+				startalpha="0"
+				midalpha=".4"
+				endalpha="0"
+				midalphapos=".1"
+			
+				startsize="78"
+				endsize="78"
+				
+				
+				material="/shared/effects/materials/web_ground.material"
+				
+			/>	
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				spawnrate="233"
+				particlelife="800"
+				count="30"
+				particlelifealloc="6000"
+				gravity="22.0"
+				minspeed="120"
+				maxspeed="182.0"
+				drag="0.0"
+				minangle="0"
+				maxangle="180"
+				direction="0 0 1"
+				acceleration="0.0"
+				inheritvelocity="0.5"
+			>
+				<particle>
+				<trailemitter					
+					spawnrate="30"
+					particlelife="700"
+					texpostime="700"
+					texposscale="0"
+					texstretchscale="1"	
+					material="/shared/effects/materials/web.material"
+				>
+					<particle
+						startcolor="1 1 1"
+						midcolor="1 1 1"
+						endcolor="0 0 0"
+						startsize="5"
+						midsize="5"
+						endsize="2"
+						midsizepos="0.2"
+					/>
+				</trailemitter>	
+				</particle>			
+			</simpleemitter>
+			
+
+
+      </particlesystem>
+   </definitions>
+   <thread>
+   
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+	  
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

@@ -1,0 +1,3 @@
+These classes are the primary classification for a units attack and armor mechanism. Attack class examples are: Hero, Tower, Melee, Ranged, Siege, etc. Armor class examples are: Hero Armor, Basic Armor, Fortified Armor, etc. 
+
+There will be a table, like classic rts games, of how much each deals to the other. This is the first reduction that takes place when processing attacks. 

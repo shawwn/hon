@@ -1,0 +1,20 @@
+BatchConvert.exe will do the following:
+- Convert all TGA/PNG/JPGs to S2Ts
+- Convert all WAVs to OGGs
+- Copy all other files
+
+BatchConvert.bat creates a new directory ("Converted")
+All the new data is created there, and compression is fast/low quality
+BatchConvertHQ.bat does the same thing, but with much higher texture quality
+
+The HQ option only changes the compression time, NOT the load times.
+There is NO disadvantage to using the HQ batch, except that converting
+all the files might take hours instead of minutes on your computer.
+
+The default OGG quality is 6, which sounds perfect to my ears and is
+well known to be a good high quality option. You can edit the batch
+file to change that if you want higher/lower quality though.
+
+For optimal load times, all the folders in /game/ except /game/maps/
+should be put in a .s2z file (read: renamed .zip file), in order to
+let the preload system do its magic and reduce file size further...

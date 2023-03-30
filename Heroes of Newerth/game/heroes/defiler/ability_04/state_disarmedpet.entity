@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Defiler_Ability4"
+
+	
+	ishidden="true"
+	icon="icon.tga"
+
+
+	disarmed="true"
+
+>
+	<onexpired>
+		<order command="aggressive_wander" source="this_owner_entity" target="proxy_entity" />
+	</onexpired>
+</state>

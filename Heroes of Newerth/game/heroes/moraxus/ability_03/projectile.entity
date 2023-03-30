@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Moraxus_Ability3"
+
+	speed="1200"
+
+	modelscale="2.5"
+	model="effects/projectile.mdf"
+	effectscale="1"
+	impacteffect="effects/impact.effect"
+	traileffect="effects/trail.effect"
+	canturn="0"
+	flying="true"
+	flyheight="80"
+	
+	touchradius="60"
+	touchradiusdiradjust="true"
+	maxtouches="1"
+	touchtargetscheme="organic_enemy_units"
+	toucheffecttype="Magic"
+>	
+	<ontouch>
+		<damage effecttype="Magic" amount="60,80,100,120" />
+		<playeffect effect="effects/impact.effect" source="target_entity" target=""/>
+		<applystate name="State_Moraxus_Ability3_Slow" target="target_entity" duration="3000"/>
+		<kill target="proxy_entity" source="" />
+		<delete target="this_entity" />
+	</ontouch>
+	
+	<onimpact>
+		<kill target="proxy_entity" source="" />
+	</onimpact>
+</projectile>

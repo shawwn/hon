@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect>
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".65"
+				sample="../sounds/impact_throw.wav"
+			/>
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".75"
+				sample="../sounds/impact_%.wav"
+			/>
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".5"
+				sample="/heroes/treant/sounds/move_%.wav"
+			/>	
+		
+			<model
+				position="0 0 50"
+				life="1000"
+				startcolor="1.7 1.7 1"
+				endcolor="1 1 1"
+				startalpha="1"
+				midalpha=".5"
+				endalpha="0" 
+				model="explode.mdf"
+				anim="idle"
+				scale="1.3"
+				maxyaw="360"
+			>
+			</model>
+
+			<model
+				position="0 0 50"
+				life="1000"
+				startcolor="1.7 1.7 1"
+				midcolor="1 1 1"
+				endcolor="1 1 1"
+				startalpha="1"
+				midalpha=".5"
+				endalpha="0" 
+				model="explode.mdf"
+				anim="idle"
+				scale="1.3"
+				maxyaw="360"
+			>
+			</model>
+			
+			<simpleemitter
+				life="600"
+				count="4"
+				position="0 0 20"
+				spawnrate="500"				
+				particlelife="400"
+				gravity="-3.0"
+				offsetsphere="60"
+				direction="0 0 1"	
+          			material="/shared/effects/materials/sand_blend.material"
+				depthbias="-40"
+         	>
+				<particle
+					color=".2 .2 .15"
+					minangle="0"
+					maxangle="360"
+					startsize="25"			
+					endsize="215"			
+					startalpha="1"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				life="600"
+				count="24"
+				position="0 0 20"
+				spawnrate="500"	
+				minspeed="20"
+				maxspeed="300"			
+				particlelife="400"
+				gravity="-3.0"
+				offsetsphere="50"
+				direction="0 0 1"	
+          			material="/shared/effects/materials/woodchunk.material"
+				depthbias="-40"
+         	>
+				<particle
+					startcolor=".3"
+					endcolor="0"
+					minangle="0"
+					maxangle="360"
+					startsize="5"			
+					endsize="15"			
+					startalpha="1"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				minangle="-90"
+				maxangle="-90"
+				position="0 0 50"
+				life="400"
+				spawnrate="650"
+				count="20"
+				minparticlelife="250"
+				maxparticlelife="750"
+				speed="1000"
+				drag="0.1"
+				gravity="-10"
+				offsetsphere="50 50 0"
+				material="/shared/effects/materials/dust_smoke_03.material"
+			>
+				<particle
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="-20"
+					maxanglespeed="30"
+					turn="0"
+					color="0.325 0.325 .325"
+					startsize="20"
+					minendscale="6"
+					maxendscale="10"
+					startalpha=".25"
+					midalpha=".25"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				minangle="-90"
+				maxangle="-90"
+				position="0 0 50"
+				life="400"
+				spawnrate="650"
+				count="20"
+				minparticlelife="250"
+				maxparticlelife="750"
+				speed="1000"
+				drag="0.1"
+				gravity="-10"
+				offsetsphere="50 50 30"
+				material="/shared/effects/materials/dust_smoke_02.material"
+			>
+				<particle
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="-30"
+					maxanglespeed="0"
+					turn="0"
+					color="0.35 0.325 .275"
+					startsize="50"
+					minendscale="6"
+					maxendscale="10"
+					startalpha=".25"
+					midalpha=".25"
+					endalpha="0"
+				/>
+			</simpleemitter>		
+			
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<camerashake2 scale="5" radius="1200" duration="400" frequency="22" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

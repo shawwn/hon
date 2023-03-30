@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="fireshield" deferred="true" useentityeffectscale="true">
+	<definitions>
+		<particlesystem name="system0" space="entity" scale="1">
+
+			<sound
+				linearfalloff="true"
+				falloffstart="1000"
+				falloffend="2000" 
+				volume=".65" 
+				sample="../sounds/cast.wav"
+			/>
+
+			<sound
+				linearfalloff="true"
+				falloffstart="1000"
+				falloffend="2500" 
+				volume="1" 
+				sample="../sounds/cast2.wav"
+			/>
+
+			<sound
+				soundloop="true"
+				fadein="100"
+				fadeout="500"
+				linearfalloff="true"
+				falloffstart="0"
+				falloffend="2000" 
+				volume=".4" 
+				sample="../sounds/state.wav"
+			/>
+			<template name="magicSpheres">
+				<model
+					model="magic_sphere/shield.mdf"
+					startscale="1"
+					endscale="4"
+					position="0 20 100"
+					life="300"
+					startcolor=".5 .5 .5"
+					endcolor="0"
+					yawspeed="-180"
+					pitchspeed="90"
+				/>
+				
+				<model
+					delay="150"
+					model="magic_sphere/shield.mdf"
+					startscale="1"
+					endscale="4"
+					position="0 20 100"
+					life="300"
+					startcolor=".5 .5 .5"
+					endcolor="0"
+					yawspeed="-180"
+					pitchspeed="90"
+				/>
+			</template>
+
+			<instance name="magicSpheres"/>
+			<instance name="magicSpheres"/>
+
+			<template name="axes">
+				<model
+					delay="150"
+					startalpha="1"
+					endalpha="0"
+					model="axe_shield/model.mdf"
+					anim="idle"
+					color="1 1 1"
+					scale="1"
+					expirelife="100"
+					position="0 20 100"
+					directionalspace="local"
+					yawspeed="90"
+					pitchspeed="90"
+				>
+				</model>
+				
+				<model
+					startalpha=".65"
+					endalpha="0"
+					model="magic_sphere/shield.mdf"
+					anim="idle"
+					color=".15"
+					scale="2.75"
+					expirelife="500"
+					position="0 30 100"
+					directionalspace="local"
+					yawspeed="90"
+					pitchspeed="90"
+				/>
+
+				<model
+					startalpha=".65"
+					endalpha="0"
+					model="magic_sphere/shield.mdf"
+					anim="idle"
+					color=".15"
+					scale="2.75"
+					expirelife="500"
+					position="0 30 100"
+					directionalspace="local"
+					yawspeed="-90"
+					pitchspeed="90"
+				/>
+
+				<model
+					startalpha=".65"
+					endalpha="0"
+					model="magic_sphere/shield.mdf"
+					anim="idle"
+					color=".15"
+					scale="2.75"
+					expirelife="500"
+					position="0 30 100"
+					directionalspace="local"
+					yawspeed="-180"
+					pitchspeed="90"
+				/>
+			</template>
+
+			<instance name="axes" bone1="_bone_weapon3" />
+	
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

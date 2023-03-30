@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect  persistent="1">
+	<definitions>
+
+
+		
+		<particlesystem name="system0" space="world" scale="1">
+
+		<sound
+			linearfalloff="true" 
+			falloffstart="0"
+			falloffend="2200"
+			volume=".8" 
+			sample="/heroes/rocky/ability_02/sounds/ability_02_cast.wav"
+		/>
+	
+
+			<groundsprite	
+				delay="0"				
+				life="5400"
+				material="/shared/effects/materials/ground_smash_overlay.material"
+				size="60"			
+				color="1.0 1.0 1.0"
+				startalpha="0"
+				midalpha="1"
+				endalpha="0"
+				midalphapos="0.05"
+			/>	
+			
+			<simpleemitter
+					
+					offsetsphere="10 10 10"
+					spawnrate="222"			
+					count="11"
+					particlelife="1300"			
+					gravity="0"					
+					acceleration="0"
+					speed="80"
+					position="0 0 10"					
+					material="/shared/effects/materials/pyroclast_01.material"	
+				>
+					<particle
+							minangle="-360"
+							maxangle="360"
+							color=".36 .33 .2"
+							startsize="40"
+							endsize="100"
+							minanglespeed="-30"
+							maxanglespeed="33"
+							
+							startalpha="0"
+							midalpha="1"
+							endalpha="0"
+				
+							frame="1"
+							framespeed="1"
+
+						
+							anchor="1"
+			
+							lockup="0"
+							lockright="false"
+
+							
+							turn="false"
+					/>
+				</simpleemitter>			
+
+
+
+			<debris
+				position="0 0 10"
+				delay="0"
+				scale=".8"
+				life="3000"
+				model="/shared/effects/models/debris/debris.mdf"
+				anim="idle"	
+				minspeed="200.0"
+				maxspeed="400.0"
+				minrotationspeed="500.0"
+				maxrotationspeed="600.0"
+				gravity="20.0"
+				minangle="0"
+				color=".6 .6 .3"
+				maxangle="20"
+				collide="true"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="0.0"
+				midalphapos="0.9"
+				bounce="0.7"
+				reflect="0.6"
+				animpose="false"
+			/>				
+			<debris
+				position="0 0 10"
+				delay="0"
+				scale=".8"
+				life="3000"
+				model="/shared/effects/models/debris/debris.mdf"
+				anim="idle"	
+				minspeed="200.0"
+				maxspeed="400.0"
+				minrotationspeed="500.0"
+				maxrotationspeed="600.0"
+				gravity="20.0"
+				minangle="0"
+				color=".6 .6 .3"
+				maxangle="20"
+				collide="true"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="0.0"
+				midalphapos="0.9"
+				bounce="0.7"
+				reflect="0.6"
+				animpose="false"
+			/>	
+			
+			<model
+				color=".7.65 .4 "
+				model="../../ability_01/effects/rock_1.mdf"	
+
+				
+				startscale="0"
+				midscale="3"
+				endscale="0"
+				midscalepos=".1"
+				
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".8"
+				life="2000"				
+			/>	
+			
+
+
+	
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+	   <camerashake2 scale="11.0" radius="1200" duration="1000" frequency="22" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+
+

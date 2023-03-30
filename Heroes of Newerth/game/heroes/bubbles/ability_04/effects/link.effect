@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" useentityeffectscale="1">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2200"
+				volume=".30"
+				sample="../sounds/impact_%.wav"
+			/>
+		
+			<template name="link">
+				<beam
+					expirelife="500"
+					owner_a="source"
+					owner_b="target"
+					bone_a="{bone1}"
+					size="30"
+					color=".85"
+					startalpha="1 1 1"
+					endalpha="0"
+					material="/shared/effects/materials/seaweed.material"
+				>
+				</beam>
+
+				<billboard
+					bone="{bone2}"
+					material="/shared/effects/materials/whitedot.material"
+					size="40"
+					startcolor="0 .25 .3"
+					endcolor="0"
+					expirelife="200"
+					depthbias="-40"
+				/>
+
+				<billboard
+					bone="{bone2}"
+					material="/shared/effects/materials/whitedot.material"
+					size="40"
+					startcolor="0 .25 .3"
+					endcolor="0"
+					expirelife="200"			
+				 	depthbias="-40"
+				/>
+
+			</template>
+			
+			<instance name="link" bone1="_bone_lefthand" bone2="_bone_lefthand" size="30" startframe=".2" framespeed="3"/>
+			<instance name="link" bone1="_bone_righthand" bone2="_bone_righthand" size="32" startframe=".5" framespeed="4.5"/>
+
+		</particlesystem>
+
+	</definitions>
+	
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+		<waitfordeath instance="instance0"/>
+	</thread>
+
+</effect>

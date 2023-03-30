@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Chipper_Ability4"
+		
+	icon=""
+	portrait=""
+	modelscale="1"
+	model="/shared/models/invis.mdf"
+	skin=""
+	
+	passiveeffect="effects/impact.effect"
+	spawneffect=""
+	respawneffect=""
+	isselectable="false"
+	invulnerable="true"
+	selectsound=""
+	orderconfirmedsound=""
+	unitwalking="true"
+	drawonmap="false"
+	
+	preglobalscale="0.9"
+	effectscale="1.0"
+	boundsheight="38"
+	boundsradius="42"
+	selectionradius="0"
+	targetoffset="0 0 0"
+
+	canrotate="false"
+	ismobile="false"
+	isflying="false"
+	clearvision="true"
+	
+	sightrangeday="200"
+	sightrangenight="200"
+
+	attacktype="none"
+	
+	lifetime="8000"
+	corpsetime="0"
+	deathtime="0"
+	corpsefadetime="1000"
+	
+	blocking="false"
+>
+	<onspawn>
+		<killtrees radius="75" />
+	</onspawn>
+	
+	<aura state="State_Chipper_Ability4" radius="100" duration="2000" targetscheme="enemy_units" />
+	<aura state="State_Chipper_Ability4_DOT" radius="100" targetscheme="enemy_units" />
+	
+	<modifier key="ult_boost" modpriority="100"
+		displayname="true"
+		passiveeffect="effects/impact.effect"
+	/>
+</gadget>

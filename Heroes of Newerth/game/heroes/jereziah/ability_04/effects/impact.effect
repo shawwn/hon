@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="fiends_grip_target">
+	<definitions>
+		<particlesystem name="system0" space="entity">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2000"
+				volume=".35"
+				sample="../sounds/impact.wav"
+			/>
+
+		<groundsprite
+			life="1230"
+
+			timenudge="0"
+			material="/shared/effects/materials/nova_10.material"
+
+			startsize="15"
+			midsize="180"
+			endsize="450"
+			midsizepos=".5"
+
+			startcolor="1 .85 0"
+			midcolor="1 .85 0"
+			endcolor="1 .85 0"
+	
+			startalpha="1"
+			midalpha="1"
+			endalpha="0"
+			midalphapos=".4"
+
+			anglesspeed="0 0 50"
+
+		/>
+
+		
+
+		<simpleemitter
+		
+			spawnrate="30"
+			count="30"
+			bone="Bip01 Spine"
+			particlelife="1000"			
+			gravity="-10"
+			speed="45"
+			drag="0"
+			acceleration="0"
+			position="0 0 -20"
+
+			material="/shared/effects/materials/flare_02.material"
+			offsetsphere="10 10 70"
+			minangle="0"
+			maxangle="45"
+			direction="0 0 0"
+			offsetdirection="0 105 0"
+			offsetradial="0 0 0"
+		>
+
+			<particle 
+
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+				maxanglespeed="0"
+
+
+				startcolor=".3 .3 .3"
+				midcolor=".7 .7 .7"
+				endcolor=".7 .7 .7"
+				midcolorpos=".4"
+
+				startframe="0"
+				endframe="1"
+				startsize="5"
+				midsize="10"
+				endsize="5"
+
+				startalpha="0"
+				midalpha=".1"
+				endalpha="0"
+				midalphapos=".5"
+				startstickiness="0"
+				endstickiness="0"
+
+
+			/>
+
+			<particle 
+
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+				maxanglespeed="0"
+
+				startcolor=".3 .3 .3"
+				midcolor=".7 .7 .7"
+				endcolor=".7 .7 .7"
+				midcolorpos=".4"
+
+				startframe="0"
+				endframe="1"
+				startsize="5"
+				midsize="15"
+				endsize="5"
+
+				startalpha="0"
+				midalpha=".1"
+				endalpha="0"
+				midalphapos=".5"
+				startstickiness="0"
+				endstickiness="0"
+
+
+			/>
+
+		</simpleemitter>
+
+
+		<simpleemitter
+		
+			spawnrate="500"
+			count="20"
+			bone="Bip01 Spine2"
+			particlelife="1350"			
+			gravity="4"
+			speed="95"
+			drag=".02"
+			acceleration="0"
+			position="0 0 0"
+
+
+			material="/shared/effects/materials/flare_02.material"
+			offsetsphere="1 1 1"
+			minangle="0"
+			maxangle="360"
+			direction="0 0 1"
+			offsetdirection="0 0 0"
+			offsetradial="10 10 10"
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="-50"
+				maxanglespeed="-150"
+				startcolor=".3 .3 .3"
+				midcolor=".7 .7 .7"
+				endcolor=".7 .7 .7"
+				midcolorpos=".4"
+
+				startframe="0"
+				endframe="1"
+				startsize="1"
+				midsize="15"
+				endsize=".1"
+				startalpha="0"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".3"
+				startstickiness=".4"
+				endstickiness="0"
+			/>
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="50"
+				maxanglespeed="150"
+				startcolor=".1 .1 .1"
+				midcolor=".5 .5 .5"
+				endcolor=".5 .5 .5"
+				midcolorpos=".5"
+
+				startframe="0"
+				endframe="1"
+				startsize="1"
+				midsize="4"
+				endsize=".1"
+				startalpha="0"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".3"
+				startstickiness=".4"
+				endstickiness="0"
+			/>
+
+
+		</simpleemitter>
+
+
+		<simpleemitter
+		
+			spawnrate="60"
+			count="10"
+			bone="Bip01 Spine"
+			particlelife="1450"			
+			gravity="-35"
+			speed="40"
+			drag="0"
+			acceleration="0"
+			position="0 0 -20"
+
+			material="/shared/effects/materials/phantom_smoke_10.material"
+			offsetsphere="20 20 70"
+			minangle="-45"
+			maxangle="45"
+			direction="0 0 0"
+			offsetdirection="0 105 0"
+			offsetradial="0 0 0"
+		>
+
+			<particle 
+
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+				maxanglespeed="0"
+
+
+				startcolor="0 0 0"
+				midcolor="1.8 .45 0"
+				endcolor="0 0 0"
+
+				midcolorpos=".4"
+
+				startframe="0"
+				endframe="1"
+
+				startwidth="10"
+				midwidth="7.5"
+				endwidth="3"
+				midwidthpos=".5"
+
+
+				startheight="0"
+				endheight="820"
+
+				startalpha="0"
+				midalpha=".1"
+				endalpha="0"
+				midalphapos=".1"
+				startstickiness="0"
+				endstickiness=".6"
+
+				lockup="true"
+
+			/>
+
+			<particle 
+
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+				maxanglespeed="0"
+
+				startcolor="0 0 0"
+				midcolor="1.8 .45 0"
+				endcolor="0 0 0"
+				midcolorpos=".4"
+
+				startframe="0"
+				endframe="1"
+
+				startwidth="20"
+				midwidth="15"
+				endwidth="3"
+				midwidthpos=".5"
+
+
+				startheight="0"
+				endheight="820"
+
+				startalpha="0"
+				midalpha=".1"
+				endalpha="0"
+				midalphapos=".1"
+				startstickiness="0"
+				endstickiness=".6"
+
+				lockup="true"
+
+			/>
+
+		</simpleemitter>
+
+		<simpleemitter
+		
+			spawnrate="60"
+			count="5"
+			bone="Bip01 Spine"
+			particlelife="1450"			
+			gravity="-55"
+			speed="40"
+			drag=".08"
+			acceleration="0"
+			position="0 0 0"
+
+			material="/shared/effects/materials/phantom_smoke_10.material"
+			offsetsphere="0 0 00"
+			minangle="90"
+			maxangle="-90"
+			direction="0 0 0"
+			offsetdirection="0 105 0"
+			offsetradial="0 0 0"
+		>
+
+			<particle 
+
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+				maxanglespeed="0"
+
+
+				startcolor="0 0 0"
+				midcolor=".8 .45 0"
+				endcolor="0 0 0"
+
+				midcolorpos=".1"
+
+				startframe="0"
+				endframe="1"
+
+				startwidth="10"
+				midwidth="7.5"
+				endwidth="3"
+				midwidthpos=".5"
+
+
+				startheight="0"
+				endheight="820"
+
+				startalpha="0"
+				midalpha=".1"
+				endalpha="0"
+				midalphapos=".1"
+				startstickiness="0"
+				endstickiness="0"
+
+				lockup="true"
+
+			/>
+
+			<particle 
+
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+				maxanglespeed="0"
+
+				startcolor="0 0 0"
+				midcolor=".8 .45 0"
+				endcolor="0 0 0"
+				midcolorpos=".1"
+
+				startframe="0"
+				endframe="1"
+
+				startwidth="20"
+				midwidth="15"
+				endwidth="3"
+				midwidthpos=".5"
+
+
+				startheight="0"
+				endheight="820"
+
+				startalpha="0"
+				midalpha=".1"
+				endalpha="0"
+				midalphapos=".1"
+				startstickiness="0"
+				endstickiness="0"
+
+				lockup="true"
+
+			/>
+
+		</simpleemitter>
+
+
+
+		<simpleemitter
+
+			life="800"
+			spawnrate="100"
+			count="2"
+			delay="100"
+			bone="_bone_chest"
+			particlelife="1200"			
+			gravity="0"
+			speed="2"
+			drag="0"
+			acceleration="2"
+			position="0 0 0"
+
+			material="/shared/effects/materials/nova_09.material"
+			offsetsphere="0 0 0"
+			minangle="0"
+			maxangle="0"
+			direction="0 0 0"
+			offsetdirection="0 0 0"
+			offsetradial="0 0 0"
+		>
+			<particle 
+				minangle="0"
+				maxangle="360"
+				minanglespeed="85"
+				maxanglespeed="85"
+				startcolor=".8 .65 0"
+				midcolor=".8 .65 0"
+				endcolor=".8 .65 0"
+				midcolorpos=".7"
+
+				startframe="0"
+				endframe="0"
+				startsize="105"
+				midsize="65"
+				endsize="5"
+				midsizepos=".5"
+
+				startalpha=".7"
+				midalpha=".7"
+				endalpha="0"
+				midalphapos=".5"
+
+				startstickiness="0"
+				endstickiness="0"
+
+				lockup="false"
+				lockright="false"
+				pitch="0"
+				yaw="0"
+
+			/>
+
+			</simpleemitter>
+
+			
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+

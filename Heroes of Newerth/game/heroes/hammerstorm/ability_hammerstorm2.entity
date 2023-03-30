@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Hammerstorm2"
+
+	icon="icons/ability_2.tga"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="no_target"
+	frontqueue="true"
+	inheritmovement="true"
+	casttime="0"
+	castactiontime="0"
+	cooldowntime="1000"
+	cooldowntype="hammerstormcleave"
+	noresponse="true"
+>
+	<modifier key="hammerstormcleavetoggle" modpriority="100"
+		displayname="true"
+	>
+		<onimpact>
+			<setactivemodifierkey name="" />
+		</onimpact>
+		
+		<onattackimpact />
+	</modifier>
+	
+	<modifier key="" modpriority="100"
+		displayname="true"
+	>
+		<onimpact>
+			<setactivemodifierkey name="hammerstormcleavetoggle" />
+		</onimpact>
+		
+		<onattackimpact>
+			<cantarget targetscheme="enemy_units">
+				<splashdamage a="total_adjusted_damage" b="0.125,0.25,0.375,0.5" op="mult" radius="175" effecttype="Physical Splash Cleave" targetscheme="enemy_units" />
+			</cantarget>
+		</onattackimpact>
+	</modifier>
+
+</ability>

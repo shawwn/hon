@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Dampeer1"
+
+	icon="icon.tga"
+	
+	anim="ability_1"
+	casttime="800"
+	castactiontime="300"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="self_position"
+	targetradius="250"
+	targetmaterial="/shared/materials/area_cast_legion_indicator.material"
+	casteffecttype="Magic"
+	targetscheme="enemy_units"
+
+	manacost="75,85,95,105"
+	cooldowntime="8000"
+>
+	<onpreimpact>
+		<areaofeffect
+			radius="250"
+			targetselection="all"
+			targetscheme="enemy_units"
+			effecttype="Magic"
+			maximpactspertarget="1"
+		>
+		</areaofeffect>
+		<compare a="result" b="1" op="ge">
+			<playeffect effect="effects/impact_sound.effect" target="" source="source_entity"/>
+		</compare>
+	</onpreimpact>
+
+	<onimpact>
+		<spawnaffector name="Affector_Dampeer1" target="source_position" param="charges" />
+	</onimpact>
+	
+	<modifier key="Dampeer_Soul_1" modpriority="100">
+		<onimpact>
+			<spawnaffector name="Affector_Dampeer1" target="source_position" param="charges" />
+		</onimpact>
+	</modifier>
+	
+	<modifier key="Dampeer_Soul_2" modpriority="100">
+		<onimpact>
+			<spawnaffector name="Affector_Dampeer1" target="source_position" param="charges" />
+		</onimpact>
+	</modifier>
+	
+	<modifier key="Dampeer_Soul_3" modpriority="100">
+		<onimpact>
+			<spawnaffector name="Affector_Dampeer1" target="source_position" param="charges" />
+		</onimpact>
+	</modifier>
+	
+</ability>

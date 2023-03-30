@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="ability_02">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="0.7">
+
+	
+			<light
+				life="1150"			
+				startcolor="0 0 0"
+				midcolor="1 3 0"			
+				endcolor="0 0 0"
+				midcolorpos=".2"
+				falloffstart="100"
+				falloffend="200"
+				position="0 0 50"	
+			/>		
+			
+		
+			<simpleemitter
+				life="1000"
+				spawnrate="110"
+				count="22"
+				minparticlelife="3110"
+				maxparticlelife="3200"			
+				gravity="0"
+				minspeed="1800"
+				maxspeed="2000"
+				
+				
+				offsetsphere="2"
+				minangle="0"
+				maxangle="10"
+				direction="0 0.3 1"
+			>
+
+			
+				<particle
+				
+					turn="1"
+					
+				>
+					<model	
+						life="800"
+						startcolor="1 1 1"
+						endcolor="0 0 0"
+						directionalspace="local"
+						pitch="90"
+									
+						model="arrow.mdf"
+						anim="idle"
+						scale="0.4"				
+					>
+					
+
+
+						<trailemitter
+							bone="_bone_tip"
+							spawnrate="50"
+							particlelife="250"
+							texpostime="250"
+							texposscale="1.8"
+							texstretchscale="0.0"
+							material="/shared/effects/materials/arrow_trail.material"
+						>
+							<particle
+								startcolor=".3 .5 .0"
+								
+								endcolor="0 0 0"
+								startsize="10"
+								midsize="15"
+								endsize=".5"
+								midsizepos=".3"
+							/>
+						</trailemitter>
+
+					
+						
+						<billboard
+							bone="_bone_tip"
+							material="/shared/effects/materials/arrow_head.material"
+							directionalspace="local"
+							color=".3 1 .0"
+							height="44"
+							width="11"
+							lockright="true"
+							lockup="true"
+							pitch="-90"
+						/>
+						
+					
+
+					
+					</model>
+				</particle>
+
+			</simpleemitter>
+<!--
+			<billboard
+				delay="200"
+				life="400"
+				color="1.0 1.0 1.0"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="0.0"
+				midalphapos="0.75"
+				startparam="0.2081"
+				startsize="0"
+				endsize="500"
+				
+				depthbias="0"
+				position="0 0 90"
+				material="/shared/effects/materials/refract_ring.material"
+				lockup="true"
+				pitch="90"
+			/>				
+		-->				
+			
+			
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<camerashake2 scale="0.0" radius="1200" duration="400" frequency="22" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

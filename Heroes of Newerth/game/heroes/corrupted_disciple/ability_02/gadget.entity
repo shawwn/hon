@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_CorruptedDisciple_Ability2"
+	
+	model=""
+	isselectable="false"
+	attacktype="none"
+
+	sightrangeday="800"
+	sightrangenight="800"
+	clearvision="true"
+
+	deathtime="0"
+	corpsetime="0"
+	
+	invulnerable="true"
+	flying="true"
+	drawonmap="false"
+>
+</gadget>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_FlintBeastwood_Ability1_DoT"
+
+	icon="icon.tga"
+	passiveeffect=""
+	ishidden="true"
+	
+	effecttype="StatusDebuff"
+>
+	<onframe>
+		<damage effecttype="Magic DOT" amount="25,50,75,100" b="frametime" op="mult" />
+	</onframe>
+
+	<oninflict>
+		<damage effecttype="Magic DOT" amount="25,50,75,100" />
+	</oninflict>
+</state>

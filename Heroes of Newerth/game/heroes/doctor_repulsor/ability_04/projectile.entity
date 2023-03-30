@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_DoctorRepulsor_Ability4"
+
+	speed="1250,1875,2500"
+	gravity="0"
+
+	modelscale="1.0"
+	model="/shared/models/invis.mdf"
+	
+	canturn="false"
+	flying="true"
+	flyheight="0"
+	
+	touchradius="150,225,300"
+	maxtouchespertarget="1"
+	touchtargetscheme="organic_enemy_units"
+	toucheffecttype="Magical"
+>	
+	<ontouch>
+		<condition target="source_entity" test="hasstate State_DoctorRepulsor_Ability4">
+			<distance target="target_entity" source="proxy_entity" />
+			<setvar0 a="result" b="100" op="div" />
+			<damage target="target_entity" effecttype="Magic" amount="8,12,16" b="var0" op="mult" />
+		</condition>
+	</ontouch>
+	
+	<onimpact>
+		<kill target="proxy_entity" source="" />
+	</onimpact>
+</projectile>

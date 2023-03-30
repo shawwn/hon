@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="rig_death.max" file="model.model" type="K2" >
+
+<!-- corkscrew
+	<anim name="idle" fps="45" clip="default_1.clip"/>
+ -->
+<!-- squirelly -->	
+	<anim name="idle" fps="45" clip="default_2.clip"/>
+	
+</model>

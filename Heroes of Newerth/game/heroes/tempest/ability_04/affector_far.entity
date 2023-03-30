@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Tempest_Ability4_Far"
+
+	radius="500"
+	lifetime="-1"
+	
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Magic"
+	destroytrees="true"
+>
+	<onframeimpact>
+		<damage effecttype="Magic Splash DOT" amount="30,50,70" b="frametime" op="mult"/>
+	</onframeimpact>
+</affector>

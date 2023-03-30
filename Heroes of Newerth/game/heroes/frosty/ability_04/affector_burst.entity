@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Frosty_Ability4_Burst"
+
+	radius="190"
+	
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Magic"
+	
+	effect=""
+	impacteffect="impact.effect"
+>
+	<onimpact>
+		<playeffect effect="effects/state.effect" source="target_entity" target="" occlude="true"/>
+		<damage effecttype="Magic" amount="105,170,250" />
+	</onimpact>
+	
+	<modifier key="ult_boost" modpriority="100">
+		<onimpact>
+			<playeffect effect="effects/state.effect" source="target_entity" target="" occlude="true"/>
+			<damage effecttype="Magic" amount="170,250,310" />
+		</onimpact>
+	</modifier>
+</affector>

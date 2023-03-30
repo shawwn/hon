@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_FlintBeastwood_Ability4"
+	
+	model="/shared/models/invis.mdf"
+	passiveeffect="effects/state.effect"
+	isselectable="false"
+	attacktype="none"
+
+	sightrangeday="1800"
+	sightrangenight="800"
+
+	deathtime="0"
+	corpsetime="0"
+	
+	stealthtype="Unrevealable"
+	fadetime="0"
+	
+	invulnerable="true"
+	flying="false"
+	drawonmap="false"
+>
+
+</gadget>

@@ -1,0 +1,6 @@
+prioritys 1-5 (5 being important)
+
+
+01-18-05 (priority 2)
+3rd person Weapon Idle Animations: Characters only play the gun animations when firing. The gun idle just plays the regular melee idle. It should play (weapon_idle_X) 
+

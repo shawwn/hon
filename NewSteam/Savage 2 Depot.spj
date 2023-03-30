@@ -1,0 +1,18 @@
+Valve Content Tool Studio Workspace File, Format Version 2.10
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+###############################################################################
+
+[Project]
+Project=Savage 2 Depot
+
+[Settings]
+DepotLocation=.\Depot
+BuildState=Release
+LastVersion=31
+Encryption=Constant
+
+[Mapping]
+<root>=..\..\..\Games\Savage 2 - Steam
+
+[Exclude Files]
+verify;game\resources0.s2z;game\textures-high.s2z;game\textures-med.s2z;game\textures-low.s2z;editor\resources0.s2z;editor\textures-high.s2z;editor\textures-med.s2z;editor\textures-low.s2z;modelviewer\resources0.s2z;modelviewer\textures-high.s2z;modelviewer\textures-med.s2z;modelviewer\textures-low.s2z

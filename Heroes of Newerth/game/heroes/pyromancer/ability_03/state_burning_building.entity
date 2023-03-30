@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Pyromancer_Ability3_Burning_Building"
+
+	icon="icon.tga"
+	passiveeffect="effects/burningstatebuilding.effect"
+	
+	effecttype="StatusDebuff"
+>
+	<onframe>
+		<evaluate a="1,2,3,4" b="charges" op="mult" />
+		<evaluate a="result" b="frametime" op="mult" />
+		<damage effecttype="Magic DOT" amount="1" b="result" op="mult" />
+	</onframe>
+	
+	<oninflict>
+		<addcharges count="1" />
+	</oninflict>
+	
+	<onrefresh>
+		<addcharges count="1" />
+	</onrefresh>
+</state>

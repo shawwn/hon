@@ -1,0 +1,12 @@
+Debug
+Release
+savage.aps
+*.user
+Debug\ Lite
+Debug\ LiteSavage\ 2_debug.exe.intermediate.manifest
+Debug\ Litesavage2_debug.exe.intermediate.manifest
+DebugSavage\ 2.exe.intermediate.manifest
+DebugSavage\ 2_debug.exe.intermediate.manifest
+ReleaseSavage\ 2.exe.intermediate.manifest
+Releasesavage2.exe.intermediate.manifest
+savage2.aps

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Electrician_Ability4_Allies_CreepTarget"
+
+	radius="500"
+	
+	impactdelay="0"
+	maximpactsperinterval="1"
+	maximpactspertarget="1"
+	targetscheme="ally_units"
+	targetselection="closest"
+	effecttype=""
+	persist="true"
+	
+	impacteffect=""
+	linkeffect="effects/link_shock.effect"
+>
+	<onimpact>
+		<applystate name="State_Electrician_Ability4_Allies" duration="5000" />
+		<dispel type="StatusDebuff" />
+		<chain count="2"/>
+	</onimpact>
+</affector>

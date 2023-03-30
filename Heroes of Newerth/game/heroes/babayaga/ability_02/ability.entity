@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_BabaYaga2"
+
+	
+	
+	icon="icon.tga"
+	
+	anim="ability_2"
+	casttime="1450"
+	castactiontime="330"
+	casteffect="effects/bats.effect"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_position"
+	activatescheme="movement"
+	
+	manacost="60"
+	cooldowntime="12000,10000,8000,6000"
+	
+	allowoutofrangecast="true"
+	minrange="200"
+	range="800,900,1000,1150"
+>
+	<onimpact >
+		<teleport interpolate="false" target="target_position" />
+		<disjoint target="source_entity" />
+		<playanim name="ability_2_end" target="source_entity" />
+		<playeffect effect="effects/bats_reform.effect" source="source_entity" target="source_entity" />
+	</onimpact>
+</ability>

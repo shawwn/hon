@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Tundra_Ability3"
+
+	speed="1300"
+	gravity=""
+	
+	effectscale="1.0"
+	model="/shared/models/invis.mdf"
+	canturn="true"
+	flying="true"
+	flyheight="0"
+	traileffect="effects/trail.effect"
+	touchradius="50"
+	touchradiusdiradjust="true"
+	touchtargetscheme="enemy_units"
+	toucheffecttype="Physical"
+	maxtouchespertarget="1"
+>
+	<onspawn>
+		<playeffect effect="effects/warp.effect" source="source_entity" target=""/>
+	</onspawn>
+
+	<ontouch>
+		<condition test="target_entity eq proxy_entity">
+			<combatevent effecttype="AbilityBasedProjectile">
+				<onimpact>
+					<damage effecttype="Physical" amount="1" b="source_attackdamage" op="mult" />
+					<applystate name="State_Tundra_Ability3_Debuff" target="target_entity" duration="8000" />
+				</onimpact>
+			</combatevent>
+			<unbind target="source_entity" />
+			<playanim name="idle" target="source_entity"/>
+			<playeffect effect="effects/impact.effect" target="source_entity"/>			
+			<order command="attack" source="source_entity" target="target_entity" queue="front" />			
+		</condition>
+	</ontouch>
+</projectile>

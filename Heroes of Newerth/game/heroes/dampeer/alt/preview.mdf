@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="bolts.max" file="high.model" type="K2" >
+	<anim name="idle" clip="../clips/default_1.clip" fps="25" loop="true"  blendtime="250"/>
+</model>

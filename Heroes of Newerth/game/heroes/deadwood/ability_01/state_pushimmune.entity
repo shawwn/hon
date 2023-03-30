@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Deadwood_Ability1_PushImmunity"
+
+	icon="icon.tga"
+	ishidden="true"
+	
+	passiveeffect=""
+	
+	effecttype=""
+>
+
+</state>

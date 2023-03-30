@@ -1,0 +1,4 @@
+Items that give lifesteal will return the percentage assigned based on the damage dealt post reductions. The actual ammount being dealt to the target. 
+
+
+So if a target has 50% resistance and 100% chance to block 10 damage and the attack is 100dmg. 100 dmg gets 10 knocked off, then 50% of 90 is 45. So if you have 10% lifesteal, you now gain 4.5 hp. The damage considered here is the Primary Damage in its final phase.

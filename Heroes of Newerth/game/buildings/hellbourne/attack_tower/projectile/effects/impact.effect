@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<modifier
+			name="modifier0"
+			life="400"
+			startcolor="4 2 1"
+			endcolor="1"
+		/>
+
+		<particlesystem name="system0" space="world" scale="0.9">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="1800"
+				volume="0.25" 
+				sample="/buildings/hellbourne/attack_tower/sounds/impact_%.wav"
+			/>
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="1800"
+				volume="0.15" 
+				sample="/heroes/pyromancer/sounds/impact_%.wav"
+			/>			
+
+			<simpleemitter	
+				depthbias="-20"		
+				spawnrate="1000"
+				count="12"
+				bone="_bone_centerofchest"
+				particlelife="600"
+				life="500"				
+				material="/shared/effects/materials/phantom_smoke_04.material"
+				offsetsphere="35"
+				direction="0 0 1"
+			>
+					<particle 
+						minangle="-360"
+						maxangle="360"
+						minanglespeed="-80"
+						maxanglespeed="-80"
+						startcolor="1"
+						midcolor="1 .1 0"
+						endcolor="0 0 0"
+						midcolorpos=".4"
+						startsize="20"
+						endsize="70"
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".4"
+						startanchor=".5"
+						endanchor="0"
+					/>
+			</simpleemitter>			
+			
+			<simpleemitter
+				life="1800"
+				spawnrate="500"
+				count="40"
+				particlelife="1000"			
+				gravity="1"
+				minspeed="20"
+				maxspeed="100"
+				drag=".01"
+				position="0 0 55"
+				material="/shared/effects/materials/spark_10.material"
+				offsetsphere="25"
+				minangle="-10"
+				maxangle="70"
+				direction="0 0 1"
+			>
+					<particle 
+						startcolor="1 .3 .3"
+						midcolor="1 .3 .3"
+						endcolor="0 0 0"
+						midcolorpos=".2"
+						startsize="10"
+						midsize="6"
+						endsize="6"
+						startalpha="0"
+						midalpha=".7"
+						endalpha="0"
+						midalphapos=".5"
+						startanchor=".4"
+						endanchor="0"
+					/>			
+			</simpleemitter>
+
+			<billboard
+				bone="_bone_centerofchest"
+				life="400"
+				startcolor=".3 .05 0"
+				endcolor="0"
+				startsize="175"
+				endsize="0"
+				depthbias="-50"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+			
+			<simpleemitter 
+				expirelife="200"   
+				bone="_bone_centerofchest"
+				spawnrate="50"
+				life="1000"
+				gravity="-1"
+				speed="40"
+				minparticlelife="100"
+				maxparticlelife="500"			
+				offsetsphere="25 25 5"
+				direction="0 0 1"
+				minangle="10"
+				maxangle="40"
+				drag="0.05"
+				material="/shared/effects/materials/smoke_particle.material"
+	        >
+					<particle 
+						minangle="-360"
+						maxangle="360"
+						minanglespeed="-90"
+						maxanglespeed="90"
+						startcolor=".4 0 0"
+						endcolor=".2 0 0"
+						size="12"
+						minendscale="4"
+						maxendscale="8"
+						startalpha=".4"
+						endalpha="0"
+					/>
+					<particle 
+						minangle="-360"
+						maxangle="360"
+						minanglespeed="-90"
+						maxanglespeed="90"
+						startcolor=".3 0 0"
+						endcolor=".3 0 0"
+						size="12"
+						minendscale="4"
+						maxendscale="8"
+						startalpha=".4"
+						endalpha="0"
+					/>
+			</simpleemitter>
+
+					<billboard
+						bone="_bone_centerofchest"
+						life="400"
+						param="0.01"	
+						startsize="60"
+						endsize="250"
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"				
+						depthbias="0"
+						material="/shared/effects/materials/refract_pinch.material"
+						lockup="0"
+						pitch="0"
+					/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+		<spawnmodifier instance="instance1" modifier="modifier0"/>
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="dragon_slave" persistent="true" useentityeffectscale="true">
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="2500"
+				falloffend="2500"
+				volume="1"
+				delay="500"
+				sample="../sounds/cast.wav"
+			/>
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2500"
+				volume=".75"
+				sample="../sounds/impact.wav"
+			/>
+
+			<light
+				life="1150"			
+				startcolor="1 3 5"			
+				endcolor="0 0 0"
+				midcolorpos=".2"
+				falloffstart="130"
+				falloffend="255"
+				position="0 0 50"	
+			/>		
+			
+			<simpleemitter
+				count="1"
+				spawnrate="50"
+				particlelife="750"
+				acceleration="0.0"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+				position="0 250 0"
+			>
+				<particle
+					turn="1"
+					lockup="true"
+				>
+					<model
+						life="3000"
+						position="0 0 -110"
+						name="emitter0" 
+						anim="idle"
+						model="rifts/model.mdf"
+						startscale=".9"
+						midscale="1"
+						endscale="1"
+						midscalepos=".02"
+						startcolor="1 1 1"
+						midcolor="1 1 1"
+						endcolor="1 1 1"
+						midcolorpos=".75"
+						startalpha="1"
+						endalpha="0"
+						yaw="180"
+					>
+					
+						<model
+							position="100 250 100"
+							life="1500"
+							name="emitter0"
+							offsetsphere="0 0 0"
+							anim="idle"
+							model="rifts/shards/model.mdf"
+							minscale=".6"
+							maxscale=".65"
+							color=".5 .5 .5"
+							midcolorpos=".75"
+							startalpha=".7"
+							midalpha=".7"
+							endalpha="0"
+							minyaw="0"
+							maxyaw="180"
+						>
+							<billboard
+								life="1000"
+								startcolor="0 .5 .5"
+								midcolor="0 .5 .5"
+								midcolorpos="0.3"
+								endcolor="0"
+								startsize="175"
+								endsize="0"
+								depthbias="0"
+								material="/shared/effects/materials/whitedot.material"
+								position="0 0 10"
+							/>
+							
+							<billboard
+								position="0 0 10"
+								delay="0"
+								life="350"
+								param="0.1"	
+								startsize="50"
+								endsize="150"
+								startalpha="0"
+								midalpha=".4"
+								endalpha="0"				
+								depthbias="0"
+								material="/shared/effects/materials/refract_swell.material"
+								lockup="1"
+								lockright="1"
+								pitch="90"
+							/>
+							
+							<billboard
+								position="0 0 10"
+								delay="175"
+								life="350"
+								param="0.1"	
+								startsize="50"
+								endsize="150"
+								startalpha="0"
+								midalpha=".4"
+								endalpha="0"				
+								depthbias="0"
+								material="/shared/effects/materials/refract_swell.material"
+								lockup="1"
+								lockright="1"
+								pitch="90"
+							/>
+							
+							<groundsprite
+								delay="0"
+								life="3000"
+								material="/shared/effects/materials/ice_blob_overlay.material"
+								size="150"
+								minyaw="-360"
+								maxyaw="360"
+								color=".5 1 1"
+								startalpha=".2"
+								endalpha="0"
+							/>
+						</model>
+						
+						<model
+							position="0 -100 100"
+							life="1500"
+							name="emitter0"
+							offsetsphere="0 0 0"
+							anim="idle"
+							model="rifts/shards/model.mdf"
+							minscale=".5"
+							maxscale=".65"
+							color=".5 .5 .5"
+							midcolorpos=".75"
+							startalpha=".7"
+							midalpha=".7"
+							endalpha="0"
+							minyaw="0"
+							maxyaw="180"
+						>
+							<billboard
+								life="1000"
+								startcolor="0 .5 .5"
+								midcolor="0 .5 .5"
+								midcolorpos="0.3"
+								endcolor="0"
+								startsize="175"
+								endsize="0"
+								depthbias="0"
+								material="/shared/effects/materials/whitedot.material"
+								position="0 0 10"
+							/>
+							
+							<billboard
+								position="0 0 10"
+								delay="0"
+								life="350"
+								param="0.1"	
+								startsize="50"
+								endsize="150"
+								startalpha="0"
+								midalpha=".4"
+								endalpha="0"				
+								depthbias="0"
+								material="/shared/effects/materials/refract_swell.material"
+								lockup="1"
+								lockright="1"
+								pitch="90"
+							/>
+							
+							<billboard
+								position="0 0 10"
+								delay="175"
+								life="350"
+								param="0.1"	
+								startsize="50"
+								endsize="150"
+								startalpha="0"
+								midalpha=".4"
+								endalpha="0"				
+								depthbias="0"
+								material="/shared/effects/materials/refract_swell.material"
+								lockup="1"
+								lockright="1"
+								pitch="90"
+							/>
+							
+							<groundsprite
+								delay="0"
+								life="3000"
+								material="/shared/effects/materials/ice_blob_overlay.material"
+								size="150"
+								minyaw="-360"
+								maxyaw="360"
+								color=".5 1 1"
+								startalpha=".2"
+								endalpha="0"
+							/>
+						</model>
+						
+						<model
+							position="100 50 100"
+							life="1500"
+							name="emitter0"
+							offsetsphere="0 0 0"
+							anim="idle"
+							model="rifts/shards/model.mdf"
+							minscale=".45"
+							maxscale=".55"
+							color=".5 .5 .5"
+							midcolorpos=".75"
+							startalpha=".7"
+							midalpha=".7"
+							endalpha="0"
+							minyaw="0"
+							maxyaw="180"
+						>
+							<billboard
+								life="1000"
+								startcolor="0 .5 .5"
+								midcolor="0 .5 .5"
+								midcolorpos="0.3"
+								endcolor="0"
+								startsize="175"
+								endsize="0"
+								depthbias="0"
+								material="/shared/effects/materials/whitedot.material"
+								position="0 0 10"
+							/>
+							
+							<billboard
+								position="0 0 10"
+								delay="0"
+								life="350"
+								param="0.1"	
+								startsize="50"
+								endsize="150"
+								startalpha="0"
+								midalpha=".4"
+								endalpha="0"				
+								depthbias="0"
+								material="/shared/effects/materials/refract_swell.material"
+								lockup="1"
+								lockright="1"
+								pitch="90"
+							/>
+							
+							<billboard
+								position="0 0 10"
+								delay="175"
+								life="350"
+								param="0.1"	
+								startsize="50"
+								endsize="150"
+								startalpha="0"
+								midalpha=".4"
+								endalpha="0"				
+								depthbias="0"
+								material="/shared/effects/materials/refract_swell.material"
+								lockup="1"
+								lockright="1"
+								pitch="90"
+							/>
+							
+							<groundsprite
+								delay="0"
+								life="3000"
+								material="/shared/effects/materials/ice_blob_overlay.material"
+								size="150"
+								minyaw="-360"
+								maxyaw="360"
+								color=".5 1 1"
+								startalpha=".2"
+								endalpha="0"
+							/>
+						</model>
+
+						<template name="puddles">
+							<groundsprite
+								delay="{blob_delay}"
+								bone="{bone}"
+								life="1500"
+								material="/shared/effects/materials/ice_blob_overlay.material"
+								startsize="0"
+								midsize="40"
+								endsize="70"
+								midsizepos=".25"
+								minyaw="-360"
+								maxyaw="360"
+								color=".5 1 1"
+								startalpha=".1"
+								midalpha=".1"
+								endalpha="0"
+								midalphapos=".9"
+							/>
+							
+							<billboard
+								delay="{delay}"
+								bone="{bone}"
+								position="0 0 25"
+								life="350"
+								param="0.1"	
+								startsize="100"
+								endsize="200"
+								startalpha="0"
+								midalpha=".5"
+								endalpha="0"				
+								depthbias="0"
+								material="/shared/effects/materials/refract_swell.material"
+								lockup="1"
+								lockright="1"
+								pitch="90"
+							/>
+							
+							<billboard
+								delay="{delay1}"
+								bone="{bone}"
+								position="0 0 25"
+								life="350"
+								param="0.1"	
+								startsize="50"
+								endsize="150"
+								startalpha="0"
+								midalpha=".5"
+								endalpha="0"				
+								depthbias="0"
+								material="/shared/effects/materials/refract_swell.material"
+								lockup="1"
+								lockright="1"
+								pitch="90"
+							/>
+						
+						</template>
+
+						<instance name="puddles" blob_delay="800" delay="2000" delay1="2050" bone="iceBox01" />
+						<instance name="puddles" blob_delay="0" delay="1000" delay1="1050" bone="iceBox02" />
+						<instance name="puddles" blob_delay="500" delay="1600" delay1="1650" bone="iceBox03" />
+						<instance name="puddles" blob_delay="250" delay="1350" delay1="1400" bone="iceBox04" />
+						<instance name="puddles" blob_delay="900" delay="2000" delay1="2050" bone="iceBox05" />
+						<instance name="puddles" blob_delay="1300" delay="2400" delay1="2450" bone="iceBox06" />
+
+						<billboard
+							bone="_bone_fx_07"
+							life="750"
+							material="/shared/effects/materials/whitedot.material"
+							startcolor="1 1 1"
+							midcolor="0 0 0"
+							endcolor="0 0 0"
+							startsize="250"
+							endsize="85"
+							depthbias="-30"
+							position="100 -100 75"
+						/>
+						
+					</model>
+					
+					<groundsprite
+						life="2500"
+						material="/shared/effects/materials/ground_smash_overlay.material"
+						size="150"
+						color="1 1 1"
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".02"
+						position="0 -150 0"
+					/>
+					
+					<groundsprite
+						life="2500"
+						material="/shared/effects/materials/ground_smash_overlay.material"
+						size="150"
+						color="1 1 1"
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".02"
+						position="0 150 0"
+					/>
+					
+					<groundsprite
+						life="2500"
+						material="/shared/effects/materials/ground_smash_overlay.material"
+						size="150"
+						color="1 1 1"
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".02"
+						position="0 0 0"
+					/>
+					
+					<groundsprite
+						life="2500"
+						position="0 150 0"
+						material="/shared/effects/materials/earth_cracks_overlay.material"
+						minsize="175"
+						maxsize="250"
+						maxyaw="360"
+						startalpha=".5"
+						midalpha=".5"
+						endalpha="0"
+					/>
+					
+					<groundsprite
+						life="2500"
+						position="0 0 0"
+						material="/shared/effects/materials/earth_cracks_overlay.material"
+						minsize="175"
+						maxsize="250"
+						maxyaw="360"
+						startalpha=".5"
+						midalpha=".5"
+						endalpha="0"
+					/>
+					
+					<groundsprite
+						life="2500"
+						position="0 -150 0"
+						material="/shared/effects/materials/earth_cracks_overlay.material"
+						minsize="175"
+						maxsize="250"
+						maxyaw="360"
+						startalpha=".5"
+						midalpha=".5"
+						endalpha="0"
+					/>
+
+					<!--lightrays-->
+					<simpleemitter
+						delay="50"
+						count="20"
+						spawnrate="165"
+						particlelife="850"
+						gravity="0"
+						speed="0"
+						drag="0"
+						acceleration="0"
+						position="-50 -100 0"
+						offsetsphere="0 250 0"
+					>
+						<particle>
+
+							<simpleemitter
+								offsetsphere="75 75 0"
+								spawnrate="500"
+								count="1"
+								minparticlelife="1250"
+								maxparticlelife="1750"
+								acceleration="0"
+								position="0 0 150"
+								direction="0 0 0"
+								material="/shared/effects/materials/light_rays.material"
+							>
+								<particle
+									startcolor="0 .04 .05"
+									midcolor="0 0 0"
+									endcolor="0 0 0"
+									width="270"
+									startheight="250"
+									endheight="25"
+									anchor="1"
+									lockup="1"
+									lockright="false"
+								/>
+							</simpleemitter>	
+							
+							<simpleemitter
+								offsetsphere="75 75 0"
+								spawnrate="500"
+								count="1"
+								minparticlelife="1250"
+								maxparticlelife="1750"
+								acceleration="0"
+								position="0 0 150"
+								direction="0 0 0"
+								material="/shared/effects/materials/light_rays.material"
+							>
+								<particle
+									startcolor="0 .25 .4"
+									midcolor="0 0 0"
+									endcolor="0 0 0"
+									width="20"
+									startheight="350"
+									endheight="25"
+									anchor="1"
+									lockup="1"
+									lockright="false"
+								/>
+							</simpleemitter>					
+
+							<simpleemitter
+								offsetsphere="75 75 0"
+								spawnrate="500"
+								count="1"
+								minparticlelife="1250"
+								maxparticlelife="1750"
+								acceleration="0"
+								position="0 0 150"
+								direction="0 0 0"
+								material="/shared/effects/materials/light_rays.material"
+							>
+								<particle
+									startcolor="0 .25 .4"
+									midcolor="0 0 0"
+									endcolor="0 0 0"
+									width="70"
+									startheight="350"
+									endheight="25"
+									anchor="1"
+									lockup="1"
+									lockright="false"
+								/>
+							</simpleemitter>
+							
+
+
+							<simpleemitter	
+								offsetsphere="60 60 0"
+								spawnrate="500"
+								count="5"
+								particlelife="12bn00"
+								gravity="-3"
+								drag=".05"
+								acceleration="0"
+								speed="250"
+								position="0 0 35"
+								direction="0 0 0"
+								material="/shared/effects/materials/phantom_smoke_04.material"
+							>
+								<particle
+									minangle="-360"
+									maxangle="360"
+									startcolor="0 0 0"
+									midcolor="0 .3 .5"
+									endcolor="0 0 0"
+									minstartsize="10"
+									maxstartsize="30"
+									minendsize="75"
+									maxendsize="100"
+									minanglespeed="-30"
+									maxanglespeed="33"
+									anchor="1"
+									lockup="0"
+									lockright="false"
+									turn="false"
+								/>
+							</simpleemitter>
+
+							<simpleemitter
+								offsetsphere="100 100 0"
+								spawnrate="20"
+								count="26"
+								particlelife="1000"
+								gravity="-.5"
+								acceleration="0"
+								speed="10"
+								position="0 0 50"
+								material="/shared/effects/materials/pyroclast_01.material"
+								inheritvelocity="0"
+							>
+								<particle
+										minangle="-360"
+										maxangle="360"
+										color=".2 .3 .4"
+										minstartsize="10"
+										maxstartsize="50"
+										minendsize="100"
+										maxendsize="200"
+										minanglespeed="-30"
+										maxanglespeed="33"
+										startalpha="0"
+										midalpha=".15"
+										endalpha="0"
+										midalphapos=".15"
+										frame="1"
+										framespeed="1"
+										startanchor="0"
+										endanchor=".15"
+										lockup="0"
+										lockright="false"
+										turn="false"
+								/>
+							</simpleemitter>
+						</particle>
+					</simpleemitter>
+					
+					<!--splashes of light-->
+					<simpleemitter
+						delay="50"
+						count="6"
+						spawnrate="75"
+						particlelife="3000"
+						gravity="0"
+						speed="0"
+						drag="0"
+						acceleration="0"
+						position="-60 -100 0"
+						offsetsphere="35 250 0"
+					>
+						<particle>
+						
+							<billboard
+								life="1000"
+								startcolor="0 .5 .5"
+								midcolor="0 .5 .5"
+								midcolorpos="0.3"
+								endcolor="0"
+								startsize="175"
+								endsize="0"
+								depthbias="0"
+								material="/shared/effects/materials/whitedot.material"
+								position="0 0 5"
+							/>
+							
+							<billboard
+								position="0 0 5"
+								delay="0"
+								life="350"
+								param="0.1"	
+								startsize="50"
+								endsize="150"
+								startalpha="0"
+								midalpha=".4"
+								endalpha="0"				
+								depthbias="0"
+								material="/shared/effects/materials/refract_swell.material"
+								lockup="1"
+								lockright="1"
+								pitch="90"
+							/>
+							
+							<billboard
+								position="0 0 5"
+								delay="175"
+								life="350"
+								param="0.1"	
+								startsize="50"
+								endsize="150"
+								startalpha="0"
+								midalpha=".4"
+								endalpha="0"				
+								depthbias="0"
+								material="/shared/effects/materials/refract_swell.material"
+								lockup="1"
+								lockright="1"
+								pitch="90"
+							/>
+							
+						</particle>
+					</simpleemitter>
+
+				</particle>
+			</simpleemitter>
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

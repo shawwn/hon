@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" deferred="true" useentityeffectscale="1">
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="2">
+
+			<sound
+				volume=".5"
+				sample="../sounds/impact_%.wav"
+				linearfalloff="true"
+				falloffstart="0"
+				falloffend="2000"
+			/>
+
+			<sound
+				volume=".2"
+				sample="/heroes/pyromancer/sounds/impact_%.wav"
+				linearfalloff="true"
+				falloffstart="0"
+				falloffend="2000"
+			/>
+
+			<simpleemitter
+				bone="_bone_center"
+				spawnrate="1500"
+				count="7"
+				minparticlelife="400"
+				maxparticlelife="1200"
+				gravity="-20"
+				drag="0.5"
+				material="/shared/effects/materials/phantom_black.material"
+				position="0 0 15"
+				offsetsphere="15 15 15"
+			>
+				<particle 
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-50"
+					maxanglespeed="50"
+					startcolor="0 0 0"
+					midcolor="3 0 0"
+					endcolor="0 0 0"
+					midcolorpos="0.3"
+					startalpha="0"
+					midalpha=".5"
+					endalpha="0"
+					startsize="50"
+					endsize="100"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				spawnrate="2000"
+				count="2"
+				particlelife="400"
+				material="/shared/effects/materials/star_04.material"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="0 0 0"
+					midcolor="0 0 .25"
+					endcolor="0 0 0"
+					size="200"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				life="500"
+				spawnrate="30"
+				particlelife="500"
+				gravity="0"
+				offsetsphere="30 0 0"
+				minspeed="5"
+				maxspeed="15"
+				drag="0"
+				acceleration="0"
+				direction="0 0 0"
+				material="/shared/effects/materials/wisp_03.material"
+			>
+				<particle 
+					startcolor=".2 0 .25"
+					midcolor=".2 0 .25"
+					endcolor="0 0 0"
+					midcolorpos="0.4"
+					minangle="0"
+					maxangle="360"
+					startsize="0"
+					midsize="40"
+					endsize="15"
+					midsizepos=".2"
+					startalpha=".2 .2 .2"
+					minanglespeed="-90"
+					maxanglespeed="90"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				life="300"
+				spawnrate="15"
+				particlelife="400"
+				gravity="-6"
+				speed="0.0"
+				acceleration="0.0"
+				timenudge="0"
+				position="0 0 0"
+				material="/shared/effects/materials/flare_01.material"
+			>
+				<particle
+					startcolor=".125 0 0"
+					endcolor="0 0 0"
+					startalpha=".02"
+					endalpha="0"
+					minangle="0"
+					maxangle="360"
+					minanglespeed="0"
+					maxanglespeed="0"
+					startsize="125"
+					midsize="100"
+					endsize="50"
+					lockup="true"
+					pitch="90"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				count="1"
+				particlelife="200"
+				gravity="-6"
+				speed="0.0"
+				acceleration="0.0"
+				timenudge="0"
+				position="0 0 0"
+				material="/shared/effects/materials/blink.material"
+			>
+				<particle
+					minangle="0"
+					maxangle="90"
+					anglespeed="90"
+					startcolor="0 0 0"
+					midcolor=".3 .1 0"
+					endcolor="0.0 0.0 0.0"
+					midcolorpos=".1"
+					startsize="150"
+					midsize="125"
+					endsize="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				count="25"
+				minparticlelife="400"
+				maxparticlelife="600"
+				spawnrate="350"
+				gravity="0"
+				drag=".05"
+				speed="50"
+				position="0 0 0"
+				material="/shared/effects/materials/phantom_smoke_04.material"
+				offsetsphere="25 25 0"
+				direction="0 0 1"
+			>
+				<particle
+					anglespeed="25"
+					minangle="0"
+					maxangle="360"
+					startcolor=".35 0 .05"
+					midcolor=".35 0 .05"
+					endcolor="0 0 0"
+					midcolorpos=".5"
+					startsize="40"
+					endsize="25"
+					mindsizepos=".1"
+				/>
+			</simpleemitter>
+
+			<billboard
+				life="350"
+				bone="_bone_centerofchest"
+				startcolor="0 0 0"
+				midcolor=".25 0 0"
+				endcolor="0 0 0"
+				position="0 0 00"
+				material="/shared/effects/materials/flare_05.material"
+				startsize="100"
+				endsize="300"
+				depthbias="-80"
+				lockup="1"
+				lockright="1"
+			/>
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+			<waitfordeath instance="instance0" />
+	</thread>
+</effect>

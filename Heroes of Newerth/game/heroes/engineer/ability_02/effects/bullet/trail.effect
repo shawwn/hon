@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+	<definitions>
+
+		<particlesystem name="system0" space="local" scale="1">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".5"
+				sample="../../sounds/attack_%.wav"
+			/>
+		
+			<model
+				life="70"
+				parentmodel="true"
+				parentskeleton="true"
+				startcolor="7 3 1"
+				endcolor="0 0 0"
+				startscale="1.75"
+				midscale="1.75"
+				endscale="1"
+				midscalepos=".4"
+				material="/shared/effects/materials/shell2.material"
+			/>
+			
+			<trailemitter
+				spawnrate="50"
+				particlelife="250"
+				texpostime="250"
+				texposscale="0.0"
+				texstretchscale=".4"
+				material="/shared/effects/materials/arrow_trail.material"
+			>
+				<particle
+					startcolor=".3 0.175 0.06"
+					midcolor=".3 0.175 0.06"
+					endcolor="0 0 0"
+					startsize="10"
+					midsize="140"
+					endsize="30"
+					midsizepos="0.2"
+			/>
+			</trailemitter>
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+

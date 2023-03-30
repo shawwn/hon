@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="rig.max" file="high.model" type="K2" high="high.model" med="med.model" low="low.model" >
+	
+	<anim name="idle" clip="clips/default_1.clip" fps="30" loop="true"/>
+	
+	<anim name="portrait" clip="clips/portrait.clip" loop="true"/>
+	
+	<anim name="attack_1" clip="clips/attack_1.clip" fps="29" loop="false" blendtime="200">
+		<frameevent frame="12" cmd="PlaySoundLinear /shared/sounds/attacks/attack_medium_%.wav 400 2000 .65"/>
+	</anim>
+	
+	<anim name="attack_2" clip="clips/attack_2.clip" fps="29" loop="false" blendtime="200">
+		<frameevent frame="15" cmd="PlaySoundLinear /shared/sounds/attacks/attack_medium_%.wav 400 2000 .65"/>
+		<frameevent frame="12" cmd="PlaySoundLinear sounds/attack_grunt_%.wav 400 2000 .85"/>
+	</anim>
+	
+	<anim name="walk_1" clip="clips/walk_1.clip" fps="33" loop="true" >
+		<frameevent frame="7" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="15" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="37" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="50" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="82" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="99" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="115" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		
+		<frameevent frame="7" cmd="PlaySoundLinear /shared/sounds/footsteps/heavy_%.mp3 0 2400 .25"/>
+		<frameevent frame="15" cmd="PlaySoundLinear /shared/sounds/footsteps/heavy_%.mp3 0 2400 .25"/>
+		<frameevent frame="15" cmd="StartEffect /shared/effects/footstep_l_#GetTerrainType()#.effect"/>
+		<frameevent frame="15" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+		<frameevent frame="34" cmd="PlaySoundLinear /shared/sounds/footsteps/heavy_%.mp3 0 2400 .25"/>
+		<frameevent frame="37" cmd="PlaySoundLinear /shared/sounds/footsteps/heavy_%.mp3 0 2400 .25"/>
+		<frameevent frame="37" cmd="StartEffect /shared/effects/footstep_l_#GetTerrainType()#.effect"/>
+		<frameevent frame="37" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+		<frameevent frame="50" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+		<frameevent frame="50" cmd="PlaySoundLinear /shared/sounds/footsteps/heavy_%.mp3 0 2400 .25"/>
+		<frameevent frame="76" cmd="PlaySoundLinear /shared/sounds/footsteps/heavy_%.mp3 0 2400 .25"/>
+		<frameevent frame="82" cmd="PlaySoundLinear /shared/sounds/footsteps/heavy_%.mp3 0 2400 .25"/>
+		<frameevent frame="82" cmd="StartEffect /shared/effects/footstep_l_#GetTerrainType()#.effect"/>
+		<frameevent frame="82" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+		<frameevent frame="99" cmd="PlaySoundLinear /shared/sounds/footsteps/heavy_%.mp3 0 2400 .25"/>
+		<frameevent frame="99" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+		<frameevent frame="115" cmd="PlaySoundLinear /shared/sounds/footsteps/heavy_%.mp3 0 2400 .25"/>
+		<frameevent frame="115" cmd="StartEffect /shared/effects/footstep_l_#GetTerrainType()#.effect"/>
+		<frameevent frame="130" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+		<frameevent frame="130" cmd="PlaySoundLinear /shared/sounds/footsteps/heavy_%.mp3 0 2400 .25"/>
+	</anim>
+	
+	<anim name="death_1" clip="clips/death_1.clip" fps="30" loop="true" loopbackframe="-1">
+		<frameevent frame="1" cmd="PlaySoundLinear sounds/death.wav 400 2000 .75"/>
+	</anim>
+	
+	<anim name="ability_1_start" clip="clips/ability_1_start.clip" fps="30" loop="false" blendtime="100"/>
+
+	<anim name="ability_1_hit" clip="clips/ability_1_hit.clip" fps="30" loop="false" blendtime="100"/>
+	
+	<anim name="ability_2" clip="clips/ability_2.clip" fps="30" loop="false" blendtime="100">
+		<frameevent frame="1" cmd="PlaySoundLinear ability_02/sounds/impact.wav 1000 2500 1"/>
+		<frameevent frame="1" cmd="PlaySoundLinear ability_02/sounds/cast.wav 1000 2500 .65"/>
+	</anim>	
+	
+	<anim name="ability_4" clip="clips/ability_4.clip" fps="30" loop="false"/>
+
+	<anim name="knock_1" clip="clips/knock_1.clip" loop="true" loopbackframe="-1"/>
+	
+	<anim name="bored_1" clip="clips/bored_1.clip" fps="30" loop="false"/>
+
+	<anim name="taunt_1" clip="clips/taunt_1.clip" fps="30" loop="false"/>
+	
+</model>

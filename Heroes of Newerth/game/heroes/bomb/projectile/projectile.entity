@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Bombardier_Attack"
+
+	speed="1000"
+	gravity="2000"
+
+	modelscale="1.7"
+	model="model.mdf"
+
+	traileffect="effects/trail.effect"
+	impacteffect="effects/impact.effect"
+>
+</projectile>

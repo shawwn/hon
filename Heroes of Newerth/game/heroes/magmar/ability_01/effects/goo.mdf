@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="" file="goo.model" type="K2" >
+<anim name="idle" clip="goo.clip" loopbackframe="-1" loop="1" />
+</model>
+

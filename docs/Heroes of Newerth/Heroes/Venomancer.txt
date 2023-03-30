@@ -1,0 +1,32 @@
+Ability 1:
+----------
+Ranged Spell, single enemy target. Deals magic damage over time and slows. This has a few key variablles.
+-Initial Damage
+-Damage over time
+-Delay before DoT starts
+-DoT interval
+-Duration
+-Initial Slow
+-Initial Slow duration
+-Secondary slow 
+-Secondary slow decay rate
+
+
+
+Ability 2:
+----------
+Passive. This adds poison damage to your attacks, slows the target's movement speed and deals damage over time. This poison is not lethal and does not stack with itself, instead resets the timer. 
+
+
+Ability 3:
+----------
+Summons an immobile ward that is immune to magic. Deals minor damage over time and slow on its attacks.
+
+
+Ultimate:
+----------
+Creates an expanding ring of poison, if it hits an enemy unit, creates a heavy non-lethal damage over time.
+
+
+
+Agility/Ranged

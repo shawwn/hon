@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Bombardier_Ability4"
+	
+	icon="icon.tga"
+	passiveeffect=""
+
+	ishidden="true"
+
+	unitwalking="true"
+	effecttype=""
+	impactinterval="250"
+	
+>
+	<oninflict>
+		<setaccumulator value="0" />
+	</oninflict>
+	<onimpact>
+		<condition test="accumulator eq 0">
+			<playeffect effect="effects/cast.effect" target="source_entity" />
+			<setaccumulator value="1" />
+		</condition>
+		<spawnaffector name="Affector_Bombardier_Ability4" target="target_position" owner="this_inflictor_entity" source="target_entity" firsttarget="" />
+	</onimpact>
+</state>

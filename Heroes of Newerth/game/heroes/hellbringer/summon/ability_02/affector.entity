@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Malphas_Ability2"
+
+	radiusstart="50"
+	radiusend="650"
+	
+	arcstart="30"
+	arcend="50"
+	
+	lifetime="400"
+	maximpactspertarget="1"
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Magic"
+	persist="true"
+	impacteffect="impact.effect"
+>
+	<onimpact>
+		<damage effecttype="Magic" amount="100,150,200"/>
+	</onimpact>
+</affector>

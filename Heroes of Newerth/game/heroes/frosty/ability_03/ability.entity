@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Frosty3"
+
+	
+	
+	icon="icon.tga"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="passive"
+>
+	<aura state="State_Frosty_Ability3" radius="9999" targetscheme="ally_heroes"/>
+</ability>

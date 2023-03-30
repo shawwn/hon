@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="light_strike">
+	<definitions>
+		<particlesystem name="system0" space="entity">
+
+			<beam
+
+				life="450"
+				bone_a="_bone_fx_08"
+				bone_b="_bone_fx_08"
+
+
+				position_a="0 0 450"
+
+
+				size="50"
+				color="1 1 1"
+				alpha="1.0"
+				material="/shared/effects/materials/femme_lightning_06.material"
+
+				framespeed="1.75"
+
+			/>
+
+			<beam
+
+				life="450"
+				bone_a="_bone_fx_08"
+				bone_b="_bone_fx_08"
+
+
+				position_a="0 0 560"
+				size="50"
+				color=".5 .5 .5"
+				alpha="1.0"
+				material="/shared/effects/materials/femme_lightning_06.material"
+
+				framespeed="1.75"
+
+			/>
+
+
+
+
+			<beam
+
+				life="450"
+				bone_a="_bone_fx_08"
+				bone_b="_bone_fx_08"
+
+
+				position_a="0 0 560"
+				size="50"
+				color="1 1 1"
+				alpha="1.0"
+				material="/shared/effects/materials/femme_lightning_06.material"
+
+				framespeed="1.75"
+
+			/>
+
+		<simpleemitter
+		
+			spawnrate="55"
+			life="250"
+			particlelife="1000"			
+			gravity="0"
+			speed="0"
+			drag=".01"
+			acceleration="0"
+			position="0 0 560"
+			timenudge="500"
+
+			material="/shared/effects/materials/bad_heal_smoke_06.material"
+			offsetsphere="25 25 5"
+			minangle="265"
+			maxangle="265"
+			direction="0 0 -1"
+			offsetdirection="0 0 0"
+			offsetradial="0 0 0"
+		>
+
+
+			<particle 
+				minangle="0"
+				maxangle="45"
+				minanglespeed="50"
+				maxanglespeed="150"
+
+				startcolor="1 1 1"
+				midcolor=".3 .3 1"
+				endcolor=".0 .3 1"
+				midcolorpos=".8"
+
+				startframe="0"
+				endframe="1"
+				startsize="50"
+				midsize="50"
+				endsize="50"
+				midsizepos=".05"	
+				
+				
+				startalpha=".0"
+				midalpha=".9"
+				endalpha="0"
+
+				midalphapos=".5"
+				startstickiness="0"
+				endstickiness="0"
+
+
+			/>
+
+			
+
+		</simpleemitter>
+			
+
+
+
+
+
+        
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="body">
+	<definitions>
+		<particlesystem name="system0" space="entity">
+
+			<billboard
+				bone="_bone_centerofchest"	
+				material="/shared/effects/materials/whitedot.material"
+				color="0 0.051 0.12"
+				size="110"
+				depthbias="-30"
+			/>
+
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

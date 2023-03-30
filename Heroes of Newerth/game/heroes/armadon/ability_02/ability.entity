@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Armadon2"
+	
+	
+	
+	
+	statuseffecttooltip="State_Armadon_Ability2"
+	icon="icon.tga"
+	
+	anim="ability_2"
+	casttime="600"
+	castactiontime="0"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="self_position"
+	targetscheme="enemy_units"
+	casteffecttype="Physical"
+	targetradius="650"
+	frontqueue="true"
+	inheritmovement="true"	
+	
+	cooldowntime="3000"
+	manacost="35"
+	casteffect="effects/cast.effect"
+	
+	modifierkey="spineburst1,spineburst2,spineburst3,spineburst4"
+>
+	<onimpact >
+		<spawnaffector name="Affector_Armadon_Ability2" target="source_position"/>
+	</onimpact>
+</ability>

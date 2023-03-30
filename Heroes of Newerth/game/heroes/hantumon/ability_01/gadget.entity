@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Hantumon_Ability1"
+
+	isselectable="false"
+	ismobile="false"
+	canrotate="false"
+	invulnerable="true"
+	
+	model="/shared/models/invis.mdf"
+	passiveeffect="effects/ability_01.effect"
+	
+	lifetime="6000"
+	deathtime="0"
+	corpsetime="0"
+>
+	<aura state="State_Hantumon_Ability1_Self" radius="250,275,300,325" targetscheme="my_units" effecttype="Magic" />
+	
+	<aura state="State_Hantumon_Ability1" radius="250,275,300,325" targetscheme="enemy_units" effecttype="Magic" />
+</gadget>

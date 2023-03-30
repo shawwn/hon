@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Moraxus_Ability2_Buff"
+	
+	icon="icon.tga"
+	passiveeffect="effects/statebuff.effect"
+	effecttype="StatusBuff"
+	
+	damage="20,40,60,80"
+	movespeed="70,110,150,190"
+	modifierkey="ability2_blocked"
+>
+	<onframe />
+</state>

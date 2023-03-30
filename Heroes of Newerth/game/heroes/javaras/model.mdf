@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="rig.max" file="high.model" type="K2" high="high.model" med="med.model" low="low.model" >
+
+	<anim name="idle" clip="clips/default_1.clip" fps="30" loop="true" blendtime="400"/>
+
+	<anim name="portrait" clip="clips/portrait.clip" fps="30" loop="true" blendtime="400"/>
+		
+	<anim name="ability_2" clip="clips/ability_2.clip" fps="80" loop="false"/>
+
+	<anim name="ability_2_end" clip="clips/ability_2_end.clip" fps="34" loop="false"/>
+
+	<anim name="ability_4" clip="clips/ability_4.clip" fps="30" loop="false"/>
+
+	<anim name="bored_1" clip="clips/bored_1.clip" fps="30" loop="false"/>
+
+	<anim name="taunt_1" clip="clips/taunt_1.clip" fps="30" loop="false"/>
+
+	<anim name="item_1" clip="clips/item_1.clip" fps="35"/>
+
+	<anim name="attack_1" clip="clips/attack_1.clip" fps="30" loop="false" blendtime="200">
+		<frameevent frame="8" cmd="PlaySoundLinear /heroes/hiro/sounds/attack_%.wav  400 2000 .65"/>
+	</anim>
+
+	<anim name="attack_2" clip="clips/attack_2.clip" fps="30" loop="false" blendtime="200"> 
+		<frameevent frame="4" cmd="PlaySoundLinear /heroes/javaras/sounds/attack_grunt_%.wav 500 2000 .75"/>
+		<frameevent frame="8" cmd="PlaySoundLinear /heroes/hiro/sounds/attack_%.wav  400 2000 .65"/>
+	</anim>
+
+	<anim name="walk_1" clip="clips/walk_1.clip" fps="37" loop="true" numframes="19">
+		<frameevent frame="2" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="8" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="11" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="16" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		
+		<frameevent frame="2" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+		<frameevent frame="11" cmd="StartEffect /shared/effects/footstep_l_#GetTerrainType()#.effect"/>
+	</anim>
+
+	<anim name="death_1" clip="clips/death_1.clip" fps="30" loop="true" loopbackframe="-1" blendtime="0">
+		<frameevent frame="25" cmd="PlaySoundLinear /heroes/javaras/sounds/death.wav 0 1800 .75"/>	
+		<frameevent frame="1" cmd="StartEffect effects/death.effect"/>
+	</anim>
+
+	<anim name="knock_1" clip="clips/knock_1.clip" loop="true" loopbackframe="-1"/>
+	
+	<anim name="getup_1" clip="clips/getup_1.clip"/>	
+</model>

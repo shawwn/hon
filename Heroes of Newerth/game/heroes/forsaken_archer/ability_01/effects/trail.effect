@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+	<definitions>
+		<particlesystem name="system0" space="local" scale="0.33">
+
+			<sound
+				delay="700"
+				volume=".5"
+				sample="../sounds/trail_%.wav"
+				linearfalloff="true"
+				falloffstart="0" 
+				falloffend="2500" 
+			/>
+
+
+
+			<billboard			
+				
+				bone="_bone_weapon3"
+				startsize="120"				
+				endsize="0"
+				material="/shared/effects/materials/whitedot.material"
+				startalpha="1"
+				endalpha="0"
+				startcolor=".8 .5 .2"
+				endcolor="1 1 1 "
+				depthbias="-10"
+			/>			
+		
+
+			<billboard			
+				life="200"
+				bone="_bone_weapon3"
+				startsize="120"				
+				endsize="0"
+				material="/shared/effects/materials/whitedot.material"
+				startalpha="1"
+				endalpha="0"
+				startcolor=".8 .5 .2"
+				endcolor="1 1 1 "
+				depthbias="-10"
+			/>			
+			
+
+
+		
+			<light	
+				life="1000"
+				bone="_bone_weapon3"									
+				color="0 1.5 1.5"			
+					
+				loop="1"
+				midcolorpos=".2"
+				falloffstart="300"
+				falloffend="555"	
+			    position="0 0 0"
+			/>	
+			
+			<trailemitter
+				bone="_bone_weapon3"
+				spawnrate="50"
+				particlelife="800"
+				texpostime="800"
+			 	texposscale="0.0"
+			 	texstretchscale=".4"
+				position="0 60 0"
+				material="/shared/effects/materials/arrow_trail.material"
+			>
+				<particle
+					 startcolor=".5 .5 0"
+					 midcolor="0.051 0.2 0.4"
+					 endcolor="0 0 0"
+					 startsize="10"
+					 midsize="80"
+					 endsize="30"
+					 midsizepos="0.2"
+			 />
+			</trailemitter>	
+
+			<trailemitter
+				bone="_bone_weapon2"
+				spawnrate="50"
+				particlelife="800"
+				texpostime="800"
+			 	texposscale="0.0"
+			 	texstretchscale=".4"
+				position="0 60 0"
+				material="/shared/effects/materials/arrow_trail.material"
+			>
+				<particle
+					 startcolor=".5 .5 0"
+					 midcolor="0.051 0.2 0.4"
+					 endcolor="0 0 0"
+					 startsize="10"
+					 midsize="80"
+					 endsize="30"
+					 midsizepos="0.2"
+			 />
+			</trailemitter>	
+				
+			<trailemitter
+				life="400"
+				bone="_bone_weaponattach"
+				spawnrate="50"
+				particlelife="800"
+				texpostime="800"
+			 	texposscale="0.0"
+			 	texstretchscale=".4"
+				position="0 60 0"
+				material="/shared/effects/materials/arrow_trail.material"
+			>
+				<particle
+					 startcolor=".7 .7 0"
+					 midcolor="0.1 0.3 0.5"
+					 endcolor="0 0 0"
+					 startsize="10"
+					 midsize="120"
+					 endsize="30"
+					 midsizepos="0.2"
+			 />
+			</trailemitter>	
+
+			
+					
+			
+			<simpleemitter
+				bone="_bone_weapon3"
+				spawnrate="8"				
+				particlelife="800"								
+				position="0 0 0"
+				material="/shared/effects/materials/shieldstarfish.material"				
+				particledirectionalspace="local"
+				offsetdirection="0 0 0"
+				offsetradial="0"
+			>
+
+				<particle 
+					minangle="-15"
+					maxangle="-15"
+					minanglespeed="0"
+					startcolor="1 1 0"
+					midcolor=".2 .4 1"
+					endcolor="0 0 0"
+					midcolorpos=".7"
+					maxanglespeed="00"
+					startframe="0"
+					endframe="1"
+									
+					startsize="100"				
+					endsize="20"				
+
+					startalpha=".3"
+					midalpha=".3"
+					endalpha="0"
+					midalphapos=".5"					
+					
+					lockup="true"
+					lockright="1"
+					pitch="0"
+					flare="0"
+					yaw="00"
+				
+				/>
+			</simpleemitter>
+			
+			
+			
+			<simpleemitter	
+				bone="_bone_weapon3"
+				spawnrate="8"				
+				particlelife="800"								
+				position="0 0 0"
+				material="/shared/effects/materials/refract_swell.material"				
+				particledirectionalspace="local"
+				offsetdirection="0 0 0"
+				offsetradial="0"
+				param=".4"
+			>
+
+				<particle 		
+					startsize="120"				
+					endsize="500"				
+					param="0.5"
+					startalpha=".3"
+					midalpha=".3"
+					endalpha="0"
+					midalphapos=".5"					
+					
+					lockup="true"
+					lockright="1"
+					pitch="0"
+					flare="0"
+					yaw="00"
+				
+				/>
+			</simpleemitter>			
+			
+			
+			<billboard
+				life="600"
+				bone="_bone_weaponattach"
+				position="0 20 0"
+				color="1.0 1.0 1.0"				
+				size="600"
+				
+				startparam=".15"				
+				depthbias="100"				
+				material="/shared/effects/materials/refract_swell_directional.material"
+				lockup="true"
+				roll="270"
+				pitch="90"
+				turn="true"
+			/>				
+			
+			
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+

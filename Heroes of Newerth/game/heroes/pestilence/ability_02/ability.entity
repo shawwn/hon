@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Pestilence2"
+
+	icon="icon.tga"
+	
+	anim="ability_2"
+	casttime="500"
+	castactiontime="250"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="self_position"
+	targetscheme="enemy_units"
+	targetradius="350"
+	casteffecttype="Magic"
+	
+	manacost="80,95,105,115"
+	cooldowntime="8000"
+>
+	<onimpact >
+		<spawnaffector name="Affector_Pestilence_Ability2_Stun" target="source_entity"/>
+		<spawnaffector name="Affector_Pestilence_Ability2_Slow" target="source_entity"/>
+		<playeffect effect="effects/area.effect" target="target_position" source="target_position" occlude="true"/>
+	</onimpact>
+</ability>

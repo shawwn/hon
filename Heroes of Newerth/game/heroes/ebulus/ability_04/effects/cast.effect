@@ -1,0 +1,876 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect persistent="1">
+	<definitions>
+
+		
+		<particlesystem name="system0" space="world" scale="1">
+	
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume="0.65" 
+				sample="/heroes/ebulus/ability_04/sounds/ability_04.wav"
+			/>
+
+			<model
+				delay="250"
+				name="ring"
+				life="1800"
+				model="ring2.mdf"
+				anim="idle"
+				yawspeed="0"
+				startscale="1"
+				endscale="20.0"		
+				position="0.0 0.0 90.0"					
+				
+			/>		
+
+			<simpleemitter
+				life="801"
+				delay="500"
+				particlelife="3200"				
+				spawnrate="40"
+				speed="0"
+				gravity="0"
+				direction="0 0 0"			
+				
+				particledirectionalspace="local"
+				
+				offsetsphere="130 130 0"
+				position="0 0 0"	
+			>
+
+				<particle> 
+					<groundsprite
+						life="2000"						
+						material="/shared/effects/materials/splatter_blend.material"
+
+						minyaw="-360"	
+						maxyaw="360"
+						minsize="20"
+						maxsize="80"
+
+						position="0 0 0"
+
+						color=".22 .4 0"
+						
+			
+						midcolorpos=".1"
+
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".1"
+							
+					/>						
+				</particle>
+			</simpleemitter>	
+	
+		
+			
+			
+		<simpleemitter
+			life="201"
+			particlelife="1200"				
+			spawnrate="100"
+			speed="180"
+			gravity="10"
+			direction="0 0 1"			
+			
+			particledirectionalspace="local"
+			material="/shared/effects/materials/splatter_blend.material"
+			offsetsphere="0 0 0"
+			position="0 0 159"	
+		>
+
+			<particle 
+				minanglespeed="-100"
+				maxanglespeed="100"
+				
+				
+				minangle="-360"
+				maxangle="360"
+				color=".1 .2 0"
+				startsize="40"
+				minendsize="80"				
+				maxendsize="160"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				
+
+			/>
+		</simpleemitter>	
+
+		<simpleemitter
+			count="30"
+			particlelife="1200"				
+			spawnrate="223"
+			speed="180"
+			gravity="10"
+			material="/shared/effects/materials/splatter_blend.material"
+			offsetsphere="0 0 0"
+			position="0 0 100"		
+		>
+
+			<particle 
+				minanglespeed="-100"
+				maxanglespeed="100"
+			
+				
+				minangle="-360"
+				maxangle="360"
+				color=".2 .3 0"				
+				startsize="40"
+				minendsize="80"				
+				maxendsize="160"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+			/>
+		</simpleemitter>	
+
+	
+		<simpleemitter
+			count="5"
+	
+			particlelife="1500"				
+			spawnrate="110"
+			speed="280"
+			gravity="22"
+					
+			
+			minangle="0"
+			maxangle="30"
+			material="/shared/effects/materials/poison_14.material"
+			offsetsphere="0 0 0"
+			position="0 0 100"
+	
+		>
+
+			<particle 
+				minanglespeed="-100"
+				maxanglespeed="100"
+				
+				
+				minangle="-60"
+				maxangle="60"
+				startcolor=".5 .5 .5"
+				endcolor="0 0 0"
+				startsize="40"
+								
+				endsize="200"
+		
+			/>
+		</simpleemitter>	
+
+		<simpleemitter
+			delay="0"
+			count="4"
+			particlelife="1100"				
+			spawnrate="11"
+			speed="290"
+			gravity="20"
+			direction="0 0 1"
+			minangle="0"
+			
+			maxangle="15"
+			particledirectionalspace="local"
+			material="/shared/effects/materials/venom_splash.material"
+			offsetsphere="11 11 0"
+			position="0 0 133"
+	
+		>
+
+			<particle 
+				startsize="20"
+			
+				endsize="200"
+				color=".8 1 .2"
+				
+				startalpha="0"
+				midalpha="1"
+				endalpha="0"
+				
+
+			/>
+		</simpleemitter>	
+	
+		
+		
+		
+<!-- START RING THING -->	
+
+
+		
+			
+		
+		
+		<simpleemitter
+			count="144"
+			particlelife="1800"				
+			spawnrate="1130"
+			minspeed="180"
+			maxspeed="230"
+
+			minangle="90"
+			maxangle="100"
+			direction="0 0 -1"
+			particledirectionalspace="local"
+			material="/shared/effects/materials/venom_splash.material"
+			offsetsphere="20 20 20"
+			position="0 0 80"
+	
+		>
+
+			<particle 
+				startcolor=".5 .3 1"
+				endcolor=".3 .4 1"
+				startsize="00"
+				minendsize="50"				
+				maxendsize="180"
+				startalpha="0"
+				midalpha="1"
+				endalpha="0"
+				turn="true"
+
+			/>
+		</simpleemitter>			
+		
+
+		<simpleemitter
+			count="84"
+			particlelife="1800"				
+			spawnrate="1130"
+			minspeed="220"
+			maxspeed="240"
+
+			minangle="90"
+			maxangle="100"
+			direction="0 0 -1"
+			particledirectionalspace="local"
+			material="/shared/effects/materials/splatter_add.material"
+			offsetsphere="20 20 20"
+			position="0 0 80"
+	
+		>
+
+			<particle 
+				minanglespeed="-200"
+				maxanglespeed="200"
+				startcolor=".1 .2 0"
+				midcolor=".1 .2 0"
+				endcolor="0 0 0"
+				midcolorpos=".8"
+				
+				startsize="00"
+				minendsize="50"				
+				maxendsize="180"
+				startalpha="0"
+				midalpha="1"
+				endalpha="0"
+				turn="true"
+
+			/>
+		</simpleemitter>
+
+
+
+
+
+		<twopointtrailemitter
+			owner="ring" delay="102"
+			life="1800"
+			name="trail01"
+			bone_a="_bone_01"
+			bone_b="_bone_02"
+			spawnrate="30"
+			
+			particlelife="1800"
+
+			startparticlealpha="1"
+			midparticlealpha="0.8"
+			endparticlealpha="0"
+			
+			
+			startparticlecolor="1 1 1"
+			endparticlecolor="1 1 1"
+			
+			midpartcilealphapos=".99"
+			texpostime="1800"
+			texposscale="0"
+			texstretchscale="1"				
+			material="/shared/effects/materials/goo_trail_blend.material"
+		>
+			<particle 				
+				color="1 1 1"	
+			    startcolor="1 1 1"
+				endcolor="1 1 1"
+				
+				startalpha="1" midalpha="1"
+			/>
+		</twopointtrailemitter>	
+
+		<twopointtrailemitter
+			owner="ring" delay="102"
+			life="1800"
+			name="trail01"
+			bone_a="_bone_02"
+			bone_b="_bone_03"
+			spawnrate="30"
+			
+			particlelife="1800"
+			
+			startparticlealpha="1"
+			midparticlealpha="0.8"
+			endparticlealpha="0"
+			
+			startparticlecolor="1 1 1"
+			endparticlecolor="1 1 1"
+			
+			midpartcilealphapos=".99"
+			texpostime="1800"
+			texposscale="0"
+			texstretchscale="1"				
+			material="/shared/effects/materials/goo_trail_blend.material"
+		>
+			<particle 				
+				color="1 1 1"	
+			    startcolor="1 1 1"
+				endcolor="1 1 1"
+				
+				startalpha="1" midalpha="1"
+			/>
+		</twopointtrailemitter>					
+		
+		<twopointtrailemitter
+			owner="ring" delay="102"
+			life="1800"
+			name="trail01"
+			bone_a="_bone_03"
+			bone_b="_bone_04"
+			spawnrate="30"
+			
+			particlelife="1800"
+
+			startparticlealpha="1"
+			midparticlealpha="0.8"
+			endparticlealpha="0"
+			
+			startparticlecolor="1 1 1"
+			endparticlecolor="1 1 1"
+			
+			midpartcilealphapos=".99"
+			texpostime="1800"
+			texposscale="0"
+			texstretchscale="1"				
+			material="/shared/effects/materials/goo_trail_blend.material"
+		>
+			<particle 				
+				color="1 1 1"	
+			    startcolor="1 1 1"
+				endcolor="1 1 1"
+				
+				startalpha="1" midalpha="1"
+			/>
+		</twopointtrailemitter>		
+		
+
+		<twopointtrailemitter
+			owner="ring" delay="102"
+			life="1800"
+			name="trail01"
+			bone_a="_bone_04"
+			bone_b="_bone_05"
+			spawnrate="30"
+			
+			particlelife="1800"
+
+			startparticlealpha="1"
+			midparticlealpha="0.8"
+			endparticlealpha="0"
+			
+			startparticlecolor="1 1 1"
+			endparticlecolor="1 1 1"
+			
+			midpartcilealphapos=".99"
+			texpostime="1800"
+			texposscale="0"
+			texstretchscale="1"				
+			material="/shared/effects/materials/goo_trail_blend.material"
+		>
+			<particle 				
+				color="1 1 1"	
+			    startcolor="1 1 1"
+				endcolor="1 1 1"
+				
+				startalpha="1" midalpha="1"
+			/>
+		</twopointtrailemitter>			
+		
+		<twopointtrailemitter
+			owner="ring" delay="102"
+			life="1800"
+			name="trail01"
+			bone_a="_bone_05"
+			bone_b="_bone_06"
+			spawnrate="30"
+			
+			particlelife="1800"
+
+			startparticlealpha="1"
+			midparticlealpha="1"
+			endparticlealpha="0"
+			
+			startparticlecolor="1 1 1"
+			endparticlecolor="1 1 1"
+			
+			midpartcilealphapos=".99"
+			texpostime="1800"
+			texposscale="0"
+			texstretchscale="1"				
+			material="/shared/effects/materials/goo_trail_blend.material"
+		>
+			<particle 				
+				color="1 1 1"	
+			    startcolor="1 1 1"
+				endcolor="1 1 1"
+				
+				startalpha="1" midalpha="1"
+			/>
+		</twopointtrailemitter>				
+		
+		<twopointtrailemitter
+			owner="ring" delay="102"
+			life="1800"
+			name="trail01"
+			bone_a="_bone_06"
+			bone_b="_bone_07"
+			spawnrate="30"
+			
+			particlelife="1800"
+
+			startparticlealpha="1"
+			midparticlealpha="0.8"
+			endparticlealpha="0"
+			
+			startparticlecolor="1 1 1"
+			endparticlecolor="1 1 1"
+			
+			midpartcilealphapos=".99"
+			texpostime="1800"
+			texposscale="0"
+			texstretchscale="1"				
+			material="/shared/effects/materials/goo_trail_blend.material"
+		>
+			<particle 				
+				color="1 1 1"	
+			    startcolor="1 1 1"
+				endcolor="1 1 1"
+				
+				startalpha="1" midalpha="1"
+			/>
+		</twopointtrailemitter>		
+
+		
+				<twopointtrailemitter
+			owner="ring" delay="102"
+			life="1800"
+			name="trail01"
+			bone_a="_bone_07"
+			bone_b="_bone_08"
+			spawnrate="30"
+			
+			particlelife="1800"
+
+			startparticlealpha="1"
+			midparticlealpha="0.8"
+			endparticlealpha="0"
+			
+			startparticlecolor="1 1 1"
+			endparticlecolor="1 1 1"
+			
+			midpartcilealphapos=".99"
+			texpostime="1800"
+			texposscale="0"
+			texstretchscale="1"				
+			material="/shared/effects/materials/goo_trail_blend.material"
+		>
+			<particle 				
+				color="1 1 1"	
+			    startcolor="1 1 1"
+				endcolor="1 1 1"
+				
+				startalpha="1" midalpha="1"
+			/>
+		</twopointtrailemitter>		
+	
+
+		<twopointtrailemitter
+			owner="ring" delay="102"
+			life="1800"
+			name="trail01"
+			bone_a="_bone_08"
+			bone_b="_bone_09"
+			spawnrate="30"
+			
+			particlelife="1800"
+
+			startparticlealpha="1"
+			midparticlealpha="0.8"
+			endparticlealpha="0"
+			
+			startparticlecolor="1 1 1"
+			endparticlecolor="1 1 1"
+			
+			midpartcilealphapos=".99"
+			texpostime="1800"
+			texposscale="0"
+			texstretchscale="1"				
+			material="/shared/effects/materials/goo_trail_blend.material"
+		>
+			<particle 				
+				color="1 1 1"	
+			    startcolor="1 1 1"
+				endcolor="1 1 1"
+				
+				startalpha="1" midalpha="1"
+			/>
+		</twopointtrailemitter>		
+
+
+		<twopointtrailemitter
+			owner="ring" delay="102"
+			life="1800"
+			name="trail01"
+			bone_a="_bone_09"
+			bone_b="_bone_10"
+			spawnrate="30"
+			
+			particlelife="1800"
+
+			startparticlealpha="1"
+			midparticlealpha="0.8"
+			endparticlealpha="0"
+			
+			startparticlecolor="1 1 1"
+			endparticlecolor="1 1 1"
+			
+			midpartcilealphapos=".99"
+			texpostime="1800"
+			texposscale="0"
+			texstretchscale="1"				
+			material="/shared/effects/materials/goo_trail_blend.material"
+		>
+			<particle 				
+				color="1 1 1"	
+			    startcolor="1 1 1"
+				endcolor="1 1 1"
+				
+				startalpha="1" midalpha="1"
+			/>
+		</twopointtrailemitter>		
+
+
+		<twopointtrailemitter
+			owner="ring" delay="102"
+			life="1800"
+			name="trail01"
+			bone_a="_bone_10"
+			bone_b="_bone_11"
+			spawnrate="30"
+			
+			particlelife="1800"
+
+			startparticlealpha="1"
+			midparticlealpha="0.8"
+			endparticlealpha="0"
+			
+			startparticlecolor="1 1 1"
+			endparticlecolor="1 1 1"
+			
+			midpartcilealphapos=".99"
+			texpostime="1800"
+			texposscale="0"
+			texstretchscale="1"				
+			material="/shared/effects/materials/goo_trail_blend.material"
+		>
+			<particle 				
+				color="1 1 1"	
+			    startcolor="1 1 1"
+				endcolor="1 1 1"
+				
+				startalpha="1" midalpha="1"
+			/>
+		</twopointtrailemitter>		
+
+
+		<twopointtrailemitter
+			owner="ring" delay="102"
+			life="1800"
+			name="trail01"
+			bone_a="_bone_11"
+			bone_b="_bone_12"
+			spawnrate="30"
+			
+			particlelife="1800"
+
+			startparticlealpha="1"
+			midparticlealpha="0.8"
+			endparticlealpha="0"
+			
+			startparticlecolor="1 1 1"
+			endparticlecolor="1 1 1"
+			
+			midpartcilealphapos=".99"
+			texpostime="1800"
+			texposscale="0"
+			texstretchscale="1"				
+			material="/shared/effects/materials/goo_trail_blend.material"
+		>
+			<particle 				
+				color="1 1 1"	
+			    startcolor="1 1 1"
+				endcolor="1 1 1"
+				
+				startalpha="1" midalpha="1"
+			/>
+		</twopointtrailemitter>		
+		<twopointtrailemitter
+			owner="ring" delay="102"
+			life="1800"
+			name="trail01"
+			bone_a="_bone_12"
+			bone_b="_bone_13"
+			spawnrate="30"
+			
+			particlelife="1800"
+
+			startparticlealpha="1"
+			midparticlealpha="0.8"
+			endparticlealpha="0"
+			
+			startparticlecolor="1 1 1"
+			endparticlecolor="1 1 1"
+			
+			midpartcilealphapos=".99"
+			texpostime="1800"
+			texposscale="0"
+			texstretchscale="1"				
+			material="/shared/effects/materials/goo_trail_blend.material"
+		>
+			<particle 				
+				color="1 1 1"	
+			    startcolor="1 1 1"
+				endcolor="1 1 1"
+				
+				startalpha="1" midalpha="1"
+			/>
+		</twopointtrailemitter>		
+	
+		<twopointtrailemitter
+			owner="ring" delay="102"
+			life="1800"
+			name="trail01"
+			bone_a="_bone_13"
+			bone_b="_bone_14"
+			spawnrate="30"
+			
+			particlelife="1800"
+
+			startparticlealpha="1"
+			midparticlealpha="0.8"
+			endparticlealpha="0"
+			
+			startparticlecolor="1 1 1"
+			endparticlecolor="1 1 1"
+			
+			midpartcilealphapos=".99"
+			texpostime="1800"
+			texposscale="0"
+			texstretchscale="1"				
+			material="/shared/effects/materials/goo_trail_blend.material"
+		>
+			<particle 				
+				color="1 1 1"	
+			    startcolor="1 1 1"
+				endcolor="1 1 1"
+				
+				startalpha="1" midalpha="1"
+			/>
+		</twopointtrailemitter>			
+	
+		<twopointtrailemitter
+			owner="ring" delay="102"
+			life="1800"
+			name="trail01"
+			bone_a="_bone_14"
+			bone_b="_bone_15"
+			spawnrate="30"
+			
+			particlelife="1800"
+
+			startparticlealpha="1"
+			midparticlealpha="0.8"
+			endparticlealpha="0"
+			
+			startparticlecolor="1 1 1"
+			endparticlecolor="1 1 1"
+			
+			midpartcilealphapos=".99"
+			texpostime="1800"
+			texposscale="0"
+			texstretchscale="1"				
+			material="/shared/effects/materials/goo_trail_blend.material"
+		>
+			<particle 				
+				color="1 1 1"	
+			    startcolor="1 1 1"
+				endcolor="1 1 1"
+				
+				startalpha="1" midalpha="1"
+			/>
+		</twopointtrailemitter>			
+		<twopointtrailemitter
+			owner="ring" delay="102"
+			life="1800"
+			name="trail01"
+			bone_a="_bone_15"
+			bone_b="_bone_16"
+			spawnrate="30"
+			
+			particlelife="1800"
+
+			startparticlealpha="1"
+			midparticlealpha="0.8"
+			endparticlealpha="0"
+			
+			startparticlecolor="1 1 1"
+			endparticlecolor="1 1 1"
+			
+			midpartcilealphapos=".99"
+			texpostime="1800"
+			texposscale="0"
+			texstretchscale="1"				
+			material="/shared/effects/materials/goo_trail_blend.material"
+		>
+			<particle 				
+				color="1 1 1"	
+			    startcolor="1 1 1"
+				endcolor="1 1 1"
+				
+				startalpha="1" midalpha="1"
+			/>
+		</twopointtrailemitter>		
+
+		<twopointtrailemitter
+			owner="ring" delay="102"
+			life="1800"
+			name="trail01"
+			bone_a="_bone_16"
+			bone_b="_bone_17"
+			spawnrate="30"
+			
+			particlelife="1800"
+
+			startparticlealpha="1"
+			midparticlealpha="0.8"
+			endparticlealpha="0"
+			
+			startparticlecolor="1 1 1"
+			endparticlecolor="1 1 1"
+			
+			midpartcilealphapos=".99"
+			texpostime="1800"
+			texposscale="0"
+			texstretchscale="1"				
+			material="/shared/effects/materials/goo_trail_blend.material"
+		>
+			<particle 				
+				color="1 1 1"	
+			    startcolor="1 1 1"
+				endcolor="1 1 1"
+				
+				startalpha="1" midalpha="1"
+			/>
+		</twopointtrailemitter>		
+
+
+
+		<twopointtrailemitter
+			owner="ring" delay="102"
+			life="1800"
+			name="trail01"
+			bone_a="_bone_17"
+			bone_b="_bone_18"
+			spawnrate="30"
+			
+			particlelife="1800"
+
+			startparticlealpha="1"
+			midparticlealpha="0.8"
+			endparticlealpha="0"
+			
+			startparticlecolor="1 1 1"
+			endparticlecolor="1 1 1"
+			
+			midpartcilealphapos=".99"
+			texpostime="1800"
+			texposscale="0"
+			texstretchscale="1"				
+			material="/shared/effects/materials/goo_trail_blend.material"
+		>
+			<particle 				
+				color="1 1 1"	
+			    startcolor="1 1 1"
+				endcolor="1 1 1"
+				
+				startalpha="1" midalpha="1"
+			/>
+		</twopointtrailemitter>		
+
+		<twopointtrailemitter
+			owner="ring" delay="102"
+			life="1800"
+			name="trail01"
+			bone_a="_bone_18"
+			bone_b="_bone_01"
+			spawnrate="30"
+			
+			particlelife="1800"
+
+			startparticlealpha="1"
+			midparticlealpha="0.8"
+			endparticlealpha="0"
+			
+			startparticlecolor="1 1 1"
+			endparticlecolor="1 1 1"
+			
+			midpartcilealphapos=".99"
+			texpostime="1800"
+			texposscale="0"
+			texstretchscale="1"				
+			material="/shared/effects/materials/goo_trail_blend.material"
+		>
+			<particle 				
+				color="1 1 1"	
+			    startcolor="1 1 1"
+				endcolor="1 1 1"
+				
+				startalpha="1" midalpha="1"
+			/>
+		</twopointtrailemitter>		
+
+		
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

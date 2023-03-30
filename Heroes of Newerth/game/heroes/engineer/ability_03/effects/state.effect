@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" useentityeffectscale="true">
+	<definitions>
+		<particlesystem name="system0" space="world">
+
+			<sound
+				volume=".7"
+				sample="../sounds/cast.wav"
+				linearfalloff="true"
+				falloffstart="1000" 
+				falloffend="2500" 
+			/>
+
+			<sound
+				soundloop="true"
+				fadein="100"
+				fadeout="200"
+				volume=".3"
+				sample="../sounds/state.wav"
+				linearfalloff="true"
+				falloffstart="1000" 
+				falloffend="2500" 
+			/>
+			
+			<billboard
+				expirelife="300"
+				color=".8 .8 1"
+				size="40"
+				depthbias="-30"
+				position="20 0 280"
+				rollspeed="185"
+				material="/shared/effects/materials/gear_1.material"
+			/>
+			<billboard
+				expirelife="300"
+				color="2 1 0"
+				size="35"
+				depthbias="-30"
+				position="-5 0 280"
+				rollspeed="-180"
+				material="/shared/effects/materials/gear_1.material"
+			/>
+			
+			<billboard
+				expirelife="300"
+				color=".2 .2 .4"
+				size="150"
+				
+				position="0 0 280"
+				
+				material="/shared/effects/materials/whitedot.material"
+			/>
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+

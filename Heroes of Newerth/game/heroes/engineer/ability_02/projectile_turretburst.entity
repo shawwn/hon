@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_EngineerTurretAttackBurst"
+
+	speed="5000"
+	gravity="0"
+
+	modelscale=".3"
+	model="effects/bullet/bullet.mdf"
+	
+	traileffect="effects/bullet/trail.effect"
+	
+	flying="true"
+	flyheight="70"
+	
+	touchradius="45"
+	touchradiusdiradjust="true"
+	touchtargetscheme="enemy_units"
+	toucheffecttype="Physical"
+	maxtouchespertarget="1"
+>	
+	<ontouch>
+		<playeffect effect="effects/impact.effect" source="target_entity" target="" />
+		<applystate name="State_Engineer_Ability2_Snare" duration="5000" proxy="this_proxy_entity" />
+	</ontouch>
+</projectile>

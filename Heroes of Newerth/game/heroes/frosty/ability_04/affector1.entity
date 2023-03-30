@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Frosty_Ability4_1"
+
+	radius="635"
+	innerradiusoffset="510"
+	arc="90"
+	angle="0"
+	
+	impactinterval="400"
+	maximpactsperinterval="1"
+	maxintervals="10"
+	targetselection="random_angle_distance"
+	targetscheme="nothing"
+	
+	effect="effects/area.effect"
+>
+	<onimpact>
+		<spawnaffector name="Affector_Frosty_Ability4_Burst" target="target_position" />
+		<playeffect effect="effects/impacts.effect" source="target_position" target="" occlude="true"/>
+	</onimpact>
+</affector>

@@ -1,0 +1,169 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: zlib - Win32 DLL--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo".\win32\zlib\dll/zlib.res" /i "\savage\libs\libpng\zlib\msdos" /d "NDEBUG" "C:\savage\libs\libpng\zlib\msdos\zlib.rc"" 
+Creating temporary file "C:\DOCUME~1\jason\LOCALS~1\Temp\RSP1F4.tmp" with contents
+[
+/nologo /MD /W3 /O1 /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "ZLIB_DLL" /Fo".\win32\zlib\dll/" /Fd".\win32\zlib\dll/" /FD /c 
+"C:\savage\libs\libpng\zlib\adler32.c"
+"C:\savage\libs\libpng\zlib\compress.c"
+"C:\savage\libs\libpng\zlib\crc32.c"
+"C:\savage\libs\libpng\zlib\deflate.c"
+"C:\savage\libs\libpng\zlib\trees.c"
+"C:\savage\libs\libpng\zlib\uncompr.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\jason\LOCALS~1\Temp\RSP1F4.tmp" 
+Creating temporary file "C:\DOCUME~1\jason\LOCALS~1\Temp\RSP1F5.tmp" with contents
+[
+/nologo /MD /W3 /O1 /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "ZLIB_DLL" /Fp".\win32\zlib\dll/zlib.pch" /Yu"zutil.h" /Fo".\win32\zlib\dll/" /Fd".\win32\zlib\dll/" /FD /c 
+"C:\savage\libs\libpng\zlib\infblock.c"
+"C:\savage\libs\libpng\zlib\infcodes.c"
+"C:\savage\libs\libpng\zlib\inffast.c"
+"C:\savage\libs\libpng\zlib\inflate.c"
+"C:\savage\libs\libpng\zlib\inftrees.c"
+"C:\savage\libs\libpng\zlib\infutil.c"
+"C:\savage\libs\libpng\zlib\zutil.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\jason\LOCALS~1\Temp\RSP1F5.tmp" 
+Creating temporary file "C:\DOCUME~1\jason\LOCALS~1\Temp\RSP1F6.tmp" with contents
+[
+/nologo /MD /W3 /O1 /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "ZLIB_DLL" /Fp".\win32\zlib\dll/zlib.pch" /Yc"zutil.h" /Fo".\win32\zlib\dll/" /Fd".\win32\zlib\dll/" /FD /c 
+"C:\savage\libs\libpng\zlib\gzio.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\jason\LOCALS~1\Temp\RSP1F6.tmp" 
+Creating temporary file "C:\DOCUME~1\jason\LOCALS~1\Temp\RSP1F7.tmp" with contents
+[
+/nologo /dll /incremental:no /pdb:".\win32\zlib\dll/zlib.pdb" /machine:I386 /def:".\zlib.def" /out:".\win32\zlib\dll/zlib.dll" /implib:".\win32\zlib\dll/zlib.lib" 
+.\win32\zlib\dll\adler32.obj
+.\win32\zlib\dll\compress.obj
+.\win32\zlib\dll\crc32.obj
+.\win32\zlib\dll\deflate.obj
+.\win32\zlib\dll\gzio.obj
+.\win32\zlib\dll\infblock.obj
+.\win32\zlib\dll\infcodes.obj
+.\win32\zlib\dll\inffast.obj
+.\win32\zlib\dll\inflate.obj
+.\win32\zlib\dll\inftrees.obj
+.\win32\zlib\dll\infutil.obj
+.\win32\zlib\dll\trees.obj
+.\win32\zlib\dll\uncompr.obj
+.\win32\zlib\dll\zutil.obj
+.\win32\zlib\dll\zlib.res
+]
+Creating command line "link.exe @C:\DOCUME~1\jason\LOCALS~1\Temp\RSP1F7.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+gzio.c
+Compiling...
+adler32.c
+compress.c
+crc32.c
+deflate.c
+trees.c
+uncompr.c
+Generating Code...
+Compiling...
+infblock.c
+infcodes.c
+inffast.c
+inflate.c
+inftrees.c
+infutil.c
+zutil.c
+Generating Code...
+Linking...
+   Creating library .\win32\zlib\dll/zlib.lib and object .\win32\zlib\dll/zlib.exp
+<h3>
+--------------------Configuration: libpng - Win32 DLL--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo".\win32\libpng\dll/png.res" /i "..\.." /d "NDEBUG" "C:\savage\libs\libpng\lpng125\projects\msvc\png.rc"" 
+Creating temporary file "C:\DOCUME~1\jason\LOCALS~1\Temp\RSP1FB.tmp" with contents
+[
+/nologo /MD /W3 /O1 /I "..\.." /I "..\..\..\zlib" /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "PNG_BUILD_DLL" /D "ZLIB_DLL" /Fo".\win32\libpng\dll/" /Fd".\win32\libpng\dll/" /FD /c 
+"C:\savage\libs\libpng\lpng125\png.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\jason\LOCALS~1\Temp\RSP1FB.tmp" 
+Creating temporary file "C:\DOCUME~1\jason\LOCALS~1\Temp\RSP1FC.tmp" with contents
+[
+/nologo /MD /W3 /O1 /I "..\.." /I "..\..\..\zlib" /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "PNG_BUILD_DLL" /D "ZLIB_DLL" /Fp".\win32\libpng\dll/libpng.pch" /Yu"png.h" /Fo".\win32\libpng\dll/" /Fd".\win32\libpng\dll/" /FD /c 
+"C:\savage\libs\libpng\lpng125\pngget.c"
+"C:\savage\libs\libpng\lpng125\pngmem.c"
+"C:\savage\libs\libpng\lpng125\pngpread.c"
+"C:\savage\libs\libpng\lpng125\pngread.c"
+"C:\savage\libs\libpng\lpng125\pngrio.c"
+"C:\savage\libs\libpng\lpng125\pngrtran.c"
+"C:\savage\libs\libpng\lpng125\pngrutil.c"
+"C:\savage\libs\libpng\lpng125\pngset.c"
+"C:\savage\libs\libpng\lpng125\pngtrans.c"
+"C:\savage\libs\libpng\lpng125\pngwio.c"
+"C:\savage\libs\libpng\lpng125\pngwrite.c"
+"C:\savage\libs\libpng\lpng125\pngwtran.c"
+"C:\savage\libs\libpng\lpng125\pngwutil.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\jason\LOCALS~1\Temp\RSP1FC.tmp" 
+Creating temporary file "C:\DOCUME~1\jason\LOCALS~1\Temp\RSP1FD.tmp" with contents
+[
+/nologo /MD /W3 /O1 /I "..\.." /I "..\..\..\zlib" /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "PNG_BUILD_DLL" /D "ZLIB_DLL" /Fp".\win32\libpng\dll/libpng.pch" /Yc"png.h" /Fo".\win32\libpng\dll/" /Fd".\win32\libpng\dll/" /FD /c 
+"C:\savage\libs\libpng\lpng125\pngerror.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\jason\LOCALS~1\Temp\RSP1FD.tmp" 
+Creating temporary file "C:\DOCUME~1\jason\LOCALS~1\Temp\RSP1FE.tmp" with contents
+[
+/nologo /dll /incremental:no /pdb:".\win32\libpng\dll/libpng13.pdb" /machine:I386 /def:".\png32ms.def" /out:".\win32\libpng\dll\libpng13.dll" /implib:".\win32\libpng\dll/libpng13.lib" 
+.\win32\libpng\dll\png.obj
+.\win32\libpng\dll\pngerror.obj
+.\win32\libpng\dll\pngget.obj
+.\win32\libpng\dll\pngmem.obj
+.\win32\libpng\dll\pngpread.obj
+.\win32\libpng\dll\pngread.obj
+.\win32\libpng\dll\pngrio.obj
+.\win32\libpng\dll\pngrtran.obj
+.\win32\libpng\dll\pngrutil.obj
+.\win32\libpng\dll\pngset.obj
+.\win32\libpng\dll\pngtrans.obj
+.\win32\libpng\dll\pngwio.obj
+.\win32\libpng\dll\pngwrite.obj
+.\win32\libpng\dll\pngwtran.obj
+.\win32\libpng\dll\pngwutil.obj
+.\win32\libpng\dll\png.res
+.\win32\zlib\dll\zlib.lib
+]
+Creating command line "link.exe @C:\DOCUME~1\jason\LOCALS~1\Temp\RSP1FE.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+pngerror.c
+Compiling...
+png.c
+Compiling...
+pngget.c
+pngmem.c
+pngpread.c
+pngread.c
+pngrio.c
+pngrtran.c
+pngrutil.c
+pngset.c
+pngtrans.c
+pngwio.c
+pngwrite.c
+pngwtran.c
+pngwutil.c
+Generating Code...
+Linking...
+   Creating library .\win32\libpng\dll/libpng13.lib and object .\win32\libpng\dll/libpng13.exp
+
+
+
+<h3>Results</h3>
+libpng13.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

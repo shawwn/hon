@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Bephelgor_Ability3"
+
+	radius="400"
+	arc="100"
+	
+	lifetime="3000"
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Magic"
+	persist="true"
+	effect="effects/affector.effect"
+	
+>
+	<onframeimpact>
+		<damage effecttype="Magic DOT" amount="40,65,90,115" b="frametime" op="mult" />
+		<applystate name="State_Bephelgor_Ability3_Snare" duration="500" />
+	</onframeimpact>
+</affector>

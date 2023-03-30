@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="chainsofdoom" deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+
+			<twopointemitter
+				bone_a="_bone_weapon1"
+				bone_b="_bone_weapon3"
+				spawnrate="30"
+				particlelife="1000"
+				angle="0.0"
+				offsetsphere="5 8 5"
+				material="/shared/effects/materials/flame.material"
+			>
+				<particle
+					startcolor="0 0 0"
+					midcolor=".3 .5 .1"
+					endcolor="-1 "
+					midcolorpos=".5"
+					startalpha="1"
+					endalpha="1"
+					maxangle="360"
+					minanglespeed="-45"
+					maxanglespeed="45"
+					minendsize="25"
+					startsize="5"
+					maxendsize="40"
+					flare="true"
+					startanchor="1"
+					endanchor=".7"
+					
+				/>
+				<particle
+					startcolor="0 0 0"
+					midcolor=".3 .5 .1"
+					endcolor="-1 "
+					midcolorpos=".5"
+					startalpha="1.0"
+					endalpha="1"
+					maxangle="360"
+					minanglespeed="-45"
+					maxanglespeed="45"
+					minendsize="25"
+					startsize="5"
+					maxendsize="35"
+					flare="true"
+					startanchor="1"
+					endanchor=".7"
+					
+				/>
+			</twopointemitter>
+
+			<twopointemitter
+				bone_a="_bone_weapon1"
+				bone_b="_bone_weapon3"
+				spawnrate="4"
+				particlelife="500"
+				offsetsphere="2"
+				material="/shared/effects/materials/blink.material"
+			>
+				<particle
+					startcolor="0 0 0"
+					midcolor="1 .75 0"
+					endcolor="0 "
+					midcolorpos=".5"
+					maxangle="360"
+					minanglespeed="-45"
+					maxanglespeed="45"
+					size="50"
+					anchor="1"
+				/>
+				<particle
+					startcolor="0 0 0"
+					midcolor=".5"
+					endcolor="0 "
+					midcolorpos=".5"
+					maxangle="360"
+					minanglespeed="-45"
+					maxanglespeed="45"
+					size="50"
+					anchor="1"
+				/>
+			</twopointemitter>
+
+			<beam
+				bone_a="_bone_weapon3"
+				bone_b="_bone_weapon1"
+				startsize="100"
+				endsize="110"
+				loop="true"
+				life="1000"
+				startcolor=".175 .125 0"
+				midcolor=".35 .25 0"
+				endcolor=".175 .125 0"
+				midcolorpos=".8"
+				material="/shared/effects/materials/bow_glow_03.material"
+				framespeed="5"
+				depthbias="-30"
+				anchor="1"
+			/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_PuppetMaster_Ability2"
+
+	radius="250,300,350,400"
+	effect=""
+	targetselection="closest"
+	lifetime="2500,3000,3500,4000"
+	maxtotalimpacts="2"
+	maximpactspertarget="1"
+	targetscheme="all_units"
+	effecttype="Physical"
+	impacteffect="impact.effect"
+>
+	<onimpact>
+		<condition test="not_target_type self" source="proxy_entity" target="target_entity">
+			<applystate name="State_PuppetMaster_Ability2" duration="2500,3000,3500,4000" target="proxy_entity" proxy="target_entity" />
+			<order command="stop" force="true" source="proxy_entity" target="target_entity" />
+			<order command="attack" force="true" forceduration="2500,3000,3500,4000" source="proxy_entity" target="target_entity" />
+		</condition>
+	</onimpact>
+</affector>

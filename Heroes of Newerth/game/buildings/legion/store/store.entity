@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<building
+	name="Building_LegionStore"
+	
+	
+	
+	icon="icon.tga"
+	portrait=""
+	model="model.mdf"
+	mapicon="/shared/icons/minimap_store.tga"
+	mapiconsize="0.03"
+	skin=""
+	
+	passiveeffect=""
+	destroyedsound=""
+	lowhealtheffect=""
+	lowhealthsound=""
+	selectsound=""
+	isselectable="true"
+	
+	preglobalscale="2.8"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="256"
+	boundsradius="86"
+	selectionradius="128"
+	targetoffset="0 0 0"
+
+	maxhealth="0"
+	healthregen="0"
+
+	armor="0"
+	magicarmor="0"
+
+	attackduration=""
+	attackactiontime=""
+	attackcooldown="0"
+	attackdamagemin=""
+	attackdamagemax=""
+	attacknumanims="1"
+	attackoffset=""
+	attackprojectile=""
+	attackrange="0"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect=""
+	attacktype="none"	
+	combattype="Structure"
+
+	aggrorange="0"
+	sightrangeday="900"
+	sightrangenight="600"
+	drawonmap="true"
+	isshop="true"
+	defaultshop="Shop_Secret"
+	invulnerable="true"
+>
+	<aura state="State_ShopAccess_Secret" radius="620" targetscheme="all_units_and_couriers" ignoreinvulnerable="true" />	
+</building>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Arachna_Ability4"
+
+	speed="1500"
+	gravity="8000"
+
+	impactstealth="true"
+	modelscale="2.4"
+	model="../summon/model2.mdf"
+	traileffect="effects/trail.effect"
+	effectscale="2.0"
+	impacteffect="effects/ability_01/projectile/effects/ability_01_impact.effect"
+	impactdistance="50"
+>
+	<onimpact>
+		<combatevent effecttype="AbilityBasedProjectile">
+			<onimpact>
+				<condition target="target_entity" test="target_type dead" />
+				<else>
+					<condition target="source_entity" test="target_type dead" />
+					<else>
+						<spawnunit name="Gadget_Arachna_Ability4_Spiderling" target="this_position" proxy="proxy_entity" facing="proxy_entity" pushentity="true" />
+						<applystate name="State_Arachna_Ability4_CountAttacks" target="stack_entity" proxy="stack_entity" duration="15000" />
+						<applystate name="State_Arachna_Ability4_ExpirePet" target="proxy_entity" proxy="stack_entity" duration="15000" />
+						<applystate name="State_Arachna_Ability4" target="proxy_entity" duration="1500" />
+					</else>
+				</else>
+			</onimpact>
+		</combatevent>
+	</onimpact>
+</projectile>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Bephelgor1"
+	
+	statuseffecttooltip="State_Bephelgor_Ability1"
+	icon="icon.tga"
+	
+	anim="ability_1"
+	casttime="800"
+	castactiontime="300"
+	casteffect="effects/cast.effect"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_entity"
+	targetscheme="organic_enemy_units"
+	
+	casteffecttype="Magic"
+	
+	manacost="115,125,135,145"
+	cooldowntime="12000"
+	
+	range="500"
+>
+	<onimpact>
+		<playeffect effect="effects/cast.effect" source="target_entity" target="source_entity"/>
+		<applystate name="State_Bephelgor_Ability1" duration="1000,2000,3000,4000" proxy="target_entity" />
+	</onimpact>
+</ability>

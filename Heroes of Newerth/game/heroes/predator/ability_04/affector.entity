@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Predator_Ability4"
+
+	radius="450"
+
+	targetselection="all"
+	targetscheme="enemy_heroes"
+	effecttype=""
+	
+
+>
+	<onimpact>
+		<applystate name="State_Predator_Ability4" duration="20000" />
+	</onimpact>
+	
+</affector>

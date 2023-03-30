@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_PuppetMaster_Ability1"
+	
+	icon="icon.tga"
+	
+	restrained="true"
+	passiveeffect=""
+	effecttype="StatusDebuff"
+	alwaystransmitdata="true"
+	
+>
+	<onframe>
+		<condition test="not_hasstate State_PuppetMaster_Ability1_PushImmunity">
+			<push force="-80" frame="true" source="proxy_position" />
+		</condition>
+		<condition test="hasstate State_PuppetMaster_Ability1_ImmobilePush">
+			<push force="-500" frame="true" source="proxy_position" />
+		</condition>
+		<condition test="distance gt 500" source="proxy_entity" target="this_owner_entity">
+			<expire />
+		</condition>
+	</onframe>
+	
+	<onexpired>
+		<kill target="proxy_entity" source="" />
+	</onexpired>
+</state>

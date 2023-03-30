@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Maliken_Ability1"
+
+	speed="850"
+	gravity="2000"
+
+	modelscale="2"
+	model=""
+	
+	effectscale="1.0"
+	
+	canturn="true"
+	flying="true"
+	flyheight="25"
+>
+
+	<onimpact>
+		<bind target="proxy_entity" vertical="true" />
+		<condition test="redirect">
+			<playeffect effect="effects/return.effect" target="target_entity" source="target_entity" />
+			<kill target="proxy_entity" source="" />
+		</condition>
+		<else>
+			<retarget target="this_owner_entity" />
+		</else>
+	</onimpact>
+	
+	<ontouch>
+
+	</ontouch>
+	
+</projectile>

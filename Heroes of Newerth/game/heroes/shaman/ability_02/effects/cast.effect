@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+	<definitions>
+		<particlesystem name="system0" space="local" scale="1">
+		
+			<model
+			life="500"
+				bone="Bip01 Spine2"
+				model="hide.mdf"
+				directionalspace="local"
+				anim="cast"
+				scale=".5"
+				roll="0"
+				position="0 -10 -10"
+				alpha="1"
+				color="1 .5 .6"
+			>
+				
+			</model>
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+</effect>

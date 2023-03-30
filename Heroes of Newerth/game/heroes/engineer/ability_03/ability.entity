@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Engineer3"
+
+	icon="icon.tga"
+	
+	anim="ability_3"
+	casttime="1000"
+	castactiontime="500"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_entity"
+	targetscheme="engineer_units"
+	casteffecttype="Physical"
+	
+	manacost="50"
+	cooldowntime="20000"
+	
+	range="450"
+	
+	modifierkey="Engineer_Ability3_1,Engineer_Ability3_2,Engineer_Ability3_3,Engineer_Ability3_4"
+>
+	<onimpact>
+		<condition test="target_type Tower">
+			<condition test="ally">
+				<applystate name="State_Engineer_Ability3_Ally_Tower" duration="15000" />
+			</condition>
+			<else>
+				<applystate name="State_Engineer_Ability3_Enemy_Tower" duration="15000" />
+			</else>
+		</condition>
+		<condition test="target_type Mechanical">
+			<condition test="ally">
+				<applystate name="State_Engineer_Ability3_Allies" duration="15000" />
+			</condition>
+			<else>
+				<applystate name="State_Engineer_Ability3_Enemies" duration="15000" />
+			</else>
+		</condition>
+	</onimpact>
+</ability>

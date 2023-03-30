@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="1">
+	<definitions>
+		<particlesystem name="system0" space="world">
+		
+		<billboard
+
+			bone="_bone_centerofchest"
+			material="/shared/effects/materials/whitedot.material"
+			startcolor="0 0 0"
+			midcolor=".3 0 0"
+			endcolor="0 0 0"
+			size="150"
+			depthbias="-30"
+		/>
+			
+			<simpleemitter
+				bone="_bone_head"
+				spawnrate="9"
+				offsetsphere="30 30 30"
+				position="0 0 0"
+				particlelife="3000"
+				depthbias="-120"
+			>
+				<particle>
+					<groundsprite						
+						loop="false"			
+						material="/shared/effects/materials/blood_pool_02.material"						
+						life="2000"
+						size="5"			
+						position="-5 20 0"
+						minscale="1"
+						maxscale="6"
+						minyaw="-360"
+						maxyaw="360"
+						startcolor=".35 .2 .2"
+						endcolor=".2 .1 .1"
+						startalpha=".8"
+						midalpha=".8"
+						endalpha="0"
+						minendwidth="10"
+						maxendwidth="15"
+						minyaspweed="-2"
+						maxyawspeed="2"
+					/>				
+				</particle>
+				<particle>
+					<groundsprite						
+						loop="false"			
+						material="/shared/effects/materials/blood_pool_02.material"						
+						life="1500"
+						size="3"			
+						position="-5 20 0"
+						minscale="1"
+						maxscale="5"
+						minyaw="-360"
+						maxyaw="360"
+						startcolor=".25 .2 .2"
+						endcolor=".15 .15 .15"
+						startalpha=".8"
+						midalpha=".8"
+						endalpha="0"
+						minendscale="1"
+						maxenscale="1"
+					/>				
+				</particle>
+			</simpleemitter>	
+			
+			
+			
+		<simpleemitter
+			
+			bone="_bone_fx_03"
+			particlelife="300"				
+			spawnrate="50"
+			speed="0"
+			gravity="22"
+					
+			
+			minangle="0"
+			maxangle="30"
+			material="/shared/effects/materials/blood_pool_02.material"
+			offsetsphere="0 0 0"
+			position="0 0 0"
+			inheritvelocity=".025"
+		>
+
+			<particle 
+				minanglespeed="-100"
+				maxanglespeed="100"
+				
+				
+				minangle="-60"
+				maxangle="60"
+				color=".4 0 0"
+				
+				startsize="3"
+				endsize="0"
+								
+				
+				startalpha="1"
+				endalpha="0"
+		
+			/>
+		</simpleemitter>			
+			
+		<simpleemitter
+			
+			bone="_bone_fx_06"
+			particlelife="400"				
+			spawnrate="50"
+			speed="0"
+			gravity="22"
+					
+			
+			minangle="0"
+			maxangle="30"
+			material="/shared/effects/materials/blood_pool_02.material"
+			offsetsphere="0 0 0"
+			position="0 0 0"
+			inheritvelocity=".025"
+		>
+
+			<particle 
+				minanglespeed="-100"
+				maxanglespeed="100"
+				
+				
+				minangle="-60"
+				maxangle="60"
+				color=".4 0 0"
+				
+				startsize="3"
+				endsize="0"
+								
+				
+				startalpha="1"
+				endalpha="0"
+		
+			/>
+		</simpleemitter>			
+						
+		<simpleemitter
+		
+			
+			bone="_bone_fx_01"
+			particlelife="900"				
+			spawnrate="10"
+			speed="0"
+			gravity="22"
+					
+			
+			minangle="0"
+			maxangle="30"
+			material="/shared/effects/materials/blood_pool_02.material"
+			offsetsphere="3 3 3"
+			position="0 0 0"
+			inheritvelocity=".025"
+		>
+
+			<particle 
+				minanglespeed="-100"
+				maxanglespeed="100"
+				
+				
+				minangle="-60"
+				maxangle="60"
+				color=".2 0 0"
+				
+				startsize="8"
+				endsize="0"
+								
+				
+				startalpha="1"
+				endalpha="0"
+		
+			/>
+		</simpleemitter>			
+					
+		</particlesystem>
+	
+
+
+
+		
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1"/>
+		<waitfordeath instance="instance0" />
+	
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+

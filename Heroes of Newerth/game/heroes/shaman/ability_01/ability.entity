@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Shaman1"
+
+	
+	
+	statuseffecttooltip="State_Shaman_Ability1_Damage"
+	statuseffectheader="true"
+	icon="icon.tga"
+	
+	anim="ability_1"
+	casttime="800"
+	castactiontime="300"
+	casteffect="effects/cast.effect"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_entity"
+	targetscheme="enemy_units"
+	casteffecttype="Magic"
+	
+	manacost="100,115,130,145"
+	cooldowntime="15000,13000,11000,9000"
+	
+	range="600"
+>
+	<onimpact >
+		<applystate name="State_Shaman_Ability1_Snare" duration="1000,2000,2000,2000"/>
+	</onimpact>
+	
+</ability>

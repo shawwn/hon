@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1" useentityeffectscale="true">
+	<definitions>
+		<particlesystem name="system0" space="world"  scale="1.25">
+
+			<sound
+				soundloop="true"
+				fadein="300"
+				fadeout="500"
+				linearfalloff="true" 
+				falloffstart="50"
+				falloffend="1500"
+				volume=".4"
+				sample="../sounds/state.wav"
+			/>
+
+			<simpleemitter
+				spawnrate="5"
+				particlelife="750"
+				acceleration="0.0"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+				offsetsphere="20 20 50"
+				position="0 0 0"
+			>
+				<particle
+					turn="1"
+				>
+					<billboard
+						bone="_bone_centerofchest"
+						life="1000"
+						startcolor="0 0 0"
+						midcolor=".5 .125 0"
+						endcolor="0 0 0"
+						startparam=".5"
+						endparam="0.4"
+						startsize="150"
+						endsize="75"
+						depthbias="-100"
+						position="0 0 0"
+						material="/shared/effects/materials/corona_07.material"
+						lockup="true"
+						pitch="90"
+					/>
+				</particle>
+			</simpleemitter>
+
+<!--
+			<simpleemitter
+				life="3334"
+				spawnrate="2"
+				anchor="1"	
+				timenudge="333"
+				offsetsphere="25 25 0"
+			>
+				<particle
+					particlelife="3000"
+				>
+					<billboard
+						bone="_bone_centerofchest"
+						name="refract"
+						life="700"
+						color="1.0 1.0 1.0"
+						startalpha="0"
+						midalpha=".5"
+						endalpha="0"
+						midalphapos="0.75"
+						startparam=".02"
+						endparam="0"
+						startsize="350"
+						endsize="75"
+						depthbias="-100"
+						position="0 0 0"
+						material="/shared/effects/materials/heathaze.material"
+						lockup="true"
+						pitch="90"				
+					/>					
+				</particle>
+			</simpleemitter>
+-->
+			<simpleemitter
+				spawnrate="5"
+				particlelife="750"
+				acceleration="0.0"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+				offsetsphere="35 35 0"
+				position="0 0 0"
+			>
+				<particle
+					turn="1"
+				>
+					<billboard
+						bone="_bone_centerofchest"
+						life="1000"
+						startcolor="1 .5 0"
+						midcolor="1 .5 0"
+						endcolor="1 .5 0"
+						startparam=".5"
+						endparam="0.4"
+						startsize="150"
+						endsize="65"
+						depthbias="-100"
+						position="0 0 0"
+						material="/shared/effects/materials/pyroclast_06.material"
+						lockup="true"
+						pitch="90"
+						startalpha="0"
+						midalpha=".3"
+						endalpha="0"
+					/>
+				</particle>
+			</simpleemitter>
+			
+			<model
+				life="350"
+				parentmodel="true"
+				parentskeleton="true"
+				expirelife="500"
+				startcolor="0"
+				midcolor="3 1 .5"
+				endcolor="0"
+				material="/shared/effects/materials/shell2.material"
+			/>
+
+			<simpleemitter
+				spawnrate="2"
+				anchor="1"
+				timenudge="333"
+				position="0 0 0"
+			>
+				<particle
+					particlelife="3000"
+				>
+
+					<model
+						life="500"
+						model="/shared/effects/models/twirl_bones/twirl_bones.mdf"
+						anim="idle"
+						startscale="1"
+						endscale="1.5"
+						yawspeed="180"
+						position="0 0 -25"
+					>
+						<template name="trail">
+							<trailemitter
+								bone="{bone}"
+								spawnrate="25"
+								startminparticlelife="500"
+								startmaxparticlelife="750"
+								endminparticlelife="1"
+								endmaxparticlelife="1" 
+								texpostime="1000"
+								texposscale="1"
+								texstretchscale="0"
+								position="10 0 0"
+								material="/shared/effects/materials/arrow_trail.material"
+								inheritvelocity=".1"
+								subframepos="true"
+							>
+								<particle
+									startcolor="0 0 0"
+									midcolor=".35 .15 0"
+									endcolor="0 0 0"
+									startsize="0"
+									midsize="2.5"
+									endsize="0"
+								/>
+							</trailemitter>
+						</template>
+					
+						<instance name="trail" bone="_bone_effect_01"/>
+						<instance name="trail" bone="_bone_effect_02"/>
+						<instance name="trail" bone="_bone_effect_03"/>
+						<instance name="trail" bone="_bone_effect_04"/>
+						
+					</model>
+				</particle>
+			</simpleemitter>
+
+
+      </particlesystem>
+   </definitions>
+   <thread>
+   
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+	  <!--<camerashake2 scale="2" radius="1200" duration="3300" frequency="22" />-->
+	  <wait duration="3333" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

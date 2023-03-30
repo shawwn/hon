@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Pyromancer3"
+
+	statuseffecttooltip="State_Pyromancer_Ability3"
+	statuseffecttooltip2="State_Pyromancer_Ability3_Burning"
+	icon="icon.tga"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="passive"
+	
+	castspeed="0.1,0.2,0.3,0.4"
+	
+	counter="1,2,3,4"
+>
+	<onimpact />
+	
+	<onabilityimpact>
+		<applystate name="State_Pyromancer_Ability3" duration="6000" target="source_entity" />
+		<playeffect effect="effects/cast.effect" source="source_entity" target="source_entity"/>
+	</onabilityimpact>
+	
+	<onattackimpact propagatetoillusions="false">
+		<cantarget targetscheme="enemy_units">
+			<applystate name="State_Pyromancer_Ability3_Burning" duration="3000" />
+		</cantarget>
+		<cantarget targetscheme="enemy_buildings">
+			<applystate name="State_Pyromancer_Ability3_Burning_Building" duration="3000" />
+		</cantarget>
+	</onattackimpact>
+</ability>

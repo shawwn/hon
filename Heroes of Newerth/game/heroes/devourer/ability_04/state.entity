@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Devourer_Ability4"
+	
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+	
+	stunned="true"
+	revealed="true"
+>
+	<onframe>
+		<damage effecttype="Magic DOT" amount="75,125,175" b="frametime" op="mult"/>
+	</onframe>
+	
+	<modifier key="ult_boost" modpriority="100"	
+	>
+		<onframe>
+			<setvar0 a=".75" b="source_strength" op="mult"/> 
+			<setvar0 a="var0" b="75,125,175" op="add"/>
+			<setvar0 a="var0" b="frametime" op="mult"/> 
+			<damage effecttype="Magic DOT" amount="1" b="var0" op="mult"/>
+			<heal a="var0" target="this_inflictor_entity" />
+		</onframe>
+	</modifier>
+</state>

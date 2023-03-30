@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Bephelgor_Ability1"
+	
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+
+	silenced="true"
+	
+
+	effecttype="StatusDebuff"
+>
+	<onframe>
+		<damage effecttype="Magic DOT" amount="60" b="frametime" op="mult"/>
+	</onframe>
+	
+	<onexpired>
+		<areaofeffect
+			radius="300"
+			targetselection="all"
+			targetscheme="organic_enemy_units"
+			effecttype="Magic"
+		>
+			<condition test="target_entity eq proxy_entity" />
+			<else>				
+				<applystate name="State_Bephelgor_Ability1_Secondary" proxy="this_owner_entity" duration="1000,2000,3000,4000" />
+			</else>
+		</areaofeffect>
+	</onexpired>
+	
+
+</state>

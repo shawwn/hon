@@ -1,0 +1,21 @@
+Puppetmaster:
+===============
+Ability 1:
+----------
+Targets an enemy unit, binds its hands via a magical string to the ground. The magical string behaves in an elastic-like manner, still allowing limited movement but when the unit stops it'll be dragged back toward the original position. if it gets too far away, it is immobilized briefly (forcing it back to the starting point). The unit can still attack and cast.
+
+
+Ability 2:
+----------
+Target enemy unit is forced to attack a nearby unit (friend OR foe). 
+
+
+Ability 3:
+----------
+Targets a unit and drains mana from it. This is a channeling ability. If the target gets out of the maximum range the effect stops. If the target unit is an allied unit, you instead feed it mana.
+
+
+Ultimate:
+---------
+Creates a scaled down and brown tinted model of target enemy unit. All spell dealt to this puppet/doll are as if it was dealt to the real unit. The puppet only has a portion of the health of the enemy unit. An example of how this works. If i cast this on say lucifer and then lucifer runs away. Now sven uses stormbolt on the puppet near my. This would cause lucifer to be "hit" by the stormbolt, getting stunned and taking damage. If centaur stomps on the puppet, lucifer would get affected as well. It basically translates the affects and aliments of the puppent onto the hero himself. This works for his abilities as well, you can bind the puppet down (ability 1) and have it reflect on the source hero.
+

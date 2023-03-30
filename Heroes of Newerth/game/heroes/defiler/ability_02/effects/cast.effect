@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="entity" scale="1">
+
+			<!-- Dark Cloud
+
+			<simpleemitter
+				life="600"
+				spawnrate="15"
+				depthbias="-30"
+				particlelife="1000"
+				offsetsphere="15"
+				position="0 45 40"
+				angle="40"
+				speed="20"
+				material="/shared/effects/materials/bad_heal_smoke_06.material"
+			>
+				<particle
+					startcolor="0"
+					midcolor=".8 .1 .4"
+					midcolorpos="0.3"
+					endcolor="0"
+					startsize="15"
+					endsize="60"
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-30"
+					maxanglespeed="30"
+					minendscale="2"
+					maxendscale="4"
+					startalpha="1"
+					endalpha="0"
+			 	/>
+				<particle
+					startcolor="0"
+					midcolor=".75 .1 .45"
+					midcolorpos="0.3"
+					endcolor="0"
+					startsize="15"
+					endsize="60"
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-30"
+					maxanglespeed="30"
+					minendscale="2"
+					maxendscale="4"
+					startalpha="1"
+					endalpha="0"
+			 	/>
+				<particle
+					startcolor="0"
+					midcolor=".45 .0 .25"
+					midcolorpos="0.3"
+					endcolor="0"
+					startsize="25"
+					endsize="60"
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-50"
+					maxanglespeed="50"
+					minendscale="2"
+					maxendscale="4"
+					startalpha="1"
+					endalpha="0"
+			 	/>
+			</simpleemitter>
+ -->
+			<!-- Right Hand -->
+
+			<simpleemitter
+				life="1200"
+				bone="Bip01 R Hand"
+				spawnrate="20"
+				particlelife="400"
+				material="/shared/effects/materials/electric_impact_add.material"
+			>
+				<particle
+					startcolor="0"
+					midcolor=".7 0 .2"
+					midcolorpos="0.3"
+					endcolor="0"
+					startsize="15"
+					endsize="30"
+					maxangle="360"
+					depthbias="-180"
+					minendscale="1"
+					maxendscale="3"
+					height="7"
+					endwidth="25"
+					flare="1"
+			 	/>
+			</simpleemitter>
+
+			<billboard
+				life="1200"
+				bone="Bip01 R Hand"
+				startcolor=".7 0 .3"				
+				endcolor="0"
+				startsize="30"
+				endsize="0"
+				depthbias="-30"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+
+			<simpleemitter
+				life="1200"
+				spawnrate="15"
+				depthbias="-30"
+				particlelife="300"
+				offsetsphere="2"
+				bone="Bip01 R Hand"
+				angle="20"
+				material="/shared/effects/materials/phantom_smoke_06.material"
+			>
+				<particle
+					startcolor="0"
+					midcolor="1 .2 .4"
+					midcolorpos="0.3"
+					endcolor="0"
+					startsize="15"
+					endsize="40"
+					maxangle="360"
+					depthbias="-180"
+					minendscale="1"
+					maxendscale="3"
+			 	/>
+			</simpleemitter>
+
+			<!-- Left Hand -->
+
+			<simpleemitter
+				life="1200"
+				bone="Bip01 L Hand"
+				spawnrate="20"
+				particlelife="400"
+				material="/shared/effects/materials/electric_impact_add.material"
+			>
+				<particle
+					startcolor="0"
+					midcolor=".7 0 .2"
+					midcolorpos="0.3"
+					endcolor="0"
+					startsize="15"
+					endsize="30"
+					maxangle="360"
+					depthbias="-180"
+					minendscale="1"
+					maxendscale="3"
+					height="7"
+					endwidth="25"
+					flare="1"
+			 	/>
+			</simpleemitter>
+
+			<billboard
+				life="1200"
+				bone="Bip01 L Hand"
+				startcolor=".7 0 .3"				
+				endcolor="0"
+				startsize="30"
+				endsize="0"
+				depthbias="-30"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+
+			<simpleemitter
+				life="1200"
+				spawnrate="15"
+				depthbias="-30"
+				particlelife="300"
+				offsetsphere="2"
+				bone="Bip01 L Hand"
+				angle="20"
+				material="/shared/effects/materials/phantom_smoke_06.material"
+			>
+				<particle
+					startcolor="0"
+					midcolor="1 .2 .4"
+					midcolorpos="0.3"
+					endcolor="0"
+					startsize="15"
+					endsize="40"
+					maxangle="360"
+					depthbias="-180"
+					minendscale="1"
+					maxendscale="3"
+			 	/>
+			</simpleemitter>
+<!--
+			<simpleemitter
+				delay="350"
+				life="300"
+				position="0 85 40"
+				spawnrate="15"
+				depthbias="-30"
+				particlelife="700"
+				offsetsphere="2"
+				material="/shared/effects/materials/deamon.material"
+				particledirectionalspace="local"
+				speed="5"
+				angle="0"
+				direction="0 1 0"
+			>
+				<particle
+					startcolor=".3 0 .2"
+					endcolor="0"
+					size="60"
+					minendscale="1"
+					maxendscale="1.4"
+					lockup="true"
+					lockright="true"
+					pitch="90"
+					flare="true"
+			 	/>
+			</simpleemitter>
+-->
+			<billboard
+				delay="350"
+				life="300"
+				position="0 40 40"
+				startcolor=".7 0 .3"				
+				endcolor="0"
+				startsize="120"
+				endsize="0"
+				depthbias="-130"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+
+		 </particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

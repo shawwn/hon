@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="tracker"  persistent="true" useentityeffectscale="1">
+	<definitions >
+		<modifier
+			name="modifier0"
+			life="1500"
+			startcolor="0 0 0"
+			endcolor="1.0 1.0 1.0"
+		/>		
+		
+		
+		<particlesystem name="system0" space="world" scale="1.2">
+
+			<sound
+				falloff="150.0" 
+				volume="1.0" 
+				sample="/heroes/javaras/ability_01/sounds/ability_01.wav"
+			/>
+			<beam
+				delay="000"
+				owner_a="target"
+				owner_b="source"
+				bone_a="_bone_fx_46"
+				bone_b="_bone_centerofchest"
+				size="55"
+				startcolor="0 1 1"
+				midcolor="0 1 1"
+				endcolor=" 0 0 0"
+				midcolorpos="0.8"
+				life="300"
+				
+				alpha="1.0"
+				material="/shared/effects/materials/femme_lightning_10.material"
+				startframe=".6"
+				framespeed="5"
+			/>			
+			
+			
+			<trackeremitter				
+				count="1"			
+				bone="_bone_centerofchest"
+				owner="source"
+				targetbone="Bip01 R Hand"
+				targetowner="target"
+				
+				tracktype="angular"
+				trackspeed="11.0" 				
+				drag="0"
+				spawnrate="250"
+				particlelife="2000"
+				gravity="-50"
+				offsetsphere="5 5 5"
+				minspeed="10.0"
+				maxspeed="220.0"
+				
+				acceleration="30.0"
+				direction="0.0 0.0 1.0"
+				
+				inheritvelocity="0.0"
+				distancelife="true"
+			>
+				<particle>		
+					<trailemitter
+						name="trail_01"
+						life="2000"
+						bone="Box03"
+						spawnrate="50"
+						startminparticlelife="1000"
+						startmaxparticlelife="1000"		
+						
+						endminparticlelife="1"
+						endmaxparticlelife="1" 
+						texpostime="2000"
+						texposscale="1.8"
+						texstretchscale="0"
+						position="0 0 0"
+						material="/shared/effects/materials/arrow_trail.material"
+					>
+						<particle
+							startcolor="0 1 1"
+							midcolor=".1 .8 1"
+							endcolor=".2 .4 .4"
+							startsize="0"
+											
+							midsize="5"
+							endsize="0"
+							
+							midcolorpos=".1"
+							midsizepos=".1"
+							
+						/>
+					</trailemitter>		
+						
+				</particle>							
+			</trackeremitter>	
+			<trackeremitter
+				count="5"	
+				bone="_bone_fx_46"
+				owner="source"
+				targetbone="_bone_centerofchest"
+				targetowner="target"	
+				targetposition="0 0 0"
+				tracktype="distance"
+				trackspeed="1.0"				
+				
+				spawnrate="80"
+				particlelife="300"		
+		
+				speed="1000.0"						
+				acceleration="0.0"
+				direction="0.0 0.0 1.0"				
+				inheritvelocity="0.0"
+				distancelife="0"
+			>
+				<particle>
+					<trailemitter					
+						life="1000"						
+						spawnrate="150"
+						startminparticlelife="1000"
+						startmaxparticlelife="1000"		
+						offsetsphere="15 15 15"
+						endminparticlelife="1"
+						endmaxparticlelife="1" 
+						texpostime="1000"
+					 	texposscale="0"
+					 	texstretchscale="1"
+						position="0 0 0"
+						material="/shared/effects/materials/arrow_trail.material"
+					>
+						<particle
+							startcolor="0.2 1 1"
+							midcolor="0.2 1 1"
+							endcolor=".2 .2 .4"
+							startsize=".5"
+											
+							midsize="1"
+							endsize=".5"
+							
+							midcolorpos=".1"
+							midsizepos=".1"
+							
+						/>
+					</trailemitter>	
+				</particle>				
+				
+			</trackeremitter>	
+
+			
+
+	<!--	skeleton	-->	
+			<billboard
+				life="75"
+				material="/shared/effects/materials/femur_blend.material"
+				bone="Bip01 R Forearm"
+				color="1 1 1"			
+				lockup="1"
+				pitch="90"
+				width="23"
+				height="10"
+				yaw="0"
+				lockright="1"
+				directionalspace="local"
+				position="0 0 0"
+				depthbias="-40"			
+			/>	
+			<billboard
+				life="75"
+				material="/shared/effects/materials/femur_blend.material"
+				bone="Bip01 L Forearm"
+				color="1 1 1"			
+				lockup="1"
+				pitch="90"
+				width="23"
+				height="10"
+				yaw="0"
+				lockright="1"
+				directionalspace="local"
+				position="0 0 0"
+				depthbias="-40"			
+			/>	
+			
+			<billboard
+				life="75"
+				material="/shared/effects/materials/skel_blend.material"
+				bone="Bip01 Head"
+				color="1 1 1"			
+				
+				pitch="0"
+				size="20"
+				yaw="0"
+				roll="0"
+				
+				directionalspace=""
+				position="0 -10 18"
+				depthbias="-80"			
+			/>	
+			<billboard
+				life="75"
+				material="/shared/effects/materials/hand_blend.material"
+				bone="_bone_lefthand"
+				color="1 1 1"			
+				
+				pitch="180"
+				size="20"
+				yaw="0"
+				roll="0"
+				
+				directionalspace=""
+				position="0 0 0"
+				depthbias="-80"			
+			/>	
+			<billboard
+				life="75"
+				material="/shared/effects/materials/hand_blend.material"
+				bone="_bone_righthand"
+				color="1 1 1"			
+				
+				pitch="180"
+				size="20"
+				yaw="0"
+				roll="0"
+				
+				directionalspace=""
+				position="0 0 0"
+				depthbias="-80"			
+			/>				
+			<billboard
+				life="75"
+				material="/shared/effects/materials/cage_blend.material"				
+				bone="Bip01 Pelvis"
+				color="1 1 1"			
+				lockup="1"
+				pitch="90"
+				size="35"
+				yaw="90"
+				lockright="1"
+				directionalspace="local"
+				position="0 0 10"
+				depthbias="-90"			
+			/>		
+
+				
+					
+					
+			<beam
+				life="75"
+				material="/shared/effects/materials/femur_blend.material"
+				bone_a="Bip01 R Forearm"
+				bone_b="_bone_righthand"
+				color="1 1 1"			
+				lockup="1"
+				size="10"
+				height="10"
+				yaw="0"
+				position_a="0 0 9"
+				position_b="0 0 9"				
+				depthbias="-140"			
+			/>	
+			<beam
+				life="75"			
+				material="/shared/effects/materials/femur_blend.material"
+				bone_a="Bip01 L Forearm"
+				bone_b="_bone_lefthand"
+				color="1 1 1"			
+				lockup="1"
+				size="10"
+				height="10"
+				yaw="0"
+				position_a="0 0 9"
+				position_b="0 0 9"				
+				depthbias="-140"			
+			/>	
+
+
+					
+			<beam
+				life="75"	
+				material="/shared/effects/materials/femur_blend.material"
+				bone_a="Bip01 R Calf"
+				bone_b="_bone_rightfoot"
+				color="1 1 1"			
+				lockup="1"
+				size="10"
+				height="10"
+				yaw="0"
+				position_a="0 10 0"
+				position_b="0 10 0"				
+				depthbias="-140"			
+			/>	
+			<beam		
+				life="75"			
+				material="/shared/effects/materials/femur_blend.material"
+				bone_a="Bip01 L Calf"
+				bone_b="_bone_leftfoot"
+				color="1 1 1"			
+				lockup="1"
+				size="10"
+				height="10"
+				yaw="0"
+				position_a="0 10 0"
+				position_b="0 10 0"				
+				depthbias="-140"			
+			/>	
+
+
+
+
+
+
+
+
+
+
+
+	<!--	skeleton	-->	
+			<billboard
+				delay="110"
+				life="75"
+				material="/shared/effects/materials/femur_blend.material"
+				bone="Bip01 R Forearm"
+				color="1 1 1"			
+				lockup="1"
+				pitch="90"
+				width="23"
+				height="10"
+				yaw="0"
+				lockright="1"
+				directionalspace="local"
+				position="0 0 0"
+				depthbias="-40"			
+			/>	
+			<billboard
+				delay="110"
+				life="75"
+				material="/shared/effects/materials/femur_blend.material"
+				bone="Bip01 L Forearm"
+				color="1 1 1"			
+				lockup="1"
+				pitch="90"
+				width="23"
+				height="10"
+				yaw="0"
+				lockright="1"
+				directionalspace="local"
+				position="0 0 0"
+				depthbias="-40"			
+			/>	
+			
+			<billboard
+				delay="110"
+				life="75"
+				material="/shared/effects/materials/skel_blend.material"
+				bone="Bip01 Head"
+				color="1 1 1"			
+				
+				pitch="0"
+				size="20"
+				yaw="0"
+				roll="0"
+				
+				directionalspace=""
+				position="0 -10 18"
+				depthbias="-80"			
+			/>	
+			<billboard
+				delay="110"
+				life="75"
+				material="/shared/effects/materials/hand_blend.material"
+				bone="_bone_lefthand"
+				color="1 1 1"			
+				
+				pitch="180"
+				size="20"
+				yaw="0"
+				roll="0"
+				
+				directionalspace=""
+				position="0 0 0"
+				depthbias="-80"			
+			/>	
+			<billboard
+				delay="110"
+				life="75"
+				material="/shared/effects/materials/hand_blend.material"
+				bone="_bone_righthand"
+				color="1 1 1"			
+				
+				pitch="180"
+				size="20"
+				yaw="0"
+				roll="0"
+				
+				directionalspace=""
+				position="0 0 0"
+				depthbias="-80"			
+			/>				
+			<billboard
+				delay="110"
+				life="75"
+				material="/shared/effects/materials/cage_blend.material"				
+				bone="Bip01 Pelvis"
+				color="1 1 1"			
+				lockup="1"
+				pitch="90"
+				size="35"
+				yaw="90"
+				lockright="1"
+				directionalspace="local"
+				position="0 0 10"
+				depthbias="-90"			
+			/>		
+
+				
+					
+					
+			<beam
+				delay="110"
+				life="75"
+				material="/shared/effects/materials/femur_blend.material"
+				bone_a="Bip01 R Forearm"
+				bone_b="_bone_righthand"
+				color="1 1 1"			
+				lockup="1"
+				size="10"
+				height="10"
+				yaw="0"
+				position_a="0 0 9"
+				position_b="0 0 9"				
+				depthbias="-140"			
+			/>	
+			<beam
+				delay="110"
+				life="75"			
+				material="/shared/effects/materials/femur_blend.material"
+				bone_a="Bip01 L Forearm"
+				bone_b="_bone_lefthand"
+				color="1 1 1"			
+				lockup="1"
+				size="10"
+				height="10"
+				yaw="0"
+				position_a="0 0 9"
+				position_b="0 0 9"				
+				depthbias="-140"			
+			/>	
+
+
+					
+			<beam
+				delay="110"
+				life="75"	
+				material="/shared/effects/materials/femur_blend.material"
+				bone_a="Bip01 R Calf"
+				bone_b="_bone_rightfoot"
+				color="1 1 1"			
+				lockup="1"
+				size="10"
+				height="10"
+				yaw="0"
+				position_a="0 10 0"
+				position_b="0 10 0"				
+				depthbias="-140"			
+			/>	
+			<beam
+	delay="150"			
+				life="75"			
+				material="/shared/effects/materials/femur_blend.material"
+				bone_a="Bip01 L Calf"
+				bone_b="_bone_leftfoot"
+				color="1 1 1"			
+				lockup="1"
+				size="10"
+				height="10"
+				yaw="0"
+				position_a="0 10 0"
+				position_b="0 10 0"				
+				depthbias="-140"			
+			/>						
+		</particlesystem>
+	</definitions>
+	<thread>
+
+		
+		<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+	  	<spawnmodifier instance="instance1" modifier="modifier0"/>  
+	  	<waitfordeath instance="instance0" />
+	  	<waitfordeath instance="instance1" />			
+		
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+

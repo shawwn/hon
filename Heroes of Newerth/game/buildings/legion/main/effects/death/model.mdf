@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="model_dead_high01.max" file="high.model" type="K2">
+<anim name="idle" clip="high.clip" loopbackframe="-1" numframes="1" loop="1"/>
+<anim name="death" clip="high.clip" loopbackframe="-1" loop="1"/>
+</model>

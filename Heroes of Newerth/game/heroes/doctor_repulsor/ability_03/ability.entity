@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_DoctorRepulsor3"
+
+	statuseffecttooltip="State_DoctorRepulsor_Ability3"
+	icon="icon.tga"
+
+	anim="ability_3"
+	casttime="0"
+	castactiontime="0"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="passive"
+>
+	<onabilityimpact>
+		<applystate name="State_DoctorRepulsor_Ability3" continuous="true" target="source_entity" />
+	</onabilityimpact>
+</ability>

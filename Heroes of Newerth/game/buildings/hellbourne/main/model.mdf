@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="rig.max" file="high.model" type="K2" >
+
+	<spawnevent cmd="StartEffect effects/body.effect 0"/>
+	
+	<anim name="idle" clip="clips/default_1.clip" fps="20" loop="true" loopbackframe="1"/>
+	
+	<anim name="death_1" clip="clips/death.clip"  numframes="300">
+		<startevent cmd="StopSound 0" />
+		<frameevent frame="222" cmd="StopEffect 0"/>
+		<frameevent frame="12" cmd="StartEffect /buildings/hellbourne/main/effects/death/death.effect"/>
+		<frameevent frame="1" cmd="StartEffect /buildings/hellbourne/main/effects/death/crumble.effect"/>
+		<frameevent frame="220" cmd="StartEffect /buildings/hellbourne/main/effects/death/explosion.effect"/>
+		<frameevent frame="255" cmd="StartEffect /buildings/hellbourne/main/effects/death/growth.effect"/>
+	</anim>
+
+</model>
+
+

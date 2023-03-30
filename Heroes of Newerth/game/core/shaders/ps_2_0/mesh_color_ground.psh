@@ -1,0 +1,289 @@
+// (C)2008 S2 Games
+// mesh_color_ground.psh
+// 
+//=============================================================================
+
+//=============================================================================
+// Headers
+//=============================================================================
+#include "../common/common.h"
+#include "../common/fog.h"
+#if (SHADOWS == 1)
+#include "shadowed.h"
+#endif
+
+//=============================================================================
+// Global variables
+//=============================================================================
+float3		vSunPositionWorld;
+
+float3		vAmbient;
+float3		vSunColor;
+
+float2		vSpec;
+
+#if (NUM_POINT_LIGHTS > 0)
+float3		vPointLightPositionOffset[NUM_POINT_LIGHTS];
+float3		vPointLightColor[NUM_POINT_LIGHTS];
+float2		vPointLightFalloff[NUM_POINT_LIGHTS];
+#endif
+
+//=============================================================================
+// Vertex shader output structure
+//=============================================================================
+struct VS_OUTPUT
+{
+	float4 Color0 : COLOR0;
+	float2 Texcoord0 : TEXCOORDX;
+		#include "../common/inc_texcoord.h"
+	float2 Texcoord1 : TEXCOORDX;
+		#include "../common/inc_texcoord.h"
+#if (LIGHTING_QUALITY == 0 || FALLOFF_QUALITY == 0)
+	float3 PositionOffset : TEXCOORDX;
+		#include "../common/inc_texcoord.h"
+#endif
+#if (LIGHTING_QUALITY == 0)
+	float3 Normal : TEXCOORDX;
+		#include "../common/inc_texcoord.h"
+	float3 Tangent : TEXCOORDX;
+		#include "../common/inc_texcoord.h"
+	float3 Binormal : TEXCOORDX;
+		#include "../common/inc_texcoord.h"
+#elif (LIGHTING_QUALITY == 1)
+	float3 HalfAngle : TEXCOORDX;
+		#include "../common/inc_texcoord.h"
+	float3 SunLight : TEXCOORDX;
+		#include "../common/inc_texcoord.h"
+#elif (LIGHTING_QUALITY == 2)
+	float3 DiffLight : TEXCOORDX;
+		#include "../common/inc_texcoord.h"
+#endif
+#if (SHADOWS == 1)
+	float4 TexcoordLight : TEXCOORDX; // Texcoord in light texture space
+		#include "../common/inc_texcoord.h"
+#endif
+#ifdef CLOUDS
+	float2 TexcoordClouds : TEXCOORDX;
+		#include "../common/inc_texcoord.h"
+#endif
+#if ((FOG_QUALITY == 1 && FOG_TYPE != 0) || (FALLOFF_QUALITY == 1 && (FOG_TYPE != 0 || SHADOWS == 1)) || FOG_OF_WAR == 1)
+	float4 Last : TEXCOORDX;
+		#include "../common/inc_texcoord.h"
+#endif
+};
+
+//=============================================================================
+// Pixel shader input structure
+//=============================================================================
+struct PS_OUTPUT
+{
+	float4 Color : COLOR;
+};
+
+sampler diffuse;
+
+#ifndef RXGB_NORMALMAP
+sampler normalmap;
+#else
+sampler normalmap_0;
+sampler normalmap_1;
+#endif
+
+sampler terrain_diffuse;
+
+#ifndef RXGB_NORMALMAP
+sampler terrain_normalmap;
+#else
+sampler terrain_normalmap_0;
+sampler terrain_normalmap_1;
+#endif
+
+
+#ifdef SPECULAR_LOOKUP
+sampler specularLookup;
+#endif
+
+#ifdef CLOUDS
+sampler clouds;
+#endif
+
+#if (FOG_OF_WAR == 1)
+sampler fogofwar;
+#endif
+
+//=============================================================================
+// Pixel Shader
+//=============================================================================
+PS_OUTPUT PS( VS_OUTPUT In )
+{
+	PS_OUTPUT Out;
+	
+	float4 cCliffDiffuseColor = tex2D(diffuse, In.Texcoord0);
+	float4 cTerrainDiffuseColor = tex2D(terrain_diffuse, In.Texcoord1);
+	
+	float3 cDiffuseColor = lerp(cTerrainDiffuseColor.rgb, cCliffDiffuseColor.rgb, cCliffDiffuseColor.a) * In.Color0;
+	
+#if (LIGHTING_QUALITY == 0)
+	float3 vCamDirection = -normalize(In.PositionOffset);
+#endif
+
+#if (FOG_TYPE != 0 || SHADOWS == 1)
+	#if (FALLOFF_QUALITY == 1)
+	float fCamDistance = In.Last.z;
+	#else
+	float fCamDistance = length(In.PositionOffset);
+	#endif
+#endif
+		
+	//
+	// Shadowing
+	//
+	
+#if (SHADOWS == 1)
+	float fShadow = ShadowedD(In.TexcoordLight, fCamDistance);
+#else // SHADOWS == 0
+	float fShadow = 1.0f;
+#endif
+		
+	//
+	// Lighting
+	//	
+	
+#if (LIGHTING != 0)
+
+	#ifndef RXGB_NORMALMAP
+	float4 cCliffNormalmapColor = tex2D(normalmap, In.Texcoord0);
+	float4 cTerrainNormalmapColor = tex2D(terrain_normalmap, In.Texcoord1);
+	#else
+	float4 cCliffNormalmapColor;
+	cCliffNormalmapColor.rgb = tex2D(normalmap_0, In.Texcoord0).agb;
+	cCliffNormalmapColor.a = tex2D(normalmap_1, In.Texcoord0).g;
+	
+	float4 cTerrainNormalmapColor;
+	cTerrainNormalmapColor.rgb = tex2D(terrain_normalmap_0, In.Texcoord1).agb;
+	cTerrainNormalmapColor.a = tex2D(terrain_normalmap_1, In.Texcoord1).g;
+	#endif
+	
+	float4 cNormalmapColor = lerp(cTerrainNormalmapColor, cCliffNormalmapColor, cCliffDiffuseColor.a);
+	
+	float3 vTexNormal = float3(cNormalmapColor.rgb * 2.0f - 1.0f);
+	
+	float3 vDiffuse = vAmbient;
+	float3 vSpecular = float3(0.0f, 0.0f, 0.0f);
+	float fSpecular = cNormalmapColor.a * vSpec.x;
+
+	#if (LIGHTING_QUALITY == 1)
+	float3 vNormal = vTexNormal;
+	#elif (LIGHTING_QUALITY == 0)
+	float3x3 mRotation = float3x3(In.Tangent, In.Binormal, In.Normal);
+	float3 vNormal = mul(vTexNormal, mRotation);
+	
+		#ifdef AMBIENT_OCCLUSION
+	vDiffuse *= dot(vNormal, In.Normal);
+		#endif
+	#endif
+	
+	// Sun
+	#if (LIGHTING_QUALITY == 2)
+
+	vDiffuse += In.DiffLight.xyz * fShadow;
+
+	#else // 0 or 1
+
+		#if (LIGHTING_QUALITY == 1)
+	float3 vLight = normalize(In.SunLight.xyz);
+	float3 vHalfAngle = normalize(In.HalfAngle);
+		
+			#ifdef SMOOTH_SELF_OCCLUDE
+	float fSelfOcclude = saturate(vLight.z * 5.0f);
+			#else
+	float fSelfOcclude = 1.0f;
+			#endif
+		#else
+	float3 vLight = vSunPositionWorld;		
+	float3 vHalfAngle = normalize(vLight + vCamDirection);
+		
+			#ifdef SMOOTH_SELF_OCCLUDE
+	float fSelfOcclude = saturate(dot(In.Normal, vLight) * 5.0f);
+			#else
+	float fSelfOcclude = 1.0f;
+			#endif
+		#endif
+		
+	float2 vLit; // x = diffuse, y = specular
+		
+	vLit.x = saturate(dot(vNormal, vLight));
+	vLit.y = pow(saturate(dot(vNormal, vHalfAngle)), vSpec.y) * fSpecular;
+
+	vLit *= fShadow * fSelfOcclude;
+
+		#ifdef CLOUDS
+	float4 cCloudColor = tex2D(clouds, In.TexcoordClouds);
+
+	vDiffuse += vSunColor * vLit.x * cCloudColor;
+	vSpecular += vSunColor * vLit.y * cCloudColor;
+		#else
+	vDiffuse += vSunColor * vLit.x;
+	vSpecular += vSunColor * vLit.y;
+		#endif
+	
+		#if (NUM_POINT_LIGHTS > 0 && LIGHTING_QUALITY == 0)
+	// Point Lights
+	[unroll(NUM_POINT_LIGHTS)] for (int i = 0; i < NUM_POINT_LIGHTS; ++i)
+	{
+		float3 vDeltaPosition = vPointLightPositionOffset[i] - In.PositionOffset;
+		float fDistance = length(vDeltaPosition);
+	
+		float3 vLight = normalize(vDeltaPosition);
+		float3 vHalfAngle = normalize(vLight + vCamDirection);
+
+		float fAttenuation = 1.0f - saturate(fDistance * vPointLightFalloff[i].x + vPointLightFalloff[i].y);
+		
+		float2 vLit; // x = diffuse, y = specular
+		
+		vLit.x = saturate(dot(vNormal, vLight));
+		vLit.y = pow(saturate(dot(vNormal, vHalfAngle)), vSpec.y) * fSpecular;
+		
+		vLit *= fAttenuation;
+		
+		vDiffuse += vPointLightColor[i] * vLit.x;
+		vSpecular += vPointLightColor[i] * vLit.y;
+	}
+		#endif
+
+	#endif // LIGHTING_QUALITY
+
+#else // LIGHTING == 0
+	float3 vDiffuse = float3(1.0f, 1.0f, 1.0f);
+	float3 vSpecular = float3(0.0f, 0.0f, 0.0f);
+#endif
+	
+	//
+	// Fog
+	//
+
+#if (FOG_TYPE != 0) // FOG_NONE
+	#if (FOG_QUALITY == 1)
+	float fFog = In.Last.w;
+	#else
+	float fFog = FogD(fCamDistance);
+	#endif
+#else
+	float fFog = 0.0f;
+#endif
+
+	//
+	// Final
+	//
+	
+	float3 vFinalColor = cDiffuseColor.rgb * vDiffuse + vSpecular;
+		
+#if (FOG_OF_WAR == 1)
+	vFinalColor *= tex2D(fogofwar, In.Last.xy).a;
+#endif
+
+	Out.Color.rgb = lerp(vFinalColor, vFogColor, fFog);
+	Out.Color.a = In.Color0.a;
+
+	return Out;
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Soulstealer_Ability4"
+
+	
+	
+	icon="icon.tga"
+	passiveeffect=""
+	
+	effecttype="StatusDebuff"
+
+	movespeedslow="0.15,0.2,0.25"
+	basedamagemultiplier="-0.15,-0.20,-0.25"	
+>
+</state>

@@ -1,0 +1,46 @@
+// (C)2008 S2 Games
+// mesh_Outline.psh
+// 
+// Outline mesh pixel shader
+//=============================================================================
+
+//=============================================================================
+// Headers
+//=============================================================================
+#include "../common/common.h"
+
+//=============================================================================
+// Vertex shader output structure
+//=============================================================================
+struct VS_OUTPUT
+{
+	float4 Position : POSITION;
+	float4 Color0 : COLOR0;
+	float2 Texcoord0 : TEXCOORDX;
+		#include "../common/inc_texcoord.h"
+};
+
+//=============================================================================
+// Pixel shader input structure
+//=============================================================================
+struct PS_OUTPUT
+{
+	float4 Color : COLOR;
+};
+
+sampler diffuse;
+
+//=============================================================================
+// Pixel Shader
+//=============================================================================
+PS_OUTPUT PS( VS_OUTPUT In )
+{
+	PS_OUTPUT Out;
+	Out.Color = float4(0.0f, 0.0f, 0.0f, 1.0f);
+	if(tex2D(diffuse, In.Texcoord0).a == 0)
+		Out.Color.a = 0;
+	else
+		Out.Color.a = In.Color0.a*0.5f;
+		
+	return Out;
+}

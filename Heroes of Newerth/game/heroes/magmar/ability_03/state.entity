@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Magmar_Ability3"
+	icon="icon.tga"
+
+	effecttype="StatusDebuff"
+	displaylevel="true"
+>
+	<ondeath>
+		<spawnaffector name="Affector_Magmar_Ability3" owner="this_inflictor_entity" source="target_entity" target="source_position"/>
+		<playeffect effect="effects/explode.effect" source="source_position" target="source_position" occlude="true"/>
+	</ondeath>
+	<onframe />
+</state>

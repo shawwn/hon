@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Bombardier_Ability1"
+
+	lifetime="500"
+	useexactlifetime="true"
+	gravity="10000"
+	model="effects/model/dynamite.mdf"
+	
+	modelscale=".85"
+	
+	traileffect="effects/trail.effect"
+	impacteffect=""
+	
+>
+	<onimpact>
+		<areaofeffect
+			targetscheme="enemy_heroes"
+			effecttype="Magic"
+			targetselection="closest"
+			radius="100"
+			maxtotalimpacts="1"
+			maximpactspertarget="1"
+		>
+			<combatevent effecttype="AbilityBasedProjectile">
+				<onimpact>
+					<applystate name="State_Bombardier_Ability1" target="target_entity" duration="8100" pushentity="true" />
+					<setproxy entity="stack_entity" target="proxy_entity" />
+					<setproxy entity="proxy_entity" target="target_entity" />
+					<applystate name="State_Bombardier_Ability1_Modifier" target="source_entity" duration="20000,17000,14000,11000" pushentity="true" />
+					<setproxy entity="stack_entity" target="proxy_entity" />
+				</onimpact>
+			</combatevent>
+		</areaofeffect>
+		<condition test="result eq 0">
+			<areaofeffect
+				targetscheme="enemy_units"
+				effecttype="Magic"
+				targetselection="closest"
+				radius="100"
+				maxtotalimpacts="1"
+				maximpactspertarget="1"
+			>
+				<combatevent effecttype="AbilityBasedProjectile">
+					<onimpact>
+						<applystate name="State_Bombardier_Ability1" target="target_entity" duration="8100" pushentity="true" />
+						<setproxy entity="stack_entity" target="proxy_entity" />
+						<setproxy entity="proxy_entity" target="target_entity" />
+						<applystate name="State_Bombardier_Ability1_Modifier" target="source_entity" duration="20000,17000,14000,11000" pushentity="true" />
+						<setproxy entity="stack_entity" target="proxy_entity" />
+					</onimpact>
+				</combatevent>
+			</areaofeffect>
+			<condition test="result eq 0">
+				<spawnunit name="Gadget_Bombardier_Ability1" target="target_position" pushentity="true" owner="source_entity" />
+				<setproxy entity="proxy_entity" target="stack_entity" />
+				<applystate name="State_Bombardier_Ability1_Ground_Bomb" target="stack_entity" duration="8100" proxy="proxy_entity" />
+				<applystate name="State_Bombardier_Ability1_Modifier" target="source_entity" duration="20000,17000,14000,11000" pushentity="true" />
+				<setproxy entity="stack_entity" target="proxy_entity" />
+			</condition>
+		</condition>
+	</onimpact>
+	
+</projectile>

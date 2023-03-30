@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Hunter1"
+
+	statuseffecttooltip="State_Hunter_Ability1"
+	icon="icon.tga"
+	
+	anim="ability_2"
+	casttime="1000"
+	castactiontime="500"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_entity"
+	targetscheme="enemy_and_willing_ally_units"
+	
+	casteffecttype="Magic"
+	
+	manacost="80"
+	cooldowntime="10000"
+	
+	range="600"
+	
+	doubleactivate="true"
+>
+	<onimpact>
+		<cantarget targetscheme="enemy_units">
+			<applystate name="State_Hunter_Ability1" duration="6000,9000,12000,15000" />
+		</cantarget>
+		<cantarget targetscheme="ally_units">
+			<applystate name="State_Hunter_Ability1_Allies" duration="6000,9000,12000,15000" />
+		</cantarget>
+	</onimpact>
+</ability>

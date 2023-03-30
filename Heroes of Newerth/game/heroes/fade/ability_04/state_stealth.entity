@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Fade_Ability4_Stealth"
+
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+	
+	stealthtype="hero"
+	fadetime="0"
+	unitwalking="true"
+	movespeedmultiplier="0.10,0.15,0.20"
+	modifierkey="fadereflectionstealth"
+	
+	effecttype="StatusStealth"
+>
+	<onframe />
+
+	<oninflict>
+		<forgetattacks />
+		<startfade />
+	</oninflict>
+	
+	<onattackstart>
+		<playanim name="ability_4_attack" speed="source_attackspeed" target="source_entity" />
+	</onattackstart>
+	
+	<onattack>
+		<cantarget targetscheme="enemy_units">
+			<applystate name="State_Fade_Ability4_DoT" duration="2000" target="target_entity" />
+			<applystate name="State_Fade_Ability4_MortalStrike" duration="3000" target="target_entity" />
+		</cantarget>
+		<expire />
+	</onattack>
+	
+	<onactivatepreimpact>
+		<condition test="not_entity_type Ability_Fade3" target="inflictor_entity" source="inflictor_entity">
+			<expire />
+		</condition>
+	</onactivatepreimpact>
+</state>

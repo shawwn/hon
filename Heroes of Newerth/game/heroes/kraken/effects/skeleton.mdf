@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="model_skelton.max" file="skeleton.model" type="K2">
+
+	<anim name="idle" clip="skeleton.clip" loop="true"/>
+
+</model>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Devourer_Ability4_Stage1"
+	
+	icon="icon.tga"
+	maxhealth="75,125,175"
+	damage="15,25,35"
+	
+	modifierkey="devourerult_stage1_1,devourerult_stage1_2,devourerult_stage1_3"
+	maxcharges="1"
+>
+	<oninflict>
+		<setcharges a="1" />
+	</oninflict>
+
+
+</state>

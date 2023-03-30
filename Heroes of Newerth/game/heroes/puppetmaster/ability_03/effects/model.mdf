@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="ropeAnim.max" file="model.model" type="K2" >
+	<anim name="idle" clip="default_1.clip" fps="50" loop="0"/>
+</model>

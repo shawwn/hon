@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Kunas1"
+	
+	icon="icons/ability_1.tga"
+	
+	anim="ability_1"
+	casttime="1000"
+	castactiontime="300"
+	casteffect="effects/ability_01/chain_lightning_cast.effect"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_entity"
+	targetscheme="enemy_units"
+	casteffecttype="Magic"
+	
+	manacost="65,72,79,86"
+	cooldowntime="2500"
+	
+	range="700"
+	bridgeeffect="effects/ability_01/chain_lightning_engine.effect"
+>
+	<onimpact>
+		<damage effecttype="Magic" target="target_entity" amount="85,100,115,130"/>
+		<spawnaffector name="Affector_Kunas_Ability1" target="target_entity" proxy="target_entity" />
+	</onimpact>
+</ability>

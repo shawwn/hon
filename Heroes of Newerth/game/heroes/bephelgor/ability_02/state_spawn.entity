@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Bephelgor_Ability2_Spawn"
+	
+	icon="icon.tga"
+	immobilize="true"
+	disarmed="true"
+>
+
+</state>

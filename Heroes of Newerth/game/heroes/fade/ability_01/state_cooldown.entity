@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Fade_Ability1_Cooldown"
+
+	icon="icon.tga"
+	passiveeffect=""
+	ishidden="true"
+	
+	modifierkey="fadeabilityonecooldown"
+>
+</state>

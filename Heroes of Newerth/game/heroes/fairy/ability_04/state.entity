@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Fairy_Ability4"
+
+	
+	
+	icon="icon.tga"
+	passiveeffect="state.effect"
+>
+</state>

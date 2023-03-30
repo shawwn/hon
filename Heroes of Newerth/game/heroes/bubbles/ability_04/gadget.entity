@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Bubbles_Ability4"
+	
+	icon=""
+	portrait=""
+	model=""
+	
+	preglobalscale="2.34"
+	modelscale="0.5"
+	effectscale="0.81"
+	boundsheight="0"
+	boundsradius="0"
+	isselectable="false"
+	selectionradius="0"
+	targetoffset="0 0 0"
+
+	canrotate="false"
+	ismobile="false"
+
+	attacktype="none"
+	combattype="Ranged"
+
+	sightrangeday="800"
+	sightrangenight="500"
+
+	deathtime="0"
+	corpsetime="0"
+	unitwalking="true"
+	lifetime="5000"
+	invulnerable="true"
+	flying="false"
+	drawonmap="false"
+>	
+</gadget>

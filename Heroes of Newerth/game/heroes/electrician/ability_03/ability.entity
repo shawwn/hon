@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Electrician3"
+
+	icon="icon.tga"
+	statuseffecttooltip="State_Electrician_Ability3"
+	statuseffectheader="true"
+	
+	anim="ability_3"
+	casttime="900"
+	castactiontime="0"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="self_position"
+	targetscheme="enemy_units"
+	targetradius="300"
+	targetmaterial="/shared/materials/area_cast_indicator_simple.material"
+
+	
+	casteffecttype="Magic"
+	
+	manacost="75,100,125,150"
+	cooldowntime="15000"
+>
+	<onimpact>
+		<playeffect effect="effects/cast.effect" source="source_entity" target="source_entity" />
+		<spawnaffector name="Affector_Electrician_Ability3" />
+	</onimpact>
+</ability>

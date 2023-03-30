@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="gib.max" file="gib.model" type="K2" >
+	<anim name="idle" clip="clips/gib.clip" startframe="0" numframes="1" loop="1" loopbackframe="1" />
+	<anim name="death_1" clip="clips/gib.clip" startframe="0" loop="1" loopbackframe="-1" blendtime="0" />
+</model>

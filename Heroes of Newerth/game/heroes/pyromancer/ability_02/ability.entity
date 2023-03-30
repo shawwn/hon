@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Pyromancer2"
+
+	icon="icon.tga"
+	
+	anim="ability_2"
+	casttime="1400"
+	castactiontime="450"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_position"
+	targetradius="200"
+	targetmaterial="/shared/materials/area_cast_legion_indicator.material"
+	casteffecttype="Magic"
+	targetscheme="enemy_units_and_trees"
+
+	manacost="90,100,110,125"
+	cooldowntime="10000"
+	
+	range="600"
+>
+	<onimpact>
+		<spawnaffector name="Affector_Pyromancer_Ability2" target="target_position" param="owner_counter" />
+		<playeffect effect="effects/ability_02.effect" source="target_position" target="" occlude="true" />
+	</onimpact>
+</ability>

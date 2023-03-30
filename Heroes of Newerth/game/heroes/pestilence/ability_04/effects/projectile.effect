@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="poslego" deferred="1">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="2.5">
+
+			
+			
+			
+			<!--
+			<billboard	
+				color="0 .2 .3"				
+				size="50"
+				material="/shared/effects/materials/glow_01.material"				
+				depthbias="-50"
+				position="0 -5 0"
+			/>-->		
+			
+		
+			<trackeremitter				
+				inheritvelocity="0.25"
+				tracktype="distance"
+				trackspeed="1.4" 
+				spawnrate="300"
+				particlelife="3000"
+				offsetsphere="18 18 8"
+				minspeed="10.0"
+				maxspeed="260"
+				direction="0 0 1"
+				material="/shared/effects/materials/beetle.material"
+			>
+				<particle 
+					startalpha="1"
+					endalpha="0"
+					midalphapos=".7"
+					maxangle="359"
+					maxanglespeed="30"
+					minanglespeed="-30"
+					minscale="2.5"
+					maxscale="4.5"	
+					color="1 1 1"
+				/>
+			</trackeremitter>
+			<trailemitter
+				spawnrate="20"				
+				particlelife="500"
+				texpostime="500"
+				texposscale="0.0"
+				texstretchscale="1"
+				position="0 0 -10"
+				material="/shared/effects/materials/spirit_03.material"
+			>
+				<particle
+					startalpha="0"
+					midalpha=".5"
+					endalpha="0.0"
+					startcolor=".1 .1 .3"
+					
+					endcolor="0 0 0"
+					startsize="20"
+					midsize="41"
+					endsize="5"
+					midsizepos=".3"
+					
+				/>
+			</trailemitter>	
+
+
+			<!--
+			<simpleemitter
+				spawnrate="40"				
+				particlelife="300"
+				gravity="0"
+				speed="1"
+				drag="0"
+				acceleration="20"
+				position="0 0 0"
+				material="/shared/effects/materials/tower_wisp_01.material"
+				offsetsphere="5 5 5"
+				minangle="195"
+				maxangle="185"
+				direction="0 0 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor=".3 .5 1"
+					midcolor=".3 .5 1"
+					endcolor=" 0 0 0 "
+					midcolorpos=".1"
+					startframe="0"
+					endframe="1"
+					startsize="15"
+					midsize="7.5"
+					endsize="1"
+					midsizepos=".3"
+					startalpha="0"
+					midalpha=".7"
+					endalpha="0"
+					midalphapos=".4"
+					startstickiness="0"
+					endstickiness="0"
+				/>
+			</simpleemitter>
+		-->
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

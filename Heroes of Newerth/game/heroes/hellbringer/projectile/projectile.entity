@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_HellbringerAttack"
+
+	speed="900"
+	gravity="2500"
+
+	modelscale=".7"
+	model="/shared/models/invis.mdf"
+
+	impacteffect="impact.effect"
+	traileffect="projectile.effect"
+>
+</projectile>

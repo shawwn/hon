@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect>
+
+	<definitions>
+		
+		<particlesystem name="system0" space="world">
+
+			<template name="sparks">
+				<simpleemitter
+					life="1100"
+					spawnrate="1.3"						
+					offsetsphere="15"
+					position="{position}"
+				>
+					<particle
+						minangle="-35"
+						maxangle="35"
+						minscale="11"
+						maxscale="20"
+					>
+						<simpleemitter									
+							startspawnrate="120"		
+							endspawnrate="0"
+							count="110"
+							minparticlelife="1000"
+							maxparticlelife="3000"			
+							gravity="0.5"
+							drag="0.03"
+							direction="0 0 1"
+							minangle="0"
+							maxangle="15"
+							minspeed="2"
+							maxspeed="25"	
+							material="/shared/effects/materials/flare1.material"				
+						>
+							<particle
+								turn="1"
+								minanglespeed="-50"
+								maxanglespeed="250"
+								startcolor="1 .4 0"
+								endcolor="0 0 0"
+								size="0.35"
+								minscale="1"
+								maxscale="3"
+								startheightdistort=".004"
+								midheightdistortpos=".1"
+								endheightdistort="0"
+							/>
+						</simpleemitter>
+
+						<simpleemitter									
+							startspawnrate="150"		
+							endspawnrate="0"
+							count="25"
+							minparticlelife="1000"
+							maxparticlelife="4000"			
+							gravity="0.3"
+							drag="0.02"
+							direction="0 0 1"
+							minangle="-5"
+							maxangle="5"
+							minspeed="6"
+							maxspeed="21"
+							depthbias="-120"
+							offsetsphere="2"
+							material="/shared/effects/materials/whitewater_02.material"				
+						>
+							<particle
+								minagle="-360" 
+								maxangle="360"
+								minanglespeed="-50"
+								maxanglespeed="20"
+								startcolor="0 0 0"
+								midcolor=".6 .25 0"
+								endcolor="0 0 0"
+								midcolorpos=".2"
+								startsize="0"
+								endsize="4.35"
+								minscale="1"
+								maxscale="3"						
+							/>
+						</simpleemitter>
+					</particle>
+				</simpleemitter>
+
+				<billboard
+					delay="800"
+					life="1700"
+					startcolor=".4 .2 0"
+					midcolorpos=".8"
+					endcolor="0"
+					startsize="50"
+					endsize="320"
+					depthbias="-80"
+					position="{position}"
+					material="/shared/effects/materials/whitedot.material"
+				/>
+
+		
+			</template>
+			
+			<instance name="sparks" delay="0" position="0 175 25"/>
+			<instance name="sparks" delay="0" position="0 -190 25"/>
+			<instance name="sparks" delay="0" position="215 0 25"/>
+			<instance name="sparks" delay="0" position="-100 0 25"/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />		
+	</thread>
+
+</effect>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="true" deferred="true">
+	<definitions>
+	
+			
+		<modifier
+			name="modifier0"
+			life="600"
+			startcolor="1 1 1"			
+			endcolor="1 1 1"
+		
+		/>
+		
+		<particlesystem name="system0" space="world" useentityeffectscale="0.8">
+
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="1800"
+				volume="0.45" 
+				sample="/heroes/frosty/sounds/impact_%.wav"
+			/>	
+
+
+		<billboard
+			
+			life="350"
+			color="1 1 1"
+			
+			startalpha="1.0"
+			midalpha="1.0"
+			endalpha="0.0"
+			midalphapos="0.75"
+			startparam="0.05"
+			endparam="0.0"	
+			
+			startsize="000"
+			param=".1"
+			endsize="200"
+			midsizepos=".4"
+						
+			depthbias="0"
+			position="0 0 50"
+			material="/shared/effects/materials/refract_swell.material"
+			lockup="true"
+			pitch="90"
+		/>	
+		
+		<simpleemitter			
+			spawnrate="11"
+			particlelife="1000"
+			count="3"		
+
+			acceleration="50"
+			position="0 0 50"
+			timenudge="000"
+
+			material="/shared/effects/materials/rad_add.material"
+			offsetsphere="0 0 0"
+			minangle="0"
+			maxangle="360"
+			direction="0 0 0"
+			particledirectionalspace="local"
+		>
+
+			<particle 
+				minangle="-20"
+				maxangle="20"
+				minanglespeed="100"
+
+				startcolor="0 0 0"
+				midcolor=".3 .3 .3"
+				endcolor="0 0 0"
+				midcolorpos=".7"
+
+				maxanglespeed="0"
+				startframe="0"
+				endframe="1"				
+				
+				minsize="50"		
+				maxsize="80"
+				midsizepos=".7"		
+
+				startalpha="0"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".7"
+				lockup="1"
+				lockright="1"
+				pitch="-90"
+				
+			/>
+		</simpleemitter> 		
+		
+		<simpleemitter			
+			
+			particlelife="400"
+			count="3"	
+			spawnrate="20"
+			
+			acceleration="50"
+			position="0 0 20"
+			timenudge="200"
+
+			material="/shared/effects/materials/rad_add.material"
+			offsetsphere="0 0 0"
+			minangle="0"
+			maxangle="360"
+			direction="0 0 0"
+			particledirectionalspace="local"
+		>
+
+			<particle 
+				minangle="-360"
+				maxangle="360"
+				minanglespeed="100"
+
+				
+				startcolor=".1 .2 1"
+				endcolor="0 0 0"
+				midcolorpos=".7"
+
+				maxanglespeed="0"
+				startframe="0"
+				endframe="1"				
+				
+				
+				startsize="140"
+				endsize="0"
+				midsizepos=".7"		
+
+				startalpha="0"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".7"
+				lockup="1"
+				lockright="1"
+				pitch="-90"
+				
+			/>
+		</simpleemitter> 
+
+
+				
+			
+			<debris
+				position="0 0 0"
+				
+				scale="0.2"
+				
+				life="1000"
+				model="ice.mdf"
+				anim="idle"	
+				minspeed="100.0"
+				maxspeed="200.0"
+				minrotationspeed="100.0"
+				maxrotationspeed="300.0"
+				gravity="41.0"
+			
+				collide="true"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="1.0"
+				midalphapos="0.5"
+				bounce="0.7"
+				reflect="0.6"
+				animpose="true"
+			/>			
+			
+			
+			<!--
+			<simpleemitter
+				
+				bone="_bone_centerofchest"
+				count="5"										
+				particlelife="1600"	
+				material="/shared/effects/materials/smoke_01.material"
+				offsetsphere="50 50 50"
+				minangle="0"
+				maxangle="360"
+				gravity="-2"
+				speed="10"
+				direction="0 0 0"					
+			>
+
+				<particle 
+					minangle="0"
+					maxangle="0"
+					minanglespeed="100"
+					
+					color=".4 .6 .7"
+					
+					midcolorpos=".7"
+					maxanglespeed="0"
+					startframe="0"
+					endframe="1"
+					startsize="5"						
+					endsize="180"					
+				
+					startalpha="0"
+					midalpha=".4"
+					endalpha="0"
+					
+
+					
+				/>
+			</simpleemitter> 				
+			-->
+			<billboard			
+				life="700"
+				startcolor="0 0 0"
+				midcolor=".2 .44 .7"			
+				endcolor="0 0 0"
+				size="210"
+				
+				depthbias="-100"
+				position="0 0 00"
+				material="/shared/effects/materials/whitedot.material"
+				lockup="true"
+				pitch="90"
+			/>	
+
+
+			
+				
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>  
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" /> 
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

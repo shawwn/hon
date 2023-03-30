@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" deferred="1" useentityeffectscale="1">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="1.5">
+				
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2200"
+				volume=".45"
+				sample="../../sounds/impact_%.wav"
+			/>
+			
+			<model
+				bone="_bone_overhead"
+				life="500"
+				anim="idle"
+				model="model.mdf"
+				expirelife="500"
+				startalpha="1"
+				endalpha="0"
+				scale="1.5"
+			>
+				<template name="sparks">
+					<simpleemitter
+					delay="100"
+						bone="{bone}"
+						count="55"
+						spawnrate="1500"
+						particlelife="1000"
+						gravity="5"
+						minspeed="1"
+						maxspeed="100"
+						drag=".04"
+						position="0 0 0"
+						pitchspeed="79"
+						material="/shared/effects/materials/whitedot.material"
+						offsetsphere="0 0 0"
+						direction="0 0 1"
+					>
+						<particle 
+							startcolor=".25 1 .25"
+							midcolor=".25 1 .25"
+							endcolor="0 0 0"
+							startheightdistort=".025"
+							endframe="15"
+							startsize=".8"
+							midsize="1.5"
+							endsize="1.5"
+							startalpha="0"
+							midalpha="0"
+							endalpha="0"
+							midalphapos="0"
+							startstickiness="0"
+							endstickiness="0"
+							turn="1"
+						/>
+					</simpleemitter>
+				</template>
+				
+				<instance name="sparks" bone="_bone_fx_10"/>
+				<instance name="sparks" bone="_bone_fx_20"/>
+					
+				<template name="rope">
+					<beam
+						life="500"
+						bone_b="{bone_01}"
+						bone_a="{bone_02}"
+						size="1.5"
+						color="0 1 0"
+						expirelife="500"
+						startalpha=".75"
+						endalpha="0"
+						material="/shared/effects/materials/string.material"
+					/>
+				</template>
+
+				<instance name="rope" bone_01="_bone_fx_01" bone_02="_bone_fx_02"/>
+				<instance name="rope" bone_01="_bone_fx_01" bone_02="_bone_fx_03"/>
+				<instance name="rope" bone_01="_bone_fx_03" bone_02="_bone_fx_04"/>
+				<instance name="rope" bone_01="_bone_fx_03" bone_02="_bone_fx_05"/>
+				<instance name="rope" bone_01="_bone_fx_05" bone_02="_bone_fx_06"/>
+				<instance name="rope" bone_01="_bone_fx_05" bone_02="_bone_fx_07"/>
+				<instance name="rope" bone_01="_bone_fx_07" bone_02="_bone_fx_08"/>
+				<instance name="rope" bone_01="_bone_fx_07" bone_02="_bone_fx_09"/>
+				<instance name="rope" bone_01="_bone_fx_09" bone_02="_bone_fx_10"/>
+				<instance name="rope" bone_01="_bone_fx_08" bone_02="_bone_fx_10"/>
+				
+				<instance name="rope" bone_01="_bone_fx_11" bone_02="_bone_fx_12"/>
+				<instance name="rope" bone_01="_bone_fx_11" bone_02="_bone_fx_13"/>
+				<instance name="rope" bone_01="_bone_fx_13" bone_02="_bone_fx_14"/>
+				<instance name="rope" bone_01="_bone_fx_13" bone_02="_bone_fx_15"/>
+				<instance name="rope" bone_01="_bone_fx_15" bone_02="_bone_fx_16"/>
+				<instance name="rope" bone_01="_bone_fx_15" bone_02="_bone_fx_17"/>
+				<instance name="rope" bone_01="_bone_fx_17" bone_02="_bone_fx_18"/>
+				<instance name="rope" bone_01="_bone_fx_17" bone_02="_bone_fx_19"/>
+				<instance name="rope" bone_01="_bone_fx_19" bone_02="_bone_fx_20"/>
+				<instance name="rope" bone_01="_bone_fx_18" bone_02="_bone_fx_20"/>
+
+				<model
+					color=".5 1 .5"
+					bone="_bone_center"
+					life="500"
+					model="projectile.mdf"
+					scale="1.75"
+					expirelife="500"
+					startalpha="1"
+					endalpha="0"
+				/>
+			</model>
+			
+			<model
+				bone="_bone_centerofchest"
+				life="500"
+				anim="idle"
+				model="model.mdf"
+				expirelife="500"
+				startalpha="1"
+				endalpha="0"
+				scale="1.5"
+				yaw="40"
+			>
+
+				<template name="sparks">
+					<simpleemitter
+						bone="{bone}"
+						count="55"
+						spawnrate="1500"
+						particlelife="1000"
+						gravity="5"
+						minspeed="1"
+						maxspeed="100"
+						drag=".04"
+						position="0 0 0"
+						pitchspeed="79"
+						material="/shared/effects/materials/whitedot.material"
+						offsetsphere="0 0 0"
+						direction="0 0 1"
+					>
+						<particle 
+							startcolor=".25 1 .25"
+							midcolor=".25 1 .25"
+							endcolor="0 0 0"
+							startheightdistort=".025"
+							endframe="15"
+							startsize=".08"
+							midsize="1.5"
+							endsize="1.5"
+							startalpha="0"
+							midalpha="0"
+							endalpha="0"
+							midalphapos="0"
+							startstickiness="0"
+							endstickiness="0"
+							turn="1"
+						/>
+					</simpleemitter>
+				</template>
+				
+				<instance name="sparks" bone="_bone_fx_10"/>
+				<instance name="sparks" bone="_bone_fx_20"/>
+			
+				<template name="rope">
+					<beam
+						life="500"
+						bone_b="{bone_01}"
+						bone_a="{bone_02}"
+						size="1.5"
+						color="0 1 0"
+						expirelife="500"
+						startalpha=".75"
+						endalpha="0"
+						material="/shared/effects/materials/string.material"
+					/>
+				</template>
+
+				<instance name="rope" bone_01="_bone_fx_01" bone_02="_bone_fx_02"/>
+				<instance name="rope" bone_01="_bone_fx_01" bone_02="_bone_fx_03"/>
+				<instance name="rope" bone_01="_bone_fx_03" bone_02="_bone_fx_04"/>
+				<instance name="rope" bone_01="_bone_fx_03" bone_02="_bone_fx_05"/>
+				<instance name="rope" bone_01="_bone_fx_05" bone_02="_bone_fx_06"/>
+				<instance name="rope" bone_01="_bone_fx_05" bone_02="_bone_fx_07"/>
+				<instance name="rope" bone_01="_bone_fx_07" bone_02="_bone_fx_08"/>
+				<instance name="rope" bone_01="_bone_fx_07" bone_02="_bone_fx_09"/>
+				<instance name="rope" bone_01="_bone_fx_09" bone_02="_bone_fx_10"/>
+				<instance name="rope" bone_01="_bone_fx_08" bone_02="_bone_fx_10"/>
+				
+				<instance name="rope" bone_01="_bone_fx_11" bone_02="_bone_fx_12"/>
+				<instance name="rope" bone_01="_bone_fx_11" bone_02="_bone_fx_13"/>
+				<instance name="rope" bone_01="_bone_fx_13" bone_02="_bone_fx_14"/>
+				<instance name="rope" bone_01="_bone_fx_13" bone_02="_bone_fx_15"/>
+				<instance name="rope" bone_01="_bone_fx_15" bone_02="_bone_fx_16"/>
+				<instance name="rope" bone_01="_bone_fx_15" bone_02="_bone_fx_17"/>
+				<instance name="rope" bone_01="_bone_fx_17" bone_02="_bone_fx_18"/>
+				<instance name="rope" bone_01="_bone_fx_17" bone_02="_bone_fx_19"/>
+				<instance name="rope" bone_01="_bone_fx_19" bone_02="_bone_fx_20"/>
+				<instance name="rope" bone_01="_bone_fx_18" bone_02="_bone_fx_20"/>
+
+			</model>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				spawnrate="90"
+				count="45"
+				life="250"
+				yawspeed="360"
+				particlelife="600"
+				position="0 0 0"
+				offsetsphere="25"
+				material="/shared/effects/materials/mysticenergy.material"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					startcolor="0 0 0"
+					midcolor=".05 .8 0.15"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					maxanglespeed="30"
+					startsize="0"
+					endsize="100"
+					lockup="true"
+				/>
+			</simpleemitter>
+
+			<billboard
+				bone="_bone_centerofchest"
+				material="/shared/effects/materials/whitedot.material"
+				startcolor=".05 .9 .15"
+				endcolor="0 0 0"
+				startsize="0"
+				endsize="100"
+				depthbias="-120"
+				life="600"
+			/>
+			
+			<billboard
+				bone="_bone_centerofchest"
+				material="/shared/effects/materials/star_03.material"
+				startcolor=".025 .45 .075"
+				endcolor="0 0 0"
+				startsize="0"
+				endsize="100"
+				depthbias="-120"
+				life="300"
+				rollspeed="-50"
+			/>
+		</particlesystem>
+
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />		
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

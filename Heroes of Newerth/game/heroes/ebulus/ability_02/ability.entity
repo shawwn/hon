@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Ebulus2"
+
+	icon="icon.tga"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+	statuseffecttooltip="State_Ebulus_Ability2"
+
+	actiontype="passive"
+>
+	<modifier key="attack" modpriority="60" exclusive="true"
+		statuseffecttooltip="State_Ebulus_Ability2"
+	>
+		<onattackimpact>
+			<compare a="combat_attackability" b="0" op="eq">
+				<cantarget targetscheme="enemy_units">
+					<applystate name="State_Ebulus_Ability2" duration="7000" />
+				</cantarget>
+			</compare>
+		</onattackimpact>
+	</modifier>
+</ability>

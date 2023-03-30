@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Andromeda_Ability4"
+
+	radius="300"
+	
+	lifetime="0"
+	targetselection="all"
+	targetscheme="all_units"
+	effecttype="Magic"
+	destroytrees="true"
+>
+	<onimpact/>
+</affector>

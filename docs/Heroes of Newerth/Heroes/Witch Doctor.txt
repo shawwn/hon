@@ -1,0 +1,27 @@
+This is functionally the same as witch doctor except for ability 2.
+
+
+
+Ability 1:
+----------
+Releases a dark energy that zaps in and out of enemy units, briefly stunning and dealing minor damage to them.
+
+
+Ability 2:
+----------
+Targets an allied or enemy or self. Heals or damages the target depending on alliance.
+
+
+
+Ability 3:
+----------
+Targets an area. All units in the area get afflicted with a curse that reiterates a portion of the damage they took since the start of the curse. This happens a few times over the course of 12 seconds. There should be an effect that lasts the entire 12 seconds and then an effect that happens 3 or so times whenever the bonus damage is dealt.
+
+
+Ultimate:
+---------
+His staff goes invisible and appears at targetted location. The main circle in it glows as it releases energy attacking the closest hero to it. He plays a channeling animation during this. 
+
+
+
+Evil, Int, Range: A Voodoo style evil character. 

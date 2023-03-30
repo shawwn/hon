@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Succubis_Ability4_Self"
+
+	
+	
+	icon="icon.tga"
+	passiveeffect="effects/state_self.effect"
+	ishidden="true"
+>
+
+</state>

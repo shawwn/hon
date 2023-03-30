@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Engineer_Ability3_Enemies"
+	
+	icon="icon.tga"
+	passiveeffect="effects/state_enemy_tower.effect"
+	impactinterval="2000"
+
+	attackspeed="-.1,-.2,-.3,-.4"
+	basedamagemultiplier="-.2,-.4,-.6,-.8"
+	effecttype="StatusDebuff"
+>
+	<onexpired>
+		<spawnaffector name="Affector_Engineer_Ability3" target="target_position" />
+		<condition test="entity_type Creep_LegionSiege">
+			<playeffect effect="effects/explosion_legion.effect" source="target_entity" target=""/>
+		</condition>
+		<else>
+			<playeffect effect="effects/explosion.effect" source="target_entity" target=""/>
+		</else>
+		<kill target="target_entity" />
+	</onexpired>
+</state>

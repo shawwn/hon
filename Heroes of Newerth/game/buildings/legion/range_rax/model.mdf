@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="rig.max" file="high.model" type="K2" >
+
+
+		<spawnevent cmd="StartEffect effects/range_rax_fx.effect 2"/>
+
+	<anim name="idle" clip="clips/default_1.clip" fps="30" loop="true"/>
+
+
+
+	<anim name="death_1" clip="clips/death_1.clip" loop="true" loopbackframe="-1">
+
+		<frameevent frame="1" cmd="starteffect /shared/effects/legion_building_death_large.effect 0"/>
+		<frameevent frame="1" cmd="starteffect /buildings/legion/range_rax/effects/crumble.effect 1"/>
+		<frameevent frame="25" cmd="StopEffect 2"/>	
+		<endevent cmd="StopEffect 1" />
+	</anim>
+
+	
+</model>

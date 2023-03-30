@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="model_high.max" file="claw.model" type="K2" >
+
+	<spawnevent cmd="StartEffect blood_trail.effect"/>
+	<anim name="idle" clip="claw.clip" fps="80" loopbackframe="-1" loop="true"/>
+</model>

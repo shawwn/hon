@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="death_vines.max" file="vine.model" type="K2" >
+	<anim name="idle" fps="25" clip="vine.clip"/>
+
+</model>

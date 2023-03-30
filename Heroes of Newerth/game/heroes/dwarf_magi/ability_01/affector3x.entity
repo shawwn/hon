@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_DwarfMagi_Ability1_3x"
+
+	impactdelay="600"
+	effecttype="Magic"
+>
+	<onimpact>
+		<damage effecttype="Magic" amount="75,125,175,275"/>
+		<applystate name="State_Stunned" duration="1500"/>
+		<playeffect effect="effects/impact.effect" source="target_entity"/>
+	</onimpact>
+</affector>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<material>
+	<parameters />
+	<phase
+		name="color"
+		vs="post_motionblur"
+		ps="post_motionblur"
+		srcblend="BLEND_ONE"
+		dstblend="BLEND_ZERO"
+		cull="CULL_NONE"
+		translucent="false"
+		depthread="false"
+		depthwrite="false"
+	>
+		<sampler
+			name="image_scene"
+			texture="!post_color"
+			repeat_u="false"
+			repeat_v="false"
+			mipmaps="false"
+			filtering="true"
+			border="false"
+		/>
+		<sampler
+			name="image_velocity"
+			texture="!velocity"
+			repeat_u="false"
+			repeat_v="false"
+			mipmaps="false"
+			filtering="true"
+			border="false"
+		/>
+	</phase>
+</material>

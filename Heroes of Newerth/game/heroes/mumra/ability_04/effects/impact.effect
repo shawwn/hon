@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1" >
+	<definitions>
+
+			
+		<particlesystem name="system0" space="world" scale="1.5">
+
+			<simpleemitter
+				
+				life="100"
+				spawnrate="53"
+				minspeed="50"
+				maxspeed="250"
+				drag="0.01"
+				direction="0 0 1"
+				minparticlelife="500"
+				maxparticlelife="1200"
+				minangle="0"
+				maxangle="50"
+				offsetsphere="0"				
+				depthbias="-50"
+				gravity="-5"	
+				material="/shared/effects/materials/dust_smoke_02.material"
+				inheritvelocity="0.25"
+         	>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					anglespeed="300"
+					color=".7  .7 .5"
+					startalpha="0"
+					midalpha=".6"
+					endalpha="0"
+					startsize="90"
+					endsize="125"
+					
+				/>
+			</simpleemitter>
+			
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	
+		<waitfordeath instance="instance0" />
+
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

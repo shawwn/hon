@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Bombardier_Ability4_Art"
+
+	gravity="0"
+
+	model="effects/twitch/model.mdf"
+	modelscale=".75"
+	
+	traileffect="effects/trail.effect"
+	impacteffect=""
+	
+	speed="800"
+	flying="true"
+	flyheight="500"
+	
+>
+	<onimpact>
+		<kill target="proxy_entity" source="" />
+	</onimpact>
+	
+	<ondeath>
+		<kill target="proxy_entity" source="" />
+	</ondeath>
+</projectile>

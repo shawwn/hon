@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="wave" persistent="true" useentityeffectscale="true">
+	<definitions>
+	
+		<model
+			life="700"
+			name="emitter5" 
+			anim="idle"
+			startalpha="1"
+			midalpha="1"
+			endalpha="0"
+			midalphapos=".85"
+			position="0 0 100"
+			model="/shared/effects/models/spinups/invisspin.mdf"			
+			startscale=".5"
+			endscale="1.3"			
+			startcolor="3 1 3"
+			midcolor="3 0 3"
+			endcolor="0"
+			yawspeed="720"								
+		>	
+		
+			<twopointtrailemitter				
+				name="trail01"
+				bone_a="_bone_fx2"
+				bone_b="_bone_fx1"
+				spawnrate="80"
+				particlelife="400"				
+				texpostime="400"
+				texposscale="0"
+				texstretchscale="1"				
+				material="/shared/effects/materials/soul_projectile.material"
+			>
+				<particle 						
+					startcolor=".5 .2 .5"
+					midcolor=".8 .2 .2"
+					endcolor=".2 .0 .2"					
+					startalpha="0"
+					midalpha=".5"
+					endalpha="0"
+				/>
+			</twopointtrailemitter>			
+		</model>
+	
+		<model
+			life="1000"
+			name="emitter0" 
+			anim="idle"
+			startalpha="1"
+			midalpha="1"
+			endalpha="0"
+			midalphapos=".85"
+			position="0 0 100"
+			model="projectile.mdf"			
+			startscale=".5"
+			endscale="1.3"			
+			startcolor="3 1 3"
+			midcolor="3 0 3"
+			endcolor="0 0 0"
+						
+								
+		>	
+			<billboard
+				name="emitter2"
+				
+				life="700"								
+				color="1.0 1.0 1.0"				
+				position="0 -40 140"
+				startsize="200"
+				endsize="400"
+				material="/shared/effects/materials/refract_wave.material"
+				lockup="1"
+				lockright="1"
+				directionalspace="local"			
+				param=".15"	
+				roll="180"
+				yaw="0"
+				pitch="90"
+				
+			/>	
+			<template name="trails">
+				<twopointtrailemitter						
+					name="trail01"
+					bone_a="{bone1}"
+					bone_b="{bone2}"
+					spawnrate="80"
+					particlelife="300"
+					texpostime="300"
+					texposscale="0"
+					texstretchscale="1"	
+					startparticlelife="300"
+					endparticlelife="0"
+					material="/shared/effects/materials/blacktrails.material"
+				>
+					<particle 								
+						startcolor=".8 0 .8"
+						midcolor=".5 .2 .5"
+						endcolor="1 .0 1"						
+						startalpha="1"
+						midalpha=".5"
+						endalpha="0"
+						midalphapos=".75"
+					/>
+				</twopointtrailemitter>
+					
+			</template>
+			
+			<instance name="trails" bone1="_bone_fx1" bone2="_bone_fx3"/>
+			<instance name="trails" bone1="_bone_fx6" bone2="_bone_fx4"/>
+			<instance name="trails" bone1="Box01" bone2="Box05"/>
+			<instance name="trails" bone1="Box04" bone2="Box11"/>
+			<instance name="trails" bone1="Box04" bone2="Box08"/>
+			<instance name="trails" bone1="Box03" bone2="Box01"/>
+			
+		</model>
+		
+		
+		<light
+			name="emitter1"
+			life="800"
+			delay="100"
+			startcolor="0 0 0"
+			midcolor="0 0 0"
+			endcolor="0 0 0"
+			midcolorpos="0.75"
+			falloffstart="50"
+			falloffend="200"
+			position="0 130 90"
+		/>		
+		
+	<particlesystem name="system0" space="world" scale="1">
+
+
+		<simpleemitter
+			delay="20"
+			count="1"
+			spawnrate="5000"
+			particlelife="700"
+			gravity="1.0"
+			speed="1200.0"
+			drag="0.0"
+			
+			
+			minangle="0"
+			maxangle="0"
+			
+			direction="0 1 0"
+			offsetdirection="0 0 0"
+			offsetradial="0 0 0"
+			particledirectionalspace="local"		
+			
+		>
+			<particle
+				emitter0="emitter0"		
+				emitter1="emitter1"		
+				emitter2="emitter2"					
+			/>		
+
+		</simpleemitter>
+		
+		
+		<simpleemitter
+			delay="100"
+			count="5"
+			spawnrate="5000"
+			particlelife="700"
+			gravity="1.0"
+			speed="900.0"
+			drag="0"
+			
+			
+			minangle="-15"
+			maxangle="15"
+			
+			direction="0 1 0"
+			offsetdirection="0 0 0"
+			offsetradial="0 0 0"
+			particledirectionalspace="local"		
+			
+		>
+			<particle
+				emitter0="emitter5"		
+									
+			/>		
+
+		</simpleemitter>
+		
+		<simpleemitter
+			delay="220"
+			count="3"
+			spawnrate="6"
+			particlelife="700"
+			gravity="1.0"
+			speed="900.0"
+			drag="0.0"
+			acceleration="0.0"
+			
+			minangle="0"
+			maxangle="0"
+			
+			direction="0 1 0"
+			offsetdirection="0 0 0"
+			offsetradial="0 0 0"
+			particledirectionalspace="local"		
+			
+		>
+			<particle
+		
+				emitter0="emitter3"					
+			/>		
+
+		</simpleemitter>		
+		
+		
+
+
+
+		
+
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

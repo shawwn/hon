@@ -1,0 +1,416 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3163FDC80E71787500549615 /* BillboardLeaf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3163FD910E71787500549615 /* BillboardLeaf.cpp */; };
+		3163FDCA0E71787500549615 /* Branch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3163FD930E71787500549615 /* Branch.cpp */; };
+		3163FDCB0E71787500549615 /* BranchInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3163FD940E71787500549615 /* BranchInfo.cpp */; };
+		3163FDCC0E71787500549615 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3163FD950E71787500549615 /* Camera.cpp */; };
+		3163FDCE0E71787500549615 /* FileAccess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3163FD970E71787500549615 /* FileAccess.cpp */; };
+		3163FDD00E71787500549615 /* FrondEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3163FD990E71787500549615 /* FrondEngine.cpp */; };
+		3163FDD10E71787500549615 /* IndexedGeometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3163FD9A0E71787500549615 /* IndexedGeometry.cpp */; };
+		3163FDD40E71787500549615 /* LeafGeometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3163FD9D0E71787500549615 /* LeafGeometry.cpp */; };
+		3163FDD60E71787500549615 /* LeafInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3163FD9F0E71787500549615 /* LeafInfo.cpp */; };
+		3163FDD70E71787500549615 /* LeafLod.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3163FDA00E71787500549615 /* LeafLod.cpp */; };
+		3163FDDB0E71787500549615 /* ExtendedReal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3163FDA70E71787500549615 /* ExtendedReal.cpp */; };
+		3163FDDD0E71787500549615 /* IdvRandom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3163FDA90E71787500549615 /* IdvRandom.cpp */; };
+		3163FDDF0E71787500549615 /* RobertDavies_Random.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3163FDAB0E71787500549615 /* RobertDavies_Random.cpp */; };
+		3163FDE10E71787500549615 /* IdvSpline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3163FDAE0E71787500549615 /* IdvSpline.cpp */; };
+		3163FDE50E71787500549615 /* Region.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3163FDB30E71787500549615 /* Region.cpp */; };
+		3163FDE60E71787500549615 /* RotTransform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3163FDB40E71787500549615 /* RotTransform.cpp */; };
+		3163FDE70E71787500549615 /* Transform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3163FDB50E71787500549615 /* Transform.cpp */; };
+		3163FDE80E71787500549615 /* Vec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3163FDB60E71787500549615 /* Vec.cpp */; };
+		3163FDE90E71787500549615 /* Vec3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3163FDB70E71787500549615 /* Vec3.cpp */; };
+		3163FDEA0E71787500549615 /* LightingEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3163FDB80E71787500549615 /* LightingEngine.cpp */; };
+		3163FDEC0E71787500549615 /* ProjectedShadow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3163FDBA0E71787500549615 /* ProjectedShadow.cpp */; };
+		3163FDEE0E71787500549615 /* SimpleBillboard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3163FDBC0E71787500549615 /* SimpleBillboard.cpp */; };
+		3163FDEF0E71787500549615 /* SpeedTreeRT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3163FDBD0E71787500549615 /* SpeedTreeRT.cpp */; };
+		3163FDF30E71787500549615 /* TreeEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3163FDC10E71787500549615 /* TreeEngine.cpp */; };
+		3163FDF50E71787500549615 /* TreeInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3163FDC30E71787500549615 /* TreeInfo.cpp */; };
+		3163FDF70E71787500549615 /* WindEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3163FDC50E71787500549615 /* WindEngine.cpp */; };
+		3163FDF90E71787500549615 /* WindInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3163FDC70E71787500549615 /* WindInfo.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3163FD910E71787500549615 /* BillboardLeaf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BillboardLeaf.cpp; path = SourceCode/BillboardLeaf.cpp; sourceTree = "<group>"; };
+		3163FD920E71787500549615 /* BillboardLeaf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BillboardLeaf.h; path = SourceCode/BillboardLeaf.h; sourceTree = "<group>"; };
+		3163FD930E71787500549615 /* Branch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Branch.cpp; path = SourceCode/Branch.cpp; sourceTree = "<group>"; };
+		3163FD940E71787500549615 /* BranchInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BranchInfo.cpp; path = SourceCode/BranchInfo.cpp; sourceTree = "<group>"; };
+		3163FD950E71787500549615 /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Camera.cpp; path = SourceCode/Camera.cpp; sourceTree = "<group>"; };
+		3163FD960E71787500549615 /* Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Debug.h; path = SourceCode/Debug.h; sourceTree = "<group>"; };
+		3163FD970E71787500549615 /* FileAccess.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FileAccess.cpp; path = SourceCode/FileAccess.cpp; sourceTree = "<group>"; };
+		3163FD980E71787500549615 /* FileAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileAccess.h; path = SourceCode/FileAccess.h; sourceTree = "<group>"; };
+		3163FD990E71787500549615 /* FrondEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FrondEngine.cpp; path = SourceCode/FrondEngine.cpp; sourceTree = "<group>"; };
+		3163FD9A0E71787500549615 /* IndexedGeometry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IndexedGeometry.cpp; path = SourceCode/IndexedGeometry.cpp; sourceTree = "<group>"; };
+		3163FD9B0E71787500549615 /* IndexedGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IndexedGeometry.h; path = SourceCode/IndexedGeometry.h; sourceTree = "<group>"; };
+		3163FD9C0E71787500549615 /* Instances.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Instances.h; path = SourceCode/Instances.h; sourceTree = "<group>"; };
+		3163FD9D0E71787500549615 /* LeafGeometry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LeafGeometry.cpp; path = SourceCode/LeafGeometry.cpp; sourceTree = "<group>"; };
+		3163FD9E0E71787500549615 /* LeafGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeafGeometry.h; path = SourceCode/LeafGeometry.h; sourceTree = "<group>"; };
+		3163FD9F0E71787500549615 /* LeafInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LeafInfo.cpp; path = SourceCode/LeafInfo.cpp; sourceTree = "<group>"; };
+		3163FDA00E71787500549615 /* LeafLod.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LeafLod.cpp; path = SourceCode/LeafLod.cpp; sourceTree = "<group>"; };
+		3163FDA10E71787500549615 /* LeafLod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeafLod.h; path = SourceCode/LeafLod.h; sourceTree = "<group>"; };
+		3163FDA30E71787500549615 /* IdvFilename.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdvFilename.h; sourceTree = "<group>"; };
+		3163FDA50E71787500549615 /* IdvGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdvGlobals.h; sourceTree = "<group>"; };
+		3163FDA70E71787500549615 /* ExtendedReal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ExtendedReal.cpp; sourceTree = "<group>"; };
+		3163FDA80E71787500549615 /* ExtendedReal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtendedReal.h; sourceTree = "<group>"; };
+		3163FDA90E71787500549615 /* IdvRandom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IdvRandom.cpp; sourceTree = "<group>"; };
+		3163FDAA0E71787500549615 /* IdvRandom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdvRandom.h; sourceTree = "<group>"; };
+		3163FDAB0E71787500549615 /* RobertDavies_Random.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RobertDavies_Random.cpp; sourceTree = "<group>"; };
+		3163FDAC0E71787500549615 /* RobertDavies_Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RobertDavies_Random.h; sourceTree = "<group>"; };
+		3163FDAE0E71787500549615 /* IdvSpline.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IdvSpline.cpp; sourceTree = "<group>"; };
+		3163FDAF0E71787500549615 /* IdvSpline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdvSpline.h; sourceTree = "<group>"; };
+		3163FDB10E71787500549615 /* IdvFastMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdvFastMath.h; sourceTree = "<group>"; };
+		3163FDB20E71787500549615 /* IdvVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdvVector.h; sourceTree = "<group>"; };
+		3163FDB30E71787500549615 /* Region.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Region.cpp; sourceTree = "<group>"; };
+		3163FDB40E71787500549615 /* RotTransform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RotTransform.cpp; sourceTree = "<group>"; };
+		3163FDB50E71787500549615 /* Transform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Transform.cpp; sourceTree = "<group>"; };
+		3163FDB60E71787500549615 /* Vec.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vec.cpp; sourceTree = "<group>"; };
+		3163FDB70E71787500549615 /* Vec3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vec3.cpp; sourceTree = "<group>"; };
+		3163FDB80E71787500549615 /* LightingEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LightingEngine.cpp; path = SourceCode/LightingEngine.cpp; sourceTree = "<group>"; };
+		3163FDB90E71787500549615 /* LightingEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LightingEngine.h; path = SourceCode/LightingEngine.h; sourceTree = "<group>"; };
+		3163FDBA0E71787500549615 /* ProjectedShadow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ProjectedShadow.cpp; path = SourceCode/ProjectedShadow.cpp; sourceTree = "<group>"; };
+		3163FDBB0E71787500549615 /* ProjectedShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProjectedShadow.h; path = SourceCode/ProjectedShadow.h; sourceTree = "<group>"; };
+		3163FDBC0E71787500549615 /* SimpleBillboard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SimpleBillboard.cpp; path = SourceCode/SimpleBillboard.cpp; sourceTree = "<group>"; };
+		3163FDBD0E71787500549615 /* SpeedTreeRT.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SpeedTreeRT.cpp; path = SourceCode/SpeedTreeRT.cpp; sourceTree = "<group>"; };
+		3163FDBE0E71787500549615 /* SpeedTreeRT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpeedTreeRT.h; path = SourceCode/SpeedTreeRT.h; sourceTree = "<group>"; };
+		3163FDBF0E71787500549615 /* StructsInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StructsInfo.h; path = SourceCode/StructsInfo.h; sourceTree = "<group>"; };
+		3163FDC00E71787500549615 /* StructsSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StructsSupport.h; path = SourceCode/StructsSupport.h; sourceTree = "<group>"; };
+		3163FDC10E71787500549615 /* TreeEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TreeEngine.cpp; path = SourceCode/TreeEngine.cpp; sourceTree = "<group>"; };
+		3163FDC20E71787500549615 /* TreeEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TreeEngine.h; path = SourceCode/TreeEngine.h; sourceTree = "<group>"; };
+		3163FDC30E71787500549615 /* TreeInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TreeInfo.cpp; path = SourceCode/TreeInfo.cpp; sourceTree = "<group>"; };
+		3163FDC40E71787500549615 /* UpVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UpVector.h; path = SourceCode/UpVector.h; sourceTree = "<group>"; };
+		3163FDC50E71787500549615 /* WindEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WindEngine.cpp; path = SourceCode/WindEngine.cpp; sourceTree = "<group>"; };
+		3163FDC60E71787500549615 /* WindEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WindEngine.h; path = SourceCode/WindEngine.h; sourceTree = "<group>"; };
+		3163FDC70E71787500549615 /* WindInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WindInfo.cpp; path = SourceCode/WindInfo.cpp; sourceTree = "<group>"; };
+		D2AAC046055464E500DB518D /* libSpeedTreeRT.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSpeedTreeRT.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D289987405E68DCB004EDB86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* SpeedTreeRT */ = {
+			isa = PBXGroup;
+			children = (
+				08FB7795FE84155DC02AAC07 /* Source */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = SpeedTreeRT;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				3163FDA20E71787500549615 /* LibFilename */,
+				3163FDA40E71787500549615 /* LibGlobals */,
+				3163FDA60E71787500549615 /* LibRandom */,
+				3163FDAD0E71787500549615 /* LibSpline */,
+				3163FDB00E71787500549615 /* LibVector */,
+				3163FD910E71787500549615 /* BillboardLeaf.cpp */,
+				3163FD920E71787500549615 /* BillboardLeaf.h */,
+				3163FD930E71787500549615 /* Branch.cpp */,
+				3163FD940E71787500549615 /* BranchInfo.cpp */,
+				3163FD950E71787500549615 /* Camera.cpp */,
+				3163FD960E71787500549615 /* Debug.h */,
+				3163FD970E71787500549615 /* FileAccess.cpp */,
+				3163FD980E71787500549615 /* FileAccess.h */,
+				3163FD990E71787500549615 /* FrondEngine.cpp */,
+				3163FD9A0E71787500549615 /* IndexedGeometry.cpp */,
+				3163FD9B0E71787500549615 /* IndexedGeometry.h */,
+				3163FD9C0E71787500549615 /* Instances.h */,
+				3163FD9D0E71787500549615 /* LeafGeometry.cpp */,
+				3163FD9E0E71787500549615 /* LeafGeometry.h */,
+				3163FD9F0E71787500549615 /* LeafInfo.cpp */,
+				3163FDA00E71787500549615 /* LeafLod.cpp */,
+				3163FDA10E71787500549615 /* LeafLod.h */,
+				3163FDB80E71787500549615 /* LightingEngine.cpp */,
+				3163FDB90E71787500549615 /* LightingEngine.h */,
+				3163FDBA0E71787500549615 /* ProjectedShadow.cpp */,
+				3163FDBB0E71787500549615 /* ProjectedShadow.h */,
+				3163FDBC0E71787500549615 /* SimpleBillboard.cpp */,
+				3163FDBD0E71787500549615 /* SpeedTreeRT.cpp */,
+				3163FDBE0E71787500549615 /* SpeedTreeRT.h */,
+				3163FDBF0E71787500549615 /* StructsInfo.h */,
+				3163FDC00E71787500549615 /* StructsSupport.h */,
+				3163FDC10E71787500549615 /* TreeEngine.cpp */,
+				3163FDC20E71787500549615 /* TreeEngine.h */,
+				3163FDC30E71787500549615 /* TreeInfo.cpp */,
+				3163FDC40E71787500549615 /* UpVector.h */,
+				3163FDC50E71787500549615 /* WindEngine.cpp */,
+				3163FDC60E71787500549615 /* WindEngine.h */,
+				3163FDC70E71787500549615 /* WindInfo.cpp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC046055464E500DB518D /* libSpeedTreeRT.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3163FDA20E71787500549615 /* LibFilename */ = {
+			isa = PBXGroup;
+			children = (
+				3163FDA30E71787500549615 /* IdvFilename.h */,
+			);
+			name = LibFilename;
+			path = SourceCode/LibFilename_Source;
+			sourceTree = "<group>";
+		};
+		3163FDA40E71787500549615 /* LibGlobals */ = {
+			isa = PBXGroup;
+			children = (
+				3163FDA50E71787500549615 /* IdvGlobals.h */,
+			);
+			name = LibGlobals;
+			path = SourceCode/LibGlobals_Source;
+			sourceTree = "<group>";
+		};
+		3163FDA60E71787500549615 /* LibRandom */ = {
+			isa = PBXGroup;
+			children = (
+				3163FDA70E71787500549615 /* ExtendedReal.cpp */,
+				3163FDA80E71787500549615 /* ExtendedReal.h */,
+				3163FDA90E71787500549615 /* IdvRandom.cpp */,
+				3163FDAA0E71787500549615 /* IdvRandom.h */,
+				3163FDAB0E71787500549615 /* RobertDavies_Random.cpp */,
+				3163FDAC0E71787500549615 /* RobertDavies_Random.h */,
+			);
+			name = LibRandom;
+			path = SourceCode/LibRandom_Source;
+			sourceTree = "<group>";
+		};
+		3163FDAD0E71787500549615 /* LibSpline */ = {
+			isa = PBXGroup;
+			children = (
+				3163FDAE0E71787500549615 /* IdvSpline.cpp */,
+				3163FDAF0E71787500549615 /* IdvSpline.h */,
+			);
+			name = LibSpline;
+			path = SourceCode/LibSpline_Source;
+			sourceTree = "<group>";
+		};
+		3163FDB00E71787500549615 /* LibVector */ = {
+			isa = PBXGroup;
+			children = (
+				3163FDB10E71787500549615 /* IdvFastMath.h */,
+				3163FDB20E71787500549615 /* IdvVector.h */,
+				3163FDB30E71787500549615 /* Region.cpp */,
+				3163FDB40E71787500549615 /* RotTransform.cpp */,
+				3163FDB50E71787500549615 /* Transform.cpp */,
+				3163FDB60E71787500549615 /* Vec.cpp */,
+				3163FDB70E71787500549615 /* Vec3.cpp */,
+			);
+			name = LibVector;
+			path = SourceCode/LibVector_Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC043055464E500DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC045055464E500DB518D /* SpeedTreeRT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB91EB08733DB70010E9CD /* Build configuration list for PBXNativeTarget "SpeedTreeRT" */;
+			buildPhases = (
+				D2AAC043055464E500DB518D /* Headers */,
+				D2AAC044055464E500DB518D /* Sources */,
+				D289987405E68DCB004EDB86 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpeedTreeRT;
+			productName = SpeedTreeRT;
+			productReference = D2AAC046055464E500DB518D /* libSpeedTreeRT.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB91EF08733DB70010E9CD /* Build configuration list for PBXProject "SpeedTreeRT" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* SpeedTreeRT */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC045055464E500DB518D /* SpeedTreeRT */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC044055464E500DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3163FDC80E71787500549615 /* BillboardLeaf.cpp in Sources */,
+				3163FDCA0E71787500549615 /* Branch.cpp in Sources */,
+				3163FDCB0E71787500549615 /* BranchInfo.cpp in Sources */,
+				3163FDCC0E71787500549615 /* Camera.cpp in Sources */,
+				3163FDCE0E71787500549615 /* FileAccess.cpp in Sources */,
+				3163FDD00E71787500549615 /* FrondEngine.cpp in Sources */,
+				3163FDD10E71787500549615 /* IndexedGeometry.cpp in Sources */,
+				3163FDD40E71787500549615 /* LeafGeometry.cpp in Sources */,
+				3163FDD60E71787500549615 /* LeafInfo.cpp in Sources */,
+				3163FDD70E71787500549615 /* LeafLod.cpp in Sources */,
+				3163FDDB0E71787500549615 /* ExtendedReal.cpp in Sources */,
+				3163FDDD0E71787500549615 /* IdvRandom.cpp in Sources */,
+				3163FDDF0E71787500549615 /* RobertDavies_Random.cpp in Sources */,
+				3163FDE10E71787500549615 /* IdvSpline.cpp in Sources */,
+				3163FDE50E71787500549615 /* Region.cpp in Sources */,
+				3163FDE60E71787500549615 /* RotTransform.cpp in Sources */,
+				3163FDE70E71787500549615 /* Transform.cpp in Sources */,
+				3163FDE80E71787500549615 /* Vec.cpp in Sources */,
+				3163FDE90E71787500549615 /* Vec3.cpp in Sources */,
+				3163FDEA0E71787500549615 /* LightingEngine.cpp in Sources */,
+				3163FDEC0E71787500549615 /* ProjectedShadow.cpp in Sources */,
+				3163FDEE0E71787500549615 /* SimpleBillboard.cpp in Sources */,
+				3163FDEF0E71787500549615 /* SpeedTreeRT.cpp in Sources */,
+				3163FDF30E71787500549615 /* TreeEngine.cpp in Sources */,
+				3163FDF50E71787500549615 /* TreeInfo.cpp in Sources */,
+				3163FDF70E71787500549615 /* WindEngine.cpp in Sources */,
+				3163FDF90E71787500549615 /* WindInfo.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB91EC08733DB70010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G4;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = _LIB;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_VERSION = 4.0;
+				INSTALL_PATH = /usr/local/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				OBJROOT = .build;
+				PRODUCT_NAME = SpeedTreeRT;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SYMROOT = ../lib/Xcode;
+			};
+			name = Debug;
+		};
+		1DEB91ED08733DB70010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G4;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_LIB,
+					NDEBUG,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_VERSION = 4.0;
+				INSTALL_PATH = /usr/local/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				OBJROOT = .build;
+				PRODUCT_NAME = SpeedTreeRT;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SYMROOT = ../lib/Xcode;
+				VALID_ARCHS = "i386 ppc";
+			};
+			name = Release;
+		};
+		1DEB91F008733DB70010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				DEPLOYMENT_LOCATION = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				OBJROOT = .build;
+				ONLY_ACTIVE_ARCH = NO;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SYMROOT = ../lib/Xcode;
+				VALID_ARCHS = "i386 ppc";
+			};
+			name = Debug;
+		};
+		1DEB91F108733DB70010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				OBJROOT = .build;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SYMROOT = ../lib/Xcode;
+				VALID_ARCHS = "i386 ppc";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB91EB08733DB70010E9CD /* Build configuration list for PBXNativeTarget "SpeedTreeRT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91EC08733DB70010E9CD /* Debug */,
+				1DEB91ED08733DB70010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB91EF08733DB70010E9CD /* Build configuration list for PBXProject "SpeedTreeRT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91F008733DB70010E9CD /* Debug */,
+				1DEB91F108733DB70010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

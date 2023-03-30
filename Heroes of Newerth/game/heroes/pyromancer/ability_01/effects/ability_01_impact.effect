@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" useentityeffectscale="true">
+
+	<definitions>
+
+		<modifier
+			name="modifier0"
+			life="1000"
+			startcolor="11 12 2"
+			endcolor="1.0 1.0 1.0"
+		/>
+
+		<particlesystem name="system0" space="entity" scale="0.8">
+
+			<sound
+				volume="1" 
+				sample="/heroes/dwarf_magi/ability_02/sounds/ability_02_impact.wav"
+				linearfalloff="true"
+				falloffstart="200"
+				falloffend="1400"
+			/>
+
+			<sound
+				life="2000"
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="1200"
+				volume="0.35" 
+				soundloop="true"
+				fadein="100"
+				fadeout="1000"
+				sample="/shared/sounds/effects/torch.wav"
+			/>
+
+			<simpleemitter
+				life="2000"
+				bone="_bone_centerofchest"
+				spawnrate="20"
+				particlelife="1800"
+				minspeed="0"
+				maxspeed="300"
+				drag="0.03"
+				depthbias="-60"
+				offsetsphere="30"
+				angle="20"
+				gravity="-2"
+				material="/shared/effects/materials/dust_smoke_10.material"
+			>
+				<particle
+					maxangle="360"
+					minanglespeed="-150"
+					maxanglespeed="150"
+					startcolor=".5 .2 .1"
+					endcolor="0.2"
+					minstartsize="10"
+					maxstartsize="25"
+					endsize="90"
+					startalpha="1"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				life="2000"
+				bone="_bone_centerofchest"
+				spawnrate="15"
+				minparticlelife="350"
+				maxparticlelife="1200"
+				minspeed="0"
+				maxspeed="300"
+				drag="0.07"
+				depthbias="-100"
+				offsetsphere="30"
+				angle="30"
+				material="/shared/effects/materials/phantom_smoke_04.material"
+			>
+				<particle
+					maxangle="360"
+					minanglespeed="-150"
+					maxanglespeed="150"
+					startcolor="1 0.4 0"
+					endcolor="0 0 0"
+					minstartsize="10"
+					maxstartsize="25"
+					endsize="110"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				life="2000"
+				bone="_bone_centerofchest"
+				spawnrate="25"
+				minparticlelife="150"
+				maxparticlelife="800"
+				minspeed="0"
+				maxspeed="700"
+				drag="0.07"
+				angle="70"
+				offsetsphere="25 25 40"
+				material="/shared/effects/materials/femme_fire_01.material"
+			>
+				<particle
+					minangle="-40"
+					maxangle="60"
+					minanglespeed="-110"
+					maxanglespeed="110"
+					startcolor="1 .4 0"
+					endcolor="0"
+					size="15"
+					minendscale="5"
+					maxendscale="6"
+					endstickiness=".6"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				life="2000"
+				bone="_bone_centerofchest"
+				spawnrate="35"
+				minparticlelife="100"
+				maxparticlelife="500"
+				minspeed="0"
+				maxspeed="500"
+				drag="0.05"
+				angle="20"
+				offsetsphere="25"
+				depthbias="-60"
+				material="/shared/effects/materials/femme_lightning_01.material"
+			>
+				<particle
+					minangle="-70"
+					maxangle="70"
+					minanglespeed="-110"
+					maxanglespeed="110"
+					startcolor="1 .6 .3"
+					endcolor="0"
+					size="8"
+					minendscale="5"
+					maxendscale="6"
+					endstickiness=".3"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				life="2000"
+				bone="_bone_centerofchest"
+				spawnrate="10"
+				particlelife="1000"
+				minspeed="0"
+				maxspeed="100"
+				drag="0.035"
+				offsetsphere="15"
+				material="/shared/effects/materials/refract_outsplash.material"
+			>
+				<particle
+					startalpha=".3"
+					endalpha="0.0"
+					maxangle="360"
+					anglespeed="-90"
+					startsize="20"
+					endsize="70"
+					param=".15"
+					depthbias="-30"
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+	  	<spawnmodifier instance="instance1" modifier="modifier0"/>  
+	  	<waitfordeath instance="instance0" />
+	  	<waitfordeath instance="instance1" />	  
+	</thread>
+
+</effect>

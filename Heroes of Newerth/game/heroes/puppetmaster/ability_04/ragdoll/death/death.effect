@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" deferred="true" persistent="true">
+
+	<definitions>
+	
+		
+		<particlesystem name="system0" space="world" scale="1">
+		
+			<model
+				life="300"
+				model="model.mdf"
+				anim="death_1"
+				color="1 1 1"
+				
+				startalpha="1"
+				endalpha="0"
+			>
+			
+				<!--torso-->
+				<simpleemitter
+					bone="Box06"
+					delay="150"
+					count="17"
+					spawnrate="250"
+					minparticlelife="800"
+					maxparticlelife="1500"
+					speed="55"
+					gravity="0"
+					drag="0"
+					position="5 5 25"
+					offsetsphere="0 0 0"
+					direction="0 0 0"
+					material="/shared/effects/materials/smoke_01.material"
+				>
+					<particle
+						maxangle="360"
+						minanglespeed="-6"
+						maxanglespeed="6"
+						scale="5"
+						startcolor="0 0 0"
+						midcolor="1 .75 .5"
+						endcolor="0 0 0"
+						startalpha="0"
+						midalpha=".1"
+						endalpha="0"
+						midcolorpos=".2"
+						startsize="5"
+						endsize="18"
+					/>
+				</simpleemitter>
+			
+				<!--hisRightHandSmoke-->
+				<simpleemitter
+					bone="Box04"
+					delay="200"
+					count="12"
+					spawnrate="250"
+					minparticlelife="800"
+					maxparticlelife="1500"
+					speed="25"
+					gravity="-7.5"
+					drag="0"
+					position="5 5 0"
+					offsetsphere="0 0 0"
+					direction="0 0 1"
+					material="/shared/effects/materials/smoke_01.material"
+				>
+					<particle
+						maxangle="360"
+						minanglespeed="-6"
+						maxanglespeed="6"
+						scale="5"
+						startcolor="0 0 0"
+						midcolor="1 .75 .5"
+						endcolor="0 0 0"
+						startalpha="0"
+						midalpha=".1"
+						endalpha="0"
+						midcolorpos=".2"
+						startsize="5"
+						endsize="18"
+					/>
+				</simpleemitter>
+				
+				<!--hisRightFootSmoke-->
+				<simpleemitter
+					bone="Box11"
+					delay="350"
+					count="12"
+					spawnrate="250"
+					minparticlelife="800"
+					maxparticlelife="1500"
+					speed="55"
+					gravity="0"
+					drag="0"
+					position="5 5 25"
+					offsetsphere="0 0 0"
+					direction="0 0 0"
+					material="/shared/effects/materials/smoke_01.material"
+				>
+					<particle
+						maxangle="360"
+						minanglespeed="-6"
+						maxanglespeed="6"
+						scale="5"
+						startcolor="0 0 0"
+						midcolor="1 .75 .5"
+						endcolor="0 0 0"
+						startalpha="0"
+						midalpha=".1"
+						endalpha="0"
+						midcolorpos=".2"
+						startsize="5"
+						endsize="18"
+					/>
+				</simpleemitter>
+
+				<!--head-->
+				<simpleemitter
+					delay="250"
+					bone="Box01"
+					life="500"
+					spawnrate="65"
+					minparticlelife="750"
+					maxparticlelife="1000"
+					gravity="0"
+					speed="300"
+					drag="1"
+					acceleration="0"
+					material="/shared/effects/materials/straw.material"
+					offsetsphere="5 5 0"
+					direction="0 0 0"
+					minangle="0"
+					maxangle="10"
+					position="0 0 4"
+				>
+					<particle
+						minangle="0"
+						maxangle="360"
+						anglespeed="0"
+						minsize="15"
+						maxsize="40"
+						lockup="true"
+						lockright="true"
+						pitch="90"
+						startcolor=".8"
+						midcolor=".8"
+						endcolor=".8"
+						midcolorpos=".15"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".75"
+					/>
+				</simpleemitter>
+				
+				<!--torso-->
+				<simpleemitter
+					delay="250"
+					bone="Box06"
+					life="500"
+					spawnrate="65"
+					minparticlelife="750"
+					maxparticlelife="1000"
+					gravity="0"
+					speed="300"
+					drag="1"
+					acceleration="0"
+					material="/shared/effects/materials/straw.material"
+					offsetsphere="5 5 0"
+					direction="0 0 0"
+					minangle="0"
+					maxangle="10"
+					position="0 10 4"
+				>
+					<particle
+						minangle="0"
+						maxangle="360"
+						anglespeed="0"
+						minsize="15"
+						maxsize="40"
+						lockup="true"
+						lockright="true"
+						pitch="90"
+						startcolor=".8"
+						midcolor=".8"
+						endcolor=".8"
+						midcolorpos=".15"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".75"
+					/>
+				</simpleemitter>
+				
+				<!--hisLeftHand-->
+				<simpleemitter
+					delay="250"
+					bone="Box02"
+					life="500"
+					spawnrate="65"
+					minparticlelife="750"
+					maxparticlelife="1000"
+					gravity="0"
+					speed="300"
+					drag="1"
+					acceleration="0"
+					material="/shared/effects/materials/straw.material"
+					offsetsphere="5 5 0"
+					direction="0 0 0"
+					minangle="0"
+					maxangle="10"
+					position="0 0 0"
+				>
+					<particle
+						minangle="0"
+						maxangle="360"
+						anglespeed="0"
+						minsize="10"
+						maxsize="25"
+						lockup="true"
+						lockright="true"
+						pitch="90"
+						startcolor=".8"
+						midcolor=".8"
+						endcolor=".8"
+						midcolorpos=".15"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".75"
+					/>
+				</simpleemitter>
+				
+				<!--hisRightHand-->
+				<simpleemitter
+					delay="250"
+					bone="Box04"
+					life="500"
+					spawnrate="65"
+					minparticlelife="750"
+					maxparticlelife="1000"
+					gravity="0"
+					speed="300"
+					drag="1"
+					acceleration="0"
+					material="/shared/effects/materials/straw.material"
+					offsetsphere="5 5 0"
+					direction="0 0 0"
+					minangle="0"
+					maxangle="10"
+					position="0 0 0"
+				>
+					<particle
+						minangle="0"
+						maxangle="360"
+						anglespeed="0"
+						minsize="10"
+						maxsize="25"
+						lockup="true"
+						lockright="true"
+						pitch="90"
+						startcolor=".8"
+						midcolor=".8"
+						endcolor=".8"
+						midcolorpos=".15"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".75"
+					/>
+				</simpleemitter>
+				
+				<!--hisRightLeg-->
+				<simpleemitter
+					delay="500"
+					life="500"
+					spawnrate="65"
+					minparticlelife="750"
+					maxparticlelife="1000"
+					gravity="0"
+					speed="300"
+					drag="1"
+					acceleration="0"
+					material="/shared/effects/materials/straw.material"
+					offsetsphere="5 5 0"
+					direction="0 0 0"
+					minangle="0"
+					maxangle="10"
+					position="10 10 5"
+				>
+					<particle
+						minangle="0"
+						maxangle="360"
+						anglespeed="0"
+						minsize="10"
+						maxsize="25"
+						lockup="true"
+						lockright="true"
+						pitch="90"
+						startcolor=".8"
+						midcolor=".8"
+						endcolor=".8"
+						midcolorpos=".15"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".75"
+					/>
+				</simpleemitter>
+				
+				
+				<!--hisRightFoot-->
+				<simpleemitter
+					delay="500"
+					bone="Box11"
+					life="500"
+					spawnrate="65"
+					minparticlelife="750"
+					maxparticlelife="1000"
+					gravity="0"
+					speed="300"
+					drag="1"
+					acceleration="0"
+					material="/shared/effects/materials/straw.material"
+					offsetsphere="5 5 0"
+					direction="0 0 0"
+					minangle="0"
+					maxangle="10"
+					position="0 0 0"
+				>
+					<particle
+						minangle="0"
+						maxangle="360"
+						anglespeed="0"
+						minsize="10"
+						maxsize="25"
+						lockup="true"
+						lockright="true"
+						pitch="90"
+						startcolor=".8"
+						midcolor=".8"
+						endcolor=".8"
+						midcolorpos=".15"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".75"
+					/>
+				</simpleemitter>
+				
+			</model>
+			
+			<simpleemitter
+				bone="_bone_lefthand"
+				timenudge="250"
+				count="12"
+				spawnrate="250"
+				minparticlelife="800"
+				maxparticlelife="1500"
+				speed="25"
+				gravity="0"
+				drag="0"
+				position="0 0 0"
+				offsetsphere="20 20 0"
+				material="/shared/effects/materials/smoke_01.material"
+			>
+				<particle
+					maxangle="360"
+					minanglespeed="-6"
+					maxanglespeed="6"
+					scale="5"
+					startcolor="0 0 0"
+					midcolor="1 .75 .5"
+					endcolor="0 0 0"
+					startalpha="0"
+					midalpha=".1"
+					endalpha="0"
+					midcolorpos=".2"
+					startsize="5"
+					endsize="15"
+				/>
+			</simpleemitter>
+			
+
+			<simpleemitter
+				life="500"
+				spawnrate="150"
+				minparticlelife="1000"
+				maxparticlelife="1500"
+				gravity="20"
+				speed="300"
+				mindrag="0"
+				maxdrag=".05"
+				acceleration="0"
+				material="/shared/effects/materials/straw.material"
+				offsetsphere="5 5 0"
+				direction="0 0 1"
+				minangle="0"
+				maxangle="10"
+				position="0 -25 25"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					anglespeed="90"
+					minsize="15"
+					maxsize="30"
+					lockup="true"
+					lockright="true"
+					pitch="90"
+					startcolor=".8"
+					midcolor=".8"
+					endcolor=".8"
+					midcolorpos=".15"
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".75"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				life="500"
+				spawnrate="200"
+				minparticlelife="500"
+				maxparticlelife="800"
+				gravity="0"
+				minspeed="400"
+				maxspeed="500"
+				drag=".075"
+				acceleration="0"
+				material="/shared/effects/materials/straw.material"
+				offsetsphere="10 10 0"
+				direction="0 0 0"
+				position="0 -25 25"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					anglespeed="90"
+					minsize="15"
+					maxsize="35"
+					lockup="true"
+					lockright="true"
+					pitch="90"
+					startcolor=".8"
+					midcolor=".8"
+					endcolor=".8"
+					midcolorpos=".15"
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".75"
+				/>
+			</simpleemitter>
+			
+	</particlesystem>
+</definitions>
+
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	 
+	<waitfordeath instance="instance0" />
+	
+	<!-- <die /> -->
+</thread>
+
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+
+
+
+
+
+
+

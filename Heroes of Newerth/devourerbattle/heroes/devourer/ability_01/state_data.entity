@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Devourer_Ability1_Data"
+
+	icon=""
+	ishidden="true"
+
+	alwaystransmitdata="true"
+	
+	effecttype=""
+>
+</state>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Chronos_Ability1"
+	life="200"
+	radius="300"
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Magic"
+	passiveeffect="effects/area.effect"
+>
+	<onimpact>
+		<damage effecttype="Magic" amount="25,75,125,175" />
+		<applystate name="State_Chronos_Ability1_Enemy" duration="3000" />
+		<playeffect effect="effects/impact.effect" source="target_entity" occlude="true"/>
+	</onimpact>
+</affector>

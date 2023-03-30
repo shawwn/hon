@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="sploogeAnim01.max" file="goob.model" type="K2">
+
+	<anim name="idle" fps="18" clip="goob.clip" loop="true" startframe="0" loopbackframe="-1"/>
+
+</model>

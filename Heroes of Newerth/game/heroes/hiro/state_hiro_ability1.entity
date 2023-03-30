@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Hiro_Ability1"
+
+	icon="icons/ability_1.tga"
+	passiveeffect="effects/ability_01/fury.effect"
+	forceanim="ability_1"
+	
+	immunitytype="MagicImmunity1"
+	silenced="true"
+	perplexed="false"
+	disarmed="true,true,true,false"
+	
+	attackspeedslow="0,0,0,.50"
+	
+	effecttype=""
+>
+	<onattackstart>
+		<addattackimpactactions>
+			<playeffect effect="effects/ability_01/cast.effect" target="target_entity" source="source_entity"/>
+		</addattackimpactactions>
+	</onattackstart>
+</state>

@@ -1,0 +1,125 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PANEL DIALOGEX 0, 0, 108, 156
+STYLE DS_SETFONT | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CTEXT           "Widget Plugin \n\n A tutorial showing\nhow to create a\nsimple procedural\nobject in 3DSMax",
+                    IDC_STATIC,7,7,94,52
+    CONTROL         "",IDC_SIZE_EDIT,"CustEdit",WS_TABSTOP,39,90,35,10
+    CONTROL         "",IDC_SIZE_SPIN,"SpinnerControl",0x0,75,90,7,10
+    LTEXT           "Size and extensions",IDC_STATIC,20,76,64,8
+    CONTROL         "",IDC_LEFT_EDIT,"CustEdit",WS_TABSTOP,39,107,35,10
+    CONTROL         "",IDC_LEFT_SPIN,"SpinnerControl",0x0,75,107,7,10
+    CONTROL         "",IDC_RIGHT_EDIT,"CustEdit",WS_TABSTOP,39,124,35,10
+    CONTROL         "",IDC_RIGHT_SPIN,"SpinnerControl",0x0,75,124,7,10
+    LTEXT           "Size",IDC_STATIC,12,90,22,9,0,WS_EX_RIGHT
+    LTEXT           "Left",IDC_STATIC,12,107,22,9,0,WS_EX_RIGHT
+    LTEXT           "Right",IDC_STATIC,12,124,22,9,0,WS_EX_RIGHT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_PANEL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 101
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 149
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""buildver.h""\r\n"
+    "#include ""veroverrides.h""\r\n"
+    "#include ""maxversion.r""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_LIBDESCRIPTION      "A widget object"
+    IDS_CATEGORY            "Max SDK tutorials"
+    IDS_CLASS_NAME          "Widget"
+    IDS_PARAMS              "Parameters"
+    IDS_SPIN                "Spin"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "buildver.h"
+#include "veroverrides.h"
+#include "maxversion.r"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

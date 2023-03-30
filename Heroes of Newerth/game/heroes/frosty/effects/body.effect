@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+	
+		<particlesystem name="system0" space="world" scale="1">
+		
+			<simpleemitter	
+				bone="_bone_weaponattach"
+				spawnrate="15"
+				particlelife="400"
+				depthbias="-10"		
+				acceleration="50"
+				material="/shared/effects/materials/blink.material"
+				particledirectionalspace="local"				
+			>
+				<particle 
+					minangle="-90"
+					maxangle="90"
+					minanglespeed="100"
+					startcolor="0 0 0"
+					midcolor=".075 .25 .2"
+					endcolor="0 0 0"
+					midcolorpos=".7"
+					maxanglespeed="0"
+					startframe="0"
+					endframe="1"				
+					minsize="10"		
+					maxsize="75"
+					midsizepos=".7"		
+					anchor="1"
+				/>
+			</simpleemitter> 
+
+			<simpleemitter	
+				bone="pedestalBone"
+				spawnrate="15"
+				particlelife="400"
+				depthbias="-10"		
+				acceleration="50"
+				material="/shared/effects/materials/blink.material"
+				particledirectionalspace="local"				
+			>
+				<particle 
+					minangle="-90"
+					maxangle="90"
+					minanglespeed="100"
+					startcolor="0 0 0"
+					midcolor=".1 .3 .2"
+					endcolor="0 0 0"
+					midcolorpos=".7"
+					maxanglespeed="0"
+					startframe="0"
+					endframe="1"				
+					minsize="30"		
+					maxsize="170"
+					midsizepos=".7"		
+					anchor="1"
+				/>
+			</simpleemitter> 
+			
+			<simpleemitter
+				position="0 0 20"
+				spawnrate="45"											
+				particlelife="1600"	
+				material="/shared/effects/materials/smoke_17.material"
+				offsetsphere="5 5 5"
+				inheritvelocity=".4"
+				gravity="15"
+				collide="1"
+				depthbias="-30"
+				offsetradial="30"
+				minangle="-90"
+				maxangle="90"
+				speed="50"
+			>
+				<particle 
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-100"
+					maxanglespeed="100"
+					color=".4 .75 .8"
+					startsize="85"
+					endsize="110"
+					startalpha="0"
+					midalpha=".2"
+					endalpha="0"
+					startanchor=".2"
+					endanchor="0"
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />		
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

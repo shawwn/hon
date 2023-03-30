@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Hiro1"
+	
+	statuseffecttooltip="State_Hiro_Ability1"
+	icon="icons/ability_1.tga"
+	
+	anim="ability_1_start"
+	casttime="0"
+	castactiontime="0"
+	frontqueue="true"
+	inheritmovement="true"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_self"
+	targetscheme="enemy_units" 
+	targetradius="250"
+	casteffecttype="Magic"
+	
+	manacost="110"
+	cooldowntime="30000,28000,26000,24000"
+>
+	<onimpact>
+		<dispel type="StatusDebuff" />
+		<dispel type="StatusBuff" />
+		<expirestate name="State_PowerupMoveSpeed" target="source_entity"/>
+		<spawnaffector name="Affector_Hiro_Ability1" target="source_entity"/>
+		<applystate name="State_Hiro_Ability1" duration="5000"/>
+	</onimpact>
+</ability>

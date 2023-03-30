@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="">
+	<definitions>
+		<particlesystem name="system0" space="world" useentityscale="1">
+	<!--grass-->
+		<terrainemitter
+				position="0 0 10"
+				material="/shared/effects/materials/grass.material"
+				spawnrate="400"
+				
+				range="500"
+				direction="0 0 1"
+				minangle="-30"
+				maxangle="30"
+				particlelife="6000"
+				
+			>
+				<particle
+					minyaw="0"
+					maxyaw="360"
+					minroll="-10"
+					maxroll="10"
+					lockright="true"
+					lockup="true"
+					color="2 2 2"
+					startsize="0"
+					midsize="60"
+					endsize="60"
+					midsizepos=".3"
+					flare="true"
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+				
+				/>
+			</terrainemitter>
+	<!-- flowers -->
+		
+			<simpleemitter
+				spawnrate="10"
+				count="85"
+				gravity="0"
+				speed="0.0"
+				drag="0.0"
+				offsetsphere="650 500  0"
+				direction="0 1 0.1"
+				minangle="-30"
+				maxangle="30"
+			>
+				<particle
+					turn="true"
+					
+				>
+					<model
+						
+						model="/buildings/hellbourne/main/effects/flower/model.mdf"
+						anim="idle"
+						minstartscale=".4"
+						maxstartscale="1.4"
+						position="0.0 0.0 0.0"
+						directionalspace="local"
+						minyaw="45"
+						maxyaw="360"
+						minroll="0"
+						maxroll="20"
+						minpitch="0"
+						maxpitch="20"
+					/>
+				</particle>
+			</simpleemitter>
+
+			
+			
+			
+			
+		<model
+				model="/buildings/hellbourne/main/effects/death/roots.mdf"
+				anim="idle"
+				position="0 0 0"
+			/> 
+	
+			<model
+				model="/buildings/hellbourne/main/effects/death/branches.mdf"
+				anim="idle"
+				position="0 0 0"
+			> 
+				
+				<simpleemitter
+					bone="Box165"
+					delay="3500"
+					count="30"
+					life="3000"
+					spawnrate="10"
+					particlelife="10000"
+					gravity="5"
+					speed="1"
+					drag=".001"
+					position="0 0 0"
+					direction="0 0 1"
+					material="/shared/effects/materials/leaf.material"
+					offsetsphere="40 40 20"
+				>
+					<particle 
+						minangle="0"
+						maxangle="360"
+						minanglespeed="0"
+						alpha=".5"
+						color="1 1 1"
+						minsize="15"
+						maxsize="25"
+					/>
+				</simpleemitter>
+				
+				<simpleemitter
+					bone="Box154"
+					delay="3500"
+					count="30"
+					life="3000"
+					spawnrate="10"
+					particlelife="10000"
+					gravity="5"
+					speed="1"
+					drag=".001"
+					position="0 0 0"
+					direction="0 0 1"
+					material="/shared/effects/materials/leaf.material"
+					offsetsphere="40 40 20"
+				>
+					<particle 
+						minangle="0"
+						maxangle="360"
+						minanglespeed="0"
+						alpha=".5"
+						color="1 1 1"
+						minsize="15"
+						maxsize="25"
+					/>
+				</simpleemitter>
+				
+				
+			</model>
+			
+			<model
+				model="/buildings/hellbourne/main/effects/death/trunk.mdf"
+				anim="idle"
+				position="0 0 0"
+
+			>  <!-- leaves falling out of tree -->
+				
+				
+				<simpleemitter
+					bone="Box162"
+					delay="3500"
+					count="30"
+					spawnrate="15"
+					particlelife="10000"
+					gravity="5"
+					speed="1"
+					drag=".001"
+					position="0 0 0"
+					direction="0 0 1"
+					material="/shared/effects/materials/leaf.material"
+					offsetsphere="50 50 20"
+				>
+					<particle 
+						minangle="0"
+						maxangle="360"
+						minanglespeed="0"
+						alpha=".5"
+						color=".6 .6 .6"
+						minsize="15"
+						maxsize="25"
+					/>
+				</simpleemitter>
+				
+				<simpleemitter
+					bone="Box165"
+					delay="4500"
+					count="30"
+					spawnrate="15"
+					particlelife="10000"
+					gravity="1"
+					speed="5"
+					drag=".001"
+					position="0 0 0"
+					direction="0 0 1"
+					material="/shared/effects/materials/leaf.material"
+					offsetsphere="50 50 20"
+				>
+					<particle 
+						minangle="0"
+						maxangle="360"
+						minanglespeed="0"
+						alpha=".5"
+						color=".6 .6 .6"
+						minsize="15"
+						maxsize="25"
+					/>
+				</simpleemitter>
+				
+				<simpleemitter
+					bone="Box164"
+					delay="4500"
+					count="30"
+					spawnrate="15"
+					particlelife="10000"
+					gravity="1"
+					speed="5"
+					drag=".001"
+					position="0 0 0"
+					direction="0 0 1"
+					material="/shared/effects/materials/leaf.material"
+					offsetsphere="50 50 20"
+				>
+					<particle 
+						minangle="0"
+						maxangle="360"
+						minanglespeed="0"
+						alpha=".5"
+						color=".6 .6 .6"
+						minsize="15"
+						maxsize="25"
+					/>
+				</simpleemitter>
+				
+				<simpleemitter
+					bone="Box163"
+					delay="3500"
+					count="25"
+					spawnrate="10"
+					particlelife="10000"
+					gravity="1"
+					speed="1"
+					drag=".001"
+					position="0 0 0"
+					direction="0 0 1"
+					material="/shared/effects/materials/leaf.material"
+					offsetsphere="100 100 20"
+				>
+					<particle 
+						minangle="0"
+						maxangle="360"
+						minanglespeed="0"
+						alpha=".5"
+						color=".6 .6 .6"
+						minsize="15"
+						maxsize="25"
+					/>
+				</simpleemitter>
+				<!-- end of leaves falling out of tree -->
+			</model>   <!-- end of tree model -->
+
+			<simpleemitter
+				spawnrate="150"
+				particlelife="3000"
+				gravity="-1.0"
+				speed="50.0"
+				drag="0.0"
+				acceleration="0.0"
+				material="/shared/effects/materials/whitedot.material"
+				offsetsphere="512 512 256"
+			>
+				<particle
+					startcolor="0.0 0.0 0.0"
+					midcolor="0 .4 1.0"
+					endcolor="0.0 0.0 0.0"
+					
+					startalpha="1.0"
+					endalpha="1.0"
+					angle="0"
+					anglespeed="0"
+					width="8.0"
+					startheight="8.0"
+					endheight="16"
+					lockup="false"
+					lockright="false"
+					pitch="0"
+				/>
+
+				<particle
+					startcolor="0.0 0.0 0.0"
+					midcolor="0 1.0 0.4"
+					endcolor="0.0 0.0 0.0"
+					
+					startalpha="1.0"
+					endalpha="1.0"
+					angle="0"
+					anglespeed="0"
+					width="8.0"
+					startheight="8.0"
+					endheight="16"
+					lockup="false"
+					lockright="false"
+					pitch="0"
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>
+		<camerashake2 scale="2.0" radius="1000" duration="6000" frequency="22" />
+		<wait duration="6000"/>
+
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+	</thread> 
+</effect>

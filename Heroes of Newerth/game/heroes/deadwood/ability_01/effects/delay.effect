@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+		
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".65"
+				sample="../sounds/impact.wav"
+			/>		
+			
+			<terrainemitter
+				spawnrate="170"
+				count="8"
+				particlelife="2000"
+				range="180"
+				direction="0 1 0"
+			>
+				<particle
+					turn="true"
+				>
+					<model
+						name="roots"
+						model="hand.mdf"
+						anim="idle"
+						expirelife="300"
+						minscale=".65"
+						maxscale=".9"
+						directionalspace="local"
+						minyaw="-360"
+						maxyaw="360"
+						color=".8 .8 .8"
+						startalpha="1"
+						midalpha="1"
+						midalphapos="0.6"
+						endalpha="0"
+					>
+					
+						<template name="glows">
+								
+							<billboard
+								bone="{bone}"
+								life="2000"
+								startcolor=".1 .02 .0"
+								endcolor="0"
+								size="100"
+								material="/shared/effects/materials/whitedot.material"
+							/>
+					
+							</template>
+			
+						<instance name="glows" bone="Box14"/>	
+						<instance name="glows" bone="Box03"/>
+						<instance name="glows" bone="Box68"/>
+						<instance name="glows" bone="Box79"/>
+						<instance name="glows" bone="Box50"/>
+						<instance name="glows" bone="Box39"/>
+
+					</model>
+				
+				</particle>
+				
+			</terrainemitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

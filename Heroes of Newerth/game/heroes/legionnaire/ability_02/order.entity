@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<order
+	name="Order_Legionnaire_Ability2"
+
+	triggerrange="100"
+>
+	<onbegin>
+		<applystate name="State_Legionnaire_Ability2_Self" continuous="true" duration="1000" target="source_entity" pushentity="true" />
+		<setproxy index="0" target="stack_entity" />
+		<applystate name="State_Legionnaire_Ability2_Sight" target="target_entity" continuous="true" pushentity="true" />
+		<setproxy index="1" target="stack_entity" />
+	</onbegin>
+	
+	<oncomplete>
+		<spawnaffector name="Affector_Legionnaire_Ability2" target="source_entity" />
+		<applystate name="State_Legionnaire_Ability2_Speed" target="source_entity" duration="1000" />
+		<expire entity="this_proxy_entity1" />
+		<playanim name="attack_order" target="source_entity" />
+	</oncomplete>
+	
+	<oncancel>
+		<expire entity="this_proxy_entity" />
+		<expire entity="this_proxy_entity1" />
+	</oncancel>
+	
+	<onframe>
+		<condition target="source_entity" test="hastrait stunned or hastrait immobilized or hastrait restrained">
+			<cancel />
+		</condition>
+		<distance target="target_entity" source="source_entity" />
+		<condition test="result gt 1750">
+			<cancel />
+		</condition>
+	</onframe>
+</order>

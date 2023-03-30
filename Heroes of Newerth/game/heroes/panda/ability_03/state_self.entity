@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Panda_Ability3_Bind"
+
+	
+	
+	icon="icon.tga"
+	
+
+	stunned="true"
+	
+	passiveeffect="effects/launch.effect"
+	
+	effecttype=""
+>
+	<onexpired>
+		
+	</onexpired>
+</state>

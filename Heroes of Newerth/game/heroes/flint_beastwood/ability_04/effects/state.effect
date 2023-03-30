@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1">
+
+	<definitions>
+
+		<particlesystem name="system0" space="entity" scale="1.3">
+		
+		
+			<billboard	
+				expirelife="500"
+				color="25 0 0"
+				startalpha="1"
+				endalpha="0"
+				size="50"
+				material="/shared/effects/materials/animated_target.material"
+				depthbias="-50"
+				position="0 0 250"
+				startframe="0"
+				framespeed="1"
+			/>
+			
+			<billboard	
+				expirelife="500"
+				color="25 0 0"
+				startalpha="1"
+				endalpha="0"
+				size="25"
+				material="/shared/effects/materials/animated_target.material"
+				depthbias="-50"
+				position="0 0 250"
+				startframe="0"
+				framespeed="1"
+				roll="45"
+			/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+		<waitfordeath instance="instance0"/>
+		<!-- <die /> -->
+	</thread>
+
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->

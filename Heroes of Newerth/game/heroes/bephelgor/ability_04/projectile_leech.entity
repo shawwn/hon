@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Bephelgor_Ability4_Manaleech"
+
+	lifetime="1000"
+	useexactlifetime="true"
+	gravity="0"
+
+	modelscale=".4"
+	model="/shared/models/invis.mdf"
+	
+	traileffect="effects/manatrail.effect"
+
+	effectscale="1.0"
+	impacteffect=""
+>
+	<onimpact>
+		<playeffect effect="effects/bellyabsorb.effect" source="target_entity" target="target_entity" />
+	</onimpact>
+</projectile>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="model_high.max" file="model.model" type="K2" >
+	<spawnevent cmd="StartEffect effects/healing_well_body.effect"/>
+	
+	<anim name="idle" clip="model.clip" loop="1">
+		<startevent cmd="PlaySoundLoopingLinear /buildings/hellbourne/tarpit/sounds/idle.wav 1200 2500 0.05 0 300 300"/>
+	</anim>
+</model>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Panda_Ability2_Animation"
+
+	
+	
+	icon="icon.tga"
+	ishidden="true"
+	effecttype=""
+	disarmed="true"
+	immobilized="true"
+	silenced="true"
+	perplexed="true"
+	impactinterval="400"
+>
+	<onimpact>
+		<condition test="distance lt 500" source="proxy_entity" target="source_entity">
+			<spawnunit name="Gadget_Panda_Ability2" target="source_entity" pushentity="true" offset="0 -150"  />
+			<unbind target="proxy_entity" />
+			<spawnprojectile name="Projectile_Panda_Ability2" source="proxy_entity" target="stack_entity" bind="proxy_entity" bindstate="State_Panda_Ability2_Bind" proxy="proxy_entity" noresponse="true" />
+		</condition>
+	</onimpact>
+</state>

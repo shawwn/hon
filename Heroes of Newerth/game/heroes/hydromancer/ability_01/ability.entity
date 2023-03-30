@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Hydromancer1"
+	
+	icon="icon.tga"
+	
+	anim="ability_1"
+	casttime="500"
+	castactiontime="100"
+	casteffect="effects/cast.effect"
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+	statuseffecttooltip="State_Hydromancer_Ability1"
+
+	actiontype="target_position"
+	casteffecttype="Magic"
+	targetscheme="enemy_units"
+	
+	manacost="90,100,110,120"
+	cooldowntime="10000"
+	
+	range="1000"
+>
+	<onimpact>
+		<spawnlinearaffector name="Affector_Hydromancer_Ability1" target="source_position" direction="target_position" firsttarget="" />
+		<spawnlinearaffector name="Affector_Hydromancer_Ability1_Line" target="source_position" direction="target_position" firsttarget="" />
+	</onimpact>
+</ability>

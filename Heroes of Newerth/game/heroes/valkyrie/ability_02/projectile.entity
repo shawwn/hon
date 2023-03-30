@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Valkyrie_Ability2"
+
+	speed="857.14"
+	gravity="0"
+
+	modelscale="1.5"
+	model="../projectile/effects/spear.mdf"
+	traileffect=""
+	canturn="0"
+	flying="true"
+	flyheight="40"
+	deatheffect="effects/death.effect"
+	
+	touchradius="80"
+	touchradiusdiradjust="true"
+	maxtouches="1"
+	touchtargetscheme="organic_enemy_units"
+	toucheffecttype=""
+>
+	<onspawn>
+		<spawnunit name="Gadget_Valkyrie_Ability2" target="this_owner_entity" proxy="proxy_entity" pushentity="true" duration="-1" />
+		<setproxy entity="this_entity" target="stack_entity" />
+	</onspawn>
+	<onimpact>
+		<kill target="proxy_entity" source="" />
+		<spawnunit name="Gadget_Valkyrie_Ability2_Reveal_Linger" count="1" target="this_position" />
+	</onimpact>
+	
+	<ontouch>
+		<playeffect effect="effects/impact.effect" target="target_entity" source="target_entity" />
+		
+		<combatevent effecttype="AbilityBasedProjectile">
+			<onimpact>
+				<cantarget effecttype="Magic">
+					<setparam a="0" />
+					<condition test="distance lt 300" source="target_entity" target="proxy_entity">
+						<applystate name="State_Stunned" duration="500"/>
+						<setparam a="0.5" />
+					</condition>
+					<condition test="distance ge 300" source="target_entity" target="proxy_entity">
+						<applystate name="State_Stunned" duration="1000"/>
+						<setparam a="1.0" />
+					</condition>
+					<condition test="distance ge 450" source="target_entity" target="proxy_entity">
+						<applystate name="State_Stunned" duration="1500"/>
+						<setparam a="1.5" />
+					</condition>
+					<condition test="distance ge 600" source="target_entity" target="proxy_entity">
+						<applystate name="State_Stunned" duration="2000"/>
+						<setparam a="2.0" />
+					</condition>
+					<condition test="distance ge 750" source="target_entity" target="proxy_entity">
+						<applystate name="State_Stunned" duration="2500"/>
+						<setparam a="2.5" />
+					</condition>
+					<condition test="distance ge 900" source="target_entity" target="proxy_entity">
+						<applystate name="State_Stunned" duration="3000"/>
+						<setparam a="3.0" />
+					</condition>
+					<condition test="distance ge 1050" source="target_entity" target="proxy_entity">
+						<applystate name="State_Stunned" duration="3500"/>
+						<setparam a="3.5" />
+					</condition>
+					<condition test="distance ge 1200" source="target_entity" target="proxy_entity">
+						<applystate name="State_Stunned" duration="4000"/>
+						<setparam a="4.0" />
+					</condition>
+					<condition test="distance ge 1350" source="target_entity" target="proxy_entity">
+						<applystate name="State_Stunned" duration="4500"/>
+						<setparam a="4.5" />
+					</condition>
+					<condition test="distance ge 1500" source="target_entity" target="proxy_entity">
+						<applystate name="State_Stunned" duration="5000"/>
+						<setparam a="5.0" />
+					</condition>
+					
+					<condition test="param eq 0.5">
+						<popup name="05s" source="target_entity" target="source_entity" />
+						<setparam a="0" />
+					</condition>
+					<condition test="param eq 1.5">
+						<popup name="15s" source="target_entity" target="source_entity" />
+						<setparam a="0" />
+					</condition>
+					<condition test="param eq 2.5">
+						<popup name="25s" source="target_entity" target="source_entity" />
+						<setparam a="0" />
+					</condition>
+					<condition test="param eq 3.5">
+						<popup name="35s" source="target_entity" target="source_entity" />
+						<setparam a="0" />
+					</condition>
+					<condition test="param eq 4.5">
+						<popup name="45s" source="target_entity" target="source_entity" />
+						<setparam a="0" />
+					</condition>
+					<condition test="param eq 0" />
+					<else>			
+						<popup name="javoflight" a="param" source="target_entity" target="source_entity" />
+					</else>
+					<damage effecttype="Magic" amount="90,180,270,360" />
+				</cantarget>
+			</onimpact>
+		</combatevent>
+		<kill target="proxy_entity" source="" />
+		<delete target="this_entity" />	
+		<spawnunit name="Gadget_Valkyrie_Ability2_Reveal_Linger" count="1" target="target_position" />
+	</ontouch>
+</projectile>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+	<definitions>
+
+		<particlesystem name="system0" space="local" scale="1">
+		
+			<model
+				life="70"
+				parentmodel="true"
+				parentskeleton="true"
+				startcolor="7 3 1"
+				endcolor="0 0 0"
+				startscale="1.5"
+				midscale="1.5"
+				endscale="1"
+				midscalepos=".4"
+				material="/shared/effects/materials/shell2.material"
+			/>
+			
+			<trailemitter
+				spawnrate="50"
+				particlelife="250"
+				texpostime="250"
+				texposscale="0.0"
+				texstretchscale=".4"
+				material="/shared/effects/materials/arrow_trail.material"
+			>
+				<particle
+					startcolor=".4 0.175 0.06"
+					midcolor=".4 0.175 0.06"
+					endcolor="0 0 0"
+					startsize="10"
+					midsize="140"
+					endsize="30"
+					midsizepos="0.2"
+			/>
+			</trailemitter>
+			
+			<simpleemitter
+				count="25"
+				spawnrate="500"
+				minparticlelife="750"
+				maxparticlelife="1000"
+				gravity="0"
+				minspeed="50"
+				maxspeed="100"
+				drag="0"
+				acceleration="0"
+				position="0 0 0"
+				material="/shared/effects/materials/dust_smoke_10.material"
+				minangle="0"
+				maxangle="20"
+				direction="0 0 1"
+				offsetsphere="20 20 0"
+			>
+				<particle
+					minangle="0"
+					maxangle="0"
+					minanglespeed="50"
+					maxanglespeed="150"
+					startcolor=".7 .7 .7"
+					endcolor=".25 .25 .25"
+					startsize="100"
+					endsize="50"
+					startalpha=".5"
+					midalpha=".2"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+

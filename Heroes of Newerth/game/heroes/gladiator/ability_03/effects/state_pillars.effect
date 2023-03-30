@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+		
+			<groundsprite
+				expirelife="500"
+				material="/shared/effects/materials/ground_smash_overlay.material"
+				size="80"
+				color="1 1 1"
+				endcolor="0 0 0"
+				startalpha="1"
+				endalpha="0"
+			/>
+			
+			<groundsprite
+				expirelife="500"
+				material="/shared/effects/materials/spartan_helmet.material"
+				size="20"
+				color="1 1 1"
+				endcolor="0 0 0"
+				startalpha="1"
+				endalpha="0"
+			/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

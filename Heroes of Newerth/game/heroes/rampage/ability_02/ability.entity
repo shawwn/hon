@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Rampage2"
+
+	icon="icon.tga"
+	statuseffecttooltip="State_Rampage_Ability2_Slow"
+	
+	anim="ability_2"
+	casttime="0"
+	castactiontime="0"
+	casteffect=""
+	casteffecttype="Physical"
+	
+	frontqueue="true"
+	inheritmovement="true"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_self"
+	targetscheme="organic_enemy_units"
+	
+	manacost="50"
+	cooldowntime="15000"
+	
+	targetradius="300"
+	
+	damagepercharge="1"
+	movespeedmultiplier="0.04,0.06,0.08,0.10"
+>
+	<onframe>
+		<setvar0 a="source_movespeed" b="0.03,0.06,0.09,0.12" op="mult" />
+		<setcharges a="var0" />
+	</onframe>
+	
+	<onimpact>
+		<spawnaffector name="Affector_Rampage_Ability2" target="source_entity" />
+		<applystate name="State_Rampage_Ability2" target="source_entity" duration="4000" />
+	</onimpact>
+</ability>

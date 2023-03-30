@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Fairy_Ability2"
+
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+	
+	manaregen="18.75,37.5,56.25,75"
+	movespeed="25,50,75,100"
+	
+	effecttype="StatusBuff"
+>
+	<onframe />
+	
+	<onattackeddamageevent>
+		<condition test="target_type player_controlled">
+			<expire />
+		</condition>
+	</onattackeddamageevent>
+</state>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Dampeer_Ability1_Fear"
+
+	
+	
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+	displaylevel="true"
+
+	silenced="true"
+	perplexed="true"
+	disarmed="true"
+	unitwalking="true"
+	
+	
+	effecttype="StatusDebuff"
+>
+	<onframe />
+	<onexpired>
+		<order command="stop" force="true" target="target_entity" source="target_entity" />
+	</onexpired>
+</state>

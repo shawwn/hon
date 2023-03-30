@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Legionnaire1"
+
+	
+	
+	statuseffecttooltip="State_Legionnaire_Ability1"
+	icon="icon.tga"
+	
+	anim="ability_1"
+	casttime="800"
+	castactiontime="300"
+	casteffect="effects/cast_start.effect"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="self_position"
+	targetradius="300"
+	targetscheme="nonneutral_organic_enemy_units"
+	casteffecttype=""
+	
+	manacost="80,90,100,110"
+	cooldowntime="14000"
+	
+>
+	<onimpact >
+		<applystate name="State_Legionnaire_Ability1" duration="1500,2000,2500,3000" />
+		<spawnaffector name="Affector_Legionnaire_Ability1" target="source_entity" proxy="source_entity" />
+		<playeffect effect="effects/cast.effect"/>
+	</onimpact>
+	
+</ability>

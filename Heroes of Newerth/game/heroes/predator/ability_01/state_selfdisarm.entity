@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Predator_Ability1_SelfDisarm"
+
+	
+	ishidden="true"
+	
+	icon="icon.tga"
+	disarmed="true"
+
+
+
+>
+	<onexpired>
+		<order command="attack" source="source_entity" target="proxy_entity"  />
+	</onexpired>
+</state>

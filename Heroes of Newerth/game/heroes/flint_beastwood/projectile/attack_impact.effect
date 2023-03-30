@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" deferred="true" useentityeffectscale="1">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="1">
+
+			<sound
+				fadein="0"
+				fadeout="400"
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2500"
+				volume=".5"
+				sample="/shared/sounds/impacts/impact_body_%.wav"
+			/>
+
+			<simpleemitter
+				delay="0"
+				count="1"
+				spawnrate="1000"
+				minparticelife="0"
+				maxparticlelife="1600"
+				gravity="1.0"
+				speed="10.0"
+				position="0 0 0"
+				direction="0 1 0"
+				offsetsphere="12"
+				particledirectionalspace="local"	
+			>
+				<particle
+				>
+					<billboard
+						life="100"
+						position="0 250 100"
+						material="/shared/effects/materials/flash.material"
+						lockup="1"
+						lockright="1"
+						depthbias="-50"
+						pitch="90"
+						param=".012"
+						minsize="100"
+						maxsize="125"
+						directionalspace="local"
+						color=".5 .3 .25"
+					/>
+						
+				</particle>		
+
+			</simpleemitter>
+
+			<simpleemitter	
+				spawnrate="11500"
+				life="1200"				
+				count="25"
+				position="0 250 100"
+				minparticlelife="500"			
+				maxparticlelife="1000"	
+				depthbias="-10"			
+				material="/shared/effects/materials/smoke_particle.material"			
+				offsetsphere="50"
+				minspeed="0"
+				maxspeed="320"
+				minangle="0"
+				maxangle="12"
+				direction="0 0 1"
+				gravity="5"
+				drag=".005"
+			>
+				<particle 
+					minangle="-25"
+					maxangle="25"
+					minanglespeed="-100"
+					maxanglespeed="100"
+					color=".45 .42 .35"
+					startsize="60"
+					endsize="200"
+					startalpha="0"
+					midalpha=".25"
+					endalpha="0"
+				/>
+				<particle 
+					minangle="-25"
+					maxangle="25"
+					minanglespeed="-100"
+					maxanglespeed="100"
+					color=".45"
+					startsize="60"
+					endsize="200"
+					startalpha="0"
+					midalpha=".25"
+					endalpha="0"
+				/>
+				<particle 
+					minangle="-25"
+					maxangle="25"
+					minanglespeed="-50"
+					maxanglespeed="50"
+					color=".2"
+					startsize="150"
+					midsize="150"
+					endsize="420"
+					startalpha="0"
+					midalpha=".25"
+					endalpha="0"
+				/>
+			</simpleemitter>
+			
+			<groundsprite 
+				scale="3.5"
+				life="75"
+				bone="_bone_weapon3"
+				startcolor=".5 .15 0"
+				endcolor=" 0 0 0"
+				material="/shared/effects/materials/whitedot_ground.material"
+			/>
+		
+	
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+</effect>
+
+

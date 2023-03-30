@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="footstep_l_small">
+	<definitions>
+		<particlesystem name="system0" space="world">
+			
+			<meshemitter
+				mesh="_invis_emitter"
+				spawnrate="60"
+				
+				minparticlelife="5000"
+				maxparticlelife="10500"			
+				gravity="0"
+				minspeed="4"
+				maxspeed="8"
+				drag="0.015"
+				material="/shared/effects/materials/neb_orange_add.material"
+				angle="5"
+				timenudge="7400"
+			>
+				<particle
+					minagle="-360" 
+					maxangle="360"
+					minanglespeed="-10"
+					maxanglespeed="20"
+					startcolor="0 0 0"
+					midcolor=".3 .17 .0"
+					midcolorpos="0.8"
+					endcolor="0 0 0"
+					
+					startsize="22"
+			
+					minendsize="40"
+					maxendsize="60"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos="0.3"
+					startanchor="1.0"
+					endanchor="1.0"
+				/>
+
+			</meshemitter>
+			
+			
+			
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+		<waitfordeath instance="instance0"/>
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->

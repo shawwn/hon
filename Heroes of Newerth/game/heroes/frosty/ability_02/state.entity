@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Frosty_Ability2"
+	
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+	revealed="true"
+	immobilized="true"
+	disarmed="true"
+	frozen="true"
+	effecttype="StatusDebuff"
+>
+	<onframe>
+		<damage effecttype="Magic DOT" amount="70" b="frametime" op="mult"/>
+	</onframe>
+</state>

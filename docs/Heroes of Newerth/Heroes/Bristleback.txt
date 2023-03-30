@@ -1,0 +1,22 @@
+Ability 1:
+----------
+Target an enemy unit, adds a slow and reduces target's armor. Whenever u cast this on the enemy, if they still have the buff, it resets the duration and increases the effect.
+
+
+Ability 2:
+----------
+Deals physical damage in an area around you. A unit hit by this will take extra damage each other time it gets hit by this for a limited amount of time.
+
+
+Ability 3:
+----------
+This reduces damage you take from your rear. Whenever you take damage on your rear, it counts it until a certain amount and casts an instances of ability 2.
+
+
+Ultimate:
+----------
+Whenever you cast a spell, you gain bonus movement and attack speed. You start off with a base bonus and then an additional bonus for each subsequent cast.
+
+
+
+Strength/Melee

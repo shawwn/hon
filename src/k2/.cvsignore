@@ -1,0 +1,18 @@
+Debug
+debug
+Release
+release
+Unicode\ -\ Debug
+Exporter\ -\ Debug
+bin
+Exporter\ -\ Release
+*.i
+*.user
+Debug\ Lite
+debug\ lite
+*.gch
+debug-x86_64
+debug-i686
+release-x86_64
+release-i686
+VTune

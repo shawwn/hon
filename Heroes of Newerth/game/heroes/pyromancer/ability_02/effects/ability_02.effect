@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="ability_02">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1.5">
+
+			<sound
+				delay="500"
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume="1.0" 
+				sample="/heroes/pyromancer/ability_02/sounds/ability_02.wav"
+			/>	
+
+			<groundsprite
+				delay="500"
+				life="4000"
+				loop="false"			
+				material="/shared/effects/materials/coals_add.material"
+				size="110"
+				maxyaw="360"
+				startcolor="2 .5 0"
+				endcolor="0 0 0"
+			/>
+		
+			<groundsprite
+				delay="500"
+				life="12000"
+				material="/shared/effects/materials/ground_smash_overlay.material"
+				size="130"
+				color="1.0 1.0 1.0"
+				startalpha="0.75"
+				midalpha="0.75"
+				midalphapos="0.5"
+				endalpha="0"
+				maxyaw="360"
+			/>
+		
+			<light
+				delay="500"
+				life="1150"			
+				startcolor="6 2 0"			
+				endcolor="0 0 0"
+				midcolorpos=".2"
+				falloffstart="200"
+				falloffend="300"
+				position="0 0 50"	
+			/>
+
+			<simpleemitter
+				delay="500"
+				minparticlelife="500"
+				maxparticlelife="1400"
+				spawnrate="555"
+				count="8"
+				life="300"
+				gravity="5"
+				speed="250"
+				material="/shared/effects/materials/dust.material"
+				offsetsphere="100"
+				angle="10"
+				position="0 0 30"
+				direction="0 0 1"
+				drag="0.15"
+				depthbias="-60"
+			>
+				<particle 
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-50"
+					maxanglespeed="50"
+					color=".44 .42 .4"
+					maxstartsize="160"
+					minstartsize="120"
+					endsize="300"
+					startalpha=".5"
+					endalpha="0"
+				/>
+				<particle 
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-120"
+					maxanglespeed="120"
+					color=".74 .72 .7"
+					startsize="130"
+					endsize="300"
+					startalpha=".9"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				delay="500"
+				minparticlelife="800"
+				maxparticlelife="1400"
+				spawnrate="555"
+				count="6"
+				life="500"
+				gravity="10"
+				speed="150"
+				material="/shared/effects/materials/dust_explosion.material"
+				offsetsphere="155"
+				angle="90"
+				position="0 0 40"
+				direction="0 0 1"
+				drag="0.1"
+				depthbias="-30"
+			>
+				<particle 
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-100"
+					maxanglespeed="100"
+					color=".43 .4 .4"
+					startsize="245"
+					endsize="460"
+					startalpha=".3"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				delay="500"
+				minparticlelife="500"
+				maxparticlelife="1200"
+				spawnrate="555"
+				count="6"
+				life="500"
+				speed="25"
+				material="/shared/effects/materials/dust_puff.material"
+				offsetsphere="145"
+				position="0 0 30"
+				direction="0 0 1"
+				depthbias="-20"
+			>
+				<particle 
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-100"
+					maxanglespeed="100"
+					color=".5"
+					startsize="115"
+					endsize="360"
+					startalpha=".3"
+					endalpha="0"
+				/>
+				<particle 
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-30"
+					maxanglespeed="30"
+					color=".3"
+					startsize="175"
+					endsize="320"
+					startalpha=".8"
+					endalpha="0"
+				/>
+			</simpleemitter>		
+		
+			<simpleemitter
+				delay="500"
+				offsetsphere="145"
+				spawnrate="2222"			
+				count="25"
+				particlelife="1500"			
+				drag="0.1"					
+				acceleration="0"
+				speed="140"
+				position="0 0 20"
+				angle="45"					
+				material="/shared/effects/materials/phantom_smoke_03.material"	
+			>
+				<particle
+					minangle="-60"
+					maxangle="60"
+					startcolor="1 .5 0"
+					endcolor="0"
+					startsize="30"
+					endsize="300"
+					minanglespeed="-165"
+					maxanglespeed="165"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				delay="500"
+				offsetsphere="65"
+				spawnrate="45"			
+				particlelife="1300"			
+				life="500"					
+				speed="140"
+				angle="25"					
+				material="/shared/effects/materials/flame.material"	
+			>
+				<particle
+					minangle="-360"
+					maxangle="360"
+					startcolor=".5 .3 .1"
+					endcolor="0"
+					startsize="20"
+					endsize="200"
+					minanglespeed="-165"
+					maxanglespeed="165"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					turn="1"
+				/>
+			</simpleemitter>
+
+			<billboard
+				delay="500"
+				life="300"
+				startcolor="1.0 .4 0"
+				endcolor="0 0 0"
+				startsize="200"
+				endsize="500"
+				position="0 0 20"
+				material="/shared/effects/materials/stomp_02.material"
+				lockup="true"
+				pitch="90"
+			/>
+
+			<simpleemitter
+				life="100"
+				delay="600"
+				spawnrate="500"
+				count="166"
+				particlelife="1600"			
+				gravity="24"
+				minspeed="500"
+				maxspeed="1500"
+				drag=".01"
+				material="/shared/effects/materials/fire_11.material"
+				offsetsphere="55 55 33"
+				minangle="-10"
+				maxangle="20"
+				directionalspace="global"
+			>
+				<particle 
+					color="1 .5 0"
+					startsize="30"
+					midsize="15"
+					endsize="6"
+					turn="true"
+				/>
+				<particle 
+					color="1 .4 0"
+					startsize="24"
+					midsize="12"
+					endsize="1"
+					turn="true"
+				/>
+				<particle 
+					color="1 .3 0"
+					startsize="1"
+					midsize="12"
+					endsize=".1"
+					turn="true"
+				/>
+			</simpleemitter>			
+						
+			<model
+				delay="500"
+				life="2000"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				name="dragon" 
+				model="dragon.mdf"
+				anim="idle"
+				yawspeed="0"
+				scale="2.8"
+				startcolor=".5"
+				midcolor=".5" 
+				endcolor="0"
+				directionalspace="global"
+			/>
+
+			<billboard
+				delay="750"
+				life="400"
+				startcolor="1 .5 0"
+				endcolor="0"
+				midalphapos="0.75"
+				size="400"
+				depthbias="-70"
+				position="0 0 80"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+			
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<camerashake2 scale="11.0" radius="1200" duration="400" frequency="22" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

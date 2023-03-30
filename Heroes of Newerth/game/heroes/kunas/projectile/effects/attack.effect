@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" useentityeffectscale="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale=".8">
+
+			<billboard
+				life="400"
+				position="0 135 95"
+				material="/shared/effects/materials/starlight.material"
+				startcolor=".2 .5 .1"
+				endcolor="0"
+				size="100"
+				depthbias="-30"
+			/>
+			
+			<billboard
+				life="250"
+				position="0 135 95"
+				material="/shared/effects/materials/wisp_06.material"
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="0"
+				size="85"
+				depthbias="-30"
+			/>
+			
+			<billboard
+				life="250"
+				position="0 135 95"
+				material="/shared/effects/materials/blink.material"
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="0"
+				size="65"
+				rollspeed="360"
+				depthbias="-30"
+			/>
+			
+			<billboard
+				life="400"
+				position="0 135 95"
+				material="/shared/effects/materials/whitedot.material"
+				startcolor="0 0 1"
+				endcolor="0"
+				size="80"
+				depthbias="-30"
+			/>
+
+			<simpleemitter
+				delay="-150"
+				spawnrate="35"
+				position="0 135 95"
+				life="200"
+				particlelife="300"			
+				offsetsphere="20"
+          			material="/shared/effects/materials/femme_lightning_01.material"
+         	>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="1 1 1"
+					endcolor=".2 .6 1"
+					startsize="5"
+					endsize="30"
+					flare="1"
+					anchor="1"
+				/>
+        	</simpleemitter>
+			
+			<simpleemitter
+				position="0 135 95"
+				spawnrate="150"
+				count="20"	
+				particlelife="500"			
+				gravity="5"
+				speed="100"
+				drag="0"
+				material="/shared/effects/materials/spark_10.material"
+				offsetsphere="30 30 30"
+				minangle="175"
+				maxangle="175"
+				direction="0 0 0"
+				offsetdirection="0 0 0"
+				offsetradial="0 0 0"
+			>
+
+				<particle 
+					minangle="0"
+					maxangle="0"
+					minanglespeed="0"
+					maxanglespeed="0"
+					startcolor="1 1 1"
+					midcolor="1 1 1"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+
+					startframe="0"
+					endframe="1"
+					startsize="1"
+					midsize="15"
+					endsize="15"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".5"
+
+			
+
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->

@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="good_range_rack_fx_01" pausable="true">
+	<definitions>
+		<particlesystem name="system0" space="entity">
+
+
+
+
+
+<!--		<simpleemitter
+		
+			spawnrate="12"
+			minparticlelife="600"
+			maxparticlelife="1200"	
+					
+			gravity="-2"
+			speed="10"
+			drag="0"
+			acceleration="0"
+			position="0 0 0"
+
+			material="/shared/effects/materials/star_02.material"
+			offsetsphere="0 0 0"
+			minangle="0"
+			maxangle="0"
+			direction="0 0 1"
+			offsetdirection="0 0 0"
+			offsetradial="45 45 0"
+		>
+
+
+			<particle 
+				minangle="0"
+				maxangle="360"
+				minanglespeed="50"
+				maxanglespeed="150"
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor=".1 .1 .1"
+				midcolorpos=".4"
+
+				startframe="0"
+				endframe="1"
+				startsize="1"
+				midsize="12"
+				endsize=".1"
+				startalpha="0"
+				midalpha=".3"
+				endalpha="0"
+				midalphapos=".5"
+				startstickiness="0"
+				endstickiness="0"
+
+
+			/>
+		</simpleemitter>
+-->
+
+
+
+
+<!--		<simpleemitter
+		
+			spawnrate="12"
+			minparticlelife="600"
+			maxparticlelife="1200"	
+					
+			gravity="-2"
+			speed="10"
+			drag="0"
+			acceleration="0"
+			position="0 0 0"
+
+			material="/shared/effects/materials/wisp_03.material"
+			offsetsphere="0 0 0"
+			minangle="0"
+			maxangle="0"
+			direction="0 0 1"
+			offsetdirection="0 0 0"
+			offsetradial="45 45 0"
+		>
+
+
+			<particle 
+				minangle="0"
+				maxangle="360"
+				minanglespeed="50"
+				maxanglespeed="150"
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor=".1 .1 .1"
+				midcolorpos=".4"
+
+				startframe="0"
+				endframe="1"
+				startsize="1"
+				midsize="15"
+				endsize=".1"
+				startalpha="0"
+				midalpha=".3"
+				endalpha="0"
+				midalphapos=".5"
+				startstickiness="0"
+				endstickiness="0"
+
+
+			/>
+		</simpleemitter>
+
+-->
+
+
+
+
+
+		<light
+			position="0 0 75"
+			color="3 4 3"
+			
+			falloffstart="15"
+			falloffend="80"
+
+			
+			
+			/>
+
+
+
+<!--		<simpleemitter
+
+			life="1000"
+			loop="true"
+
+			particlelife="2000"
+			spawnrate=".5"	
+			gravity="0"
+			speed="0"
+			drag="0"
+			acceleration="0"
+			position="0 0 80"
+
+
+			material="/shared/effects/materials/tower_wisp_01.material"
+			offsetsphere="0 0 0"
+			minangle="0"
+			maxangle="0"
+			direction="0 0 0"
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="1 1 1"
+				midcolorpos=".5"
+
+				maxanglespeed="0"
+				startframe="0"
+				endframe="0"
+				startsize="65"
+				midsize="55"
+				endsize="65"
+				midsizepos=".5"
+				startalpha="0"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".5"
+				startstickiness="1"
+				endstickiness="1"
+			/>
+		</simpleemitter>
+-->
+
+
+		<simpleemitter
+		
+			spawnrate="20"
+			
+			particlelife="800"			
+			gravity="0"
+			speed="360"
+			drag="0"
+			acceleration="0"
+			position="0 0 70"
+
+			material="/shared/effects/materials/star_11.material"
+			offsetsphere="25 25 25"
+			minangle="0"
+			maxangle="0"
+			direction="0 0 0"
+			offsetdirection="0 0 0"
+			offsetradial="0 0 0"
+		>
+
+
+			<particle 
+				minangle="0"
+				maxangle="360"
+				minanglespeed="50"
+				maxanglespeed="150"
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor=".1 .1 .1"
+				midcolorpos=".4"
+
+				startframe="0"
+				endframe="1"
+				startsize="1"
+				midsize="25"
+				endsize=".1"
+				startalpha="0"
+				midalpha=".3"
+				endalpha="0"
+				midalphapos=".5"
+				startstickiness="0"
+				endstickiness="1"
+
+
+			/>
+		</simpleemitter>
+
+
+
+		<simpleemitter
+			life="2000"
+			count="1"
+			particlelife="-1"
+				
+			gravity="0"
+			speed="0"
+			drag="0"
+			acceleration="0"
+			position="0 0 70"
+
+
+			material="/shared/effects/materials/tower_wisp_01.material"
+			offsetsphere="0 0 0"
+			minangle="0"
+			maxangle="0"
+			direction="0 0 0"
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+
+				startcolor="0 .3 0"
+				midcolor="0 .3 0"
+				endcolor="0 .3 0"
+				midcolorpos=".5"
+
+				maxanglespeed="0"
+				startframe="0"
+				endframe="0"
+				startsize="40"
+				midsize="40"
+				endsize="40"
+				midsizepos=".5"
+				startalpha="1"
+				midalpha="1"
+				endalpha="1"
+				midalphapos=".5"
+				startstickiness="1"
+				endstickiness="1"
+			/>
+		</simpleemitter>
+
+
+		<simpleemitter
+		
+			spawnrate="5"
+			
+			particlelife="700"			
+			gravity="-3"
+			speed="2"
+			drag="0"
+			acceleration="10"
+			position="0 0 65"
+
+
+			material="/shared/effects/materials/star_11.material"
+			offsetsphere="25 25 25"
+			minangle="0"
+			maxangle="180"
+			direction="1 0 0"
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+				maxanglespeed="0"
+
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="1 1 1"
+				midcolorpos=".1"
+
+				
+				startframe="0"
+				endframe="0"
+				startsize="2"
+				midsize="18"
+				endsize=".1"
+				midsizepos=".5"
+				startalpha="0"
+				midalpha=".2"
+				endalpha="0"
+				midalphapos=".7"
+				startstickiness="0"
+				endstickiness="0"
+				weight=".25"
+			/>
+		</simpleemitter>
+
+		
+
+
+	<simpleemitter
+			
+			spawnrate="10"
+			
+			particlelife="1500"			
+			gravity="0"
+			speed="2"
+			drag="0"
+			acceleration="10"
+			position="0 0 70"
+
+
+			material="/shared/effects/materials/tower_wisp_01.material"
+			offsetsphere="15 15 15"
+			minangle="0"
+			maxangle="0"
+			direction="0 0 0"
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="360"
+				minanglespeed="50"
+
+				startcolor="0 1 0"
+				midcolor="1 1 1"
+				endcolor="1 1 1"
+				midcolorpos=".2"
+
+				maxanglespeed="100"
+				startframe="0"
+				endframe="0"
+				startsize="1"
+				midsize="12"
+				endsize=".1"
+				midsizepos=".5"
+				startalpha="0"
+				midalpha=".1"
+				endalpha="0"
+				midalphapos=".7"
+				startstickiness="0"
+				endstickiness="0"
+				weight=".25"
+			/>
+		</simpleemitter>
+
+
+
+
+		<simpleemitter
+		
+			spawnrate="10"
+			
+			particlelife="700"			
+			gravity="-.3"
+			speed="20"
+			drag="0"
+			acceleration="10"
+			position="0 0 70"
+
+
+			material="/shared/effects/materials/star_11.material"
+			offsetsphere="10 10 10"
+			minangle="0"
+			maxangle="180"
+			direction="1 0 0"
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="360"
+				minanglespeed="50"
+
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="1 1 1"
+				midcolorpos=".1"
+
+				maxanglespeed="100"
+				startframe="0"
+				endframe="0"
+				startsize="1"
+				midsize="12"
+				endsize=".1"
+				midsizepos=".4"
+				startalpha="0"
+				midalpha=".2"
+				endalpha="0"
+				midalphapos=".7"
+				startstickiness="0"
+				endstickiness="0"
+				weight=".25"
+			/>
+		</simpleemitter>
+
+
+
+
+
+
+
+
+		<simpleemitter
+			
+			count="1"
+			particlelife="-1"
+				
+			gravity="0"
+			speed="0"
+			drag="0"
+			acceleration="0"
+			position="22 28 40"
+
+
+			material="/shared/effects/materials/tower_wisp_01.material"
+			offsetsphere="0 0 0"
+			minangle="0"
+			maxangle="0"
+			direction="0 0 0"
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="1 1 1"
+				midcolorpos=".5"
+
+				maxanglespeed="0"
+				startframe="0"
+				endframe="0"
+				startsize="35"
+				midsize="35"
+				endsize="35"
+				midsizepos=".5"
+				startalpha="1"
+				midalpha="1"
+				endalpha="1"
+				midalphapos=".5"
+				startstickiness="1"
+				endstickiness="1"
+				
+			/>
+		</simpleemitter>
+
+
+		<simpleemitter
+			count="1"
+			particlelife="-1"
+				
+			gravity="0"
+			speed="0"
+			drag="0"
+			acceleration="0"
+			position="-22 28 40"
+
+
+			material="/shared/effects/materials/tower_wisp_01.material"
+			offsetsphere="0 0 0"
+			minangle="0"
+			maxangle="0"
+			direction="0 0 0"
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="1 1 1"
+				midcolorpos=".5"
+
+				maxanglespeed="0"
+				startframe="0"
+				endframe="0"
+				startsize="35"
+				midsize="35"
+				endsize="35"
+				midsizepos=".5"
+				startalpha="1"
+				midalpha="1"
+				endalpha="1"
+				midalphapos=".5"
+				startstickiness="1"
+				endstickiness="1"
+				
+
+				
+
+				
+			/>
+		</simpleemitter>
+        
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

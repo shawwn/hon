@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect>
+
+	<definitions>
+		
+		<particlesystem name="system0" space="world">
+
+				<light
+					position="0 0 50"
+					life="1200"
+					startcolor="3"
+					midcolor="2 5 1"
+					midcolorpos=".1"
+					endcolor="0"
+					falloffstart="0"
+					falloffend="500"
+				/>
+
+				<simpleemitter	
+					minspeed="300"
+					maxspeed="500"
+					life="1400"				
+					spawnrate="1400"
+					count="75"
+					maxparticlelife="2600"				
+					material="/shared/effects/materials/dust.material"			
+					position="0 0 5"
+					minangle="-90"
+					maxangle="-90"
+					offsetsphere="4"
+					drag="0.004"
+				>
+					<particle 
+						minangle="0"
+						maxangle="360"
+						minanglespeed="-80"
+						maxanglespeed="80"
+						color=".2 .5 .1"
+						size="20"
+						startscale="5"
+						endscale="26"
+						lockup="1"
+						lockright="1"
+						pitch="90"
+						startalpha="1"
+						endalpha="0"
+					/>
+					<particle 
+						minangle="0"
+						maxangle="360"
+						minanglespeed="-50"
+						maxanglespeed="50"
+						color=".15 .74 .2"
+						size="20"
+						startscale="5"
+						endscale="26"
+						lockup="1"
+						lockright="1"
+						pitch="90"
+						startalpha="1"
+						endalpha="0"
+					/>
+				</simpleemitter>
+
+				<simpleemitter	
+					life="1000"				
+					spawnrate="2000"
+					count="13"
+					minparticlelife="800"			
+					maxparticlelife="1550"				
+					material="/shared/effects/materials/smash_add.material"			
+					depthbias="-50"
+					directionalspace="local"
+					offsetsphere="5"
+				>
+					<particle 
+						minangle="0"
+						maxangle="360"
+						startcolor="0"
+						minanglespeed="-20"
+						maxanglespeed="20"
+						midcolor="0.1 .2 .02"
+						endcolor="0"
+						minsize="130"
+						maxsize="220"
+						startscale="1"
+						endscale="5"
+						lockup="1"
+						lockright="1"
+						pitch="90"
+					/>
+				</simpleemitter>
+
+				<simpleemitter	
+					speed="150"
+					life="1500"				
+					spawnrate="1400"
+					count="3"
+					particlelife="1450"				
+					material="/shared/effects/materials/smokering.material"			
+					depthbias="-50"
+					directionalspace="local"
+					offsetsphere="15"
+					minangle="-90"
+					maxangle="-90"
+				>
+					<particle 
+						minangle="0"
+						maxangle="360"
+						minanglespeed="-70"
+						maxanglespeed="70"
+						startcolor="0"
+						midcolor=".2 .3 .1"
+						endcolor="0"
+						size="50"
+						startscale="5"
+						endscale="16"
+						lockup="1"
+						lockright="1"
+						pitch="90"
+						startalpha="1"
+						endalpha="0"
+					/>
+				</simpleemitter>
+
+				<billboard
+					life="800"
+					startcolor=".3 .4 .2"
+					midcolor=".1 .4"
+					midcolorpos=".2"
+					endcolor="0"
+					endsize="1350"
+					depthbias="-100"
+					lockup="1"
+					lockright="1"
+					pitch="90"
+					maxroll="360"
+					material="/shared/effects/materials/pulse.material"
+				/>
+
+				<billboard
+					life="400"
+					startcolor=".1"
+					midcolorpos=".3"
+					endcolor="0"
+					endsize="1250"
+					depthbias="-100"
+					lockup="1"
+					lockright="1"
+					pitch="90"
+					material="/shared/effects/materials/corona_06.material"
+				/>
+
+				<billboard
+					life="1000"
+					startcolor=".5 .76 .5"
+					midcolorpos=".1"
+					endcolor="0"
+					endsize="820"
+					depthbias="-100"
+					lockup="1"
+					lockright="1"
+					pitch="90"
+					material="/shared/effects/materials/corona_07.material"
+				/>
+
+				<billboard
+					life="1200"
+					midalpha="1"			
+					startalpha="0"
+					endalpha="0"
+					startsize="200"
+					endsize="1250"
+					depthbias="-100"
+					startparam="0.1"
+					endparam="0"
+					lockup="1"
+					lockright="1"
+					pitch="90"
+					material="/shared/effects/materials/refract_ring.material"
+				/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />		
+	</thread>
+
+</effect>

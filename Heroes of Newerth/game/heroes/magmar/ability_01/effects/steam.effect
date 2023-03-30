@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect>
+
+	<definitions>
+		<modifier
+			name="modifier0"
+			life="1000"			
+			startcolor="10 3 1"
+			midcolor="10 2 1"			
+			endcolor="1.0 1.0 1.0"
+		/>	
+		
+		
+		<particlesystem name="system0" space="world" useentityeffectscale="true">
+
+
+	
+		<simpleemitter
+			delay="500"
+			spawnrate="230"
+			count="50"
+			timenudge="300"
+			
+			minparticlelife="1500"
+			maxparticlelife="1500"			
+			speed="23"
+			gravity="-2"
+			material="/shared/effects/materials/smoke_18.material"
+			offsetsphere="34 34 83"
+			position="0 0 30"
+
+		
+			inheritvelocity=".25"
+		>
+			<particle 
+				minanglespeed="-150"
+				maxanglespeed="-150"
+				
+			
+				color=".7 .67 .5"
+				midcolorpos=".2"
+				
+				midsize="50"
+				endsize="120"
+				startalpha="0"
+				midalpha=".2"
+				endalpha="0"
+				midalphapos=".5"
+			/>
+		</simpleemitter>	
+	
+
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnmodifier instance="instance1" modifier="modifier0"/> 
+		<spawnparticlesystem instance="instance0" particlesystem="system0"/> 
+			<waitfordeath instance="instance0"/>
+		<!-- <die /> -->
+   	</thread>
+
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->

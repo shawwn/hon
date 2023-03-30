@@ -1,0 +1,100 @@
+// (C)2008 S2 Games
+// mesh_unlit.psh
+// 
+// ...
+//=============================================================================
+
+//=============================================================================
+// Uniform variables
+//=============================================================================
+uniform float	fFogStart;
+uniform float	fFogEnd;
+uniform float	fFogScale;
+uniform vec3	vFogColor;
+uniform float	fFogDensity;
+uniform vec3	vFog;
+
+//=============================================================================
+// Varying variables
+//=============================================================================
+varying vec4	v_vColor;
+
+#if (LIGHTING_QUALITY == 0 || FALLOFF_QUALITY == 0)
+varying vec3	v_vPositionView;
+#endif
+
+#if ((FOG_QUALITY == 1 && FOG_TYPE != 0) || (FALLOFF_QUALITY == 1 && (FOG_TYPE != 0)) || FOG_OF_WAR == 1)
+varying vec4	v_vData0;
+#endif
+
+//=============================================================================
+// Samplers
+//=============================================================================
+uniform sampler2D	diffuse;
+
+#if (FOG_OF_WAR == 1)
+uniform sampler2D	fogofwar;
+#endif
+
+//=============================================================================
+// Pixel Shader
+//=============================================================================
+void main()
+{
+	vec4 cDiffuseColor = texture2D(diffuse, gl_TexCoord[0].xy) * v_vColor;
+	
+#if (LIGHTING_QUALITY == 0)
+	vec3 vCamDirection = -normalize(v_vPositionView);
+#endif
+
+#if (FOG_TYPE != 0)
+	#if (FALLOFF_QUALITY == 1)
+		float fCamDistance = v_vData0.z;
+	#else
+		float fCamDistance = length(v_vPositionView);
+	#endif
+#endif
+
+	//
+	// Fog
+	//
+
+#if (FOG_TYPE != 0) 
+// FOG_NONE
+	#if (FOG_QUALITY == 1)
+	float fFog = v_vData0.w;
+	#else
+		#if (FOG_TYPE == 0) 
+		// FOG_NONE
+	float fFog = 0.0;
+		#elif (FOG_TYPE == 1) 
+		// FOG_LINEAR
+	float fFog = clamp(fCamDistance * vFog.x + vFog.y, 0.0, 1.0) * vFog.z;
+		#elif (FOG_TYPE == 2) 
+		// FOG_EXP2
+	float fFog = 1.0 - exp2(-fCamDistance * fFogDensity);
+		#elif (FOG_TYPE == 3) 
+		// FOG_EXP
+	float fFog = 1.0 - exp(-fCamDistance * fFogDensity);
+		#elif (FOG_TYPE == 4) 
+		// FOG_HERMITE
+	float fFog = smoothstep(fFogStart, fFogEnd, fCamDistance) * fFogScale;
+		#endif
+	#endif
+#else
+	float fFog = 0.0;
+#endif
+	
+	//
+	// Final
+	//
+
+	vec3 vFinalColor = cDiffuseColor.rgb;
+	
+#if (FOG_OF_WAR == 1)
+	vFinalColor *= texture2D(fogofwar, v_vData0.xy).a;
+#endif
+
+	gl_FragColor.rgb = mix(vFinalColor, vFogColor, fFog);
+	gl_FragColor.a = cDiffuseColor.a;
+}

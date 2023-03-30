@@ -1,0 +1,19 @@
+IGameEntity
+ CGameInfo
+ CTeamInfo
+ CPlayer
+ IVisualEntity
+  IUnitEntity
+   CHeroEntity "Hero"
+   CGadgetEntity "Gadget"
+   CBuildingEntity "Building"
+   CCreepEntity "Creep"
+   CVarmintEntity "Varmint"
+  CPropEntity "Prop"
+  CTreeEntity "Tree"
+  CProjectileEntity "Projectile"
+ ISlaveEntity
+  IEntityTool
+   IEntityItem
+   IEntityAbility
+  IEntityState

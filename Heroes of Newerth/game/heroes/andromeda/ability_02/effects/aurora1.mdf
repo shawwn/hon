@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="" file="aurora1.model" type="K2" >
+	<anim name="idle" clip="aurora1.clip" loop="1" fps="50"/>
+	<anim name="idle2" clip="aurora1.clip" loop="1" fps="86"/>
+</model>

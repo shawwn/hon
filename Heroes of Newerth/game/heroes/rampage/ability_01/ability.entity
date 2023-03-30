@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Rampage1"
+
+	icon="icon.tga"
+	statuseffecttooltip="State_Rampage_Ability1_Self"
+	
+	anim="ability_1"
+	casttime="1000"
+	castactiontime="500"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_entity"
+	targetscheme="enemy_units"
+	casteffecttype="Physical"
+	range="9001"
+	
+	manacost="100"
+	cooldowntime="30000"
+	novoiceresponse="true"
+>
+	<onpreimpact>
+		<applystate name="State_Rampage_Ability1_Sight" target="target_entity" duration="100" />
+	</onpreimpact>
+	
+	<onimpact>
+		<order command="attack" source="source_entity" target="target_entity" queue="front" />
+		<order command="event" source="source_entity" target="target_entity" queue="front" restrict="true" ordername="Order_Rampage_Ability1" />
+	</onimpact>
+</ability>

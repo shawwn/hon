@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1" useentityeffectscale="1">
+	<definitions>
+
+		<particlesystem name="bridge" space="world" scale=".15">
+
+
+			<trackeremitter
+				count="1"
+				timenudge="1200"
+				spawnrate="1"
+				bone="_bone_centerofchest"
+				owner="source"
+				targetbone="Bip01 L Hand"
+				targetowner="target"
+				tracktype="lerp"
+				trackspeed="2"
+				drag="0"
+				particlelife="250"
+				gravity="100"
+				speed="3000"
+			>
+				<particle>
+
+					<simpleemitter
+						bone="Bip01 L Hand"
+						count="10"
+						depthbias="-55"
+						spawnrate="250"
+						minparticlelife="250"
+						maxparticlelife="750"
+						offsetsphere="250 250 250"
+						angle="10"
+						speed="50"
+						direction="0 1 0"
+						material="/shared/effects/materials/whitewater_02.material"
+						inheritvelocity=".5"
+					>
+						<particle
+							startcolor="0 0 0"
+							midcolor=".5 .5 .5"
+							endcolor="0 0 0"
+							startsize="250"
+							endsize="100"
+							maxangle="360"
+							minendscale="2"
+							maxendscale="4"
+						/>
+					</simpleemitter>
+					
+					<simpleemitter
+						bone="Bip01 L Hand"
+						count="10"
+						depthbias="-55"
+						spawnrate="250"
+						minparticlelife="250"
+						maxparticlelife="750"
+						offsetsphere="250 250 250"
+						angle="10"
+						speed="50"
+						direction="0 1 0"
+						material="/shared/effects/materials/wave.material"
+						inheritvelocity=".5"
+					>
+						<particle
+							startcolor="0 0 0"
+							midcolor=".25 .25 .25"
+							endcolor="0 0 0"
+							startsize="250"
+							endsize="100"
+							maxangle="360"
+							minendscale="2"
+							maxendscale="4"
+						/>
+					</simpleemitter>
+				
+					<simpleemitter
+						bone="Bip01 L Hand"
+						count="150"
+						depthbias="-55"
+						spawnrate="1000"
+						minparticlelife="500"
+						maxparticlelife="1000"
+						offsetsphere="200 200 200"
+						angle="10"
+						speed="30"
+						material="/shared/effects/materials/mysticenergy.material"
+						inheritvelocity=".1"
+					>
+						<particle
+							startcolor="0 .3 .5"
+							endcolor="0"
+							startsize="50"
+							endsize="35"
+							maxangle="360"
+							minendscale="2"
+							maxendscale="4"
+						/>
+					</simpleemitter>
+
+
+				</particle>
+			</trackeremitter>
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="bridge" />
+		  <spawnmodifier instance="instance1" modifier="modifier0"/> 
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />	
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

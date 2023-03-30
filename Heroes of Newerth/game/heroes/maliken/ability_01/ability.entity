@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Maliken1"
+	
+	icon="icon.tga"
+	
+	anim="ability_1"
+	casttime="800"
+	castactiontime="400"
+	statuseffecttooltip="State_Maliken_Ability1_Slow"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_position"
+	casteffecttype="Magic"
+	targetscheme="enemy_units"
+	targetradius="225"
+	
+	manacost="110,120,130,140"
+	cooldowntime="13000"
+	
+	range="700,850,1000,1200"
+	forcerange="700,850,1000,1200"
+	allowoutofrangecast="false"
+	allowoutofboundscast="true"
+	novoiceresponse="true"
+>
+	<onimpact>
+		<hasmodifier name="swordflame1">
+			<damage target="source_entity" effecttype="" amount="25" nonlethal="true" />
+		</hasmodifier>
+		<hasmodifier name="swordflame2">
+			<damage target="source_entity" effecttype="" amount="30" nonlethal="true" />
+		</hasmodifier>
+		<hasmodifier name="swordflame3">
+			<damage target="source_entity" effecttype="" amount="35" nonlethal="true" />
+		</hasmodifier>
+		<hasmodifier name="swordflame4">
+			<damage target="source_entity" effecttype="" amount="40" nonlethal="true" />
+		</hasmodifier>
+		<spawnunit name="Gadget_Maliken_Ability1" target="source_position" pushentity="true" duration="-1" />
+		<setproxy entity="this_entity" target="stack_entity" />
+		<applystate name="State_Maliken_Ability1" target="this_owner_entity" proxy="stack_entity" duration="-1" />
+		<spawnprojectile name="Projectile_Maliken_Ability1" source="source_entity" bind="stack_entity" proxy="stack_entity" target="target_position" offset="0 160 0" />
+		<spawnaffector name="Affector_Maliken_Ability1" target="stack_entity" />
+	</onimpact>
+		
+	<modifier key="malikenswordthrow" modpriority="100"
+		ignorecooldown="true"
+		anim=""
+		icon="icon_teleport.tga"
+		activatescheme="movement"
+		casttime="0"
+		castactiontime="0"
+		manacost="0"
+		actiontype="no_target"
+		cooldowntime="0"
+	>
+		<onimpact>
+			<expirestate name="State_Maliken_Ability1" target="this_owner_entity"/>
+			<applystate name="State_Maliken_Ability1_Effects" target="source_entity" duration="100" />
+			<teleport source="this_owner_entity" target="proxy_position" interpolate="false" />
+			<disjoint target="source_entity" />
+			<kill target="proxy_entity" source="" />
+		</onimpact>
+	</modifier>
+</ability>
+	
+
+	
+

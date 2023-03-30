@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" name="ghostface" useentityeffectscale="true" >
+	<definitions>
+		<particlesystem name="system0" space="entity" scale=".75">
+
+			<simpleemitter
+			bone="_bone_overhead"
+				count="4"
+				life="1000"
+				spawnrate="100"
+				particlelife="2000"
+				gravity="0"
+				speed="100"
+				drag=".01"
+				acceleration="0.0"
+				position="0 0 0"
+				angle="360"
+				direction="0 0 0"
+				material="/shared/effects/materials/dust.material"
+				offsetsphere="0 0 150"
+			>
+				<particle
+					minangle="0"
+					maxangle="180"
+					minanglespeed="0"
+					startcolor="0 0 0"
+					midcolor=".25 0 0"
+					endcolor="0 0 0"
+					maxanglespeed="50"
+					startframe="0"
+					endframe="1"
+					size="8"
+					startscale="20"
+					endscale="40"
+					midcolorpos=".5"
+					startalpha="0"
+					midalpha=".5"
+					endalpha="0"
+					lockup="1"
+					pitch="-90"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+			bone="_bone_overhead"
+				count="1"
+				life="1500"
+				spawnrate="20"
+				particlelife="1500"
+				gravity="0"
+				speed="800"
+				drag="0"
+				acceleration="0.0"
+				position="0 0 0"
+				minangle="0"
+				maxangle="0"
+				direction="0 0 0"
+				material="/shared/effects/materials/blood_08.material"
+				offsetsphere="0 0 0"
+			>
+				<particle
+					minangle="0"
+					maxangle="0"
+					minanglespeed="0"
+					startcolor="0 0 0"
+					midcolor="0 0 0"
+					endcolor="0 0 0"
+					maxanglespeed="0"
+					startframe="0"
+					endframe="1"
+					size="5"
+					startscale="50"
+					endscale="85"
+					midcolorpos=".5"
+					startalpha="0"
+					midalpha=".65"
+					endalpha="0"
+					lockup="1"
+					pitch="-90"
+					depthbias="-40"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+			bone="_bone_overhead"
+				count="1"
+				life="1000"
+				spawnrate="20"
+				particlelife="1500"
+				gravity="0"
+				speed="800"
+				drag="0"
+				acceleration="0.0"
+				position="0 0 0"
+				minangle="0"
+				maxangle="0"
+				direction="0 0 0"
+				material="/shared/effects/materials/smokey_skull.material"
+				offsetsphere="0 0 0"
+			>
+				<particle
+					minangle="0"
+					maxangle="0"
+					minanglespeed="0"
+					startcolor="0 0 0"
+					midcolor=".5 0 0"
+					endcolor="0 0 0"
+					maxanglespeed="0"
+					startframe="0"
+					endframe="1"
+					size="5"
+					startscale="10"
+					endscale="35"
+					midcolorpos=".5"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					lockup="1"
+					pitch="-90"
+					depthbias="-40"
+				/>
+			</simpleemitter>
+			
+		</particlesystem>
+		
+		<particlesystem name="system1" space="world" scale=".8">
+		
+			<simpleemitter
+			bone="_bone_overhead"
+				count="4"
+				life="1000"
+				spawnrate="100"
+				particlelife="2000"
+				gravity="0"
+				speed="100"
+				drag=".01"
+				acceleration="0.0"
+				position="0 0 0"
+				angle="360"
+				direction="0 0 0"
+				material="/shared/effects/materials/dust.material"
+				offsetsphere="0 0 150"
+			>
+				<particle
+					minangle="0"
+					maxangle="180"
+					minanglespeed="0"
+					startcolor="0 0 0"
+					midcolor=".25 0 0"
+					endcolor="0 0 0"
+					maxanglespeed="50"
+					startframe="0"
+					endframe="1"
+					size="8"
+					startscale="20"
+					endscale="40"
+					midcolorpos=".5"
+					startalpha="0"
+					midalpha=".5"
+					endalpha="0"
+					lockup="1"
+					pitch="-90"
+				/>
+			</simpleemitter>
+			
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnparticlesystem instance="instance1" particlesystem="system1" />
+		<waitfordeath instance="instance1" />
+		<waitfordeath instance="instance0" />
+
+	</thread>
+</effect>

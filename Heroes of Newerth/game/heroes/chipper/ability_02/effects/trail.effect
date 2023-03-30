@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+	<definitions>
+
+		<particlesystem name="system0" space="local" scale="1">
+		
+			<trailemitter
+				bone="_bone_fx_01"
+				spawnrate="100"
+				particlelife="500"
+				texpostime="500"
+				texposscale="0.0"
+				texstretchscale=".4"
+				material="/shared/effects/materials/arrow_trail_blend.material"
+			>
+				<particle
+					startcolor="0 0 0"
+					midcolor="0 0 0"
+					endcolor="0 0 0"
+					startsize="40"
+					endsize="30"
+					alpha="1"
+				/>
+			</trailemitter>
+			
+			<trailemitter
+				bone="_bone_fx_03"
+				spawnrate="100"
+				particlelife="400"
+				texpostime="400"
+				texposscale="0.0"
+				texstretchscale=".4"
+				material="/shared/effects/materials/arrow_trail_blend.material"
+			>
+				<particle
+					startcolor="0 0 0"
+					midcolor="0 0 0"
+					endcolor="0 0 0"
+					startsize="40"
+					endsize="30"
+					alpha="1"
+				/>
+			</trailemitter>
+
+			<simpleemitter
+				spawnrate="25"
+				bone="_bone_fx_01"
+				particlelife="500"
+				gravity="-5"
+				speed="50"
+				drag=".00"
+				acceleration="0"
+				position="0 0 0"
+				material="/shared/effects/materials/tar_pool.material"
+				offsetsphere="5 5 0"
+				minangle="0"
+				maxangle="360"
+				direction="0 1 0"
+				offsetdirection="0 0 0"
+				offsetradial="0 0 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="0"
+					minanglespeed="0"
+					maxanglespeed="0"
+					color="1 1 1"
+					startframe="0"
+					endframe="1"
+					startsize="16"
+					midsize="8"
+					endsize="0"
+					startalpha="1"
+					midalpha="1"
+					endalpha="1"
+					midalphapos=".75"
+					turn="true"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				spawnrate="50"
+				bone="_bone_fx_01"
+				particlelife="500"
+				gravity="-5"
+				speed="50"
+				drag=".00"
+				acceleration="0"
+				position="0 0 0"
+				material="/shared/effects/materials/tar_pool.material"
+				offsetsphere="5 5 0"
+				minangle="0"
+				maxangle="360"
+				direction="0 1 0"
+				offsetdirection="0 0 0"
+				offsetradial="0 0 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="0"
+					minanglespeed="0"
+					maxanglespeed="0"
+					color="1 1 1"
+					startframe="0"
+					endframe="1"
+					startsize="20"
+					midsize="10"
+					endsize="0"
+					startalpha="1"
+					midalpha="1"
+					endalpha="1"
+					midalphapos=".75"
+					turn="true"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				spawnrate="20"
+				bone="_bone_fx_01"
+				particlelife="500"
+				gravity="-5"
+				speed="50"
+				drag=".00"
+				acceleration="0"
+				position="0 0 0"
+				material="/shared/effects/materials/blood1.material"
+				offsetsphere="5 5 0"
+				minangle="0"
+				maxangle="360"
+				direction="0 1 0"
+				offsetdirection="0 0 0"
+				offsetradial="0 0 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="0"
+					minanglespeed="0"
+					maxanglespeed="0"
+					color="0 0 0"
+					startframe="0"
+					endframe="1"
+					startsize="75"
+					midsize="50"
+					endsize="0"
+					startalpha="1"
+					midalpha="1"
+					endalpha="1"
+					midalphapos=".75"
+					turn="true"
+				/>
+			</simpleemitter>
+
+
+			<simpleemitter
+				spawnrate="50"
+				particlelife="1000"			
+				gravity="2"
+				speed="15"
+				drag="0.0"
+				acceleration="0"
+				position="0 0 0"
+				material="/shared/effects/materials/tar.material"
+				offsetsphere="1 1 1"
+				minangle="0"
+				maxangle="360"
+				direction="0 0 1"
+				offsetdirection="0 0 0"
+				offsetradial="10 10 10"
+				inheritvelocity="0.25"
+			>
+				<particle 
+					minangle="0"
+					maxangle="0"
+					minanglespeed="0"
+					maxanglespeed="0"
+					color="1 1 1"
+					startframe="0"
+					endframe="1"
+					startsize="45"
+					midsize="30"
+					endsize="0"
+					midsizepos=".3"
+					startalpha="1"
+					midalpha="1"
+					endalpha="1"
+					midalphapos=".3"
+					lockup="true"
+					lockright="true"
+					pitch="90"
+					yaw="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				spawnrate="160"
+				count="80"		
+				particlelife="550"			
+				gravity="5"
+				speed="100"
+				acceleration="0"
+				position="0 0 0"
+				material="/shared/effects/materials/tar.material"
+				offsetsphere="1 1 1"
+				minangle="0"
+				maxangle="180"
+				direction="0 0 1"
+				offsetdirection="0 0 0"
+				offsetradial="0 0 0"
+				inheritvelocity="0.25"
+			>
+				<particle 
+					minangle="0"
+					maxangle="0"
+					minanglespeed="0"
+					maxanglespeed="0"
+					color="1 1 1"
+					startframe="0"
+					endframe="1"
+					startsize="30"
+					midsize="30"
+					endsize="0"
+					midsizepos=".8"
+					startalpha="1"
+					midalpha="1"
+					endalpha="1"
+					midalphapos=".3"
+					turn="true"
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Gladiator_Ability1_Toss"
+
+	gravity="800"
+	lifetime="1530"
+	useexactlifetime="true"
+>
+</projectile>

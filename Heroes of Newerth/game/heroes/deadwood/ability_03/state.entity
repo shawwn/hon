@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Deadwood_Ability3"
+
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+
+	treewalking="true"
+	
+	maxcharges="1,2,3,4"
+	movespeedmultiplierpercharge="0.03"
+	attackspeedpercharge=".15"
+	slowresistancepercharge=".25"
+	
+	effecttype="StatusBuff"
+>
+	<onframe>
+		<setvar0 a="0" />
+		<killtrees radius="50" usealtdeathanims="true" />
+		<setvar0 a="result" />
+		<addcharges count="var0"/>
+		<condition test="var0 gt 0">
+			<playeffect effect="effects/ability_03.effect" target="target_entity" />
+		</condition>
+	</onframe>
+</state>

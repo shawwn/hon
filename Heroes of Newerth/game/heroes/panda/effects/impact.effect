@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="1">
+	<definitions>
+		
+		
+		<particlesystem name="system0" space="world"  scale="1.3">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".7"
+				sample="../sounds/impact_%.wav"
+			/>
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".5"
+				sample="/shared/sounds/impacts/impact_heavy_%.wav"
+			/>
+
+			<simpleemitter	
+				bone="_bone_centerofchest"
+				count="1"
+				particlelife="5000"
+				spawnrate="10000"
+				gravity="-0"
+				speed="0.0"
+				acceleration="0.0"		
+				position="0 0 0"			
+				
+				
+			>
+				<particle>	
+				
+					<simpleemitter	
+						bone="_bone_centerofchest"					
+						life="200"
+						count="6"
+						position="0 0 0"
+						spawnrate="200"			
+						particlelife="1200"
+						gravity="0"
+						material="/shared/effects/materials/cartoon_dust.material"
+						offsetsphere="10 10 10"
+						direction="0 0 1"
+						minangle="50"
+						maxangle="90"
+						drag="0.04"
+
+						minspeed="12"
+						maxspeed="50"
+						directionalspace="local"
+						inheritvelocity="0.2"			
+					>
+						<particle
+							minangle="-360"
+							maxangle="360"
+							minanglespeed="-270"
+							maxanglespeed="270"
+							startsize="30"				
+							endsize="77"
+							depthbias="-100"
+							startcolor=".40.4 .2"
+							endcolor="0 0 0"	
+							
+							startalpha="1"
+							midalpha="1"
+							endalpha="0"
+							midalphapos=".25"
+						/>
+					</simpleemitter>				
+					<simpleemitter
+						bone="_bone_centerofchest"
+						count="3"
+						spawnrate="1055"
+						particlelife="220"
+						gravity="0"
+						minspeed="22.0"
+						maxspeed="22"
+						acceleration="0.0"
+						timenudge="0"
+						position="0 0 0"
+						offsetsphere="0 0 0"						
+						material="/shared/effects/materials/cartoon_pop1.material"
+						
+					>
+						<particle
+							startcolor="1 1 1"
+							endcolor="1 .4 0"
+							
+							startalpha="1"							
+							endalpha="0"
+						    startscale="35"
+							endscale="90"
+							turn="true"
+						/>
+					</simpleemitter>			
+				</particle>
+			</simpleemitter>			
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+      </particlesystem>
+   </definitions>
+   <thread>
+   
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>   
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

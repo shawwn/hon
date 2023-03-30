@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_Andromeda"
+
+	team="Legion"
+	icon="icon.tga"
+	portrait="icon.tga"
+	model="model.mdf"
+	skin=""
+	
+	passiveeffect="effects/body.effect"
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="sounds/voice/select_%.wav"
+	selectedflavorsound="sounds/voice/select_flavour_%.wav"
+	confirmmovesound="sounds/voice/move_%.wav"
+	confirmattacksound="sounds/voice/attack_%.wav"
+	nomanasound="sounds/voice/no_mana.wav"
+	cooldownsound="sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="sounds/voice/taunt_prior.wav"
+	tauntkillsound="sounds/voice/taunt_after.wav"
+	
+	preglobalscale="1.5"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="112"
+	boundsradius="24"
+	selectionradius="48"
+	targetoffset="0 0 64"
+	infoheight="200"
+
+	movespeed="295"
+	turnrate="540"
+	turnsmoothing="0.075"
+
+	maxhealth="150"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="-0.68"
+	magicarmor="5.5"
+
+	inventory0="Ability_Andromeda1"
+	inventory1="Ability_Andromeda2"
+	inventory2="Ability_Andromeda3"
+	inventory3="Ability_Andromeda4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8="Ability_Taunt"
+
+	attackduration="1000"
+	attackactiontime="330"
+	attackcooldown="1700"
+	attackdamagemin="12"
+	attackdamagemax="26"
+	attacknumanims="2"
+	attackoffset="0 50 170"
+	attackprojectile="Projectile_AndromedaAttack"
+	attackrange="400"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect=""
+	attacktype="ranged"
+	combattype="Hero"
+
+	aggrorange="800"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="Agility"
+	strength="16"
+	strengthperlevel="2.1"
+	agility="26"
+	agilityperlevel="2.35"
+	intelligence="15"
+	intelligenceperlevel="1.75"
+>
+	<recommendeditem name="Item_ManaPotion" />
+	<recommendeditem name="Item_MinorTotem" />
+	<recommendeditem name="Item_RunesOfTheBlight" />
+	<recommendeditem name="Item_HealthPotion" />
+	<recommendeditem name="Item_HomecomingStone" />
+	
+	<recommendeditem name="Item_FlamingEye" />
+	<recommendeditem name="Item_Strength5" />
+	<recommendeditem name="Item_Striders" />
+	<recommendeditem name="Item_Intelligence7" />
+	<recommendeditem name="Item_PortalKey" />
+	<recommendeditem name="Item_Evasion" />
+	<recommendeditem name="Item_Morph" />
+	
+	<modifier key="frost" modpriority="100"
+		attackprojectile="Projectile_Frost"
+	>
+	</modifier>
+</hero>

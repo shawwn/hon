@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Valkyrie1"
+
+	
+	
+	statuseffecttooltip="State_Valkyrie_Ability1"
+	icon="icon.tga"
+	
+	anim="ability_1"
+	casttime="600"
+	castactiontime="500"
+	casteffect=""
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="self_position"
+	targetscheme="visible_enemy_units"
+	casteffecttype="Magic"
+	targetradius="650"
+	
+	manacost="100,120,140,160"
+	cooldowntime="12000"
+>
+	<onimpact >
+		<playeffect effect="effects/cast.effect" source="source_entity" target="source_entity"/>
+		<areaofeffect
+			radius="200"
+			targetselection="random"
+			targetscheme="visible_enemy_units"
+			effecttype="Magic"
+			maxtotalimpacts="1"
+			impacteffect="effects/impact.effect"
+		>
+			<applystate name="State_Valkyrie_Ability1_Half" duration="1000" />
+		</areaofeffect>
+	
+		<spawnaffector name="Affector_Valkyrie_Ability1_Normal" target="source_position"/>
+	</onimpact>
+	
+</ability>

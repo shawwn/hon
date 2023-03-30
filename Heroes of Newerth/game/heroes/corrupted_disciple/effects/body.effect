@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1">
+	<definitions>
+		
+		
+
+	
+
+					
+		
+		<particlesystem name="system0" space="world">
+
+			<billboard
+				bone="_bone_righthand"
+				size="40"
+				depthbias="-50"
+				color=".4 .1 .08"				
+				material="/shared/effects/materials/whitedot.material"
+			/>		
+			<billboard
+				bone="_bone_lefthand"
+				size="40"
+				depthbias="-50"
+				color=".4 .1 .08"				
+				material="/shared/effects/materials/whitedot.material"
+			/>			
+			<billboard
+				bone="_bone_root_of_ball"
+				size="50"				
+				color="1 .1 .2"				
+				material="/shared/effects/materials/whitedot.material"
+			/>	
+
+				
+			<template name="beam">
+				<beam						
+					bone_a="{a}"
+					bone_b="{b}"
+					size="15"
+					color="1 1 1"					
+					material="/shared/effects/materials/femme_lightning_10.material"
+					startframe="{frame}"
+					framespeed="5"
+				/>	
+			</template>	
+	
+		<instance name="beam" b="Box02" a="Box03"  frame=".3"/>
+		<instance name="beam" b="Box01" a="Box02"  frame=".3"/>
+		<instance name="beam" b="Box01" a="Box03"  frame=".3"/>
+		
+		
+		<instance name="beam" b="_bone_lefthand" a="Box03"  frame=".3"/>
+		<instance name="beam" b="_bone_righthand" a="Box01"  frame=".3"/>
+		
+		<instance name="beam" b="Bip01 R Finger11" a="Box03"  frame=".3"/>
+		<instance name="beam" b="Bip01 R Finger41" a="Box03"  frame=".3"/>
+		
+		<instance name="beam" b="Bip01 L Finger11" a="Box03"  frame=".3"/>
+		<instance name="beam" b="Bip01 L Finger41" a="Box03"  frame=".3"/>
+		</particlesystem>
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+
+

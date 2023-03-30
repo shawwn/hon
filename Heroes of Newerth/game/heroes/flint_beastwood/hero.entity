@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_FlintBeastwood"
+
+	team="Hellbourne"
+	icon="icon.tga"
+	portrait="icon.tga"
+	model="model.mdf"
+	skin=""
+	
+	passiveeffect=""
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="sounds/voice/select_%.wav"
+	selectedflavorsound="sounds/voice/select_flavour_%.wav"
+	confirmmovesound="sounds/voice/move_%.wav"
+	confirmattacksound="sounds/voice/attack_%.wav"
+	nomanasound="sounds/voice/no_mana.wav"
+	cooldownsound="sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="sounds/voice/taunt_prior.wav"
+	tauntkillsound="sounds/voice/taunt_after.wav"
+	
+	preglobalscale="1.60"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="112"
+	boundsradius="24"
+	selectionradius="48"
+	targetoffset="0 0 64"
+
+	movespeed="290"
+	turnrate="450"
+	turnsmoothing="0.05"
+
+	maxhealth="150"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="-.94"
+	magicarmor="5.5"
+
+	inventory0="Ability_FlintBeastwood1"
+	inventory1="Ability_FlintBeastwood2"
+	inventory2="Ability_FlintBeastwood3"
+	inventory3="Ability_FlintBeastwood4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8="Ability_Taunt"
+
+	attackduration="1000"
+	attackactiontime="170"
+	attackcooldown="1700"
+	attackdamagemin="15"
+	attackdamagemax="21"
+	attacknumanims="2"
+	attackoffset="0 150 100"
+	attackprojectile="Projectile_FlintBeastwoodAttack"
+	attackrange="570"
+	attackstarteffect=""
+	attackactioneffect="projectile/attack_impact.effect"
+	attackimpacteffect="projectile/impact.effect"
+	attacktype="ranged"
+	combattype="Hero"
+
+	aggrorange="800"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="Agility"
+	strength="16"
+	strengthperlevel="1.7"
+	agility="21"
+	agilityperlevel="2.9"
+	intelligence="15"
+	intelligenceperlevel="2.6"
+	
+	previewmodel="preview.mdf"
+	previewpos="0 0 -50"
+	previewangles="0 0 0"
+	previewscale="1.5"
+>
+	<recommendeditem name="Item_MinorTotem" />
+	<recommendeditem name="Item_RunesOfTheBlight" />
+	<recommendeditem name="Item_HealthPotion" />
+	<recommendeditem name="Item_HomecomingStone" />
+	
+	<recommendeditem name="Item_Soulscream" />
+	<recommendeditem name="Item_Strength5" />
+	<recommendeditem name="Item_Bottle" />
+	<recommendeditem name="Item_PowerSupply" />
+	<recommendeditem name="Item_Steamboots" />
+	<recommendeditem name="Item_Critical1" />
+	<recommendeditem name="Item_Stealth" />
+	<recommendeditem name="Item_StrengthAgility" />
+	<recommendeditem name="Item_ManaBurn2" />
+
+	<recommendeditem name="Item_Lightning2" />
+	<recommendeditem name="Item_Evasion" />
+	
+	<modifier key="FlintBeastwood_Ability3_1" modpriority="100"
+		attackrange="630"
+	>
+	</modifier>
+	
+	<modifier key="FlintBeastwood_Ability3_2" modpriority="100"
+		attackrange="690"
+	>
+	</modifier>
+	
+	<modifier key="FlintBeastwood_Ability3_3" modpriority="100"
+		attackrange="750"
+	>
+	</modifier>
+	
+	<modifier key="FlintBeastwood_Ability3_4" modpriority="100"
+		aggrorange="850"
+		attackrange="810"
+	>
+	</modifier>
+	
+	<modifier key="Alt" modpriority="1"
+		altavatar="true"
+		
+		icon="alt/icon.tga"
+		portrait="alt/icon.tga"
+		model="alt/model.mdf"
+		
+		previewmodel="alt/preview.mdf"
+		previewpos="0 0 -50"
+		previewangles="0 0 0"
+		previewscale="1.5"
+		
+		selectedsound="alt/sounds/voice/select_%.wav"
+		selectedflavorsound="alt/sounds/voice/select_flavour_%.wav"
+		confirmmovesound="alt/sounds/voice/move_%.wav"
+		confirmattacksound="alt/sounds/voice/attack_%.wav"
+		nomanasound="alt/sounds/voice/no_mana.wav"
+		cooldownsound="alt/sounds/voice/cooldown.wav"
+		announcersound="alt/sounds/voice/hero_select.wav"
+		tauntedsound="alt/sounds/voice/taunt_prior.wav"
+		tauntkillsound="alt/sounds/voice/taunt_after.wav"
+	>
+	</modifier>
+	
+</hero>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Predator1"
+
+	
+	
+	statuseffecttooltip="State_Predator_Ability1"
+	statuseffectheader="true"
+	icon="icon.tga"
+	
+	anim="ability_1_start"
+	casttime="700"
+	castactiontime="300"
+	casteffect="effects/cast.effect"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_entity"
+	targetscheme="enemy_units"
+	casteffecttype="Physical"
+	
+	manacost="90"
+	cooldowntime="20000,17000,14000,11000"
+	novoiceresponse="true"
+	
+	range="650"
+>
+	<onimpact >
+		<applystate name="State_Predator_Ability1_SelfDisarm" duration="-1" target="source_entity" proxy="target_entity" />
+		<spawnprojectile name="Projectile_Predator_Ability1" source="source_entity" target="target_entity" bind="source_entity" noresponse="true" />
+		<spawnprojectile name="Projectile_Predator_Ability1_StrikeAnim" source="source_entity" target="target_entity" proxy="target_entity" noresponse="true" />
+	</onimpact>
+	
+
+</ability>

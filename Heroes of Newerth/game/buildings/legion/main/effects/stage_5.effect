@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect>
+
+	<definitions>
+		
+		<particlesystem name="system0" space="world">
+
+			<simpleemitter
+				life="9000"
+				delay="100"
+				count="20"
+				spawnrate="40"
+				minparticlelife="1000"
+				maxparticlelife="4500"
+				gravity="0"
+				minspeed="0"
+				maxspeed="120"
+				position="0 0 60"
+				direction="0 0 1"
+				material="/shared/effects/materials/dust.material"
+				inheritvelocity="0.5"
+				offsetsphere="400 400 30"
+				collide="true"
+				depthbias="-40"
+			> 
+				<particle
+					color=".3"
+					midcolorpos="0.5"
+					startalpha="0"
+					midalphapos=".1"
+					midalpha="1"
+					endalpha="0"
+					startscale="120"
+					endscale="220"
+				/>
+				<particle
+					maxangle="360"
+					color=".26 .25 .22"
+					midcolorpos="0.5"
+					startalpha="0"
+					midalphapos=".2"
+					midalpha="1"
+					endalpha="0"
+					startscale="80"
+					endscale="270"
+				/>
+			</simpleemitter>
+
+			<light
+				life="1200"
+				position="0 0 150"
+				startcolor="0"
+				endcolor="2 0.5 0"
+				falloff="500"
+			/>
+
+			<light
+				delay="1200"
+				position="0 0 150"
+				startcolor="2 0.5 0"
+				endcolor="0"
+				falloff="500"
+				startflickeramount="0.5"
+				endflickeramount="0"
+				flickerfrequency="25"
+			/>
+
+			<model
+				model="/buildings/legion/main/effects/main_stones/model.mdf"			
+				anim="idle"
+				yaw="-140"
+				name="scar"
+				scale="1.12"
+				position="0 0 -10"
+			/>
+
+			<trackeremitter
+				delay="2000"
+				targetposition="0 0 100"
+				targetbone="topRotate"
+				tracktype="lerp"
+				trackspeed="1.002" 
+				spawnrate="120"
+				particlelife="2000"
+				offsetsphere="300 300 50"
+				minspeed="20"
+				maxspeed="60"
+				material="/shared/effects/materials/flare_01.material"
+				>
+				<particle 
+					color="2 .4 0"
+					midcolorpos=".2"
+					startsize="0"
+					midsize="16"
+					endsize="1"
+					minscale="1"
+					maxscale="2"
+				/>
+			</trackeremitter>
+
+			<!-- Swirly red stuff -->
+
+			<simpleemitter
+				delay="1200"
+				position="0 0 20"
+				spawnrate="5"
+				particlelife="3600"
+				depthbias="-30"
+				material="/shared/effects/materials/smash_add.material"
+			>
+				<particle
+					midcolor=".3 .1 0"
+					startcolor="0"
+					endcolor="0"
+					startsize="405"
+					endsize="0"
+					minanglespeed="100"
+					maxanglespeed="200"
+					lockup="1"
+					pitch="90"
+				/>
+			</simpleemitter>
+
+			<!-- Pulling the life of Newerth deeper in -->
+
+			<simpleemitter
+				position="0 0 30"
+				spawnrate="2"
+				particlelife="2500"
+				depthbias="-120"
+				material="/shared/effects/materials/smokering.material"
+			>
+				<particle
+					midcolor=".15"
+					startcolor="0"
+					endcolor="0"
+					startsize="1000"
+					endsize="200"
+					maxanglespeed="50"
+					lockup="1"
+					pitch="90"
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />		
+	</thread>
+
+</effect>

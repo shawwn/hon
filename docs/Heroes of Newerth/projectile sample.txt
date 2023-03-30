@@ -1,0 +1,26 @@
+<projectile
+	name=""
+
+	speed=""
+	lifetime=""
+	gravity=""
+	model=""
+	traileffect=""
+	deatheffect=""
+	impacteffect=""
+	canturn=""
+>
+	<modifier
+		scheme=""
+		priority=""
+		
+		speed=""
+	/>
+
+	<modifier
+		scheme=""
+		priority=""
+
+		speed=""
+	/>
+</projectile>

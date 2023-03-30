@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" useentityeffectscale="1">
+	
+	<definitions>
+	
+		<modifier
+			name="modifier0"			
+			life="200"
+			startcolor="1 4 5"			
+			endcolor="1.0 1.0 1.0"
+		/>		
+		<particlesystem name="system0" space="entity" scale="3.0">
+
+			<sound
+				volume=".75" 
+				sample="../sounds/impact.wav"
+				linearfalloff="true"
+				falloffstart="200"
+				falloffend="2000"
+			/>
+
+			<sound
+				volume=".1" 
+				sample="/heroes/kunas/sounds/impact_%.wav"
+				linearfalloff="true"
+				falloffstart="0"
+				falloffend="1000"
+			/>
+
+		<simpleemitter
+			bone="_bone_centerofchest"
+			spawnrate="70"
+			particlelife="1250"
+			gravity="0"
+			speed="22"
+			drag="0"
+			acceleration="0.10"		
+			expirelife="300"
+			material="/shared/effects/materials/mysticenergy2.material"
+			offsetsphere="0 0 0"
+			direction="0 0 -2"
+			position="0 0 -20"
+			yawspeed="-360"
+			depthbias="30"
+			inheritvelocity=".25"
+
+		>
+
+			<particle 			
+				scale="1"
+				minangle="0"
+				maxangle="360"
+				minanglespeed="-20"
+				maxanglespeed="-80"
+				startcolor=".1 .1 .1"
+				midcolor=".1 .2 .2"
+				endcolor="0 0 0"
+				midcolorpos=".4"
+				startframe="0"
+				endframe="1"
+				startsize="20"
+				midsize="30"
+				endsize="1"
+				midsizepos=".3"	
+			/>
+			
+		</simpleemitter>		
+
+		
+		
+		
+		<billboard
+			bone="_bone_centerofchest"
+			material="/shared/effects/materials/whirl_ground.material"
+			startcolor="1 1 1"
+			endcolor="0 0 0"
+			expirelife="500"
+			size="55"
+			alpha="1"
+			depthbias="30"
+			rollspeed="-70"			
+		/>		
+		
+		
+		
+		</particlesystem>
+		<particlesystem name="system1" space="world" scale="2">	
+		
+			<simpleemitter
+				bone="_bone_centerofchest"
+				spawnrate="70"
+				particlelife="1250"			
+				speed="322"
+				drag="0.10"					
+				material="/shared/effects/materials/whitedot.material"
+				offsetsphere="0 0 0"		
+				position="0 0 -20"		
+				depthbias="50"
+			>
+
+				<particle 	
+					turn="1"
+					heightdistort="0.1"
+					startscale="1.5"
+					endscale="0"
+
+					startcolor="1 1 1"
+					midcolor=".5 1  1"
+					
+					endcolor="0 0 0"
+									
+				/>
+				
+			</simpleemitter>	
+	
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnparticlesystem instance="instance1" particlesystem="system1" />
+		<spawnmodifier instance="instance2" modifier="modifier0"/>  
+
+		
+      	<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+		<waitfordeath instance="instance2" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

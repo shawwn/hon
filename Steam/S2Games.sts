@@ -1,0 +1,9 @@
+Valve Content Tool Solution File, Format Version 2.00
+# WARNING: DO NOT EDIT OR DELETE THIS FILE!
+###############################################################################
+
+[ContentDescriptionDB]
+File=.\ContentDescriptionDB.xml
+
+[Projects]
+Savage 2 Depot=.\Savage 2 Depot.spj

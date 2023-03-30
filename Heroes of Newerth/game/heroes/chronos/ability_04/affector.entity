@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Chronos_Ability4"
+
+	radius="400"
+	
+	lifetime="3000,4000,5000"
+	targetselection="all"
+	targetscheme="all_other_units_and_buildings"
+	ignoreinvulnerable="false"
+	effecttype=""
+	
+	effect="effects/orb.effect"
+>
+	<onframeimpact>
+		<applystate name="State_Chronos_Ability4" continuous="true" timeout="frametime" />
+	</onframeimpact>
+
+	<modifier key="ult_boost" modpriority="100"
+		displayname="true"
+		lifetime="4000,5000,6000"
+	>
+		<onframeimpact>
+			<cantarget targetscheme="ally_units">
+				<applystate name="State_Chronos_Ability4_Ally" continuous="true" timeout="frametime" />
+			</cantarget>
+			<else>
+				<applystate name="State_Chronos_Ability4" continuous="true" timeout="frametime" />
+			</else>
+		</onframeimpact>
+	</modifier>
+</affector>

@@ -1,0 +1,64 @@
+// (C)2008 S2 Games
+// post_blur_linear.psh
+// 
+// ...
+//=============================================================================
+
+//=============================================================================
+// Constants
+//=============================================================================
+static const int KERNEL_SIZE = 12;
+//=============================================================================
+// Global variables
+//=============================================================================
+
+//=============================================================================
+// Vertex shader output structure
+//=============================================================================
+struct VS_OUTPUT
+{
+	float4 Texcoord0 : TEXCOORD0;
+	float4 Texcoord1 : TEXCOORD1;
+	float4 Texcoord2 : TEXCOORD2;
+	float4 Texcoord3 : TEXCOORD3;
+	float4 Texcoord4 : TEXCOORD4;
+	float4 Texcoord5 : TEXCOORD5;
+};
+
+//=============================================================================
+// Pixel shader input structure
+//=============================================================================
+struct PS_OUTPUT
+{
+	float4 Color : COLOR;
+};
+
+sampler image;
+
+//=============================================================================
+// Pixel Shader
+//=============================================================================
+PS_OUTPUT PS( VS_OUTPUT In )
+{
+	PS_OUTPUT Out;
+		
+	Out.Color = 0.0f;
+	
+	Out.Color += tex2D(image, In.Texcoord0.xy);
+	Out.Color += tex2D(image, In.Texcoord0.zw);
+	Out.Color += tex2D(image, In.Texcoord1.xy);
+	Out.Color += tex2D(image, In.Texcoord1.zw);
+	Out.Color += tex2D(image, In.Texcoord2.xy);
+	Out.Color += tex2D(image, In.Texcoord2.zw);
+	Out.Color += tex2D(image, In.Texcoord3.xy);
+	Out.Color += tex2D(image, In.Texcoord3.zw);
+	Out.Color += tex2D(image, In.Texcoord4.xy);
+	Out.Color += tex2D(image, In.Texcoord4.zw);
+	Out.Color += tex2D(image, In.Texcoord5.xy);
+	Out.Color += tex2D(image, In.Texcoord5.zw);
+
+	Out.Color /= KERNEL_SIZE;
+	
+	return Out;
+}
+

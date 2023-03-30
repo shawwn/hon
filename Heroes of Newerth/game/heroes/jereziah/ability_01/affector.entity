@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Jereziah_Ability1"
+
+	radius="250"
+	
+	maximpactspertarget="1"
+	targetscheme="enemy_units"
+	targetselection="all"
+	effecttype="Magic Splash"
+	
+	impacteffect="effects/impact_damage.effect"
+	linkeffect=""
+>
+	<onimpact>
+		<damage amount="90,180,270,360"/>
+	</onimpact>
+</affector>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="taunt">
+	<definitions>
+		<particlesystem name="system0" space="entity" scale=".21">
+		
+			<simpleemitter
+				bone="Bip01 Head"
+				life="1200"
+				startspawnrate="30"
+				endspawnrate="0"
+				minparticlelife="275"
+				maxparticlelife="1200"
+				gravity="0"
+				minspeed="0"
+				maxspeed="4000"
+				drag="0.016"
+				minangle="0"
+				maxangle="20"
+				offsetsphere="15"
+				position="0 0 0"
+				direction="0 -1 0"
+				material="/shared/effects/materials/bad_healing_smoke_12.material"
+			>
+				<particle
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="-250"
+					maxanglespeed="250"
+					turn="1"
+					startcolor="1 1 1"
+					midcolorpos="0.1"
+					midcolor=".6 .3 .1"
+					endcolor="0"
+					startsize="70"
+					startstickiness="0"
+					minendstickiness="0.3"
+					maxendstickiness="1"
+					minendscale="5"
+					maxendscale="10"
+					startalpha=".3"
+					midalpha="1"
+					midalphapos="0.1"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="Bip01 Head"
+				life="1200"
+				startspawnrate="250"
+				endspawnrate="0"
+				minparticlelife="0"
+				maxparticlelife="1200"
+				gravity="0"
+				minspeed="0"
+				maxspeed="3500"
+				drag="0.016"
+				minangle="0"
+				maxangle="20"
+				offsetsphere="15"
+				position="0 0 0"
+				direction="0 -1 0"
+				material="/shared/effects/materials/phantom_smoke_04.material"
+			>
+				<particle
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="-250"
+					maxanglespeed="250"
+					turn="1"
+					startcolor="1 1 1"
+					midcolorpos="0.1"
+					midcolor=".6 .2 .1"
+					endcolor="0"
+					startsize="50"
+					startstickiness="0"
+					minendstickiness="0.3"
+					maxendstickiness="1"
+					minendscale="2"
+					maxendscale="11"
+					startalpha=".3"
+					midalpha="1"
+					midalphapos="0.1"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="Bip01 Head"
+				life="1050"
+				spawnrate="10"
+				particlelife="1200"
+				gravity="0"
+				minspeed="0"
+				maxspeed="1500"
+				drag="0.02"
+				angle="0"
+				depthbias="-40"
+				position="0 0 0"
+				direction="0 -1 0"
+				offsetsphere="10"
+				material="/shared/effects/materials/flame.material"
+			>
+				<particle
+					angle="90"
+					minanglespeed="-150"
+					maxanglespeed="150"
+					endanglespeed="0"
+					turn="1"
+					startcolor="1"
+					midcolor="0"
+					endcolor="0 0 0"
+					minstartsize="10"
+					maxstartsize="25"
+					startstickiness="0"
+					minendstickiness="0"
+					maxendstickiness="1"
+					endsize="220"
+				/>
+			</simpleemitter>
+
+
+			<simpleemitter
+				bone="Bip01 Head"
+				life="1050"
+				spawnrate="13"
+				particlelife="900"
+				minspeed="0"
+				maxspeed="2500"
+				drag="0.025"
+				angle="0"
+				offsetsphere="15"
+				position="0 0 0"
+				direction="0 -1 0"
+				material="/shared/effects/materials/refract_outsplash.material"
+			>
+				<particle
+					color="1"
+					startalpha=".8"
+					endalpha="0.0"
+					maxangle="360"
+					anglespeed="-90"
+					startsize="50"
+					endsize="200"
+					param=".1"
+					depthbias="-130"
+				/>
+			</simpleemitter>
+
+
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

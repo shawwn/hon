@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Hellbringer_Ability2"
+
+	radius="500"
+	
+	impactdelay="0"
+	maximpactsperinterval="1"
+	maximpactspertarget="1"
+	targetscheme="visible_enemy_units"
+	targetselection="closest"
+	effecttype="Magic"
+	persist="true"
+	
+	impacteffect="impact.effect"
+	linkeffect="link.effect"
+>
+	<onimpact>
+		<applystate name="State_Hellbringer_Ability2" duration="5000,6000,7000,8000"/>
+		<chain count="0,1,2,3"/>
+	</onimpact>
+</affector>

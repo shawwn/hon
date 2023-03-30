@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_Arachna"
+
+	team="Hellbourne"
+	icon="icon.tga"
+	portrait="icon.tga"
+	model="model.mdf"
+	skin=""
+	
+	passiveeffect=""
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="sounds/voice/select_%.wav"
+	selectedflavorsound="sounds/voice/select_flavour_%.wav"
+	confirmmovesound="sounds/voice/move_%.wav"
+	confirmattacksound="sounds/voice/attack_%.wav"
+	nomanasound="sounds/voice/no_mana.wav"
+	cooldownsound="sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="sounds/voice/taunt_prior.wav"
+	tauntkillsound="sounds/voice/taunt_after.wav"
+	
+	preglobalscale="1.71"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="112"
+	boundsradius="24"
+	selectionradius="48"
+	targetoffset="0 0 64"
+
+	movespeed="290"
+	turnrate="360"
+	turnsmoothing="0.05"
+
+	maxhealth="150"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="-1"
+	magicarmor="5.5"
+
+	inventory0="Ability_Arachna1"
+	inventory1="Ability_Arachna2"
+	inventory2="Ability_Arachna3"
+	inventory3="Ability_Arachna4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8="Ability_Taunt"
+
+	attackduration="1000"
+	attackactiontime="400"
+	attackcooldown="1700"
+	attackdamagemin="18"
+	attackdamagemax="29"
+	attacknumanims="2"
+	attackoffset="0 100 70"
+	attackprojectile="Projectile_ArachnaAttack"
+	attackrange="600"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect=""
+	attacktype="ranged"
+	combattype="Hero"
+
+	aggrorange="800"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="Agility"
+	strength="17"
+	strengthperlevel="1.7"
+	agility="22"
+	agilityperlevel="3.2"
+	intelligence="15"
+	intelligenceperlevel="1.5"
+	
+	previewmodel="preview.mdf"
+	previewpos="0 0 -50"
+	previewangles="0 0 0"
+	previewscale="1.5"
+>
+	<recommendeditem name="Item_MinorTotem" />
+	<recommendeditem name="Item_RunesOfTheBlight" />
+	<recommendeditem name="Item_HealthPotion" />
+	<recommendeditem name="Item_HomecomingStone" />
+	
+	<recommendeditem name="Item_Soulscream" />	
+	<recommendeditem name="Item_Strength5" />
+	<recommendeditem name="Item_Steamboots" />
+	<recommendeditem name="Item_EnhancedMarchers" />
+	<recommendeditem name="Item_Gloves3" />
+	<recommendeditem name="Item_Stealth" />
+	<recommendeditem name="Item_ManaBurn2" />
+	<recommendeditem name="Item_Weapon3" />
+	<recommendeditem name="Item_Evasion" />
+
+	<modifier key="frost" modpriority="100"
+		attackprojectile="Projectile_Frost"
+	>
+	</modifier>
+	
+	<modifier key="Alt" modpriority="1"
+		altavatar="true"
+		preglobalscale="1.90"
+		icon="alt/icon.tga"
+		portrait="alt/icon.tga"
+		model="alt/model.mdf"
+		infoheight="185"
+		previewmodel="alt/preview.mdf"
+		previewpos="0 0 -50"
+		previewangles="0 0 0"
+		previewscale="1.8"
+	>
+	</modifier>	
+</hero>

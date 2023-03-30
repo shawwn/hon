@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="rig.max" file="high.model" type="K2" high="high.model" med="med.model" low="low.model" >
+
+	<anim name="idle" clip="clips/default_1.clip" loop="true">
+	</anim>
+
+	<anim name="portrait" clip="clips/portrait.clip" loop="true"/>
+	
+	<anim name="bored_1" clip="clips/bored_1.clip"/>
+
+	<anim name="taunt_1" clip="clips/taunt_1.clip"/>
+
+	<anim name="item_1" clip="clips/item_1.clip"/>
+
+	<anim name="attack_1" clip="clips/attack_3.clip" fps="100">
+		<frameevent frame="12" cmd="PlaySoundLinear /heroes/devourer/sounds/move_%.wav 0 800 .3"/>
+		<frameevent frame="11" cmd="PlaySoundLinear /heroes/hiro/sounds/attack_%.wav 400 2000 .65"/>
+	</anim>
+
+	<anim name="attack_2" clip="clips/attack_2.clip" fps="100">
+		<frameevent frame="12" cmd="PlaySoundLinear /heroes/devourer/sounds/move_%.wav 0 800 .3"/>>
+		<frameevent frame="8" cmd="PlaySoundLinear /heroes/hiro/sounds/attack_%.wav 400 2000 .65"/>
+	</anim>
+
+	<anim name="attack_3" clip="clips/attack_1.clip" fps="100">
+		<frameevent frame="11" cmd="PlaySoundLinear /heroes/devourer/sounds/move_%.wav 0 1700 1"/>>
+		<frameevent frame="12" cmd="PlaySoundLinear /shared/sounds/attacks/attack_heavy_%.wav 400 2000 .65"/>
+	</anim>
+
+	<anim name="attack_4" clip="clips/attack_4.clip" fps="100">
+		<frameevent frame="12" cmd="PlaySoundLinear /heroes/devourer/sounds/move_%.wav 0 800 .3"/>>
+		<frameevent frame="8" cmd="PlaySoundLinear /heroes/hiro/sounds/attack_%.wav 400 2000 .65"/>
+		<frameevent frame="3" cmd="PlaySoundLinear /heroes/devourer/sounds/attack_grunt_%.wav 500 2000 .85"/>
+	</anim>
+
+	<anim name="walk_1" clip="clips/walk_1.clip" loop="true" fps="30">
+		<frameevent frame="6" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="11" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="19" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="24" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		
+		<frameevent frame="6" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+		<frameevent frame="10" cmd="PlaySoundLinear /heroes/devourer/sounds/move_%.wav 0 800 .5"/>
+		<frameevent frame="19" cmd="StartEffect /shared/effects/footstep_l_#GetTerrainType()#.effect"/>
+		<frameevent frame="23" cmd="PlaySoundLinear /heroes/devourer/sounds/move_%.wav 0 800 .4"/>
+	</anim>
+	
+	<anim name="death_1" clip="clips/death_1.clip" loop="true" loopbackframe="-1">
+		<frameevent frame="1" cmd="PlaySoundLinear /heroes/devourer/sounds/death.wav 1500 2500 .75"/>
+		<frameevent frame="95" cmd="StartEffect effects/death.effect" />
+	</anim>
+	
+	<anim name="ability_1" clip="clips/ability_1.clip" loop="true" loopbackframe="21" fps="38">
+		<frameevent frame="15" cmd="PlaySoundLinear /heroes/devourer/ability_01/sounds/cast.wav 1500 2500 1"/>
+		<frameevent frame="10" cmd="PlaySoundLinear /heroes/devourer/ability_01/sounds/ability.wav 1500 2500 .5"/>
+	</anim>
+	
+	<anim name="ability_1_end" clip="clips/ability_1_end.clip" />
+	
+	<anim name="ability_2" clip="clips/ability_2.clip"/>
+
+	<anim name="ability_4" clip="clips/ability_4.clip" loop="true" loopbackframe="16">
+		<frameevent frame="1" cmd="PlaySoundLinear /heroes/devourer/ability_04/sounds/cast.wav 1500 2500 1"/>
+	</anim>
+	
+	<anim name="knock_1" clip="clips/knock_1.clip" loop="true" loopbackframe="-1"/>
+	
+	<anim name="getup_1" clip="clips/getup_1.clip"/>		
+	
+	
+</model>

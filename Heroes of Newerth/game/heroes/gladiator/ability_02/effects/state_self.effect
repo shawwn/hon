@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1" useentityeffectscale="1">
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale=".5">
+		
+			<model 
+				life="300"
+				bone="Box07"
+				startalpha="1"
+				endalpha="0"
+				model="whip_glow/model.mdf"
+				anim="idle"
+				startcolor="5 3 1.5"
+				endcolor="0 0 0"
+				startscale="5.25"
+				endscale="3.75"
+				position="0 0 0"
+				directionalspace="local"
+				yaw="180"
+			/>
+		
+			<model 
+				bone="Box07"
+				startalpha="1"
+				endalpha="0"
+				model="whip_glow/model.mdf"
+				anim="idle"
+				startcolor="2.5 1 .5"
+				endcolor="0 0 0"
+				scale="3.75"
+				expirelife="500"
+				position="0 0 0"
+				directionalspace="local"
+				yaw="180"
+			/>
+
+			<template name="glow">
+				<billboard
+					bone="{bone}"
+					size="85"
+					life="1000"
+					startcolor="0 0 0"
+					midcolor=".4 .15 0"
+					endcolor="0 0 0"
+					material="/shared/effects/materials/whitedot.material"
+					loop="true"
+					position="0 0 0"
+					depthbias="-50"
+				/>
+			
+				<billboard
+					bone="{bone}"
+					size="40"
+					life="1000"
+					startcolor="0 0 0"
+					midcolor=".4 0 0"
+					endcolor="0 0 0"
+					material="/shared/effects/materials/whitedot.material"
+					loop="true"
+					position="0 0 0"
+					depthbias="-50"
+				/>
+
+				<billboard
+					bone="{bone}"
+					size="100"
+					life="1000"
+					startcolor="0 0 0"
+					midcolor=".15"
+					endcolor="0 0 0"
+					material="/shared/effects/materials/whitedot.material"
+					loop="true"
+					position="0 0 0"
+					depthbias="-50"
+				/>
+			</template>
+
+			<instance name="glow" bone="Box07"/>
+			<instance name="glow" bone="Box08"/>
+			<instance name="glow" bone="Box09"/>
+			<instance name="glow" bone="Box10"/>
+			<instance name="glow" bone="Box12"/>
+			
+
+
+		</particlesystem>
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+
+

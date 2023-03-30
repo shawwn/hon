@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" deferred="true" useentityeffectscale="1">
+
+	<definitions>
+
+		<particlesystem name="system0" space="entity" scale="2">
+<!--
+			<billboard
+				life="4000"
+				bone="_bone_center"
+				position="0 0 0"
+				startsize="60"
+				midsize="75"
+				endsize="60"
+				startalpha="0"
+				midalpha="1"
+				endalpha="0"				
+				depthbias="0"
+				color="1 0 0"
+				material="/shared/effects/materials/slow.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+				rollspeed="45"
+				loop="true"
+			/>
+-->
+
+			<billboard
+				life="4000"
+				bone="_bone_center"
+				position="0 0 0"
+				startsize="45"
+				midsize="65"
+				endsize="45"				
+				depthbias="0"
+				startcolor=".5 0 0"
+				midcolor="0 0 0"
+				endcolor=".5 0 0"
+				material="/shared/effects/materials/corona_07.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+				roll="90"
+				rollspeed="-45"
+				loop="true"
+			/>
+
+			<billboard
+				life="8000"
+				bone="_bone_center"
+				position="0 0 0"
+				startsize="75"
+				midsize="75"
+				endsize="75"
+				startalpha="0"
+				midalpha=".65"
+				endalpha="0"				
+				depthbias="0"
+				color="1 0 0"
+				material="/shared/effects/materials/slow.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+				roll="90"
+				rollspeed="-45"
+				loop="true"
+			/>
+
+			<billboard
+				life="8000"
+				bone="_bone_center"
+				position="0 0 0"
+				startsize="75"
+				midsize="75"
+				endsize="75"
+				startalpha="0"
+				midalpha=".65"
+				endalpha="0"				
+				depthbias="0"
+				color="1 0 0"
+				material="/shared/effects/materials/slow.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+				rollspeed="-45"
+				loop="true"
+			/>
+
+			<billboard
+				life="8000"
+				bone="_bone_center"
+				position="0 0 0"
+				startsize="85"
+				midsize="60"
+				endsize="85"
+				startalpha=".65"
+				midalpha="0"
+				endalpha=".65"				
+				depthbias="0"
+				color="1 0 0"
+				material="/shared/effects/materials/slow.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+				roll="90"
+				rollspeed="-45"
+				loop="true"
+			/>
+
+			<billboard
+				life="8000"
+				bone="_bone_center"
+				position="0 0 0"
+				startsize="85"
+				midsize="60"
+				endsize="85"
+				startalpha=".65"
+				midalpha="0"
+				endalpha=".65"				
+				depthbias="0"
+				color="1 0 0"
+				material="/shared/effects/materials/slow.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+				roll="0"
+				rollspeed="-45"
+				loop="true"
+			/>
+<!--
+			<billboard
+				bone="_bone_center"
+				position="0 0 0"
+				param="0.1"	
+				startsize="200"
+				endsize="200"
+				startalpha="1"
+				midalpha="1"
+				endalpha="1"				
+				depthbias="0"
+				color="1 0 0"
+				material="/shared/effects/materials/slow.material"
+				framespeed=".25"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+				rollspeed="-45"
+			/>
+			
+			<billboard
+				bone="_bone_center"
+				position="0 0 0"
+				param="0.1"	
+				startsize="150"
+				endsize="150"
+				startalpha="1"
+				midalpha="1"
+				endalpha="1"				
+				depthbias="0"
+				color="1 0 0"
+				material="/shared/effects/materials/slow.material"
+				framespeed=".5"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+				rollspeed="-45"
+			/>
+			
+			
+			
+			<billboard
+				bone="_bone_center"
+				position="0 0 0"
+				param="0.1"	
+				startsize="185"
+				endsize="185"
+				startalpha="1"
+				midalpha="1"
+				endalpha="1"				
+				depthbias="0"
+				color="1 0 0"
+				material="/shared/effects/materials/slow.material"
+				framespeed=".5"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+				roll="45"
+			/>
+-->
+			<billboard
+				loop="true"
+				bone="_bone_overhead"
+				position="0 0 0"
+				delay="0"
+				life="3000"
+				param="0.1"	
+				startsize="30"
+				midsize="40"
+				endsize="30"
+				startalpha="1"
+				midalpha="1"
+				endalpha="1"
+				color=".8"
+				material="/shared/effects/materials/bonebreak.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+				roll="180"
+			/>
+			
+		
+			<billboard
+				bone="_bone_overhead"
+				life="3000"
+				loop="true"
+				startcolor=".5 .25 0"
+				midcolor=".65 0 0"
+				endcolor=".5 .25 0"
+				startsize="30"
+				midsize="40"
+				endsize="30"
+				depthbias="-50"
+				material="/shared/effects/materials/whitedot.material"
+				position="0 0 0"
+			/>
+			
+			<billboard
+				loop="true"
+				bone="_bone_center"
+				position="0 0 0"
+				delay="0"
+				life="2000"
+				param="0.1"
+				startsize="75"
+				endsize="125"
+				startalpha="0"
+				midalpha=".25"
+				endalpha="0"
+				depthbias="-50"
+				material="/shared/effects/materials/refract_swell.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+				rollspeed="45"
+			/>
+			
+			<model
+				life="350"
+				parentmodel="true"
+				parentskeleton="true"
+				expirelife="500"
+				startcolor="3 1 0"
+				endcolor="0"
+				material="/shared/effects/materials/shell2.material"
+			/>
+
+			<billboard
+				bone="_bone_centerofchest"
+				life="250"
+				startcolor=".35 .125 0"
+				midcolor=".5 .15 0"
+				midcolorpos="0.3"
+				endcolor="0"
+				startsize="200"
+				endsize="0"
+				depthbias="-50"
+				material="/shared/effects/materials/whitedot.material"
+				position="0 0 0"
+			/>
+			
+			<billboard
+				bone="_bone_centerofchest"
+				position="0 0 0"
+				delay="0"
+				life="200"
+				param="0.1"	
+				startsize="50"
+				endsize="150"
+				startalpha="0"
+				midalpha=".4"
+				endalpha="0"				
+				depthbias="0"
+				material="/shared/effects/materials/refract_swell.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+			/>
+			
+			<billboard
+				bone="_bone_centerofchest"
+				position="0 0 0"
+				delay="175"
+				life="200"
+				param="0.1"	
+				startsize="50"
+				endsize="150"
+				startalpha="0"
+				midalpha=".4"
+				endalpha="0"				
+				depthbias="0"
+				material="/shared/effects/materials/refract_swell.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+			/>
+			
+			
+			
+			
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

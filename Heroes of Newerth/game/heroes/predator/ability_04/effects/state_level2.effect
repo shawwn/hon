@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world">
+
+		<billboard
+			bone="_bone_lefthand"
+			material="/shared/effects/materials/whitedot.material"
+			size="50"
+			depthbias="-50"
+			rollspeed="-100"
+			color=".4 0 0"
+			endcolor="0"
+			expirelife="300"
+		/>
+		
+		<billboard
+			bone="_bone_centerofchest"
+			material="/shared/effects/materials/whitedot.material"
+			size="75"
+			depthbias="-50"
+			rollspeed="-100"
+			color=".3 0 0"
+			endcolor="0"
+			expirelife="300"
+		/>
+		
+		<billboard
+			bone="_bone_righthand"
+			material="/shared/effects/materials/whitedot.material"
+			size="50"
+			depthbias="-50"
+			rollspeed="-100"
+			color=".4 0 0"
+			endcolor="0"
+			expirelife="300"
+		/>
+		
+		<model
+			life="600"
+			parentmodel="true"
+			parentskeleton="true"
+			startcolor="1 0 0"
+			endcolor="0 0 0"
+			startscale="1"
+			midscale="1.25"
+			endscale="1"
+			midscalepos=".4"
+			material="/shared/effects/materials/shell2.material"
+			startalpha="0"
+			endalpha="10"
+		/>
+		
+		<model
+			life="750"
+			parentmodel="true"
+			parentskeleton="true"
+			startcolor="1 0 0"
+			endcolor="0 0 0"
+			material="/shared/effects/materials/shell2.material"
+		/>
+			
+		</particlesystem>
+		
+		
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+	</thread>
+
+</effect>

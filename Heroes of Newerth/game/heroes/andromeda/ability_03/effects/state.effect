@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="cyclone" deferred="true" useentityeffectscale="1">
+	<definitions>
+		<particlesystem name="system0" space="entity" scale="1">		
+	
+		
+			<model
+				bone="_bone_overhead"
+				model="orbit.mdf"
+				anim="idle"
+				scale="0.4"
+				roll="45"
+				position="0 0 0"		
+			>		
+				<billboard
+					bone="_bone_fx"
+					material="/shared/effects/materials/star_04.material"
+					color=".2 .4 1"
+					scale="1"
+				/>
+				
+				<trailemitter
+					bone="_bone_fx"
+					spawnrate="10"
+					particlelife="1350"
+					texpostime="1350"
+					texposscale="0.0"
+					texstretchscale="1.0"
+					material="/shared/effects/materials/arrow_trail.material"
+				>
+					<particle
+						color=".2 .2 1"
+						endcolor="0 0 0"
+						startsize="7"
+						endsize="0"					
+					/>
+				</trailemitter>			
+				
+			</model>
+		
+			<model
+				bone="_bone_overhead"			
+				model="orbit.mdf"
+				anim="idle"
+				scale="0.5"
+				pitch="45"
+				position="0 0 0"		
+			>	
+				<billboard
+					bone="_bone_fx"
+					material="/shared/effects/materials/star_05.material"
+					scale="0.6"
+				/>	
+				<trailemitter
+					bone="_bone_fx"
+					spawnrate="10"
+					particlelife="1350"
+					texpostime="1350"
+					texposscale="0.0"
+					texstretchscale="1.0"
+					material="/shared/effects/materials/arrow_trail.material"
+				>
+					<particle
+						color=".2 1 .2"
+						endcolor="0 0 0"
+						startsize="7"
+						endsize="0"					
+					/>
+				</trailemitter>				
+			</model>
+
+			
+			<model
+				bone="_bone_overhead"
+				model="orbit.mdf"
+				anim="idle"
+				scale="0.6"
+				roll="-45"
+				yaw="180"
+				position="0 0 0"
+				lockup="1"
+			>	
+				<billboard
+					bone="_bone_fx"
+					material="/shared/effects/materials/star_07.material"				
+					scale=".7"
+				/>
+				<trailemitter
+					bone="_bone_fx"
+					spawnrate="10"
+					particlelife="1350"
+					texpostime="1350"
+					texposscale="0.0"
+					texstretchscale="1.0"
+					material="/shared/effects/materials/arrow_trail.material"
+				>
+					<particle
+						color=".8 .2 .8"
+						endcolor="0 0 0"
+						startsize="7"
+						endsize="0"					
+					/>
+				</trailemitter>				
+			</model>
+			
+				
+		
+		
+		
+		
+		</particlesystem>
+		<particlesystem name="system1" space="world" scale="1">	
+		
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnparticlesystem instance="instance1" particlesystem="system1" />
+		
+      		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

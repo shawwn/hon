@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="accursed.max" file="shieldexplosion.model" type="K2" >
+<anim name="idle" clip="shieldexplosion.clip" fps="30" loop="true" blendtime="0" loopbackframe="-1"/>
+</model>

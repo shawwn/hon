@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="1.0">
+			<simpleemitter		
+								bone="Hair_1"			
+								spawnrate="30"
+								minparticlelife="800"
+								maxparticlelife="1000"
+								gravity="-10"
+								speed="50"
+								offsetsphere="20 20 0"
+								drag="0"
+								inheritvelocity=".1"
+								direction="0 0 0"
+								material="/shared/effects/materials/star_03.material"
+							>
+								<particle 
+									startcolor="0 0 0"
+									midcolor=".2 .2 1"
+									endcolor=".2 .2 1"
+									midcolorpos=".2"				
+									minangle="0"
+									maxangle="360"
+									startsize="0"
+									midsize="10"				
+									endsize="0"
+									
+									
+								/>			
+							</simpleemitter>
+			<twopointtrailemitter
+				bone_a="_bone_fx1"
+				bone_b="_bone_fx2"
+				spawnrate="200"
+				particlelife="1000"
+				texpostime="400"
+			 	texposscale="0.0"
+			 	texstretchscale=".5"
+				subframepose="1"
+				material="/shared/effects/materials/soul_trail.material"
+			>
+				<particle startalpha="1.0" endalpha="0.0" color="0.4 0.4 .8" />
+			</twopointtrailemitter>
+			
+			<billboard
+				bone="Hair_1"
+				life="1000"
+				color="1 1 1"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="1.0"
+				startparam="0.05"
+				endparam="0.0"
+				midalphapos="0.25"
+				startsize="128"
+				endsize="256"
+				material="/shared/effects/materials/refract_wave.material"
+			/>
+			<trailemitter
+				bone="_bone_fx2"
+				spawnrate="150"
+				particlelife="400"
+				life="2000"
+				texpostime="400"
+			 	texposscale="0.0"
+			 	texstretchscale=".5"
+				subframepose="1"
+				speed="0"
+				
+				material="/shared/effects/materials/mysticenergy.material"
+			>
+				<particle
+					startalpha="1.0"
+					midalpha="0.8"
+					endalpha="0.0"
+					color="0.3 0.4 1.0"
+					startsize="30"
+					endsize="10"
+				/>
+			</trailemitter>
+			<trailemitter
+				bone="_bone_fx1"
+				spawnrate="150"
+				particlelife="400"
+				life="2000"
+				texpostime="400"
+			 	texposscale="0.0"
+			 	texstretchscale=".5"
+				subframepose="1"
+				speed="0"
+				
+				material="/shared/effects/materials/mysticenergy.material"
+			>
+				<particle
+					startalpha="1.0"
+					midalpha="0.8"
+					endalpha="0.0"
+					color=".3 0.4 1.0"
+					startsize="30"
+					endsize="10"
+				/>
+			</trailemitter>
+
+		     <billboard
+				material="/shared/effects/materials/whitedot.material"
+				bone="Hair_1"
+				color="1 1 1"
+				loop="1"
+				life="1000"
+				startalpha=".2"
+				midalpha=".7"
+				endalpha=".2"
+				position="0 0 10"
+				size="35"
+				depthbias="-150"			
+			/>
+				
+		
+			
+				
+			
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+      		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+

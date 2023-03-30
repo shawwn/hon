@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1" useentityeffectscale="true">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="2">
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				spawnrate="20"
+				particlelife="1000"
+				gravity="-3.0"
+				offsetsphere="25"
+				direction="0 0 1"
+				material="/shared/effects/materials/smoke_particle.material"
+				depthbias="-40"
+			>
+				<particle
+					startcolor=".6"
+					endcolor="0"
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="0"
+					midcolorpos=".5"
+					maxanglespeed="0"
+					startsize="25"
+					endsize="75"
+					startalpha=".65"
+					endalpha="0"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				bone="_bone_centerofchest"
+				spawnrate="20"
+				particlelife="750"
+				gravity="-3.0"
+				offsetsphere="25"
+				direction="0 0 1"
+				material="/shared/effects/materials/fireball_01.material"
+				depthbias="-40"
+			>
+				<particle
+					startcolor="0 0 0"
+					midcolor=".175 .12 .09"
+					endcolor="0 0 0"
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="0"
+					midcolorpos=".5"
+					maxanglespeed="0"
+					startsize="25"
+					endsize="55"
+					anchor="1"
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+
+

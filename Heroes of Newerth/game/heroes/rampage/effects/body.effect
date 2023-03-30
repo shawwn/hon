@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale=".75">
+
+			<template name="dust">
+				<simpleemitter
+					bone="{bone}"
+					gravity="-1"
+					spawnrate="10"
+					minparticlelife="800"
+					maxparticlelife="1650"
+					offsetsphere="25 25 0"
+					material="/shared/effects/materials/smoke_particle.material"
+					depthbias="-55"
+					inheritvelocity="-0.1"
+				>
+					<particle 
+						minangle="-180"
+						maxangle="180"		
+						startcolor=".4 .3 .25"
+						endcolor=".4 .3 .25"
+						size="10"
+						minstartscale="6"
+						maxstartscale="8"
+						maxendscale="20"
+						minendscale="12"
+						startalpha="0"
+						midalpha="0.25"
+						midalphapos="0.2"
+						endalpha="0"
+					/>
+				</simpleemitter>
+			</template>
+			
+			<instance name="dust" bone="_bone_alt_leftfoot"/>
+			<instance name="dust" bone="_bone_alt_rightfoo"/>
+			<instance name="dust" bone="_bone_leftfoot"/>
+			<instance name="dust" bone="_bone_rightfoot"/>
+			
+			<template name="dust">
+				<simpleemitter
+					bone="{bone}"
+					gravity="-1"
+					spawnrate="10"
+					minparticlelife="750"
+					maxparticlelife="1250"
+					offsetsphere="50 50 0"
+					material="/shared/effects/materials/dust_smoke_10.material"
+					depthbias="-55"
+					inheritvelocity="-0.1"
+				>
+					<particle 
+						minangle="-180"
+						maxangle="180"		
+						color="0.7 0.65 .56"
+						size="10"
+						minstartscale="5"
+						maxstartscale="10"
+						minendscale="15"
+						maxendscale="20"
+						startalpha="0"
+						midalpha=".15"
+						midalphapos="0.2"
+						endalpha="0"
+					/>
+				</simpleemitter>
+			</template>
+			
+			<instance name="dust" bone="_bone_alt_leftfoot"/>
+			<instance name="dust" bone="_bone_alt_rightfoo"/>
+			<instance name="dust" bone="_bone_leftfoot"/>
+			<instance name="dust" bone="_bone_rightfoot"/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+		<waitfordeath instance="instance0"/>
+	</thread>
+
+</effect>

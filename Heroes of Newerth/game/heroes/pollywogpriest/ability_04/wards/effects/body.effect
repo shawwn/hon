@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="entity">
+
+			<billboard
+				bone="Object01"
+				material="/shared/effects/materials/whitedot.material"
+				position="0 5 45"
+				startcolor="0 .1 .125"
+				endcolor="0"
+				expirelife="200"
+				depthbias="-65"
+				size="45"
+			/>
+
+			<simpleemitter
+				bone="Object01"
+				spawnrate="5"
+				minparticlelife="1000"
+				maxparticlelife="1500"
+				offsetsphere="10"
+				material="/shared/effects/materials/phantom_smoke_04.material"
+				angle="30"
+				position="0 5 45"
+				depthbias="-45"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-10"
+					maxanglespeed="10"
+					startcolor="0"
+					midcolor="0 .1 .125"
+					endcolor="0"
+					size="15"
+					minendscale="1"
+					maxendscale="3"
+					anchor="1"
+				/>
+			</simpleemitter>
+	
+			<simpleemitter
+				bone="_bone_Leye"
+				spawnrate="5"
+				minparticlelife="400"
+				maxparticlelife="500"
+				material="/shared/effects/materials/whitedot.material"
+				angle="30"
+				position="0 1 .5"
+			>
+				<particle
+					startcolor="0"
+					midcolor="1 .4 0"
+					endcolor="0"
+					size="3"
+					minendscale="1"
+					maxendscale="3"
+					anchor="1"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_Reye"
+				spawnrate="5"
+				minparticlelife="400"
+				maxparticlelife="500"
+				material="/shared/effects/materials/whitedot.material"
+				angle="30"
+				position="0 1 .5"
+			>
+				<particle
+					startcolor="0"
+					midcolor="1 .4 0"
+					endcolor="0"
+					size="3"
+					minendscale="1"
+					maxendscale="3"
+					anchor="1"
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

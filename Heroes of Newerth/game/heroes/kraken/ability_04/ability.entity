@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Kraken4"
+
+	icon="icon.tga"
+	anim="ability_4"
+	casteffect="effects/cast.effect"
+	
+	actiontype="target_position"
+	maxlevel="3"
+	requiredlevel="6,11,16"
+	passiveeffect=""
+	
+	targetradius="300"
+	targetmaterial="/shared/materials/area_cast_indicator.material"
+	targetscheme="nonboss_organic_enemy_units"
+	casteffecttype="SuperiorMagic"
+
+	manacost="150"
+	cooldowntime="110000,100000,90000"
+
+	novoiceresponse="true"
+	
+	range="600"
+>
+	<onimpact>
+		<spawnunit name="Gadget_Kraken_Ability4" count="1" maxactive="1" target="target_position" pushentity="true" />
+	</onimpact>
+</ability>
+

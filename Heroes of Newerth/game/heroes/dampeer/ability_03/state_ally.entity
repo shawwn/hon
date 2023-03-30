@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Dampeer_Ability3_Ally"
+	
+	
+	icon="icon.tga"
+	
+	passiveeffect="effects/state_ally.effect"
+			
+	effecttype="StatusBuff"
+	
+>
+	<onframe />
+	<onattackimpact>
+		<condition test="target_type player_controlled" target="source_entity">
+			<compare a="combat_attackability" b="0" op="eq">
+				<playeffect effect="effects\lifesteal.effect" source="source_entity" target="target_entity"/>
+			</compare>
+		</condition>
+	</onattackimpact>
+	
+	<modifier key="Dampeer_Melee" condition="melee" modpriority="100"
+		lifesteal="0.15,0.20,0.25,0.3"
+	/>
+	
+	<modifier key="Dampeer_Ranged" condition="ranged" modpriority="100"
+		lifesteal="0.025,0.05,0.075,0.1"
+	/>
+</state>

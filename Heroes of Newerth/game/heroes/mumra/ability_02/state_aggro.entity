@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Mumra_Ability2_Aggro"
+
+	morphaggrorange="100"
+	morphpriority="10"
+	
+	ishidden="true"
+>
+</state>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Defiler4"
+
+	icon="icon.tga"
+	
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_self"
+	casteffecttype="SuperiorMagic"
+	
+	manacost="200,300,400"
+	cooldowntime="100000"
+	casteffect="effects/cast.effect"
+>
+	<onimpact effectdescription="true">
+		<spawnaffector name="Affector_Defiler_Ability4" target="target_entity"/>
+	</onimpact>
+	
+	<modifier key="Defiler_Ability3_1" modpriority="100"
+		description2="true"
+	/>
+	
+	<modifier key="Defiler_Ability3_2" modpriority="100"
+		description2="true"
+	/>
+	
+	<modifier key="Defiler_Ability3_3" modpriority="100"
+		description2="true"
+	/>
+	
+	<modifier key="Defiler_Ability3_4" modpriority="100"
+		description2="true"
+	/>
+</ability>

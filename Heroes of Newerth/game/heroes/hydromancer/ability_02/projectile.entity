@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Hydromancer_Ability2"
+
+	speed="600"
+	gravity="0"
+
+	modelscale="1"
+	model="projectile/effects/leviathan_invis/model.mdf"
+	traileffect="projectile/effects/trail.effect"
+	impacteffect="projectile/effects/impact.effect"
+	canturn="true"
+	flying="true"
+	flyheight="0"
+	deatheffect="projectile/effects/death.effect"
+>
+	<onimpact>
+		<combatevent effecttype="AbilityBasedProjectile">
+			<onimpact>
+				<targettype type="moving" entity="target_entity">
+					<cantarget target="target_entity" effecttype="Magic">
+						<applystate name="State_Hydromancer_Ability2" duration="50" />
+						<applystate name="State_Stunned_Knockdown" duration="1000,1500,2000,2500" />
+					</cantarget>
+				</targettype>
+				<damage effecttype="Magic" amount="100,150,200,250" />
+				<spawnunit name="Gadget_Hydromancer_Ability2_Reveal_Linger" count="1" target="this_position" />
+			</onimpact>
+		</combatevent>
+		<kill target="proxy_entity" source="" />
+	</onimpact>
+</projectile>

@@ -1,0 +1,11 @@
+Each attribute gives passive bonuses. 
+
+1 Strength gives 19 Hit Points
+1 Strength gives 0.05 Health Regeneration
+1 Intelligence gives 13 Mana Points
+1 Intelligence gives 0.04 Mana Regeneration
+1 Agility gives 0.14 Physical Armor 
+1 Agility gives 1 Attack Speed
+
+
+These are added to the base properties. 

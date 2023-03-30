@@ -1,0 +1,10 @@
+*.user
+*.exp
+LIB-Release
+DLL-Debug
+DLL-Release
+LIB-Debug
+release-dll-ssl-dll
+release-dll-ssl-dll-zlib-dll
+release
+debug-dll-ssl-dll

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="ability_02">
+
+	<definitions>
+	
+		<modifier
+			name="modifier0"
+			life="750"
+			startcolor="0 2 0"
+			endcolor="1.0 1.0 1.0"
+		/>
+
+		<particlesystem name="system0" space="world" scale="1.5">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".65"
+				sample="/shared/sounds/impacts/impact_body_%.wav"
+			/>
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".65"
+				sample="/shared/sounds/impacts/impact_flesh_%.wav"
+			/>
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".85"
+				sample="../sounds/impact.wav"
+			/>
+		
+			<simpleemitter
+				bone="_bone_centerofchest"
+				count="50"
+				spawnrate="100"
+				particlelife="600"
+				gravity="-10"
+				speed="10"
+				drag=".003"
+				acceleration="00"
+				position="0 20 0"
+				material="/shared/effects/materials/flame.material"
+				offsetsphere="10 10 0"
+				minangle="0"
+				maxangle="0"
+				direction="0 0 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="180"
+					minanglespeed="50"
+					startcolor="0 .3 .2"
+					midcolor="0 .3 .2"
+					endcolor="0 .3 .2"
+					midcolorpos="1"
+					maxanglespeed="0"
+					startsize="20"
+					midsize="35"
+					endsize="10"
+					startalpha=".1"
+					midalpha=".3"
+					endalpha="0"
+					startanchor="1"
+					endanchor=".5"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				count="55"
+				spawnrate="50"
+				particlelife="1000"
+				gravity="-5"
+				speed="-100"
+				drag="0.07"
+				acceleration="0.0"
+				mintimenudge="0"
+				maxtimenudge="1000"
+				material="/shared/effects/materials/smoke_particle.material"
+				offsetsphere="20 20 20"
+				inheritvelocity=".25"
+				direction="0 0 1"
+				position="0 20 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-30"
+					startcolor="0 .75 .25"
+					endcolor="0 0 0"
+					maxanglespeed="30"
+					startsize="35"
+					endsize="75"
+					startalpha="0"
+					midalpha=".25"
+					endalpha="0"
+					midalphapos=".2"
+					startanchor="0"
+					endanchor="0"
+				/>
+
+				<particle
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-50"
+					color="0 .75 .5"
+					maxanglespeed="50"
+					startsize="35"
+					endsize="75"
+					startalpha="0"
+					midalpha=".25"
+					endalpha="0"
+					midalphapos=".2"
+					startanchor="0"
+					endanchor="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				count="10"
+				spawnrate="100"
+				particlelife="2000"
+				gravity="-.2"
+				speed="10"
+				drag="0.07"
+				acceleration="0.0"
+				mintimenudge="0"
+				maxtimenudge="1000"
+				material="/shared/effects/materials/smoke_particle.material"
+				offsetsphere="15 15 15"
+				position="0 20 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-30"
+					startcolor="0 .75 .25"
+					endcolor="0 0 0"
+					maxanglespeed="30"
+					startsize="35"
+					endsize="75"
+					startalpha="0"
+					midalpha=".25"
+					endalpha="0"
+					midalphapos=".2"
+					startanchor="1"
+					endanchor=".5"
+				/>
+
+				<particle
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-50"
+					color="0 .75 .25"
+					maxanglespeed="50"
+					startsize="35"
+					endsize="75"
+					startalpha="0"
+					midalpha=".25"
+					endalpha="0"
+					midalphapos=".2"
+					startanchor="1"
+					endanchor=".5"
+				/>
+			</simpleemitter>
+
+			<billboard
+				life="500"
+				color="1.0 1.0 1.0"
+				midalphapos="0.25"
+				param="0.0555"
+				startsize="264"
+				endsize="64"
+				startalpha="0"
+				midalpha=".9"
+				endalpha="0"
+				depthbias="-49"
+				position="0 0 20"
+				material="/shared/effects/materials/refract_ring.material"
+				lockup="0"
+				pitch="0"
+			/>
+			
+			
+			<billboard
+				delay="500"
+				life="500"
+				color="1.0 1.0 1.0"
+				midalphapos="0.25"
+				param="0.0555"
+				startsize="64"
+				endsize="264"
+				startalpha="0"
+				midalpha=".9"
+				endalpha="0"
+				depthbias="-49"
+				position="0 0 20"
+				material="/shared/effects/materials/refract_ring.material"
+				lockup="0"
+				pitch="0"
+			/>
+			<simpleemitter
+				bone="_bone_centerofchest"
+				count="25"
+				spawnrate="50"
+				particlelife="600"
+				gravity="-10"
+				speed="10"
+				drag=".003"
+				acceleration="00"
+				position="0 20 0"
+				material="/shared/effects/materials/flame.material"
+				offsetsphere="10 10 0"
+				minangle="0"
+				maxangle="0"
+				direction="0 0 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="180"
+					minanglespeed="50"
+					startcolor="0 .3 .2"
+					midcolor=".3 .3 .2"
+					endcolor=".3 .3 .2"
+					midcolorpos="1"
+					maxanglespeed="0"
+					startsize="20"
+					midsize="35"
+					endsize="10"
+					startalpha=".1"
+					midalpha=".3"
+					endalpha="0"
+					startanchor="1"
+					endanchor=".5"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				bone="_bone_centerofchest"
+				count="25"
+				spawnrate="40"
+				particlelife="600"
+				gravity="-10"
+				speed="10"
+				drag=".003"
+				acceleration="00"
+				position="0 20 0"
+				material="/shared/effects/materials/flame.material"
+				offsetsphere="15 15 0"
+				minangle="0"
+				maxangle="0"
+				direction="0 0 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="180"
+					minanglespeed="50"
+					startcolor=".2 .3 .2"
+					midcolor=".2 .3 .2"
+					endcolor=".2 .3 .2"
+					midcolorpos="1"
+					maxanglespeed="0"
+					startsize="20"
+					midsize="35"
+					endsize="10"
+					startalpha=".1"
+					midalpha=".3"
+					endalpha="0"
+					startstickiness="0"
+					endstickiness="0"
+				/>
+			</simpleemitter>
+
+
+	</particlesystem>
+</definitions>
+
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<spawnmodifier instance="instance1" modifier="modifier0"/>  
+	<camerashake2 scale="11.0" radius="1200" duration="400" frequency="22" />
+	<waitfordeath instance="instance0" />
+</thread>
+
+</effect>
+

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Magmar4"
+
+	icon="icon.tga"
+
+	statuseffecttooltip="State_Magmar_Ability4"
+	anim="ability_4"
+	casttime="250"
+	castactiontime="250"
+	channeltime="2000"
+	ischanneling="true"
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="self_position"
+	targetradius="300"
+	casteffecttype="Magic"
+	casteffect=""
+	targetscheme="enemy_units"
+	manacost="175,250,325"
+	cooldowntime="140000,120000,100000"
+
+	novoiceresponse="true"
+>
+	<onimpact />
+	
+	<onchannelstart>
+		<applystate name="State_Magmar_Ability4_SelfCast" ischannel="true" duration="2000" target="source_entity" />
+	</onchannelstart>
+
+
+	<onchannelend >
+		<playeffect effect="effects/start.effect" target="source_position" source="source_position" occlude="true"/>
+		<playeffect effect="effects/self.effect" target="source_entity" source="source_entity"/>
+		<spawnaffector name="Affector_Magmar_Ability4" target="source_entity" proxy="source_entity" param="0" />
+	</onchannelend>
+	
+	<modifier key="ult_boost" modpriority="100"
+		displayname="true"
+		cooldowntime="120000,100000,80000"
+	>
+		<onimpact />
+	</modifier>
+</ability>

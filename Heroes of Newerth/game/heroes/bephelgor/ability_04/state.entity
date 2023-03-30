@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Bephelgor_Ability4"
+
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+	movespeedslowstart="0.5"
+	movespeedslowmid="0.5"
+	movespeedslowend="0.0"
+	movespeedslowduration="4000"
+	movespeedslowmidpos="0.33"
+	
+	effecttype=""
+>
+	<onframe />
+
+</state>

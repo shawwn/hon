@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Hammerstorm_Ability3"
+
+	radius="500"
+	impactdelay="0"
+	targetselection="all"
+	targetscheme="ally_units"
+	effecttype=""
+>
+	<onimpact>
+		<applystate name="State_Hammerstorm_Ability3" duration="6000" />
+	</onimpact>
+</affector>

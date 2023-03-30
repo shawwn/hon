@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Panda_Ability1_Bound"
+	
+	icon="icon.tga"
+	passiveeffect=""
+
+
+	immobilized2="true"
+
+	ishidden="true"
+
+	unitwalking="true"
+	effecttype=""
+>
+	<onframe>
+		<condition test="not_hasstate State_Panda_Ability1" target="proxy_entity">
+			<expire />
+		</condition>
+	</onframe>
+</state>

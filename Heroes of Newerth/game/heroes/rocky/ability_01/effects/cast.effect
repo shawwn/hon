@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect  persistent="1">
+	<definitions>
+
+		
+		
+		<particlesystem name="system0" space="world" scale="1">
+	
+
+<simpleemitter
+	delay="140"
+	count="1"
+	particlelife="4000"
+	bone="Bip01 R Hand"
+
+
+>		
+	<particle>
+				<groundsprite
+				
+					delay="0"				
+					life="5400"
+					material="/shared/effects/materials/ground_smash_overlay.material"
+					size="60"			
+					color="1.0 1.0 1.0"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos="0.05"
+				/>	
+				
+				<debris
+					position="0 0 10"
+					delay="0"
+					scale=".8"
+					life="3000"
+					model="/shared/effects/models/debris/debris.mdf"
+					anim="idle"	
+					minspeed="100.0"
+					maxspeed="400.0"
+					minrotationspeed="500.0"
+					maxrotationspeed="600.0"
+					gravity="20.0"
+					minangle="0"
+					color=".6 .6 .3"
+					maxangle="20"
+					collide="true"
+					startalpha="1.0"
+					midalpha="1.0"
+					endalpha="0.0"
+					midalphapos="0.9"
+					bounce="0.7"
+					reflect="0.6"
+					animpose="false"
+				/>	
+
+
+				<billboard
+					life="400"
+					color="1.0 1.0 1.0"
+					startalpha="1.0"
+					midalpha="1.0"
+					endalpha="0.0"
+					midalphapos="0.75"
+					startparam=".045"
+					endparam="0.0"
+					startsize="128"
+					endsize="668"
+					depthbias="0"
+					position="0 0 20"
+					material="/shared/effects/materials/refract_ripple.material"
+					lockup="true"
+					pitch="90"
+				/>					
+			</particle>
+		</simpleemitter>
+
+	
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+	  
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+
+

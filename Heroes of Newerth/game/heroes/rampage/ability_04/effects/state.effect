@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" deferred="true" useentityeffectscale="1">
+	<definitions>
+
+		<modifier
+			name="modifier0"
+			life="1000"
+			startcolor="1 1 1"
+			endcolor="1 1 1"
+			alpha="1"
+		/>
+	
+		<particlesystem name="system0" space="world" scale="1.1" >
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				particlelife="2000"
+				spawnrate="15"
+				speed="0"
+				gravity="0"
+				direction="0 0 1"
+				particledirectionalspace="local"
+				minangle="0"
+				maxangle="30"
+				offsetsphere="100 100 0"
+				position="0 50 0"
+			>
+				<particle> 
+					<groundsprite
+						life="2000"
+						material="/shared/effects/materials/splatter_blend.material"
+						scale=".2"
+						minyaw="-360"	
+						maxyaw="360"
+						minsize="75"
+						maxsize="125"
+						position="0 0 0"
+						color=".3 0 0"
+						midcolorpos=".1"
+						startalpha=".5"
+						midalpha=".5"
+						endalpha="0"
+						midalphapos=".1"
+					/>
+				</particle>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				life="1000"
+				particlelife="1200"
+				spawnrate="10"
+				speed="120"
+				gravity="10"
+				direction="0 0 1"
+				particledirectionalspace="local"
+				minangle="0"
+				maxangle="30"
+				material="/shared/effects/materials/blood1.material"
+				offsetsphere="25"
+				position="0 0 0"
+			>
+				<particle 
+					minanglespeed="-100"
+					maxanglespeed="100"
+					minangle="-360"
+					maxangle="360"
+					color=".35 0 0"
+					startsize="50"
+					minendsize="125"
+					maxendsize="165"
+					startalpha=".5"
+					midalpha=".5"
+					endalpha="0"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				bone="_bone_leftfoot"			
+				spawnrate="25"
+				particlelife="1000"
+				gravity="0"
+				speed="0"
+				drag="0"
+				acceleration="0"
+				position="0 0 0"				
+			>
+				<particle>	
+					<groundsprite	
+						life="750"
+						material="/shared/effects/materials/ground_smash_overlay.material"
+						minsize="17"
+						maxsize="25"			
+						color="1 1 1"
+						startalpha=".5"
+						midalpha=".5"
+						endalpha="0"
+						position="0 0 0"
+					/>	
+				</particle>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_rightfoot"			
+				spawnrate="25"
+				particlelife="1000"
+				gravity="0"
+				speed="0"
+				drag="0"
+				acceleration="0"
+				position="0 0 0"				
+			>
+				<particle>	
+					<groundsprite	
+						life="1250"
+						material="/shared/effects/materials/ground_smash_overlay.material"
+						minsize="17"
+						maxsize="25"			
+						color="1 1 1"
+						startalpha=".5"
+						midalpha=".5"
+						endalpha="0"
+						position="0 0 0"
+					/>	
+				</particle>
+			</simpleemitter>
+			
+			<simpleemitter
+				bone="_bone_leftfoot"
+				spawnrate="100"
+				minparticlelife="500"
+				maxparticlelife="1000"
+				inheritvelocity=".05"
+				position="0 0 0"
+				material="/shared/effects/materials/smoke_particle.material"
+				minangle="0"
+				maxangle="40"
+				direction="0 0 1"
+				offsetsphere="25 25 0"
+			>
+				<particle
+					angle="-90"
+					minangle="0"
+					maxangle="30"
+					minanglespeed="-55"
+					maxanglespeed="55"
+					startcolor=".7 .5 .25"
+					midcolorpos=".75"
+					midcolor="0.7 .65 .56"
+					endcolor="0.7 .65 .56"
+					startsize="25"
+					midsize="50"
+					midsizepos=".2"
+					endsize="50"
+					startalpha=".25"
+					endalpha="0"
+					turn="true"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				bone="_bone_rightfoot"
+				spawnrate="100"
+				minparticlelife="500"
+				maxparticlelife="1000"
+				inheritvelocity=".05"
+				position="0 0 0"
+				material="/shared/effects/materials/smoke_particle.material"
+				minangle="0"
+				maxangle="40"
+				direction="0 0 1"
+				offsetsphere="25 25 0"
+			>
+				<particle
+					angle="-90"
+					minangle="0"
+					maxangle="30"
+					minanglespeed="-55"
+					maxanglespeed="55"
+					startcolor=".7 .5 .25"
+					midcolorpos=".75"
+					midcolor="0.7 .65 .56"
+					endcolor="0.7 .65 .56"
+					startsize="25"
+					midsize="50"
+					midsizepos=".2"
+					endsize="50"
+					startalpha=".25"
+					endalpha="0"
+					turn="true"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_leftfoot"	
+				spawnrate="10"
+				minparticlelife="1000"
+				maxparticlelife="1500"				
+				gravity="0"
+				speed="45"
+				drag="0"
+				acceleration="0"
+				position="0 0 0"
+				material="/shared/effects/materials/dust_smoke_10.material"
+				minangle="0"
+				maxangle="20"
+				direction="0 0 1"
+				offsetsphere="15 15 15"
+			>
+				<particle 
+					minangle="0"
+					maxangle="0"
+					minanglespeed="50"
+					maxanglespeed="150"
+					color="0.7 0.65 .56"
+					startsize="70"
+					endsize="20"
+					startalpha=".25"
+					midalpha=".25"
+					endalpha="0"
+					startstickiness="0"
+					endstickiness="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_rightfoot"	
+				spawnrate="10"
+				minparticlelife="1000"
+				maxparticlelife="1500"				
+				gravity="0"
+				speed="45"
+				drag="0"
+				acceleration="0"
+				position="0 0 0"
+				material="/shared/effects/materials/dust_smoke_10.material"
+				minangle="0"
+				maxangle="20"
+				direction="0 0 1"
+				offsetsphere="15 15 15"
+			>
+				<particle 
+					minangle="0"
+					maxangle="0"
+					minanglespeed="50"
+					maxanglespeed="150"
+					color="0.7 0.65 .56"
+					startsize="65"
+					endsize="20"
+					startalpha=".25"
+					midalpha=".25"
+					endalpha="0"
+					startstickiness="0"
+					endstickiness="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				count="4"
+				bone="_bone_leftfoot"
+				particlelife="5000"
+				spawnrate="2"
+				offsetsphere="50 50 0"
+			>
+				<particle>
+					<model
+						position="0 0 0"
+						life="2000"
+						model="../../ability_01/effects/rocks/model.mdf"
+						anim="default_2"
+						color="1 1 1"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".5"
+						startscale="1.65"
+						endscale="1.65"
+						minyaw="0"
+						maxyaw="180"
+					/>
+				</particle>
+			</simpleemitter>
+			
+			<simpleemitter
+				count="4"
+				bone="_bone_rightfoot"
+				particlelife="5000"
+				spawnrate="2"
+				offsetsphere="50 50 0"
+			>
+				<particle>
+					<model
+						position="0 0 0"
+						life="2000"
+						model="../../ability_01/effects/rocks/model.mdf"
+						anim="default_2"
+						color="1 1 1"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".5"
+						startscale="1.2"
+						endscale="1.2"
+						minyaw="0"
+						maxyaw="180"
+					/>
+				</particle>
+			</simpleemitter>
+			
+		<template name="beam">
+
+			<beam
+				expirelife="1000"
+				owner_a="source"
+				owner_b="target"
+				bone_b="{bone_b}"
+				bone_a="{bone_a}"
+				size="12"
+				color="1 1 1"
+				startalpha=".40"
+				endalpha="0"
+				material="/shared/effects/materials/chainlinkconnect.material"
+			/>
+
+			<beam
+				expirelife="1000"
+				owner_a="source"
+				owner_b="target"
+				bone_b="{bone_b}"
+				bone_a="{bone_a}"
+				size="12"
+				color="1 1 1"
+				startalpha="1.0"
+				endalpha="0"
+				material="/shared/effects/materials/chainlinkconnect.material"
+			>
+			</beam>
+<!--
+			<billboard
+				bone="{bone_a}"
+				material="/shared/effects/materials/whitedot.material"
+				color=".1 .25 .4"
+				size="50"
+				depthbias="-20"
+			/>
+			
+			<billboard
+				bone="{bone_b}"
+				material="/shared/effects/materials/whitedot.material"
+				color=".1 .25 .4"
+				size="50"
+				depthbias="-20"
+			/>
+-->
+		</template>
+		
+		<instance name="beam" bone_b="Bip02 L Hand" bone_a="_bone_lefthand"/>
+		<instance name="beam" bone_b="Bip02 L Hand" bone_a="_bone_righthand"/>
+		
+		<model
+			bone="_bone_centerofchest"
+			position="0 0 0"
+			expirelife="500"
+			name="emitter0" 
+			anim="idle"
+			model="chains/model.mdf"
+			scale="2"
+			startcolor="1.5 1.5 1.85"
+			midcolor="1 1 1"
+			endcolor="1 1 1"
+			midcolorpos=".75"
+			startalpha="1"
+			endalpha="0"
+		/>
+		
+
+      </particlesystem>
+   </definitions>
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<spawnmodifier instance="instance1" modifier="modifier0"/>  
+	
+	<waitfordeath instance="instance0" />
+	<wait duration="20000"/>
+	<!-- <die /> -->
+</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

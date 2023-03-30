@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1.5">
+
+
+
+			<simpleemitter
+				spawnrate="25"
+				bone="_bone_fx_02"
+				minparticlelife="0"
+				maxparticlelife="1200"			
+				gravity="-5"
+				minspeed="10"
+				maxspeed="50"
+				drag=".015"
+				material="/shared/effects/materials/flare_02.material"
+				offsetsphere="2"
+				minangle="-10"
+				maxangle="40"
+				direction="0 0 1"
+				directionalspace="global"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="0 .6 1"
+					midcolor="0 .6 1"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					minstartsize="3"
+					maxstartsize="8"
+					endsize="3"
+					startalpha="0"
+					midalpha=".7"
+					endalpha="0"
+					midalphapos=".5"
+					startstickiness=".3"
+					endstickiness="0"
+					turn="true"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				spawnrate="25"
+				bone="_bone_fx_02"
+				minparticlelife="0"
+				maxparticlelife="1200"			
+				gravity="-5"
+				minspeed="10"
+				maxspeed="50"
+				drag=".015"
+				material="/shared/effects/materials/whitedot.material"
+				offsetsphere="2"
+				minangle="-10"
+				maxangle="40"
+				direction="0 0 1"
+				directionalspace="global"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="0 .6 1"
+					midcolor="0 .6 1"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					minstartsize="3"
+					maxstartsize="8"
+					endsize="3"
+					startalpha="0"
+					midalpha=".7"
+					endalpha="0"
+					midalphapos=".5"
+					startstickiness=".3"
+					endstickiness="0"
+					turn="true"
+				/>
+			</simpleemitter>
+			
+			<billboard
+				bone="_bone_fx_02"
+				startcolor="0 .1 0.35"
+				endcolor="0"
+				size=""
+				depthbias="-120"
+				expirelife="500"
+				material="/shared/effects/materials/flare_02.material"
+			/>
+
+		
+
+
+			<!-- Left Hand -->
+
+
+
+			<simpleemitter
+				spawnrate="25"
+				bone="_bone_fx_01"
+				minparticlelife="0"
+				maxparticlelife="1200"			
+				gravity="-2"
+				minspeed="10"
+				maxspeed="50"
+				drag=".015"
+				material="/shared/effects/materials/flare_02.material"
+				offsetsphere="2"
+				minangle="-10"
+				maxangle="40"
+				direction="0 0 1"
+				directionalspace="global"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="0 .6 1"
+					midcolor="0 .6 1"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					minstartsize="3"
+					maxstartsize="8"
+					endsize="3"
+					startalpha="0"
+					midalpha=".7"
+					endalpha="0"
+					midalphapos=".5"
+					startstickiness=".3"
+					endstickiness="0"
+					turn="true"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				spawnrate="25"
+				bone="_bone_fx_01"
+				minparticlelife="0"
+				maxparticlelife="1200"			
+				gravity="-2"
+				minspeed="10"
+				maxspeed="50"
+				drag=".015"
+				material="/shared/effects/materials/whitedot.material"
+				offsetsphere="2"
+				minangle="-10"
+				maxangle="40"
+				direction="0 0 1"
+				directionalspace="global"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="0 .6 1"
+					midcolor="0 .6 1"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					minstartsize="3"
+					maxstartsize="8"
+					endsize="3"
+					startalpha="0"
+					midalpha=".7"
+					endalpha="0"
+					midalphapos=".5"
+					startstickiness=".3"
+					endstickiness="0"
+					turn="true"
+				/>
+			</simpleemitter>
+
+			<billboard
+				bone="_bone_fx_01"
+				startcolor="0 .1 0.35"
+				endcolor="0"
+				size=""
+				depthbias="-120"
+				expirelife="500"
+				material="/shared/effects/materials/flare_02.material"
+			/>
+		
+			
+			<!-- Torch Staff--> 
+
+			<simpleemitter
+				spawnrate="25"
+				bone="_bone_weapon3"
+				minparticlelife="0"
+				maxparticlelife="1200"			
+				gravity="-2"
+				minspeed="10"
+				maxspeed="50"
+				drag=".015"
+				material="/shared/effects/materials/femme_lightning_01.material"
+				offsetsphere="2"
+				minangle="-10"
+				maxangle="40"
+				direction="0 0 1"
+				directionalspace="global"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="1"
+					midcolor="0 .6 1"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					minstartsize="8"
+					maxstartsize="15"
+					endsize="6"
+					startalpha="0"
+					midalpha=".7"
+					endalpha="0"
+					midalphapos=".5"
+					startstickiness=".3"
+					endstickiness="0"
+					turn="true"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				spawnrate="25"
+				bone="_bone_weapon3"
+				minparticlelife="0"
+				maxparticlelife="1200"			
+				gravity="-2"
+				minspeed="10"
+				maxspeed="50"
+				drag=".015"
+				material="/shared/effects/materials/whitedot.material"
+				offsetsphere="2"
+				minangle="-10"
+				maxangle="40"
+				direction="0 0 1"
+				directionalspace="global"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="0 .6 1"
+					midcolor="0 .6 1"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					minstartsize="3"
+					maxstartsize="8"
+					endsize="3"
+					startalpha="0"
+					midalpha=".7"
+					endalpha="0"
+					midalphapos=".5"
+					startstickiness=".3"
+					endstickiness="0"
+					turn="true"
+				/>
+			</simpleemitter>
+
+			<billboard
+				bone="_bone_weapon3"
+				startcolor="0 .1 0.35"
+				endcolor="0"
+				size="35"
+				depthbias="-25"
+				expirelife="500"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+
+			<billboard
+				bone="_bone_weapon3"
+				startcolor="0 .3 .3"
+				endcolor="0"
+				startsize="10"
+				endsize="30"
+				material="/shared/effects/materials/starlight.material"
+			/>
+			
+			
+			<simpleemitter
+				bone="_bone_weapon3"
+				spawnrate="5"
+				particlelife="600"
+				minspeed="0"
+				maxspeed="30"
+				drag="0.07"
+				offsetsphere="5"
+				material="/shared/effects/materials/refract_outsplash.material"
+			>
+				<particle
+					startalpha=".6"
+					endalpha="0.0"
+					minangle="0"
+					maxangle="360"
+					anglespeed="-90"
+					startsize="10"
+					endsize="40"
+					param=".1"
+					depthbias="-130"
+					anchor="1"
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>
+

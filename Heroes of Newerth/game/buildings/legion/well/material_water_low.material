@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<material>
+	<parameters vDiffuseColor="1.0 1.0 1.0" fSpecularLevel="1.0000" fGlossiness="838" fBumpLevel="1.0000" fOpacity="1.00">
+		<float name="fSpeed" value=".025"/>
+		<float name="fDiffuseOpacity" value="0.27"/>
+		<float name="fReflectOpacity" value="0.66"/>
+		<float name="fAdditiveOpacity" value="0.25"/>
+	</parameters>
+	<!--
+	<phase name="color" vs="meshc_color_water5" ps="mesh_color_water5" srcblend="BLEND_ONE" dstblend="BLEND_ONE_MINUS_SRC_ALPHA" translucent="true" cull="CULL_BACK" alphawrite="false" vampire="true" depthwrite="false" depthsortbias="10.0">
+		<sampler name="diffuse" texture="water_color.tga" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="1.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false" filtering="true" border="false"></sampler>
+		<sampler name="normalmap1" texture="water_normal.tga" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="1.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false" filtering="true" border="false"></sampler>
+		<sampler name="normalmap2" texture="water_normal.tga" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="1.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false" filtering="true" border="false"></sampler>
+		<samplercube name="cube" texture="/world/sky/deadlock/1.tga" fps="15" mipmaps="true" fullquality="false" nocompress="false"></samplercube>
+	</phase>
+	-->
+	<phase name="color" vs="meshc_color_water5" ps="mesh_color_water7" srcblend="BLEND_ONE" dstblend="BLEND_ONE_MINUS_SRC_ALPHA" translucent="true" cull="CULL_BACK" alphawrite="false" vampire="true" depthwrite="false" depthsortbias="10.0">
+		<sampler name="diffuse1" texture="water_color_low.tga" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="1.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false" filtering="true" border="false"></sampler>
+		<sampler name="diffuse2" texture="water_color_low.tga" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="1.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false" filtering="true" border="false"></sampler>
+		<sampler name="normalmap1" texture="water_normal.tga" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="1.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false" filtering="true" border="false"></sampler>
+		<sampler name="normalmap2" texture="water_normal.tga" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="1.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false" filtering="true" border="false"></sampler>
+		<samplercube name="cube" texture="/world/sky/deadlock/1.tga" fps="15" mipmaps="true" fullquality="false" nocompress="false"></samplercube>
+	</phase>
+</material>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="brainEffect.max" file="brain.model" type="K2" >
+
+	<anim name="idle" clip="clips/default_1.clip" fps="20" loop="true" loopbackframe="1">
+	
+	</anim>	
+</model>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1" useentityeffectscale="1">
+	<definitions>
+		
+		
+
+	
+
+					
+		
+		<particlesystem name="system0" space="world" scale="1.4">
+
+
+			<sound
+				volume=".5" 
+				sample="/heroes/electrician/sounds/impact_%.wav"
+				linearfalloff="true"
+				falloffstart="200"
+				falloffend="1400"
+			/>
+			
+			<billboard
+				bone="_bone_centerofchest"
+				size="50"
+				depthbias="-102"
+				life="200"
+				startcolor="1 1 1 "
+				endcolor="0 0 0"
+				material="/shared/effects/materials/whitedot.material"
+			/>			
+			<billboard
+				bone="_bone_centerofchest"
+				size="110"
+				depthbias="-100"
+				life="200"
+				startcolor="1 .1 .8"
+				endcolor="0 0 0"
+				material="/shared/effects/materials/whitedot.material"
+			/>				
+					
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				count="20"
+				spawnrate="100"
+				particlelife="200"
+				speed="220"
+				inheritvelocity="0.0"
+			>
+				<particle
+								
+				>
+				
+					<trailemitter				
+						life="200"						
+						spawnrate="61"
+						startminparticlelife="200"
+						startmaxparticlelife="200"		
+						offsetsphere="5 5 5"
+						endminparticlelife="1"
+						endmaxparticlelife="1" 
+						texpostime="200"
+						texposscale="0"
+						texstretchscale="1"
+						position="0 0 0"
+						material="/shared/effects/materials/arrow_trail.material"
+					>
+						<particle
+							startcolor="1 1 1"
+							midcolor="1 .2 .8"
+							endcolor="0 0 0"
+							startsize="5"		
+							endsize="0"
+							midcolorpos=".1"
+							midsizepos=".1"
+						/>
+					</trailemitter>				
+				
+				</particle>
+				
+			</simpleemitter>
+		
+	
+		
+		</particlesystem>
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+
+

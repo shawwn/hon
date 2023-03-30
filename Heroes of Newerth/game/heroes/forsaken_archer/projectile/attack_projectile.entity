@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_ForsakenArcherAttack"
+
+	speed="1050"
+	gravity="800"
+
+	modelscale=".5"
+	model="effects/arrow.mdf"
+
+	traileffect="effects/arrow_trail.effect"
+	impacteffect="effects/impact.effect"
+>
+</projectile>

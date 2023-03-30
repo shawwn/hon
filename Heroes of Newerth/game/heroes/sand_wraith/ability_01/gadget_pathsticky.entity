@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_SandWraith_Ability1_PathSticky"
+		
+	icon=""
+	portrait=""
+	model="/shared/models/invis.mdf"
+	skin=""
+	
+	passiveeffect="effects/gadget.effect"
+	spawneffect=""
+	respawneffect=""
+	isselectable="false"
+	invulnerable="true"
+	selectsound=""
+	orderconfirmedsound=""
+	
+	preglobalscale="1.1"
+	modelscale="1.0"
+	effectscale="1.0"
+	boundsheight="38"
+	boundsradius="42"
+	selectionradius="0"
+	targetoffset="0 0 0"
+
+	canrotate="false"
+	ismobile="false"
+	isflying="false"
+	clearvision="false"
+	drawonmap="false"
+
+	attacktype="none"
+	
+	lifetime="8000"
+	deathtime="0"
+	corpsetime="0"
+	corpsefadetime="0"
+	
+	antiblocking="true"
+>
+	<aura state="State_SandWraith_Ability1_Path" radius="150" duration="3000" targetscheme="owner" />
+	<aura state="State_SandWraith_Ability1_Debuff" radius="150" duration="7000" targetscheme="organic_enemy_units" effecttype="Magic" />
+</gadget>

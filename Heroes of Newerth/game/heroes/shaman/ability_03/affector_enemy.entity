@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Shaman_Ability3_Damage"
+
+	radius="180"
+	
+	maximpactspertarget="1"
+	targetscheme="enemy_units"
+	targetselection="all"
+	effecttype="Physical Splash"
+	persist="true"
+	
+	impacteffect=""
+	linkeffect=""
+>
+	<onimpact>
+		<damage effecttype="Physical Splash" amount="80,100,120,140"/>
+	</onimpact>
+</affector>

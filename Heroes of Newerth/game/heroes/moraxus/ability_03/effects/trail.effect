@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+	
+		<particlesystem name="system0" space="world" scale="1">
+			
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2000"
+				volume="1"
+				sample="../sounds/throw_%.wav"
+			/>
+			
+			<simpleemitter
+				life="200"
+				spawnrate="50"
+				particlelife="250"
+				acceleration="0.0"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+				offsetsphere="10 10 0"
+				position="0 0 0"
+			>
+				<particle
+					turn="1"
+				>
+					<billboard
+						bone="_bone_centerofchest"
+						life="250"
+						startcolor="0 0 0"
+						midcolor="0 .1 .3"
+						endcolor="0 0 0"
+						startparam=".5"
+						endparam="0.4"
+						minstartsize="12"
+						maxstartsize="20"
+						depthbias="-100"
+						position="0 0 0"
+						material="/shared/effects/materials/corona_07.material"
+						lockup="true"
+						pitch="90"
+					/>
+				</particle>
+			</simpleemitter>
+
+			<simpleemitter
+				life="50"
+				spawnrate="50"
+				particlelife="5500"
+				offsetsphere="0 25 0"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+			>
+				<particle
+				turn="true"
+				>
+					<model
+						scale="1"
+						minlife="200"
+						maxlife="250"
+						model="projectile_no_shadow.mdf"
+						anim="idle_slow"
+						startalpha="1"
+						endalpha="0"
+						minyaw="0"
+						maxyaw="360"
+					>
+					</model>
+				</particle>
+			</simpleemitter>
+			
+			<simpleemitter
+				spawnrate="20"
+				particlelife="5500"
+				offsetsphere="0 25 0"
+				position="0 0 0"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+			>
+				<particle
+				turn="true"
+				>
+					<model
+						scale="1"
+						minlife="200"
+						maxlife="300"
+						model="projectile_no_shadow.mdf"
+						anim="idle_slow"
+						startalpha="1"
+						endalpha="0"
+						minyaw="0"
+						maxyaw="360"
+					>
+					</model>
+				</particle>
+			</simpleemitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

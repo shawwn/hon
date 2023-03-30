@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="impact" useentityeffectscale="true">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="1.5">
+
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="1800"
+				volume="0.75" 
+				sample="../../sounds/impact_%.wav"
+			/>
+
+		<simpleemitter
+     
+			spawnrate="28"
+			bone="_bone_centerofchest"
+			count="3"
+			particlelife="1000"			
+			gravity="-2"
+			minspeed="15"
+			maxspeed="35"
+			drag="007"
+			acceleration="50"
+			position="0 0 15"
+		
+			timenudge="-60"
+			
+			offsetsphere="20 20 20"
+			minangle="-25"
+			maxangle="10"
+			direction="0 0 0"	
+          		material="/shared/effects/materials/fireball_3d_32_split.material"
+         	>
+
+			<particle 
+				minangle="15"
+				maxangle="-15"
+				minanglespeed="0"
+				color=".2 .2 0"
+				midcolorpos=".1"
+				maxanglespeed="00"
+
+				startframe="0"
+				endframe="1"
+
+				
+
+				startsize="30"
+				midsize="54"
+				endsize="24"
+				midsizepos=".1"
+
+				startalpha="0"
+				midalpha=".4"
+				endalpha=".3"
+				midalphapos=".5"
+
+				startstickiness="1"
+				endstickiness=".7"
+
+		/>
+
+         </simpleemitter>
+
+			<billboard
+				bone="_bone_centerofchest"
+				material="/shared/effects/materials/whitedot.material"
+				startcolor=".5 .3 0"
+				midcolor="0 .3 .5"
+				endcolor="0 0 0"
+				midcolorpos=".8"
+				life="300"
+				startsize="50"
+				endsize="150"
+				depthbias="-50"
+			/>
+			
+			<billboard
+				bone="_bone_centerofchest"
+				material="/shared/effects/materials/corona_06.material"
+				startcolor=".8 .5 .2"
+				endcolor="0 0 0"
+				life="300"
+				startsize="0"
+				endsize="100"
+				lockup="1"
+				pitch="90"
+			/>			
+
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+
+

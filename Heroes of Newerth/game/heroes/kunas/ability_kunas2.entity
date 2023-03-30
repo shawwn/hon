@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Kunas2"
+	
+	icon="icons/ability_2.tga"
+	
+	anim="ability_2"
+	casttime="1000"
+	castactiontime="300"
+	casteffect="effects/ability_02/weapons_impact.effect"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_entity"
+	targetscheme="enemy_units"
+	casteffecttype="Magic"
+	
+	manacost="75,95,115,135"
+	cooldowntime="7000"
+	
+	range="700"
+	impacteffect="effects/ability_02/bolt_lightning_02_viewer.effect"
+>
+	<onimpact >
+		<spawnunit name="Gadget_KunasDummyReveal" target="target_position"/>
+		<applystate name="State_Stunned" duration="100"/>
+		<damage effecttype="Magic" amount="100,175,275,350"/>
+	</onimpact>
+</ability>

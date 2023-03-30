@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_FlintBeastwood4"
+
+	icon="icon.tga"
+	
+	anim="ability_4"
+	casttime="1900"
+	castactiontime="0"
+	channeltime="1700"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_entity"
+	casteffecttype="SuperiorMagic"
+	targetscheme="nonboss_organic_enemy_units"
+	ischanneling="true"
+	deferchannelcost="true"
+	deferchannelimpact="true"
+	
+	manacost="175,275,375"
+	cooldowntime="20000,15000,10000"
+	
+	range="1500,2000,2500"
+>
+	<onimpact />
+
+	<onchannelstart>
+		<playeffect effect="effects/cast.effect" source="source_entity" target=""/>
+		<spawnunit name="Gadget_FlintBeastwood_Ability4" target="target_entity" bind="target_entity" pushentity="true" ischannel="true" />
+		<setproxy entity="this_entity" target="stack_entity" />
+	</onchannelstart>
+	
+	<onchannelframe>
+		<evaluate a="1800,2300,2800" />
+		<condition test="distance gt result" source="source_entity" target="target_entity">
+			<breakchannel />
+		</condition>
+	</onchannelframe>
+	
+	<onchannelbreak>
+		<kill target="this_proxy_entity" source="" />
+	</onchannelbreak>
+	
+	<onchannelend>
+		<spawnprojectile name="Projectile_FlintBeastwood_Ability4" offset="0 150 100" source="source_entity" target="target_entity" noresponse="true" />
+		<playeffect effect="effects/attackaction.effect" source="source_entity" target=""/>
+		<kill target="this_proxy_entity" source="" />
+	</onchannelend>
+</ability>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect entityeffectscale="true" deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1.2" >
+
+			<billboard
+				delay="100"				
+				bone="_bone_righthand"
+				material="/shared/effects/materials/whitedot.material"
+				startcolor=".3 0.1 0"
+				endcolor="0"
+				expirelife="300"
+				size="22"
+				depthbias="-30"
+			/>	
+			
+			<billboard
+				delay="100"
+				bone="_bone_lefthand"
+				material="/shared/effects/materials/whitedot.material"
+				startcolor=".3 0.1 0"
+				endcolor="0"
+				expirelife="300"			
+				size="22"
+				depthbias="-30"
+			/>	
+		
+			<billboard	
+				bone="_bone_lefthand"			
+				startcolor="0 0 0"
+				midcolor="1 .2 0"
+				endcolor="0 0 0"
+				startsize="40"
+				midsize="10"
+				endsize="40"
+				material="/shared/effects/materials/shieldstarfish.material"
+				depthbias="-20"
+				loop="true"
+				life="1000"
+				expirelife="300"
+			/>	
+			
+			<billboard	
+				bone="_bone_righthand"			
+				startcolor="0 0 0"
+				midcolor="1 .2 0"
+				endcolor="0 0 0"
+				startsize="40"
+				midsize="10"
+				endsize="40"
+				material="/shared/effects/materials/shieldstarfish.material"
+				depthbias="-20"
+				loop="true"
+				life="1000"
+				expirelife="300"
+			/>				
+		
+			<simpleemitter				
+				spawnrate="20"
+				bone="_bone_righthand"
+				particlelife="800"			
+				gravity="5"
+				minspeed="1"
+				maxspeed="50"
+				drag=".04"
+				position="5 5 -14"
+				pitchspeed="79"
+				material="/shared/effects/materials/whitedot.material"
+				offsetsphere="5 5 5"
+				inheritvelocity="0.35"
+				direction="0 0 1"
+			>
+				<particle 
+					startcolor="1 1 .2"
+					midcolor="1 .3 0"
+					endcolor="0 0 0"
+					startheightdistort=".03"
+					endframe="15"
+					startsize="1"
+					midsize="2"
+					endsize="2"
+					startalpha="0"
+					midalpha="0"
+					endalpha="0"
+					midalphapos="0"
+					startstickiness="0"
+					endstickiness="0"
+					turn="1"
+				/>
+			</simpleemitter>		
+		
+			<simpleemitter				
+				spawnrate="20"
+				bone="_bone_lefthand"
+				particlelife="800"			
+				gravity="5"
+				minspeed="1"
+				maxspeed="50"
+				drag=".04"
+				position="5 5 -14"
+				pitchspeed="79"
+				material="/shared/effects/materials/whitedot.material"
+				offsetsphere="5 5 5"
+				inheritvelocity="0.35"
+				direction="0 0 1"
+			>
+				<particle 
+					startcolor="1 1 .2"
+					midcolor="1 .3 0"
+					endcolor="0 0 0"
+					startheightdistort=".03"
+					startsize="1"
+					midsize="2"
+					endsize="2"
+					startalpha="0"
+					midalpha="0"
+					endalpha="0"
+					midalphapos="0"
+					startstickiness="0"
+					endstickiness="0"
+					turn="1"
+				/>
+			</simpleemitter>		
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />	
+		<waitfordeath instance="instance0" />		
+	</thread>
+
+</effect>

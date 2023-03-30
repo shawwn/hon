@@ -1,0 +1,52 @@
+// (C)2008 S2 Games
+// effect_refract.psh
+// 
+// Particle refraction pixel shader
+//=============================================================================
+
+//=============================================================================
+// Global variables
+//=============================================================================
+float2 		vScene;
+
+//=============================================================================
+// Vertex shader output structure
+//=============================================================================
+struct VS_OUTPUT
+{
+	float4 Color0 : COLOR0;
+	float4 Texcoord0 : TEXCOORD0;
+	float4 PositionScreen : TEXCOORD1;
+};
+
+//=============================================================================
+// Pixel shader input structure
+//=============================================================================
+struct PS_OUTPUT
+{
+	float4 Color : COLOR;
+};
+
+sampler refraction;
+sampler scene;
+
+//=============================================================================
+// Pixel Shader
+//=============================================================================
+PS_OUTPUT PS( VS_OUTPUT In )
+{
+	PS_OUTPUT Out;
+	
+	float4 vRefraction = tex2D(refraction, In.Texcoord0.xy);
+	vRefraction.xy = vRefraction.xy * 2.0f - 1.0f;
+	vRefraction.xy *= vScene;
+	
+	float2 vSceneTexcoord = In.PositionScreen.xy / In.PositionScreen.w;
+	vSceneTexcoord += vRefraction.xy * In.Texcoord0.w;
+	
+	Out.Color.rgb = tex2D(scene, vSceneTexcoord).rgb;
+	Out.Color.a = vRefraction.a;
+	Out.Color *= In.Color0;
+	
+	return Out;
+}

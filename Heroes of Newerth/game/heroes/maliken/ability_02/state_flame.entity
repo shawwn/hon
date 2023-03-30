@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Maliken_Ability2_Flame"
+	
+	icon="icon_flame.tga"
+	passiveeffect="effects/state_flame.effect"
+	damage="10,20,30,40"
+	displaylevel="true"
+	modifierkey="swordflame1,swordflame2,swordflame3,swordflame4"
+	modifierkey2="swordflame"
+		
+	effecttype=""
+>
+	<oninflict>
+		<playanim name="ability_2_fireDefault" target="source_entity" />
+	</oninflict>
+	<onattack>
+		<!-- threshold set that flame sword will not reduce health past -->
+		<setvar1 a="source_maxhealth" b="0.15" op="mult" />
+		
+		<!-- capture current health, subtract damage being dealt, store as var2 -->
+		<setvar2 a="source_health" b="6,9,12,15" op="sub" />
+		
+		<!-- if var2 is less than var 1, do not deal full dmg. Instead deal current hp minus var1 -->
+		<condition test="var2 lt var1">
+			<evaluate a="source_health" b="var1" op="sub" />
+			<damage target="source_entity" effecttype="" amount="1" b="result" op="mult" />
+		</condition>
+		<condition test="var2 ge var1">
+			<damage target="source_entity" effecttype="" amount="6,9,12,15" />
+		</condition>
+	</onattack>
+	
+	<onframe/>
+	
+	<modifier key="malikenult_1" modpriority="100"
+		passiveeffect="../ability_04/effects/body_flame.effect"
+	>
+		<onattackstart>
+			<setattackprojectile name="Projectile_MalikenAttack_Flame" />
+			<setattackimpacteffect effect="../projectile/effects/impact_flame.effect" />
+			<playanim name="attackfire_" speed="source_attackspeed" variations="2" target="source_entity" />
+		</onattackstart>
+	</modifier>
+	
+	<modifier key="malikenult_2" modpriority="100"
+		passiveeffect="../ability_04/effects/body_flame.effect"
+	>
+		<onattackstart>
+			<setattackprojectile name="Projectile_MalikenAttack_Flame" />
+			<setattackimpacteffect effect="../projectile/effects/impact_flame.effect" />
+			<playanim name="attackfire_" speed="source_attackspeed" variations="2" target="source_entity" />
+		</onattackstart>
+	</modifier>
+	
+	<modifier key="malikenult_3" modpriority="100"
+		passiveeffect="../ability_04/effects/body_flame.effect"
+	>
+		<onattackstart>
+			<setattackprojectile name="Projectile_MalikenAttack_Flame" />
+			<setattackimpacteffect effect="../projectile/effects/impact_flame.effect" />
+			<playanim name="attackfire_" speed="source_attackspeed" variations="2" target="source_entity" />
+		</onattackstart>
+	</modifier>
+	
+	<modifier key="Alt" modpriority="1"
+		altavatar="true"
+		
+		passiveeffect="../alt/ability_02/effects/body_flame.effect"
+	>
+	</modifier>
+</state>
+

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Armadon_Ability1"
+	
+	icon="icon.tga"
+	passiveeffect="state.effect"
+	effecttype="StatusDebuff"
+	maxcharges="5"
+	
+	movespeedslow="0.2"
+	movespeedslowpercharge="0.03,0.06,0.09,0.12"
+	armorpercharge="-1,-1,-2,-2"
+>
+	<oninflict>
+		<addcharges count="1" />
+	</oninflict>
+	
+	<onrefresh>
+		<addcharges count="1" />
+	</onrefresh>
+</state>

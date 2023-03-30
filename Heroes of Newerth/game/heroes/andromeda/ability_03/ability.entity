@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Andromeda3"
+
+	icon="icon.tga"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="no_target"
+	frontqueue="true"
+	inheritmovement="true"
+	casttime="0"
+	castactiontime="0"
+	cooldowntime="1000"
+	cooldowntype="andromedaauratoggle"
+	noresponse="true"
+>
+	<modifier key="andromedaauratoggle_heroes" modpriority="100"
+		displayname="true"
+	>
+		<onimpact>
+			<setactivemodifierkey name="" />
+		</onimpact>
+		
+		<aura state="State_Andromeda_Ability3" radius="800" effecttype="Buff" targetscheme="ally_heroes" propagatecondition="not_stealthed" />
+	</modifier>
+	
+	<modifier key="" modpriority="100"
+		displayname="true"
+	>
+		<onimpact>
+			<setactivemodifierkey name="andromedaauratoggle_heroes" />
+		</onimpact>
+		
+		<aura state="State_Andromeda_Ability3" radius="800" effecttype="Buff" targetscheme="ally_units" propagatecondition="not_stealthed" />
+	</modifier>
+</ability>

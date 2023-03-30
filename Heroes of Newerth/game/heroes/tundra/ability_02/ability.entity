@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Tundra2"
+	
+	icon="icon.tga"
+	
+	anim="ability_2"
+	casttime="600"
+	castactiontime="500"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="self_position"
+	casteffecttype=""
+	
+	manacost="25"
+	cooldowntime="40000"
+>
+	<onimpact>
+		<spawnunit name="Pet_Tundra_Ability2_Flying" target="source_position" count="1" offsetspace="source_entity" offset="-50 50" maxactive="1" />
+		<condition test="level ge 2">
+			<spawnunit name="Pet_Tundra_Ability2_Ranged" target="source_position" count="1" offsetspace="source_entity" offset="0 150" maxactive="1" pushentity="true" />
+			<hasmodifier name="TundraAttack1">
+				<setactivemodifierkey entity="stack_entity" name="TundraPet1" />
+			</hasmodifier>
+			<hasmodifier name="TundraAttack2">
+				<setactivemodifierkey entity="stack_entity" name="TundraPet2" />
+			</hasmodifier>
+			<hasmodifier name="TundraAttack3">
+				<setactivemodifierkey entity="stack_entity" name="TundraPet3" />
+			</hasmodifier>
+			<hasmodifier name="TundraAttack4">
+				<setactivemodifierkey entity="stack_entity" name="TundraPet4" />
+			</hasmodifier>
+		</condition>
+	</onimpact>
+</ability>

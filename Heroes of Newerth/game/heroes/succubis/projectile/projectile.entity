@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_SuccubisAttack"
+
+	speed="900"
+	gravity="2000"
+
+	model="model.mdf"
+	modelscale="1.2"
+
+	impacteffect="impact.effect"
+	traileffect="trail.effect"
+>
+</projectile>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1" useentityeffectscale="1">
+
+	<definitions>
+
+		<modifier
+			name="modifier0"
+			material="material_shadow.material"
+			startcolor="1 1 1"
+			midcolor="1 1 1"
+			endcolor="1 1 1"
+			midcolorpos=".5"
+			expirelife="2000"
+			startalpha="1"
+			endalpha="1"
+		/>
+
+		<particlesystem name="system0" space="world" scale=".75">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2500"
+				volume=".85"
+				sample="../sounds/cast.wav"
+			/>
+			
+			<simpleemitter
+				speed="2"
+				angle="50"
+				timenudge="2000"
+				bone="_bone_centerofchest"
+				spawnrate="200"
+				minparticlelife="1000"
+				maxparticlelife="1500"
+				gravity="4"
+				drag=".01"
+				depthbias="-40"
+				offsetsphere="85 25 65"
+				material="/shared/effects/materials/phantom_black.material"
+			>
+				<particle
+					maxangle="360"
+					minanglespeed="-116"
+					maxanglespeed="116"
+					color="0 0 0"
+					startalpha=".5"
+					midalpha=""
+					endalpha="0"
+					startsize="0"
+					endsize="225"
+					endstickiness="0"
+					turn="1"
+					
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				timenudge="2000"
+				bone="_bone_centerofchest"
+				spawnrate="15"
+				minparticlelife="1000"
+				maxparticlelife="1500"
+				gravity="5"
+				drag=".05"
+				inheritvelocity="0.8"
+				offsetsphere="10 10 44"
+				material="/shared/effects/materials/cloud.material"
+			>
+				<particle
+					maxangle="360"
+					minanglespeed="-6"
+					maxanglespeed="6"
+					color=".1 0 .1"
+					startalpha="0"
+					midalpha=".15"
+					endalpha="0"
+					startsize="0"
+					endsize="185"
+				/>
+			</simpleemitter>
+
+			<template name="sparks" >
+				<twopointemitter
+					bone_a="{boneA}"
+					bone_b="{boneB}"
+					spawnrate="25"
+					particlelife="300"
+					offsetsphere="2"
+					material="/shared/effects/materials/femme_lightning_01.material"
+				>
+					<particle
+						startcolor="0.0 0.0 0.0"
+						midcolor=".25 .25 1"
+						endcolor="0 "
+						midcolorpos="0.5"
+						startalpha="1.0"
+						endalpha="1.0"
+						maxangle="360"
+						minanglespeed="-45"
+						maxanglespeed="45"
+						minendsize="30"
+						startsize="30"
+						maxendsize="70"
+						flare="true"
+						anchor="1"
+					/>
+					
+					<particle
+						startcolor="0 0 0"
+						midcolor=".6 .6 1"
+						endcolor="0 "
+						midcolorpos="0.5"
+						startalpha="1.0"
+						endalpha="1.0"
+						maxangle="360"
+						minanglespeed="-45"
+						maxanglespeed="45"
+						minendsize="30"
+						startsize="30"
+						maxendsize="65"
+						flare="true"
+						anchor="1"
+					/>
+				</twopointemitter>
+			</template>
+			
+			<instance name="sparks"  size="75" boneA="Bip01 L Hand" boneB="Bip01 L Forearm"/>
+			<instance name="sparks"  size="75" boneA="Bip01 R Hand" boneB="Bip01 R Forearm"/>
+			<instance name="sparks" size="75"  boneA="Bip01 L Thigh" boneB="Bip01 L Calf"/>
+			<instance name="sparks"  size="75"  boneA="Bip01 R Thigh" boneB="Bip01 R Calf"/>
+			<instance name="sparks"  size="75" boneA="Bip01 L Foot" boneB="Bip01 L Calf"/>
+			<instance name="sparks"  size="75" boneA="Bip01 R Foot" boneB="Bip01 R Calf"/>	
+			<instance name="sparks" size="75"  boneA="Bip01 Neck" boneB="_bone_head"/>
+
+		
+			<template name="spark" >
+
+				<twopointemitter
+					timenudge="2000"
+					bone_a="{a}"
+					bone_b="{b}"
+					spawnrate="25"
+					particlelife="520"
+					expirelife="100"
+					material="/shared/effects/materials/smash_add.material"
+					depthbias="50"
+					stickiness="1"					
+				>
+					<particle
+						minangle="0"
+						maxangle="110"
+						minanglespeed="-146"
+						maxanglespeed="146"
+						startcolor="0 0 0"	
+						midcolor=".1 .35 .65"	
+						endcolor="0 0 0"						
+						minsize="{minsize}"
+						maxsize="{maxsize}"
+						stickiness="1"
+						scale="1"
+					/>
+					
+					<particle
+						minangle="0"
+						maxangle="110"
+						minanglespeed="-146"
+						maxanglespeed="146"
+						startcolor="0 0 0"	
+						midcolor=".25 .25 .25"	
+						endcolor="0 0 0"						
+						minsize="{minsize}"
+						maxsize="{maxsize}"
+						stickiness="1"
+						scale="1"
+					/>
+				</twopointemitter>
+			</template>	
+
+			<instance name="spark"  minsize="35" maxsize="40" a="Bip01 L Hand" b="Bip01 L Forearm"/>
+			<instance name="spark"  minsize="35" maxsize="40" a="Bip01 R Hand" b="Bip01 R Forearm"/>
+			<instance name="spark"  minsize="50" maxsize="65" a="Bip01 L Thigh" b="Bip01 L Calf"/>
+			<instance name="spark"  minsize="50" maxsize="65" a="Bip01 R Thigh" b="Bip01 R Calf"/>
+			<instance name="spark"  minsize="50" maxsize="65" a="Bip01 L Foot" b="Bip01 L Calf"/>
+			<instance name="spark"  minsize="50" maxsize="65" a="Bip01 R Foot" b="Bip01 R Calf"/>	
+			<instance name="spark"  minsize="40" maxsize="50" a="Bip01 Neck" b="_bone_head"/>					
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>
+		<spawnmodifier instance="instance1" modifier="modifier1"/>
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

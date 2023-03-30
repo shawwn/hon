@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Tundra3"
+
+	icon="icon.tga"
+	statuseffecttooltip="State_Tundra_Ability3_Debuff"
+	
+	anim="ability_3"
+	casttime="0"
+	castactiontime="0"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+	passiveeffect="effects/state_self.effect"
+	
+	actiontype="target_entity"
+	targetscheme="enemy_units"
+	casteffecttype="Physical"
+
+	manacost="40"
+	cooldowntime="12000"
+	novoiceresponse="true"
+	
+	range="300,400,500,600"
+>
+	<onimpact>
+		<spawnprojectile name="Projectile_Tundra_Ability3" source="source_entity" bindstate="State_Tundra_Ability3_Warp" bind="source_entity" bindturn="true" target="target_entity" proxy="target_entity" />
+	</onimpact>
+</ability>

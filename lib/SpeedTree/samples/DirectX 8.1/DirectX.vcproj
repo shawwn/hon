@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="DirectX 8.1"
+	ProjectGUID="{B2D51DA8-FF98-4374-8465-0606822DAB94}"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory=".\Debug VC 7.1"
+			IntermediateDirectory=".\Debug VC 7.1"
+			ConfigurationType="1"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			CharacterSet="2"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+				PreprocessorDefinitions="_DEBUG"
+				MkTypLibCompatible="true"
+				SuppressStartupBanner="true"
+				TargetEnvironment="1"
+				TypeLibraryName=".\Debug.NET/DirectX.tlb"
+			/>
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				AdditionalIncludeDirectories="..\Common Source;..\Common Source\SpeedWind;."
+				PreprocessorDefinitions="WIN32,_DEBUG,_WINDOWS"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="3"
+				UsePrecompiledHeader="0"
+				PrecompiledHeaderFile=".\Debug VC 7.1\DirectX.pch"
+				AssemblerListingLocation=".\Debug VC 7.1\"
+				ObjectFile=".\Debug VC 7.1\"
+				ProgramDataBaseFileName=".\Debug VC 7.1\"
+				BrowseInformation="1"
+				WarningLevel="3"
+				SuppressStartupBanner="true"
+				DebugInformationFormat="3"
+				CompileAs="0"
+			/>
+			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="_DEBUG"
+				Culture="1033"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLinkerTool"
+				AdditionalOptions="/MACHINE:I386 /FORCE"
+				AdditionalDependencies="dsound.lib dinput8.lib dxerr8.lib d3dx8dt.lib d3d8.lib d3dxof.lib dxguid.lib winmm.lib odbc32.lib odbccp32.lib SpeedTreeRT.lib"
+				OutputFile="..\..\bin\VC 7.1\Debug\SpeedTreeRT DirectX 8.1.exe"
+				LinkIncremental="1"
+				SuppressStartupBanner="true"
+				AdditionalLibraryDirectories="..\..\lib\VC 7.1\Release"
+				IgnoreAllDefaultLibraries="false"
+				IgnoreDefaultLibraryNames="libci.lib"
+				GenerateDebugInformation="true"
+				ProgramDatabaseFile=".\Debug VC 7.1\SpeedTreeRT DirectX 8.1.pdb"
+				SubSystem="2"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCManifestTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCAppVerifierTool"
+			/>
+			<Tool
+				Name="VCWebDeploymentTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory=".\Release VC 7.1"
+			IntermediateDirectory=".\Release VC 7.1"
+			ConfigurationType="1"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			CharacterSet="2"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+				PreprocessorDefinitions="NDEBUG"
+				MkTypLibCompatible="true"
+				SuppressStartupBanner="true"
+				TargetEnvironment="1"
+				TypeLibraryName=".\Release.NET/DirectX.tlb"
+			/>
+			<Tool
+				Name="VCCLCompilerTool"
+				InlineFunctionExpansion="1"
+				AdditionalIncludeDirectories="..\Common Source;..\Common Source\SpeedWind;."
+				PreprocessorDefinitions="WIN32,NDEBUG,_WINDOWS"
+				StringPooling="true"
+				RuntimeLibrary="2"
+				EnableFunctionLevelLinking="true"
+				UsePrecompiledHeader="0"
+				PrecompiledHeaderFile=".\Release VC 7.1\DirectX.pch"
+				AssemblerListingLocation=".\Release VC 7.1\"
+				ObjectFile=".\Release VC 7.1\"
+				ProgramDataBaseFileName=".\Release VC 7.1\"
+				BrowseInformation="1"
+				WarningLevel="3"
+				WarnAsError="true"
+				SuppressStartupBanner="true"
+				CompileAs="0"
+			/>
+			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="NDEBUG"
+				Culture="1033"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLinkerTool"
+				AdditionalOptions="/MACHINE:I386 /FORCE&#x0D;&#x0A;"
+				AdditionalDependencies="dsound.lib dinput8.lib dxerr8.lib d3dx8dt.lib d3d8.lib d3dxof.lib dxguid.lib winmm.lib odbc32.lib odbccp32.lib SpeedTreeRT.lib"
+				OutputFile="..\..\bin\VC 7.1\Release\SpeedTreeRT DirectX 8.1.exe"
+				LinkIncremental="1"
+				SuppressStartupBanner="true"
+				AdditionalLibraryDirectories="..\..\lib\VC 7.1\Release\"
+				IgnoreDefaultLibraryNames="libci.lib"
+				ProgramDatabaseFile=".\Release VC 7.1\SpeedTreeRT DirectX 8.1.pdb"
+				SubSystem="2"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCManifestTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCAppVerifierTool"
+			/>
+			<Tool
+				Name="VCWebDeploymentTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
+			>
+			<File
+				RelativePath=".\DirectX.rc"
+				>
+			</File>
+			<File
+				RelativePath=".\DirectXExample.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\Common Source\Navigation.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\Common Source\SpeedTreeForest.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\SpeedTreeForestDirectX8.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\SpeedTreeWrapper.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\Common Source\Transform.cpp"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl"
+			>
+			<File
+				RelativePath=".\DirectXExample.h"
+				>
+			</File>
+			<File
+				RelativePath="..\Common Source\Navigation.h"
+				>
+			</File>
+			<File
+				RelativePath=".\resource.h"
+				>
+			</File>
+			<File
+				RelativePath=".\SpeedTreeConfig.h"
+				>
+			</File>
+			<File
+				RelativePath="..\Common Source\SpeedTreeForest.h"
+				>
+			</File>
+			<File
+				RelativePath=".\SpeedTreeForestDirectX8.h"
+				>
+			</File>
+			<File
+				RelativePath=".\SpeedTreeMaterial.h"
+				>
+			</File>
+			<File
+				RelativePath=".\SpeedTreeWrapper.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Transform.h"
+				>
+			</File>
+			<File
+				RelativePath=".\VertexShaders.h"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"
+			>
+			<File
+				RelativePath=".\cursor1.cur"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="DirectX Utilities"
+			>
+			<File
+				RelativePath=".\d3dapp.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\d3dapp.h"
+				>
+			</File>
+			<File
+				RelativePath=".\d3dres.h"
+				>
+			</File>
+			<File
+				RelativePath=".\d3dutil.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\d3dutil.h"
+				>
+			</File>
+			<File
+				RelativePath=".\DirectX.ico"
+				>
+			</File>
+			<File
+				RelativePath=".\dxutil.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\dxutil.h"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="SpeedWind"
+			>
+			<File
+				RelativePath="..\Common Source\SpeedWind\PIDController.h"
+				>
+			</File>
+			<File
+				RelativePath="..\Common Source\SpeedWind\SpeedWind.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\Common Source\SpeedWind\SpeedWind.h"
+				>
+			</File>
+			<File
+				RelativePath="..\Common Source\SpeedWind\SpeedWindParser.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\Common Source\SpeedWind\SpeedWindParser.h"
+				>
+			</File>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

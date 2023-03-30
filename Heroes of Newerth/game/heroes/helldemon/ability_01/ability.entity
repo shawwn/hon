@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_HellDemon1"
+
+	icon="icon.tga"
+	
+	anim="ability_1"
+	casttime="1000"
+	castactiontime="0"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="self_position"
+	targetscheme="all_other_units"
+	inheritmovement="true"
+	targetradius="400,450,475,500"
+	frontqueue="true"
+	casteffecttype=""
+	casteffect="effects/cast.effect"
+	
+	manacost="125,145,165,185"
+	cooldowntime="8000,7000,6000,5000"
+>
+	<onimpact>
+		<spawnaffector name="Affector_HellDemon_Ability1" target="source_position"/>
+		<heal target="source_entity" a="50,75,100,130" />
+	</onimpact>
+</ability>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="rig.max" file="high.model" type="K2" high="high.model" med="med.model" low="low.model" >
+
+	<anim name="idle" clip="clips/default_1.clip" fps="30" loop="true" loopbackframe="1"/>
+	
+	<anim name="portrait" clip="clips/portrait.clip" fps="20" loop="true" loopbackframe="1"/>
+		
+	<anim name="item_1" clip="clips/attack_1.clip" fps="55"/>
+	
+	<anim name="ability_1" clip="clips/ability_1.clip" fps="30" loop="false">
+		<frameevent frame="12" cmd="PlaySoundLinear /heroes/hantumon/sounds/attack_%.wav 400 1800 .65"/>
+	</anim>	
+	
+	<anim name="ability_2_attack1" clip="clips/ability_2_attack1.clip" fps="60" loop="false" blendtime="0">
+		<frameevent frame="2" cmd="starteffect ability_02/effects/warpin.effect"/>
+	</anim>
+	
+	<anim name="ability_2_mid" clip="clips/ability_2_mid.clip" fps="30" loop="false" blendtime="0"/>
+
+	<anim name="ability_2_start" clip="clips/ability_2_start.clip" fps="30" loop="false" blendtime="0">
+		<frameevent frame="11" cmd="starteffect ability_02/effects/warpout.effect"/>
+	</anim>
+
+	<anim name="ability_3_attack_1" clip="clips/ability_3_attack_1.clip" fps="38" loop="false">
+		<frameevent frame="11" cmd="PlaySoundLinear /heroes/hantumon/sounds/attack_%.wav 400 1800 .65"/>
+	</anim>
+
+	<anim name="ability_3_attack_2" clip="clips/ability_3_attack_2.clip" fps="38" loop="false">
+		<frameevent frame="11" cmd="PlaySoundLinear /heroes/hantumon/sounds/attack_%.wav 400 1800 .65"/>
+	</anim>
+
+	<anim name="ability_3_attack_3" clip="clips/ability_3_attack_3.clip" fps="38" loop="false">
+		<frameevent frame="11" cmd="PlaySoundLinear /heroes/hantumon/sounds/attack_%.wav 400 1800 .65"/>
+	</anim>
+
+	<anim name="attack_1" clip="clips/attack_1.clip" fps="34" loop="false">
+		<frameevent frame="13" cmd="PlaySoundLinear /heroes/hantumon/sounds/attack_%.wav 400 1800 .65"/>
+	</anim>
+
+	<anim name="attack_2" clip="clips/attack_2.clip" fps="34" loop="false">
+		<frameevent frame="15" cmd="PlaySoundLinear /heroes/hantumon/sounds/attack_%.wav 400 1800 .65"/>
+		<frameevent frame="13" cmd="PlaySoundLinear /heroes/hantumon/sounds/attack_grunt_%.wav 500 2000 .75"/>
+	</anim>
+
+	<anim name="attack_3" clip="clips/attack_3.clip" fps="34" loop="false">
+		<frameevent frame="15" cmd="PlaySoundLinear /heroes/hantumon/sounds/attack_%.wav 400 1800 .65"/>
+	</anim>
+ 
+	<anim name="walk_1" clip="clips/walk_1.clip" fps="37" loop="true">
+		<frameevent frame="4" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="25" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="31" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="50" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="70" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="86" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="108" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="126" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+
+		<frameevent frame="4" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+		<frameevent frame="25" cmd="StartEffect /shared/effects/footstep_l_#GetTerrainType()#.effect"/>
+		<frameevent frame="31" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+		<frameevent frame="50" cmd="StartEffect /shared/effects/footstep_l_#GetTerrainType()#.effect"/>
+		<frameevent frame="56" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+		<frameevent frame="71" cmd="StartEffect /shared/effects/footstep_l_#GetTerrainType()#.effect"/>
+		<frameevent frame="86" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+		<frameevent frame="90" cmd="StartEffect /shared/effects/footstep_l_#GetTerrainType()#.effect"/>
+		<frameevent frame="108" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+		<frameevent frame="108" cmd="StartEffect /shared/effects/footstep_l_#GetTerrainType()#.effect"/>
+		<frameevent frame="126" cmd="StartEffect /shared/effects/footstep_l_#GetTerrainType()#.effect"/>
+	</anim>
+
+	<anim name="death_1" clip="clips/death_1.clip" fps="38" loop="true" loopbackframe="-1">
+		<frameevent frame="24" cmd="PlaySoundLinear /heroes/hantumon/sounds/death.wav 800 1500"/>
+	</anim>
+	<anim name="bored_1" clip="clips/bored_1.clip" fps="30" loop="false"/>
+	<anim name="taunt_1" clip="clips/taunt_1.clip" fps="30" loop="false"/>
+	
+	<anim name="knock_1" clip="clips/knock_1.clip" loop="true" loopbackframe="-1"/>
+	
+	<anim name="getup_1" clip="clips/getup_1.clip"/>	
+</model>

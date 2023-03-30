@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Rampage_Ability1_Self"
+	
+	icon="icon.tga"
+	passiveeffect="effects/charge.effect"
+
+	movespeedpercharge="15,20,25,30"
+	
+	unitwalking="true"
+>
+	<onframe />
+	
+	<modifier key="rampage_charge_treewalking" priority="100"
+		slowresistance="1"
+	/>
+</state>

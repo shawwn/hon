@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Bombardier_Ability1_Modifier"
+
+	icon="icon.tga"
+	
+	ishidden="true"
+	modifierkey="bombardier_bombout_1"
+>
+	<onexpired>
+		<setcharges entity="proxy_entity" a="0" />
+	</onexpired>
+</state>

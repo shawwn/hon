@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="rig.max" file="model.model" type="K2" >
+	<anim name="idle_1" fps="30" clip="clips/default_1.clip" loop="true">
+		<frameevent frame="16" cmd="PlaySoundLinear /shared/sounds/attacks/attack_light_%.wav 0 1000 .2"/>
+		<frameevent frame="20" cmd="PlaySoundLinear ../sounds/attack_%.wav 0 2000 .5"/>
+		<frameevent frame="46" cmd="PlaySoundLinear /shared/sounds/attacks/attack_light_%.wav 0 1000 .2"/>
+		<frameevent frame="50" cmd="PlaySoundLinear ../sounds/attack_%.wav 0 2000 .5"/>
+	</anim>
+
+	<anim name="idle_2" fps="30" clip="clips/default_2.clip" loop="true">
+		<frameevent frame="10" cmd="PlaySoundLinear /shared/sounds/attacks/attack_light_%.wav 0 1000 .2"/>
+		<frameevent frame="12" cmd="PlaySoundLinear ../sounds/attack_%.wav 0 2000 .5"/>
+		<frameevent frame="40" cmd="PlaySoundLinear /shared/sounds/attacks/attack_light_%.wav 0 1000 .2"/>
+		<frameevent frame="50" cmd="PlaySoundLinear /shared/sounds/attacks/attack_light_%.wav 0 1000 .1"/>
+		<frameevent frame="51" cmd="PlaySoundLinear ../sounds/attack_%.wav 0 2000 .5"/>
+	</anim>
+
+	<anim name="idle_3" fps="30" clip="clips/default_3.clip" loop="true">
+		<frameevent frame="24" cmd="PlaySoundLinear /shared/sounds/attacks/attack_light_%.wav 0 1000 .2"/>
+		<frameevent frame="26" cmd="PlaySoundLinear ../sounds/attack_%.wav 0 2000 .5"/>
+		<frameevent frame="54" cmd="PlaySoundLinear /shared/sounds/attacks/attack_light_%.wav 0 1000 .2"/>
+		<frameevent frame="58" cmd="PlaySoundLinear ../sounds/attack_%.wav 0 2000 .5"/>
+	</anim>	
+	
+</model>

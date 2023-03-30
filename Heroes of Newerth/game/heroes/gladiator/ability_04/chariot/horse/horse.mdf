@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="rig.max" file="horse.model" type="K2">
+
+	<anim name="idle" clip="horse.clip" loop="true" fps="30" minstartframe="0" maxstartframe="-1"/>
+
+</model>

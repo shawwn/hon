@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_FlintBeastwoodAttack_Hollowpoint"
+
+	speed="3000"
+	gravity="0"
+	modelscale=".4"
+	model="effects/bullet/bullet.mdf"
+
+	impacteffect=""
+	traileffect="headshot_trail.effect"
+>
+</projectile>

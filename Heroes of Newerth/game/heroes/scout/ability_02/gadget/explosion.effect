@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="1800"
+				volume=".45"
+				sample="../sounds/explode.wav"
+			/>
+
+			<billboard
+				delay="000"
+				life="500"
+				startcolor=".0 .1 .2"
+				endcolor="0"
+				midalphapos="0.75"
+				startparam="0.05"
+				endparam="0.0"
+				startsize="000"
+				endsize="120"
+				midsizepos=".4"
+				depthbias="0"
+				position="0 0 50"
+				material="/shared/effects/materials/whitedot.material"
+				lockup="true"
+				pitch="90"
+			/>
+		
+			<billboard
+				delay="000"
+				life="500"
+				startcolor=".1 .2 .4"
+				endcolor="0 0 0"
+				midalphapos="0.75"
+				startparam="0.05"
+				endparam="0.0"
+				startsize="000"
+				endsize="520"
+				midsizepos=".4"
+				depthbias="0"
+				position="0 0 50"
+				material="/shared/effects/materials/corona_06.material"
+				lockup="true"
+				pitch="90"
+			/>
+
+			<simpleemitter
+				position="0 0 75"
+				minangle="-90"
+				maxangle="-90"
+				life="400"
+				spawnrate="650"
+				count="20"
+				minparticlelife="250"
+				maxparticlelife="500"
+				speed="1000"
+				drag="0.05"
+				offsetsphere="15"
+				depthbias="-40"
+				material="/shared/effects/materials/phantom_smoke_04.material"
+			>
+				<particle
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="-150"
+					maxanglespeed="150"
+					turn="1"
+					startcolor="0 .4 .5"
+					midcolor="0 .125 .25"
+					endcolor="0"
+					midcolorpos="0.2"
+					startsize="50"
+					minendscale="5"
+					maxendscale="10"
+					startalpha=".5"
+					midalpha="1"
+					midalphapos="0.1"
+					endalpha="0"
+				/>
+			</simpleemitter>
+			
+			<billboard
+				life="400"
+				startcolor="0 .1 .15"
+				midcolor="0 .1 .15"
+				endcolor="0 0 0"
+				startsize="50"
+				endsize="520"
+				depthbias="-100"
+				material="/shared/effects/materials/smash_add.material"
+				lockup="true"
+				pitch="90"
+			/>
+
+			<billboard
+				position="0 0 75"
+				life="520"
+				color="1 1 1"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0.0"
+				midalphapos="0.75"
+				startparam=".04"
+				endparam="0.0"
+				startsize="0"
+				endsize="550"
+				depthbias="-100"
+				material="/shared/effects/materials/refract_ring.material"
+				lockup="true"
+				pitch="90"
+			/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

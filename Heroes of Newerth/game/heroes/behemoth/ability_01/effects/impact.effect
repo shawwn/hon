@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<modifier 
+			name="modifier0"
+			alpha="0"
+		/>
+
+		<particlesystem name="system0" space="world" scale="1">
+
+			<sound
+				life="7000"
+				soundloop="true"
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="1200"
+				volume=".15"
+				fadein="400"
+				fadeout="1000"
+				sample="../sounds/idle.wav"
+			/>
+			
+			<model	
+				life="7500"
+				model="fissure.mdf"
+				anim="idle1"
+				minscale=".9"
+				maxscale="1.65"
+				color="1 .86 .7"
+				minyaw="0"
+				maxyaw="360"
+				position="0 0 -10"
+			/>
+
+			<groundsprite	
+				delay="300"
+				life="7500"
+				material="/shared/effects/materials/ground_smash_overlay.material"
+				minsize="75"
+				maxsize="90"			
+				color="1"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos="0.9"
+			/>
+
+			<simpleemitter
+				delay="300"
+				minparticlelife="1600"			
+				maxparticlelife="2800"
+				spawnrate="15"
+				life="300"
+				gravity="5"
+				speed="250"
+				material="/shared/effects/materials/dust.material"
+				offsetsphere="80 80 40"
+				angle="10"
+				position="0 0 40"
+				direction="0 0 1"
+				expirelife="500"
+				drag="0.15"
+				depthbias="-30"
+			>
+				<particle 
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-50"
+					maxanglespeed="50"
+					color=".3 .3 .3"
+					startsize="30"
+					endsize="400"
+					startalpha=".5"
+					endalpha="0"
+				/>
+				<particle 
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-50"
+					maxanglespeed="50"
+					color=".64 .6 .6"
+					startsize="30"
+					endsize="400"
+					startalpha=".4"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				delay="300"
+				minparticlelife="800"			
+				maxparticlelife="1600"
+				spawnrate="12"
+				life="500"
+				gravity="10"
+				speed="250"
+				material="/shared/effects/materials/dust_explosion.material"
+				offsetsphere="40 80 20"
+				angle="40"
+				position="0 0 40"
+				direction="0 0 1"
+				expirelife="500"
+				drag="0.1"
+				depthbias="-30"
+			>
+				<particle 
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-50"
+					maxanglespeed="50"
+					color=".4 .4 .4"
+					startsize="45"
+					endsize="260"
+					startalpha=".3"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<!-- Lava -->
+			<simpleemitter
+				depthbias="-30"
+				timenudge="-500"
+				life="6500"
+				minparticlelife="1200"			
+				maxparticlelife="1900"
+				spawnrate="20"
+				gravity="1"
+				speed="120"
+				material="/shared/effects/materials/bad_healing_smoke_07.material"
+				offsetsphere="35 60 5"
+				angle="0"
+				drag="0.15"
+				position="0 0 -20"
+			>
+				<particle 
+					maxangle="360"
+					color="1 .7 0"				
+					startsize="30"
+					endsize="80"
+					startalpha="0"
+					midalpha="0.5"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				life="6200"
+				minparticlelife="400"			
+				maxparticlelife="1100"
+				spawnrate="20"
+				gravity="1"
+				speed="100"
+				material="/shared/effects/materials/blob.material"
+				offsetsphere="35 60 15"
+				angle="10"
+				drag="0.15"
+			>
+				<particle 
+					minanglespeed="-100"
+					maxanglespeed="100"
+					minangle="-360"
+					maxangle="360"
+					color="1 0.3 0"
+					startsize="60"
+					endsize="30"
+					startalpha="0"
+					midalpha=".5"
+					endalpha="0"
+					endstickiness=".6"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				depthbias="-30"
+				life="6200"
+				particlelife="1400"
+				spawnrate="13"
+				gravity="1"
+				speed="100"
+				material="/shared/effects/materials/flames_07.material"
+				offsetsphere="35 50 5"
+				angle="10"
+				position="0 0 -10"
+				drag="0.15"
+			>
+				<particle 
+					maxanglespeed="30"
+					maxangle="360"
+					color="1 .75 .5"
+					startsize="40"
+					endsize="60"
+					startalpha="0"
+					midalpha=".4"
+					endalpha="0"
+				/>
+				<particle 
+					maxanglespeed="50"
+					maxangle="360"
+					color=".5"
+					startsize="40"
+					endsize="60"
+					startalpha="0"
+					midalpha=".4"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				life="6200"
+				minparticlelife="800"
+				maxparticlelife="1400"
+				spawnrate="30"
+				gravity="1"
+				minspeed="0"
+				maxspeed="250"
+				material="/shared/effects/materials/flare2.material"
+				offsetsphere="35 50 5"
+				angle="10"
+				drag="0.05"
+			>
+				<particle 
+					minanglespeed="-430"
+					maxanglespeed="430"
+					minangle="-360"
+					maxangle="360"
+					color="1 .25 .1"
+					startsize="5"
+					minstartscale="0"
+					maxstartscale="4"
+					endsize="0"
+					endstickiness="0.8"
+				/>
+				<particle 
+					minanglespeed="-330"
+					maxanglespeed="330"
+					minangle="-360"
+					maxangle="360"
+					startcolor="1 .35 .1"
+					endcolor="0"
+					startsize="5"
+					minstartscale="1"
+					maxstartscale="4"
+					endsize="0"
+					endstickiness="0.7"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				offsetsphere="35 50 5"
+				position="0 0 50"
+				spawnrate="10"
+				particlelife="800"
+				life="7000"
+				material="/shared/effects/materials/refract_outsplash.material"
+				depthbias="-20"
+			>
+				<particle
+					startalpha="1.0"
+					endalpha="0.0"
+					minangle="0"
+					maxangle="360"
+					anglespeed="-90"
+					startsize="30"
+					endsize="100"
+					startparam=".1"
+					endparam="0"
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0" />
+		<camerashake2 scale="3.0" radius="1200" duration="1000" frequency="22" />
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+	</thread>
+
+</effect>

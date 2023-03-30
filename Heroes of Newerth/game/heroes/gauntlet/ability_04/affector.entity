@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Gauntlet_Ability4"
+
+	radius="200,225,250"
+	lifetime="-1"
+	maximpactspertarget="1"
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Magic"
+>
+	<onimpact>
+		<disjoint target="target_entity" />
+		<applystate name="State_Gauntlet_Ability4_Statis" target="target_entity" duration="4000" />
+	</onimpact>
+</affector>

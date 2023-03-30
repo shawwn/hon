@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="gatething.max" file="high.model" type="K2" >
+		<spawnevent cmd="starteffect effects/glow.effect "/>
+	<anim name="idle" clip="clips/default_01.clip" fps="30" loop="true"/>
+		
+	
+</model>

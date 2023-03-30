@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" >
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale=".65">	
+		
+			<model
+				life="4000"
+				model="effect_movement/model.mdf"
+				anim="idle"
+				expirelife="500"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".5"
+			>
+				
+				<billboard
+					material="/shared/effects/materials/corona_07.material"
+					bone="_bone_fx_01"
+					color="1 .5 0"
+					life="500"
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					position="0 0 10"
+					startsize="75"
+					endsize="20"
+					depthbias="-150"			
+				/>
+
+				<simpleemitter
+				bone="_bone_fx_01"
+					delay="0"
+					life="400"
+					spawnrate="650"
+					count="20"
+					minparticlelife="230"
+					maxparticlelife="1000"
+					speed="100"
+					drag="0.05"
+					gravity="-1"
+					offsetsphere="10 10 10"
+					material="/shared/effects/materials/bad_healing_smoke_12.material"
+				>
+					<particle
+						minangle="-180"
+						maxangle="180"
+						minanglespeed="-150"
+						maxanglespeed="150"
+						turn="1"
+						startcolor=".6 .3 .1"
+						endcolor="0"
+						size="25"
+						minendscale="4"
+						maxendscale="8"
+						startalpha=".3"
+						midalpha=".9"
+						midalphapos="0.1"
+						endalpha="0"
+						startanchor="1"
+						endanchor=".5"
+					/>
+				</simpleemitter>
+
+
+
+				<simpleemitter
+				bone="_bone_fx_01"
+					delay="0"
+					life="400"
+					spawnrate="650"
+					count="20"
+					minparticlelife="250"
+					maxparticlelife="500"
+					speed="10"
+					drag="0.05"
+					offsetsphere="5 5 5"
+					depthbias="-40"
+					material="/shared/effects/materials/phantom_smoke_04.material"
+				>
+					<particle
+						minangle="-180"
+						maxangle="180"
+						minanglespeed="-150"
+						maxanglespeed="150"
+						turn="1"
+						startcolor="1 1 1"
+						midcolorpos="0.2"
+						midcolor=".6 .3 .1"
+						endcolor="0"
+						size="20"
+						startstickiness="0"
+						maxendstickiness="1"
+						minendscale="4"
+						maxendscale="8"
+						startalpha=".3"
+						midalpha="1"
+						midalphapos="0.1"
+						endalpha="0"
+						startanchor="1"
+						endanchor=".5"
+					/>
+				</simpleemitter>
+
+				<simpleemitter
+				bone="_bone_fx_01"
+					delay="250"
+					life="1800"
+					spawnrate="400"
+					count="35"
+					minparticlelife="350"
+					maxparticlelife="1200"			
+					gravity="24"
+					minspeed="250"
+					maxspeed="1000"
+					drag=".02"
+					material="/shared/effects/materials/spark_10.material"
+					offsetsphere="5 5 5"
+					minangle="-10"
+					maxangle="40"
+					direction="0 0 1"
+					directionalspace="global"
+				>
+					<particle 
+						minangle="0"
+						maxangle="360"
+						startcolor="1"
+						midcolor="1 .6 0"
+						endcolor="0 0 0"
+						midcolorpos=".2"
+						minstartsize="10"
+						maxstartsize="15"
+						midsize="6"
+						endsize="3"
+						startalpha="0"
+						midalpha=".7"
+						endalpha="0"
+						midalphapos=".5"
+						turn="true"
+						scale="2"
+						startanchor="1"
+						endanchor=".5"
+					/>
+				</simpleemitter>
+				
+				<billboard
+				bone="_bone_fx_01"
+					delay="0"
+					life="500"
+					startcolor="1 .5 0"
+					endcolor="0"
+					size="100"
+					depthbias="-120"
+					material="/shared/effects/materials/whitedot.material"
+				/>
+
+				<simpleemitter
+				bone="_bone_fx_01"
+					delay="0"
+					life="400"
+					count="5"
+					spawnrate="2550"
+					particlelife="400"
+					offsetsphere="5 5 5"
+					material="/shared/effects/materials/refract_wave2.material"
+				>
+					<particle
+						startalpha=".5"
+						endalpha="0"
+						minangle="0"
+						maxangle="360"
+						startsize="75"
+						endsize="100"
+						param=".2"
+						depthbias="-130"
+						startanchor="1"
+						endanchor=".5"
+					/>
+				</simpleemitter>
+
+				
+				
+			</model>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+		<spawnmodifier instance="instance1" modifier="modifier0"/> 
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

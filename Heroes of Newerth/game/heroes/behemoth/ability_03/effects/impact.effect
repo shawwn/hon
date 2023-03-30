@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world"  scale="0.25">
+
+			<billboard
+				life="300"
+				startcolor="1 .5 .5"
+				midcolor="1 .5 .5"
+				endcolor="0 0 0"
+				startsize="100"
+				endsize="1000"
+				depthbias="-100"
+				material="/shared/effects/materials/smash_add.material"
+				lockup="true"
+				pitch="90"
+				maxroll="360"	
+				position="0 0 10"			
+			/>
+
+			<billboard
+				life="300"
+				startalpha=".75"
+				midalpha=".5"
+				endalpha="0"
+				midalphapos=".75"
+				startparam=".05"
+				endparam="0"
+				startsize="900"
+				endsize="3000"
+				depthbias="-100"
+				material="/shared/effects/materials/refract_ripple.material"
+				lockup="true"
+				pitch="90"
+				position="0 0 10"				
+			/>
+
+			<template name="pulse">
+				<billboard
+					delay="{delay}"
+					life="600"
+					startcolor=".4 .175 0"
+					endcolor="0"
+					startsize="50"
+					endsize="1850"
+					midsizepos=".4"				
+					position="0 0 20"
+					material="/shared/effects/materials/corona_06.material"
+					lockup="true"
+					pitch="90"
+				/>
+					
+				<billboard
+					delay="{delay}"
+					life="500"
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".75"
+					startparam=".05"
+					endparam="0"
+					startsize="128"
+					endsize="1368"
+					depthbias="-100"
+					position="0 0 20"
+					material="/shared/effects/materials/refract_ring.material"
+					lockup="true"
+					pitch="90"
+				/>				
+			</template>
+		
+			<instance name="pulse" delay="0"/>
+			<instance name="pulse" delay="80"/>
+		
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

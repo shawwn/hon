@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect persistent="1">
+	<definitions>
+		
+		<particlesystem name="system0" space="world" scale="1">
+
+			<sound
+				delay="100"
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".85"
+				sample="../sounds/cast.wav"
+			/>
+			
+		<billboard
+			bone="_bone_weapon3"
+			color=".1 .3 0"
+			material="/shared/effects/materials/whitedot.material"
+			startsize="0"
+			midsize="70"
+			endsize="0"
+			midsizepos=".3"
+			midcolorpos=".3"
+			life="1000"
+			depthbias="-40"			
+		/>
+		<billboard
+			bone="_bone_weapon2"
+			color=".1 .3 0"
+			material="/shared/effects/materials/whitedot.material"
+			startsize="0"
+			midsize="70"
+			endsize="0"
+			midsizepos=".3"
+			midcolorpos=".3"
+			life="1000"
+			depthbias="-40"			
+		/>	
+
+		<billboard
+			bone="_bone_weapon1"
+			color=".1 .3 0"
+			material="/shared/effects/materials/whitedot.material"
+			startsize="0"
+			midsize="70"
+			endsize="0"
+			midsizepos=".3"
+			midcolorpos=".3"
+			life="1000"
+			depthbias="-40"			
+		/>	
+		
+		<twopointemitter	
+			delay="500"
+			bone_a="_bone_weapon3"
+			bone_b="_bone_weapon1"
+			spawnrate="150"
+			count="70"			
+			particlelife="400"			
+			gravity="25"
+			speed="20"
+			drag=".02"
+			acceleration="0"
+			position="0 0 0"		
+			material="/shared/effects/materials/poison_09.material"
+			inheritvelocity=".25"
+		>
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+				maxanglespeed="0"
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="0 0 0"
+				midcolorpos=".2"
+				startframe="0"
+				endframe="1"
+				startsize="1"
+				midsize="35"
+				endsize="70"
+				startalpha="0"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".5"
+			/>
+
+		</twopointemitter>
+			
+	
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

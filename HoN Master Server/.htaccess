@@ -1,0 +1,26 @@
+php_flag log_errors off
+
+# supress php errors
+php_flag display_startup_errors off
+php_flag display_errors off
+php_flag html_errors off
+php_value docref_root 0
+php_value docref_ext 0
+php_value auto_prepend_file /usr/local/www/websites/masterserver.hon.s2games.com/postlog.php
+
+BrowserMatchNoCase "^$" Allow=1
+BrowserMatchNoCase "^S2 Games/(Heroes of Newerth|Abaddon)/[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}/[lwmatx1sc]{3}/(x86-biarch|universal|i686)$" Allow=1
+BrowserMatchNoCase "login_check" Allow=1
+
+Order deny,allow
+Deny from all
+Allow from env=Allow
+Allow from 174.36.178.84
+Allow from 174.36.178.85
+Allow from 174.36.178.86
+Allow from 64.136.239.227
+Allow from 76.164.220.34
+Allow from 64.20.203.130
+Allow from 97.86.64.178
+
+ErrorDocument 403 /server-error/403.html

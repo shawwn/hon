@@ -1,0 +1,44 @@
+ID;PSCALC3
+C;X2;Y1;K"Hero"
+C;X3;Y1;K"Tower "
+C;X4;Y1;K"Melee "
+C;X5;Y1;K"Ranged"
+C;X6;Y1;K"Siege"
+C;X1;Y2;K"Hero Armor"
+C;X2;Y2;K1
+C;X3;Y2;K0.75
+C;X4;Y2;K0.75
+C;X5;Y2;K0.5
+C;X6;Y2;K0.5
+C;X1;Y3;K"Basic Armor"
+C;X2;Y3;K1
+C;X3;Y3;K1.25
+C;X4;Y3;K1
+C;X5;Y3;K1.5
+C;X6;Y3;K1.25
+C;X1;Y4;K"Fortified Armor"
+C;X2;Y4;K0.5
+C;X3;Y4;K1.5
+C;X4;Y4;K0.7
+C;X5;Y4;K0.35
+C;X6;Y4;K1.5
+C;X2;Y6;K"Attack"
+C;X3;Y6;K"Armor"
+C;X1;Y7;K"Hero Armor"
+C;X2;Y7;K"Hero"
+C;X3;Y7;K"Hero"
+C;X1;Y8;K"Structures"
+C;X3;Y8;K"Fortified"
+C;X1;Y9;K"Towers"
+C;X2;Y9;K"Tower"
+C;X3;Y9;K"Fortified"
+C;X1;Y10;K"Melee Creep"
+C;X2;Y10;K"Melee"
+C;X3;Y10;K"Basic"
+C;X1;Y11;K"Ranged Creep"
+C;X2;Y11;K"Ranged"
+C;X3;Y11;K"Basic"
+C;X1;Y12;K"Siege"
+C;X2;Y12;K"Siege"
+C;X3;Y12;K"Fortified"
+E

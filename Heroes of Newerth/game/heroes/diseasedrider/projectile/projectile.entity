@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_DiseasedRider_Attack"
+
+	speed="1000"
+	gravity="1100"
+
+	modelscale="0.2"
+	model="/heroes/armadon/ability_02/effects/spine.mdf"
+	impacteffect="effects/impact.effect"
+	traileffect="effects/trail.effect"
+>
+</projectile>

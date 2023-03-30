@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Soulstealer1c"
+
+	icon="icon.tga"
+	
+	anim="ability_1c"
+	casttime="1000"
+	castactiontime="650"
+
+	maxlevel="1"
+
+	actiontype="facing"
+	targetradius="275"
+	casteffecttype="Magic"
+	targetscheme="enemy_units"
+	
+	manacost="75"
+	cooldowntime="10000"
+	
+	range="700"
+	forcerange="700"
+>
+	<onimpact effectdescription="true">
+		<spawnaffector name="Affector_Soulstealer_Ability1" target="target_position" />
+		<playeffect effect="effects/affector.effect" source="target_position" target="" occlude="true" />
+	</onimpact>
+	
+	<modifier key="raze1" modpriority="90"
+		baselevel="1"
+		keyslot="2"
+	/>
+	
+	<modifier key="raze2" modpriority="90"
+		baselevel="2"
+		keyslot="2"
+	/>
+	
+	<modifier key="raze3" modpriority="90"
+		baselevel="3"
+		keyslot="2"
+	/>
+	
+	<modifier key="raze4" modpriority="90"
+		baselevel="4"
+		keyslot="2"
+	/>
+</ability>

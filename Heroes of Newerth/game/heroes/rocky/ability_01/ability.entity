@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Rocky1"
+	
+	icon="icon.tga"
+	
+	anim="ability_1"
+	casttime="800"
+	castactiontime="0"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_position"
+	targetradius="200"
+	targetmaterial="/shared/materials/area_cast_legion_indicator.material"
+	casteffecttype="Magic"
+	targetscheme="enemy_units_and_trees"
+	manacost="120"
+	cooldowntime="20000"
+	
+	projectile="Projectile_Rocky_Ability1"
+	range="600"
+>
+	<onimpact effectdescription="true">
+		<spawnaffector name="Affector_Rocky_Ability1" target="target_position" />
+		<playeffect effect="effects/cast.effect" source="source_position" target="" occlude="true" />
+	</onimpact>
+	
+	<modifier key="Rocky_Grow1" modpriority="100"
+		range="650"
+	/>
+	<modifier key="Rocky_Grow2" modpriority="100"
+		range="700"
+	/>
+	<modifier key="Rocky_Grow3" modpriority="100"
+		range="750"
+	/>
+</ability>

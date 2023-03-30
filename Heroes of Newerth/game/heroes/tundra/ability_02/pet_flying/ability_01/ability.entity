@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Tundra2_Pet_Flying_Ability1"
+
+	icon="icon.tga"
+	statuseffecttooltip="State_Tundra_Ability1_FlyingPet"
+	
+	anim=""
+	casttime="0"
+	castactiontime="0"
+	frontqueue="true"
+	inheritmovement="true"
+	casteffect="effects/cast.effect"
+	
+	actiontype="target_self"
+	
+	manacost="0"
+	
+	cooldowntime="30000"	
+>
+	<onimpact>
+		<applystate name="State_Tundra_Ability1_FlyingPet" duration="6000" target="source_entity" />
+	</onimpact>
+</ability>

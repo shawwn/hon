@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_CorruptedDisciple_Ability3"
+
+	icon="icon.tga"
+	
+	movespeedslowstart="0.8"
+	movespeedslowend="0.0"
+	passiveeffect="effects/state.effect"
+	effecttype="StatusDebuff"
+>
+	<onframe />
+</state>

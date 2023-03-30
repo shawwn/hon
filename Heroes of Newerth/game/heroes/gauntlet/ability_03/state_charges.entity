@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Gauntlet_Ability3_Charges"
+	
+	ishidden="true"
+	impactinterval="800,600,400,200"
+	deathpersist="true"
+>
+	<onimpact>
+		<addcharges entity="proxy_entity" count="1" />
+		<condition target="source_entity" test="not_hasstate State_Gauntlet_Ability1">
+			<setcharges a="0" />
+		</condition>
+	</onimpact>
+	
+	<onframe>
+		<condition target="source_entity" test="hasstate State_Gauntlet_Ability1">
+			<condition test="charges eq 0">
+				<addcharges entity="proxy_entity" count="35" />
+				<addcharges entity="this_entity" count="1" />
+			</condition>
+		</condition>
+	</onframe>
+</state>

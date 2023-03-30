@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="fireshield" deferred="true" useentityeffectscale="true">
+	<definitions>
+		<particlesystem name="system0" space="entity" scale="1.1h">
+
+
+			<template name="nade">
+				<model	
+					bone="{bone}"				
+					anim="still"
+					startalpha="1"
+					endalpha="0"
+					model="/heroes/bomb/projectile/model.mdf"
+					color="1 1 1"
+					scale="1.4"
+					minroll="-150"
+					maxroll="100"
+					minrollspeed="0"
+					maxrollspeed="179"
+					minyawspeed="0"
+					maxyawspeed="400"
+					expirelife="500"
+					position="0 0 10"
+				>
+					<simpleemitter
+
+						bone="_bone_fx_fuse"
+						position="0 0 0"
+						spawnrate="440"
+						minparticlelife="200"
+						maxparticlelife="500"
+						gravity="20"
+						minspeed="40"
+						maxspeed="100"
+						drag=".01"
+						material="/shared/effects/materials/spark_10.material"
+						offsetsphere="2 2 2"
+						minangle="0"
+						maxangle="15"
+						direction="0 1 0"
+					>
+						<particle 
+							minangle="0"
+							maxangle="360"
+							startcolor="1"
+							midcolor=".5 .2 0"
+							endcolor="0 0 0"
+							midcolorpos=".2"
+							minstartsize="50"
+							maxstartsize="80"
+							midsize="80"
+							endsize="50"
+							startalpha="0"
+							midalpha=".7"
+							endalpha="0"
+							midalphapos=".5"
+							scale=".2"
+						/>
+					</simpleemitter>
+			
+				</model>
+
+				<billboard
+					expirelife="200"
+					bone="{bone}"
+					startcolor=".5 .2 .0"
+					endcolor="0 0 0"
+					size="80"
+					depthbias="0"
+					material="/shared/effects/materials/whitedot.material"
+					lockup="true"
+					pitch="90"
+				/>					
+				
+			</template>
+			
+			<model						
+				model="models/nade_bones.mdf"
+				anim="idle"
+				color="1 1 1"
+				scale="0.8"
+				yawspeed="80"
+				expirelife="500"
+				position="0 0 50"
+			>	
+				
+				<instance name="nade" bone="_bone_nade_1" />
+
+			</model>	
+			
+
+	
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

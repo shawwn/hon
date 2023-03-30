@@ -1,0 +1,29 @@
+Faerie:
+========
+Ability 1:
+----------
+Creates this floating wisp/faerie energy that grows over for a few seconds. After that period it releases its energy in a medium sized circle in the area, dealing damage to enemies and healing allies.
+
+fairy magic unveals a hidden green goblin fairy. who becomes irrated and irratic then explodes into fairy dust.
+
+large magical caccoon forms and begins to rip open exploding into a bunch of magic butterflys and particles.
+
+fire flys begin to appear in the AOE and then each fire fly explodes.
+
+Ability 2:
+----------
+Enchants an allied target (or self). Causes the next spell or item used to not cost mana. Cooldown is the main thing that changes per level. While you have this buff, this delays any silencing effects from taking effect by a couple seconds.
+
+
+Ability 3:
+----------
+Releases 2 wisps in an Wild Axes like motion, stunning units in its way. Theme wise the wisps drain the units energy (ability to move/cast/attack, aka stunned) returns it to you. You gain movement speed and attack speed based on the number of units hit
+
+
+Ultimate:
+---------
+This is a teleportation type ultimate. This creates an effect in the area that places a buff on you and nearby allies. Any allied unit can click the buff off to cancel it from itself (there will be a seperate buff/info button that will be on the side of your screen). If any unit with this buff is disabled (this is a free roaming channel so to speak), it loses the buff. If you get disabled, the effect fails for everyone. After the timer delay, if you are still with the buff, a wispy effect occurs and you and your allies are transported. This is supposed to be the faerie doing the magical transportation process itself, so maybe something like the units fading and this wispy energy flows from them to the faerie as the faerie does a unique teleportation effect. s have their vision reduced and their sight unshared from allied units.
+
+fairy wing effect on characters backs
+
+ 

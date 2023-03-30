@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect  persistent="1">
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+		
+
+			<simpleemitter
+				spawnrate="15"
+				count="4"
+				particlelife="5500"
+				offsetsphere="0 25 0"
+				position="0 0 0"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+			>
+				<particle
+				turn="true"
+				>
+					<model
+						position="0 0 0"
+						scale="1"
+						minlife="250"
+						maxlife="400"
+						model="../../model.mdf"
+						anim="ability_1"
+						color="1 1 1"
+						startalpha="1"
+						endalpha="0"
+					>
+					</model>	
+					
+				</particle>
+			</simpleemitter>
+			
+			<trailemitter
+				life="250"
+				bone="_bone_weapon3"
+				spawnrate="50"
+				particlelife="500"
+				texpostime="500"
+			 	texposscale="0.0"
+			 	texstretchscale=".4"
+				position="0 60 0"
+				material="/shared/effects/materials/arrow_trail.material"
+			>
+				<particle
+					 startcolor="0 0 .75"
+					 midcolor="0.05 0.2 0.4"
+					 endcolor="0 0 0"
+					 startsize="10"
+					 midsize="80"
+					 endsize="30"
+					 midsizepos="0.2"
+			 />
+			</trailemitter>	
+<!--
+			<trailemitter
+				life="250"
+				bone="_bone_weapon2"
+				spawnrate="50"
+				particlelife="500"
+				texpostime="500"
+			 	texposscale="0.0"
+			 	texstretchscale=".4"
+				position="0 60 0"
+				material="/shared/effects/materials/arrow_trail.material"
+			>
+				<particle
+					 startcolor=".5 .5 0"
+					 midcolor="0.051 0.2 0.4"
+					 endcolor="0 0 0"
+					 startsize="10"
+					 midsize="80"
+					 endsize="30"
+					 midsizepos="0.2"
+			 />
+			</trailemitter>	
+				
+			<trailemitter
+				life="250"
+				bone="_bone_weaponattach"
+				spawnrate="50"
+				particlelife="500"
+				texpostime="500"
+			 	texposscale="0.0"
+			 	texstretchscale=".4"
+				position="0 60 0"
+				material="/shared/effects/materials/arrow_trail.material"
+			>
+				<particle
+					 startcolor=".7 .7 0"
+					 midcolor="0.1 0.3 0.5"
+					 endcolor="0 0 0"
+					 startsize="10"
+					 midsize="120"
+					 endsize="30"
+					 midsizepos="0.2"
+			 />
+			</trailemitter>
+-->
+			<simpleemitter
+				offsetsphere="85 85 0"
+				spawnrate="100"
+				count="25"
+				particlelife="2000"
+				gravity="-.5"
+				acceleration="0"
+				speed="20"
+				position="0 0 25"
+				material="/shared/effects/materials/pyroclast_01.material"
+			>
+				<particle
+					minangle="-360"
+					maxangle="360"
+					color=".36 .383 .3"
+					minstartsize="10"
+					maxstartsize="50"
+					minendsize="100"
+					maxendsize="200"
+					minanglespeed="-30"
+					maxanglespeed="33"
+					startalpha="0"
+					midalpha=".5"
+					endalpha="0"
+					midalphapos=".1"
+					frame="1"
+					framespeed="1"
+					lockup="0"
+					lockright="false"
+					turn="false"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				count="5"
+				spawnrate="15"
+				particlelife="250"
+				position="0 0 0"
+				material="/shared/effects/materials/shieldstarfish.material"
+				particledirectionalspace="local"
+				offsetdirection="0 0 0"
+				offsetradial="0"
+			>
+				<particle 
+					minangle="-15"
+					maxangle="-15"
+					minanglespeed="0"
+					startcolor=".3 .5 1"
+					endcolor="0 0 0"
+					maxanglespeed="00"
+					startframe="0"
+					endframe="1"
+					startsize="20"
+					endsize="250"
+					startalpha=".3"
+					midalpha=".3"
+					endalpha="0"
+					midalphapos=".5"
+					lockup="true"
+					lockright="1"
+					pitch="0"
+					flare="0"
+					yaw="00"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				count="5"
+				spawnrate="15"
+				particlelife="250"
+				position="0 0 0"
+				material="/shared/effects/materials/refract_swell.material"
+				particledirectionalspace="local"
+				offsetdirection="0 0 0"
+				offsetradial="0"
+				param=".4"
+			>
+				<particle
+					startsize="100"
+					endsize="250"
+					param="0.5"
+					startalpha=".3"
+					midalpha=".3"
+					endalpha="0"
+					midalphapos=".5"
+					lockup="true"
+					lockright="1"
+					pitch="0"
+					flare="0"
+					yaw="00"
+				/>
+			</simpleemitter>
+	
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+	  
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+
+

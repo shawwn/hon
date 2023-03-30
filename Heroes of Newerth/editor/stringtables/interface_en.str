@@ -1,0 +1,381 @@
+//Map Editor
+
+general_collapse							Collapse
+general_expand								Expand
+general_cancel								Cancel
+
+mapedit_sysbar_file							File
+mapedit_sysbar_properties					Properties
+mapedit_sysbar_environment					Environment
+mapedit_sysbar_scripts						Scripts
+mapedit_sysbar_grid							Grid
+
+mapedit_snap								Snap
+mapedit_snap_top							Toggle grid snapping.
+mapedit_lock								Lock
+mapedit_lock_tip							Lock/Unlock the current selection.
+
+mapedit_new_map								New Map...
+mapedit_load_map							Load Map...
+mapedit_save								Save
+mapedit_saveas								Save As...
+mapedit_importfiles							Import/Manage Files...
+
+mapedit_enviro								Envornment Properties
+mapedit_enviro_cat_lighting					Lighting
+mapedit_enviro_cat_sunopts					Sun Options
+mapedit_enviro_entity_ambient				Entity Ambient
+mapedit_enviro_entity_ambient_tip			{JUSTtheTIP} - Entity Ambient
+mapedit_enviro_entity_sun					Entity Sun
+mapedit_enviro_entity_sun_tip				{JUSTtheTIP} - Entity Sun
+mapedit_enviro_terrain_ambient				Terrain Ambient
+mapedit_enviro_terrain_ambient_tip			{JUSTtheTIP} - Terrain Ambient
+mapedit_enviro_terrain_sun					Terrain Sun
+mapedit_enviro_terrain_sun_tip				{JUSTtheTIP} - Terrain Sun
+mapedit_enviro_color_picker					Set Environment Color
+mapedit_enviro_sun_enabled					Sun Sprite Enabled
+mapedit_enviro_sun_enabled_tip				{JUSTtheTIP} - Sprite Enabled
+mapedit_enviro_sun_spritecolor				Sun Sprite Color
+mapedit_enviro_sun_spritecolor_tip			{JUSTtheTIP} - Sprite Color
+mapedit_enviro_sun_altitude					Sun Altitude
+mapedit_enviro_sun_altitude_tip				{JUSTtheTIP} - Sun Alt
+mapedit_enviro_sun_azimuth					Sun Azimuth
+mapedit_enviro_sun_azimuth_tip				{JUSTtheTIP} - Sun Azim
+mapedit_enviro_fogsky_opts					Fog / Sky Options
+mapedit_enviro_fog_mode						Fog Mode
+mapedit_enviro_fog_mode_tip					{JUSTtheTIP} - Fog Mode
+mapedit_enviro_fog_scale					Fog Scale
+mapedit_enviro_fog_scale_tip				{JUSTtheTIP} - Fog Scale
+mapedit_enviro_fog_density					Fog Density
+mapedit_enviro_fog_density_tip				{JUSTtheTIP} - Fog Density
+mapedit_enviro_fog_near						Fog Near
+mapedit_enviro_fog_near_tip					{JUSTtheTIP} - Fog Near
+mapedit_enviro_fog_far						Fog Far
+mapedit_enviro_fog_far_tip					{JUSTtheTIP} - Fog Far		
+mapedit_enviro_fog_color					Fog Color
+mapedit_enviro_fog_color_tip				{JUSTtheTIP} - Fog Color
+mapedit_enviro_sky_enabled					Sky Enabled
+mapedit_enviro_sky_enabled_tip				{JUSTtheTIP} - Sky Enabled
+mapedit_enviro_sky_skin						Sky Skin
+mapedit_enviro_sky_skin_tip					{JUSTtheTIP} - Sky Skin
+mapedit_enviro_sky_fg_color					Sky FG Color
+mapedit_enviro_sky_fg_color_tip				{JUSTtheTIP} - Sky FG
+mapedit_enviro_sky_bg_color					Sky BG Color
+mapedit_enviro_sky_bg_color_tip				{JUSTtheTIP} - Sky BG
+mapedit_enviro_cloud_opts					Cloud Options
+mapedit_enviro_cloud_proj					Cloud Projections
+mapedit_enviro_cloud_proj_tip				{JUSTtheTIP} - Cloud Proj
+mapedit_enviro_cloud_scale					Cloud Scale
+mapedit_enviro_cloud_scale_tip				{JUSTtheTIP} - Cloud Scale
+mapedit_enviro_cloud_spdX					Cloud Speed X
+mapedit_enviro_cloud_spdX_tip				{JUSTtheTIP} - SpeedX
+mapedit_enviro_cloud_spdY					Cloud Speed Y
+mapedit_enviro_cloud_spdY_tip				{JUSTtheTIP} - SpeedY
+mapedit_enviro_cloud_tex					Cloud Texture
+mapedit_enviro_cloud_tex_tip				{JUSTtheTIP} - Cloud texture
+mapedit_enviro_tod							Time of Day
+mapedit_enviro_tod_tip						{JUSTtheTIP} - Cloud texture
+mapedit_enviro_tod_1						Morning
+mapedit_enviro_tod_2						Day
+mapedit_enviro_tod_3						Evening
+mapedit_enviro_tod_4						Night
+
+mapedit_deform								Deform
+mapedit_paint								Paint
+mapedit_entity								Entities
+mapedit_lights								Lights
+mapedit_foliage								Foliage
+mapedit_occluder							Occluders
+mapedit_sound								Sounds
+mapedit_blocker								Blockers
+mapedit_cliff								Cliffs
+mapedit_spawns								Spawns
+
+mapedit_gridsize							Grid Size
+mapedit_gridsize_tip						Set the size (in tiles) of the grid. Set to '0' to turn the grid off.
+
+mapedit_tools								Tools
+mapedit_minimap								Mini Map
+mapedit_fileimport							Imported Files
+
+mapedit_tip_svloadfile						Save/Load File
+mapedit_tip_settings						Map Editor Settings
+mapedit_tip_grid							Display a Grid Over Map
+mapedit_tip_scripts							Import Scripts
+mapedit_tip_enviro							Set Map Atmosphere
+mapedit_tip_mapproperties					General Map Properties
+
+mapedit_category_tip_deform					Shape the ground plane of your map.
+mapedit_category_tip_textures				Paint textures and colors onto your ground plane.
+mapedit_category_tip_entities				Place and configure model files.
+mapedit_category_tip_lights					Place and configure light sources.
+mapedit_category_tip_foliage				Add 3-dimensional foliage to your ground plane.
+mapedit_category_tip_occluder				^rOccluder^* tool category being removed from HoN editor?
+mapedit_category_tip_sounds					Add ambient and localized sounds.
+mapedit_category_tip_blockers				Limit sight and movment.
+mapedit_category_tip_cliffs					Place and configure cliff surfaces.
+mapedit_category_tip_spawns					Place and configure spawn points.
+
+mapedit_create_tip							Create
+mapedit_select_tip							Select
+mapedit_translate_tip						Translate XY
+mapedit_translate_z_tip						Translate Z
+mapedit_rotate_yaw_tip						Rotate Yaw
+mapedit_rotate_roll_tip						Rotate Roll
+mapedit_rotate_pitch_tip					Rotate Pitch
+mapedit_scale_tip							Scale
+mapedit_centermode							Center Mode
+mapedit_centermode_tip						Sets the center point when manipulating multiple items at one time.
+mapedit_cm_avg_tip							Average
+mapedit_cm_indiv_tip						Individual
+mapedit_cm_hover_tip						Hover
+
+mapedit_deform_height						Raise/Lower
+mapedit_deform_flatten						Flatten
+mapedit_deform_cut							Cut
+mapedit_deform_smooth						Smooth
+mapedit_deform_clear						Clear
+mapedit_deform_noise						Noise
+mapedit_deform_stamp						Stamp
+
+mapedit_paint_color							Color
+mapedit_paint_texture						Texture
+mapedit_paint_alpha							Alpha
+mapedit_texture_brushes						Brush Colors
+mapedit_texture_pricolor					Primary Color
+mapedit_texture_pricolor_tip				The primary color is painted with the left mouse button. Painting with white will "remove" color you have already applied.
+mapedit_texture_seccolor					Secondary Color
+mapedit_texture_seccolor_tip				The secondary color is painted with the right mouse button. Painting with white will "remove" color you have already applied.
+mapedit_texture_red							Red
+mapedit_texture_green						Green
+mapedit_texture_blue						Blue
+mapedit_texture_alpha						Alpha
+mapedit_texture_terrain_texture				Terrain Texture
+mapedit_texture_tip							Click to select the texture you would like to apply to your terrain.
+
+mapedit_colorswatch_tip						Click to select the colors you would like to paint with.
+mapedit_texture_layers						Texture Layers
+mapedit_texture_layer1						Layer 1
+mapedit_texture_layer1_info					Textures fill entire tiles, and can not be deleted, only replaced. Right clicking will highlight tiles with no texture applied.
+mapedit_texture_layer2						Layer 2
+mapedit_texture_layer2_info					Textures opacity can be affected by the brush as well as the brush strength. Right clicking will erase texture applied to layer 2.
+
+mapedit_entity_mode							Mode
+mapedit_entity_mode_tip						Switch between model and tree toolset.
+mapedit_entity_modelmode					Model Mode
+mapedit_entity_treemode						Tree Mode
+mapedit_entity_create						Create
+mapedit_entity_select						Select
+mapedit_entity_translatexy					Translate XY
+mapedit_entity_translatez					Translate Z
+mapedit_entity_yaw							Rotate Yaw
+mapedit_entity_roll							Rotate Roll
+mapedit_entity_pitch						Rotate Pitch
+mapedit_entity_scale						Scale
+mapedit_entity_selectcontrols				Selection Controls
+mapedit_entity_ground						Move To Ground
+mapedit_entity_straighten					Straighten Model
+mapedit_entity_resetscale					Reset Scale
+mapedit_entity_selectbymodel				Select all models of this type
+mapedit_entity_property_name				Name
+mapedit_entity_property_name_tip			Name of the entity that you can reference in entity files.
+mapedit_entity_property_team				Team
+mapedit_entity_property_level				Level
+mapedit_entity_property_type				Type
+mapedit_entity_property_model				Model
+mapedit_entity_property_skin				Skin
+mapedit_entity_property_target0				Target #0
+mapedit_entity_property_target1				Target #1
+mapedit_entity_property_target2				Target #2
+mapedit_entity_property_target3				Target #3
+mapedit_entity_property_target4				Target #4
+mapedit_entity_property_config				Config
+mapedit_entity_property_ondamage			On Damage
+mapedit_entity_property_ondeath				On Death
+mapedit_entity_property_unit_prop			Unit Properties
+mapedit_entity_unit_prop_dormant			Start Dormant
+mapedit_entity_dynamic_prop_setting			Dynamic Prop Settings
+mapedit_entity_corpse_time					Corpse Time
+mapedit_entity_corpse_time_tip				{JUSTtheTIP} - Corpse Time
+mapedit_entity_max_health					Max Health
+mapedit_entity_max_health_tip				{JUSTtheTIP} - Max Health
+mapedit_entity_death_animation				Death Animation
+mapedit_entity_death_animation_tip			{JUSTtheTIP} - Death Animation
+mapedit_entity_npc_controller_setting		NPC Controller Settings
+mapedit_entity_npc_spawn_radius				Spawn Radius
+mapedit_entity_npc_spawn_radius_tip			{JUSTtheTIP} - Spawn Radius
+mapedit_entity_npc_spawn_period				Spawn Period
+mapedit_entity_npc_spawn_period_tip			{JUSTtheTIP} - Spawn Period
+
+
+
+
+mapedit_lights_prop							Light Properties
+mapedit_lights_color_tip					Set the color that the light source.
+mapedit_lights_properties					Light Properties
+mapedit_lights_startfalloff					Start Falloff
+mapedit_lights_endfalloff					End Falloff
+mapedit_lights_position						Position
+
+mapedit_foliage_texture						Texture
+mapedit_foliage_texture_only				Affect Texture of Current Foliage
+mapedit_foliage_density						Density
+mapedit_foliage_density_only				Affect Density of Current Foliage
+mapedit_foliage_size						Size
+mapedit_foliage_size_only					Affect Size of Current Foliage
+mapedit_foliage_scale						Scale
+mapedit_foliage_scale_only					Affect Scale of Current Foliage
+mapedit_foliage_smooth						Smooth
+mapedit_foliage_all 						Apply Foliage
+mapedit_foliage_all_tip						Add/Edit foliage. Left mouse button applies primary settings, right mouse button applies secondary settings.
+mapedit_foliage_texturelist					Foliage Textures
+mapedit_foliage_settings					Foliage Settings
+mapedit_foliage_pri_density					Primary Density
+mapedit_foliage_pri_density_tip				{JUSTtheTIP} - Pri Density
+mapedit_foliage_sec_density					Secondary Density
+mapedit_foliage_sec_density_tip				{JUSTtheTIP} - Sec Density
+mapedit_foliage_primary						Primary
+mapedit_foliage_secondary					Secondary
+mapedit_foliage_size_height					Height
+mapedit_foliage_size_height_tip				{JUSTtheTIP} - Height
+mapedit_foliage_size_width					Width
+mapedit_foliage_size_width_tip				{JUSTtheTIP} - Width
+mapedit_foliage_size_rand_height			Random Height
+mapedit_foliage_size_rand_height_tip		{JUSTtheTIP} - Rand Height
+mapedit_foliage_size_rand_width				Random Width
+mapedit_foliage_size_rand_width_tip			{JUSTtheTIP} - Rand Width
+mapedit_foliage_pri_scale					Primary Scale
+mapedit_foliage_pri_scale_tip				{JUSTtheTIP} - Pri Scale
+mapedit_foliage_sec_scale					Secondary Scale
+mapedit_foliage_sec_scale_tip				{JUSTtheTIP} - Sec Scale
+mapedit_foliate_select_texture				Select Texture...
+
+mapedit_occluder_create						Create
+mapedit_occluder_select						Select
+mapedit_occluder_translatexy				Translate XY
+mapedit_occluder_translatez					Translate Z
+mapedit_occluder_yaw						Rotate Yaw
+mapedit_occluder_roll						Rotate Roll
+mapedit_occluder_pitch						Rotate Pitch
+mapedit_occluder_scale						Scale
+mapedit_occluder_select						Select Mode
+mapedit_occluder_select_tip					{JUSTtheTIP} - Occ Split
+mapedit_occluderselect_face_tip				Select - Face
+mapedit_occluderselect_vertex_tip			Select - Vertex
+mapedit_occludersplit_tip					Occluder Split
+
+mapedit_sound								Sound
+mapedit_sound_controls						Sound Controls
+mapedit_sound_ambient						Ambient Sound Path
+mapedit_sound_ambient_vol					Ambient Sound Volume
+mapedit_sound_create						Create
+mapedit_sound_select						Select
+mapedit_sound_translatexy					Translate XY
+mapedit_sound_translatez					Translate Z
+mapedit_sound_nosound						No Sound Selected
+mapedit_sound_fallofff						Falloff
+mapedit_sound_select_volume					Volume
+mapedit_sound_loop_delay					Loop Delay
+mapedit_sound_loop_min						Minimum
+mapedit_sound_loop_max						Maximum
+mapedit_sound_selected_sound_tip			{JUSTtheTIP} - Selected Sound
+mapedit_sound_selected_volume_tip			Set the volume of the sound from zero to one.
+mapedit_sound_selected_falloff_tip			{JUSTtheTIP} - Falloff
+mapedit_sound_selected_minloop_tip			{JUSTtheTIP} - Min Loop
+mapedit_sound_selected_maxloop_tip			{JUSTtheTIP} - Max Loop
+
+mapedit_blocker_movement					Create Path Blockers
+
+mapedit_blocker_visual						Create Visual Blockers
+
+mapedit_cliff_create						Raise / Lower
+mapedit_cliff_paint							Add / Remove Tiles
+mapedit_cliff_clear							Clear
+mapedit_cliff_flatten						Flatten
+mapedit_cliff_variation						Variation
+mapedit_cliff_createramp					Add / Remove Ramp
+mapedit_cliff_cliff_height					Cliff Height
+mapedit_cliff_cliff_height_tip				{JUSTtheTIP} - Cliff Height
+mapedit_cliff_rotateramp					Rotate Ramp
+mapedit_cliff_properties					Cliff Properties
+mapedit_cliff_face							Cliff Face
+mapedit_cliff_face_tip						Determines if the cliffs are Hellbourne or Legion themed
+mapedit_cliff_var							Variation
+mapedit_cliff_var_tip						Pick one of the variations to make all new or selected cliff pieces.
+mapedit_cliff_random_var					Random Variation
+mapedit_cliff_random_var_tip				Toggle Random Variation
+
+mapedit_brush								Brush
+mapedit_brushstr							Brush Strength
+mapedit_brushstr_tip						Change the strength of your current brush.
+mapedit_cutheight							Cut Height
+mapedit_cutheight_tip						Specify an exact height to which the cut tool will lower terrain.
+mapedit_clearheight							Clear Height
+mapedit_clearheight_tip						Specify an exact height to which the clear tool will raise/lower terrain.
+mapedit_noiseoctave							Noise Octave
+mapedit_noiseoctave_tip						{JUSTtheTIP} - Noise Octave
+mapedit_harmonics							Harmonics
+mapedit_harmonics_tip						{JUSTtheTIP} - Harmonics
+
+mapedit_newmap_title						New Map
+mapedit_newmap_name							Map Name
+mapedit_newmap_name_tip						This is the name that will be displayed in the Heroes of Newerth client.
+mapedit_newmap_size							Map Size
+mapedit_newmap_size_tip						Size of the map. Default is 9.
+mapedit_newmap_scale						Map Scale
+mapedit_newmap_scale_tip					Scale of the 'grid units' of the map. Default is 32.
+mapedit_newmap_minplayers					Minimum Players (Per Team)
+mapedit_newmap_minplayers_tip				Minimum players allowed per team.
+mapedit_newmap_maxplayers					Maximum Players (Per Team)
+mapedit_newmap_maxplayers_tip				Maximum players allowed per team. The Heroes of Newerth interface only supports up to 5.
+mapedit_newmap_createmap					Create Map
+mapedit_newmap_texturescalse				Texture Scale
+mapedit_newmap_texturescalse_tip			Scale of the texture grid. Default is 16.
+mapedit_newmap_modifiers					Modifiers
+mapedit_newmap_modifiers_tip				Sets a map-wide modifier that is active when this map is active. Useful for having a map with different global rules.
+
+mapedit_loadmap								Load Map
+mapedit_saveas_title						Save As
+
+mapedit_pin									Pin
+mapedit_unpin								Un-Pin
+mapedit_pin_properties						When you pin the menu, it will not collapse when you move your cursor away.
+
+mapedit_scriptedit_title					Script Editor
+mapedit_scriptedit_save						Save Script
+
+mapedit_script_new							Add Custom
+mapedit_scripts_edit_tip					Name your custom script and click the Create Script button. You may also enter the name of an existing script to edit it.
+mapedit_script_existing						Edit Existing Script
+mapedit_scripts_existing_tip				Double click to edit an exisiting script.
+mapedit_scripts_edit						Edit Script
+
+mapedit_enviro_title						Environment
+
+mapedit_entity_properties					Entity Properties
+mapedit_entity_properties_tree				Tree Properties
+mapedit_entity_tree_model_tip				Select the tree model.
+mapedit_entity_name							Name of the entity
+mapedit_entity_team							{JUSTtheTIP} - Team
+mapedit_entity_level						{JUSTtheTIP} -  Level
+mapedit_entity_type							{JUSTtheTIP} - Type
+mapedit_entity_model						Selecte the .mdf file of your entity.
+mapedit_entity_skin							{JUSTtheTIP} - Skin
+mapedit_entity_target0						{JUSTtheTIP} -  Target0
+mapedit_entity_target1						{JUSTtheTIP} -  Target1
+mapedit_entity_target2						{JUSTtheTIP} -  Target2
+mapedit_entity_target3						{JUSTtheTIP} -  Target3
+mapedit_entity_target4						{JUSTtheTIP} -  Target4
+mapedit_entity_config						{JUSTtheTIP} - Config
+mapedit_entity_water_settings				Water Settings
+mapedit_entity_water_effect_type			Water Effect
+mapedit_entity_water_effect_type_tip		{JUSTtheTIP} - Water Effect
+
+mapedit_sound_path							{JUSTtheTIP} - Sound Path
+mapedit_sound_volume						Set the volume of the sound from zero to one.
+
+main_quit_confirm							Progress not saved on quit!
+main_button_quit							Quit anyway
+
+general_close								Close
+// End - do not delete this line

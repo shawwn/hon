@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="true" deferred="true">
+	<definitions>
+	
+			
+		<modifier
+			name="modifier0"
+			
+			startcolor="1 1.5 1.5"
+			midcolor="1 1.5 1.5"
+			endcolor="1 1 1"
+			midcolorpos="0.889"
+			alpha=".8"
+		/>
+		
+		<particlesystem name="system0" space="world" scale="1.2">
+
+			<sound				
+				linearfalloff="true"
+				falloffstart="0"
+				falloffend="2200"
+				volume="0.40"
+				sample="/heroes/frosty/ability_02/sounds/impact.wav"
+			/>
+			
+			<model
+				model="platform.mdf"
+				
+				scale=".6"
+			/>
+			
+			<debris
+				position="0 0 0"				
+				scale="0.4"				
+				model="ice.mdf"
+				anim="idle"	
+				minspeed="200.0"
+				maxspeed="400.0"
+				minrotationspeed="100.0"
+				maxrotationspeed="300.0"
+				gravity="41.0"			
+				collide="true"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="1.0"
+				midalphapos="0.5"
+				bounce="0.7"
+				reflect="0.6"
+				animpose="true"
+			/>				
+		
+			<model
+				parentmodel="true"
+				parentskeleton="true"
+				material="shell_ice.material"
+				expirelife="1500"
+				startalpha="1.0"
+				endalpha="0.0"	
+			/>
+
+			
+			<template name="twopoint">
+				<twopointemitter 
+					bone_a="{bone_a}"
+					bone_b="{bone_b}"
+					count="{count}"			
+					offsetsphere="{offset} {offset} {offset}"					
+				>
+					<particle
+						anchor="1"
+					>
+						<model							
+							minscale=".5"						
+							maxscale="2"							
+							model="point.mdf"			
+							alpha="1"
+							lockup="1"
+							lockright="1"
+						/>					
+					
+					</particle>			
+				</twopointemitter>
+			</template>			
+			
+			<instance name="twopoint" count="5" bone_a="_bone_lefthand" bone_b="Bip01 L Forearm" offset="4"/>
+			<instance name="twopoint" count="5" bone_a="_bone_righthand" bone_b="Bip01 R Forearm" offset="4"/>
+			<instance name="twopoint" count="5" bone_a="Bip01 L UpperArm" bone_b="Bip01 L Forearm" offset="4"/>	
+			<instance name="twopoint" count="5" bone_a="Bip01 R UpperArm" bone_b="Bip01 R Forearm" offset="4"/>
+			<instance name="twopoint"  count="13" bone_a="_bone_head" bone_b="_bone_chest" offset="15"/>
+			
+	
+				
+			<template name="point">
+				<simpleemitter 
+					bone="{bone}"
+					count="3"			
+					offsetsphere="{offset} {offset} {offset}"					
+				>
+					<particle
+						anchor="1"
+					>
+						<model							
+							minscale=".5"						
+							maxscale="3"							
+							model="point.mdf"			
+							alpha="1"
+							lockup="1"
+							lockright="1"
+						/>					
+					
+					</particle>			
+				</simpleemitter>
+			</template>
+
+			
+			<instance name="point" bone="Bip01 R Calf" offset="4"/>
+			<instance name="point" bone="Bip01 L Calf" offset="4"/>
+			
+			
+			<!--			
+		
+			<template name="spikes">
+				<simpleemitter 
+					bone="{bone}"
+					count="1"	
+					
+					offsetsphere="{offset} {offset} {offset}"				
+				>
+					<particle
+						anchor="1"
+					>
+						<model							
+									
+							startscale="0"
+							midscale="1"								
+							endscale="1"							
+							midscalepos=".1"
+							model="spikes.mdf"			
+							alpha="1"
+							minyaw="-360"
+							maxyaw="360"
+							minroll="-360"
+							maxroll="360"
+							minpitch="-360"
+							maxpitch="360"
+						/>		
+						
+					
+					</particle>			
+				</simpleemitter>
+			</template>
+			
+			<instance name="spikes" bone="_bone_lefthand" offset="4"/>
+			<instance name="spikes" bone="_bone_righthand" offset="4"/>
+				
+			<instance name="spikes" bone="_bone_head" offset="4" />	
+			<instance name="spikes" bone="Bip01 R Forearm" offset="4"/>
+			<instance name="spikes" bone="Bip01 L Forearm" offset="4"/>
+			
+			<instance name="spikes" bone="Bip01 R Calf" offset="4"/>
+			<instance name="spikes" bone="Bip01 L Calf" offset="4"/>			
+						
+			
+			
+			
+			-->	
+
+			
+
+			
+			
+			
+			<simpleemitter
+				count="1"
+				life="7000"
+				particlelife="5000"
+			>
+				<particle>				
+					<groundsprite
+						life="4100"						
+						material="/shared/effects/materials/ice_reveal.material"
+						
+						startcolor="0 0 0"					
+						midcolor=".6 .8 1"
+						endcolor="0 0 0"
+						midcolorpos=".1"
+						
+						startframe=".81"
+						midframe=".0"
+						endframe=".81"
+						midframepos=".1"
+						
+						startsize="150"					
+						endsize="150"
+					/>			
+				</particle>
+			</simpleemitter>
+			
+		
+
+			
+
+			
+			<simpleemitter
+			
+				bone="_bone_centerofchest"
+				count="4"										
+				particlelife="2600"	
+				material="/shared/effects/materials/smoke_01.material"
+				offsetsphere="20 20 50"
+				minangle="0"
+				maxangle="360"
+				gravity=".2"
+				speed="10"
+				direction="0 0 0"					
+			>
+
+				<particle 
+					minangle="0"
+					maxangle="0"
+					minanglespeed="100"
+					
+					color=".4 .6 .7"
+					
+					midcolorpos=".7"
+					maxanglespeed="0"
+					startframe="0"
+					endframe="1"
+					startsize="50"						
+					endsize="180"					
+				
+					startalpha="0"
+					midalpha=".2"
+					endalpha="0"
+					midalphpos=".1"
+					
+
+					
+				/>
+			</simpleemitter> 				
+
+		
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>  
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" /> 
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+
+
+

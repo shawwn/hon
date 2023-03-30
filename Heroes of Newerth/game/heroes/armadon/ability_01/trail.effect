@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="attack_projectile" deferred="true">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="7.0">
+	
+			<simpleemitter		         	
+		         	spawnrate="380"					
+		          	particlelife="1500"
+		          	gravity="2"
+		         	speed="120"
+		          	drag=".02"
+					direction="0 0 1"
+					minangle="0"
+					maxangle="30"
+		          	acceleration="0.0"
+					position="0 0 0"
+					offsetsphere="0 0 0"
+		          	material="/shared/effects/materials/splatter_blend.material"
+					inheritvelocity=".35"
+		         	>
+		  		<particle 
+					minangle="-360"
+					maxangle="360"
+					angle="180"			
+					color=".8  .6  .0 "
+					anglespeed="20"
+					
+					frame=".5"
+
+					startsize="3"							
+					endsize="0"			
+
+					startalpha="1"
+					
+					endalpha="0"
+					
+				/>
+		    </simpleemitter>	
+
+
+			<simpleemitter
+				
+				spawnrate="160"
+				count="80"		
+				particlelife="550"			
+				gravity="5"
+				speed="40"
+				acceleration="0"
+				position="0 0 0"
+
+
+				material="/shared/effects/materials/poison_05.material"
+				offsetsphere="1 1 1"
+				minangle="0"
+				maxangle="180"
+				direction="0 0 1"
+				offsetdirection="0 0 0"
+				offsetradial="0 0 0"
+				inheritvelocity="0.25"
+			>
+				<particle 
+					minangle="0"
+					maxangle="0"
+					minanglespeed="0"
+					maxanglespeed="0"
+					startcolor=".8 .8 .05"
+					midcolor=".8 .6 .05"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+
+					startframe="0"
+					endframe="1"
+
+					startsize="20"
+					midsize="20"
+					endsize="20"
+					midsizepos=".8"
+
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".3"
+					turn="true"
+				/>
+			</simpleemitter>
+			
+			<trailemitter							
+				particlelife="900"							
+				spawnrate="40"
+				texpostime="900"
+				texposscale="0"
+				texstretchscale="1"
+				position="0 0 0"
+				inheritvelocity="0.25"
+				material="/shared/effects/materials/goo_trail_blend.material"
+			>
+				<particle
+					
+					color=".9 .7 .7"					
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".2"
+					startsize="26"
+					midsize="10"				
+					endsize="12"								
+				/>
+			</trailemitter>		
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

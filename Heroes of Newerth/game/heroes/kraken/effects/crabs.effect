@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect>
+	<definitions>
+		
+		<particlesystem name="system0" space="world" scale="1.0">
+
+			<!-- running to body  -->
+
+			<trackeremitter
+				life="1200"
+				tracktype="lerp"
+				trackspeed="1.0" 				
+				spawnrate="25"
+				particlelife="15000"
+				speed="100"
+				offsetradial="100"
+				targetposition="0 30 20"
+				distancelife="true"
+				directionalspace="local"
+				material="/shared/effects/materials/crab.material"
+			>
+				<particle
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					midalphapos="1"
+					minsize="18"
+					maxsize="24"
+					lockup="true"
+					turn="true"
+					pitch="90"
+				/>
+			</trackeremitter>			
+		
+ 			<!-- eating pile -->
+
+			<simpleemitter
+				position="0 30 0"
+				life="1900"
+				delay="1300"
+				spawnrate="25"
+				particlelife="1500"
+				speed="30.0"
+				material="/shared/effects/materials/crab.material"
+				inheritvelocity="0.5"
+				offset="0 20 50"
+				offsetsphere="30 30 0"
+				directionalspace="local"
+				collide="true"
+			>
+				<particle
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					midalphapos="1"
+					minsize="18"
+					maxsize="24"
+					lockup="true"
+					lockright="true"
+					pitch="90"
+					turn="true"
+				/>
+			</simpleemitter>
+
+			<!-- fleeing the body -->
+
+			<simpleemitter
+				position="0 30 0"
+				life="1000"
+				delay="3200"  
+				count="150"
+				spawnrate="80"
+				particlelife="2000"
+				speed="80.0"
+				material="/shared/effects/materials/crab.material"
+				inheritvelocity="0.5"
+				offsetradial="50"
+				collide="true"
+				directionalspace="local"
+			>
+				<particle
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".8"
+					minsize="18"
+					maxsize="24"
+					lockup="true"
+					lockright="true"
+					pitch="90"
+					turn="true"
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>  
+		<camerashake2 scale="11.0" radius="1200" duration="400" frequency="22" />
+		<waitfordeath instance="instance0" />
+
+	</thread>
+
+</effect>

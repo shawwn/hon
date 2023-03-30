@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="death.max" file="high.model" type="K2" >
+	
+	<anim name="idle" clip="clips/death_1.clip" fps="32" loop="true" loopbackframe="-1">
+	</anim>	
+
+	
+</model>

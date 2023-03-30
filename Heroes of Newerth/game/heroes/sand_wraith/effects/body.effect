@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale=".91">
+
+			<terrainemitter
+				position="0 0 30"
+				spawnrate="60"
+				bone="_bone_centerofchest"
+				particlelife="700"
+				gravity="-1"
+				material="/shared/effects/materials/pyroclast_03.material"
+				offsetsphere="32 32 0"
+				direction="1 0 0"
+				minangle="-180"
+				maxangle="180"
+				directionalspace="global"
+				inheritvelocity=".3"
+				depthbias="-20"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					anglespeed="20"
+					startsize="20"
+					midsize="100"
+					maxendsize="150"
+					lockup="true"
+					lockright="true"
+					pitch="90"
+					startcolor=".7 .7 .4"
+					endcolor=".5 .5 .3"					
+					startalpha="0"
+					midalpha=".45"
+					endalpha="0"
+					midalphapos=".75"
+				/>
+			</terrainemitter>
+
+			<terrainemitter
+				position="0 0 30"
+				spawnrate="90"
+				bone="_bone_centerofchest"
+				maxparticlelife="800"
+				gravity="-1"
+				material="/shared/effects/materials/sand_blend.material"
+				offsetsphere="33 33 0"
+				direction="1 0 0"
+				minangle="-180"
+				maxangle="180"
+				drag="0.1"
+				speed="250"
+				directionalspace="global"
+				inheritvelocity=".3"
+				depthbias="-20"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					anglespeed="40"
+					startsize="30"
+					midsize="65"
+					endsize="65"
+					lockup="true"
+					lockright="true"
+					pitch="90"
+					color=".6 .5 .3"
+					startalpha=".7"
+					endalpha="0"
+				/>
+			</terrainemitter>		
+	
+			<template name="sand">
+				<simpleemitter
+					position="0 5 0"
+					spawnrate="40"
+					bone="{bone}"
+					particlelife="650"
+					gravity="13"
+					material="/shared/effects/materials/pyroclast_03.material"
+					offsetsphere="6"
+					direction="1 0 0"
+					minangle="-180"
+					maxangle="180"
+					speed=".02"
+					directionalspace="global"
+					inheritvelocity=".13"
+				>
+					<particle
+						minangle="0"
+						maxangle="45"
+						anglespeed="20"
+						maxstartsize="42"
+						midsize="22"
+						endsize="22"
+						startcolor="1 1 .6 "
+						endcolor=".2 .2 .12"				
+						startstickeness="1"
+						endstickiness="0"
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".75"
+					/>
+				</simpleemitter>	
+				
+				<simpleemitter
+					position="0 5 0"
+					spawnrate="40"
+					bone="{bone}"
+					particlelife="800"
+					gravity="13"
+					material="/shared/effects/materials/sand_blend.material"
+					offsetsphere="10 10 10"
+					direction="1 0 0"
+					minangle="-180"
+					maxangle="180"
+					speed=".02"
+					directionalspace="global"
+					inheritvelocity=".1"
+					colide="true"
+				>
+					<particle
+						minangle="0"
+						maxangle="360"
+						anglespeed="20"
+						maxstartsize="33"
+						midsize="22"
+						endsize="0"
+						startcolor=".6 .5 .3 "
+						endcolor=".3 .25 .1"				
+						startstickeness="1"
+						endstickiness="0"
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".75"
+					/>
+				</simpleemitter>					
+				
+			</template>
+			
+			<instance name="sand" bone="_bone_head"/>
+			<instance name="sand" bone="_bone_righthand"/>
+			<instance name="sand" bone="_bone_lefthand"/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<wait duration="20000"/>
+	</thread>
+
+</effect>

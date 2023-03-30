@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="sploogeAnim01.max" file="model.model" type="K2">
+
+	<anim name="idle" fps="30" clip="default_1.clip" loop="true" startframe="0" loopbackframe="-1"/>
+
+</model>

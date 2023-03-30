@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="electric_eye.max" file="eye.model" type="K2">
+
+	<anim name="idle" clip="eye.clip" fps="30"  startframe="0" numframes="30" loop="true">
+		<startevent cmd="starteffect elec_eye.effect 0"/>
+	</anim>
+
+	<anim name="death_1" clip="eye.clip" fps="10" startframe="30" numframes="70" loopbackframe="70" loop="true">
+		<startevent cmd="starteffect elec_eye_death.effect"/>	
+		<startevent cmd="stopeffect 0"/>			
+	</anim>
+</model>

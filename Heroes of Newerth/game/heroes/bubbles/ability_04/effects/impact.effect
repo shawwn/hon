@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" deferred="true" useentityeffectscale="1">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1.75">
+
+			<simpleemitter
+				count="16"
+				particlelife="1300"
+				spawnrate="650"
+				minspeed="100"
+				maxspeed="750"
+				gravity="10"
+				direction="0 0 1"
+				minangle="0"
+				maxangle="25"
+				drag="0.025"
+				material="/shared/effects/materials/whitewater_02.material"
+				offsetsphere="25 25 10"
+				position="0 0 40"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-60"
+					maxanglespeed="60"
+					startsize="25"
+					endsize="75"
+					startcolor=".35"
+					endcolor="0"
+					startstickiness="0"
+					endstickiness=".4"
+				/>
+			</simpleemitter>
+
+			<simpleemitter	
+				life="400"
+				spawnrate="6600"		
+				gravity="10"
+				count="10"
+				speed="500"
+				drag=".03"
+				minangle="0"
+				maxangle="20"
+				particlelife="1600"
+				direction="0 0 1"
+				offsetsphere="35"
+				material="/shared/effects/materials/dust.material"		
+			>
+				<particle	
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-80"
+					maxanglespeed="80"
+					startsize="40"
+					endsize="150"
+					color=".75 .9 1"
+					startalpha=".2"
+					endalpha="0"					
+				/>
+			</simpleemitter>
+
+			<simpleemitter	
+				life="600"
+				spawnrate="2500"	
+				count="5"	
+				gravity="10"
+				minspeed="100"
+				maxspeed="600"
+				drag=".025"
+				minangle="0"
+				maxangle="20"
+				particlelife="1000"
+				direction="0 0 1"
+				offsetsphere="35"
+				material="/shared/effects/materials/wave.material"		
+			>
+				<particle						
+					startsize="65"
+					endsize="133"
+					startcolor="0"
+					midcolor=".1 .11 .12"
+					endcolor="0 0 0"										
+					minangle="0"
+					maxangle="30"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				count="10"
+				bone="_bone_overhead"
+				spawnrate="100"
+				minparticlelife="250"
+				maxparticlelife="750"
+				gravity="10"
+				drag="0"
+				speed="100"
+				position="0 0 0"
+				offsetsphere="25 25 0"
+				material="/shared/effects/materials/seeweed_ground.material"
+			>
+				<particle
+					maxangle="360"
+					minanglespeed="-6"
+					maxanglespeed="6"
+					color="1 1 1"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					startsize="0"
+					endsize="100"
+					startanchor="1"
+					endanchor="1"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				count="10"
+				bone="_bone_overhead"
+				spawnrate="100"
+				minparticlelife="200"
+				maxparticlelife="300"
+				gravity="10"
+				drag="0"
+				speed="100"
+				position="0 0 0"
+				offsetsphere="25 25 0"
+				material="/shared/effects/materials/whitedot.material"
+			>
+				<particle
+					maxangle="360"
+					minanglespeed="-6"
+					maxanglespeed="6"
+					startcolor="0 0 0"
+					midcolor="0 .1 .125"
+					endcolor="0 0 0"
+					startsize="0"
+					endsize="100"
+					startanchor="1"
+					endanchor="1"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				count="10"
+				bone="_bone_overhead"
+				spawnrate="100"
+				minparticlelife="250"
+				maxparticlelife="750"
+				gravity="10"
+				drag="0"
+				position="0 0 0"
+				offsetsphere="50 50 0"
+				material="/shared/effects/materials/seeweed_ground.material"
+			>
+				<particle
+					maxangle="360"
+					minanglespeed="50"
+					maxanglespeed="200"
+					color="1 1 1"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					startsize="0"
+					endsize="60"
+					startanchor="1"
+					endanchor="1"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				life="600"
+				spawnrate="5"
+				particlelife="1000"
+				gravity="2"
+				speed="250.0"
+				drag=".01"
+				direction="0 0 1"
+				angle="20"
+				material="/shared/effects/materials/refract_longsplash.material"
+			>
+				<particle
+					startalpha="0"
+					midalpha=".5"
+					endalpha="0"
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-80"
+					maxanglespeed="80"
+					startsize="50"
+					endsize="110"
+					param=".2"
+					depthbias="-160"
+					rollspeed="200"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				spawnrate="100"
+				particlelife="500"
+				gravity="-50"
+				count="20"
+				material="/shared/effects/materials/mysticenergy.material"
+				position="0 0 20"
+			>
+				<particle
+					startcolor=".5 0 0"
+					midcolor=".5 .25 0"
+					endcolor="0 0 0"
+					midcolorpos="0.5"
+					startalpha="1"
+					endalpha="0"
+					minangle="0"
+					maxangle="360"
+					minanglespeed="0"
+					maxanglespeed="0"
+					width="25"
+					startheight="0"
+					endheight="50"
+					flare="true"
+					turn="true"
+				/>
+			</simpleemitter>
+
+			<billboard
+				life="1000"
+				startcolor="0 .5 .5"
+				midcolor="0 .5 .5"
+				midcolorpos="0.3"
+				endcolor="0"
+				startsize="175"
+				endsize="0"
+				depthbias="-50"
+				material="/shared/effects/materials/whitedot.material"
+				position="0 0 25"
+			/>
+			
+			<billboard
+				position="0 0 50"
+				delay="0"
+				life="350"
+				param="0.1"	
+				startsize="50"
+				endsize="150"
+				startalpha="0"
+				midalpha=".4"
+				endalpha="0"				
+				depthbias="0"
+				material="/shared/effects/materials/refract_swell.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+			/>
+			
+			<billboard
+				position="0 0 50"
+				delay="175"
+				life="350"
+				param="0.1"	
+				startsize="50"
+				endsize="150"
+				startalpha="0"
+				midalpha=".4"
+				endalpha="0"				
+				depthbias="0"
+				material="/shared/effects/materials/refract_swell.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+			/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

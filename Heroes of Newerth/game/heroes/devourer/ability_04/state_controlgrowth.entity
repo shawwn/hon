@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Devourer_Ability4_ControlGrowth"
+	
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+	impactinterval="950"
+	
+	
+>
+	
+	<onimpact>
+		<condition test="hasstate State_Devourer_Ability4_Stage2" target="source_entity">
+			<!-- save old max health -->
+			<setvar0 a="source_maxhealth" />
+			<applystate name="State_Devourer_Ability4_Stage3" duration="7000" />
+			<expirestate name="State_Devourer_Ability4_Stage2" />
+			
+			<!-- max health bonus -->
+			<setvar1 a="source_maxhealth" b="var0" op="sub" /> 
+			
+			<!-- target health -->
+			<setvar2 a="source_health" b="var1" op="add" />
+			
+			<!-- current health adjusted for bonus -->
+			<setvar3 a="source_health" b="var0" op="div" />
+			<setvar3 a="var3" b="source_maxhealth" op="mult" />
+			
+			<!-- final adjustment to reach target health after the game rescales current health -->
+			<changehealth a="var2" b="var3" op="sub" />
+
+		</condition>
+		<condition test="hasstate State_Devourer_Ability4_Stage1" target="source_entity">
+			<condition test="not_hasstate State_Devourer_Ability4_Stage2" target="source_entity">
+				<!-- save old max health -->
+				<setvar0 a="source_maxhealth" />
+				<applystate name="State_Devourer_Ability4_Stage2" duration="7000" />
+				<expirestate name="State_Devourer_Ability4_Stage1" />
+				
+		
+				<!-- max health bonus -->
+				<setvar1 a="source_maxhealth" b="var0" op="sub" /> 
+				
+				<!-- target health -->
+				<setvar2 a="source_health" b="var1" op="add" />
+				
+				<!-- current health adjusted for bonus -->
+				<setvar3 a="source_health" b="var0" op="div" />
+				<setvar3 a="var3" b="source_maxhealth" op="mult" />
+				
+				<!-- final adjustment to reach target health after the game rescales current health -->
+				<changehealth a="var2" b="var3" op="sub" />
+			</condition>
+		</condition>
+		<condition test="not_hasstate State_Devourer_Ability4_Stage3" target="source_entity">
+			<condition test="not_hasstate State_Devourer_Ability4_Stage2" target="source_entity">
+			
+			<!-- save old max health -->
+			<setvar0 a="source_maxhealth" /> 
+				<applystate name="State_Devourer_Ability4_Stage1" duration="7000" />
+		
+			<!-- max health bonus -->
+			<setvar1 a="source_maxhealth" b="var0" op="sub" /> 
+			
+			<!-- target health -->
+			<setvar2 a="source_health" b="var1" op="add" />
+			
+			<!-- current health adjusted for bonus -->
+			<setvar3 a="source_health" b="var0" op="div" />
+			<setvar3 a="var3" b="source_maxhealth" op="mult" />
+			
+			<!-- final adjustment to reach target health after the game rescales current health -->
+			<changehealth a="var2" b="var3" op="sub" />
+			</condition>
+		</condition>
+		<setaccumulator a="0" />
+	</onimpact>
+
+</state>

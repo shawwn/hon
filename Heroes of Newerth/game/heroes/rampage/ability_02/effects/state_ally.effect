@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" useentityeffectscale="1">
+
+<definitions>
+	<particlesystem name="system0" space="world">
+	
+		<groundsprite
+			material="/shared/effects/materials/attack_speed_aura_01.material"
+			startsize="65"
+			midsize="45"
+			endsize="65"
+			startcolor=".2 0 0"
+			midcolor=".2 0 0"
+			endcolor=".2 0 0"
+			life="4000"
+			yawspeed="90"
+			loop="true"
+		/>
+		
+	</particlesystem>
+</definitions>
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	<!-- <die /> -->
+</thread>
+
+</effect>
+
+

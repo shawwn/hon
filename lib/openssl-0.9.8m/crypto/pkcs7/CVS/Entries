@@ -1,0 +1,25 @@
+/Makefile/1.1/Wed Mar 24 09:26:09 2010//
+/bio_ber.c/1.1/Wed Mar 24 09:26:09 2010//
+/dec.c/1.1/Wed Mar 24 09:26:09 2010//
+/des.pem/1.1/Wed Mar 24 09:26:09 2010//
+/doc/1.1/Wed Mar 24 09:26:09 2010//
+/enc.c/1.1/Wed Mar 24 09:26:09 2010//
+/es1.pem/1.1/Wed Mar 24 09:26:09 2010//
+/example.c/1.1/Wed Mar 24 09:26:09 2010//
+/example.h/1.1/Wed Mar 24 09:26:09 2010//
+/info.pem/1.1/Wed Mar 24 09:26:09 2010//
+/infokey.pem/1.1/Wed Mar 24 09:26:09 2010//
+/pk7_asn1.c/1.1/Wed Mar 24 09:26:09 2010//
+/pk7_attr.c/1.1/Wed Mar 24 09:26:09 2010//
+/pk7_dgst.c/1.1/Wed Mar 24 09:26:09 2010//
+/pk7_doit.c/1.1/Wed Mar 24 09:26:09 2010//
+/pk7_enc.c/1.1/Wed Mar 24 09:26:09 2010//
+/pk7_lib.c/1.1/Wed Mar 24 09:26:09 2010//
+/pk7_mime.c/1.1/Wed Mar 24 09:26:09 2010//
+/pk7_smime.c/1.1/Wed Mar 24 09:26:09 2010//
+/pkcs7.h/1.1/Wed Mar 24 09:26:09 2010//
+/pkcs7err.c/1.1/Wed Mar 24 09:26:09 2010//
+/server.pem/1.1/Wed Mar 24 09:26:09 2010//
+/sign.c/1.1/Wed Mar 24 09:26:09 2010//
+/verify.c/1.1/Wed Mar 24 09:26:09 2010//
+D

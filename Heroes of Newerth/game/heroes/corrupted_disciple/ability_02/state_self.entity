@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_CorruptedDisciple_Ability2_Self"
+
+	icon="icon.tga"
+	
+	damagepercharge="5,10,15,20"
+	impactinterval="1000"
+
+	maxcharges="10"
+	passiveeffect="effects/state_self.effect"
+	effecttype="StatusBuff"
+>
+	<oninflict>
+		<addcharges count="1" />
+	</oninflict>
+	
+	<onimpact>
+		<addcharges count="1" />
+	</onimpact>
+	
+	<onframe>
+		<condition test="charges eq 10">
+			<expire />
+		</condition>
+	</onframe>
+	
+	<onexpired>
+		<expire entity="this_proxy_entity" />
+		<setproxy entity="this_entity" target="" />
+		<applystate name="State_CorruptedDisciple_Ability2_Self_Damage" target="target_entity" duration="13000" pushentity="true" />
+		<setcharges entity="stack_entity" a="charges" />
+	</onexpired>
+</state>

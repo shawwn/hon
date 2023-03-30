@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Pyromancer_Ability4"
+
+	speed="2000"
+	gravity="0"	
+	modelscale="0.3"
+	model="effects/spinner.mdf"
+
+	effectscale="1"
+	impacteffect="effects/ability_04_impact.effect"
+>
+	<onimpact>
+		<combatevent effecttype="AbilityBasedProjectile">
+			<onimpact>
+				<damage effecttype="Magic" amount="450,675,950" target="proxy_entity" />
+				<condition test="param != 0">
+					<applystate name="State_Pyromancer_Ability3_Burning" duration="3000" level="param" />
+				</condition>
+			</onimpact>
+		</combatevent>
+	</onimpact>
+	
+	<modifier key="ult_boost" modpriority="100"
+	>
+		<onimpact>
+			<combatevent effecttype="AbilityBasedProjectile">
+				<onimpact>
+					<damage effecttype="Magic" amount="650,875,1150" target="proxy_entity" />
+					<condition test="param != 0">
+						<applystate name="State_Pyromancer_Ability3_Burning" duration="3000" level="param" />
+					</condition>
+				</onimpact>
+			</combatevent>
+		</onimpact>
+	</modifier>
+</projectile>

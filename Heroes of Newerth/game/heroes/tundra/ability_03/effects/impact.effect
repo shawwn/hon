@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="ability_04_impact">
+	<definitions>
+		
+	
+	
+	
+	
+	
+		<particlesystem name="system0" space="world" useentityeffectscale="true" scale="1.35">
+
+		
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2000"
+				volume=".3"
+				sample="/heroes/tundra/ability_04/sounds/impact_%.wav"
+			/>
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2000"
+				volume="1"
+				sample="../sounds/impact.wav"
+			/>
+
+			<simpleemitter
+				spawnrate="44"
+				particlelife="1000"
+				count="5"
+				speed="115"
+				particlelifealloc="6000"														
+				minangle="0"
+				maxangle="0"
+				direction="0 -1 0"
+			>
+				<particle
+					turn="1"				
+				>
+					<billboard
+						directionalspace="local"
+						life="300"
+						startcolor="0.5 1 1"
+						endcolor="0 0 0"
+						startalpha="1.0"
+						midalpha="1.0"
+						endalpha="0.0"
+						midalphapos="0.75"
+						startparam="0.05"
+						endparam="0.0"				
+						
+						startsize="50"
+						midsize="100"
+						endsize="200"
+						
+						midsizepos=".4"				
+						
+						depthbias="0"
+						position="0 -50 20"
+						material="/shared/effects/materials/stomp_02.material"
+						lockup="true"
+						lockright="true"
+						minroll="0"
+						maxroll="360"
+					/>	
+
+					
+				</particle>			
+				
+				
+				
+		
+			</simpleemitter>		
+	
+			<billboard				
+				life="400"
+				color="1.0 1.0 1.0"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="0.0"
+				midalphapos="0.75"
+				startparam=".25"
+				endparam="0.0"
+				startsize="128"
+				endsize="248"
+				depthbias="0"
+				position="0 0 20"
+				material="/shared/effects/materials/refract_ring.material"
+				lockup="true"
+				pitch="90"
+			/>	
+
+			<simpleemitter
+				spawnrate="1111"
+				particlelife="1000"
+				count="2"
+				speed="115"
+				particlelifealloc="6000"														
+				minangle="0"
+				maxangle="0"
+				direction="0 -1 0"
+			>
+				<particle
+					turn="1"				
+				>
+					<debris		
+						directionalspace="local"					
+						position="0 20 51"						
+						minscale="0.2"						
+						maxscale=".5"
+						life="2000"
+						
+						minyaw="-360"
+						maxyaw="360"
+						
+						model="/heroes/tundra/ability_01/effects/debris.mdf"
+						anim="idle"	
+						minspeed="201.0"
+						maxspeed="201.0"
+						minrotationspeed="100.0"
+						maxrotationspeed="300.0"
+						gravity="15.0"
+					
+					
+						collide="true"
+						startalpha="1.0"
+						midalpha="1.0"
+						endalpha="1.0"
+						midalphapos="0.5"
+						bounce="0.7"
+						reflect="0.6"
+						animpose="false"
+					/>	
+					
+						<billboard
+							directionalspace="local"
+							life="500"
+							startcolor="0.2 .5 1"
+							endcolor="0 0 0"
+							startalpha="1.0"
+							midalpha="1.0"
+							endalpha="0.0"
+							midalphapos="0.75"
+							startparam="0.05"
+							endparam="0.0"				
+							
+							startsize="50"
+							midsize="100"
+							endsize="200"
+							
+							midsizepos=".4"				
+							
+							depthbias="0"
+							position="0 -50 20"
+							material="/shared/effects/materials/shieldstarfish.material"
+							lockup="true"
+							lockright="true"
+							minroll="0"
+							maxroll="360"
+						/>					
+				</particle>			
+				
+				
+				
+		
+			</simpleemitter>	
+
+			
+
+
+
+
+
+
+        
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0"  particlesystem="system0" />	
+	  <spawnmodifier instance="instance1" modifier="modifier0"/>  
+	  
+	  <waitfordeath instance="instance0" />
+	  <waitfordeath instance="instance1" />	  
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

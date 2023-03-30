@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Fade_Ability3"
+
+	icon="icon.tga"
+	passiveeffect=""
+	ishidden="true"
+	deathpersist="true"
+	
+	modifierkey="fadeshadowmode"
+
+	propagatetoillusions="true"
+>
+	<onframe />
+</state>

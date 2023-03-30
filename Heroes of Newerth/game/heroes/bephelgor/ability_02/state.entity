@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Bephelgor_Ability2"
+	
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+	ishidden="true"
+	impactinterval="100"
+>
+	<onimpact>
+		<setvar0 a="8,12,16,20" />
+		<addcharges count="0" entity="this_spawner_entity" />
+		<condition test="result lt var0">
+			<condition target="source_entity" test="not_target_type illusion">
+				<addcharges count="1" entity="this_spawner_entity" />
+				<heal target="source_entity" a="10,15,20,25" />
+				<delete target="target_entity" />
+				<playeffect effect="effects/capture.effect" target="source_entity" />
+			</condition>
+		</condition>
+	</onimpact>
+	
+	<onframe />
+</state>

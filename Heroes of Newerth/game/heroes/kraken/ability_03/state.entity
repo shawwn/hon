@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Kraken_Ability3"
+
+	icon="icon.tga"
+	passiveeffect="state.effect"
+	
+	movespeedslow="0.3"
+	armor="-2,-3,-4,-5"
+	
+	effecttype="StatusDebuff"
+>
+	
+</state>

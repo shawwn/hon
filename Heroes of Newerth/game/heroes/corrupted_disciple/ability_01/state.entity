@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_CorruptedDisciple_Ability1"
+	
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+	
+	ishidden="true"
+>
+	<aura
+		gadget="Gadget_CorruptedDisciple_Ability1"
+		radius="0"
+		targetscheme="self"
+	/>
+</state>

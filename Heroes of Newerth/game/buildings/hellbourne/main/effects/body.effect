@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+		
+		<particlesystem name="system0" space="world" scale="1">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="1200"
+				volume="0.35" 
+				soundloop="true"
+				fadein="200"
+				fadeout="300"
+				sample="/buildings/hellbourne/main/sounds/idle.wav"
+			/>
+
+			<!-- Little fires -->
+
+			<template name="pentagram_fire">
+				<simpleemitter
+					bone="{bone}"
+					spawnrate="25"
+					minparticlelife="300"
+					maxparticlelife="1200"
+					gravity="-2"
+					drag=".010"
+					speed="12"
+					offsetsphere="5 5 12"
+					depthbias="-20"
+					minangle="0"
+					maxangle="35"
+					material="/shared/effects/materials/soul_projectile2.material"
+				>
+					<particle 
+						minangle="-360"
+						maxangle="360"
+						minanglespeed="-100"
+						maxanglespeed="100"
+						startcolor="1 .5 .3"
+						endcolor="0"
+						startsize="5"
+						endsize="22"
+					/>
+				</simpleemitter>
+
+				<billboard
+					bone="{bone}"
+					startcolor="0.5 .2 0"
+					endcolor="0"
+					size="100"
+					depthbias="-30"
+					expirelife="300"
+					material="/shared/effects/materials/whitedot.material"
+				/>
+			</template>
+			
+			<instance name="pentagram_fire" bone="_bone_fx_05"/>
+			<instance name="pentagram_fire" bone="_bone_fx_06"/>
+			<instance name="pentagram_fire" bone="_bone_fx_07"/>
+			<instance name="pentagram_fire" bone="_bone_fx_08"/>
+
+			<!-- Firey beams -->
+			
+			<template name="beams">
+				<beam
+					delay="{delay}"
+					bone_a="{bone_a}"
+					bone_b="{bone_b}"
+					size="50"
+					startcolor="1 .25 0"
+					endcolor="0"
+					expirelife="300"
+					material="/shared/effects/materials/femme_lightning_10.material"
+					framespeed="{framespeed}"
+				/>
+			</template>
+
+			<instance name="beams" bone_a="_bone_fx_01" bone_b="topRotate" delay="30" framespeed="2"/>
+			<instance name="beams" bone_a="_bone_fx_02" bone_b="topRotate" delay="30" framespeed="3"/>			
+			<instance name="beams" bone_a="_bone_fx_03" bone_b="topRotate" delay="30" framespeed="2"/>
+			<instance name="beams" bone_a="_bone_fx_04" bone_b="topRotate" delay="30" framespeed="1"/>
+			<instance name="beams" bone_a="_bone_fx_01" bone_b="topRotate" delay="111" framespeed="3"/>
+			<instance name="beams" bone_a="_bone_fx_02" bone_b="topRotate" delay="111" framespeed="4"/>			
+			<instance name="beams" bone_a="_bone_fx_03" bone_b="topRotate" delay="111" framespeed="5"/>
+			<instance name="beams" bone_a="_bone_fx_04" bone_b="topRotate" delay="111" framespeed="2"/>
+
+			<template name="beam_glow">
+				<simpleemitter
+					bone="{bone}"
+					spawnrate="20"
+					minparticlelife="200"
+					maxparticlelife="500"
+					gravity="-12"
+					offsetsphere="25"
+					depthbias="-20"
+					minangle="0"
+					maxangle="35"
+					material="/shared/effects/materials/soul_projectile2.material"
+				>
+					<particle 
+						minangle="-360"
+						maxangle="360"
+						minanglespeed="-100"
+						maxanglespeed="100"
+						startcolor="0"
+						midcolor="1"
+						endcolor="0"
+						startsize="10"
+						endsize="20"
+						endstickiness=".4"
+					/>
+				</simpleemitter>
+
+				<billboard
+					expirelife="300"
+					bone="{bone}"
+					startcolor=".5 .2 0"
+					endcolor="0"
+					size="100"
+					depthbias="-60"
+					material="/shared/effects/materials/whitedot.material"
+				/>
+			</template>
+
+			<instance name="beam_glow" bone="_bone_fx_01"/>
+			<instance name="beam_glow" bone="_bone_fx_02"/>
+			<instance name="beam_glow" bone="_bone_fx_03"/>
+			<instance name="beam_glow" bone="_bone_fx_04"/>
+
+			<!-- Bottom fire -->
+
+			<billboard
+				expirelife="300"
+				position="0 0 80"
+				startcolor=".4 .15 0"
+				endcolor="0"
+				size="150"
+				depthbias="-30"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+
+			<simpleemitter
+				spawnrate="20"
+				minparticlelife="400"
+				maxparticlelife="1300"
+				gravity="-7"
+				position="0 0 60"
+				offsetsphere="10 10 40"
+				material="/shared/effects/materials/soul_projectile2.material"
+				depthbias="-140"
+				angle="15"
+			>
+				<particle 
+					maxangle="360"
+					minanglespeed="-6"
+					maxanglespeed="6"
+					startcolor="0"
+					midcolor=".2"
+					endcolor="0 0 0"
+					startsize="10"
+					endsize="30"
+				/>
+			</simpleemitter>
+
+			<billboard
+				expirelife="300"
+				position="0 0 80"
+				startcolor=".53 .05 0"
+				endcolor="0"
+				size="210"
+				depthbias="-30"
+				pitch="90"
+				lockup="1"
+				lockright="1"
+				material="/shared/effects/materials/starlight.material"
+			/>
+
+			<simpleemitter
+				spawnrate="20"
+				particlelife="2300"
+				position="0 0 30"
+				offsetsphere="10 10 10"
+				material="/shared/effects/materials/refract_wave.material"
+				depthbias="-40"
+				angle="15"
+			>
+				<particle 
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					maxangle="360"
+					startparam=".05"
+					endparam="0"
+					startsize="80"
+					endsize="170"
+				/>
+			</simpleemitter>
+
+			<!-- Top fire -->
+
+			<billboard
+				expirelife="300"
+				bone="topRotate"
+				startcolor=".4 .15 0"
+				endcolor="0"
+				size="150"
+				depthbias="-30"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+
+			<simpleemitter
+				spawnrate="30"
+				minparticlelife="400"
+				maxparticlelife="700"
+				gravity="-7"
+				bone="topRotate"
+				offsetsphere="20 20 10"
+				material="/shared/effects/materials/soul_projectile2.material"
+				depthbias="-40"
+				angle="15"
+			>
+				<particle 
+					maxangle="360"
+					minanglespeed="-6"
+					maxanglespeed="6"
+					startcolor="1"
+					midcolor="1"
+					endcolor="0 0 0"
+					startsize="0"
+					endsize="40"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				spawnrate="30"
+				minparticlelife="400"
+				maxparticlelife="1700"
+				gravity="-5"
+				bone="topRotate"
+				offsetsphere="20 20 10"
+				material="/shared/effects/materials/spark_10.material"
+				depthbias="-40"
+				angle="15"
+			>
+				<particle 
+					startcolor="1"
+					midcolor="1"
+					endcolor="0 0 0"
+					size="5"
+					minscale="1"
+					maxscale="2"
+				/>
+			</simpleemitter>
+
+			<!-- Incoming sparks -->
+
+			<trackeremitter
+				targetposition="0"
+				targetbone="topRotate"
+				tracktype="lerp"
+				trackspeed="1.002" 
+				spawnrate="120"
+				particlelife="2000"
+				offsetsphere="200 200 8"
+				minspeed="20.0"
+				maxspeed="60"
+				material="/shared/effects/materials/flare_01.material"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					color="2 .4 0"
+					midcolorpos=".2"
+					startsize="0"
+					midsize="32"
+					endsize="1"
+					turn="1"
+				/>
+			</trackeremitter>
+
+			<template name="top">
+				<simpleemitter
+					spawnrate="20"
+					minparticlelife="400"
+					maxparticlelife="1700"
+					gravity="-4"
+					bone="{bone}"
+					offsetsphere="5"
+					material="/shared/effects/materials/deamon.material"
+					depthbias="-40"
+					angle="15"
+				>
+					<particle 
+						startcolor="0"
+						midcolor=".3 .1 0"
+						endcolor="0 0 0"
+						size="15"
+						minscale="1"
+						maxscale="2"
+						anchor="1"
+					/>
+				</simpleemitter>
+
+				<billboard
+					expirelife="300"
+					bone="{bone}"
+					startcolor=".4 .2 0"
+					endcolor="0"
+					size="50"
+					depthbias="-60"
+					material="/shared/effects/materials/whitedot.material"
+				/>
+			</template>
+
+			<instance name="top" bone="CTRLS01"/>
+			<instance name="top" bone="CTRLS02"/>
+			<instance name="top" bone="CTRLS03"/>
+			<instance name="top" bone="CTRLS04"/>			
+			<instance name="top" bone="CTRLS05"/>
+			<instance name="top" bone="CTRLS06"/>
+			<instance name="top" bone="CTRLS07"/>
+			
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+ 		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

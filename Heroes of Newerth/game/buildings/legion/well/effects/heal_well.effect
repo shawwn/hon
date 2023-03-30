@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="good_healing_03" pausable="true" deferred="true">
+	<definitions>
+
+
+	<particlesystem name="system0" space="entity">
+
+		<sound
+			linearfalloff="true" 
+			falloffstart="0"
+			falloffend="1200"
+			volume="0.25" 
+			soundloop="true"
+			fadein="500"
+			fadeout="800"
+			sample="/buildings/legion/well/sounds/heal.wav"
+		/>
+		<simpleemitter
+		
+			spawnrate="13"
+			
+			bone="_bone_centerofchest"
+			particlelife="1000"			
+			gravity="-1.5"
+			speed="4"
+			drag="0"
+			acceleration="0"
+		
+	
+			
+			offsetsphere="22 22 0"
+			position="0 0 -30"
+			
+			direction="0 0 1"
+		
+		>
+		
+
+			<particle>
+			
+			
+				<simpleemitter					
+					count="1"
+					particlelife="800"			
+					speed="0"
+					drag="0"
+					position="0 0 3"					
+					acceleration="0"
+					material="/shared/effects/materials/whitedot.material"
+				>
+
+					<particle
+						startcolor="0 0 0"
+						midcolor=".3 .5 .8"
+						endcolor="0 0 0"
+						
+						midalphapos="0.9"
+
+						startsize="0"
+						endsize="64"
+						depthbias="0"
+						position="0 0 4"
+						lockup="true"
+						pitch="90"
+					/>
+				</simpleemitter>	
+
+
+				<simpleemitter					
+					count="1"
+					particlelife="800"			
+					speed="0"
+					drag="0"
+					position="0 0 3"					
+					acceleration="0"
+					material="/shared/effects/materials/whitedot.material"
+				>
+
+					<particle
+						startcolor="0 0 0"
+						midcolor=".1 .6 .6"
+						endcolor="0 0 0"
+						
+						midalphapos="0.9"
+
+						startheight="30"
+						endheight="400"
+						width="10"
+						depthbias="0"
+						position="0 0 4"
+						lockup="true"
+						pitch="0"
+					/>
+				</simpleemitter>					
+
+			</particle>
+		</simpleemitter>
+
+
+
+		<simpleemitter
+		
+			spawnrate="33"
+			
+			bone="_bone_centerofchest"
+			particlelife="1000"			
+			gravity="-4.8"
+			speed="0"
+			drag="0"
+			acceleration="50"
+			position="0 0 -5"
+			timenudge="200"
+
+			material="/shared/effects/materials/star_03.material"
+			offsetsphere="18 18 30"
+			minangle="0"
+			maxangle="360"
+			direction="0 0 0"
+			
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="100"
+
+				startcolor=".2 1 0"
+				midcolor=".4 1 .8"
+				endcolor="0 0 0"
+				midcolorpos=".7"
+
+				maxanglespeed="0"
+				startframe="0"
+				endframe="1"
+
+				startsize="10"
+				midsize="9"
+				endsize="0"
+				midsizepos=".7"
+
+				
+
+				startalpha="0"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".7"
+
+				startstickiness="0"
+				endstickiness="0"
+			/>
+		</simpleemitter> 
+
+
+
+
+        
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+     
+	<waitfordeath instance="instance0" />
+      		
+	
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

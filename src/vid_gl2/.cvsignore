@@ -1,0 +1,12 @@
+Debug\ Lite
+debug\ lite
+debug-x86_64
+debug-i686
+release-x86_64
+release-i686
+Release
+release
+*.user
+*.gch
+Debug
+VTune

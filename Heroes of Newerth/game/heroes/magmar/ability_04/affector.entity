@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Magmar_Ability4"
+
+	radiusstart="300"
+	radiusend="550,675,725"	
+	effectscale="3"
+	lifetime="1750,2450,3150"
+	impactinterval="350"
+
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Magic"
+	
+	
+
+	effect="effects/rad.effect"
+	persist="true"
+>
+	<onimpact>	
+		<damage effecttype="Magic" amount="110" />
+		<condition test="target_type hero">
+			<applystate name="State_Magmar_Ability4" duration="3000" />
+		</condition>
+		<condition test="not_target_type hero">
+			<applystate name="State_Magmar_Ability4" duration="5000" />
+		</condition>
+	</onimpact>
+	
+	<modifier key="ult_boost" modpriority="100"
+		lifetime="2100,2800,3500"
+		radiusend="600,700,800"
+	/>
+	
+<!--		 -->
+</affector>

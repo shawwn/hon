@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="rig.max" file="roots.model" type="K2">
+
+	<anim name="idle" clip="roots.clip" loop="true" loopbackframe="365"/>
+
+</model>

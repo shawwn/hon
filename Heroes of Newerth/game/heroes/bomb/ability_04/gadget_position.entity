@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Bombardier_Ability4_Pos"
+
+	icon=""
+	portrait=""
+	model="/shared/models/invis.mdf"
+	passiveeffect=""
+	impacteffect=""
+	
+	boundsheight="0"
+	boundsradius="0"
+	isselectable="false"
+	selectionradius="0"
+	targetoffset="0 0 0"
+
+	canrotate="false"
+	ismobile="false"
+
+	attacktype="none"
+	combattype="Ranged"
+
+
+	unitwalking="true"
+	canattack="false"
+	deathtime="0"
+	corpsetime="0"
+	invulnerable="true"
+	flying="false"
+	drawonmap="false"
+	
+	lifetime="350"
+>
+	<onexpired>
+		<spawnunit name="Gadget_Bombardier_Ability4" target="target_position" pushentity="true" />
+		<applystate name="State_Bombardier_Ability4" target="stack_entity" inflictor="this_owner_entity" duration="3000" />
+		<spawnprojectile name="Projectile_Bombardier_Ability4" source="target_position" bind="stack_entity" target="proxy_entity" proxy="stack_entity" />
+	</onexpired>
+	
+</gadget>

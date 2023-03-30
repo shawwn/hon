@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" useentityeffectscale="1">
+	<definitions>
+	
+		<particlesystem name="system0" space="entity" scale="1.5">
+		
+			<model
+				delay="500"			
+				life="1000"
+				bone="_bone_fx_02"
+				anim="idle"
+				model="shield.mdf"
+				color="1 1 1"
+				startalpha="1"
+				endalpha="0"
+				startscale="1.5"
+				midscale="0"
+				endscale="0"
+				midscalepos=".3"
+				expirelife="500"
+				pitchspeed="360"
+				yawspeed="360"
+			>
+			
+				<template name="magicTrails">
+					<simpleemitter
+						bone="{bone}"
+						spawnrate="50"
+						particlelife="1000"
+						offsetsphere="10 10 10"
+						material="/shared/effects/materials/phantom_smoke_04.material"
+						subframepose="true"
+					>
+						<particle
+							minangle="0"
+							maxangle="360"
+							startcolor="0 0 0"
+							midcolor=".5 .35 .1"
+							endcolor="0 0 0"
+							midcolorpos=".1"
+							startsize="50"
+							endsize="5"
+						/>
+					</simpleemitter>
+				</template>
+				
+				<instance name="magicTrails" bone="Box01"/>
+				<instance name="magicTrails" bone="_bone_fx_03" bone_b="_bone_fx_04"/>
+				<instance name="magicTrails" bone="_bone_fx_05" bone_b="_bone_fx_06"/>
+				
+				<billboard
+					material="/shared/effects/materials/fresnel_blend.material"
+					bone="origin"
+					color=".5 .3 0"
+					loop="1"
+					life="1000"
+					startalpha=".2"
+					midalpha=".7"
+					endalpha=".2"
+					position="0 0 0"
+					size="80"
+					depthbias="-150"
+				/>
+				
+				<billboard
+					material="/shared/effects/materials/corona_07.material"
+					bone="origin"
+					color=".5 .3 0"
+					loop="1"
+					life="1000"
+					startalpha=".2"
+					midalpha=".7"
+					endalpha=".2"
+					position="0 0 0"
+					size="80"
+					depthbias="-150"
+				/>
+				
+				<billboard
+					material="/shared/effects/materials/fresnel.material"
+					bone="origin"
+					startcolor=".5 .3 0"
+					endcolor="0 0 0"
+					life="300"
+					position="0 0 0"
+					size="80"
+					depthbias="-150"
+				/>
+				
+				<billboard
+					material="/shared/effects/materials/fresnel_blend.material"
+					bone="origin"
+					color=".25 .15 0"
+					loop="1"
+					life="1000"
+					startalpha=".2"
+					midalpha=".7"
+					endalpha=".2"
+					position="0 10 0"
+					size="80"
+					depthbias="-150"
+				/>
+				
+				<billboard
+					material="/shared/effects/materials/corona_07.material"
+					bone="origin"
+					color=".25 .15 0"
+					loop="1"
+					life="1000"
+					startalpha=".2"
+					midalpha=".7"
+					endalpha=".2"
+					position="0 10 0"
+					size="80"
+					depthbias="-150"
+				/>
+				
+				<billboard
+					material="/shared/effects/materials/fresnel.material"
+					bone="origin"
+					startcolor=".25 .15 0"
+					endcolor="0 0 0"
+					life="300"
+					position="0 10 0"
+					size="80"
+					depthbias="-150"
+				/>
+
+			</model>
+			
+			<twopointtrailemitter
+				delay="500"
+				life="250"
+				bone_a="_bone_weapon1"
+				bone_b="_bone_weapon3"
+				spawnrate="500"
+				particlelife="500"
+				texpostime="500"
+				texposscale=".5"
+				texstretchscale="0.0"
+				material="/shared/effects/materials/swoosh_add.material"
+				subframepose="true"
+			>
+				<particle 
+					startcolor=".6 .3 .1"
+					endcolor="0 0 0"
+				/>
+			</twopointtrailemitter>
+
+			<simpleemitter
+				delay="500"
+				bone="_bone_fx_02"
+				count="30"
+				spawnrate="1000"
+				minparticlelife="200"
+				maxparticlelife="750"
+				speed="150"
+				drag="0.05"
+				offsetsphere="0 0 0"
+				depthbias="0"
+				material="/shared/effects/materials/phantom_smoke_04.material"
+			>
+				<particle
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="-150"
+					maxanglespeed="150"
+					turn="1"
+					startcolor="1 1 1"
+					midcolor=".8 .6 .2"
+					endcolor="0"
+					midcolorpos=".1"
+					size="22.5"
+					startstickiness="0"
+					maxendstickiness="1"
+					minendscale="3"
+					maxendscale="5"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				delay="500"
+				bone="_bone_fx_02"
+				count="25"
+				spawnrate="1000"
+				minparticlelife="350"
+				maxparticlelife="1200"			
+				gravity="24"
+				minspeed="150"
+				maxspeed="500"
+				drag=".025"
+				material="/shared/effects/materials/spark_10.material"
+				offsetsphere="0 0 0"
+				minangle="0"
+				maxangle="45"
+				direction="0 0 1"
+				directionalspace="global"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="1"
+					midcolor=".8 .6 .1"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					minstartsize="8"
+					maxstartsize="12"
+					midsize="6"
+					endsize="3"
+					turn="true"
+					scale="1.5"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				delay="500"
+				bone="_bone_fx_02"
+				count="1"
+				spawnrate="1000"
+				particlelife="400"
+				gravity="-6"
+				speed="0.0"
+				acceleration="0.0"
+				position="0 0 0"
+				offsetsphere="0 0 0"
+				material="/shared/effects/materials/blink.material"
+			>
+				<particle
+					startcolor="0 0 0"
+					midcolor=".75 .75 0"
+					endcolor="0 0 0"
+					minangle="0"
+					maxangle="360"
+					minanglespeed="0"
+					maxanglespeed="90"
+					startsize="150"
+					midsize="100"
+					endsize="50"
+					lockup="true"
+					pitch="90"
+				/>
+				<particle
+					startcolor="0 0 0"
+					midcolor="1 .75 0"
+					endcolor="0 0 0"
+					minangle="0"
+					maxangle="360"
+					minanglespeed="0"
+					maxanglespeed="90"
+					startsize="150"
+					midsize="100"
+					endsize="50"
+					lockup="true"
+					pitch="90"
+				/>
+			</simpleemitter>
+		
+			<simpleemitter
+				delay="500"
+				bone="_bone_fx_02"
+				life="300"
+				count="10"
+				spawnrate="1000"
+				particlelife="300"
+				offsetsphere="5"
+				depthbias="-50"
+				material="/shared/effects/materials/whitedot.material"
+			>
+				<particle
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-60"
+					maxanglespeed="60"
+					startcolor="1 .25 0"
+					midcolor="1 .25 0"
+					endcolor="0"
+					minheight="5"
+					maxheight="40"
+					endwidth="75"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				delay="500"
+				bone="_bone_fx_02"
+				life="300"
+				count="10"
+				spawnrate="1000"
+				particlelife="300"
+				offsetsphere="5"
+				depthbias="-50"
+				material="/shared/effects/materials/whitedot.material"
+			>
+				<particle
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-60"
+					maxanglespeed="60"
+					startcolor="1 1 1"
+					midcolor="1 1 1"
+					endcolor="0"
+					minheight="5"
+					maxheight="15"
+					endwidth="30"
+				/>
+			</simpleemitter>
+
+			<billboard
+				delay="500"
+				life="600"
+				startcolor=".4 .25 .1"
+				endcolor="0"
+				size="250"
+				depthbias="-120"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+			
+			<simpleemitter
+				delay="250"
+				bone="_bone_fx_02"
+				count="50"
+				spawnrate="1000"
+				minparticlelife="350"
+				maxparticlelife="1200"			
+				gravity="24"
+				minspeed="150"
+				maxspeed="500"
+				drag=".025"
+				material="/shared/effects/materials/spark_10.material"
+				offsetsphere="0 0 0"
+				minangle="0"
+				maxangle="45"
+				direction="0 0 1"
+				directionalspace="global"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="1"
+					midcolor=".8 .6 .1"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					minstartsize="8"
+					maxstartsize="12"
+					midsize="6"
+					endsize="3"
+					turn="true"
+					scale="1.5"
+				/>
+			</simpleemitter>
+
+	</particlesystem>
+</definitions>
+
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<spawnmodifier instance="instance1" modifier="modifier0"/>  
+	<waitfordeath instance="instance0" />
+</thread>
+
+</effect>
+
+
+
+
+
+
+

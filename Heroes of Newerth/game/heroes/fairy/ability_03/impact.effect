@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="1.0">
+			
+			
+			
+			<billboard
+				bone="_bone_centerofchest"
+				life="300"
+				color="1 1 1"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="1.0"
+				startparam="0.05"
+				endparam="0.0"
+				midalphapos="0.25"
+				startsize="128"
+				endsize="256"
+				material="/shared/effects/materials/refract_ring.material"
+			/>
+			
+
+		     <billboard
+				material="/shared/effects/materials/star_03.material"
+				bone="_bone_centerofchest"
+				color="1 1 1"
+				loop="1"
+				life="300"
+				startalpha=".2"
+				midalpha=".7"
+				endalpha=".2"
+				position="0 0 10"
+				startsize="35"
+				endsize="100"
+				depthbias="-150"			
+			/>
+				
+		
+			
+				
+			
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+      		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+

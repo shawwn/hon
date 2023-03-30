@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<building
+	name="Building_LegionWell"
+
+	icon="..\main\icon.tga"
+	portrait=""
+	model="model.mdf"
+	mapicon="/shared/icons/minimap_well.tga"
+	mapiconsize="0.03"
+	skin=""
+	
+	passiveeffect=""
+	destroyedsound=""
+	lowhealtheffect=""
+	lowhealthsound=""
+	selectsound=""
+	isselectable="false"
+	noaltclickping="true"
+	
+	preglobalscale="1"
+	modelscale="1.0"
+	effectscale="1.8"
+	boundsheight="256"
+	boundsradius="0"
+	selectionradius="0"
+	targetoffset="0 0 0"
+
+	maxhealth="0"
+	healthregen="0"
+
+	armor="0"
+	magicarmor="0"
+
+	canattack="false"
+	
+	attackduration="150"
+	attackactiontime="50"
+	attackcooldown="0"
+	attackdamagemin="190"
+	attackdamagemax="199"
+	attacknumanims="1"
+	attackoffset="-250 -20 40"
+	attackprojectile="Projectile_well"
+	attackrange="0"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect=""
+	attacktype="ranged"	
+	combattype="Structure"
+
+	unittype="Well"
+
+	aggrorange="1"
+	sightrangeday="1200"
+	sightrangenight="1200"
+	drawonmap="true"
+	isshop="false"
+	invulnerable="true"
+>
+	<aura state="State_LegionHealingWell" radius="500" duration="4000" targetscheme="injured_ally_units" />
+	<aura state="State_ShopAccess_Main" radius="800" targetscheme="all_units_and_couriers" ignoreinvulnerable="true" />
+	<!--aura state="State_AllowRefillBottle" radius="500" targetscheme="ally_units" /-->
+</building>

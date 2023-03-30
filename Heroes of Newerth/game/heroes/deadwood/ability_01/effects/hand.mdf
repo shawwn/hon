@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="treerig.max" file="hand.model" type="K2" >
+<anim name="idle" clip="hand_1.clip" fps="10" loop="true" loopbackframe="13"/>
+</model>

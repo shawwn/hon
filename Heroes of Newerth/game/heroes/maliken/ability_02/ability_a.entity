@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Maliken2_Flame"
+
+	icon="icon_flame.tga"	
+	statuseffecttooltip="State_Maliken_Ability2_Flame"
+	
+	casttime="0"
+	castactiontime="0"
+	casteffect="../effects/cast_flame.effect"
+	noninterrupting="true"
+	
+	maxlevel="1"
+	requiredlevel="1"
+	
+	inheritmovement="true"
+	actiontype="toggle"
+	frontqueue="true"
+	noresponse="true"
+	
+	manacost="0"
+	cooldowntime="1000"
+	
+>
+	<onimpact />
+	<ontoggleon>
+		<applystate name="State_Maliken_Ability2_Flame" target="source_entity" istoggle="true" />
+		<toggleoff name="Ability_Maliken2_Healing" />
+	</ontoggleon>
+	
+	<modifier key="malikensword1" modpriority="90"
+		baselevel="1"
+		keyslot="1"
+	/>
+	
+	<modifier key="malikensword2" modpriority="90"
+		baselevel="2"
+		keyslot="1"
+	/>
+	
+	<modifier key="malikensword3" modpriority="90"
+		baselevel="3"
+		keyslot="1"
+	/>
+	
+	<modifier key="malikensword4" modpriority="90"
+		baselevel="4"
+		keyslot="1"
+	/>
+</ability>

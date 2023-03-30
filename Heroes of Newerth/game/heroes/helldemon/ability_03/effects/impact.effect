@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="impact" useentityeffectscale="true">
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="3">
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				spawnrate="2350"
+				count="2"
+				minparticlelife="500"
+				maxparticlelife="1650"
+				gravity="0"
+				maxspeed="170"
+				drag="0.1"
+				angle="30"
+				material="/shared/effects/materials/phantom_smoke_04.material"
+				offsetsphere="20"
+			>
+				<particle 
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="-10"
+					maxanglespeed="10"
+					startcolor="0 0 0"
+					midcolor="0 .25 .35"
+					endcolor="0 0 0"
+					midcolorpos=".3"
+					size="4"
+					startscale="5"
+					minendscale="30"
+					maxendscale="40"
+					midsizepos=".2"
+
+				/>
+				<particle 
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="-15"
+					maxanglespeed="15"
+					startcolor="0 0 0"
+					midcolor="0 .5 1"
+					endcolor="0"
+					midcolorpos="0.2"
+					size="4"
+					startscale="5"
+					minendscale="30"
+					maxendscale="40"
+					midsizepos=".2"
+
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				spawnrate="2350"
+				count="10"
+				minparticlelife="1000"
+				maxparticlelife="1500"
+				gravity="0"
+				maxspeed="140"
+				drag="0.1"
+				angle="30"
+				material="/shared/effects/materials/bad_heal_smoke_06.material"
+				offsetsphere="15"
+			>
+				<particle 
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="-10"
+					maxanglespeed="10"
+					startcolor="0 .5 1"
+					midcolor="0 .5 1"
+					endcolor="0 0 0"
+					midcolorpos="0.5"
+					size="4"
+					startscale="5"
+					minendscale="30"
+					maxendscale="40"
+					midsizepos=".2"
+					startalpha=".6"
+					midalpha="0"
+					endalpha="0"
+					midalphapos=".2"
+
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				spawnrate="33"
+				minparticlelife="350"
+				maxparticlelife="400"
+				gravity="2"
+				speed="330"
+				drag="0.3"
+				material="/shared/effects/materials/femme_lightning_01.material"
+				offsetsphere="15"
+				life="300"
+				angle="15"
+			>
+				<particle
+					startcolor="0"
+					midcolor=".3 .1 0"
+					endcolor="0"
+					minangle="0"
+					maxangle="360"
+					minanglespeed="0"
+					maxanglespeed="30"
+					startsize="15"
+					endsize="30"
+					
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+	</definitions>
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+	<spawnmodifier instance="instance1" modifier="modifier0"/> 
+	<waitfordeath instance="instance0" />
+</thread>
+</effect>

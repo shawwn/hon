@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_DoctorRepulsor_Ability2"
+
+	speed="100"
+	gravity="0"
+
+	modelscale="1.0"
+	model="/shared/models/invis.mdf"
+	
+	canturn="false"
+	flying="true"
+	flyheight="0"
+>
+</projectile>

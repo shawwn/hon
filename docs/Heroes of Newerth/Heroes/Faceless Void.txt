@@ -1,0 +1,14 @@
+This is Faceless Void from dota
+
+
+Ability 1: Timeshift
+Description: This is a passive ability. It gives him a chance to move backwards in time briefly and dodge the incoming damage/effect.  Can't save your life, as it is after the fact. That blurry effect shown around him should play when this happens.
+
+Ability 2: Timewalk
+Description: This is a ranged spell. You target a point and then your hero moves, leaving behind the trail effect and the ground effect as he runs extremely fast to the target location. When he hits the target location, a big version of his ground effect happens, causing a slow on the nearby enemy units.
+
+Ability 3: Timelock
+Description: This is a passive ability. It gives him a chance to locks the target in time for a brief duration on each attack (effectively stunning him, but the target is frozen in its animation). When this triggers, his hand circuit texture effect shown above should glow. 
+
+Ultimate: Chronosphere
+Description: Creates a time sphere that pauses all units except the caster. Projectiles also freeze as they enter the sphere. When the sphere is gone, they resume their trajectory. 

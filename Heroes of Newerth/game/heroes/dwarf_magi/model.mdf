@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="rig.max" file="high.model" type="K2" high="high.model" med="med.model" low="low.model" >
+
+	<anim name="idle" clip="clips/default_1.clip" fps="26" numframes="101" loop="true"/>
+	
+	<anim name="portrait" clip="clips/portrait.clip" fps="26" numframes="101" loop="true"/>
+	
+	<anim name="walk_1" clip="clips/walk_1.clip" fps="40" numframes="26" loop="true">
+		<frameevent frame="4" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="9" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="17" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="22" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		
+		<frameevent frame="4" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+		<frameevent frame="17" cmd="StartEffect /shared/effects/footstep_l_#GetTerrainType()#.effect"/>
+	</anim>
+
+	<anim name="death_1" clip="clips/death_1.clip" fps="30" loop="true" loopbackframe="-1"/>
+	
+	<anim name="attack_1" clip="clips/attack_1.clip" fps="40">
+		<frameevent frame="17" cmd="PlaySoundLinear /shared/sounds/attacks/attack_medium_%.wav 400 1800 .65"/>
+	</anim>
+	
+	<anim name="attack_2" clip="clips/attack_2.clip" fps="38">
+		<frameevent frame="17" cmd="PlaySoundLinear /shared/sounds/attacks/attack_medium_%.wav 400 1800 .65"/>
+	</anim>
+
+	<anim name="item_1" clip="clips/item_1.clip" fps="30"/>
+
+	<anim name="ability_1" clip="clips/ability_1.clip" fps="38"/>
+
+	<anim name="ability_2" clip="clips/ability_2.clip" fps="30">
+		<frameevent frame="12" cmd="PlaySoundLinear /shared/sounds/attacks/attack_medium_%.wav 400 1800 .65"/>
+		<frameevent frame="12" cmd="PlaySoundLinear ability_02/sounds/ability_02.wav 400 1800 .65"/>
+	</anim>
+
+	<anim name="ability_3" clip="clips/ability_3.clip" fps="30"/>
+	
+	<anim name="bored_1" clip="clips/bored_1.clip" fps="30"/>
+
+	<anim name="taunt_1" clip="clips/taunt_1.clip" fps="30"/>
+		
+	<anim name="knock_1" clip="clips/knock_1.clip" loop="true" loopbackframe="-1"/>
+	
+	<anim name="getup_1" clip="clips/getup_1.clip"/>			
+</model>

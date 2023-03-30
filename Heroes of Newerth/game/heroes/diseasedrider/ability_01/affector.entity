@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_DiseasedRider_Ability1"
+
+	radius="200"
+	
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Magic"
+>
+	<onimpact>
+		<damage effecttype="Magic" amount="75,100,125,150" />
+		<applystate name="State_DiseasedRider_Ability1" target="target_entity" duration="4000" />
+	</onimpact>
+</affector>

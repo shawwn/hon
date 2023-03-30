@@ -1,0 +1,237 @@
+Misc:
+-prediction optimizations (don't repredict)
+-push out gadgets
+-commander clear/stop command
+-commander officer locators
+-commander targetting cursor
+-gun/siege/spell "impact" time
+-snapcast helpers
+-destealth inventory item property
+-lower body resync to upper
+-nudge alt info
+-smaller altinfo
+-water movement
+-client screen glow
+-owner name in pet altinfo and hoverinfo
+-commander hotkeys
+-gun shadow game setting
+-cg_firstPersonShadow
+-interrupt while rooted
+-clean up foundation game settings (snap distances, etc)
+-draw button texture on commander interface
+
+
+Npcs:
+-delayed effects
+-ticked effects
+-toggles
+-passives
+-projectile agro
+-projectile prediction
+-evasion
+-wandering
+-fear
+
+
+Effects:
+-fix sound emitter looping
+-looprecalc
+-loopcount
+-loopdelay
+-begintime
+-lasttime
+-beam caps
+-imbedded emitters
+-emitter styles
+-orbiter
+  -orbitangle
+  -patterns
+  -elliptical orbits
+  -fix direction randomization
+-null effect
+-turbulence
+-direction bone/position (lookat)
+-emitter sorting
+-particle sorting
+-cylinders, spheres
+-skeleton emitter bone list
+-skeletonemitter stickiness
+-meshemitter stickiness
+-speed based spawnrate modifier
+-TemporalPropertyRange offsetsphere and offsetcube
+-bone space
+-particle line trails
+-even distribution (blue noise)
+-named effects in StartEffect so StopEffect can kill by name
+-random gaussian offsets and directions
+-attracter (post process after emitter updates)
+-footsteps
+-generic params in modelemitter to be used in vertex/pixel shaders
+-delay animation in model emitters
+-check beam emitter on model emitter
+-sequential particle emission
+-delay modifiers
+-model emitter space transform bugs
+-check entity space sound emitter
+-temporary property decay
+-particle templates
+-lightemitter
+
+
+Foliage:
+-sway animation
+-animate normals
+-trample animations
+    
+
+Renderer:
+-mesh_shadowed improvements
+  -spotlights, directional lights
+  -omni-light shadows
+  -spot-light shadows
+  -ground ambient color
+-post-processing effects
+  -bloom filter
+  -glow effect
+-dynamic environment maps
+-refraction
+-reflection
+-dynamically change terrain_chunkSize
+-dynamically change foliage_chunkSize
+-D3D_ReadZBuffer
+-gfx_drawWire (wireframe overlay)
+-texture viewer
+-ps_2_0, ps_1_4, and ps_1_1 compatible shaders
+-cubemap procedurals
+-cubemap renormalizer
+-terrain improvements
+  -seperable vertices
+  -ambient occlusion (vertex and texel)
+  -precomputed shadowmap (vertex and texel)
+  -customizable texture projection angle
+  -gfx_wireframe and gfx_points
+  -customizable material
+  -noderepeat
+-force lowend shaders
+-enforce max texture size
+-D3D device selection
+-resizable window mode
+-texture format fallbacks
+-screen aspect
+-dynamic shader feature chopper
+-tsaa settings
+-fallback if autogen mipmaps aren't supported
+-move all CVAR_WORLDCONFIG into scene code
+-rename gfx_ cvars
+-fix upside-down tga's
+-volumetic fog
+-decals
+-reflective/refractive volumetric fogged water
+-scenepoly vertex modes instead of random flags
+-all model meshes meshemitter
+
+
+Shadowmaps:
+-possion filter
+
+
+Profiling:
+-log current profiler
+-per-frame fps graphs
+
+
+Modelviewer:
+-matrix stress test
+
+
+Models:
+-fix tree model seeds
+
+
+Interface:
+-non-power of 2 texture support
+-clipping
+-spinner
+-spinner combo
+-radio buttons
+-tabboxes
+  -tabs
+  -tabpanels
+-progress bar
+-window widget
+-menus
+-scrollpanel
+-tooltips
+-label
+  -elipse
+-combobox
+  -autoscroll when mouse is outside bounds
+-font kerning
+-gutter
+
+
+Editor:
+-player style movement
+-light tool multiselect rotation
+*sculpt tool
+*sculpt tool controls
+*start game option
+*change tool state cvars to non-cvar class members (le_entityEditMode, etc)
+*unify entity, occluder, and light placement tools
+*entity selection sets (saved grouping)
+*occluder tool
+  *selection modes (edge)
+  *move mode (edge[face planar])
+  *scale mode (edge[edge length])
+  *split (edge) impulse
+  *delete (edge) impulse
+-terrain ambient occlusion tool
+-surface tool
+-volume tool
+-decal tool
+
+
+Console:
+-generic tab completion for console elements
+-CCvarSet (a cvar restricted to a set of certain values)
+-force scripts to sleep after X (~64k) commands to protect against infinite loops locking the game
+-allow direct breaking of scripts (ala ctrl+c)
+-pass console script errors as exceptions and handle appropriately
+-wildcard searches
+
+
+Core:
+-use CFrustum throughout scene manager
+-TGA saving
+-give CArchive a proper copy constructor
+-close CArchive in destructor
+-full buffer/unbuffered read/write for all CFileHandle types
+-CFile::WriteString
+-FILE_TEXT support for all CFile*
+-search archives in GetFileList/GetDirList
+-quat class
+-kd tree for line->mesh intersection
+
+
+Render Batches:
+-sorting
+  -texture
+
+
+Observer:
+-death messages
+-eye effects
+-fog of war
+-player following
+-hover info errors
+
+
+Replays:
+-observer
+
+
+Misc:
+-scoreboard labels
+
+Home:
+98.207.73.219

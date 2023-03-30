@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Devourer_Ability2"
+
+	radius="250"
+	lifetime="-1"
+	
+	targetscheme="enemy_units"
+	effecttype="Magic"
+	persist="false"
+	
+	effect="effects/decay.effect"
+>
+	<onframeimpact>
+		<applystate name="State_Devourer_Ability2_Damage" continuous="true" timeout="frametime" />
+		<applystate name="State_Devourer_Ability2_Other" duration="2000" continuous="true" timeout="frametime" />
+	</onframeimpact>
+	
+	<modifier key="devourerult_stage1_1" modpriority="80"
+		radius="280"
+	>
+	</modifier>
+	<modifier key="devourerult_stage1_2" modpriority="80"
+		radius="310"
+	>
+	</modifier>
+	<modifier key="devourerult_stage1_3" modpriority="80"
+		radius="340"
+	>
+	</modifier>
+	<modifier key="devourerult_stage2_1" modpriority="90"
+		radius="290"
+	>
+	</modifier>
+	<modifier key="devourerult_stage2_2" modpriority="90"
+		radius="330"
+	>
+	</modifier>
+	<modifier key="devourerult_stage2_3" modpriority="90"
+		radius="370"
+	>
+	</modifier>
+	<modifier key="devourerult_stage3_1" modpriority="100"
+		radius="300"
+	>
+	</modifier>
+	<modifier key="devourerult_stage3_2" modpriority="100"
+		radius="350"
+	>
+	</modifier>
+	<modifier key="devourerult_stage3_3" modpriority="100"
+		radius="400"
+	>
+	</modifier>
+</affector>

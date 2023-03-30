@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Ophelia_Ability2"
+	
+	ishidden="false"
+	icon="icon.tga"
+	effecttype=""
+	passiveeffect="effects/state.effect"
+	impactinterval="5700,4700,3700,2700"
+>
+	<onimpact>
+		<pushentitysearch global="true" targetscheme="ally_well" ignoreinvulnerable="true" />
+		<condition test="stack_entity != 0">
+			<unbind target="target_entity" />
+			<teleport source="target_entity" target="stack_position" interpolate="false" />
+			<disjoint target="target_entity" />
+			<playeffect effect="effects/teleport_impact.effect" source="target_entity"/>
+		</condition>
+	</onimpact>
+</state>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Devourer_Ability1_Rad3"
+
+	speed="1100"
+	gravity="0"
+
+	modelscale="2"
+	model="/shared/models/invis.mdf"
+	
+	canturn="false"
+	flying="true"
+	flyheight="100"
+	
+	touchradius="70"
+	touchradiusdiradjust="true"
+	touchtargetscheme="hook_targets"
+	toucheffecttype="Physical"
+>
+	<onspawn>
+		<playeffect effect="effects/trail.effect" source="source_entity" target="this_entity" />
+		<setparam a="0" />
+	</onspawn>
+
+	<onimpact>
+		<condition test="not_redirect">
+			<playanim name="ability_1_end" target="source_entity" />
+			<retarget target="this_owner_entity" />
+		</condition>	
+		<else>
+			<expirestate target="this_proxy_entity" name="State_Devourer_Ability1" />
+			<expirestate target="this_proxy_entity" name="State_Devourer_Ability1_Unbind" />
+		</else>
+	</onimpact>
+	
+	<ontouch>
+		<condition test="not_bound">
+			<condition test="param eq 0">
+				<combatevent effecttype="AbilityBasedProjectile">
+					<onimpact>
+						<cantarget targetscheme="enemy_units">
+							<applystate name="State_Stunned" duration="100" />
+							<playeffect effect="effects/impact.effect" source="target_position" target="" occlude="true"/>
+							<damage effecttype="Physical" amount="4000" />
+						</cantarget>
+						<unbind target="target_entity" />
+						<bind target="target_entity" />
+					</onimpact>
+				</combatevent>
+				<setproxy entity="this_entity" target="target_entity" />
+				<setparam a="1" />
+				<applystate name="State_Devourer_Ability1" target="target_entity" duration="-1" pushentity="true" />
+				<applystate name="State_Devourer_Ability1_Unbind" target="target_entity" duration="900" proxy="stack_entity" />
+				<retarget target="this_owner_entity" />
+				<playanim name="ability_1_end" target="source_entity" />
+			</condition>
+		</condition>
+	</ontouch>
+	
+	<modifier key="Devourer_Speed1" modpriority="100"
+		speed="1200"
+	>
+	</modifier>
+	<modifier key="Devourer_Speed2" modpriority="100"
+		speed="1300"
+	>
+	</modifier>
+	<modifier key="Devourer_Speed3" modpriority="100"
+		speed="1400"
+	>
+	</modifier>
+	<modifier key="Devourer_Speed4" modpriority="100"
+		speed="1500"
+	>
+	</modifier>
+	<modifier key="Devourer_Speed5" modpriority="100"
+		speed="1600"
+	>
+	</modifier>
+	<modifier key="Devourer_Speed6" modpriority="100"
+		speed="1700"
+	>
+	</modifier>
+	<modifier key="Devourer_Speed7" modpriority="100"
+		speed="1800"
+	>
+	</modifier>
+	<modifier key="Devourer_Speed8" modpriority="100"
+		speed="1900"
+	>
+	</modifier>
+
+</projectile>

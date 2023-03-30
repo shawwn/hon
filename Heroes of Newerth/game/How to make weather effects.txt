@@ -1,0 +1,105 @@
+//=============================================================================
+// Adding your own custom weather effects
+//=============================================================================
+
+You can create your very own new weather effects just by adding a new Effect file
+into the folder "game/shared/effects/weather/"
+
+
+//=============================================================================
+// Tutorial:	Creating your own custom weather effect "Acid Rain"
+//=============================================================================
+
+* open the folder "game/shared/effects/weather/"
+
+
+* make a copy of the "rain" Effect file, and rename your copy to "aCiD rAiN"
+
+
+* open "aCiD rAiN.effect" using a program such as notepad
+
+
+* Now, will change the color of the rain to green (from "1.00 1.00 1.00" to "0.00 1.00 0.00"):
+
+	** Find the rain settings.  Right now, they look like this:
+
+				<particle 
+					angle="180"
+					turn="1"
+					width="1.6" 
+					height="19" 
+					lockup="true" 
+					color="1.00 1.00 1.00"
+				/> 
+
+	** Change color from white ("1.00 1.00 1.00") to green ("0.00 1.00 0.00").
+		It should now look like this:
+	
+
+				<particle 
+					angle="180"
+					turn="1"
+					width="1.6" 
+					height="19" 
+					lockup="true" 
+					color="0.00 1.00 0.00"
+				/> 
+
+
+* save and close the file
+
+
+* open the folder "game/stringtables/"
+
+
+* open the text file "game_messages_en" in a program such as notepad
+
+
+* scroll to the bottom of the file, find the existing Weather settings.  For example this is how it currently looks for me:
+
+
+//-----------------------------------------------------------------------------
+// Weather
+//-----------------------------------------------------------------------------
+game_weather_					None
+
+// "rain.effect" => "game_weather_rain"
+game_weather_rain				Thunderstorm
+
+// "snow.effect" => "game_weather_snow"
+game_weather_snow				Snow
+
+// Add new weather effects here
+//-----------------------------------------------------------------------------
+
+
+
+* So, new weather effect the name "Acid Rain" by adding it to this list like so:
+
+//-----------------------------------------------------------------------------
+// Weather
+//-----------------------------------------------------------------------------
+game_weather_					None
+
+// "rain.effect" => "game_weather_rain"
+game_weather_rain				Thunderstorm
+
+// "snow.effect" => "game_weather_snow"
+game_weather_snow				Snow
+
+// "aCiD rAiN.effect" => "game_weather_acidrain"
+game_weather_acidrain			Acid Rain
+
+// Add new weather effects here
+//-----------------------------------------------------------------------------
+
+
+* save and close the file.
+
+
+* start Heroes of Newerth, open the options menu, go to the 'interface' section
+
+* the weather options dropdown box should now contain your new weather effect "Acid Rain"
+
+* Enjoy!  Experiment!  Have fun!
+

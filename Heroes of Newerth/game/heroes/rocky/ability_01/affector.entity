@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Rocky_Ability1"
+	
+	radius="200"
+	lifetime="1000"
+	impactdelay="200"
+	impactinterval="250"
+	maxintervals="4"
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Magic"
+	destroytrees="true"
+>
+	<oninterval>
+		<playeffect effect="effects/affector.effect" source="target_position" target="" occlude="true" />
+	</oninterval>
+	
+	<onimpact>
+		<applystate name="State_Stunned" duration="1250" />
+		<applystate name="State_Rocky_Ability1" duration="250" />
+		<damage effecttype="Magic" amount="25,45,65,75" />
+	</onimpact>
+</affector>

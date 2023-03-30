@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_DoctorRepulsor4"
+
+	icon="icon.tga"
+	
+	anim="ability_4"
+	casttime="800"
+	castactiontime="300"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	activatescheme="movement"
+	
+	actiontype="target_position"
+	targetscheme="enemy_units"
+	casteffecttype="Magic"
+	
+	novoiceresponse="true"
+	
+	cooldowntime="0"
+	
+	range="99999"
+>
+	<checkcost>
+		<condition test="source_mana_percent lt 0.07">
+			<invalidate />
+		</condition>
+	</checkcost>
+
+	<activatecost>
+		<evaluate a="source_maxmana" b="0.07" op="mult" />
+		<setvar0 amount="15" b="result" op="add" />
+		<condition test="source_mana ge result">
+			<takemana amount="1" b="var0" op="mult" />
+		</condition>
+		<else>
+			<invalidate />
+		</else>
+	</activatecost>
+
+	<onimpact>
+		<disjoint target="source_entity" />
+		<startcooldown duration="100000" />
+		<spawnunit name="Gadget_DoctorRepulsor_Ability4" count="1" target="source_position" pushentity="true" proxy="this_entity" />
+		<spawnprojectile
+			name="Projectile_DoctorRepulsor_Ability4"
+			source="source_entity"
+			target="target_position"
+			bind="source_entity"
+			bindturn="true"
+			bindstate="State_DoctorRepulsor_Ability4"
+			proxy="stack_entity"
+			pushentity="true"
+			noresponse="true"
+		/>
+		<spawnaffector name="Affector_DoctorRepulsor_Ability4" target="stack_entity" />
+	</onimpact>
+</ability>

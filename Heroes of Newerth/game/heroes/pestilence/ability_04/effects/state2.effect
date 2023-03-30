@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useenityeffectscale="1" name="poslego" deferred="1">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1.2">
+
+			
+			
+			
+			
+			<billboard	
+				
+				bone="_bone_centerofchest"
+				
+				color="0.05 .4 .0"
+				alpha=".4	"
+				size="100"
+				material="/shared/effects/materials/smoke_01.material"
+				
+				depthbias="-50"
+				position="0 -5 0"
+			/>		
+			
+			
+			
+			
+			<orbiteremitter
+				timenudge="2000"
+				spawnrate="50"
+				particlelife="5000"
+				gravity="0.0"
+				minspeed="3.8"
+				maxspeed="5.5"
+				acceleration="0" 
+				drag="0.0"
+				minangle="-90" 
+				maxangle="90" 
+				position="0.0 0.0 20" 
+				origin="1.0 1 20" 
+				orbit="1.0 0.0 1.0" 
+				direction="0.0 0.0 1.0" 
+				offset="3.14 0 20"
+				cylindrical="false" 
+				material="/shared/effects/materials/beetle.material"
+				
+			>
+				<particle
+					color="1 1 1"
+					midcolorpos="0.5"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					startframe="0"
+					endframe="3"
+					minscale="2.5"
+					maxscale="4.5"								
+					turn="true"
+				/>
+			</orbiteremitter>
+			
+			
+			
+			<orbiteremitter
+				timenudge="2000"
+				spawnrate="30"
+				particlelife="5000"
+				gravity="0.0"
+				minspeed="3.8"
+				maxspeed="5.5"
+				acceleration="0" 
+				drag="0.0"
+				minangle="-90" 
+				maxangle="90" 
+				position="0.0 0.0 20" 
+				origin="1.0 1 20" 
+				orbit="1.0 0.0 1.0" 
+				direction="0.0 0.0 1.0" 
+				offset="3.14 0 20"
+				cylindrical="false" 
+				material="/shared/effects/materials/whitedot.material"
+				
+			>
+				<particle
+					color="0 .1 .2"
+					minsize="0"
+					maxsize="5"
+					turn="1"
+				
+				/>
+			</orbiteremitter>			
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

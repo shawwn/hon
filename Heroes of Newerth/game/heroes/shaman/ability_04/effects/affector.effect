@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1.5">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume="0.85" 
+				sample="../sounds/cast.wav"
+			/>
+
+			<!-- Lower Lightning Flashes -->
+
+			<billboard
+				maxroll="360"
+				delay="500"
+				life="1000"
+				startcolor=".2 .3 .8"
+				endcolor="0 0 0"
+				material="/shared/effects/materials/flare1.material"
+				depthbias="-130"
+				startscale="5"
+				midscale="0"
+				endscale="0"
+				position="0 50 100"
+			/>
+
+			<billboard
+				maxroll="360"
+				delay="1500"
+				life="1000"
+				startcolor=".2 .3 .8"
+				endcolor="0 0 0"
+				material="/shared/effects/materials/flare1.material"
+				depthbias="-130"
+				startscale="5"
+				midscale="0"
+				endscale="0"
+				position="40 -50 170"
+			/>
+
+			<billboard
+				maxroll="360"
+				delay="800"
+				life="300"
+				startcolor=".2 .2 .8"
+				endcolor="0 0 0"
+				material="/shared/effects/materials/phantom_smoke_18.material"
+				depthbias="-30"
+				scale="3"
+				position="40 20 170"
+			/>
+
+			<!-- Storm Cloud -->
+	
+			<simpleemitter
+				life="2500"
+				timenudge="200"
+				spawnrate="55"
+				expirelife="2000"
+				particlelife="2500"			
+				position="0 0 160"
+				material="/shared/effects/materials/cloud.material"
+				offsetsphere="225 225 25"
+				startparticlealpha="0.75"
+				endparticlealpha="0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="35"
+					minanglespeed="-25"
+					maxanglespeed="25"
+					color=".65 .65 .75"
+					minstartsize="50"
+					maxstartsize="120"
+					endsize="185"
+					midsizepos=".05"	
+					startalpha=".0"
+					midalpha=".7"
+					endalpha="0"
+					midalphapos=".5"
+				/>
+				<particle 
+					minangle="-125"
+					maxangle="125"
+					minanglespeed="-45"
+					maxanglespeed="45"
+					color=".25"
+					startsize="100"
+					endsize="250"
+					midsizepos=".05"	
+					startalpha=".0"
+					midalpha=".5"
+					endalpha="0"
+					midalphapos=".5"
+				/>
+
+			</simpleemitter>
+
+			<!-- Upper Lightning Flashes -->
+
+			<billboard
+				maxroll="360"
+				delay="1200"
+				life="400"
+				startcolor=".2 .3 .8"
+				endcolor="0 0 0"
+				material="/shared/effects/materials/phantom_smoke_18.material"
+				depthbias="-30"
+				scale="5"
+				position="40 60 170"
+			/>
+
+			<billboard
+				maxroll="360"
+				delay="1400"
+				life="300"
+				startcolor=".2 .2 .5"
+				endcolor="0 0 0"
+				material="/shared/effects/materials/phantom_smoke_18.material"
+				depthbias="-30"
+				scale="9"
+				position="-70 -60 170"
+			/>
+
+			<billboard
+				maxroll="360"
+				delay="700"
+				life="200"
+				startcolor=".2 .3 .8"
+				endcolor="0 0 0"
+				material="/shared/effects/materials/phantom_smoke_18.material"
+				depthbias="-30"
+				scale="6"
+				position="-30 0 100"
+			/>
+
+			<billboard
+				maxroll="360"
+				delay="800"
+				life="200"
+				startcolor=".4 .4 .8"
+				endcolor="0 0 0"
+				material="/shared/effects/materials/phantom_smoke_18.material"
+				depthbias="-30"
+				scale="6"
+				position="120 0 100"
+			/>
+			
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+      		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

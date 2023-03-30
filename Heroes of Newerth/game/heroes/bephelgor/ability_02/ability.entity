@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Bephelgor2"
+	
+	icon="icon.tga"
+	
+	anim="ability_2"
+	casttime="600"
+	castactiontime="300"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="self_position"
+	casteffecttype=""
+	
+	manacost="95"
+	cooldowntime="20000"
+	
+	maxcharges="6,9,12,15"
+>
+	<aura state="State_Bephelgor_Ability2" radius="100" ignoreinvulnerable="true" targetscheme="all_nonhero_corpses" />
+
+
+	<checkcost>
+		<condition test="charges lt 3">
+			<invalidate />
+		</condition>
+	</checkcost>
+	
+	<onimpact>
+		<setvar0 a="charges" b="3" op="div" />
+		<setaccumulator value="var0" />
+		<condition test="accumulator ge 5">
+			<spawnunit name="Pet_Bephelgor_Ability2" proxy="this_entity" target="source_position" count="5" offsetspace="source_entity" offset="0 150" maxactive="5" />
+			<setaccumulator a="0" />
+		</condition>
+		<condition test="accumulator ge 4">
+			<spawnunit name="Pet_Bephelgor_Ability2" proxy="this_entity" target="source_position" count="4" offsetspace="source_entity" offset="0 150" maxactive="5" />
+			<setaccumulator a="0" />
+		</condition>
+		<condition test="accumulator ge 3">
+			<spawnunit name="Pet_Bephelgor_Ability2" proxy="this_entity" target="source_position" count="3" offsetspace="source_entity" offset="0 150" maxactive="5" />
+			<setaccumulator a="0" />
+		</condition>
+		<condition test="accumulator ge 2">
+			<spawnunit name="Pet_Bephelgor_Ability2" proxy="this_entity" target="source_position" count="2" offsetspace="source_entity" offset="0 150" maxactive="5" />
+			<setaccumulator a="0" />
+		</condition>
+		<condition test="accumulator ge 1">
+			<spawnunit name="Pet_Bephelgor_Ability2" proxy="this_entity" target="source_position" count="1" offsetspace="source_entity" offset="0 150" maxactive="5" />
+			<setaccumulator a="0" />
+		</condition>
+	</onimpact>
+	<ondeath>
+		<setcharges a="0" />
+	</ondeath>
+</ability>

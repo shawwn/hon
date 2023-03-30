@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Taunt"
+	
+	icon="/ui/legion/icons/taunt.tga"
+
+	actiontype="target_entity"
+	targetscheme="enemy_heroes"
+	ignoreinvulnerable="true"
+	
+	anim="taunt_1"
+	casttime="3000"
+	castactiontime="0"
+	cooldowntime="60000"
+
+	deferchannelcost="true"
+	deferchannelimpact="true"
+		
+	range="1200"
+	
+	maxlevel="1"
+	disabled="true"
+	
+	nostopanim="true"
+	noresponse="true"
+	novoiceresponse="true"
+	nosilence="true"
+>
+	<onimpact />
+
+	<onchannelstart>
+		<aggression source="source_entity" target="target_entity" />
+		<playtauntsound source="source_entity" target="source_entity" />
+		<playtauntsound source="source_entity" target="target_entity" />
+	</onchannelstart>
+
+	<onchannelend>
+		<applystate name="State_Taunting" target="source_entity" duration="40000" />
+		<applystate name="State_Taunted" target="target_entity" duration="40000" stack="true" />
+		<applystate name="State_Taunted_Short" target="target_entity" duration="2500" stack="true" />
+	</onchannelend>
+
+	<modifier key="perks" condition="perks" modpriority="100"
+		maxlevel="0"
+		disabled="false"
+		ischanneling="true"
+		channeltime="0"
+	>
+		<onimpact />
+	</modifier>
+	
+	<modifier key="standard_taunt" modpriority="100"
+		maxlevel="0"
+		disabled="false"
+		ischanneling="true"
+		channeltime="0"
+	>
+		<onimpact />
+	</modifier>
+</ability>

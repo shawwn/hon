@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="death_rig03.max" file="model.model" type="K2" >
+	<anim name="idle" fps="20" clip="death_1.clip"/>
+
+</model>

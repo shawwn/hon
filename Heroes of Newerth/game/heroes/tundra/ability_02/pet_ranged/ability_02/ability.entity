@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Tundra2_Pet_Ability2"
+
+	icon="icon.tga"
+	
+	anim=""
+	casttime="0"
+	castactiontime="0"
+	passiveeffect=""
+
+	requiredlevel=""
+	
+	actiontype="passive"
+	
+	attackspeedpercharge=".01"
+	maxcharges="50"
+>
+		<onattackimpact>
+			<cantarget targetscheme="enemy_units">
+				<condition target="target_entity" test="not_hasstate State_Tundra_Ability2_RangedPet_Debuff">
+					<expirestate name="State_Tundra_Ability2_RangedPet_Debuff" target="this_proxy_entity" />
+					<applystate name="State_Tundra_Ability2_RangedPet_Debuff" continuous="true" target="target_entity" />
+					<setproxy entity="this_entity" proxy="target_entity" />
+					<evaluate a="charges" b="2" op="div" />
+					<setcharges a="result" />
+				</condition>
+				<else>
+					<hasmodifier name="TundraPet1">
+						<addcharges count="3" target="this_entity" />
+					</hasmodifier>
+					<hasmodifier name="TundraPet2">
+						<addcharges count="5" target="this_entity" />
+					</hasmodifier>
+					<hasmodifier name="TundraPet3">
+						<addcharges count="8" target="this_entity" />
+					</hasmodifier>
+					<hasmodifier name="TundraPet4">
+						<addcharges count="10" target="this_entity" />
+					</hasmodifier>
+				</else>
+			</cantarget>
+		</onattackimpact>
+</ability>

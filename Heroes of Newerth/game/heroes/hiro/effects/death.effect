@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="bloodimpact_small">
+	<definitions>
+		
+		
+	
+		
+		<groundsprite
+			name="emitter0" 
+			life="2500"
+			loop="false"			
+			material="/shared/effects/materials/blood_ground.material"
+			
+			
+			minsize="10"
+			maxsize="40"
+			
+			
+
+			
+			minyaw="-360"
+			maxyaw="360"
+			startcolor=".2 .2 .2"
+			endcolor=".2 .2 .2"
+			startalpha="1"
+			midalpha="1"
+			endalpha="0"
+
+		/>		
+		
+		<particlesystem name="system0" space="entity">
+
+
+			<groundsprite
+				delay="1200"
+				name="emitter0" 
+				count="1"
+				loop="false"			
+				material="/shared/effects/materials/blood_pool.material"
+				
+				life="5000"
+				startsize="10"
+				endsize="40"				
+				position="-5 20 0"
+				
+				minyaw="-360"
+				maxyaw="360"
+				startcolor=".2 .2 .2"
+				endcolor=".2 .2 .2"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+			/>
+			
+			<groundsprite
+				delay="1400"
+				name="emitter0" 
+				count="1"
+				loop="false"			
+				material="/shared/effects/materials/blood_pool.material"
+				
+				life="5000"
+				startsize="10"
+				endsize="30"				
+				position="12 20 0"
+				
+				minyaw="-360"
+				maxyaw="360"
+				startcolor=".2 .2 .2"
+				endcolor=".2 .2 .2"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+			/>	
+
+			<groundsprite
+				delay="1400"
+				name="emitter0" 
+				count="1"
+				loop="false"			
+				material="/shared/effects/materials/blood_pool.material"
+				
+				life="5000"
+				startsize="10"
+				endsize="30"				
+				position="12 30 0"
+				
+				minyaw="-360"
+				maxyaw="360"
+				startcolor=".2 .2 .2"
+				endcolor=".2 .2 .2"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+			/>	
+
+		
+		
+				
+			<simpleemitter
+				delay="200"
+				bone="Bip01 Spine2"
+				life="600"
+				startspawnrate="10"
+				endspawnrate="70"
+				offsetsphere="10 40 0"
+				position="0 60 0"
+				particlelife="3000"
+			>
+				<particle
+					emitter="emitter0"
+				/>
+			</simpleemitter>	
+
+			
+			<simpleemitter
+		         	bone="Bip01 Spine2"
+		         	spawnrate="200"
+					count="155"
+		          	particlelife="500"
+		          	gravity="20"
+		         	speed="150"
+		          	drag=".01"
+		          	acceleration="0.0"
+					position="0 0 -7"
+					offsetsphere="0 0 0"
+		          	material="/shared/effects/materials/blood1.material"		
+					delay="200"
+					minangle="-30"
+					maxangle="30"			
+					direction="-.5 1 0"
+					offsetdirection="0 0 0"
+					offsetradial="0 0 0"
+					particledirectionalspace="local"	
+					
+		         	>
+		  		<particle 
+					minangle="-360"
+					maxangle="360"
+					angle="180"			
+					color=".2 .2 .2 "
+					
+					frame=".5"
+
+					startsize="20"
+					midsize="10"
+					minendsize="25"			
+					maxendsize="60"			
+
+					startalpha="1"
+					midalpha=".8"
+					endalpha="0"
+					
+				/>
+		         </simpleemitter>
+				 
+
+			
+			<simpleemitter
+				delay="100"
+		         	bone="_bone_fx_04"
+		         	spawnrate="480"
+					life="80"
+		          	particlelife="500"
+		          	gravity="0"
+		         	speed="0"
+		          	drag=".01"
+		          	acceleration="0.0"
+					position="0 0 0"
+					offsetsphere="0 0 0"
+		          	material="/shared/effects/materials/blood1.material"
+					mininheritvelocity=".00"			
+					maxinheritvelocity=".1"	
+		         	>
+		  		<particle 
+					minangle="-360"
+					maxangle="360"
+					angle="180"			
+					color=".2 .2 .2 "
+					anglespeed="20"
+					
+					frame=".5"
+
+					startsize="20"							
+					maxendsize="80"			
+
+					startalpha="1"
+					
+					endalpha="0"
+					
+				/>
+		    </simpleemitter>			
+			
+			
+			<simpleemitter
+				delay="100"
+		         	bone="_bone_fx_14"
+		         	spawnrate="480"
+					life="80"
+		          	particlelife="500"
+		          	gravity="0"
+		         	speed="0"
+		          	drag=".01"
+		          	acceleration="0.0"
+					position="0 0 0"
+					offsetsphere="0 0 0"
+		          	material="/shared/effects/materials/blood1.material"
+					mininheritvelocity=".00"			
+					maxinheritvelocity=".1"	
+		         	>
+		  		<particle 
+					minangle="-360"
+					maxangle="360"
+					angle="180"			
+					color=".2 .2 .2 "
+					anglespeed="20"
+					
+					frame=".5"
+
+					startsize="20"							
+					maxendsize="80"			
+
+					startalpha="1"
+					
+					endalpha="0"
+					
+				/>
+		    </simpleemitter>
+
+	
+	
+        
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <!--overlay startalpha="1" endalpha="0" duration="1000" material="/shared/effects/textures/blood1.tga"/-->
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect>
+	<definitions>
+		<particlesystem name="system0" space="world">
+
+			<!--redSmokeBaseOfBuilding-->
+			<simpleemitter
+				spawnrate="10"
+				minparticlelife="1500"
+				maxparticlelife="3000"
+				gravity="0"
+				drag="0"
+				position="0 0 25"
+				offsetsphere="80 80 0"
+				material="/shared/effects/materials/phantom_smoke_02.material"
+			>
+					<particle 
+						maxangle="360"
+						minanglespeed="-6"
+						maxanglespeed="6"
+						startcolor="0 0 0"
+						midcolor="1 0 0"
+						endcolor="0 0 0"
+						startalpha="1 1 1"
+						endalpha="0 0 0"
+						startsize="0"
+						endsize="200"
+						endanchor="0"
+					/>
+			</simpleemitter>
+
+			<!--redSmokeBaseOfMain-->
+			<simpleemitter 
+				bone="_bone_fx_01"
+				spawnrate="8"
+				minparticlelife="1500"
+				maxparticlelife="3000"
+				gravity="0"
+				drag="0"
+				position="0 0 20"
+				offsetsphere="20 20 0"
+				material="/shared/effects/materials/phantom_smoke_02.material"
+			>
+					<particle 
+						maxangle="360"
+						minanglespeed="-6"
+						maxanglespeed="6"
+						startcolor="0 0 0"
+						midcolor="1 0 0"
+						endcolor="0 0 0"
+						startalpha="1 1 1"
+						endalpha="0 0 0"
+						startsize="0"
+						endsize="200"
+						endanchor="0"
+					/>
+			</simpleemitter>
+			
+			<!--redSmokeMain-->
+			<simpleemitter
+				spawnrate="4"
+				bone="_bone_fx_01"
+				particlelife="2200"
+				gravity="-3"
+				speed="2"
+				drag=".007"
+				acceleration="1"
+				position="0 0 0"
+				material="/shared/effects/materials/smoke_particle.material"
+				offsetsphere="7 7 7"
+				minangle="235"
+				maxangle="315"
+				direction="0 0 0"
+			>
+				<particle 
+					minangle="-15"
+					maxangle="-15"
+					minanglespeed="0"
+					startcolor="1 0 0"
+					midcolor="1 0 0"
+					endcolor="1 0 0"
+					midcolorpos=".7"
+					maxanglespeed="00"
+					startframe="0"
+					endframe="1"
+					startsize="15"
+					midsize="30"
+					endsize="60"
+					midsizepos=".5"
+					startalpha="0"
+					midalpha=".2"
+					endalpha="0"
+					midalphapos=".7"
+					startstickiness="0"
+					endstickiness="0"
+				/>
+			</simpleemitter>
+
+			<!--blackSmokeMain-->
+			<simpleemitter
+				spawnrate="4"
+				bone="_bone_fx_01"
+				particlelife="2200"
+				gravity="-3"
+				speed="2"
+				drag=".007"
+				acceleration="1"
+				position="0 0 0"
+				material="/shared/effects/materials/smoke_particle.material"
+				offsetsphere="7 7 7"
+				minangle="235"
+				maxangle="315"
+				direction="0 0 0"
+			>
+					<particle 
+						minangle="-15"
+						maxangle="-15"
+						minanglespeed="0"
+						startcolor="0 0 0"
+						midcolor="0 0 0"
+						endcolor="0 0 0"
+						midcolorpos=".7"
+						maxanglespeed="00"
+						startframe="0"
+						endframe="1"
+						startsize="15"
+						midsize="30"
+						endsize="60"
+						midsizepos=".5"
+						startalpha="0"
+						midalpha=".2"
+						endalpha="0"
+						midalphapos=".7"
+
+					/>
+			</simpleemitter>
+
+			<!--redCore-->
+			<simpleemitter
+				spawnrate="7"
+				bone="_bone_fx_01"
+				particlelife="2000"
+				gravity="-2"
+				speed="10"
+				drag="0"
+				acceleration="0"
+				position="0 0 10"
+				material="/shared/effects/materials/phantom_smoke_02.material"
+				offsetsphere="10 10 0"
+				minangle="0"
+				maxangle="0"
+				direction="0 0 1"
+				offsetdirection="0 0 0"
+				offsetradial="5 5 0"
+			>
+					<particle 
+						minangle="50"
+						maxangle="150"
+						minanglespeed="-30"
+						maxanglespeed="-50"
+						startcolor="1 0 0"
+						midcolor="1 .2 0"
+						endcolor="0 0 0"
+						midcolorpos=".2"
+						startsize="0"
+						midsize="50"
+						endsize="0"
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".4"
+					/>
+			</simpleemitter>
+			
+			
+			<template name="sharedPhantomRed">
+				<!--redSmokeBaseOfSmallFlames-->
+				<simpleemitter 
+					bone="{boner}"
+					spawnrate="2"
+					minparticlelife="1500"
+					maxparticlelife="3000"
+					gravity="0"
+					drag="0"
+					position="0 0 5"
+					offsetsphere="10 10 0"
+					material="/shared/effects/materials/phantom_smoke_02.material"
+				>
+						<particle 
+							maxangle="360"
+							minanglespeed="-6"
+							maxanglespeed="6"
+							startcolor="0 0 0"
+							midcolor="1 0 0"
+							endcolor="0 0 0"
+							startalpha="1 1 1"
+							endalpha="0 0 0"
+							startsize="0"
+							endsize="150"
+							endanchor="0"
+						/>
+				</simpleemitter>
+			</template>
+
+			<instance name="sharedPhantomRed" boner="_bone_fx_02" />
+			<instance name="sharedPhantomRed" boner="_bone_fx_03" />
+			
+			<template name="sharedSmoke">
+				<!--blackSmoke-->
+				<simpleemitter
+					spawnrate="5"
+					bone="{bone}"
+					particlelife="1500"
+					gravity="-3"
+					speed="2"
+					drag=".007"
+					acceleration="1"
+					position="0 0 0"
+					material="/shared/effects/materials/smoke_particle.material"
+					offsetsphere="7 7 7"
+					minangle="235"
+					maxangle="315"
+					direction="0 0 0"
+				>
+						<particle 
+							minangle="-15"
+							maxangle="-15"
+							minanglespeed="0"
+							startcolor="0 0 0"
+							midcolor="0 0 0"
+							endcolor="1 0 0"
+							midcolorpos=".7"
+							maxanglespeed="00"
+							startframe="0"
+							endframe="1"
+							startsize="15"
+							midsize="30"
+							endsize="15"
+							midsizepos=".5"
+							startalpha="0"
+							midalpha=".2"
+							endalpha="0"
+							midalphapos=".7"
+							startstickiness="0"
+							endstickiness="0"
+						/>
+				</simpleemitter>
+			</template>
+			
+			<instance name="sharedSmoke" bone="_bone_fx_02" />
+			<instance name="sharedSmoke" bone="_bone_fx_03" />
+
+			<template name="sharedRedSmoke">
+				<!--redSmoke-->
+				<simpleemitter
+					spawnrate="6"
+					bone="{bone01}"
+					particlelife="2000"
+					gravity="-3"
+					speed="2"
+					drag=".007"
+					acceleration="1"
+					position="0 0 0"
+					material="/shared/effects/materials/smoke_particle.material"
+					offsetsphere="7 7 7"
+					minangle="235"
+					maxangle="315"
+					direction="0 0 0"
+				>
+						<particle 
+							minangle="-15"
+							maxangle="-15"
+							minanglespeed="0"
+							startcolor="1 0 0"
+							midcolor="1 0 0"
+							endcolor="1 0 0"
+							midcolorpos=".7"
+							maxanglespeed="00"
+							startframe="0"
+							endframe="1"
+							startsize="8"
+							midsize="20"
+							endsize="8"
+							midsizepos=".5"
+							startalpha="0"
+							midalpha=".2"
+							endalpha="0"
+							midalphapos=".7"
+							startstickiness="0"
+							endstickiness="0"
+						/>
+				</simpleemitter>
+			</template>
+
+			<instance name="sharedRedSmoke" bone01="_bone_fx_02" />
+			<instance name="sharedRedSmoke" bone01="_bone_fx_03" />
+
+			<template name="redCoreShared">
+			<!--redCore-->
+			<simpleemitter
+				spawnrate="5"
+				bone="{bone02}"
+				particlelife="2000"
+				gravity="-2"
+				speed="10"
+				drag=".5"
+				acceleration="0"
+				position="0 0 10"
+				material="/shared/effects/materials/phantom_smoke_02.material"
+				offsetsphere="0 0 0"
+				minangle="0"
+				maxangle="0"
+				direction="0 0 1"
+				offsetdirection="0 0 0"
+				offsetradial="5 5 0"
+			>
+					<particle
+						minangle="50"
+						maxangle="150"
+						minanglespeed="-30"
+						maxanglespeed="-50"
+						startcolor="1 0 0"
+						midcolor="1 .2 0"
+						endcolor="0 0 0"
+						midcolorpos=".2"
+						startsize="0"
+						midsize="50"
+						endsize="0"
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".4"
+					/>
+			</simpleemitter>
+			</template>
+
+			<instance name="redCoreShared" bone02="_bone_fx_02" />
+			<instance name="redCoreShared" bone02="_bone_fx_03" />
+			
+		</particlesystem>
+	</definitions>
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<waitfordeath instance="instance0" />
+</thread>
+</effect>
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<linearaffector
+	name="Affector_Hydromancer_Ability1_Line"
+
+
+	minlength="1000"
+	maxlength="1000"
+	subsegmentoffset="90"
+	subsegmentlength="84"
+>
+	<onimpact>
+		<spawnunit name="Gadget_Hydromancer_Ability1" target="target_position" fixedposition="true"/>
+	</onimpact>
+</linearaffector>

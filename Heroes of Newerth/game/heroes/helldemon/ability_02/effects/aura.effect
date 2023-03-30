@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" useentityeffectscale="1">
+
+	<definitions>
+
+		<particlesystem name="system0" space="entity" scale="1">
+
+			<groundsprite
+				startsize="70"
+				midsize="70"
+				endsize="70"
+				position="0 0 50"
+				life="8000"
+				loop="1"
+				material="/shared/effects/materials/helldemon_aura.material"
+				startalpha=".6"
+				midalpha=".5"
+				endalpha=".6"
+				depthbias="30"
+				color="1 0 .5"
+				yawspeed="90"
+			/>
+	
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="death">
+	<definitions>
+		<particlesystem name="system0" space="entity">
+
+			<groundsprite
+				delay="500"
+				name="emitter0" 
+				count="1"
+				loop="false"			
+				material="/shared/effects/materials/blob.material"
+				life="5000"
+				startsize="10"
+				endsize="60"				
+				position="75 8 0"
+				minyaw="-360"
+				maxyaw="360"
+				startcolor=".2 1 .2"
+				endcolor=".2 1 .2"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+			/>
+		
+			<groundsprite
+				delay="600"
+				name="emitter0" 
+				count="1"
+				loop="false"			
+				material="/shared/effects/materials/blob.material"	
+				life="5000"
+				startsize="10"
+				endsize="50"				
+				position="72 10 0"	
+				minyaw="-360"
+				maxyaw="360"
+				startcolor=".2 1 .2"
+				endcolor=".2 1 .2"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+			/>	
+
+			<groundsprite
+				delay="800"
+				name="emitter0" 
+				count="1"
+				loop="false"			
+				material="/shared/effects/materials/blob.material"
+				life="5000"
+				startsize="10"
+				endsize="30"				
+				position="78 6 0"
+				minyaw="-360"
+				maxyaw="360"
+				startcolor=".2 1 .2"
+				endcolor=".2 1 .2"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+			/>	
+
+				<billboard
+				life="0000"
+				depthbias="-30"
+				material="/shared/effects/materials/whitedot.material"
+				startcolor="0 .3 0"
+				midcolor="0 .3 0"
+				endcolor="0"	
+				startsize="140"
+				midsize="140"
+				endsize="100"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				position="75 8 0"			
+			/>
+
+			<!-- Additive details -->
+
+			<simpleemitter
+				position="75 8 3"
+				life="4000"
+				minparticlelife="2100"
+				maxparticlelife="2200"
+				spawnrate="35"
+				
+
+				material="/shared/effects/materials/blob_add.material"
+				offsetsphere="35 35 0"
+				
+			>
+				<particle 
+					minanglespeed="-110"
+					maxanglespeed="130"
+					minangle="-360"
+					maxangle="360"
+					startcolor="0"
+					midcolor="0 .05 0"
+					endcolor="0"
+					startsize="35"
+					lockup="1"
+					pitch="90"
+					endsize="75"
+				/>
+			</simpleemitter>
+			
+			
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+
+

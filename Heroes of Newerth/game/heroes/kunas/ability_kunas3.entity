@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Kunas3"
+
+	icon="icons/ability_3.tga"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="passive"
+>
+	<onabilityimpact>
+		<spawnaffector name="Affector_Kunas_Ability3" target="source_entity" />
+	</onabilityimpact>
+</ability>

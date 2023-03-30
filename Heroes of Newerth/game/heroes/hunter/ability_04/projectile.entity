@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Hunter_Ability4"
+
+	speed="2000"
+	gravity="0"	
+	modelscale="0.01"
+	model="projectile.mdf"
+
+	effectscale="1"
+	impacteffect=""
+>
+</projectile>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="0.8">
+
+			<sound
+				linearfalloff="true"
+				falloffstart="0"
+				falloffend="1200"
+				volume=".2"
+				delay="100"
+				sample="/heroes/tundra/ability_04/sounds/impact_%.wav"
+
+			/>
+	
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2500"
+				volume=".5"
+				sample="../sounds/cast.wav"
+				life="4200"
+			/>
+
+			<!---->
+			<terrainemitter					
+				spawnrate="33"					
+				startrange="24"
+				endrange="24"
+				particlelife="2000"				
+			>
+				<particle>
+
+					
+					<model						
+						minyaw="-16"
+						maxyaw="16"
+						
+						minpitch="-15"
+						maxpitch="-15"
+						
+						minroll="-15"
+						maxroll="15"
+						
+						life="1000"
+						model="model.mdf"
+						anim="idle"
+						
+						minscale="0.4"
+						maxscale="0.8"
+						
+					/>
+				
+				</particle>
+			</terrainemitter>
+
+
+			
+			<simpleemitter
+				spawnrate="3"
+				particlelife="3850"
+				
+			>
+				<particle>
+
+					<groundsprite	
+						
+						life="700"
+						material="/shared/effects/materials/ground_ice.material"
+						minsize="82"
+						maxsize="162"			
+						minyaw="-360"
+						maxyaw="306"
+						color="1.0 1.0 1.0"
+						startalpha="0"
+						midalpha="0.9"
+						endalpha="0"
+						midalphapos=".1"
+						position="0 0 0"
+					/>
+					
+					<simpleemitter					
+						count="1"										
+						particlelife="2600"	
+						material="/shared/effects/materials/smoke_01.material"
+						offsetsphere="50 50 0"
+						minangle="0"
+						maxangle="360"
+						gravity="-2"
+						speed="10"
+						direction="0 0 0"					
+					>
+
+						<particle 
+							minangle="0"
+							maxangle="0"
+							minanglespeed="-30"	
+							maxanglespeed="40"
+							color=".4 .6 .7"							
+							startsize="150"						
+							endsize="180"								
+							startalpha="0"
+							midalpha=".24"
+							endalpha="0"
+							midalphpos=".01"							
+
+							
+						/>
+					</simpleemitter>				
+					
+				</particle>
+			</simpleemitter>
+
+			<simpleemitter
+				spawnrate="2"
+				particlelife="3850"
+				
+			>
+				<particle>
+					<debris
+						position="0 0 -51"						
+						minscale="0.7"						
+						maxscale="1.0"
+						life="1000"
+						
+						minyaw="-360"
+						maxyaw="360"
+						
+						model="debris.mdf"
+						anim="idle"	
+						minspeed="200.0"
+						maxspeed="300.0"
+						minrotationspeed="100.0"
+						maxrotationspeed="300.0"
+						gravity="41.0"
+					
+						minangle="0"
+						maxangle="90"
+						direction="0 0 1"
+						collide="true"
+						startalpha="1.0"
+						midalpha="1.0"
+						endalpha="1.0"
+						midalphapos="0.5"
+						bounce="0.7"
+						reflect="0.6"
+						animpose="true"
+					/>	
+					
+				</particle>
+			</simpleemitter>
+			
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

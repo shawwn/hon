@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Gadget_Scout2"
+
+	icon="..\icon.tga"
+	
+	casttime="0"
+	castactiontime="0"
+	frontqueue="true"
+	inheritmovement="true"
+
+	actiontype="target_self"
+	casteffecttype=""
+	
+	targetscheme=""
+>
+	<onimpact>
+		<kill target="this_owner_entity" source="" />
+	</onimpact>
+</ability>

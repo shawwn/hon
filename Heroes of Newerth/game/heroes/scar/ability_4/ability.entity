@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Scar4"
+
+	statuseffecttooltip="State_Scar_Ability4"
+	statuseffectheader="true"
+	icon="icon.tga"
+	
+	anim="ability_4"
+	casttime="0"
+	castactiontime="0"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_self"
+	casteffecttype="Magic"
+	frontqueue="true"
+	
+	manacost="50,80,110"
+	cooldowntime="55000"
+
+>
+	<onimpact>
+		<applystate name="State_Scar_Ability4" duration="30000"/>		
+	</onimpact>
+</ability>

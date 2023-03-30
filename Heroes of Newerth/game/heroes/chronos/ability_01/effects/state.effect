@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="true" deferred="1">
+
+	<definitions>
+
+		
+		
+		<particlesystem name="system0" space="world" useentityeffectscale="true" scale=".7">
+
+			
+
+			<simpleemitter
+				expirelife="400"
+	         		bone="Bip01 Spine1"			
+				directionalspace="global"
+				position="0 0 5"				
+				spawnrate="15"
+				depthbias="-100"
+				maxparticlelife="1000"
+				offsetsphere="0"
+				
+				direction="0 0 1"	
+          			material="/shared/effects/materials/whitedot.material"
+         	>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="0"
+					midcolor="0 0.4 1"
+					endcolor="0"
+					midcolorpos="0.25"
+					startsize="40"
+					endsize="75"
+					startanchor="1.0"
+					midanchor="0.9"
+					endanchor="0.8"
+					flare="1"
+					startheight="50"
+					endheight="100"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				expirelife="300"
+				bone="_bone_centerofchest"
+				spawnrate="10"
+				
+				particlelife="200"
+				offsetsphere="15"
+				material="/shared/effects/materials/refract_pinch.material"
+			>
+				<particle
+					startalpha=".5"
+					endalpha="0.0"
+					maxangle="360"
+					startsize="50"
+					endsize="370"
+					param=".1"
+					depthbias="-130"
+				/>
+			</simpleemitter>
+
+			<billboard
+				bone="_bone_centerofchest"
+				life="400"
+				startalpha="0"
+				midalpha=".5"
+				endalpha="0.0"
+				startparam=".5"
+				endparam="0.0"
+				startsize="128"
+				endsize="500"
+				depthbias="-100"
+				material="/shared/effects/materials/refract_ripple.material"
+			/>		
+			
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0"  particlesystem="system0" />	
+		
+		<waitfordeath instance="instance0" />
+		  
+      		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Gladiator_Ability1"
+	
+	radius="225"
+	impacteffect="effects/impact.effect"
+	
+	impactdelay="1600"
+	targetselection="all"
+	targetscheme="enemy_nonboss_units"
+	
+	effecttype="Magic"
+>
+	<onspawn>
+		<playeffect effect="effects/gate.effect" source="this_position" target="" occlude="true" />
+	</onspawn>
+	
+	<onimpact>
+		<unbind target="target_entity" />
+		<applystate name="State_Gladiator_Ability1_Toss" duration="1530"/>
+		<damage effecttype="Magic" amount="60,90,120,150"/>
+		<spawnprojectile name="Projectile_Gladiator_Ability1_Toss" source="target_entity" target="target_entity" bind="target_entity" ignoretargetoffset="true" noresponse="true" />
+	</onimpact>
+</affector>

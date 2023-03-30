@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" deferred="true" useentityeffectscale="1">
+	<definitions>
+	
+		<particlesystem name="system0" space="world" scale="1.4">
+
+			<sound
+				delay="900"
+				volume=".7"
+				sample="../sounds/impact_self.wav"
+				linearfalloff="true"
+				falloffstart="0"
+				falloffend="2000"
+			/>
+
+			<sound
+				delay="900"
+				volume="1"
+				sample="../sounds/heal.wav"
+				linearfalloff="true"
+				falloffstart="0"
+				falloffend="2000"
+			/>
+
+			<sound
+				life="1000"
+				fadeout="600"
+				delay="700"
+				linearfalloff="true"
+				falloffstart="1000"
+				falloffend="2000" 
+				volume="0.3" 
+				sample="/heroes/accursed/ability_01/sounds/ability_01_ally.wav"
+			/>
+			
+			<groundsprite
+				delay="1000"			
+				life="750"
+				material="/shared/effects/materials/pentagram.material"
+				startsize="125"
+				endsize="25"				
+				startcolor="0 0 0"
+				midcolor="5 5 5"
+				endcolor=".5 0 1"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".9"
+			/>
+			
+			<billboard
+				delay="1000"
+				bone="_bone_centerofchest"
+				life="500"
+				param="0.1"	
+				startsize="175"
+				endsize="75"
+				startalpha="0"
+				midalpha=".75"
+				endalpha="0"				
+				depthbias="0"
+				material="/shared/effects/materials/refract_swell.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+			/>
+			
+			<billboard
+				delay="1500"
+				bone="_bone_centerofchest"
+				life="500"
+				param="0.1"	
+				startsize="175"
+				endsize="75"
+				startalpha="0"
+				midalpha=".75"
+				endalpha="0"				
+				depthbias="0"
+				material="/shared/effects/materials/refract_swell.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+			/>
+			
+			<billboard
+				delay="1000"
+				life="1500"	
+				bone="_bone_centerofchest"
+				material="/shared/effects/materials/whitedot.material"
+				startcolor="0 0 0"
+				midcolor=".4 0 .175"
+				endcolor="0 0 0"
+				midcolorpos=".15"
+				startsize="50"
+				midsize="125"
+				endsize="150"
+				midsizepos=".15"
+				depthbias="-30"
+			/>
+			
+		</particlesystem>
+	</definitions>
+
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<spawnmodifier instance="instance1" modifier="modifier0"/>  
+	<waitfordeath instance="instance0" />
+</thread>
+
+</effect>
+
+
+
+
+
+
+

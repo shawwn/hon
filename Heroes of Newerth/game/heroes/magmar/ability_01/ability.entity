@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Magmar1"
+	
+	icon="icon.tga"
+	
+	anim="ability_2"
+	casttime="100"
+	castactiontime="100"
+	casteffect=""
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_dual_position"
+	targetradius="175"
+	casteffecttype="Magic"
+	targetscheme="all_other_organic_units"
+	manacost="140"
+	cooldowntime="11000"
+	
+	range="400,500,600,700"
+	novoiceresponse="true"
+>
+	<onimpact>
+		<playeffect effect="effects/cast.effect" source="source_entity" occlude="true"/>
+		<spawnprojectile name="Projectile_Magmar_Ability1" source="source_entity" target="target_position" proxy="stack_entity" bind="source_entity" bindturn="true" />
+		<playanim name="ability_1" target="source_entity" />
+		<spawnprojectile name="Projectile_Magmar_Ability1b" source="source_entity" target="target_position" />
+		<applystate name="State_Magmar_Ability1_Self" target="source_entity" duration="550" />
+	</onimpact>
+</ability>

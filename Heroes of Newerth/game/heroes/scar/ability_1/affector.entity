@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Scar_Ability1"
+
+
+	radius="175"
+	lifetime="4000"
+
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Magic"
+	maximpactspertarget="1"
+	persist="false"
+	
+	impacteffect="effects/impact.effect"
+	effect=""
+>
+	<onimpact>
+		<damage effecttype="Magic" amount="90,100,110,120"/>
+	</onimpact>
+</affector>

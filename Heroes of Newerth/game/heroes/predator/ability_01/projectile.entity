@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Predator_Ability1"
+
+	speed="1500"
+	gravity="2500"
+	
+	modelscale="1.0"
+	model=""
+	impacteffect="effects/impact.effect"
+	
+	canturn="false"
+	flying="false"
+	flyheight="0"
+	impactdistance="120"
+>
+
+</projectile>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" deferred="1">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="1">
+
+			<template name="trail">
+				<trailemitter
+					bone="{bone}"
+					spawnrate="20"
+					startminparticlelife="200"
+					startmaxparticlelife="200"
+					endminparticlelife="1"
+					endmaxparticlelife="1" 
+					inheritvelocity="0"
+					texpostime="200"
+					texposscale="0"
+					texstretchscale="1"
+					material="/shared/effects/materials/arrow_trail.material"
+				>
+					<particle 
+						startcolor="0 .5 .1"
+						midcolor="0 .1 .05"
+						endcolor="0 0 0"
+						startsize="2"
+						endsize="0"
+					/>
+				</trailemitter>
+				
+				<trailemitter
+					bone="{bone}"
+					spawnrate="20"
+					startminparticlelife="200"
+					startmaxparticlelife="200"
+					endminparticlelife="1"
+					endmaxparticlelife="1" 
+					inheritvelocity="0"
+					texpostime="200"
+					texposscale="0"
+					texstretchscale="1"
+					material="/shared/effects/materials/arrow_trail.material"
+				>
+					<particle
+						startcolor="0 .3 .05"
+						midcolor="0 .1 .01"
+						endcolor="0 0 0"
+						startsize="22"
+						endsize="0"
+					/>
+				</trailemitter>
+			</template>
+			
+			<instance name="trail" bone="_bone_1" />
+			<instance name="trail" bone="_bone_2" />
+			<instance name="trail" bone="_bone_3" />
+			<instance name="trail" bone="_bone_4" />
+		
+			<trailemitter
+				spawnrate="30"
+				startminparticlelife="200"
+				startmaxparticlelife="200"
+				endminparticlelife="1"
+				endmaxparticlelife="1" 
+				inheritvelocity="0"
+				texpostime="200"
+				texposscale="0"
+				texstretchscale="1"
+				position="0 42 0"
+				material="/shared/effects/materials/arrow_trail.material"
+			>
+				<particle 
+					startcolor="0 0 0"
+					midcolor="0 .25 0"
+					endcolor="0 0 0"
+					startsize="10"
+					midsize="30"
+					endsize="0"
+				/>
+			</trailemitter>
+
+			<billboard
+				material="/shared/effects/materials/whitedot.material"
+				color=".05 .25 .05"
+				size="110"
+				depthbias="-20"
+			/>
+			
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" /> 
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

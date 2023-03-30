@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1.1">
+
+			<simpleemitter
+				bone="_bone_fx_06"
+				spawnrate="40"
+				particlelife="600"
+				gravity=".2"
+				material="/shared/effects/materials/smoke_01.material"
+				offsetsphere="12 12 12"
+			>
+				<particle
+					startcolor=".3 0 .15"
+					endcolor=".1 0.0 .2"
+					midcolorpos="0.15"
+					depthbias="-55"
+					startalpha="0"
+					midalpha=".5"
+					midalphapos=".5"
+					endalpha="0"
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-40"
+					maxanglespeed="40"
+					startsize="25"
+					endsize="10"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_fx_11"
+				spawnrate="40"
+				particlelife="700"
+				gravity=".2"
+				material="/shared/effects/materials/smoke_01.material"
+				offsetsphere="20 20 20"
+			>
+				<particle
+					startcolor=".3 0 .15"
+					endcolor=".1 0.0 .2"
+					midcolorpos="0.15"
+					depthbias="-55"
+					startalpha="0"
+					midalpha=".5"
+					midalphapos=".5"
+					endalpha="0"
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-40"
+					maxanglespeed="40"
+					startsize="35"
+					endsize="15"
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

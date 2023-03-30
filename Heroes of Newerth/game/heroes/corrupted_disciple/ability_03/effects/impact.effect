@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" deferred="true" useentityeffectscale="1">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="2.25">
+
+			<sound
+				linearfalloff="true"
+				falloffstart="0"
+				falloffend="2200"
+				volume="0.55"
+				sample="/shared/sounds/items/item_nullfireblade.wav"
+			/>
+		
+			<billboard
+				life="250"
+				bone="_bone_centerofchest"
+				startcolor=".5 .2 .5"
+				color=".55 .4 0"
+				endcolor="0 0 0"
+				position="0 0 0"
+				material="/shared/effects/materials/whitedot.material"
+				offsetsphere="0 0 0"
+				minangle="0"
+				maxangle="0"
+				direction="0 0 0"
+				startsize="100"
+				midsize="100"
+				endsize="0"
+			/>
+
+			<!--sparksGoingOut-->
+			<simpleemitter
+				spawnrate="25"
+				bone="_bone_centerofchest"
+				particlelife="1000"
+				life="500"
+				gravity="-5"
+				speed="200"
+				drag=".1"
+				acceleration="0"
+				position="0 0 0"
+				material="/shared/effects/materials/medusa_16.material"
+				offsetsphere="6 6 6"
+				minangle="0"
+				maxangle="360"
+			>
+				<particle 
+					minangle="0"
+					maxangle="0"
+					minanglespeed="0"
+					maxanglespeed="0"
+					startcolor="1 .2 .5"
+					midcolor="1 .2 8 .8"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					startframe="0"
+					endframe="1"
+					startsize="15"
+					midsize="5"
+					endsize="2"
+					startalpha="0"
+					midalpha=".7"
+					endalpha="0"
+					midalphapos=".5"
+					turn="true"
+				/>
+			</simpleemitter>
+			
+			<!--sparksGoingUp-->
+			<simpleemitter
+				spawnrate="50"
+				bone="Box02"
+				particlelife="1000"
+				life="500"
+				gravity="-10"
+				speed="200"
+				drag=".2"
+				acceleration="0"
+				position="0 0 0"
+				material="/shared/effects/materials/medusa_16.material"
+				offsetsphere="5 5 5"
+				minangle="0"
+				maxangle="0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="0"
+					minanglespeed="0"
+					maxanglespeed="0"
+					startcolor="1 .2 .8"
+					midcolor="1 .2 .8"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					startframe="0"
+					endframe="1"
+					startsize="30"
+					midsize="15"
+					endsize="2"
+					startalpha="0"
+					midalpha=".7"
+					endalpha="0"
+					midalphapos=".5"
+					turn="true"
+				/>
+			</simpleemitter>
+
+			
+			<simpleemitter
+				bone="_bone_centerofchest"
+				spawnrate="2000"
+				count="2"
+				particlelife="400"
+				material="/shared/effects/materials/star_04.material"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="0 0 0"
+					midcolor=".3 .1 .2"
+					endcolor="0 0 0"
+					size="200"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				bone="_bone_centerofchest"
+				life="500"
+				spawnrate="30"
+				particlelife="500"
+				gravity="0"
+				offsetsphere="30 0 0"
+				minspeed="5"
+				maxspeed="15"
+				drag="0"
+				acceleration="0"
+				direction="0 0 0"
+				material="/shared/effects/materials/wisp_03.material"
+			>
+				<particle 
+					startcolor=".25 .0 .25"
+					midcolor=".25 .0 .25"
+					endcolor="0 0 0"
+					midcolorpos="0.4"
+					minangle="0"
+					maxangle="360"
+					startsize="0"
+					midsize="40"
+					endsize="15"
+					midsizepos=".2"
+					startalpha=".2 .2 .1"
+					minanglespeed="-90"
+					maxanglespeed="90"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				spawnrate="2000"
+				count="7"
+				minparticlelife="400"
+				maxparticlelife="1200"
+				gravity="-20"
+				drag="0.5"
+				material="/shared/effects/materials/phantom_smoke_13.material"
+				position="0 0 15"
+				offsetsphere="15 15 15"
+			>
+				<particle 
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-50"
+					maxanglespeed="50"
+					startcolor="0 0 0"
+					midcolor=".2 .0 .1"
+					endcolor="0 0 0"
+					midcolorpos="0.3"
+					startsize="50"
+					endsize="100"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				life="300"
+				spawnrate="15"
+				particlelife="400"
+				gravity="-6"
+				speed="0.0"
+				acceleration="0.0"
+				timenudge="0"
+				position="0 0 0"
+				material="/shared/effects/materials/flare_01.material"
+			>
+				<particle
+					startcolor=".2 .0 .1"
+					endcolor="0 0 0"
+					startalpha=".02"
+					endalpha="0"
+					minangle="0"
+					maxangle="360"
+					minanglespeed="0"
+					maxanglespeed="0"
+					startsize="125"
+					midsize="100"
+					endsize="50"
+					lockup="true"
+					pitch="90"
+				/>
+			</simpleemitter>
+
+			<!--large blink-->
+			<simpleemitter
+				bone="_bone_centerofchest"
+				count="1"
+				particlelife="200"
+				gravity="-6"
+				speed="0.0"
+				acceleration="0.0"
+				timenudge="0"
+				position="0 0 0"
+				material="/shared/effects/materials/blink.material"
+			>
+				<particle
+					minangle="0"
+					maxangle="90"
+					anglespeed="90"
+					startcolor="0 0 0"
+					midcolor=".6 .1 .4"
+					endcolor="0.0 0.0 0.0"
+					midcolorpos=".1"
+					startsize="110"
+					midsize="90"
+					endsize="0"
+				/>
+			</simpleemitter>
+
+			<!--small blink-->
+			<simpleemitter
+				bone="_bone_overhead"
+				count="1"
+				particlelife="200"
+				gravity="-6"
+				speed="0.0"
+				acceleration="0.0"
+				timenudge="0"
+				position="0 0 0"
+				material="/shared/effects/materials/blink.material"
+			>
+				<particle
+					minangle="0"
+					maxangle="90"
+					anglespeed="90"
+					startcolor="1 .2 .5"
+					midcolor="1 .2 .5"
+					endcolor="0.0 0.0 0.0"
+					midcolorpos=".1"
+					startsize="65"
+					midsize="35"
+					endsize="0"
+				/>
+			</simpleemitter>
+	
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+</effect>
+
+

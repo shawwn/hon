@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Bubbles_Ability1"
+
+	radius="225"
+	lifetime="-1"
+	maximpactspertarget="1"
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Magic"
+	
+>
+	<onspawn>
+		<setparam entity="this_entity" a="" />
+	</onspawn>
+	
+	<onimpact>
+		<damage effecttype="Magic" amount="70,140,210,280" />
+	</onimpact>
+
+</affector>

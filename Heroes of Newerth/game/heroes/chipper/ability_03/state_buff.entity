@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Chipper_Ability3_Buff"
+	
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+	
+	effecttype="StatusBuff"
+>
+	<oninflict>
+		<setaccumulator entity="this_entity" value="150,300,450,600" />
+	</oninflict>
+	
+	<onattackeddamageevent>
+		<damageeffecttype effecttype="Magic">
+			<condition test="accumulator le damage_attempted">
+				<setvalue name="damage_attempted" a="damage_attempted" b="accumulator" op="sub" />
+				<expire />
+				<setaccumulator value="0" />
+			</condition>
+			<condition test="accumulator gt damage_attempted">
+				<evaluate a="accumulator" b="damage_attempted" op="sub" />
+				<setaccumulator value="result" />
+				<setvalue name="damage_attempted" a="damage_attempted" b="0" op="mult" />
+			</condition>
+		</damageeffecttype>
+	</onattackeddamageevent>
+	<onframe/>
+</state>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="blah.max" file="star.model" type="K2" >
+<anim name="idle" loop="true" fps="40" clip="star.clip"/>
+</model>

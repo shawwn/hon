@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Hellbringer_Ability3"
+
+	icon="icon.tga"
+	passiveeffect="state.effect"
+
+	effecttype="StatusDebuff"
+	magicarmor="-3,-4,-5,-6"
+>
+	<onframe />
+	<ondamaged>
+		<heal a="0.1,0.2,0.3,0.4" b="source_damage" op="mult" target="this_inflictor_entity"/>
+	</ondamaged>
+</state>

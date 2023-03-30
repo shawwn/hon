@@ -1,0 +1,85 @@
+// (C)2006 S2 Games
+// mesh_shadow.psh
+// 
+// Renders a mesh into a shadowmap
+//=============================================================================
+
+//=============================================================================
+// Global variables
+//=============================================================================
+float fShadowSlopeBias;
+float fShadowDepthBias;
+
+//=============================================================================
+// Vertex shader output structure
+//=============================================================================
+struct VS_OUTPUT
+{
+	float2 Depth : TEXCOORD0;
+};
+
+//=============================================================================
+// Pixel shader input structure
+//=============================================================================
+struct PS_OUTPUT
+{
+	float4 Color : COLOR;
+};
+
+//=============================================================================
+// Pixel Shader
+//=============================================================================
+#if (SHADOWMAP_TYPE == 0) // SHADOWMAP_R32F
+
+PS_OUTPUT PS( VS_OUTPUT In )
+{
+	PS_OUTPUT Out;
+	
+#if 0	
+	float2 dX = ddx(In.Depth);
+	float2 dY = ddy(In.Depth);
+	
+	float fDepth = In.Depth.x / In.Depth.y;
+	
+	float fDepthX = (In.Depth.x + dX.x) / (In.Depth.y + dX.y);
+	float fDepthY = (In.Depth.x + dY.x) / (In.Depth.y + dY.y);
+	
+	float3 a = float3(0.0f, 0.0f, fDepth);
+	float3 b = float3(1.0f, 0.0f, fDepthX);
+	float3 c = float3(0.0f, 1.0f, fDepthY);
+	
+	// Calculate the plane of this pixel between the rendered fragment, fDepthX, and fDepthY
+	float3 vNormal = float3(
+			a.y*(b.z - c.z) + b.y*(c.z - a.z) + c.y*(a.z - b.z),
+			a.z*(b.x - c.x) + b.z*(c.x - a.x) + c.z*(a.x - b.x),
+			a.x*(b.y - c.y) + b.x*(c.y - a.y) + c.x*(a.y - b.y));
+
+	float fDist = a.x*(b.y * c.z - c.y * b.z) + b.x*(c.y * a.z - a.y * c.z) + c.x*(a.y * b.z - b.y * a.z);
+
+	// Use the plane to calculate the maximum depth of this pixel
+	
+	// Ax + By + Cz = D --> Cz = -Ax - By + D --> z = (-Ax - By + D)/C
+	float fDepth0 = (-vNormal.x * fShadowSlopeBias - vNormal.y * fShadowSlopeBias + fDist) / vNormal.z;
+	float fDepth1 = (-vNormal.x * -fShadowSlopeBias - vNormal.y * fShadowSlopeBias + fDist) / vNormal.z;
+	float fDepth2 = (-vNormal.x * fShadowSlopeBias - vNormal.y * -fShadowSlopeBias + fDist) / vNormal.z;
+	float fDepth3 = (-vNormal.x * -fShadowSlopeBias - vNormal.y * -fShadowSlopeBias + fDist) / vNormal.z;
+
+	Out.Color = float4(max(max(fDepth0, fDepth1), max(fDepth2, fDepth3)) + fShadowDepthBias, 0.0f, 0.0f, 1.0f);
+#else
+	float fDepth = In.Depth.x / In.Depth.y + fShadowDepthBias;
+	Out.Color = float4(fDepth, 0.0f, 0.0f, 1.0f);
+#endif
+
+	return Out;
+}
+
+#else // SHADOWMAP_DEPTH
+
+PS_OUTPUT PS()
+{
+	PS_OUTPUT Out;
+	Out.Color = float4(0.0f, 0.0f, 0.0f, 1.0f);
+	return Out;
+}
+
+#endif

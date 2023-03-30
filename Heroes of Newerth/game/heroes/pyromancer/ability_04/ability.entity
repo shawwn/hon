@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Pyromancer4"
+
+	icon="icon.tga"
+	
+	anim="ability_4"
+	casttime="1000"
+	castactiontime="100"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_entity"
+	targetscheme="enemy_units"
+	casteffecttype="Magic"
+	
+	manacost="280,420,680"
+	cooldowntime="150000,90000,55000"
+	
+	range="600"
+	
+	novoiceresponse="true"
+>
+	<onimpact>
+		<spawnprojectile name="Projectile_Pyromancer_Ability4" source="source_entity" target="target_entity" pushentity="true" offset="-20 100 100" noresponse="true" param="owner_counter" />
+		<setproxy entity="stack_entity" target="target_entity" />
+	</onimpact>
+	
+	<modifier key="ult_boost" modpriority="100"
+		displayname="true"
+		manacost="280,420,640"
+	>
+		<onimpact>
+			<spawnprojectile name="Projectile_Pyromancer_Ability4" source="source_entity" target="target_entity" pushentity="true" offset="-20 100 100" noresponse="true" param="owner_counter" />
+			<setproxy entity="stack_entity" target="target_entity" />
+		</onimpact>
+	</modifier>
+</ability>

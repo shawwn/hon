@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Scar_Ability4"
+
+	
+	
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+	
+	attackspeed=".4,.8,1.2"
+	movespeedmultiplier=".05,.07,.09"
+	modifierkey="zerk"
+	effecttype="StatusBuff"
+>
+<!--	<onframe />
+	<ondamaged>
+		<accumulatedamage scale="1.0" />
+	</ondamaged>
+
+	<onexpired>
+		<damage target="this_owner_entity" amount="0.2" b="accumulator" op="mult" />
+		<popup name="bonus_damage" a="result" source="target_entity" target="source_entity" />
+	</onexpired>
+-->
+</state>

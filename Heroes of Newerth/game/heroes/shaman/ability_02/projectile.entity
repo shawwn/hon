@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Shaman_Ability_02"
+
+	speed="800"
+	gravity="1000"
+
+	modelscale="1"
+	model="effects/hide.mdf"
+	anim="idle"
+	impacteffect="effects/impact.effect"
+	traileffect="effects/trail.effect"
+>
+</projectile>

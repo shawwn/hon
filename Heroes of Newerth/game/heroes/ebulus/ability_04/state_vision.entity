@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Ebulus_Ability4_Vision"
+
+	icon="icon.tga"
+	passiveeffect=""
+	ishidden="true"
+	
+	effecttype=""
+>
+	<aura
+		gadget="Gadget_Ebulus_Ability4"
+		radius="0"
+		targetscheme="self"
+	/>
+</state>

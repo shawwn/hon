@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Fade_Ability4_MortalStrike"
+
+	icon="icon.tga"
+	passiveeffect=""
+	healmultiplier="-0.5"
+	
+	effecttype=""
+>
+	<onframe />
+</state>

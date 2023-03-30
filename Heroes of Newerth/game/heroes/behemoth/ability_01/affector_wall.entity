@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<linearaffector
+	name="Affector_Behemoth_Ability1_Wall"
+
+
+	minlength="1200"
+	maxlength="1200"
+	subsegmentoffset="90"
+	subsegmentlength="84"
+>
+	<onimpact>
+		<spawnunit name="Gadget_Behemoth_Ability1" target="target_position" fixedposition="true"/>
+	</onimpact>
+</linearaffector>

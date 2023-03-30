@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale=".3" entityeffectscale="true">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2000"
+				volume="0.45" 
+				sample="../../sounds/impact_%.wav"
+			/>
+
+			<simpleemitter
+				count="5"
+				particlelife="1300"				
+				spawnrate="650"
+				minspeed="100"
+				maxspeed="750"
+				gravity="10"
+				direction="0 0 1"
+				minangle="0"
+				maxangle="25"
+				drag="0.01"
+				material="/shared/effects/materials/whitewater_02.material"
+				offsetsphere="25 25 10"
+				position="0 0 40"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-60"
+					maxanglespeed="60"
+					startsize="40"
+					endsize="110"
+					startcolor=".6"	
+					endcolor="0"				
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					startstickiness="0"
+					endstickiness=".4"
+				/>
+			</simpleemitter>
+
+	
+			
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

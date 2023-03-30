@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+	<definitions>
+		<particlesystem name="system0" space="local" scale="2">
+
+			<twopointtrailemitter
+				timenudge="1400"
+				name="trail01"
+				bone_a="Bip01 R Forearm"
+				bone_b="Bip01 L Forearm"
+				spawnrate="120"
+				particlelife="250"
+				gravity="5"
+				subframepose="1"
+				drag="0.01"
+				speed="100"
+				direction="0 -1 0"
+				minangle="0"
+				maxangle="0"
+				texpostime="250"
+				texposscale="0"
+				texstretchscale="1"
+				material="/shared/effects/materials/hide.material"
+				inheritvelocity="0.25"
+			>
+				<particle
+					startcolor=".2 0.2 1" 
+					midcolor="1 .3 0"
+					endcolor="0 0 0"
+					startanchor="1"
+					endanchor=".4"
+				/>
+			</twopointtrailemitter>
+			
+		</particlesystem>
+		
+		<particlesystem name="system1" space="local" scale=".8">
+		
+			<simpleemitter
+				spawnrate="20"
+				bone="_bone_centerofchest"
+				particlelife="1400"
+				gravity="-3"
+				speed="2"
+				drag=".2"
+				acceleration="1"
+				position="0 0 -1"
+				material="/shared/effects/materials/flames_03.material"
+				offsetsphere="10"
+				minangle="65"
+				maxangle="135"
+				direction="0 0 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="0"
+					startcolor="1 0 0"
+					midcolor="1 0 0"
+					endcolor=".7 0 0"
+					midcolorpos=".1"
+					maxanglespeed="00"
+					startframe="0"
+					endframe="1"
+					startsize="50"
+					midsize="50"
+					endsize="25"
+					midsizepos=".2"
+					startalpha="0"
+					midalpha=".2"
+					endalpha="0"
+					midalphapos=".2"
+					startstickiness="0"
+					endstickiness="0"
+				/>
+			</simpleemitter>
+
+				<simpleemitter
+					spawnrate="21"
+					bone="_bone_centerofchest"
+					particlelife="1500"
+					gravity="-3"
+					speed="2"
+					drag=".2"
+					acceleration="1"
+					position="0 0 -1"
+					material="/shared/effects/materials/flames_03.material"
+					offsetsphere="15"
+					minangle="65"
+					maxangle="135"
+					direction="0 0 0"
+				>
+					<particle 
+						minangle="0"
+						maxangle="360"
+						minanglespeed="0"
+						startcolor=".3 0 .5"
+						midcolor=".3 0 .5"
+						endcolor=".3 0 .5"
+						midcolorpos=".1"
+						maxanglespeed="00"
+						startframe="0"
+						endframe="1"
+						startsize="25"
+						midsize="50"
+						endsize="10"
+						midsizepos=".2"
+						startalpha="0"
+						midalpha=".3"
+						endalpha="0"
+						midalphapos=".2"
+						startstickiness="0"
+						endstickiness="0"
+					/>
+				</simpleemitter>
+
+				<simpleemitter
+					bone="_bone_centerofchest"
+					spawnrate="25"
+					minparticlelife="200"
+					maxparticlelife="400"
+					gravity="-1.0"
+					speed="0.20"
+					drag="2.0"
+					material="/shared/effects/materials/femme_lightning_01.material"
+					offsetsphere="25 25 25"
+					inheritvelocity=".75"
+				>
+					<particle
+						startcolor="0"
+						midcolor=".5 0 1"
+						endcolor="0"
+						minangle="0"
+						maxangle="360"
+						minanglespeed="0"
+						maxanglespeed="30"
+						startsize="15"
+						endsize="15"
+					/>
+				</simpleemitter>
+				
+				<simpleemitter
+					bone="_bone_centerofchest"
+					spawnrate="25"
+					particlelife="850"
+					gravity="-5"
+					speed="10"
+					drag=".01"
+					acceleration="0.0"
+					position="0 0 0"
+					offsetsphere="25 25 25"
+					material="/shared/effects/materials/blood1.material"
+					direction="0 0 -1"
+					offsetdirection="0 0 0"
+					offsetradial="0 0 0"
+				>
+					<particle 
+						minangle="-360"
+						maxangle="360"
+						angle="180"
+						color="1 1 1"
+						startsize="26"
+						midsize="26"
+						minendsize="80"
+						maxendsize="120"
+						startalpha="0"
+						midalpha=".25"
+						endalpha="0"
+						midalphapos=".2"
+					/>
+				</simpleemitter>
+
+		</particlesystem>
+
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnparticlesystem instance="instance1" particlesystem="system1" />
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+	</thread>
+</effect>

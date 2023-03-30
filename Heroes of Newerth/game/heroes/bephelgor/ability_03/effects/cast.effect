@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+	
+
+
+		
+		<particlesystem name="system0" space="world" scale="0.700">
+			
+			
+			<billboard
+				delay="400"
+				life="2400"
+				bone="_bone_head"
+				material="/shared/effects/materials/whitedot.material"			
+				startcolor="1 .5 0"				
+				midcolor="1 .5 0"
+				endcolor="0 0 0"
+				size="70"
+				depthbias="-20"
+				position="0 10 0"
+			/>
+				
+
+	
+			
+			<simpleemitter
+				life="1000"
+				bone="_bone_head"
+				delay="400"					
+				spawnrate="120"				
+				particlelife="100"
+				gravity="0"				
+				minspeed="3500"
+				maxspeed="5500"
+				drag="0.016"
+				minangle="0"
+				maxangle="-25"
+				offsetsphere="15"
+				position="0 0 0"
+				direction="0 -1 0"
+				material="/shared/effects/materials/flame.material"
+			>
+				<particle					
+					startcolor=".8 .4 1"
+					midcolor=".4 .3 0"
+					endcolor="0 0 0"
+					midcolorpos="0.1"
+					heightdistort=".0"
+					startsize="30"					
+					
+					endsize="60"
+					turn="1"					
+				/>
+			</simpleemitter>	
+			
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+		
+		<waitfordeath instance="instance0"/>
+	
+	</thread>
+
+</effect>

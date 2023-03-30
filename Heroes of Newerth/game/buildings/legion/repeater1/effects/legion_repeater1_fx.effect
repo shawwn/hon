@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect>
+	<definitions>
+		<particlesystem name="system0" space="entity">
+		
+			<billboard
+				bone="_bone_fx_01"	
+				material="/shared/effects/materials/flare_01.material"
+				color=".9 1 .6"
+				size="70"
+			/>
+			
+			<billboard
+				bone="_bone_fx_02"	
+				material="/shared/effects/materials/flare_01.material"
+				color=".9 1 .6"
+				size="70"
+			/>
+			
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

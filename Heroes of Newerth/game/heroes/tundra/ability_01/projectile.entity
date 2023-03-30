@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Tundra_Ability1"
+
+	lifetime="1000"
+	useexactlifetime="true"
+	
+	modelscale="1.0"
+	model=""
+	
+	effectscale="1.0"
+
+	canturn="true"
+	flying="true"
+	flyheight="100"
+
+	curve="1200"
+>
+	<onimpact>
+		<condition test="param eq 1">
+			<spawnprojectile 
+				name="Projectile_Tundra_Ability1_Return"
+				source="proxy_position"
+				target="source_entity"
+				bind="proxy_entity"
+				bindturn="true"
+				proxy="proxy_entity"
+				offset="0 0 0"
+				pushentity="true"
+			/>
+			<spawnaffector name="Affector_Tundra_Ability1" target="stack_entity" />
+		</condition>
+		<else>
+			<kill target="proxy_entity" source="" />
+		</else>
+	</onimpact>	
+</projectile>

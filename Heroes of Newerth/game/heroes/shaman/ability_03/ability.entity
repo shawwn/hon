@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Shaman3"
+
+	
+	
+	icon="icon.tga"
+	
+	anim="ability_1"
+	casttime="800"
+	castactiontime="300"
+	casteffect="effects/cast.effect"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_entity"
+	targetscheme="organic_ally_units"
+	casteffecttype="Physical"
+	
+	manacost="80,90,100,110"
+	cooldowntime="12000,10000,8000,6000"
+	
+	range="600"
+	bridgeeffect="effects/engine.effect"
+
+	doubleactivate="true"
+>
+	<onimpact >
+		<spawnaffector name="Affector_Shaman_Ability3" target="target_entity"/>
+	</onimpact>
+</ability>

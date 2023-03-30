@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Behemoth_Ability4_Base"
+
+	radiusstart="0"
+	radiusend="500"
+	lifetime="300"
+	
+	targetselection="all"
+	maximpactspertarget="1"
+	targetscheme="enemy_units_and_corpses"
+	effecttype=""
+	
+	effect="effects/mainripple.effect"
+>
+	<onimpact>
+		<damage effecttype="SuperiorMagic" amount="200,275,350"/>
+		<cantarget targetscheme="enemy_units">
+			<spawnaffector name="Affector_Behemoth_Ability4_Echo" target="target_entity"/>
+		</cantarget>
+		<else>
+			<spawnaffector name="Affector_Behemoth_Ability4_Echo_Corpse" target="target_entity"/>
+		</else>
+	</onimpact>
+</affector>

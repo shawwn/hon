@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Hiro_Ability1"
+
+	radius="250"
+	
+	lifetime="5000"
+	targetscheme="enemy_units"
+	effecttype="Magic"
+	persist="false"
+	canturn="false"
+>
+	<onframeimpact>
+		<damage effecttype="Magic DOT" amount="80,100,120,140" b="frametime" op="mult"/>
+		<applystate name="State_Hiro_Ability1_Tooltip" continuous="true" timeout="frametime" />
+	</onframeimpact>
+</affector>

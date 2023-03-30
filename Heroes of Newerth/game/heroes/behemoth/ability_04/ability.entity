@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Behemoth4"
+
+	icon="icon.tga"
+	
+	anim="ability_4"
+	casttime="700"
+	castactiontime="0"
+	casteffect="effects/cast.effect"
+	casteffecttype="Magic"
+	
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="self_position"
+	targetscheme="enemy_units_and_corpses"
+	
+	manacost="145,205,265"
+	cooldowntime="150000,130000,110000"
+>
+	<onimpact >
+		<spawnaffector name="Affector_Behemoth_Ability4_Base" target="source_position"/>
+	</onimpact>
+</ability>

@@ -1,0 +1,24 @@
+Like DotA except for ability 3.
+
+Ability 1:
+----------
+Slams the ground with his fist, sending a strong rumble/echo infront of him, stunning and damaging enemy units.
+
+
+Ability 2:
+----------
+Picks up a unit and throws it towards target location, dealing damage to it and enemy units at that location. We should have a better visual interface for this
+
+
+Ability 3:
+----------
+This is a different passive from what he has. It causes spell effects to last a shorter period of time and gives him increased armor.
+
+
+Ultimate:
+---------
+Grows your hero. Gives you a stronger attack with a slightly slower attack speed. You move faster, throw harder, and slam further distance when you grow as well (slightly different from current)
+
+
+
+Good/Melee/Str. 

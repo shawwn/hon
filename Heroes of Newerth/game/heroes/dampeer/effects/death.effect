@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale=".75">
+
+			<groundsprite
+				life="2500"
+				material="/shared/effects/materials/ground_scorch.material"
+				size="235"
+				startalpha=".85"
+				midalphapos=".8"
+				midalpha=".85"
+				endalpha="0"
+				maxyaw="360"
+			/>
+
+			<simpleemitter	
+				spawnrate="11500"
+				life="1000"				
+				count="30"
+				bone="_bone_centerofchest"				
+				minparticlelife="500"			
+				maxparticlelife="1100"	
+				depthbias="-65"			
+				material="/shared/effects/materials/phantom_black.material"			
+				offsetsphere="50 50 125"
+				minspeed="100"
+				maxspeed="200"
+				gravity="-1"
+				drag=".01"
+				maxangle="65"
+			>
+				<particle 
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-100"
+					maxanglespeed="100"
+					color="0"
+					startsize="150"
+					endsize="200"
+					startalpha="0"
+					midalpha=".3"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter	
+				spawnrate="100"
+				life="210"				
+				position="0 0 100"
+				minparticlelife="500"			
+				maxparticlelife="1750"	
+				depthbias="-50"			
+				material="/shared/effects/materials/smoke_particle.material"			
+				offsetsphere="60 60 45"
+				minspeed="0"
+				maxspeed="325"
+				minangle="0"
+				maxangle="12"
+				direction="0 0 1"
+				gravity="25"
+				drag=".003"
+			>
+				<particle 
+					minangle="-365"
+					maxangle="365"
+					minanglespeed="-100"
+					maxanglespeed="100"
+					color=".1 .1 .085"
+					startsize="50"
+					endsize="220"
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+				/>
+
+			</simpleemitter>
+
+			<model
+				life="3000"
+				model="death/model.mdf"
+				anim="idle"
+				startcolor=".65 .65 .65"
+				endcolor="0 0 0"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".5"
+				scale="1.35"
+			>
+
+			<template name="delayedgooSplats">
+				<simpleemitter
+					depthbias="-30"
+					bone="{boner}"
+					life="200"
+					maxparticlelife="1350"				
+					spawnrate="100"
+					maxspeed="280"
+					gravity="42"
+					minangle="0"
+					maxangle="10"
+					material="/shared/effects/materials/smoke_particle.material"
+					offsetsphere="25 25 30"
+					collide="1"
+			
+				>
+					<particle 
+						minanglespeed="-100"
+						maxanglespeed="100"
+						minangle="-60"
+						maxangle="60"
+						color=".1 .1 .05"
+						startsize="40"			
+						endsize="75"
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"
+					/>
+				</simpleemitter>	
+			</template>
+			
+			<instance name="delayedgooSplats" boner="Box001"/>
+			<instance name="delayedgooSplats" boner="Box002"/>
+			<instance name="delayedgooSplats" boner="Box003"/>
+			<instance name="delayedgooSplats" boner="Box004"/>
+			<instance name="delayedgooSplats" boner="Box005"/>
+			<instance name="delayedgooSplats" boner="Box006"/>
+			<instance name="delayedgooSplats" boner="Box007"/>
+			<instance name="delayedgooSplats" boner="Box008"/>
+
+			</model>
+
+			<billboard
+				life="1000"
+				bone="_bone_centerofchest"
+				size="450"
+				startcolor=".5 .2 0"
+				endcolor="0 0 0"
+				position="0 0 0"
+				material="/shared/effects/materials/whitedot.material"
+				depthbias="-80"
+				lockup="true"
+				lockright="true"
+				pitch="90"
+			/>
+
+			<billboard
+				life="200"
+				bone="_bone_centerofchest"
+				endsize="450"
+				startcolor=".3 .1 0"
+				endcolor="0 0 0"
+				position="0 0 0"
+				material="/shared/effects/materials/corona_07.material"
+				depthbias="-80"
+				lockup="true"
+				lockright="true"
+				pitch="90"
+			/>
+
+			<billboard
+				life="500"
+				bone="_bone_centerofchest"
+				size="450"
+				startalpha="0"
+				midalpha="1"
+				endalpha="0"
+				startparam=".05"
+				endparam="0"
+				material="/shared/effects/materials/refract_pinch.material"
+				depthbias="-80"
+				lockup="true"
+				lockright="true"
+				pitch="90"
+			/>
+
+		</particlesystem>
+
+		<modifier
+			color="1 1 1"
+			alpha="0"
+		/>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance1" particlesystem="system0" />
+		<spawnmodifier instance="instance0"/>
+		<waitfordeath  instance="instance0"/>
+		<waitfordeath  instance="instance1"/>
+	</thread>
+
+</effect>

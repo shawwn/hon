@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_FlintBeastwood3"
+
+	icon="icon.tga"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="passive"
+
+	modifierkey="FlintBeastwood_Ability3_1,FlintBeastwood_Ability3_2,FlintBeastwood_Ability3_3,FlintBeastwood_Ability3_4"
+>
+	<onframe />
+</ability>

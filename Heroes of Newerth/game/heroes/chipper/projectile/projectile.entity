@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_ChipperAttack"
+
+	speed="1500"
+	gravity="0"
+	canturn="false"
+	modelscale="1.8"
+	model="effects/blade.mdf"
+	traileffect="effects/trail.effect"
+	impacteffect="effects/impact.effect"
+	
+>
+</projectile>

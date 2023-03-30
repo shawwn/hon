@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Elemental1"
+
+	
+	
+	
+	icon="/heroes/tempest/ability_02/icon.tga"
+	
+	actiontype="passive"
+	cooldowntime="300000"
+	
+	maxcharges="6"
+>
+	<onattack>
+		<canactivate>
+			<cantarget targetscheme="enemy_units">
+				<addcharges count="1" />
+			</cantarget>
+			<condition test="charges eq 6">
+				<multcharges value="0" />
+				<delete target="source_entity" />
+				<!-- MUST delete source entity before spawning the targets, else it will
+					mess with keybindings that contain elementals. -->
+				<spawnunit name="Pet_Tempest_Ability2_Replicate" target="source_position" lifetime="source_lifetime" />
+				<spawnunit name="Pet_Tempest_Ability2_Replicate" target="source_position" lifetime="source_lifetime" />
+				<startcooldown />
+			</condition>
+		</canactivate>
+	</onattack>
+</ability>

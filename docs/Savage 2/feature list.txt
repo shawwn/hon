@@ -1,0 +1,28 @@
+Graphics:
+-Directx 9 based renderer utilizing HLSL pixel and vertex shaders
+-Perspective shadowmaps allow for self-shadowing characters. All objects cast shadows on all other objects.
+-dynamic lighting
+-Environmental effects that change over the course of a single session/game/map. storms roll in, etc.
+-Robust particle effect system
+-high-polycount characters and props
+
+
+Engine:
+-expansive outdoor environments
+-64 (maybe more) player online multiplayer combat
+-skeletal animation
+-npc ai and pathfinding
+-user-friendly in-engine map editor
+
+
+Technical:
+-specular and normalmapped characters
+-foliage (able to cover the entire world)
+
+
+Gameplay:
+-chain of command and other features help organize team strategy
+-several units for players to choose from over the course of a battle
+-intricate melee combat system
+-official clan and tournament management system tied directly into the game
+

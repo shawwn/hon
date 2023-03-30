@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" useentityeffectsscale="1">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="2">
+
+			<template name="blood">
+					<simpleemitter
+						bone="{bloodyBone}"
+						spawnrate="50"
+						life="1000"
+						particlelife="350"
+						gravity="-5"
+						speed="10"
+						drag=".01"
+						acceleration="0.0"
+						position="0 0 0"
+						offsetsphere="0 0 0"
+						material="/shared/effects/materials/blood1.material"
+						direction="0 0 -1"
+						offsetdirection="0 0 0"
+						offsetradial="0 0 0"
+					>
+						<particle 
+							minangle="-360"
+							maxangle="360"
+							angle="180"
+							color=".5 .5 .5"
+							startsize="0"
+							midsize="40"
+							minendsize="75"
+							maxendsize="60"
+							startalpha="0"
+							midalpha=".5"
+							endalpha="0"
+							midalphapos=".2"
+						/>
+					</simpleemitter>
+				</template>
+				<instance name="blood" bloodyBone="_bone_centerofchest" />
+			
+
+			
+			
+			<simpleemitter
+				delay="0"
+				life="500"
+				particlelife="300"
+				spawnrate="3"
+				speed="220"
+				gravity="20"
+				direction="0 0 1"
+				minangle="0"
+				
+				maxangle="15"
+				particledirectionalspace="local"
+				material="/shared/effects/materials/venom_splash.material"
+				offsetsphere="11 11 0"
+				position="0 0 44"
+				
+			>
+				<particle 
+					startsize="20"
+					endsize="50"
+					color=".7 0 0"					
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					startanchor="1"
+					mindanchor="0"
+					endanchor="0"	
+
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				life="500"
+				delay="0"			
+				particlelife="500"				
+				spawnrate="6"
+				minspeed="200"
+				maxspeed="320"
+				gravity="20"
+				direction="0 0 1"
+				minangle="0"			
+				maxangle="3"
+				particledirectionalspace="local"
+				material="/shared/effects/materials/venom_splash.material"
+				offsetsphere="11 11 0"
+				position="0 0 44"
+			>
+				<particle 
+					startsize="20"
+					startwidth="10"
+					endwidth="30"
+					endsize="70"
+					color="1 0 0"					
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					startanchor="1"
+					mindanchor="0"
+					endanchor="0"
+
+				/>
+			</simpleemitter>	
+
+
+			<simpleemitter
+				life="500"
+				particlelife="500"				
+				spawnrate="20"
+				speed="180"
+				gravity="22"
+				minangle="0"
+				maxangle="30"
+				material="/shared/effects/materials/blood1.material"
+				offsetsphere="0 0 0"
+				position="0 0 44"
+			>
+				<particle 
+					minanglespeed="-100"
+					maxanglespeed="100"
+					minangle="-60"
+					maxangle="60"
+					color=".4 0 0"
+					startsize="30"
+					endsize="80"
+					startalpha="1"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+					life="500"
+					delay="930"
+					particlelife="1200"
+					spawnrate="5"
+					speed="0"
+					gravity="0"
+					direction="0 0 0"
+					particledirectionalspace="local"
+					offsetsphere="100 100 0"
+					position="0 0 0"
+			>
+					<particle> 
+						<groundsprite
+							life="3000"
+							material="/shared/effects/materials/blood_ground.material"
+							minyaw="-360"
+							maxyaw="360"
+							minsize="20"
+							maxsize="40"
+							position="0 0 0"
+							color=".4 .4 0"
+							midcolorpos=".1"
+							startalpha="1"
+							midalpha="1"
+							endalpha="0"
+							midalphapos=".1"
+						/>
+					</particle>
+			</simpleemitter>
+		
+			<model
+		
+						model="needles.mdf"
+						anim="idle"
+						bone="Bip01 Spine1"
+						scale="1"
+						position="0.0 0.0 0.0"
+						directionalspace="world"
+						startalpha="1.0"
+						endalpha="1.0"
+						
+						color="1 1 1"
+						expirelife="300"
+						
+					>
+		
+		
+			</model>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+     	 	<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

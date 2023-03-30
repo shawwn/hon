@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Armadon_Ability1"
+
+	speed="1100"
+	gravity="1670"
+
+	modelscale=".3"
+	model="../ability_02/effects/spine.mdf"
+	impacteffect="impact.effect"
+	traileffect="trail.effect"
+>
+</projectile>

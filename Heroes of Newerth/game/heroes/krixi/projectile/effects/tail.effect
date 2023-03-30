@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="tail" deferred="true">
+	<definitions>
+		<particlesystem name="system0" space="world">
+
+			<sound
+				sample="/heroes/krixi/sounds/attack_%.wav"
+				volume="0.65"
+				linearfalloff="true"
+				falloffstart="400"
+				falloffend="1800"
+				fadeout="2000"
+				fadein="0"
+			/>
+	
+			
+			<billboard
+				bone="_bone_fx_01"	
+				material="/shared/effects/materials/whitedot.material"
+				color="0 0.33 0.33"
+				size="30"
+				depthbias="-30"
+			/>
+
+			<billboard
+				bone="_bone_fx_02"	
+				material="/shared/effects/materials/whitedot.material"
+				color="0 0.33 0.33"
+				size="30"
+				depthbias="-30"
+			/>
+			
+			<trailemitter
+				spawnrate="25"
+				particlelife="250"
+				texpostime="250"
+				texposscale="0"
+				texstretchscale="0.75"
+				material="/shared/effects/materials/bad_heal_smoke_06.material"
+			>
+				<particle
+					startsize="20"
+					midsize="7.5"
+					endsize="1"
+					midsizepos=".5"
+
+					color=".5 1 1"
+				/>
+			</trailemitter>
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

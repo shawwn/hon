@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" deferred="true" useentityeffectscale="1">
+	<definitions>
+	
+		<modifier
+			life="500"
+			startcolor="-1"
+			endcolor="1 1 1"
+			alpha="1"
+		/>
+	
+		<particlesystem name="system0" space="world" scale="1">
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				position="0 0 0"
+				life="200"
+				count="25"
+				spawnrate="130"
+				depthbias="-20"
+				minparticlelife="600"
+				maxparticlelife="800"
+				speed="550"
+				drag="0.1"
+				offsetsphere="65"
+				material="/shared/effects/materials/dust_smoke_02.material"
+			>
+				<particle 
+					minanglespeed="-60"
+					maxanglespeed="0"
+					minangle="-360"
+					maxangle="0"
+					startcolor="1 .25 0"
+					midcolor="1 .5 0"
+					midcolorpos="0 0 0"
+					endcolor="0"
+					startalpha=".5"
+					endalpha="0"
+					startsize="50"
+					endsize="100"
+				/>
+
+				<particle 
+					minanglespeed="0"
+					maxanglespeed="20"
+					minangle="-360"
+					maxangle="0"
+					startcolor=".65 .2 .1"
+					midcolor=".65 .2 .1"
+					midcolorpos=".1"
+					endcolor="0"
+					startalpha=".5"
+					endalpha="0"
+					startsize="50"
+					endsize="80"
+				/>
+
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				position="0 0 0"
+				life="1000"
+				count="12"
+				spawnrate="1300"
+				depthbias="-60"
+				minparticlelife="300"
+				maxparticlelife="750"
+				speed="150"
+				drag="0.1"
+				angle="180"
+				offsetsphere="50"
+				material="/shared/effects/materials/pyroclast_03.material"
+				>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor=".1 .1 .1"
+					midcolor=".2 .2 .2"
+					endcolor="0"
+					startsize="50"
+					endsize="120"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				position="0 0 0"
+				life="200"
+				count="20"
+				spawnrate="2000"
+				depthbias="-70"
+				minparticlelife="300"
+				maxparticlelife="1400"
+				maxspeed="630"
+				drag="0.05"
+				offsetsphere="60"
+          		material="/shared/effects/materials/phantom_smoke_03.material"
+         		>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="1 .5 0"
+					endcolor="0"
+					startsize="10"
+					endsize="150"
+					minanglespeed="-80"
+					maxanglespeed="80"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				life="1000"
+				spawnrate="3300"
+				count="50"
+				minparticlelife="400"
+				maxparticlelife="1200"			
+				gravity="25"
+				minspeed="400"
+				maxspeed="900"
+				drag=".01"
+				material="/shared/effects/materials/spark_10.material"
+				offsetsphere="2"
+				minangle="0"
+				maxangle="90"
+				direction="0 0 1"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="1"
+					midcolor=".5 .35 .1"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					minstartsize="10"
+					maxstartsize="15"
+					midsize="17"
+					endsize="7"
+					startalpha="0"
+					midalpha=".7"
+					endalpha="0"
+					midalphapos=".5"
+				/>
+			</simpleemitter>
+
+			<billboard
+				bone="_bone_centerofchest"
+				life="600"
+				position="0 0 0"
+				material="/shared/effects/materials/whitedot.material"
+				size="200"
+				startcolor="1 . 5 .2"
+				midcolor="1 .5 .2"
+				endcolor="0 0 0"
+				midcolorpos=".1"
+				expirelife="250"
+			/>
+			
+			<billboard
+				bone="_bone_centerofchest"
+				life="250"
+				startsize="65"
+				endsize="175"
+				startcolor="0 0 0"
+				midcolor="1 .5 0"
+				endcolor="0 0 0"
+				material="/shared/effects/materials/whitedot.material"
+				depthbias="-50"
+			/>
+
+			<billboard
+				bone="_bone_centerofchest"
+				life="250"
+				startsize="150"
+				endsize="500"
+				startparam=".1"
+				endparam="0"
+				depthbias="-75"
+				material="/shared/effects/materials/refract_ring.material"
+			/>
+
+		</particlesystem>
+	</definitions>
+	<thread>
+	
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1"/>
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Gladiator_Ability2"
+
+	radius="380,420,460,500"
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Physical"
+	impacteffect="effects/impact.effect"
+>
+
+</affector>

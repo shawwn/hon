@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Engineer_Ability2"
+
+	speed="1500"
+	gravity="8000"
+
+	modelscale="1.7"
+	model="effects/projectile/model.mdf"
+	
+	traileffect=""
+	impacteffect="effects/impact.effect"
+>
+	<onimpact>
+		<spawnunit name="Pet_Engineer_Ability2" target="target_position" facing="proxy_position" pushentity="true" />
+		<kill target="proxy_entity" source="" />
+	</onimpact>
+</projectile>

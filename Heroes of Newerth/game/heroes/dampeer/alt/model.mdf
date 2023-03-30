@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="bolts.max" file="high.model" type="K2" high="high.model" med="med.model" low="low.model">
+	<anim name="idle" clip="../clips/default_1.clip" fps="25" loop="true" blendtime="250"/>
+	
+	<anim name="bored_1" clip="../clips/bored_1.clip" fps="16"/>
+	
+	<anim name="portrait" clip="../clips/portrait.clip" fps="20" loop="true"/>
+		
+	<anim name="walk_1" clip="../clips/walk_1.clip" fps="25" loop="true" blendtime="250">
+		<frameevent frame="2" cmd="PlaySoundLinear ../sounds/move_1.wav 0 2400 .7"/>
+		<frameevent frame="21" cmd="PlaySoundLinear ../sounds/move_2.wav 0 2400 .5"/>
+		<frameevent frame="40" cmd="PlaySoundLinear ../sounds/move_3.wav 0 2400 .7"/>
+		<frameevent frame="54" cmd="PlaySoundLinear ../sounds/move_4.wav 0 2400 .7"/>
+	</anim>
+	
+	<anim name="attack_1" clip="../clips/attack_1.clip" fps="30" blendtime="300">
+		<frameevent frame="9" cmd="PlaySoundLinear ../sounds/attack_%.wav 0 2000 1"/>
+		<frameevent frame="9" cmd="PlaySoundLinear /shared/sounds/attacks/attack_medium_%.wav 0 2000 .4"/>
+	</anim>
+	
+	<anim name="attack_2" clip="../clips/attack_2.clip" fps="30" blendtime="300">
+		<frameevent frame="11" cmd="PlaySoundLinear ../sounds/attack_%.wav 0 2000 1"/>
+		<frameevent frame="11" cmd="PlaySoundLinear /shared/sounds/attacks/attack_medium_%.wav 0 2000 .4"/>
+		<frameevent frame="11" cmd="PlaySoundLinear ../sounds/attack_grunt_%.wav 0 2000 1"/>
+	</anim>
+	
+	<anim name="ability_1" clip="../clips/ability_1.clip" fps="23"/>
+	
+	<anim name="ability_1_impact" clip="../clips/ability_1.clip" numframes="25" startframe="10" fps="30"/>
+	
+	<anim name="ability_2" clip="../clips/ability_2.clip" fps="30" blendtime="300">
+		<frameevent frame="3" cmd="PlaySoundLinear ../ability_02/sounds/cast2.wav 0 2000 1"/>
+	</anim>
+	
+	<anim name="ability_3" clip="../clips/ability_3.clip" fps="30"/>
+	
+	<anim name="ability_4" clip="../clips/ability_4.clip" fps="30" blendtime="300"/>
+	
+	<anim name="death_1" clip="../clips/death_1.clip" fps="30" loop="true" loopbackframe="-1">
+		<frameevent frame="1" cmd="PlaySoundLinear ../sounds/death.wav 0 2000 1"/>
+		<frameevent frame="30" cmd="starteffect ../effects/death.effect 0"/>
+		<frameevent frame="1" cmd="starteffect ../effects/death1.effect 1"/>
+		<frameevent frame="1" cmd="starteffect ../effects/death2.effect 2"/>
+	</anim>
+	
+	<anim name="knock_1" clip="../clips/knock_1.clip" fps="30" loopbackframe="-1"/>
+	
+	<anim name="item_1" clip="../clips/item_1.clip" fps="30"/>
+	
+	<anim name="taunt_1" clip="../clips/bored_1.clip" fps="30"/>
+	
+</model>

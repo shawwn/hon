@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+	
+		<modifier
+			name="modifier0"
+			material="../dust_material.material"
+			startcolor="1 1 1"
+			midcolor="1 1 1"
+			endcolor="1 1 1"
+			midcolorpos=".5"
+			expirelife="2000"
+			startalpha=".9"
+			endalpha="1"
+		/>
+
+		<particlesystem name="system0" space="world" scale="1">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume="1"
+				sample="../sounds/cast3.wav"
+			/>
+
+			<template name="rocks">
+				<simpleemitter
+					bone="{bone}"
+					spawnrate="10"
+					minparticlelife="750"			
+					maxparticlelife="1250"			
+					gravity="50"
+					speed="50"
+					drag="0"
+					acceleration="0"
+					position="0 0 25"
+					material="/shared/effects/materials/dust_rock.material"
+					offsetsphere="50 50 20"
+					minangle="0"
+					maxangle="10"
+					direction="0 0 1"
+					offsetdirection="0 0 0"
+					offsetradial="0 0 0"
+				>
+					<particle 
+						minangle="90"
+						maxangle="360"
+						minanglespeed="60"
+						maxanglespeed="100"
+						startcolor=".8 .8 .6"
+						midcolor=".8 .8 .6"
+						endcolor=".8 .8 .6"
+						midcolorpos=".5"
+						startframe="0"
+						endframe="1"
+						startsize="6"
+						midsize="10"
+						endsize="6"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".45"
+					/>
+					
+					<particle 
+						minangle="90"
+						maxangle="360"
+						minanglespeed="60"
+						maxanglespeed="100"
+						startcolor=".4 .4 .3"
+						midcolor=".4 .4 .3"
+						endcolor=".4 .4 .3"
+						midcolorpos=".5"
+						startframe="0"
+						endframe="1"
+						startsize="13"
+						midsize="18"
+						endsize="13"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".45"
+					/>
+				</simpleemitter>
+			</template>
+			
+			<instance name="rocks" bone="_bone_leftfoot"/>
+			<instance name="rocks" bone="_bone_rightfoot"/>
+			<instance name="rocks" bone="_bone_alt_leftfoot"/>
+			<instance name="rocks" bone="_bone_alt_rightfoo"/>
+
+			<template name="dust">
+				<simpleemitter
+					bone="{bone}"
+					gravity="-1"
+					spawnrate="30"
+					minparticlelife="800"
+					maxparticlelife="1650"
+					offsetsphere="65 65 0"
+					material="/shared/effects/materials/dust_smoke_10.material"
+					depthbias="-55"
+					inheritvelocity="-0.1"
+				>
+					<particle 
+						minangle="-180"
+						maxangle="180"		
+						color="0.7 0.65 .56"
+						size="10"
+						minstartscale="5"
+						maxstartscale="10"
+						minendscale="15"
+						maxendscale="20"
+						startalpha="0"
+						midalpha=".25"
+						midalphapos="0.2"
+						endalpha="0"
+					/>
+				</simpleemitter>
+			</template>
+			
+			<instance name="dust" bone="_bone_alt_leftfoot"/>
+			<instance name="dust" bone="_bone_alt_rightfoo"/>
+			<instance name="dust" bone="_bone_leftfoot"/>
+			<instance name="dust" bone="_bone_rightfoot"/>
+
+			<template name="footprints">
+			
+			<simpleemitter
+				bone="{bone}"			
+				spawnrate="2"
+				particlelife="1750"
+				gravity="0"
+				speed="0"
+				drag="0"
+				acceleration="0"
+				position="0 0 0"				
+			>
+				<particle>	
+					<groundsprite	
+						life="1000"
+						material="/shared/effects/materials/ground_smash_overlay.material"
+						minsize="15"
+						maxsize="22"
+						color="1 1 1"
+						startalpha="0"
+						midalpha=".3"
+						endalpha="0"
+						position="0 0 0"
+					/>	
+				</particle>
+			</simpleemitter>
+			</template>
+			
+			<instance name="footprints" bone="_bone_alt_leftfoot"/>
+			<instance name="footprints" bone="_bone_alt_rightfoo"/>
+			<instance name="footprints" bone="_bone_leftfoot"/>
+			<instance name="footprints" bone="_bone_rightfoot"/>
+			
+			<simpleemitter
+				particlelife="5000"
+				spawnrate="2"
+			>
+				<particle>
+					<model
+						position="0 0 0"
+						life="2000"
+						model="rocks/model.mdf"
+						anim="idle"
+						color="1 1 1"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".5"
+						startscale="2"
+						endscale="2"
+						minyaw="0"
+						maxyaw="180"
+					/>
+					
+					<model
+						position="0 0 0"
+						life="2000"
+						model="rocks/model.mdf"
+						anim="idle"
+						color="1 1 .5"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".5"
+						startscale="2"
+						endscale="2"
+						minyaw="0"
+						maxyaw="180"
+					/>
+				</particle>
+			</simpleemitter>
+			
+			<template>
+				<simpleemitter
+					bone="{bone}"			
+					spawnrate="2"
+					particlelife="1750"
+					gravity="0"
+					speed="0"
+					drag="0"
+					acceleration="0"
+					position="0 0 0"				
+				>
+					<particle>	
+						<groundsprite	
+							life="1000"
+							material="/shared/effects/materials/ground_smash_overlay.material"
+							minsize="18"
+							maxsize="25"			
+							color="1 1 1"
+							startalpha="0"
+							midalpha=".3"
+							endalpha="0"
+							position="0 0 0"
+						/>	
+					</particle>
+				</simpleemitter>
+			</template>
+			
+			<instance name="footprints" bone="_bone_alt_leftfoot"/>
+			<instance name="footprints" bone="_bone_alt_rightfoo"/>
+			<instance name="footprints" bone="_bone_leftfoot"/>
+			<instance name="footprints" bone="_bone_rightfoot"/>
+			
+			<simpleemitter
+				count="3"
+				particlelife="5000"
+				spawnrate="2000"
+				offsetsphere="50 50 0"
+			>
+				<particle>
+					<model
+						position="0 0 0"
+						life="2000"
+						model="rocks/model.mdf"
+						anim="default_2"
+						color="1 1 1"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".5"
+						startscale="2"
+						endscale="2"
+						minyaw="0"
+						maxyaw="180"
+					/>
+				</particle>
+			</simpleemitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+		<spawnmodifier instance="instance1" modifier="modifier0"/>  
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" /> 
+	</thread>
+
+</effect>

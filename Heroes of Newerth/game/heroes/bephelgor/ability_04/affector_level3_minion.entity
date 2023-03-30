@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Bephelgor_Ability4_Level3_Minion"
+
+	radius="600"
+	targetselection="all"
+	targetscheme="enemy_heroes"
+	effecttype=""
+>
+	<onimpact>
+		<spawnprojectile name="Projectile_Bephelgor_Ability4" source="proxy_entity" noresponse="true" />
+	</onimpact>
+</affector>

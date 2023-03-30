@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<upgrades>
+	<!-- Chat Symbols -->
+	<chatsymbol name="argentina" texture="/ui/icons/flags/argentina.tga" />
+	<chatsymbol name="australia" texture="/ui/icons/flags/australia.tga" />
+	<chatsymbol name="austria" texture="/ui/icons/flags/austria.tga" />
+	<chatsymbol name="bosnia" texture="/ui/icons/flags/bosnia.tga" />
+	<chatsymbol name="belgium" texture="/ui/icons/flags/belgium.tga" />
+	<chatsymbol name="brazil" texture="/ui/icons/flags/brazil.tga" />
+	<chatsymbol name="bulgaria" texture="/ui/icons/flags/bulgaria.tga" />
+	<chatsymbol name="canada" texture="/ui/icons/flags/canada.tga" />
+	<chatsymbol name="chile" texture="/ui/icons/flags/chile.tga" />
+	<chatsymbol name="china" texture="/ui/icons/flags/china.tga" />
+	<chatsymbol name="costarica" texture="/ui/icons/flags/costa_rica.tga" />
+	<chatsymbol name="croatia" texture="/ui/icons/flags/croatia.tga" />
+	<chatsymbol name="czechrepublic" texture="/ui/icons/flags/czechrepublic.tga" />
+	<chatsymbol name="denmark" texture="/ui/icons/flags/denmark.tga" />
+	<chatsymbol name="england" texture="/ui/icons/flags/england.tga" />
+	<chatsymbol name="estonia" texture="/ui/icons/flags/estonia.tga" />
+	<chatsymbol name="europeanunion" texture="/ui/icons/flags/eu.tga" />
+	<chatsymbol name="finland" texture="/ui/icons/flags/finland.tga" />
+	<chatsymbol name="france" texture="/ui/icons/flags/france.tga" />
+	<chatsymbol name="germany" texture="/ui/icons/flags/germany.tga" />
+	<chatsymbol name="greece" texture="/ui/icons/flags/greece.tga" />
+	<chatsymbol name="hungary" texture="/ui/icons/flags/hungary.tga" />
+	<chatsymbol name="iceland" texture="/ui/icons/flags/iceland.tga" />
+	<chatsymbol name="ireland" texture="/ui/icons/flags/ireland.tga" />
+	<chatsymbol name="israel" texture="/ui/icons/flags/israel.tga" />
+	<chatsymbol name="italy" texture="/ui/icons/flags/italy.tga" />
+	<chatsymbol name="japan" texture="/ui/icons/flags/japan.tga" />
+	<chatsymbol name="kurdistan" texture="/ui/icons/flags/kurdistan.tga" />
+	<chatsymbol name="lithuania" texture="/ui/icons/flags/lithuania.tga" />
+	<chatsymbol name="macedonia" texture="/ui/icons/flags/macedonia.tga" />
+	<chatsymbol name="malaysia" texture="/ui/icons/flags/malaysia.tga" />
+	<chatsymbol name="mexico" texture="/ui/icons/flags/mexico.tga" />
+	<chatsymbol name="netherlands" texture="/ui/icons/flags/netherlands.tga" />
+	<chatsymbol name="newzealand" texture="/ui/icons/flags/newzealand.tga" />
+	<chatsymbol name="norway" texture="/ui/icons/flags/norway.tga" />
+	<chatsymbol name="paraguay" texture="/ui/icons/flags/paraguay.tga" />
+	<chatsymbol name="peru" texture="/ui/icons/flags/peru.tga" />
+	<chatsymbol name="philippines" texture="/ui/icons/flags/philippines.tga" />
+	<chatsymbol name="poland" texture="/ui/icons/flags/poland.tga" />
+	<chatsymbol name="portugal" texture="/ui/icons/flags/portugal.tga" />
+	<chatsymbol name="romania" texture="/ui/icons/flags/romania.tga" />
+	<chatsymbol name="russia" texture="/ui/icons/flags/russia.tga" />
+	<chatsymbol name="serbia" texture="/ui/icons/flags/serbia.tga" />
+	<chatsymbol name="singapore" texture="/ui/icons/flags/singapore.tga" />
+	<chatsymbol name="slovakia" texture="/ui/icons/flags/slovakia.tga" />
+	<chatsymbol name="slovenia" texture="/ui/icons/flags/slovenia.tga" />
+	<chatsymbol name="southafrica" texture="/ui/icons/flags/southafrica.tga" />
+	<chatsymbol name="southkorea" texture="/ui/icons/flags/southkorea.tga" />
+	<chatsymbol name="spain" texture="/ui/icons/flags/spain.tga" />
+	<chatsymbol name="sweden" texture="/ui/icons/flags/sweden.tga" />
+	<chatsymbol name="switzerland" texture="/ui/icons/flags/switzerland.tga" />
+	<chatsymbol name="taiwan" texture="/ui/icons/flags/taiwan.tga" />
+	<chatsymbol name="thailand" texture="/ui/icons/flags/thailand.tga" />
+	<chatsymbol name="trinidadandtobago" texture="/ui/icons/flags/trinidad_and_tobago.tga" />
+	<chatsymbol name="turkey" texture="/ui/icons/flags/turkey.tga" />
+	<chatsymbol name="ukraine" texture="/ui/icons/flags/ukraine.tga" />
+	<chatsymbol name="unitedstates" texture="/ui/icons/flags/unitedstates.tga" />
+	<chatsymbol name="unitedkingdom" texture="/ui/icons/flags/uk.tga" />
+	<chatsymbol name="uruguay" texture="/ui/icons/flags/uruguay.tga" />
+	<chatsymbol name="venezuela" texture="/ui/icons/flags/venezuela.tga" />
+	<chatsymbol name="vietnam" texture="/ui/icons/flags/vietnam.tga" />
+	
+	<chatsymbol name="Moon Queen" texture="/heroes/krixi/icons/hero.tga" />
+	<chatsymbol name="Wild Soul" texture="/heroes/yogi/icons/hero.tga" />
+	<chatsymbol name="Zephyr" texture="/heroes/zephyr/icon.tga" />
+	<chatsymbol name="Magebane" texture="/heroes/javaras/icon.tga" />
+	<chatsymbol name="Scout" texture="/heroes/scout/icon.tga" />
+	<chatsymbol name="Andromeda" texture="/heroes/andromeda/icon.tga" />
+	<chatsymbol name="Valkyrie" texture="/heroes/valkyrie/icon.tga" />
+	<chatsymbol name="Engineer" texture="/heroes/engineer/icon.tga" />
+	<chatsymbol name="Nymphora" texture="/heroes/fairy/icon.tga" />
+	<chatsymbol name="Glacius" texture="/heroes/frosty/icon.tga" />
+	<chatsymbol name="Thunderbringer" texture="/heroes/kunas/icons/hero.tga" />
+	<chatsymbol name="Pollywog Priest" texture="/heroes/pollywogpriest/icons/hero.tga" />
+	<chatsymbol name="Tempest" texture="/heroes/tempest/icon.tga" />
+	<chatsymbol name="Ophelia" texture="/heroes/ophelia/icon.tga" />
+	<chatsymbol name="Pyromancer" texture="/heroes/pyromancer/icon.tga" />
+	<chatsymbol name="Vindicator" texture="/heroes/vindicator/icon.tga" />
+	<chatsymbol name="Witch Slayer" texture="/heroes/witch_slayer/icon.tga" />
+	<chatsymbol name="The Chipper" texture="/heroes/chipper/icon.tga" />
+	<chatsymbol name="Bubbles" texture="/heroes/bubbles/icon.tga" />
+	<chatsymbol name="Swiftblade" texture="/heroes/hiro/icons/hero.tga" />
+	<chatsymbol name="Night Hound" texture="/heroes/hantumon/icon.tga" />
+	<chatsymbol name="Armadon" texture="/heroes/armadon/icon.tga" />
+	<chatsymbol name="Behemoth" texture="/heroes/behemoth/icon.tga" />
+	<chatsymbol name="Hammerstorm" texture="/heroes/hammerstorm/icons/hero.tga" />
+	<chatsymbol name="Pebbles" texture="/heroes/rocky/hero.tga" />
+	<chatsymbol name="Keeper of the Forest" texture="/heroes/treant/icon.tga" />
+	<chatsymbol name="Legionnaire" texture="/heroes/legionnaire/icon.tga" />
+	<chatsymbol name="Predator" texture="/heroes/predator/icon.tga" />
+	<chatsymbol name="Jeraziah" texture="/heroes/jereziah/icon.tga" />
+	<chatsymbol name="Pandamonium" texture="/heroes/panda/icon.tga" />
+	<chatsymbol name="Rampage" texture="/heroes/rampage/icon.tga" />
+	<chatsymbol name="Tundra" texture="/heroes/tundra/icon.tga" />
+	<chatsymbol name="The Gladiator" texture="/heroes/gladiator/icon.tga" />
+	<chatsymbol name="Chronos" texture="/heroes/chronos/icon.tga" />
+	<chatsymbol name="Slither" texture="/heroes/ebulus/icon.tga" />
+	<chatsymbol name="Blood Hunter" texture="/heroes/hunter/icon.tga" />
+	<chatsymbol name="Soulstealer" texture="/heroes/soulstealer/icon.tga" />
+	<chatsymbol name="The Dark Lady" texture="/heroes/vanya/icon.tga" />
+	<chatsymbol name="The Madman" texture="/heroes/scar/icon.tga" />
+	<chatsymbol name="Arachna" texture="/heroes/arachna/icon.tga" />
+	<chatsymbol name="Corrupted Disciple" texture="/heroes/corrupted_disciple/icon.tga" />
+	<chatsymbol name="Sand Wraith" texture="/heroes/sand_wraith/icon.tga" />
+	<chatsymbol name="Forsaken Archer" texture="/heroes/forsaken_archer/icon.tga" />
+	<chatsymbol name="Fayde" texture="/heroes/fade/icon.tga" />
+	<chatsymbol name="Defiler" texture="/heroes/defiler/icon.tga" />
+	<chatsymbol name="Demented Shaman" texture="/heroes/shaman/icon.tga" />
+	<chatsymbol name="Voodoo Jester" texture="/heroes/voodoo/icon.tga" />
+	<chatsymbol name="Puppet Master" texture="/heroes/puppetmaster/icon.tga" />
+	<chatsymbol name="Hellbringer" texture="/heroes/hellbringer/icon.tga" />
+	<chatsymbol name="Torturer" texture="/heroes/xalynx/icon.tga" />
+	<chatsymbol name="Wretched Hag" texture="/heroes/babayaga/icon.tga" />
+	<chatsymbol name="Succubus" texture="/heroes/succubis/icon.tga" />
+	<chatsymbol name="Plague Rider" texture="/heroes/diseasedrider/icon.tga" />
+	<chatsymbol name="Soul Reaper" texture="/heroes/helldemon/icon.tga" />
+	<chatsymbol name="Doctor Repulsor" texture="/heroes/doctor_repulsor/icon.tga" />
+	<chatsymbol name="Devourer" texture="/heroes/devourer/icon.tga" />
+	<chatsymbol name="Electrician" texture="/heroes/electrician/icons/hero.tga" />
+	<chatsymbol name="Kraken" texture="/heroes/kraken/icon.tga" />
+	<chatsymbol name="War Beast" texture="/heroes/wolfman/icon.tga" />
+	<chatsymbol name="Pharaoh" texture="/heroes/mumra/icon.tga" />
+	<chatsymbol name="Accursed" texture="/heroes/accursed/icon.tga" />
+	<chatsymbol name="Pestilence" texture="/heroes/pestilence/icon.tga" />
+	<chatsymbol name="Maliken" texture="/heroes/maliken/icon.tga" />
+	<chatsymbol name="Magmus" texture="/heroes/magmar/icon.tga" />
+	<chatsymbol name="Deadwood" texture="/heroes/deadwood/icon.tga" />
+	<chatsymbol name="Balphagore" texture="/heroes/bephelgor/icon.tga" />
+	<chatsymbol name="Gauntlet" texture="/heroes/gauntlet/icon.tga" />
+	<chatsymbol name="Flint Beastwood" texture="/heroes/flint_beastwood/icon.tga" />
+	<chatsymbol name="Blacksmith" texture="/heroes/dwarf_magi/icon.tga" />
+	<chatsymbol name="Bombardier" texture="/heroes/bomb/icon.tga" />
+	<chatsymbol name="Moraxus" texture="/heroes/moraxus/icon.tga" />
+	<chatsymbol name="Myrmidon" texture="/heroes/hydromancer/icon.tga" />
+	<chatsymbol name="Dampeer" texture="/heroes/dampeer/icon.tga" />
+	<chatsymbol name="Cannon Bombardier" texture="/heroes/bomb/alt/icon.tga" />
+	<chatsymbol name="Captain Flint" texture="/heroes/flint_beastwood/alt/icon.tga" />
+	<chatsymbol name="Clown Devourer" texture="/heroes/devourer/alt/icon.tga" />
+	<chatsymbol name="El Guantelete" texture="/heroes/gauntlet/alt/icon.tga" />
+	<chatsymbol name="Female Glacius" texture="/heroes/frosty/alt/icon.tga" />
+	<chatsymbol name="Female Pyromancer" texture="/heroes/pyromancer/alt/icon.tga" />
+	<chatsymbol name="Naughty Succubus" texture="/heroes/succubis/alt_1/icon.tga" />
+	<chatsymbol name="Nightmare Madman" texture="/heroes/scar/alt/icon.tga" />
+	<chatsymbol name="Ninja Bubbles" texture="/heroes/bubbles/alt/icon.tga" />
+	<chatsymbol name="Pimp Slayer" texture="/heroes/witch_slayer/alt/icon.tga" />
+	<chatsymbol name="Pollywog Chieftain" texture="/heroes/pollywogpriest/alt/hero.tga" />
+	<chatsymbol name="Raven Soulstealer" texture="/heroes/soulstealer/alt/icon.tga" />
+	<chatsymbol name="Scorpion Magmus" texture="/heroes/magmar/alt/icon.tga" />
+	<chatsymbol name="Sexy Moon Queen" texture="/heroes/krixi/alt/icon.tga" />
+	<chatsymbol name="Teen Hound" texture="/heroes/hantumon/alt/icon.tga" />
+	<chatsymbol name="Vacation Dampeer" texture="/heroes/dampeer/alt/icon.tga" />
+	<chatsymbol name="Queen Arachna" texture="/heroes/arachna/alt/icon.tga" />
+	
+	<!-- Chat Name Colors -->
+	<chatnamecolor name="s2logo" texture="/ui/icons/s2.tga" color="#FF0000" ingamecolor="#770000" sortindex="0" />
+	<chatnamecolor name="gmshield" texture="/ui/icons/gm.tga" color="#DD003E" ingamecolor="#820025" sortindex="1" />
+	<chatnamecolor name="banhammer" texture="/ui/icons/ban_hammer.tga" color="#DD003E" ingamecolor="#820025" sortindex="2" />
+	<chatnamecolor name="diamond" texture="/ui/icons/diamond.tga" color="#2AC1FA" ingamecolor="#032D6A" sortindex="3" />
+	<chatnamecolor name="goldshield" texture="/ui/icons/premium.tga" color="#DBBF4A" ingamecolor="#6E6025" sortindex="4" />
+	<chatnamecolor name="silvershield" texture="/ui/icons/silvershield.tga" color="#7C8DA7" ingamecolor="#677589" sortindex="5" />
+	<chatnamecolor name="white" texture="/ui/icons/ingame_2.tga" color="#FFFFFF" ingamecolor="#777777" sortindex="6" />
+	
+	<!-- Account Icons -->
+	<accounticon name="Default Icon" texture="/ui/fe2/store/icons/account_icons/default.tga" />
+	<accounticon name="Basketball" texture="/ui/fe2/store/icons/account_icons/bball.tga" />
+	<accounticon name="Beer" texture="/ui/fe2/store/icons/account_icons/beer.tga" />
+	<accounticon name="Hellbourne" texture="/ui/fe2/store/icons/account_icons/hellbourne.tga" />
+	<accounticon name="Legion" texture="/ui/fe2/store/icons/account_icons/legion.tga" />
+	<accounticon name="Legion Hellbourne" texture="/ui/fe2/store/icons/account_icons/legion_hellbourne.tga" />
+	<accounticon name="Martini" texture="/ui/fe2/store/icons/account_icons/martini.tga" />
+	<accounticon name="Soccer" texture="/ui/fe2/store/icons/account_icons/soccer.tga" />
+	<accounticon name="Yin Yang" texture="/ui/fe2/store/icons/account_icons/yin_yang.tga" />
+	<accounticon name="Baseball" texture="/ui/fe2/store/icons/account_icons/baseball.tga" />
+	<accounticon name="Bolt" texture="/ui/fe2/store/icons/account_icons/bolt.tga" />
+	<accounticon name="Clover" texture="/ui/fe2/store/icons/account_icons/clover.tga" />
+	<accounticon name="Swords" texture="/ui/fe2/store/icons/account_icons/crossed_swords.tga" />
+	<accounticon name="Farmed" texture="/ui/fe2/store/icons/account_icons/farmed.tga" />
+	<accounticon name="Feeder" texture="/ui/fe2/store/icons/account_icons/feeder.tga" />
+	<accounticon name="Gas Mask" texture="/ui/fe2/store/icons/account_icons/gas_mask.tga" />
+	<accounticon name="Radiation" texture="/ui/fe2/store/icons/account_icons/hasard.tga" />
+	<accounticon name="Jolly Roger" texture="/ui/fe2/store/icons/account_icons/jolly_roger.tga" />
+	<accounticon name="Leaf" texture="/ui/fe2/store/icons/account_icons/leaf.tga" />
+	<accounticon name="Biohazard" texture="/ui/fe2/store/icons/account_icons/radiation.tga" />
+	<accounticon name="Red Skull" texture="/ui/fe2/store/icons/account_icons/red_skull.tga" />
+	<accounticon name="Ricer" texture="/ui/fe2/store/icons/account_icons/ricer.tga" />
+	<accounticon name="Headshot" texture="/ui/fe2/store/icons/account_icons/scope.tga" />
+	<accounticon name="Skull and Crossbones" texture="/ui/fe2/store/icons/account_icons/skull_n_cross_bones.tga" />
+	<accounticon name="Snowboarder" texture="/ui/fe2/store/icons/account_icons/snowboarder.tga" />
+	<accounticon name="Troll Face" texture="/ui/fe2/store/icons/account_icons/troll_face.tga" />
+	<accounticon name="Rage Face" texture="/ui/fe2/store/icons/account_icons/fu_face.tga" />
+	<accounticon name="Chocolate Rain" texture="/ui/fe2/store/icons/account_icons/chocolate_rain.tga" />
+	<accounticon name="Double Rainbow" texture="/ui/fe2/store/icons/account_icons/double_rainbow.tga" />
+	<accounticon name="Grenade" texture="/ui/fe2/store/icons/account_icons/grenade.tga" />
+	<accounticon name="I Heart Beer" texture="/ui/fe2/store/icons/account_icons/i_heart_beer.tga" />
+	<accounticon name="Hockey Mask" texture="/ui/fe2/store/icons/account_icons/jason_mask.tga" />
+	<accounticon name="I Heart HoN" texture="/ui/fe2/store/icons/account_icons/i_heart_hon.tga" />
+	<accounticon name="Sunset" texture="/ui/fe2/store/icons/account_icons/palmtree_sunset.tga" />
+	<accounticon name="Shot Glass" texture="/ui/fe2/store/icons/account_icons/shot_glass_2.tga" />
+	<accounticon name="Rook" texture="/ui/fe2/store/icons/account_icons/castle_piece.tga" />
+	<accounticon name="Knight" texture="/ui/fe2/store/icons/account_icons/horse_piece.tga" />
+	<accounticon name="Pudding" texture="/ui/fe2/store/icons/announcer_pudding.tga" />
+	<accounticon name="Lips" texture="/ui/fe2/store/icons/account_icons/lips.tga" />
+	<accounticon name="Alien Salute" texture="/ui/fe2/store/icons/account_icons/alien_salute.tga" />
+	<accounticon name="Peace" texture="/ui/fe2/store/icons/account_icons/peace.tga" />
+	<accounticon name="Groovy Peace" texture="/ui/fe2/store/icons/account_icons/groovy_peace.tga" />
+	<accounticon name="BRB" texture="/ui/fe2/store/icons/account_icons/brb.tga" />
+	<accounticon name="Diva" texture="/ui/fe2/store/icons/account_icons/diva.tga" />
+	<accounticon name="Elitist" texture="/ui/fe2/store/icons/account_icons/elitist.tga" />
+	<accounticon name="Girl Power" texture="/ui/fe2/store/icons/account_icons/girl.tga" />
+	<accounticon name="Happy Face" texture="/ui/fe2/store/icons/account_icons/happy_face.tga" />
+	<accounticon name="iRage" texture="/ui/fe2/store/icons/account_icons/irage.tga" />
+	<accounticon name="KS King" texture="/ui/fe2/store/icons/account_icons/ks_king.tga" />
+	<accounticon name="More Cowbell" texture="/ui/fe2/store/icons/account_icons/more_cowbell.tga" />
+	<accounticon name="Portal Key" texture="/ui/fe2/store/icons/account_icons/pkey.tga" />
+	<accounticon name="Solo Mid" texture="/ui/fe2/store/icons/account_icons/solo_mid.tga" />
+	<accounticon name="U MAD" texture="/ui/fe2/store/icons/account_icons/umad.tga" />
+	<accounticon name="All In" texture="/ui/fe2/store/icons/account_icons/all_in.tga" />
+	<accounticon name="Babe" texture="/ui/fe2/store/icons/account_icons/babe.tga" />
+	<accounticon name="Car" texture="/ui/fe2/store/icons/account_icons/car.tga" />
+	<accounticon name="Dat Ass" texture="/ui/fe2/store/icons/account_icons/dat_ass.tga" />
+	<accounticon name="Eye" texture="/ui/fe2/store/icons/account_icons/eye.tga" />
+	<accounticon name="Heavy Sword" texture="/ui/fe2/store/icons/account_icons/heavy_sword.tga" />
+	<accounticon name="No Sandwich" texture="/ui/fe2/store/icons/account_icons/no_sandwich.tga" />
+	<accounticon name="Pick Tank" texture="/ui/fe2/store/icons/account_icons/pick_tank.tga" />
+	<accounticon name="Pro Morning" texture="/ui/fe2/store/icons/account_icons/pro_morning.tga" />
+	<accounticon name="Shroom" texture="/ui/fe2/store/icons/account_icons/shroom.tga" />
+	<accounticon name="Support Pro" texture="/ui/fe2/store/icons/account_icons/support_pro.tga" />
+	<accounticon name="Thumbs Up" texture="/ui/fe2/store/icons/account_icons/thumbs_up.tga" />
+	<accounticon name="Too Bad" texture="/ui/fe2/store/icons/account_icons/too_bad.tga" />
+	<accounticon name="AFK" texture="/ui/fe2/store/icons/account_icons/afk.tga" />
+	<accounticon name="Coffee" texture="/ui/fe2/store/icons/account_icons/coffee.tga" />
+	<accounticon name="Come At Me Bro" texture="/ui/fe2/store/icons/account_icons/come_at_me_bro.tga" />
+	<accounticon name="Deadwood Punch" texture="/ui/fe2/store/icons/account_icons/deadwood_punch.tga" />
+	<accounticon name="FML" texture="/ui/fe2/store/icons/account_icons/fml.tga" />
+	<accounticon name="Health" texture="/ui/fe2/store/icons/account_icons/health.tga" />
+	<accounticon name="Juked" texture="/ui/fe2/store/icons/account_icons/juked.tga" />
+	<accounticon name="Rage Quit" texture="/ui/fe2/store/icons/account_icons/rage_quit.tga" />
+	<accounticon name="Clubs" texture="/ui/fe2/store/icons/account_icons/clubs.tga" />
+	<accounticon name="Diamonds" texture="/ui/fe2/store/icons/account_icons/diamonds.tga" />
+	<accounticon name="Hearts" texture="/ui/fe2/store/icons/account_icons/hearts.tga" />
+	<accounticon name="Spades" texture="/ui/fe2/store/icons/account_icons/spades.tga" />
+	
+	<!-- Announcer Voices -->
+	<announcervoice name="Flamboyant" voiceset="flamboyant" arcadetext="unicorn" />
+	<announcervoice name="Female" voiceset="female" arcadetext="arcade_text" />
+	
+	<!-- Taunts -->
+	<taunt name="Standard" modifier="standard_taunt" />
+	
+</upgrades>

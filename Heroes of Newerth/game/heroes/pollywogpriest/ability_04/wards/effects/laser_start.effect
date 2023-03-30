@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect>
+	<definitions>
+		<particlesystem name="system0" space="entity" scale=".8">
+
+		
+			<template name="flares">
+				<billboard
+					bone="{bone}"
+					position="0 0 0"
+					life="900"
+					startsize="4"
+					midsize="32"
+					midsizepos="0.5"
+					endsize="4"
+					color=".8 .25 0"
+					startalpha="1.0"
+					midalpha="0.5"
+					midalphapos="0.5"
+					endalpha="0.0"
+					material="/shared/effects/materials/whitedot.material"
+				/>
+				
+				<billboard
+					bone="{bone}"
+					position="0 0 0"
+					life="900"
+					startsize="2"
+					midsize="16"
+					midsizepos="0.5"
+					endsize="4"
+					color="1 .5 0"
+					startalpha="1.0"
+					midalpha="0.5"
+					midalphapos="0.5"
+					endalpha="0.0"
+					material="/shared/effects/materials/whitedot.material"
+				/>
+			</template>
+			
+			<instance name="flares" bone="_bone_Leye"/>
+			<instance name="flares" bone="_bone_Reye"/>			
+			
+			
+			<billboard
+				life="500"
+				position="0 0 50"
+				material="/shared/effects/materials/flare2.material"
+				startheight="125"
+				midheight="125"
+				endheight="10"
+				midheightpos=".25"
+				width="25"
+				lockup="1"
+				startcolor=".25 .1 0"
+				midcolor=".25 .1 0"
+				endcolor="0 0 0"
+				midcolorpos=".9"
+			/>
+			
+			<billboard
+				life="500"
+				position="0 0 50"
+				material="/shared/effects/materials/flare2.material"
+				startheight="125"
+				midheight="125"
+				endheight="10"
+				midheightpos=".25"
+				width="25"
+				lockup="1"
+				startcolor=".25 .1 0"
+				midcolor=".25 .1 0"
+				endcolor="0 0 0"
+				midcolorpos=".9"
+			/>
+
+			<simpleemitter
+				count="1"
+				spawnrate="200"
+				particlelife="100"
+				direction="0 0 1"
+				speed="1000"
+				minangle="0"
+				maxangle="0" 
+				position="0 0 0"
+			>
+				<particle>
+
+					<billboard
+						count="20"
+						spawnrate="500"
+						particlelife="100"
+						material="/shared/effects/materials/flare2.material"
+						size="75"
+						midheightpos=".75"
+						width="40"
+						lockup="1"
+						color=".1 .05 0"
+					/>
+					
+					<billboard
+						count="20"
+						spawnrate="500"
+						particlelife="100"
+						material="/shared/effects/materials/whitedot.material"
+						size="40"
+						lockup="1"
+						startcolor=".75 .5 .25"
+						endcolor="0 0 0"
+					/>
+
+					<billboard
+						count="20"
+						spawnrate="500"
+						particlelife="100"
+						material="/shared/effects/materials/whitedot.material"
+						startheight="0"
+						endheight="100"
+						width="10"
+						roll="90"
+						midheightpos=".75"
+						lockup="1"
+						color="1 .5 0"
+					/>
+
+				</particle>
+			</simpleemitter>
+
+			<billboard
+				life="500"
+				startcolor="1 .5 0"
+				endcolor="0 0 0"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="0.0"
+				midalphapos="0.75"
+				startparam="0.05"
+				endparam="0.0"
+				startsize="50"
+				endsize="0"
+				midsizepos=".4"
+				depthbias="0"
+				position="0 0 25"
+				material="/shared/effects/materials/whitedot.material"
+				lockup="true"
+				pitch="90"
+				rollspeed="-10"
+			/>
+			
+			<billboard
+				life="500"
+				startcolor="1 .5 0"
+				endcolor="0 0 0"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="0.0"
+				midalphapos="0.75"
+				startparam="0.05"
+				endparam="0.0"
+				startsize="35"
+				endsize="0"
+				midsizepos=".4"
+				depthbias="0"
+				position="0 0 25"
+				material="/shared/effects/materials/blink.material"
+				lockup="true"
+				pitch="90"
+				rollspeed="-10"
+			/>
+
+		</particlesystem>
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+

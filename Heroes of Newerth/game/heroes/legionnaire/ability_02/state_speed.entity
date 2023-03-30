@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Legionnaire_Ability2_Speed"
+	
+	icon="icon.tga"
+	passiveeffect=""
+	ishidden="true"
+	
+	movespeed="60,100,140,522"
+	
+	unitwalking="true"
+>
+</state>

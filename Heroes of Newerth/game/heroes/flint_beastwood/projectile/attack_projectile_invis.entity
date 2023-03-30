@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_FlintBeastwoodAttack_Invis"
+
+	speed="3000"
+	gravity="0"
+	modelscale=".4"
+	model="/shared/models/invis.mdf"
+
+	impacteffect=""
+	traileffect=""
+>
+	<onspawn>
+		<spawnprojectile name="Projectile_FlintBeastwoodAttack_Hollowpoint" source="source_entity" target="target_entity" offset="30 150 100" noresponse="true" />
+		<spawnprojectile name="Projectile_FlintBeastwoodAttack_Hollowpoint" source="source_entity" target="target_entity" offset="-30 150 100" noresponse="true" />
+	</onspawn>
+</projectile>

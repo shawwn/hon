@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+	
+		<particlesystem name="system0" space="world">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".5"
+				sample="../sounds/cast.wav"
+			/>
+
+			<sound
+				delay="60"
+				soundloop="true"
+				fadein="300"
+				fadeout="200"
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".4"
+				sample="../sounds/state.wav"
+			/>
+	
+			<light
+				startcolor="0 .5 1"
+				endcolor="0"
+				expirelife="300"
+				falloffstart="200"
+				falloffend="400"
+				position="0 0 350"
+				flickeramount=".5"
+				flickerfrequency="35"
+			/>
+			
+			<groundsprite
+				expirelife="300"
+				material="/shared/effects/materials/ring_ground.material"
+				size="380"
+				startcolor="0 .2 .6"
+				endcolor="0"
+			/>
+
+			<simpleemitter
+				delay="300"
+				bone="_bone_fx_01"
+				spawnrate="30"
+				particlelife="1000"
+				gravity="-10"
+				speed="40"
+				material="/shared/effects/materials/smoke_particle.material"
+				offsetsphere="2"
+				minangle="0"
+				maxangle="360"
+				direction="1 0 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="30"
+					minanglespeed="-40"
+					maxanglespeed="-140"
+					startcolor=".7 .8 .9"
+					endcolor=".2 .2 .2"
+					midcolorpos=".2"
+					startsize="23"
+					endsize="100"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".3"
+					startstickiness="-1"
+					endstickiness="1"
+				/>
+			</simpleemitter>
+
+			<beam
+				bone_a="_bone_fx_03"
+				bone_b="_bone_fx_05"
+				size="40"
+				color="0 .5 1"
+				alpha="1.0"
+				material="/shared/effects/materials/femme_lightning_06.material"
+				framespeed="1.75"
+			/>
+			
+			<beam
+				bone_a="_bone_fx_03"
+				bone_b="_bone_fx_05"
+				size="40"
+				color=".5 .6 1"
+				alpha="1.0"
+				material="/shared/effects/materials/femme_lightning_06.material"
+				framespeed="3"
+				depthbias="-60"
+			/>
+			
+			<simpleemitter
+				position="0 0 15"
+				bone="_bone_fx_03"
+				spawnrate="20"
+				minparticlelife="100"
+				maxparticlelife="500"
+				minspeed="0"
+				maxspeed="200"
+				drag="0.05"
+				angle="20"
+				offsetsphere="0 0 0"
+				depthbias="-60"
+				material="/shared/effects/materials/femme_lightning_01.material"
+			>
+				<particle
+					minangle="-70"
+					maxangle="70"
+					minanglespeed="-110"
+					maxanglespeed="110"
+					startcolor="0 .6 1"
+					endcolor="0"
+					size="4"
+					minendscale="5"
+					maxendscale="6"
+					endstickiness=".3"
+				/>
+			</simpleemitter>
+				
+			<simpleemitter
+				bone="_bone_fx_02"
+				delay="50"
+				minspawnrate="40"
+				maxspawnrate="60"
+				particlelife="800"
+				gravity="5"
+				minspeed="50"
+				maxspeed="100"
+				drag=".04"
+				position="0 0 0"
+				pitchspeed="79"
+				material="/shared/effects/materials/whitedot.material"
+				offsetsphere="5 5 0"
+				inheritvelocity="0"
+				direction="0 0 1"
+			>
+				<particle 
+					startcolor="1 1 1"
+					midcolor="1 .5 .25"
+					endcolor="0 0 0"
+					startheightdistort=".08"
+					endframe="15"
+					startsize="1"
+					midsize="2"
+					endsize="2"
+					startalpha="0"
+					midalpha="0"
+					endalpha="0"
+					midalphapos="0"
+					turn="1"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				bone="_bone_fx_02"
+				position="0 0 10"
+				spawnrate="3"
+				particlelife="1600"
+				gravity="1.0"
+				speed="10.0"
+				angle="0"
+				direction="0 1 0"
+				particledirectionalspace="local"
+			>
+				<particle
+				>
+					<billboard
+						life="100"
+						material="/shared/effects/materials/flash_01.material"
+						lockup="1"
+						lockright="1"
+						pitch="90"
+						param=".012"
+						minsize="15"
+						maxsize="50"
+						directionalspace="local"
+					/>
+				</particle>
+			</simpleemitter>
+			
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+		<waitfordeath instance="instance0"/>
+	</thread>
+
+</effect>

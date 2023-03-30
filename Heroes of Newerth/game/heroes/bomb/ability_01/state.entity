@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Bombardier_Ability1"
+
+	icon="icon.tga"
+
+	effecttype="StatusDebuff"
+	impactinterval="2000"
+	passiveeffect="effects/stuckbomb.effect"
+>
+	<aura
+		gadget="Gadget_Bombardier_Ability1_Reveal"
+		radius="0"
+		targetscheme="self"
+	/>
+	
+	<onimpact>
+		<addcharges count="1" />
+		<addcharges entity="proxy_entity" />
+		<condition test="charges eq 4">
+			<popup name="max" source="target_entity" target="source_entity" />
+		</condition>
+		<else>
+			<popup name="timer_hero" a="charges" source="target_entity" target="source_entity" />
+		</else>
+	</onimpact>
+	
+	<onexpired>
+		<setvar0 a="charges" b=".1" op="mult" />
+		<setvar1 a="var0" b="1" op="add" />
+		<setvar2 a="charges" b="500" op="mult" />
+		<areaofeffect
+			radius="250"
+			targetselection="all"
+			targetscheme="enemy_units"
+			effecttype="Magic"
+		>
+			<applystate name="State_Stunned" duration="var2" />
+			<damage effecttype="Magic" amount="75,150,225,300" b="var1" op="mult"  />
+		</areaofeffect>
+		<playeffect effect="effects/explosion_unit.effect" target="target_position" source="target_entity" occlude="true" />
+		<expirestate name="State_Bombardier_Ability1_Modifier" target="source_entity" />
+		<setcharges entity="proxy_entity" a="0" />
+	</onexpired>
+
+
+</state>

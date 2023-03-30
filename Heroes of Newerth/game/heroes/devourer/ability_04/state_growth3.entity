@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Devourer_Ability4_Stage3"
+	
+	icon="icon.tga"
+	maxhealth="225,375,525"
+	damage="45,75,105"
+	
+	modifierkey="devourerult_stage3_1,devourerult_stage3_2,devourerult_stage3_3"
+	maxcharges="3"
+>
+	<oninflict>
+		<setcharges a="3" />
+	</oninflict>
+	
+	<onexpired>
+		<applystate name="State_Devourer_Ability4_Stage2" target="source_entity" duration="1000" />
+	</onexpired>
+
+</state>

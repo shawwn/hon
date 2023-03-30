@@ -1,0 +1,10 @@
+debug-x86_64
+debug-i686
+release-x86_64
+release-i686
+*.user
+Release
+Updater.aps
+VTune
+K2_Updater.suo
+K2_Updater.ncb

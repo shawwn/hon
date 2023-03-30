@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resourcelist>
+	<fontface file="/core/fonts/game_ko.ttf">
+		<fontmap name="dyn_6" size="6" dynamic_fontsize="true" baseresolution="768" axis="y" language="latin,hangul_jamo,hangul_syllable" />
+		<fontmap name="dyn_7" size="7" dynamic_fontsize="true" baseresolution="768" axis="y" language="latin,hangul_jamo,hangul_syllable" />		
+		<fontmap name="dyn_8" size="8" dynamic_fontsize="true" baseresolution="768" axis="y" language="latin,hangul_jamo,hangul_syllable" />
+		<fontmap name="dyn_9" size="9" dynamic_fontsize="true" baseresolution="768" axis="y" language="latin,hangul_jamo,hangul_syllable" />
+		<fontmap name="dyn_10" size="10" dynamic_fontsize="true" baseresolution="768" axis="y" language="latin,hangul_jamo,hangul_syllable" />
+		<fontmap name="dyn_11" size="11" dynamic_fontsize="true" baseresolution="768" axis="y" language="latin,hangul_jamo,hangul_syllable" />
+		<fontmap name="dyn_12" size="12" dynamic_fontsize="true" baseresolution="768" axis="y" language="latin,hangul_jamo,hangul_syllable" />
+		<fontmap name="dyn_14" size="14" dynamic_fontsize="true" baseresolution="768" axis="y" language="latin,hangul_jamo,hangul_syllable" />
+		<fontmap name="dyn_16" size="16" dynamic_fontsize="true" baseresolution="768" axis="y" language="latin,hangul_jamo,hangul_syllable" />
+	</fontface>
+
+	<fontface file="/core/fonts/system.ttf">
+		<fontmap name="system_small" size="10" language="latin" />
+		<fontmap name="system_medium" size="12" language="latin"/>
+		<fontmap name="system_large" size="22" language="latin"/>
+	</fontface>
+
+	<fontface file="/core/fonts/game_ko.ttf">
+		<fontmap name="littletextpopup" size="16" dynamic_fontsize="true" baseresolution="768" axis="y" language="latin,hangul_jamo,hangul_syllable" />
+	</fontface>
+	
+	<cursor name="cursor" file="/core/cursors/arrow.cursor" />
+
+	<texture name="alphagrad" file="$alphagrad" />
+	<texture name="logo" file="/textures/logo.tga" />
+	<texture name="console_background" file="/core/textures/console_blank.tga" />
+</resourcelist>
+

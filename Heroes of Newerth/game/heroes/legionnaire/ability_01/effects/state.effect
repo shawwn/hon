@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1">
+	<definitions>
+		
+		<particlesystem name="system0" space="world" scale=".4">
+		
+			<model
+				parentmodel="true"
+				parentskeleton="true"
+				startcolor="0 0 0"
+				midcolor="5 2 0"
+				endcolor="0 0 0"
+				startscale="1.05"
+				midscale="1.05"
+				endscale="1.05"
+				midscalepos=".25"
+				material="/shared/effects/materials/shell2.material"
+				position="0 0 0"
+			/>
+		
+			<simpleemitter
+				bone="_bone_overhead"
+				count="1"
+				life="1600"
+				particlelife="1000"
+				position="0 0 0"
+				material="/shared/effects/materials/shieldstarfish.material"
+			>	
+				<particle
+					minangle="0"
+					maxangle="180"
+					startcolor="0 0 0"
+					midcolor=".5 .255 0"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					maxanglespeed="30"
+					startsize="0"
+					midsize="125"
+					endsize="200"
+					midsizepos=".5"
+					lockup="true"
+					pitch="90"
+					anchor="0"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				bone="_bone_overhead"
+				count="1"
+				life="1000"
+				particlelife="1000"
+				position="0 0 0"
+				material="/shared/effects/materials/corona_06.material"				
+			>	
+				<particle
+					minangle="0"
+					maxangle="180"
+					startcolor="0 0 0"
+					midcolor=".5 .255 0"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					maxanglespeed="30"
+					startsize="0"
+					midsize="0"
+					endsize="75"
+					midsizepos=".5"
+					lockup="true"
+					pitch="90"
+					anchor=".5"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				bone="_bone_overhead"
+				count="1"
+				life="1000"
+				particlelife="1000"
+				position="0 0 0"
+				material="/shared/effects/materials/corona_06.material"
+			>	
+				<particle
+					minangle="0"
+					maxangle="180"
+					startcolor="0 0 0"
+					midcolor=".5 .255 0"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					maxanglespeed="30"
+					startsize="0"
+					midsize="75"
+					endsize="150"
+					midsizepos=".5"
+					lockup="true"
+					pitch="90"
+					anchor=".5"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				bone="_bone_overhead"
+				count="1"
+				life="1000"
+				particlelife="1000"
+				position="0 0 0"
+				material="/shared/effects/materials/corona_06.material"
+			>	
+				<particle
+					minangle="0"
+					maxangle="180"
+					startcolor="0 0 0"
+					midcolor=".25 .125 0"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					maxanglespeed="30"
+					startsize="0"
+					midsize="150"
+					endsize="50"
+					midsizepos=".5"
+					lockup="true"
+					pitch="90"
+					anchor=".5"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				bone="_bone_overhead"
+				count="1"
+				life="1000"
+				particlelife="1000"
+				position="0 0 0"
+				material="/shared/effects/materials/stomp_02.material"
+			>	
+				<particle
+					minangle="0"
+					maxangle="180"
+					startcolor="0 0 0"
+					midcolor=".5 .25 0"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					maxanglespeed="30"
+					startsize="0"
+					midsize="75"
+					endsize="150"
+					midsizepos=".5"
+					lockup="true"
+					pitch="90"
+					anchor=".5"
+				/>
+			</simpleemitter>
+			
+		</particlesystem>
+		
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		
+	</thread>
+</effect>

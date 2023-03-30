@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" deferred="true">
+	<definitions>
+		
+		<particlesystem name="system0" space="world" scale=".175">
+
+			<trackeremitter
+				delay="100"
+				count="1"
+				timenudge="1200"
+				spawnrate="1"
+				bone="_bone_centerofchest"
+				owner="source"
+				targetbone="Bip01 L Hand"
+				targetowner="target"
+				tracktype="lerp"
+				trackspeed="2"
+				drag="0"
+				particlelife="250"
+				gravity="100"
+				speed="3000"
+				acceleration="0"
+			>
+				<particle>
+
+					<simpleemitter
+						bone="Bip01 L Hand"
+						count="10"
+						depthbias="-55"
+						spawnrate="250"
+						minparticlelife="250"
+						maxparticlelife="750"
+						offsetsphere="50 50 50"
+						angle="10"
+						speed="50"
+						direction="0 1 0"
+						material="/shared/effects/materials/pyroclast_04.material"
+						inheritvelocity=".1"
+					>
+						<particle
+							startcolor=".1 1 .1"
+							endcolor=".1 1 .1"
+							startsize="250"
+							endsize="100"
+							startalpha="0"
+							midalpha=".25"
+							endalpha="0"
+							maxangle="360"
+							minendscale="2"
+							maxendscale="4"
+						/>
+					</simpleemitter>
+				
+					<simpleemitter
+						bone="Bip01 L Hand"
+						count="25"
+						depthbias="-55"
+						spawnrate="1000"
+						minparticlelife="500"
+						maxparticlelife="1000"
+						offsetsphere="200 200 0"
+						angle="10"
+						speed="30"
+						material="/shared/effects/materials/mysticenergy.material"
+						inheritvelocity=".1"
+					>
+						<particle
+							startcolor="0 .5 0"
+							endcolor="0"
+							startsize="50"
+							endsize="35"
+							maxangle="360"
+							minendscale="2"
+							maxendscale="4"
+						/>
+					</simpleemitter>
+					
+					<simpleemitter
+					delay="60"
+						bone="Bip01 L Hand"
+						count="10"
+						depthbias="-55"
+						spawnrate="1000"
+						minparticlelife="500"
+						maxparticlelife="1000"
+						offsetsphere="150 150 0"
+						angle="10"
+						speed="30"
+						material="/shared/effects/materials/femme_lightning_01.material"
+						inheritvelocity=".1"
+					>
+						<particle
+							startcolor="0 1 .5"
+							endcolor="0"
+							startsize="75"
+							endsize="65"
+							maxangle="360"
+							minendscale="2"
+							maxendscale="4"
+						/>
+					</simpleemitter>
+
+
+				</particle>
+			</trackeremitter>
+
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

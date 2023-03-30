@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pet
+	name="Pet_Engineer_Ability2"
+	
+	icon="icon.tga"
+	portrait="icon.tga"
+	model="effects/top/model.mdf"
+	skin=""
+	
+	passiveeffect="effects/base.effect"
+	spawneffect="effects/impact.effect"
+	respawneffect=""
+	selectsound=""
+	orderconfirmedsound=""
+	
+	preglobalscale="1.6"
+	modelscale="1.0"
+	effectscale="1.0"
+	boundsheight="64"
+	boundsradius="16"
+	selectionradius="40"
+	targetoffset="0 0 64"
+
+	movespeed="0"
+	ismobile="false"
+	canrotate="true"
+	turnrate="450"
+	turnsmoothing="0.1"
+	isselectable="true"
+	iscontrollable="false"
+
+	maxhealth="3"
+	healthregen="0"
+	maxmana="0"
+	manaregen="0"
+	
+	cancarryitems="false"
+	nothreat="true"
+
+	armor="0"
+	magicarmor="0"
+	immunity="GadgetImmunity"
+
+	canattack="false"
+	attacktype="ranged"
+	combattype="Hero"
+	
+	aggrorange="0"
+	sightrangeday="1000"
+	sightrangenight="1000"
+	
+	lifetime="5000"
+	
+	unittype="SteamTurret PseudoPet"
+>
+	<onspawn>
+		<applystate name="State_Pet_Engineer_Burstfire" target="this_entity" continuous="true" />
+	</onspawn>
+	
+	<ondamaged>
+		<changedamage b="1" op="min"/>
+	</ondamaged>
+
+	<onframe>
+	</onframe>	
+</pet>

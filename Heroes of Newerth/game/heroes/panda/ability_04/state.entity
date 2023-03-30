@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Panda_Ability4"
+
+	
+	
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+	
+	stunned="true"
+	revealed="true"
+	frozen="true"
+	
+	effecttype=""
+>
+
+</state>

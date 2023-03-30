@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Bubbles1"
+	
+	icon="icon.tga"
+	
+	anim="ability_1"
+	casttime="600"
+	castactiontime="100"
+	casteffect="effects/cast.effect"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_position"
+	casteffecttype="Magic"
+	targetscheme="enemy_units"
+	targetradius="225"
+	
+	manacost="150"
+	cooldowntime="15000"
+	
+	range="1800"
+	forcerange="1800"
+	allowoutofrangecast="true"
+	allowoutofboundscast="true"
+	novoiceresponse="true"
+>
+	<onimpact>
+		<spawnunit name="Gadget_Bubbles_Ability1" target="source_position" pushentity="true" duration="-1" />
+		<setproxy entity="this_entity" target="stack_entity" />
+		<applystate name="State_Bubbles_Ability1" target="this_owner_entity" proxy="stack_entity" duration="-1" />
+		<spawnprojectile name="Projectile_Bubbles_Ability1" source="source_entity" bind="stack_entity" bindturn="true" proxy="stack_entity" target="target_position"  />
+		<spawnaffector name="Affector_Bubbles_Ability1" target="stack_entity" />
+		<playanim name="noshell_idle" target="source_entity"/>
+		<starttimer duration="2117" />
+	</onimpact>
+		
+	<modifier key="Bubblesorb" modpriority="100"
+		ignorecooldown="true"
+		anim=""
+		icon="icon_b.tga"
+		casttime="0"
+		castactiontime="0"
+		manacost="0"
+		actiontype="no_target"
+		cooldowntime="0"
+	>
+		<onimpact>
+			<disjoint target="source_entity" />
+			<expirestate name="State_Bubbles_Ability1" target="this_owner_entity"/>
+			<playeffect effect="effects/portout.effect" target="source_position" source="source_position" occlude="true" />
+			<teleport source="this_owner_entity" target="proxy_position" interpolate="false" />
+			<playeffect effect="effects/portin.effect" target="source_position" source="source_position" occlude="true" />
+			<kill target="proxy_entity" source="" />
+			<resettimer />
+		</onimpact>
+	</modifier>
+</ability>

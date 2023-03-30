@@ -1,0 +1,70 @@
+Ability 1: Static Grip 
+Description: This is a melee range disable. The hero uses hig right hand weapon to touch the enemy and a static effect surrounds the target, keeping him stunned. The hero is able to attack and cast while mainting the stun, but if the hero moves away, the stun is removed from the enemy. He can keep it on for a certain number of max seconds. If the hero gets stunned, the effect ends. If anything forces the enemy hero to move, the effect ends. 
+Mana Cost: 100/110/120/130
+Cooldown: 16
+Max Stun Duration: 1.75/2.5/3.25/4
+Cast Range: Melee (125)
+Effects:  
+A electricity effect from the hands to around the target. You need a birth, idle and death. 
+
+
+
+
+
+Ability 2: Charge 
+Description: This ability has 2 different aspects to it, a passive part and an active part. The hero gains a “container of energy” with this ability. When he uses the active part, the bottom of his staff glows and shows electricity being drain into it from the ground. This fills his container at a specific rate. When the container is full, if he continues to cast this (this is an unbounded channeling effect, can’t move/attack, but can cast) it will overcharge and release electricity in nearby area around him, damaging enemy units. 
+The passive part of the ability causes a percentage of incoming damage to be absorbed by the energy in his container.  
+
+Overcharge AOE: 300
+Overcharge Damage per second: 20/40/60/80
+Overcharge Damage Type: Magical
+Mana Cost: 100
+Cooldown: 15
+Container Charge Max: 400
+Container Charge Rate: 20/30/40/50 charge per second
+Damage Reduction: 75% of incoming damage,1 damage per container energy point
+Anytime you are charging and you aren’t overloading, you are gaining ½ hp for each container energy point.
+The Container energy acts as Auxiliary Mana. Whenever your mana drops below 0, you use Aux energy for mana 1-1 ratio. If you get mana burned and you have 0 mana, it goes to your aux mana.
+
+Effects:  
+When the container is 50% full, the sharp point on his knee will glow, as shown in concept.
+When the container is 100% full, the sharp point on his shoulder will glow, as shown in concept.
+Need an area electric effect for when it overcharges
+Need an effect for when he is draining from ground
+
+
+
+
+
+Ability 3: Electric “ray” 
+Description: Upon activation, it drains mana per second. It has an activation cost and a drain per second cost. While activated, it will shoot out an electric ray towards the location he is facing. This will come out of his center. It will continue until it reaches either a max range or it hits a target. It doesn’t go through units. When the unit it is hitting dies, it continues behind him (think of a flashlight). When he runs out of mana and aux mana from container, it turns off.
+
+Activation Cost: 100
+Manacost per second: 15/20/25/30 
+Damage per second (smooth): 20/35/50/65
+Damage Type: Magical
+Max Range: 1500
+
+Effects:  
+Need a center effect to show electricity gathering 
+Need the electric ray effect
+An impact effect for the unit that is hit by the ray
+
+
+
+
+Ultimate: Lightning Storm (need new name)
+Description: When he casts this, his staff opens up, the removable objects at the tip draw out, with a static effect between the tips (like you see in the concept) they grow out towards how it looks in the concept over a period of 0.75 seconds, then hold in place for 0.75 seconds. After that, the pieces all burst out above him and outside in a circle.  These 3 main elements circle around while the center piece is above him, higher. They follow him as he moves for a certain duration and they fire down at random locations bolts of lightning.
+
+Damage per bolt: 200/250/300
+Damage type: Magical
+Rate: one every 0.2/0.15/0.10 seconds
+Random of Area: 500
+Damage area: 100
+Cooldown: 100 
+Manacost: 200/275/350
+Effects:  
+The effect described above for the relaunch on the staff
+The effect over the individual elements as they fly and their link to the center piece above them
+The bolts coming down
+The effect when it hits the ground/unit

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Bephelgor2_Pet_Ability1"
+
+	icon="icon.tga"
+	
+	statuseffecttooltip="State_Bephelgor_Ability2_Pet_Snare"
+	maxlevel="4"
+	actiontype="passive"
+>
+	<onattackimpact effectdescription="true">
+		<cantarget effecttype="Magic">
+			<applystate name="State_Bephelgor_Ability2_Pet_Snare" duration="2000" />
+		</cantarget>
+	</onattackimpact>
+</ability>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="" file="spine_proj.model" type="K2">
+	<spawnevent cmd="StartEffect projectile.effect"/>
+	<anim name="idle" clip="spine_proj.clip" fps="30" loop="true"/>
+</model>

@@ -1,0 +1,585 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: RT_DynamicLib - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\KING~1.SHA\LOCALS~1\Temp\RSP736.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "IDV_SPEEDTREERT_EXPORTS" /D "SPEEDTREERT_DYNAMIC_LIB" /D "SPEEDTREE_EVAL" /FR"Release VC 6.0/" /Fp"Release VC 6.0/RT_DynamicLib.pch" /YX /Fo"Release VC 6.0/" /Fd"Release VC 6.0/" /FD /c 
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\BillboardLeaf.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\Branch.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\BranchInfo.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\Camera.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\FileAccess.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\FrondEngine.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\IndexedGeometry.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LeafGeometry.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LeafInfo.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LeafLod.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LightingEngine.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\ProjectedShadow.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\SimpleBillboard.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\SpeedTreeRT.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\TreeEngine.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\TreeInfo.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\WindEngine.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\WindInfo.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LibSpline_Source\IdvSpline.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LibRandom_Source\ExtendedReal.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LibRandom_Source\IdvRandom.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LibRandom_Source\RobertDavies_Random.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LibVector_Source\Region.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LibVector_Source\RotTransform.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LibVector_Source\Transform.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LibVector_Source\Vec.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LibVector_Source\Vec3.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\KING~1.SHA\LOCALS~1\Temp\RSP736.tmp" 
+Creating temporary file "C:\DOCUME~1\KING~1.SHA\LOCALS~1\Temp\RSP737.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /incremental:no /pdb:"Release VC 6.0/SpeedTreeRT.pdb" /machine:I386 /out:"../../bin/VC 6.0/Release/SpeedTreeRT.dll" /implib:"../../lib/VC 6.0/Release/SpeedTreeRT.lib" 
+".\Release VC 6.0\BillboardLeaf.obj"
+".\Release VC 6.0\Branch.obj"
+".\Release VC 6.0\BranchInfo.obj"
+".\Release VC 6.0\Camera.obj"
+".\Release VC 6.0\FileAccess.obj"
+".\Release VC 6.0\FrondEngine.obj"
+".\Release VC 6.0\IndexedGeometry.obj"
+".\Release VC 6.0\LeafGeometry.obj"
+".\Release VC 6.0\LeafInfo.obj"
+".\Release VC 6.0\LeafLod.obj"
+".\Release VC 6.0\LightingEngine.obj"
+".\Release VC 6.0\ProjectedShadow.obj"
+".\Release VC 6.0\SimpleBillboard.obj"
+".\Release VC 6.0\SpeedTreeRT.obj"
+".\Release VC 6.0\TreeEngine.obj"
+".\Release VC 6.0\TreeInfo.obj"
+".\Release VC 6.0\WindEngine.obj"
+".\Release VC 6.0\WindInfo.obj"
+".\Release VC 6.0\IdvSpline.obj"
+".\Release VC 6.0\ExtendedReal.obj"
+".\Release VC 6.0\IdvRandom.obj"
+".\Release VC 6.0\RobertDavies_Random.obj"
+".\Release VC 6.0\Region.obj"
+".\Release VC 6.0\RotTransform.obj"
+".\Release VC 6.0\Transform.obj"
+".\Release VC 6.0\Vec.obj"
+".\Release VC 6.0\Vec3.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\KING~1.SHA\LOCALS~1\Temp\RSP737.tmp"
+<h3>Output Window</h3>
+Compiling...
+BillboardLeaf.cpp
+Branch.cpp
+BranchInfo.cpp
+Camera.cpp
+FileAccess.cpp
+FrondEngine.cpp
+IndexedGeometry.cpp
+LeafGeometry.cpp
+LeafInfo.cpp
+LeafLod.cpp
+LightingEngine.cpp
+ProjectedShadow.cpp
+SimpleBillboard.cpp
+SpeedTreeRT.cpp
+TreeEngine.cpp
+TreeInfo.cpp
+WindEngine.cpp
+WindInfo.cpp
+IdvSpline.cpp
+ExtendedReal.cpp
+IdvRandom.cpp
+RobertDavies_Random.cpp
+Region.cpp
+RotTransform.cpp
+Transform.cpp
+Vec.cpp
+Vec3.cpp
+Linking...
+   Creating library ../../lib/VC 6.0/Release/SpeedTreeRT.lib and object ../../lib/VC 6.0/Release/SpeedTreeRT.exp
+Creating temporary file "C:\DOCUME~1\KING~1.SHA\LOCALS~1\Temp\RSP73B.tmp" with contents
+[
+/nologo /o"Release VC 6.0/RT_DynamicLib.bsc" 
+".\Release VC 6.0\BillboardLeaf.sbr"
+".\Release VC 6.0\Branch.sbr"
+".\Release VC 6.0\BranchInfo.sbr"
+".\Release VC 6.0\Camera.sbr"
+".\Release VC 6.0\FileAccess.sbr"
+".\Release VC 6.0\FrondEngine.sbr"
+".\Release VC 6.0\IndexedGeometry.sbr"
+".\Release VC 6.0\LeafGeometry.sbr"
+".\Release VC 6.0\LeafInfo.sbr"
+".\Release VC 6.0\LeafLod.sbr"
+".\Release VC 6.0\LightingEngine.sbr"
+".\Release VC 6.0\ProjectedShadow.sbr"
+".\Release VC 6.0\SimpleBillboard.sbr"
+".\Release VC 6.0\SpeedTreeRT.sbr"
+".\Release VC 6.0\TreeEngine.sbr"
+".\Release VC 6.0\TreeInfo.sbr"
+".\Release VC 6.0\WindEngine.sbr"
+".\Release VC 6.0\WindInfo.sbr"
+".\Release VC 6.0\IdvSpline.sbr"
+".\Release VC 6.0\ExtendedReal.sbr"
+".\Release VC 6.0\IdvRandom.sbr"
+".\Release VC 6.0\RobertDavies_Random.sbr"
+".\Release VC 6.0\Region.sbr"
+".\Release VC 6.0\RotTransform.sbr"
+".\Release VC 6.0\Transform.sbr"
+".\Release VC 6.0\Vec.sbr"
+".\Release VC 6.0\Vec3.sbr"]
+Creating command line "bscmake.exe @C:\DOCUME~1\KING~1.SHA\LOCALS~1\Temp\RSP73B.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+Creating temporary file "C:\DOCUME~1\KING~1.SHA\LOCALS~1\Temp\RSP73C.bat" with contents
+[
+@echo off
+copy "..\SourceCode\SpeedTreeRT.h" ..\..\include
+]
+Creating command line "C:\DOCUME~1\KING~1.SHA\LOCALS~1\Temp\RSP73C.bat"
+Copying header file
+        1 file(s) copied.
+
+
+
+<h3>Results</h3>
+SpeedTreeRT.dll - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: RT_DynamicLib - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\KING~1.SHA\LOCALS~1\Temp\RSP73D.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "IDV_SPEEDTREERT_EXPORTS" /D "SPEEDTREERT_DYNAMIC_LIB" /D "SPEEDTREE_EVAL" /FAs /Fa"Debug VC 6.0/" /FR"Debug VC 6.0/" /Fp"Debug VC 6.0/RT_DynamicLib.pch" /YX /Fo"Debug VC 6.0/" /Fd"Debug VC 6.0/" /FD /GZ /c 
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\BillboardLeaf.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\Branch.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\BranchInfo.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\Camera.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\FileAccess.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\FrondEngine.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\IndexedGeometry.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LeafGeometry.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LeafInfo.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LeafLod.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LightingEngine.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\ProjectedShadow.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\SimpleBillboard.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\SpeedTreeRT.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\TreeEngine.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\TreeInfo.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\WindEngine.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\WindInfo.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LibSpline_Source\IdvSpline.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LibRandom_Source\ExtendedReal.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LibRandom_Source\IdvRandom.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LibRandom_Source\RobertDavies_Random.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LibVector_Source\Region.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LibVector_Source\RotTransform.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LibVector_Source\Transform.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LibVector_Source\Vec.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LibVector_Source\Vec3.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\KING~1.SHA\LOCALS~1\Temp\RSP73D.tmp" 
+Creating temporary file "C:\DOCUME~1\KING~1.SHA\LOCALS~1\Temp\RSP73E.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /incremental:yes /pdb:"Debug VC 6.0/SpeedTreeRT_d.pdb" /map:"Debug VC 6.0/SpeedTreeRT_d.map" /debug /machine:I386 /out:"../../bin/VC 6.0/Debug/SpeedTreeRT_d.dll" /implib:"../../lib/VC 6.0/Debug/SpeedTreeRT_d.lib" /pdbtype:sept 
+".\Debug VC 6.0\BillboardLeaf.obj"
+".\Debug VC 6.0\Branch.obj"
+".\Debug VC 6.0\BranchInfo.obj"
+".\Debug VC 6.0\Camera.obj"
+".\Debug VC 6.0\FileAccess.obj"
+".\Debug VC 6.0\FrondEngine.obj"
+".\Debug VC 6.0\IndexedGeometry.obj"
+".\Debug VC 6.0\LeafGeometry.obj"
+".\Debug VC 6.0\LeafInfo.obj"
+".\Debug VC 6.0\LeafLod.obj"
+".\Debug VC 6.0\LightingEngine.obj"
+".\Debug VC 6.0\ProjectedShadow.obj"
+".\Debug VC 6.0\SimpleBillboard.obj"
+".\Debug VC 6.0\SpeedTreeRT.obj"
+".\Debug VC 6.0\TreeEngine.obj"
+".\Debug VC 6.0\TreeInfo.obj"
+".\Debug VC 6.0\WindEngine.obj"
+".\Debug VC 6.0\WindInfo.obj"
+".\Debug VC 6.0\IdvSpline.obj"
+".\Debug VC 6.0\ExtendedReal.obj"
+".\Debug VC 6.0\IdvRandom.obj"
+".\Debug VC 6.0\RobertDavies_Random.obj"
+".\Debug VC 6.0\Region.obj"
+".\Debug VC 6.0\RotTransform.obj"
+".\Debug VC 6.0\Transform.obj"
+".\Debug VC 6.0\Vec.obj"
+".\Debug VC 6.0\Vec3.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\KING~1.SHA\LOCALS~1\Temp\RSP73E.tmp"
+<h3>Output Window</h3>
+Compiling...
+BillboardLeaf.cpp
+Branch.cpp
+BranchInfo.cpp
+Camera.cpp
+FileAccess.cpp
+FrondEngine.cpp
+IndexedGeometry.cpp
+LeafGeometry.cpp
+LeafInfo.cpp
+LeafLod.cpp
+LightingEngine.cpp
+ProjectedShadow.cpp
+SimpleBillboard.cpp
+SpeedTreeRT.cpp
+TreeEngine.cpp
+TreeInfo.cpp
+WindEngine.cpp
+WindInfo.cpp
+IdvSpline.cpp
+ExtendedReal.cpp
+IdvRandom.cpp
+RobertDavies_Random.cpp
+Region.cpp
+RotTransform.cpp
+Transform.cpp
+Vec.cpp
+Vec3.cpp
+Linking...
+   Creating library ../../lib/VC 6.0/Debug/SpeedTreeRT_d.lib and object ../../lib/VC 6.0/Debug/SpeedTreeRT_d.exp
+Creating temporary file "C:\DOCUME~1\KING~1.SHA\LOCALS~1\Temp\RSP742.tmp" with contents
+[
+/nologo /o"Debug VC 6.0/RT_DynamicLib.bsc" 
+".\Debug VC 6.0\BillboardLeaf.sbr"
+".\Debug VC 6.0\Branch.sbr"
+".\Debug VC 6.0\BranchInfo.sbr"
+".\Debug VC 6.0\Camera.sbr"
+".\Debug VC 6.0\FileAccess.sbr"
+".\Debug VC 6.0\FrondEngine.sbr"
+".\Debug VC 6.0\IndexedGeometry.sbr"
+".\Debug VC 6.0\LeafGeometry.sbr"
+".\Debug VC 6.0\LeafInfo.sbr"
+".\Debug VC 6.0\LeafLod.sbr"
+".\Debug VC 6.0\LightingEngine.sbr"
+".\Debug VC 6.0\ProjectedShadow.sbr"
+".\Debug VC 6.0\SimpleBillboard.sbr"
+".\Debug VC 6.0\SpeedTreeRT.sbr"
+".\Debug VC 6.0\TreeEngine.sbr"
+".\Debug VC 6.0\TreeInfo.sbr"
+".\Debug VC 6.0\WindEngine.sbr"
+".\Debug VC 6.0\WindInfo.sbr"
+".\Debug VC 6.0\IdvSpline.sbr"
+".\Debug VC 6.0\ExtendedReal.sbr"
+".\Debug VC 6.0\IdvRandom.sbr"
+".\Debug VC 6.0\RobertDavies_Random.sbr"
+".\Debug VC 6.0\Region.sbr"
+".\Debug VC 6.0\RotTransform.sbr"
+".\Debug VC 6.0\Transform.sbr"
+".\Debug VC 6.0\Vec.sbr"
+".\Debug VC 6.0\Vec3.sbr"]
+Creating command line "bscmake.exe @C:\DOCUME~1\KING~1.SHA\LOCALS~1\Temp\RSP742.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+Creating temporary file "C:\DOCUME~1\KING~1.SHA\LOCALS~1\Temp\RSP743.bat" with contents
+[
+@echo off
+copy "..\SourceCode\SpeedTreeRT.h" ..\..\include
+]
+Creating command line "C:\DOCUME~1\KING~1.SHA\LOCALS~1\Temp\RSP743.bat"
+Copying header file
+        1 file(s) copied.
+
+
+
+<h3>Results</h3>
+SpeedTreeRT_d.dll - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: RT_StaticLib - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\KING~1.SHA\LOCALS~1\Temp\RSP744.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /FR"Release VC 6.0/" /Fp"Release VC 6.0/RT_StaticLib.pch" /YX /Fo"Release VC 6.0/" /Fd"Release VC 6.0/" /FD /c 
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\BillboardLeaf.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\Branch.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\BranchInfo.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\Camera.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\FileAccess.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\FrondEngine.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\IndexedGeometry.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LeafGeometry.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LeafInfo.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LeafLod.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LightingEngine.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\ProjectedShadow.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\SimpleBillboard.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\SpeedTreeRT.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\TreeEngine.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\TreeInfo.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\WindEngine.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\WindInfo.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LibSpline_Source\IdvSpline.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LibRandom_Source\ExtendedReal.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LibRandom_Source\IdvRandom.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LibRandom_Source\RobertDavies_Random.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LibVector_Source\Region.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LibVector_Source\RotTransform.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LibVector_Source\Transform.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LibVector_Source\Vec.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LibVector_Source\Vec3.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\KING~1.SHA\LOCALS~1\Temp\RSP744.tmp" 
+Creating temporary file "C:\DOCUME~1\KING~1.SHA\LOCALS~1\Temp\RSP745.tmp" with contents
+[
+/nologo /out:"../../lib/VC 6.0/Release/SpeedTreeRT_Static.lib" 
+".\Release VC 6.0\BillboardLeaf.obj"
+".\Release VC 6.0\Branch.obj"
+".\Release VC 6.0\BranchInfo.obj"
+".\Release VC 6.0\Camera.obj"
+".\Release VC 6.0\FileAccess.obj"
+".\Release VC 6.0\FrondEngine.obj"
+".\Release VC 6.0\IndexedGeometry.obj"
+".\Release VC 6.0\LeafGeometry.obj"
+".\Release VC 6.0\LeafInfo.obj"
+".\Release VC 6.0\LeafLod.obj"
+".\Release VC 6.0\LightingEngine.obj"
+".\Release VC 6.0\ProjectedShadow.obj"
+".\Release VC 6.0\SimpleBillboard.obj"
+".\Release VC 6.0\SpeedTreeRT.obj"
+".\Release VC 6.0\TreeEngine.obj"
+".\Release VC 6.0\TreeInfo.obj"
+".\Release VC 6.0\WindEngine.obj"
+".\Release VC 6.0\WindInfo.obj"
+".\Release VC 6.0\IdvSpline.obj"
+".\Release VC 6.0\ExtendedReal.obj"
+".\Release VC 6.0\IdvRandom.obj"
+".\Release VC 6.0\RobertDavies_Random.obj"
+".\Release VC 6.0\Region.obj"
+".\Release VC 6.0\RotTransform.obj"
+".\Release VC 6.0\Transform.obj"
+".\Release VC 6.0\Vec.obj"
+".\Release VC 6.0\Vec3.obj"
+]
+Creating command line "link.exe -lib @C:\DOCUME~1\KING~1.SHA\LOCALS~1\Temp\RSP745.tmp"
+<h3>Output Window</h3>
+Compiling...
+BillboardLeaf.cpp
+Branch.cpp
+BranchInfo.cpp
+Camera.cpp
+FileAccess.cpp
+FrondEngine.cpp
+IndexedGeometry.cpp
+LeafGeometry.cpp
+LeafInfo.cpp
+LeafLod.cpp
+LightingEngine.cpp
+ProjectedShadow.cpp
+SimpleBillboard.cpp
+SpeedTreeRT.cpp
+TreeEngine.cpp
+TreeInfo.cpp
+WindEngine.cpp
+WindInfo.cpp
+IdvSpline.cpp
+ExtendedReal.cpp
+IdvRandom.cpp
+RobertDavies_Random.cpp
+Region.cpp
+RotTransform.cpp
+Transform.cpp
+Vec.cpp
+Vec3.cpp
+Creating library...
+Creating temporary file "C:\DOCUME~1\KING~1.SHA\LOCALS~1\Temp\RSP74D.tmp" with contents
+[
+/nologo /o"Release VC 6.0/RT_StaticLib.bsc" 
+".\Release VC 6.0\BillboardLeaf.sbr"
+".\Release VC 6.0\Branch.sbr"
+".\Release VC 6.0\BranchInfo.sbr"
+".\Release VC 6.0\Camera.sbr"
+".\Release VC 6.0\FileAccess.sbr"
+".\Release VC 6.0\FrondEngine.sbr"
+".\Release VC 6.0\IndexedGeometry.sbr"
+".\Release VC 6.0\LeafGeometry.sbr"
+".\Release VC 6.0\LeafInfo.sbr"
+".\Release VC 6.0\LeafLod.sbr"
+".\Release VC 6.0\LightingEngine.sbr"
+".\Release VC 6.0\ProjectedShadow.sbr"
+".\Release VC 6.0\SimpleBillboard.sbr"
+".\Release VC 6.0\SpeedTreeRT.sbr"
+".\Release VC 6.0\TreeEngine.sbr"
+".\Release VC 6.0\TreeInfo.sbr"
+".\Release VC 6.0\WindEngine.sbr"
+".\Release VC 6.0\WindInfo.sbr"
+".\Release VC 6.0\IdvSpline.sbr"
+".\Release VC 6.0\ExtendedReal.sbr"
+".\Release VC 6.0\IdvRandom.sbr"
+".\Release VC 6.0\RobertDavies_Random.sbr"
+".\Release VC 6.0\Region.sbr"
+".\Release VC 6.0\RotTransform.sbr"
+".\Release VC 6.0\Transform.sbr"
+".\Release VC 6.0\Vec.sbr"
+".\Release VC 6.0\Vec3.sbr"]
+Creating command line "bscmake.exe @C:\DOCUME~1\KING~1.SHA\LOCALS~1\Temp\RSP74D.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+Creating temporary file "C:\DOCUME~1\KING~1.SHA\LOCALS~1\Temp\RSP74E.bat" with contents
+[
+@echo off
+copy "..\SourceCode\SpeedTreeRT.h" ..\..\include
+]
+Creating command line "C:\DOCUME~1\KING~1.SHA\LOCALS~1\Temp\RSP74E.bat"
+Copying header file
+        1 file(s) copied.
+
+
+
+<h3>Results</h3>
+SpeedTreeRT_Static.lib - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: RT_StaticLib - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\KING~1.SHA\LOCALS~1\Temp\RSP74F.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /Zi /Od /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /FR"Debug VC 6.0/" /Fp"Debug VC 6.0/RT_StaticLib.pch" /YX /Fo"Debug VC 6.0/" /Fd"Debug VC 6.0/" /FD /GZ /c 
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\BillboardLeaf.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\Branch.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\BranchInfo.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\Camera.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\FileAccess.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\FrondEngine.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\IndexedGeometry.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LeafGeometry.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LeafInfo.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LeafLod.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LightingEngine.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\ProjectedShadow.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\SimpleBillboard.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\SpeedTreeRT.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\TreeEngine.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\TreeInfo.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\WindEngine.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\WindInfo.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LibSpline_Source\IdvSpline.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LibRandom_Source\ExtendedReal.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LibRandom_Source\IdvRandom.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LibRandom_Source\RobertDavies_Random.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LibVector_Source\Region.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LibVector_Source\RotTransform.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LibVector_Source\Transform.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LibVector_Source\Vec.cpp"
+"C:\__WORK__\SpeedTree\RT SDK\SpeedTreeRT SDK 1.7.0\source\SourceCode\LibVector_Source\Vec3.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\KING~1.SHA\LOCALS~1\Temp\RSP74F.tmp" 
+Creating temporary file "C:\DOCUME~1\KING~1.SHA\LOCALS~1\Temp\RSP750.tmp" with contents
+[
+/nologo /out:"../../lib/VC 6.0/Debug/SpeedTreeRT_Static_d.lib" 
+".\Debug VC 6.0\BillboardLeaf.obj"
+".\Debug VC 6.0\Branch.obj"
+".\Debug VC 6.0\BranchInfo.obj"
+".\Debug VC 6.0\Camera.obj"
+".\Debug VC 6.0\FileAccess.obj"
+".\Debug VC 6.0\FrondEngine.obj"
+".\Debug VC 6.0\IndexedGeometry.obj"
+".\Debug VC 6.0\LeafGeometry.obj"
+".\Debug VC 6.0\LeafInfo.obj"
+".\Debug VC 6.0\LeafLod.obj"
+".\Debug VC 6.0\LightingEngine.obj"
+".\Debug VC 6.0\ProjectedShadow.obj"
+".\Debug VC 6.0\SimpleBillboard.obj"
+".\Debug VC 6.0\SpeedTreeRT.obj"
+".\Debug VC 6.0\TreeEngine.obj"
+".\Debug VC 6.0\TreeInfo.obj"
+".\Debug VC 6.0\WindEngine.obj"
+".\Debug VC 6.0\WindInfo.obj"
+".\Debug VC 6.0\IdvSpline.obj"
+".\Debug VC 6.0\ExtendedReal.obj"
+".\Debug VC 6.0\IdvRandom.obj"
+".\Debug VC 6.0\RobertDavies_Random.obj"
+".\Debug VC 6.0\Region.obj"
+".\Debug VC 6.0\RotTransform.obj"
+".\Debug VC 6.0\Transform.obj"
+".\Debug VC 6.0\Vec.obj"
+".\Debug VC 6.0\Vec3.obj"
+]
+Creating command line "link.exe -lib @C:\DOCUME~1\KING~1.SHA\LOCALS~1\Temp\RSP750.tmp"
+<h3>Output Window</h3>
+Compiling...
+BillboardLeaf.cpp
+Branch.cpp
+BranchInfo.cpp
+Camera.cpp
+FileAccess.cpp
+FrondEngine.cpp
+IndexedGeometry.cpp
+LeafGeometry.cpp
+LeafInfo.cpp
+LeafLod.cpp
+LightingEngine.cpp
+ProjectedShadow.cpp
+SimpleBillboard.cpp
+SpeedTreeRT.cpp
+TreeEngine.cpp
+TreeInfo.cpp
+WindEngine.cpp
+WindInfo.cpp
+IdvSpline.cpp
+ExtendedReal.cpp
+IdvRandom.cpp
+RobertDavies_Random.cpp
+Region.cpp
+RotTransform.cpp
+Transform.cpp
+Vec.cpp
+Vec3.cpp
+Creating library...
+Creating temporary file "C:\DOCUME~1\KING~1.SHA\LOCALS~1\Temp\RSP751.tmp" with contents
+[
+/nologo /o"Debug VC 6.0/RT_StaticLib.bsc" 
+".\Debug VC 6.0\BillboardLeaf.sbr"
+".\Debug VC 6.0\Branch.sbr"
+".\Debug VC 6.0\BranchInfo.sbr"
+".\Debug VC 6.0\Camera.sbr"
+".\Debug VC 6.0\FileAccess.sbr"
+".\Debug VC 6.0\FrondEngine.sbr"
+".\Debug VC 6.0\IndexedGeometry.sbr"
+".\Debug VC 6.0\LeafGeometry.sbr"
+".\Debug VC 6.0\LeafInfo.sbr"
+".\Debug VC 6.0\LeafLod.sbr"
+".\Debug VC 6.0\LightingEngine.sbr"
+".\Debug VC 6.0\ProjectedShadow.sbr"
+".\Debug VC 6.0\SimpleBillboard.sbr"
+".\Debug VC 6.0\SpeedTreeRT.sbr"
+".\Debug VC 6.0\TreeEngine.sbr"
+".\Debug VC 6.0\TreeInfo.sbr"
+".\Debug VC 6.0\WindEngine.sbr"
+".\Debug VC 6.0\WindInfo.sbr"
+".\Debug VC 6.0\IdvSpline.sbr"
+".\Debug VC 6.0\ExtendedReal.sbr"
+".\Debug VC 6.0\IdvRandom.sbr"
+".\Debug VC 6.0\RobertDavies_Random.sbr"
+".\Debug VC 6.0\Region.sbr"
+".\Debug VC 6.0\RotTransform.sbr"
+".\Debug VC 6.0\Transform.sbr"
+".\Debug VC 6.0\Vec.sbr"
+".\Debug VC 6.0\Vec3.sbr"]
+Creating command line "bscmake.exe @C:\DOCUME~1\KING~1.SHA\LOCALS~1\Temp\RSP751.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+Creating temporary file "C:\DOCUME~1\KING~1.SHA\LOCALS~1\Temp\RSP752.bat" with contents
+[
+@echo off
+copy "..\SourceCode\SpeedTreeRT.h" ..\..\include
+]
+Creating command line "C:\DOCUME~1\KING~1.SHA\LOCALS~1\Temp\RSP752.bat"
+Copying header file
+        1 file(s) copied.
+
+
+
+<h3>Results</h3>
+SpeedTreeRT_Static_d.lib - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

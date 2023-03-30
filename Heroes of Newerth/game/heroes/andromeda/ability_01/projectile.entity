@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Andromeda_Ability1"
+
+	speed="1250"
+	gravity="0"
+
+	modelscale="1"
+	model="effects/orb/orb.mdf"
+	traileffect="effects/trail.effect"
+	effectscale="1.0"
+	impacteffect="effects/ability_01/projectile/effects/ability_01_impact.effect"
+>
+</projectile>

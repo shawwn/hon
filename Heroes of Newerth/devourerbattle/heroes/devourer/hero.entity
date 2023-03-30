@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_Devourer"
+
+	team="Hellbourne"
+	icon="icon.tga"
+	portrait="icon.tga"
+	model="model.mdf"
+	skin=""
+	
+	passiveeffect="effects/body.effect"
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="sounds/voice/select_%.wav"
+	selectedflavorsound="sounds/voice/select_flavour_%.wav"
+	confirmmovesound="sounds/voice/move_%.wav"
+	confirmattacksound="sounds/voice/attack_%.wav"
+	nomanasound="sounds/voice/no_mana.wav"
+	cooldownsound="sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="sounds/voice/taunt_prior.wav"
+	tauntkillsound="sounds/voice/taunt_after.wav"
+	
+	preglobalscale="2.34"
+	modelscale="1.0"
+	effectscale="1.0"
+	boundsheight="112"
+	boundsradius="24"
+	selectionradius="54"
+	targetoffset="0 0 92"
+
+	movespeed="285" 
+	turnrate="450"
+	turnsmoothing="0.05"
+
+	maxhealth="150"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="1.0"
+	magicarmor="5.5"
+
+	inventory0="Ability_Devourer1"
+	inventory1="Ability_Devourer2"
+	inventory2="Ability_Devourer3"
+	inventory3="Ability_Devourer4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8="Ability_Taunt"
+
+	attackduration="1000"
+	attackactiontime="500"
+	attackcooldown="1700"
+
+	attackdamagemin="27"
+	attackdamagemax="33"
+
+	attacknumanims="4"
+	attackoffset="0 50 100"
+	attackprojectile=""
+	attackrange="128"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="effects/impact.effect"
+	attacktype="melee"
+	combattype="Hero"
+
+	aggrorange="600"
+	sightrangeday="1800"
+	sightrangenight="1800"
+	wanderrange="250"
+	
+	corpsetime="5000"
+	corpsefadetime="5000"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+
+	primaryattribute="Strength"
+	strength="25"
+	strengthperlevel="3.2"
+	agility="14"
+	agilityperlevel="1.5"
+	intelligence="14"
+	intelligenceperlevel="1.5"
+	
+	previewmodel="preview.mdf"
+	previewpos="0 0 -60"
+	previewangles="0 0 0"
+	previewscale="1.9"
+>
+	<recommendeditem name="Item_ManaPotion" />
+	<recommendeditem name="Item_MinorTotem" />
+	<recommendeditem name="Item_RunesOfTheBlight" />
+	<recommendeditem name="Item_HealthPotion" />
+	<recommendeditem name="Item_HomecomingStone" />
+	
+	<recommendeditem name="Item_Strength5" />
+	<recommendeditem name="Item_Bottle" />
+	<recommendeditem name="Item_EnhancedMarchers" />
+	<recommendeditem name="Item_PortalKey" />
+	<recommendeditem name="Item_BarrierIdol" />
+	<recommendeditem name="Item_Intelligence7" />
+	<recommendeditem name="Item_BehemothsHeart" />
+	<recommendeditem name="Item_Damage10" />
+	
+	<ondeath>
+		<condition test="this_proxy_entity eq 0">
+			<compare a="source_team" b="1" op="eq">
+				<pushentitybyname name="Legion_Main" />
+				<setproxy entity="this_entity" target="stack_entity" />
+				<printdebuginfo />
+			</compare>
+		</condition>
+			<else>
+				
+			</else>
+	</ondeath>
+	
+	<modifier key="Clown" modpriority="1"
+		altavatar="true"
+		
+		icon="alt/icon.tga"
+		portrait="alt/icon.tga"
+		model="alt/model.mdf"
+		
+		previewmodel="alt/preview.mdf"
+		previewpos="0 0 -60"
+		previewangles="0 0 0"
+		previewscale="1.9"
+	>
+	</modifier>
+</hero>

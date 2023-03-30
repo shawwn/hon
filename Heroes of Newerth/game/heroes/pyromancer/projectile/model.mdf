@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="lava_bomb_projectile.max" file="model.model" type="K2" >
+
+	<spawnevent cmd="StartEffect femme_projectile.effect"/>
+
+	<anim name="idle" clip="default_1.clip" fps="60" loop="true"/>
+	
+
+	
+</model>

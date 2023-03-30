@@ -1,0 +1,58 @@
+God of Wind
+============
+
+Good Intelligence Melee
+
+Ability 1: Wind Leap
+=====================
+Description: Hero jumps towards target location.  Jump has a significant verticle direction.  As he passes units below him, he will push them in the direction opposite where he is leaping. He will damage units that are pushed back as well.
+
+Note: The detection aoe defines how much area under him is considered when looking for units to knockback. The units take damage smoothly over the period of the knockback (1 second) .
+Damage Type: Magical
+Detection AOE: 175/200/225/250
+Casting Range: 500/600/700/800
+Mana Cost: 140
+Cooldown: 30
+Damage: 50/100/150/200
+Knockback: 100/150/200/250 (pushed over 1 second period)
+
+
+Ability 2: Cyclone Summon
+==========================
+Description: This ability has a passive aspect to it as was as a castable. First the passive. When you kill the unit with an attack, a small cyclone spawns at dead unit. This small cyclone is uncontrollable and moves randomly within a certain range of the hero.  The cyclone deals damage per second to units within a certain range of it. The active portion follows. When you click the ability it pulls all your cyclones to you. When they go in you, they heal you.
+Cyclone Duration: 15/30/45/60
+Max Cyclones: 10, oldest one gets removed first
+Cyclone AOE:  175
+Damage per second (smooth interval): 15/30/45/60
+Damage Type: Magical
+Max Movement Range: 600
+Cooldown: 15
+Mana Cost: 50
+Healed Per Cyclone: 50 HP/25 MP
+
+
+Ability 3: Wind Shield
+=======================
+Description: This is an Active spell. When you cast it, a wind effect moves around the hero’s body. This is wind effect gives him temporary protection. It gives him evasion from attacks, with a chance to reflect a ranged attack back at the target. There is a chance that a ranged projectile will circle around the hero and return back to its source, damaging him.
+Chance to evade melee: 20%
+Chance to evade ranged: 20/25/30/40%
+Chance to reflect ranged: 10/15/20/20%
+Cooldown:45/40/35/30
+Manacost: 120/110/100/90
+Duration: 10/15/20/25
+
+
+
+Ultimate: Wind Control
+========================
+Description: This is a new type of casting. You target a location and then drag the mouse to the desitination location. This will define origin and direction. You then create a wind that starts from the origin and goes x distance with r radius in the direction defined. This wind will cause some things (projectile speed, movement speed, attack speed) to be increased or slowed depending on if the direction of the wind opposes the person inside it. This effects allies and enemies alike. The only exception is that it always works in favor of the casting hero. In this case the casting hero is  the God of Wind. However keep in mind that the ability needs to be coded to recognize the “casting hero”.
+
+Cast Animation Time (Point): 0.3
+Projectile Speed Reduction: 30/40/50%
+Attack Speed Reduction: 30/40/50%
+Movement Speed Reduction: 30/40/50%
+AOE: 400
+Cast Range: 600/900/1200
+Effect Range: 550
+Manacost: 150/200/250
+Cooldown: 120 

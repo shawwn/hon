@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="1" deferred="1">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="1.5">
+
+			<simpleemitter
+				life="350"
+				bone="_bone_centerofchest"
+				minparticlelife="1500"
+				maxparticlelife="1800"
+				spawnrate="35"
+				minspeed="150"
+				maxspeed="180"
+				gravity="20"
+				minangle="0"
+				maxangle="10"
+				material="/shared/effects/materials/blood1.material"
+				offsetsphere="0 0 0"
+				position="0 0 0"
+				direction="0 1 0"
+				directionalspace="local"
+			>
+				<particle
+					minanglespeed="-100"
+					maxanglespeed="100"
+					minangle="-60"
+					maxangle="60"
+					color=".4 0 0"
+					startsize="30"
+					endsize="80"
+					startalpha="1"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				life="350"
+				bone="_bone_centerofchest"
+				minparticlelife="1500"
+				maxparticlelife="1800"
+				spawnrate="35"
+				minspeed="150"
+				maxspeed="180"
+				gravity="20"
+				minangle="0"
+				maxangle="10"
+				material="/shared/effects/materials/blood1.material"
+				offsetsphere="0 0 0"
+				position="0 0 0"
+				direction="0 -1 0"
+				directionalspace="local"
+			>
+				<particle
+					minanglespeed="-100"
+					maxanglespeed="100"
+					minangle="-60"
+					maxangle="60"
+					color=".4 0 0"
+					startsize="30"
+					endsize="80"
+					startalpha="1"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				delay="930"
+				particlelife="5200"
+				spawnrate="5"
+				speed="0"
+				gravity="0"
+				direction="0 0 0"
+				particledirectionalspace="local"
+				offsetsphere="100 100 0"
+				position="0 0 0"
+			>
+				<particle> 
+					<groundsprite
+						life="3000"
+						material="/shared/effects/materials/blood_ground.material"
+						minyaw="-360"
+						maxyaw="360"
+						minsize="25"
+						maxsize="45"
+						position="0 0 0"
+						color=".25 0 0"
+						midcolorpos=".1"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".1"
+					/>
+				</particle>
+			</simpleemitter>
+			
+			<model
+				delay="200"
+				bone="_bone_centerofchest"
+				expirelife="500"
+				position="0 0 0"
+				scale="1.85"
+				model="model_charge3/model.mdf"
+				anim="idle_slow"
+				color="1.65 1 1"
+				startalpha="1"
+				endalpha="0"
+				yaw="180"
+				pitch="0"
+				roll="90"
+				directionalspace="local"
+			>
+			</model>
+			
+			<model
+				bone="_bone_centerofchest"
+				life="250"
+				position="0 0 0"
+				scale="1.85"
+				model="model_charge3/model.mdf"
+				anim="idle_slow"
+				color="5 .5 .5"
+				startalpha="1"
+				endalpha="0"
+				yawspeed="1000"
+				pitch="0"
+				roll="90"
+				directionalspace="local"
+			>
+			</model>
+
+		</particlesystem>
+
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1"/>
+		<waitfordeath instance="instance0" />
+	
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+

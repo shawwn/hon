@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<material>
+	<parameters>
+		<float name="fScaleU" value="2.0" />
+		<float name="fScaleV" value="2.0" />
+	</parameters>
+	<phase
+		name="color"
+		vs="post_up2"
+		ps="post"
+		srcblend="BLEND_ONE"
+		dstblend="BLEND_ZERO"
+		cull="CULL_NONE"
+		translucent="false"
+		depthread="false"
+		depthwrite="false"
+	>
+		<sampler
+			name="image"
+			texture="!post_color"
+			repeat_u="false"
+			repeat_v="false"
+			mipmaps="false"
+			filtering="true"
+			border="false"
+		/>
+	</phase>
+</material>

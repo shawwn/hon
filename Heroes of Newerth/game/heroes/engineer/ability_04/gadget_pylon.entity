@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Engineer_Ability4_Pylon"
+
+	icon="icon.tga"
+	portrait=""
+	model="zapper/shield/outersingle.mdf"
+	skin=""
+	
+	passiveeffect="zapper/pylon.effect"
+	spawneffect=""
+	respawneffect=""
+	selectsound=""
+	orderconfirmedsound=""
+	
+
+	preglobalscale="1.6"
+	modelscale="1.0"
+	effectscale="1.0"
+	boundsheight="64"
+	boundsradius="16"
+	selectionradius="48"
+	targetoffset="0 0 64"
+
+	unitwalking="true"
+	ismobile="false"
+	isselectable="false"
+	canrotate="false"
+	drawonmap="false"
+
+	invulnerable="true"
+
+	armor="0"
+	magicarmor="0"
+	immunity="GadgetImmunity"
+
+	canattack="false"
+	
+	attacktype="none"
+	combattype="Ranged"
+
+	sightrangeday="0"
+	sightrangenight="0"
+
+	
+	lifetime="6000,8000,10000"
+	
+	unittype="PseudoPet EnergyFieldEngine"
+	
+	corpsetime="10"
+	corpsefadetime="7500"
+	corpsefadeeffect="/shared/effects/corpse_sinkfast.effect"
+>
+	<onframe>
+		<condition target="proxy_entity" test="target_type dead">
+			<expire entity="this_entity" />
+		</condition>
+	</onframe>
+</gadget>

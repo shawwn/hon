@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="ability_02">
+	<definitions>
+	
+		<modifier
+			name="modifier0"
+			life="1000"
+			startcolor="5 2.5 0"
+			endcolor="1 1 1"
+		/>
+	
+		<particlesystem name="system0" space="world" scale="10">
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				life="1000"
+				spawnrate="50"
+				particlelife="1000"
+				gravity="-.2"
+				speed="10"
+				drag="0.07"
+				acceleration="0.0"
+				mintimenudge="0"
+				maxtimenudge="1000"
+				material="/shared/effects/materials/smoke_particle.material"
+				offsetsphere="30 30 10"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-30"
+					startcolor=".75 .25 0"
+					endcolor="0 0 0"
+					maxanglespeed="30"
+					startsize="35"
+					endsize="100"
+					startalpha="0"
+					midalpha=".25"
+					endalpha="0"
+					midalphapos=".2"
+					startanchor="1"
+					endanchor="1"
+				/>
+
+				<particle
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-50"
+					color=".75 .5 0"
+					maxanglespeed="50"
+					startsize="35"
+					endsize="100"
+					startalpha="0"
+					midalpha=".25"
+					endalpha="0"
+					midalphapos=".2"
+					startanchor="1"
+					endanchor="1"
+				/>
+			</simpleemitter>
+		
+			<simpleemitter
+				bone="_bone_centerofchest"
+				life="500"
+				spawnrate="40"
+				particlelife="750"
+				gravity="0"
+				offsetsphere="15 15 0"
+				minspeed="5"
+				maxspeed="15"
+				material="/shared/effects/materials/phantom_smoke_04.material"
+			>
+				<particle 
+					startcolor="1 .35 0"
+					midcolor="1 .35 0"
+					endcolor="0 0 0"
+					midcolorpos="0.2"
+					minangle="0"
+					maxangle="360"
+					startsize="0"
+					endsize="105"
+					minanglespeed="-190"
+					maxanglespeed="190"
+					anchor="1"
+				/>
+			</simpleemitter>
+			
+			<billboard
+				maxroll="360"
+				bone="_bone_centerofchest"
+				life="500"
+				startcolor="2 .75 0"
+				endcolor="0 0 0"
+				startsize="75"
+				endsize="35"
+				depthbias="-50"
+				material="/shared/effects/materials/frost_burst.material"
+			/>
+
+			<billboard
+				life="500"
+				bone="_bone_centerofchest"
+				color="1.0 1.0 1.0"
+				midalphapos="0.25"
+				startparam="0.075"
+				endparam="0.1555"
+				startsize="175"
+				endsize="50"
+				startalpha="0"
+				midalpha=".9"
+				endalpha="0"
+				depthbias="-49"
+				position="0 0 20"
+				material="/shared/effects/materials/refract_ring.material"
+				lockup="0"
+				pitch="0"
+			/>
+
+			<billboard
+				bone="_bone_centerofchest"
+				delay="500"
+				life="500"
+				color="1.0 1.0 1.0"
+				midalphapos="0.25"
+				param="0.0555"
+				startsize="50"
+				endsize="200"
+				startalpha="0"
+				midalpha=".9"
+				endalpha="0"
+				depthbias="-49"
+				position="0 0 20"
+				material="/shared/effects/materials/refract_ring.material"
+				lockup="0"
+				pitch="0"
+			/>
+			
+			<billboard
+				bone="_bone_centerofchest"
+				life="1000"
+				startcolor="1 .5 .25"
+				endcolor="0 0 0"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="0.0"
+				midalphapos="0.75"
+				startparam="0.05"
+				endparam="0.0"
+				startsize="100"
+				endsize="10"
+				depthbias="-50"
+				position="0 0 20"
+				material="/shared/effects/materials/highlight_add.material"
+				lockup="0"
+				pitch="0"
+			/>
+			
+			
+	</particlesystem>
+</definitions>
+
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<spawnmodifier instance="instance1" modifier="modifier0"/>  
+	<waitfordeath instance="instance0" />
+</thread>
+
+</effect>
+
+
+
+
+
+
+

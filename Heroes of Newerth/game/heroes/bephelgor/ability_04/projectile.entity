@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Bephelgor_Ability4"
+	speed="1100"
+	gravity="1000"
+>
+	<onimpact>
+		<spawnunit name="Pet_Bephelgor_Ability4" count="1" pushentity="true" team="0" maxactive="5" />
+		<order command="attack" force="true" forceduration="20000" source="stack_entity" target="target_entity" />
+		<applystate name="State_Bephelgor_Ability4_ExpirePet" target="target_entity" proxy="stack_entity" duration="8000" />
+	</onimpact>
+</projectile>

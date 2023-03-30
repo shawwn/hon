@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="dragon_slave" persistent="true" useentityeffectscale="true">
+	<definitions>
+
+				
+	
+		
+	<particlesystem name="system0" space="world" scale="1">
+
+	<sound
+		linearfalloff="true" 
+		falloffstart="1000"
+		falloffend="2500"
+		volume=".7"
+		sample="../sounds/cast2.wav"
+	/>
+	
+	<simpleemitter
+			delay="0"
+			count="10"
+			speed="0"
+			spawnrate="40"
+			particlelife="2600"
+		
+			minangle="0"
+			maxangle="0"			
+		>
+			<particle>
+
+			
+				<model
+					position="0 0 0"
+					life="2000"
+					model="goo.mdf"
+					anim="idle"
+					minscale="0.2"				
+					maxscale="0.2"
+					
+					minyaw="-360"
+					maxyaw="360"
+					midscalepos="2.5"					
+					startcolor="1 1 1"
+					midcolor="1 .5 .3"
+					endcolor="0.5 0 0"				
+					
+					startalpha="1"					
+					midalpha="1"
+					endalpha="0"						
+				/>
+			</particle>
+	</simpleemitter>
+	
+	<simpleemitter
+			delay="0"
+			count="10"
+			speed="0"
+			spawnrate="40"
+			particlelife="2600"
+		
+			minangle="0"
+			maxangle="0"			
+		>
+			<particle>
+
+			
+				<model
+					position="0 0 0"
+					life="2000"
+					model="goo.mdf"
+					anim="idle"
+					minscale="0.6"				
+					maxscale="0.6"
+					
+					minyaw="-360"
+					maxyaw="360"
+					midscalepos="2.5"					
+					startcolor="1 1 1"
+					midcolor="1 .5 .3"
+					endcolor="0.5 0 0"				
+					
+					startalpha="1"					
+					midalpha="1"
+					endalpha="0"						
+				/>
+			</particle>
+	</simpleemitter>	
+
+	
+		<simpleemitter
+			delay="100"
+			count="1"
+			spawnrate="5000"
+			particlelife="600"
+			drag="0.0"
+			acceleration="0.0"			
+			minangle="0"
+			maxangle="0"			
+		>
+			<particle>
+	
+		
+				<model
+					position="0 0 0"
+					life="1600"
+					model="model.mdf"
+					anim="idle"
+					startscale="3.5"
+					midscale="1.5"
+					endscale="1.5"
+					midscalepos=".3"					
+					startcolor="1 1 1"
+					midcolor="1 .5 .3"
+					endcolor="0 0 0"	
+					yaw="90"
+					
+					startalpha="1"					
+					midalpha="1"
+					endalpha="0"
+					
+					
+				/>
+				
+				<groundsprite
+					delay="0"
+					life="1000"
+					loop="false"			
+					material="/shared/effects/materials/coals_add.material"
+					startsize="10"
+					midsize="140"
+					endsize="140"
+					midsizepos=".2"
+					maxyaw="360"
+					startcolor="2 .5 0"
+					endcolor="0 0 0"
+				/>
+			
+				<groundsprite
+					delay="0"
+					life="1000"
+					material="/shared/effects/materials/ground_smash_overlay.material"
+					startsize="10"
+					midsize="140"
+					endsize="140"
+					midsizepos=".2"
+					color="1.0 1.0 1.0"
+					startalpha="0.75"
+					midalpha="0.75"
+					midalphapos="0.5"
+					endalpha="0"
+					maxyaw="360"
+				/>
+		
+	
+				
+				
+			</particle>	
+		</simpleemitter>
+		
+	
+		<simpleemitter
+				timenudge="200"
+				delay="0"
+				count="1"
+				particlelife="1100"				
+				spawnrate="11"
+				speed="290"
+				gravity="20"
+				direction="0 0 1"
+				minangle="0"
+				
+				maxangle="15"
+				particledirectionalspace="local"
+				material="/shared/effects/materials/white_splash.material"
+				offsetsphere="11 11 0"
+				position="0 0 10"
+		
+			>
+
+				<particle 
+					startsize="20"
+				
+					endsize="250"
+					startcolor="1 1 .4"
+					midcolor="1 .6 0"
+					endcolor="1 0 0"
+					
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					
+
+				/>
+		</simpleemitter>
+		<billboard			
+			life="600"
+			startcolor="1 .3 0"
+			endcolor="0"
+			startsize="120"
+			endsize="360"
+			depthbias="-100"
+			material="/shared/effects/materials/stomp_01.material"
+		/>		
+		
+		
+	
+		<billboard
+			position="0 0 10"
+			delay="0"
+			life="500"
+			param="0.1"	
+			startsize="160"
+			endsize="350"
+			startalpha="0"
+			midalpha="1"
+			endalpha="0"				
+			depthbias="0"
+			material="/shared/effects/materials/refract_swell.material"
+			lockup="1"
+			lockright="1"
+			pitch="90"
+		/>
+
+	
+
+
+
+		
+
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

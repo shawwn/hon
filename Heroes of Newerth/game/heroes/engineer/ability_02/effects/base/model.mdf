@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="export.max" file="model.model" type="K2" >
+
+	<anim name="idle" clip="assemble.clip" loop="true" fps="60" loopbackframe="-1">
+		<frameevent frame="1" cmd="PlaySoundLinear /heroes/engineer/ability_02/sounds/cast.wav 400 1800 .65"/>
+	</anim>
+</model>

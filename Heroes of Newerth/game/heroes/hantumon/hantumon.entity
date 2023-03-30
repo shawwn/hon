@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_Hantumon"
+
+	team="Legion"
+	icon="icon.tga"
+	portrait="icon.tga"
+	model="model.mdf"
+	skin=""
+	
+	passiveeffect=""
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="sounds/voice/select_%.wav"
+	selectedflavorsound="sounds/voice/select_flavour_%.wav"
+	confirmmovesound="sounds/voice/move_%.wav"
+	confirmattacksound="sounds/voice/attack_%.wav"
+	nomanasound="sounds/voice/no_mana.wav"
+	cooldownsound="sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="sounds/voice/taunt_prior.wav"
+	tauntkillsound="sounds/voice/taunt_after.wav"
+	
+	preglobalscale="2.025"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="112"
+	boundsradius="24"
+	selectionradius="44"
+	targetoffset="0 0 64"
+	infoheight="160"
+
+	movespeed="305"
+	turnrate="540"
+	turnsmoothing="0.05"
+
+	maxhealth="150"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="3.00"
+	magicarmor="5.5"
+
+	inventory0="Ability_Hantumon1"
+	inventory1="Ability_Hantumon2"
+	inventory2="Ability_Hantumon3"
+	inventory3="Ability_Hantumon4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8="Ability_Taunt"
+
+	attackduration="1000"
+	attackactiontime="400"
+	attackcooldown="1700"
+	attackdamagemin="24"
+	attackdamagemax="28"
+	attacknumanims="3"
+	attackoffset="0 0 0"
+	attackprojectile=""
+	attackrange="125"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="effects/impact.effect"
+	attacktype="melee"
+	combattype="Hero"
+
+	aggrorange="600"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="Agility"
+	strength="17"
+	strengthperlevel="2.0"
+	agility="24"
+	agilityperlevel="2.9"
+	intelligence="14"
+	intelligenceperlevel="1.3"
+	
+	previewmodel="preview.mdf"
+	previewpos="0 0 -50"
+	previewangles="0 0 0"
+	previewscale="2.1"
+>
+	<recommendeditem name="Item_MinorTotem" />
+	<recommendeditem name="Item_RunesOfTheBlight" />
+	<recommendeditem name="Item_HealthPotion" />
+	<recommendeditem name="Item_HomecomingStone" />
+	
+	<recommendeditem name="Item_LoggersHatchet" />
+	<recommendeditem name="Item_IronShield" />
+	<recommendeditem name="Item_Soulscream" />
+	<recommendeditem name="Item_Strength5" />
+	<recommendeditem name="Item_EnhancedMarchers" />
+	<recommendeditem name="Item_Steamboots" />
+	<recommendeditem name="Item_ElderParasite" />
+	<recommendeditem name="Item_ManaBurn1" />
+	<recommendeditem name="Item_ManaBurn2" />
+	<recommendeditem name="Item_Immunity" />
+	<recommendeditem name="Item_Evasion" />
+	
+	<modifier key="NightHoundInCloud" modpriority="100"
+		attacktargetscheme="everything_but_towers"
+	>
+	</modifier>	
+	
+	<modifier key="Alt" modpriority="1"
+		altavatar="true"
+		
+		icon="alt/icon.tga"
+		portrait="alt/icon.tga"
+		model="alt/model.mdf"
+		
+		previewmodel="alt/preview.mdf"
+		previewpos="0 0 -50"
+		previewangles="0 0 0"
+		previewscale="2.1"
+	>
+	</modifier>
+</hero>

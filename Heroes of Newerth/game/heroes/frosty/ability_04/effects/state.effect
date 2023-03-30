@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="true" deferred="true">
+	<definitions>
+	
+			
+		<modifier
+			name="modifier0"
+			life="600"
+			startcolor="1 4 6"
+			
+			endcolor="1 1 1"
+			midcolorpos="0.489"
+		/>
+		
+		<particlesystem name="system0" space="world" scale="1.0">
+
+			<simpleemitter
+			count="1"
+			spawnrate="11111"
+			particlelife="5000"
+			>	
+				<particle
+				>
+					
+					
+				
+					<billboard
+						delay="110"
+						bone="_bone_centerofchest"
+						life="200"
+						yaw="20"
+						startcolor=".5 1 1"
+						endcolor="0 0 0"
+						startalpha="1.0"
+						midalpha="1.0"
+						endalpha="0.0"
+						midalphapos="0.75"
+						startparam="0.05"
+						endparam="0.0"
+										
+						startsize="50"
+						midsize="100"
+						endsize="200"
+						midsizepos=".4"
+										
+						depthbias="0"
+						position="0 0 50"
+						material="/shared/effects/materials/frost_burst.material"
+						lockup="true"
+						pitch="90"
+					/>	
+
+
+				</particle>
+				
+
+			</simpleemitter>
+	
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>  
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" /> 
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

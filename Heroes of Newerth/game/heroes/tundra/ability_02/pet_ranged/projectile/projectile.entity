@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_TundraPetRangedAttack"
+
+	speed="1500"
+	gravity="1000"
+	canturn="false"
+	modelscale="0.5"
+	model="effects/spinner.mdf"
+
+	traileffect="effects/trail.effect"
+	impacteffect="effects/impact.effect"
+>
+</projectile>

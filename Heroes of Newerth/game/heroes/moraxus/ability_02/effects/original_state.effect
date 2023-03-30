@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" useentityeffectscale="1">
+
+	<definitions>
+<!--
+		<modifier
+			name="modifier0"
+			material="material.material"
+			color="1 1 1"
+			expirelife="750"
+			startalpha="1"
+			endalpha="0"
+		/>
+-->
+		<particlesystem name="system0" space="entity" scale="1">
+		
+			<model
+				bone="Box005"
+				expirelife="50"
+				position="0 0 0"
+				model="regular_shield/model.mdf"
+				anim="idle"
+				pitch="90"
+				pitchspeed="0"
+				yaw="-90"
+				scale="2"
+				directionalspace="local"
+				startcolor="1 1 1"
+				endcolor="0 0 0"
+			/>
+<!--
+			<model
+				bone="Box005"
+				expirelife="250"
+				position="0 0 0"
+				model="magic_shield/model.mdf"
+				anim="idle"
+				pitch="90"
+				pitchspeed="0"
+				yaw="-90"
+				startscale="2"
+				midscale="2"
+				endscale="2"
+				directionalspace="local"
+				startcolor=".25 .75 2"
+				endcolor="0 0 0"
+			>
+				<template name="lights">
+					<simpleemitter
+						delay="200"
+						count="1"
+						bone="{bone}"
+						spawnrate="100"
+						particlelife="850"
+						offsetsphere="0 0 0"
+						minspeed="250"
+						maxspeed="500"
+						position="0 0 0"
+						minangle="0"
+						maxangle="1"
+						direction="0 -1 0"
+					>
+						<particle
+						turn="true"
+						>
+							<billboard
+								spawnrate="500"
+								count="1"
+								minlife="250"
+								maxlife="350"
+								position="0 0 0"
+								material="/shared/effects/materials/light_rays.material"
+								directionalspace="local"
+								yaw="180"
+								roll="180"
+								lockup="true"
+								lockright="true"
+								pitch="90"
+								startcolor=".2 .2 1"
+								endcolor="0 0 0"
+								minheight="275"
+								maxheight="350"
+							>
+							</billboard>
+						</particle>
+					</simpleemitter>
+				
+				</template>
+
+				<instance name="lights" bone="_bone_fx_01" />
+				<instance name="lights" bone="_bone_fx_02" />
+				<instance name="lights" bone="_bone_fx_03" />
+				<instance name="lights" bone="_bone_fx_04" />
+				<instance name="lights" bone="_bone_fx_05" />
+
+			</model>
+			
+			<billboard
+				life="300"
+				bone="_bone_centerofchest"
+				delay="200"
+				position="0 0 0"
+				startcolor=".8"
+				midcolor=".8"
+				endcolor="0 0 0"
+				size="500"
+				rollspeed="-1250"
+				depthbias="-10"
+				material="/shared/effects/materials/flare_01.material"
+			/>
+			
+			<billboard
+				life="300"
+				bone="_bone_centerofchest"
+				delay="200"
+				position="0 0 0"
+				startcolor="0 0 1"
+				midcolor="0 0 1"
+				endcolor="0 0 0"
+				size="600"
+				rollspeed="-1250"
+				depthbias="-10"
+				material="/shared/effects/materials/flare_01.material"
+			/>
+
+		</particlesystem>
+		
+		
+		
+		
+		<particlesystem name="system2" space="entity" scale=".65">
+
+			<model
+				bone="Box005"
+				expirelife="250"
+				position="0 0 0"
+				model="magic_shield/model.mdf"
+				anim="idle"
+				pitch="90"
+				pitchspeed="0"
+				yaw="-90"
+				startscale="2"
+				midscale="2"
+				endscale="2"
+				directionalspace="local"
+				startcolor="0 0 0"
+				endcolor="0 0 0"
+				alpha="0"
+			>
+				<template name="lights">
+					<simpleemitter
+						delay="200"
+						count="1"
+						bone="{bone}"
+						spawnrate="100"
+						particlelife="850"
+						offsetsphere="0 0 0"
+						minspeed="250"
+						maxspeed="500"
+						position="0 0 0"
+						minangle="0"
+						maxangle="1"
+						direction="0 -1 0"
+					>
+						<particle
+						turn="true"
+						>
+							<billboard
+								spawnrate="500"
+								count="1"
+								minlife="250"
+								maxlife="350"
+								position="0 0 0"
+								material="/shared/effects/materials/light_rays.material"
+								directionalspace="local"
+								yaw="180"
+								roll="180"
+								lockup="true"
+								lockright="true"
+								pitch="90"
+								startcolor=".2 .2 1"
+								endcolor="0 0 0"
+								minheight="275"
+								maxheight="350"
+							>
+							</billboard>
+						</particle>
+					</simpleemitter>
+				
+				</template>
+
+				<instance name="lights" bone="_bone_fx_01" />
+				<instance name="lights" bone="_bone_fx_02" />
+				<instance name="lights" bone="_bone_fx_03" />
+				<instance name="lights" bone="_bone_fx_04" />
+				<instance name="lights" bone="_bone_fx_05" />
+				
+				<billboard
+					bone="_bone_fx_01"
+					delay="200"
+					position="0 0 0"
+					life="250"
+					color=".5"
+					size="55"
+					rollspeed="-1250"
+					depthbias="-50"
+					material="/shared/effects/materials/whitedot.material"
+				/>
+				
+				<billboard
+					expirelife="500"
+					bone="_bone_fx_01"
+					delay="200"
+					position="0 0 0"
+					startcolor=".25 .65 1"
+					endcolor="0 0 0"
+					size="135"
+					rollspeed="-1250"
+					depthbias="-10"
+					material="/shared/effects/materials/flare_01.material"
+				/>
+
+				<simpleemitter
+					delay="0"
+					bone="_bone_front"
+					position="0 0 0" 
+					spawnrate="50"
+					particlelife="500"
+					gravity="0.0"
+					offsetsphere="5"
+					speed="150"
+					drag="0"
+					acceleration="0"
+					material="/shared/effects/materials/phantom_smoke_03.material"
+					minangle="0"
+					maxangle="10"
+					direction="0 1 0"
+				>
+					<particle 
+						startcolor="0 0 0"
+						midcolor=".2 1 1"
+						endcolor="0 0 0"
+						midcolorpos=".5"
+						minangle="0"
+						maxangle="360"
+						startsize="45"
+						endsize="45"
+						minanglespeed="-90"
+						maxanglespeed="90"
+						lockright="true"
+						lockup="true"
+						pitch="90"
+						directionalspace="local"
+					/>
+				</simpleemitter>
+				
+				<simpleemitter
+					delay="0"
+					bone="_bone_fx_01"
+					position="0 0 0" 
+					spawnrate="50"
+					particlelife="350"
+					gravity="0.0"
+					offsetsphere="10"
+					speed="75"
+					drag="0"
+					acceleration="0"
+					material="/shared/effects/materials/flare_01.material"
+					minangle="0"
+					maxangle="10"
+					direction="0 -1 0"
+				>
+					<particle 
+						startcolor="0 0 0"
+						midcolor=".5"
+						endcolor="0 0 0"
+						midcolorpos=".5"
+						minangle="0"
+						maxangle="360"
+						startsize="30"
+						endsize="15"
+						minanglespeed="-90"
+						maxanglespeed="90"
+						lockright="true"
+						lockup="true"
+						pitch="90"
+						directionalspace="local"
+					/>
+				</simpleemitter>
+				
+				<simpleemitter
+					delay="0"
+					bone="_bone_fx_01"
+					position="0 0 0" 
+					spawnrate="8"
+					particlelife="350"
+					gravity="0.0"
+					offsetsphere="5"
+					speed="150"
+					drag="0"
+					acceleration="0"
+					minangle="-5"
+					maxangle="5"
+					direction="0 -1 0"
+				>
+					<particle
+						turn="true"
+					>
+						<billboard
+							bone="_bone_fx_01"
+							spawnrate="500"
+							minlife="250"
+							maxlife="500"
+							position="0 15 0"
+							material="/shared/effects/materials/light_rays.material"
+							directionalspace="local"
+							yaw="180"
+							roll="180"
+							lockup="true"
+							lockright="true"
+							pitch="90"
+							startcolor="0 .5 1"
+							midcolor="0 0 1"
+							endcolor="0 0 0"
+							minheight="75"
+							maxheight="85"
+						>
+						</billboard>
+					</particle>
+				</simpleemitter>
+
+			</model>
+-->
+		</particlesystem>
+		
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>
+		<spawnparticlesystem instance="instance2" particlesystem="system2" />
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" /> 
+		<waitfordeath instance="instance2" /> 
+	</thread>
+
+</effect>

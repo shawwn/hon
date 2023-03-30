@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="" file="model.model" type="K2">
+
+<!-- corkscrew-->
+	<anim name="idle" fps="30" clip="clips/default_1.clip"/>
+
+<!--squirelly	
+	<anim name="idle" fps="45" clip="effects/default_2.clip"/>
+-->
+</model>

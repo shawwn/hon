@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect>
+
+	<definitions>
+
+		<particlesystem name="system0" space="world">
+		
+			<template name="fencelink">
+				<beam
+					delay="100"					
+					owner_a="source"
+					owner_b="target"
+					bone_a="{bone1}"
+					bone_b="{bone2}"
+					size="{size}"
+					startcolor="0 .5 1"
+					endcolor="0"
+					expirelife="200"	
+					material="/shared/effects/materials/femme_lightning_10.material"
+					startframe="{startframe}"
+					framespeed="{framespeed}"
+				/>
+
+				<billboard
+					bone="{bone2}"
+					material="/shared/effects/materials/whitedot.material"
+					size="44"
+					startcolor="0 .1 .4"
+					endcolor="0"
+					expirelife="200"
+					depthbias="-40"
+				/>
+
+				<billboard
+					bone="{bone2}"
+					material="/shared/effects/materials/whitedot.material"
+					size="44"
+					startcolor="0 .1 .3"
+					endcolor="0"
+					expirelife="200"			
+				 	depthbias="-40"
+				/>
+
+			</template>
+			
+			<instance name="fencelink" bone1="_bone_fx_01" bone2="_bone_fx_01" size="30" startframe=".2" framespeed="3"/>
+			<instance name="fencelink" bone1="_bone_fx_02" bone2="_bone_fx_02" size="32" startframe=".5" framespeed="4.5"/>
+			<instance name="fencelink" bone1="_bone_fx_03" bone2="_bone_fx_03" size="28" startframe="1" framespeed="2"/>
+
+		</particlesystem>
+
+	</definitions>
+	
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+		<waitfordeath instance="instance0"/>
+	</thread>
+
+</effect>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Accursed_Ability3_Debuff"
+
+	
+	
+	icon="icon.tga"
+
+	passiveeffect="state.effect"
+	
+	movespeedslow="0.05,0.10,0.15,0.20"
+	
+	effecttype="StatusDebuff"
+	
+	displaylevel="true"
+>
+	<onattackedpreimpact>
+    <combateffecttype effecttype="AbilityBasedProjectile" />
+    <else>
+      <cantarget source="this_inflictor_entity" targetscheme="ally_units" effecttype="Buff">
+        <applystate name="State_Accursed_Ability3_Buff" duration="4500" />
+      </cantarget>
+    </else>
+	</onattackedpreimpact>
+	
+	<onframe />
+</state>

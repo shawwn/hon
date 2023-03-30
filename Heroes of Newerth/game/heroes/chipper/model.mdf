@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="default_1.max" file="high.model" type="K2" high="high.model" med="med.model" low="low.model"  >
+
+	<anim name="idle" clip="clips/default_1.clip" loop="true"/>
+	
+	<anim name="portrait" clip="clips/portrait.clip" loop="true"/>
+	
+	<anim name="bored" clip="clips/bored_1.clip"/>
+	
+	<anim name="item_1" clip="clips/item_1.clip"/>
+	
+	<anim name="taunt_1" clip="clips/taunt_1.clip"/>
+	
+	<anim name="death_1" clip="clips/death_1.clip" loop="true" loopbackframe="-1">
+		<frameevent frame="1" cmd="PlaySoundLinear sounds/death.wav 400 2200 1"/>
+		<frameevent frame="35" cmd="StartEffect effects/death/death.effect"/>
+		<frameevent frame="35" cmd="PlaySoundLinear sounds/death_grunt.wav 400 2200 .6"/>
+	</anim>
+	
+	<anim name="walk_1" clip="clips/walk_1.clip" loop="true" fps="28">
+		<frameevent frame="1" cmd="PlaySoundLinear sounds/walk_1.wav 400 1800 .05"/>
+		<frameevent frame="1" cmd="PlaySoundLinear /heroes/jereziah/sounds/move_%.wav 400 1800 .015"/>
+		<frameevent frame="1" cmd="PlaySoundLinear sounds/step_1.wav 400 1800 .05"/>
+		<frameevent frame="1" cmd="PlaySoundLinear /shared/sounds/footsteps/giant_%.wav 0 2500 0.2"/>
+		<frameevent frame="12" cmd="PlaySoundLinear sounds/walk_2.wav 400 1800 .05"/>
+		<frameevent frame="12" cmd="PlaySoundLinear /heroes/jereziah/sounds/move_%.wav 400 1800 .015"/>
+		<frameevent frame="12" cmd="PlaySoundLinear sounds/step_2.wav 400 1800 .05"/>
+		<frameevent frame="12" cmd="PlaySoundLinear /shared/sounds/footsteps/giant_%.wav 0 2500 0.2"/>
+
+		<frameevent frame="1" cmd="StartEffect /shared/effects/footstep_l_#GetTerrainType()#.effect"/>
+		<frameevent frame="12" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+
+		<frameevent frame="1" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="6" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="12" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="18" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+	</anim>
+
+	<anim name="knock_1" clip="clips/knock_1.clip" loop="true" loopbackframe="-1"/>
+	
+	<anim name="getup_1" clip="clips/getup_1.clip"/>
+
+	<anim name="attack_1" clip="clips/attack_1.clip" fps="60"/>
+			
+	<anim name="attack_2" clip="clips/attack_2.clip" fps="60">
+		<frameevent frame="16" cmd="PlaySoundLinear sounds/attack_grunt_%.wav 400 2000 .45"/>
+	</anim>
+	
+	<anim name="ability_2" clip="clips/ability_2.clip">
+		<frameevent frame="1" cmd="PlaySoundLinear ability_02/sounds/cast.wav 400 2000 .85"/>
+	</anim>
+	
+	<anim name="ability_3" clip="clips/ability_3.clip"/>
+
+	<anim name="ability_4" clip="clips/ability_4.clip" blendtime="100"/>
+
+</model>

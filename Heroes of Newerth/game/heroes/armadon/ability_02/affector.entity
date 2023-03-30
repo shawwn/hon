@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Armadon_Ability2"
+	radius="650"	
+	lifetime="0"
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Physical Splash"
+>
+	<onimpact>
+		<spawnprojectile name="Projectile_Armadon_Ability2" source="source_attack_offset" noresponse="true" />
+	</onimpact>
+</affector>

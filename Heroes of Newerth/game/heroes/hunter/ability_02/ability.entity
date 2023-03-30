@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Hunter2"
+
+	
+	
+	icon="icon.tga"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="passive"
+>
+	<onattackimpact>
+		<condition test="target_type hero">
+			<applystate name="State_Hunter_Ability2" duration="1000" />
+		</condition>
+	</onattackimpact>
+
+	<onkill>
+		<setvar0 a="target_maxhealth" />
+		<targettype type="building" />
+		<else>
+			<targettype type="gadget" />
+			<else>
+				<targettype type="illusion" />
+				<else>
+					<condition test="target_type hero">
+						<heal a="0.1,0.2,0.3,0.4" b="var0" op="mult" target="source_entity"/>
+					</condition>
+					<condition test="not_target_type hero">
+						<heal a="0.10,0.15,0.20,0.25" b="var0" op="mult" target="source_entity"/>
+					</condition>
+					<playeffect effect="bath.effect" source="source_entity" target="" />
+				</else>
+			</else>
+		</else>
+	</onkill>
+</ability>

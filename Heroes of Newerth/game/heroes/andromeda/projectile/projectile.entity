@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_AndromedaAttack"
+
+	speed="1500"
+	gravity="0"
+	canturn="false"
+	modelscale="0.35"
+
+	model="/shared/models/invis.mdf"
+	traileffect="effects/trail.effect"
+	impacteffect="effects/impact.effect"
+>
+</projectile>

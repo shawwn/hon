@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_BabaYaga_Ability4"
+
+	
+	
+	icon="icon.tga"
+	
+	deniable="true"
+	
+	impactinterval="3000"
+	
+	passiveeffect="../ability_01/effects/state.effect"
+	
+	effecttype="StatusDebuff"
+>
+	<onframe >
+		<expire />
+	</onframe>
+
+	<onimpact>
+
+	</onimpact>
+	
+	<modifier key="BabaYaga_Ability1_1" modpriority="90"
+		movespeedslowstart="0.2"
+		movespeedslowmid="0.2"
+		movespeedslowend="0.0"
+		movespeedslowduration="10000"
+		movespeedslowmidpos="0.2"
+	>
+		<onframe />
+		<onimpact>
+			<playeffect effect="../ability_01/effects/impact.effect" source="target_entity"/>
+			<damage effecttype="Magic DOT" amount="10" />
+			<popup name="poison" a="result" source="target_entity" target="source_entity"/>
+		</onimpact>
+	</modifier>
+	
+	<modifier key="BabaYaga_Ability1_2" modpriority="90"
+		movespeedslowstart="0.3"
+		movespeedslowmid="0.3"
+		movespeedslowend="0.0"
+		movespeedslowduration="10000"
+		movespeedslowmidpos="0.2"
+	>
+		<onframe />
+		<onimpact>
+			<playeffect effect="../ability_01/effects/impact.effect" source="target_entity"/>
+			<damage effecttype="Magic DOT" amount="20" />
+			<popup name="poison" a="result" source="target_entity" target="source_entity"/>
+		</onimpact>
+	</modifier>
+	
+	<modifier key="BabaYaga_Ability1_3" modpriority="90"
+		movespeedslowstart="0.4"
+		movespeedslowmid="0.4"
+		movespeedslowend="0.0"
+		movespeedslowduration="10000"
+		movespeedslowmidpos="0.2"
+	>
+		<onframe />
+		<onimpact>
+			<playeffect effect="../ability_01/effects/impact.effect" source="target_entity"/>
+			<damage effecttype="Magic DOT" amount="40" />
+			<popup name="poison" a="result" source="target_entity" target="source_entity"/>
+		</onimpact>
+	</modifier>
+	
+	<modifier key="BabaYaga_Ability1_4" modpriority="90"
+		movespeedslowstart="0.5"
+		movespeedslowmid="0.5"
+		movespeedslowend="0.0"
+		movespeedslowduration="10000"
+		movespeedslowmidpos="0.2"
+	>
+		<onframe />
+		<onimpact>
+			<playeffect effect="../ability_01/effects/impact.effect" source="target_entity"/>
+			<damage effecttype="Magic DOT" amount="50" />
+			<popup name="poison" a="result" source="target_entity" target="source_entity"/>
+		</onimpact>
+	</modifier>
+</state>

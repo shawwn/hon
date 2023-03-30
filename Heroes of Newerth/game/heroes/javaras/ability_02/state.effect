@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" deferred="1" usentityeffectscale="1">
+	<definitions>
+
+		
+		<particlesystem name="system1" space="entity">
+		
+			<model
+				position="0 0 50"
+				name="circleOfBones"
+				model="/shared/effects/models/circle_of_bones/model.mdf"
+				anim="idle"
+				scale="1.75"
+				yawspeed="180"
+				pitchspeed="180"
+				expirelife="500"
+				startparticlecolor="1 1 1"
+				endparticlecolor="0 0 0"
+			>
+				<template name="blueNess">
+					<trackeremitter
+						position="0 0 0"
+						targetposition="0 0 50"
+						tracktype="target"
+						trackspeed="1"
+						bone="{bone}"
+						targetbone="_invisBox"
+						spawnrate="7"
+						particlelife="2000"
+						gravity="0.0"
+						offsetsphere="3 3 3"
+						minspeed="5"
+						maxspeed="15"
+						drag="0"
+						acceleration="0"
+						direction="0 0 1"
+						material="/shared/effects/materials/phantom_smoke_03.material"
+						expirelife="500"
+					>
+						<particle 
+							startcolor="0 0 0"
+							midcolor="0 .5 .2"
+							endcolor="0 0 0"
+							midcolorpos="0.4"
+							minangle="0"
+							maxangle="360"
+							startsize="0"
+							midsize="35"
+							endsize="15"
+							midsizepos=".8"
+							minanglespeed="-90"
+							maxanglespeed="90"
+						/>
+					</trackeremitter>
+				</template>
+				
+				<instance name="blueNess" bone="_bone_fx_01"/>
+				<instance name="blueNess" bone="_bone_fx_03"/>
+				<instance name="blueNess" bone="_bone_fx_05"/>
+				<instance name="blueNess" bone="_bone_fx_07"/>
+				<instance name="blueNess" bone="_bone_fx_09"/>
+				<instance name="blueNess" bone="_bone_fx_11"/>
+			
+				<template name="blueTrail">
+					<trailemitter
+						spawnrate="50"
+						minparticlelife="750"
+						maxparticlelife="1000"
+						bone="{bone}"
+						texpostime="0"
+						texposscale="0"
+						texstretchscale="1"
+						material="/shared/effects/materials/flare2.material"
+						subframepos="true"
+					>
+						<particle
+							startcolor="0 .5 .5"
+							midcolor=".4 0 .4"
+							endcolor="0 0 0"
+							midcolorpos=".8"
+							startsize="4"
+							endsize=".5"
+						/>
+					</trailemitter>
+				</template>
+				
+				<instance name="blueTrail" bone="_bone_fx_01"/>
+				<instance name="blueTrail" bone="_bone_fx_05"/>
+				<instance name="blueTrail" bone="_bone_fx_09"/>
+
+			</model>
+			
+			<model
+				position="0 0 50"
+				name="circleOfBones"
+				model="/shared/effects/models/circle_of_bones/model.mdf"
+				anim="idle"
+				scale="1.75"
+				yawspeed="180"
+				expirelife="500"
+				startparticlecolor="1 1 1"
+				endparticlecolor="0 0 0"
+			>
+			
+				<template name="blueTrail">
+					<trailemitter
+						spawnrate="50"
+						minparticlelife="750"
+						maxparticlelife="1000"
+						bone="{bone}"
+						texpostime="0"
+						texposscale="0"
+						texstretchscale="1"
+						material="/shared/effects/materials/flare2.material"
+						subframepos="true"
+					>
+						<particle
+							startcolor="0 .5 .5"
+							midcolor=".4 0 .4"
+							endcolor="0 0 0"
+							midcolorpos=".8"
+							startsize="4"
+							endsize=".5"
+						/>
+					</trailemitter>
+				</template>
+				
+				<instance name="blueTrail" bone="_bone_fx_01"/>
+				<instance name="blueTrail" bone="_bone_fx_05"/>
+				<instance name="blueTrail" bone="_bone_fx_09"/>
+
+			</model>
+			
+
+
+		
+		</particlesystem>
+		
+		
+		
+		
+		
+	</definitions>
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<spawnparticlesystem instance="instance1" particlesystem="system1" />
+	<waitfordeath instance="instance0" />
+	<waitfordeath instance="instance1" />
+</thread>
+</effect>
+

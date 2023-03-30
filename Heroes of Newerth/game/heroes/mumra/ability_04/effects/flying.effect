@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1" name="femmedeath">
+	<definitions>
+		<modifier
+			name="modifier0"
+			life="500"
+		
+			startcolor="5 3 0"
+			endcolor="1.0 1.0 1.0"
+			startalpha="1"
+			midalpha=".2"
+			endalpha=".2"
+			midalphapos=".5"
+		/>
+
+		<particlesystem name="system0" space="world" scale="1.0">
+		
+	<!--
+			<simpleemitter	
+				count="1"
+				spawnrate="1500"
+				particlelife="3000"				
+				inheritvelocity="0.0"				
+         	>
+				<particle					
+				>
+					<model
+						model="../../model.mdf"
+						life="400"
+						scale="1"
+						anim="ability_4_fly"
+						startalpha="1"
+						endalpha="0"
+					/>	
+				</particle>				
+			</simpleemitter>		
+-->
+			<simpleemitter
+				bone="_bone_centerofchest"				
+				spawnrate="83"
+				minspeed="200"
+				maxspeed="350"
+				drag="0.03"
+				
+				minparticlelife="500"
+				maxparticlelife="1200"
+				minangle="0"
+				maxangle="0"
+				offsetsphere="30 30 30"				
+				depthbias="-50"
+				gravity="-2"	
+				material="/shared/effects/materials/dust_smoke_02.material"
+				inheritvelocity="0.25"
+         	>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-70"
+					maxanglespeed="70"
+					color=".7  .7 .5"
+					startalpha=".6"
+					midalpha=".6"
+					endalpha="0"
+					startsize="10"
+					midsize="60"
+					endsize="100"					
+				/>
+			</simpleemitter>	
+<!--		
+			<simpleemitter
+				bone="_bone_centerofchest"
+				
+				spawnrate="23"
+				minspeed="200"
+				maxspeed="350"
+				drag="0.03"
+				direction="0 0 1"
+				minparticlelife="500"
+				maxparticlelife="1200"
+				minangle="0"
+				maxangle="0"
+				offsetsphere="0"				
+				depthbias="-50"
+				gravity="-5"	
+				material="/shared/effects/materials/dust_smoke_02.material"
+				inheritvelocity="0.25"
+         	>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-70"
+					maxanglespeed="70"
+					color=".7  .7 .5"
+					startalpha="0"
+					midalpha=".6"
+					endalpha="0"
+					startsize="90"
+					endsize="125"
+					
+				/>
+			</simpleemitter>	-->	
+	
+			<simpleemitter
+				bone="_bone_centerofchest"
+				
+				spawnrate="53"
+				minspeed="200"
+				maxspeed="350"
+				drag="0.03"
+				direction="0 0 1"
+				minparticlelife="500"
+				maxparticlelife="1200"
+				minangle="0"
+				maxangle="0"
+				offsetsphere="0"				
+				depthbias="-50"
+				gravity="-5"	
+				material="/shared/effects/materials/dust.material"
+				inheritvelocity="0.25"
+         	>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					color=".7  .7 .5"
+					startalpha="0"
+					midalpha=".6"
+					endalpha="0"
+					startsize="90"
+					endsize="125"
+					
+				/>
+			</simpleemitter>
+		-->	
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>  
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

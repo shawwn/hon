@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Empath_Ability2_Uberboob"
+
+	icon="icon.tga"
+	
+	attackspeed="0.15,0.30,0.45,0.60"
+	damage="10,20,30,40"
+	passiveeffect="effects/link.effect"
+	effecttype="StatusBuff"
+
+>
+	
+	<onframe>
+		<distance target="target_entity" source="source_entity" />
+		<condition test="result gt 1000">
+			<expire entity="this_proxy_entity" />
+			<expire />
+			<expirestate name="State_Empath_Ability2_Boobme2" target="this_inflictor_entity" />
+			<expirestate name="State_Empath_Boobable" target="this_owner_entity" />
+		</condition>
+	</onframe>
+	
+	<onexpired>
+		<startcooldown entity="this_spawner_entity" />
+	</onexpired>
+</state>

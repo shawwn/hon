@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world"  scale="0.5">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2200"
+				volume=".7"
+				sample="../sounds/impact.wav"
+			/>
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2200"
+				volume=".2"
+				sample="/heroes/rocky/ability_01//sounds/ability_01_impact_%.wav"
+			/>
+
+			<simpleemitter
+				offsetsphere="5"
+				spawnrate="5500"			
+				count="35"
+				gravity="-3"
+				minparticlelife="600"
+				maxparticlelife="1500"	
+				minspeed="340"		
+				maxspeed="750"
+				minangle="-90"
+				maxangle="-90"
+				depthbias="-30"
+				drag="0.0075"
+				direction="0 0 1"
+				acceleration="110"
+				position="0 0 25"
+				material="/shared/effects/materials/smoke_particle.material"	
+			>
+				<particle
+					minangle="-360"
+					maxangle="360"
+					color=".45 .45 .42"
+					size="125"
+					minendscale="2"
+					maxendscale="5"
+					minanglespeed="-60"
+					maxanglespeed="75"
+					startalpha="0"
+					midalpha=".3"
+					endalpha="0"
+					anchor="1"
+				/>
+
+				<particle
+					minangle="-360"
+					maxangle="360"
+					color=".3 .28 .25"
+					size="125"
+					minendscale="1.5"
+					maxendscale="6"
+					minanglespeed="-30"
+					maxanglespeed="35"
+					startalpha="0"
+					midalpha=".3"
+					endalpha="0"
+					anchor="1"
+				/>
+			</simpleemitter>
+
+			<groundsprite	
+				delay="150"
+				life="4400"
+				material="/shared/effects/materials/earth_cracks_02.material"
+				maxyaw="360"
+				minsize="150"
+				maxsize="220"			
+				color="1"
+				startalpha=".4"
+				midalpha=".4"
+				midalphapos="0.9"
+				endalpha="0"
+			/>
+		
+			<groundsprite	
+				delay="150"
+				life="4400"
+				material="/shared/effects/materials/earth_cracks_02.material"
+				maxyaw="360"
+				minsize="220"
+				maxsize="350"			
+				color="1"
+				startalpha=".8"
+				midalpha=".8"
+				midalphapos="0.9"
+				endalpha="0"
+			/>	
+		
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

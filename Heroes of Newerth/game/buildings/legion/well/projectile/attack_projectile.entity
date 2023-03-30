@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_well"
+
+	speed="1500"
+
+	modelscale="2.0"
+	model="model.mdf"
+
+	impacteffect="effects/projectile_impact.effect"
+	traileffect="effects/projectile.effect"
+>
+</projectile>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="birdskeletonproj.max" file="projectile.model" type="K2" >
+<anim name="idle" clip="idle.clip" loop="true" fps="15">
+
+</anim>
+</model>

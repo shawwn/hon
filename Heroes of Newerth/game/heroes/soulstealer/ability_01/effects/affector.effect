@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect >
+
+	<definitions>
+		<particlesystem name="system0" space="world" scale="1.1">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".7" 
+				sample="../sounds/impact.wav"
+			/>	
+
+			<template name="trail">
+				<trailemitter
+					name="trail02"
+					bone="{bone}"
+					spawnrate="80"
+					startminparticlelife="900"
+					startmaxparticlelife="900"		
+					
+					endminparticlelife="1"
+					endmaxparticlelife="1" 
+					texpostime="900"
+				 	texposscale="1.8"
+				 	texstretchscale="0"
+					position="10 0 0"
+					inheritvelocity=".254"
+					material="/shared/effects/materials/arrow_trail_blend.material"
+				>
+					<particle
+						color=".3 0 .5"
+						startsize="5"
+						midsize="2"
+						endsize="15"		
+						startalpha=".5"
+						endalpha="0"
+					/>
+				</trailemitter>	
+			</template>
+		
+			<groundsprite
+				life="3300"
+				material="/shared/effects/materials/ground_smash_overlay.material"
+				size="100"
+				
+				startalpha="0.75"
+				midalpha="0.75"
+				midalphapos="0.5"
+				endalpha="0"
+			/>
+
+			<billboard
+				life="250"
+				material="/shared/effects/materials/corona_07.material"
+				startsize="400"
+				endsize="410"
+				color=".2 0 .5"
+				startalpha="0.3"
+				midalpha="0.75"
+				midalphapos=".5"
+				endalpha="0"
+				depthbias="-20"
+				position="0 0 20"
+				lockright="1"
+				lockup="1"
+				pitch="90"
+				
+			/>
+
+			<simpleemitter	
+				life="800"
+				spawnrate="42"		
+				particlelife="1100"			
+				offsetsphere="33 33 10"
+				direction="0 0 1"		
+				speed="50"	
+				drag="-0.01"
+
+				timenudge="0"
+				minangle="0"
+				maxangle="61"
+				position="0 0 0"					
+				material="/shared/effects/materials/neb_blend.material"
+			>
+				<particle
+					size="222"
+					startcolor=".1 0 .3"
+					endcolor="0 0 0"
+					turn="1"
+					heightdistort="1"
+					midalpha="1"
+					startalpha="0"
+					endalpha="0"
+				
+				></particle>	
+			</simpleemitter>
+			
+
+			<billboard
+				life="1200"
+				startcolor=".5 0 .6"
+				endcolor="0 0 0"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="0.0"
+				midalphapos="0.75"
+				startparam="0.05"
+				endparam="0.0"
+								
+			
+				size="200"
+				rollspeed="20"
+			
+				midsizepos=".4"
+								
+				depthbias="0"
+				position="0 0 20"
+				material="/shared/effects/materials/z_teleportring01.material"
+				lockup="true"
+				pitch="90"
+			/>
+			
+			<simpleemitter
+				life="700"
+				spawnrate="400"
+				depthbias="-100"
+				particlelife="800"
+				count="13"
+          		material="/shared/effects/materials/smash_add.material"
+				offsetsphere="30 30 30"
+         	>
+				<particle 
+					startyawspeed="550"
+					endyawspeed="20"
+					minangle="0"
+					maxangle="360"
+					startcolor=".2 0 .5"
+					midcolor=".5 .4 .5"
+					endcolor="0"
+					midcolorpos="0.25"
+					startsize="40"
+					endsize="125"
+					flare="1"
+					startheight="5"
+					endheight="120"
+				/>
+			</simpleemitter>
+			
+			
+			<billboard
+				
+				life="1000"
+				startcolor=".5 0 .8"
+				endcolor="0 0 0"
+				
+								
+				startsize="100"
+				midsize="200"
+				endsize="200"
+				midsizepos=".4"
+								
+				depthbias="-150"
+				position="0 0 40"
+				material="/shared/effects/materials/smash_add.material"
+
+			/>
+			
+			
+			<terrainemitter
+					position="0 0 10"
+					spawnrate="50"
+					count="16"
+					particlelife="200"
+					range="110"
+					direction="0 0 1"
+					minangle="-30"
+					maxangle="30"
+				>
+					<particle
+						
+					>
+					
+						<billboard
+							material="/shared/effects/materials/light_rays.material"
+							bone="_bone_center"
+							scale="1"
+							width="70"
+							minstartheight="130"
+							maxstartheight="366"
+							endhight="20"
+							startcolor=".2 0 .5"
+							endcolor="0 0 0"
+							position="0 0 156"						
+							lockup="1"
+							expirelife="1000"
+						/>	
+					
+						
+					</particle>		
+			</terrainemitter>	
+				
+						
+			<model
+				delay="0"
+				life="2000"
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="0 0 0"
+				name="dragon" 
+				model="hand.mdf"
+				anim="idle"
+				yaw="270"
+				scale="3.8"
+				startalpha="1"
+				midalpha="1"
+				endalpha="1"
+				midalphapos=".3"
+				position="0.0 0.0 0.0"
+				directionalspace="global"
+			>
+				<instance name="trail" bone="_bone_fx_01"/>
+				<instance name="trail" bone="_bone_fx_02"/>
+				<instance name="trail" bone="_bone_fx_03"/>
+				<instance name="trail" bone="_bone_fx_04"/>
+				<instance name="trail" bone="_bone_fx_05"/>
+				
+				<simpleemitter
+					
+					delay="300"
+					
+					life="400"
+					
+					spawnrate="24"
+					particlelife="900"
+					gravity="3"
+					speed="0"		
+				
+					position="0 0 0"
+
+					offsetsphere="20 20 60"
+					
+					timenudge="0"
+					
+					material="/shared/effects/materials/neb_blend.material"
+					
+				>
+					<particle
+						minangle="-360"
+						maxangle="0"
+						minanglespeed="0"
+						maxanglespeed="70"
+
+						startcolor=".1 0 .20"
+						
+						endcolor="0 0 0"
+						midcolorpos=".8"
+						startalpha="0"
+						midalpha=".4"
+						endalpha="0"
+						
+						inheritvelocity=".25"
+						startframe="0"
+						endframe="1"
+						startsize="70"
+						
+									
+						endsize="100"
+
+					/>
+				</simpleemitter>
+<!--
+				<simpleemitter
+					
+					delay="300"
+					
+					life="800"
+					
+					spawnrate="44"
+					particlelife="1000"
+					gravity="-3"
+					speed="0"		
+				
+					position="0 0 0"
+
+					offsetsphere="20 20 60"
+					
+					timenudge="0"
+					
+					material="/shared/effects/materials/neb_add.material"
+					
+				>
+					<particle
+						minangle="-360"
+						maxangle="0"
+						minanglespeed="0"
+						maxanglespeed="70"
+						startcolor="0 0 0"
+						midcolor="1 0 .05"
+						
+						endcolor="0 0 0"
+						midcolorpos=".8"
+						startalpha="0"
+						midalpha=".4"
+						endalpha="0"
+						
+						inheritvelocity=".25"
+						startframe="0"
+						endframe="1"
+						startsize="50"
+						
+									
+						endsize="80"
+
+					/>
+				</simpleemitter>-->			
+			</model>
+			
+			
+
+
+		
+			
+				<simpleemitter
+					
+					count="6"
+					particlelife="500"
+					gravity="-1"
+					speed="130"		
+				
+					position="0 0 50"
+
+					direction="0 0 1"
+				
+					timenudge="0"
+					offsetsphere="20 20 20"
+					material="/shared/effects/materials/neb_blend.material"
+					
+				>
+					<particle
+						minangle="-360"
+						maxangle="0"
+						minanglespeed="0"
+						maxanglespeed="70"
+
+						startcolor=".3 .010 .4"
+						
+						endcolor="0 0 0"
+						midcolorpos=".8"
+
+						startframe="0"
+						endframe="1"
+						startsize="80"
+									
+						endsize="0"
+
+					/>
+
+				</simpleemitter>			
+		
+		<simpleemitter
+				
+				life="1500"
+				position="0 0 60"
+				spawnrate="30"
+				
+				drag="0"
+				directionalspace="world"
+				particlelife="3nn50"
+				gravity="25"
+				speed="0"
+				inheritvelocity=".1"
+				offsetsphere="44 44 44"
+				
+				minangle="25"
+				maxangle="10"
+				direction="0 0 1"
+				material="/shared/effects/materials/purpleswirl.material"
+			>
+				<particle
+					startcolor="0 0 0"
+					midcolor=".1 .1 .1"
+					endcolor="0 0 0"
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="0"
+					midcolorpos=".1"
+					maxanglespeed="0"
+					startsize="64"
+					endsize="116"
+					midsizepos=".4"
+					startalpha="0.0"
+					midalpha="..5"
+					endalpha="0.0"
+					midalphapos="0.1"
+					
+				/>
+			</simpleemitter>			
+			
+			
+			<billboard
+				life="500"
+				color="1.0 1.0 1.0"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="0.0"
+				midalphapos="0.75"
+				startparam=".5"
+				endparam="0.0"
+				startsize="128"
+				endsize="668"
+				depthbias="0"
+				position="0 0 20"
+				material="/shared/effects/materials/refract_ring.material"
+				lockup="true"
+				pitch="90"
+			/>
+			
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+
+
+
+
+
+
+

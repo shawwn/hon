@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Bubbles_Ability4"
+	
+	icon="icon.tga"
+	ishidden="true"
+	
+	passiveeffect="effects/link.effect"
+	effecttype=""
+>
+	<onframe>
+		<condition test="distance gt 600" source="proxy_entity" target="this_owner_entity">
+			<cantarget effecttype="Magic" ignoreinvulnerable="true" >
+				<applystate name="State_Stunned" duration="1500,2250,3000" target="this_owner_entity"/>
+				<damage effecttype="Magic" amount="100,150,200" />
+			</cantarget>
+			<playeffect effect="effects/impact.effect" source="target_entity" target="target_entity"/>
+			<expire />
+		</condition>
+	</onframe>
+</state>

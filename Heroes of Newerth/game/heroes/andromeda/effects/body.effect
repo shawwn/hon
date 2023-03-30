@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="cyclone" deferred="true" useentityeffectscale="0">
+	<definitions>
+		<particlesystem name="system0" space="entity" scale="1">		
+
+		<simpleemitter
+			bone="Bip01 Spine2"
+			spawnrate="50"
+			particlelife="1050"
+			gravity="0"
+			speed="52"
+			drag="0"
+			acceleration="0.10"		
+			expirelife="300"
+			material="/shared/effects/materials/mysticenergy2.material"
+			offsetsphere="0 0 0"
+			direction="0 0 -2"
+			position="0 0 0"
+			yawspeed="-360"
+			depthbias="100"
+			inheritvelocity=".25"
+
+		>
+
+			<particle 
+			
+				scale="1"
+				minangle="0"
+				maxangle="360"
+				minanglespeed="20"
+				maxanglespeed="150"
+				startcolor=".3 .1 .1"
+				midcolor=".1 .1 .3"
+				endcolor="0 0 0"
+				midcolorpos=".4"
+				startframe="0"
+				endframe="1"
+				startsize="20"
+				midsize="30"
+				endsize="1"
+				midsizepos=".3"	
+			/>
+			
+		</simpleemitter>		
+<!--	-->		
+			<model
+				model="orbit.mdf"
+				anim="idle"
+				scale="0.4"
+				roll="45"
+				position="0 0 70"		
+			>		
+				<billboard
+					bone="_bone_fx"
+					material="/shared/effects/materials/star_04.material"
+					color=".2 .4 1"
+					scale="1"
+				/>
+				
+				<trailemitter
+					bone="_bone_fx"
+					spawnrate="20"
+					particlelife="1350"
+					texpostime="1350"
+					texposscale="0.0"
+					texstretchscale="1.0"
+					material="/shared/effects/materials/arrow_trail.material"
+				>
+					<particle
+						color=".2 .2 1"
+						endcolor="0 0 0"
+						startsize="6"
+						endsize="0"					
+					/>
+				</trailemitter>			
+				
+			</model>
+		
+			<model
+				model="orbit.mdf"
+				anim="idle"
+				scale="0.5"
+				pitch="45"
+				position="0 0 70"		
+			>	
+				<billboard
+					bone="_bone_fx"
+					material="/shared/effects/materials/star_05.material"
+					scale="0.6"
+				/>	
+				<trailemitter
+					bone="_bone_fx"
+					spawnrate="20"
+					particlelife="1350"
+					texpostime="1350"
+					texposscale="0.0"
+					texstretchscale="1.0"
+					material="/shared/effects/materials/arrow_trail.material"
+				>
+					<particle
+						color=".2 1 .2"
+						endcolor="0 0 0"
+						startsize="6"
+						endsize="0"					
+					/>
+				</trailemitter>				
+			</model>
+
+			
+			<model
+				model="orbit.mdf"
+				anim="idle"
+				scale="0.6"
+				roll="-45"
+				yaw="180"
+				position="0 0 70"
+				lockup="1"
+			>	
+				<billboard
+					bone="_bone_fx"
+					material="/shared/effects/materials/star_07.material"				
+					scale=".7"
+				/>
+				<trailemitter
+					bone="_bone_fx"
+					spawnrate="20"
+					particlelife="1350"
+					texpostime="1350"
+					texposscale="0.0"
+					texstretchscale="1.0"
+					material="/shared/effects/materials/arrow_trail.material"
+				>
+					<particle
+						color=".8 .2 .8"
+						endcolor="0 0 0"
+						startsize="6"
+						endsize="0"					
+					/>
+				</trailemitter>				
+			</model>
+			
+				
+		
+		
+		
+		
+		
+		</particlesystem>
+		<particlesystem name="system1" space="world" scale="1">	
+		
+
+		<template name="flameup">
+			
+			<billboard
+				position="{position}"
+				bone="{bone}"
+				material="/shared/effects/materials/whitedot_blend.material"
+				scale="{scale}"
+				depthbias="20"
+				size="120"
+				color="0 0 0"
+			/>
+			
+			<simpleemitter
+				bone="{bone}"
+				spawnrate="30"
+				particlelife="750"
+				gravity="-3"
+				speed="5"
+				drag="0"
+				acceleration="0.10"		
+				expirelife="300"
+				material="/shared/effects/materials/mysticenergy.material"
+				offsetsphere="0 0 0"
+				position="{position}"
+				yawspeed="360"
+				depthbias="-100"
+				inheritvelocity=".25"
+			>
+
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="20"
+					maxanglespeed="150"
+
+					startcolor=".5 .1 .2"
+					midcolor=".1 .2 .7"
+					endcolor="0 0 0"
+					midcolorpos=".4"
+
+					startframe="0"
+					endframe="1"
+					
+					startsize="20"
+					midsize="30"
+					endsize="10"
+					scale="{scale}"
+					midsizepos=".3"					
+					
+					startalpha="0"
+					midalpha=".45"
+					endalpha="0"
+					midalphapos=".01"					
+				/>
+
+				
+			</simpleemitter>
+		
+		
+			<simpleemitter
+				bone="{bone}"
+				spawnrate="30"
+				particlelife="750"
+				gravity="-10"
+				speed="2"
+				drag="0"
+				acceleration="0.10"		
+				expirelife="300"
+				material="/shared/effects/materials/mysticenergy2.material"
+				offsetsphere="0 0 0"
+				direction="0 0 -2"
+				position="{position}"
+				yawspeed="-360"
+				depthbias="-100"
+				inheritvelocity=".25"
+
+			>
+
+				<particle 
+				
+					scale="{scale}"
+					minangle="0"
+					maxangle="360"
+					minanglespeed="20"
+					maxanglespeed="150"
+					startcolor=".5 .2 .2"
+					midcolor=".2 .2 1"
+					endcolor="0 0 0"
+					midcolorpos=".4"
+					startframe="0"
+					endframe="1"
+					startsize="20"
+					midsize="30"
+					endsize="1"
+					midsizepos=".3"	
+				/>
+				
+			</simpleemitter>
+			
+			<billboard
+				position="{position}"
+				bone="{bone}"
+				material="/shared/effects/materials/whitedot.material"
+				scale="{scale}"
+				depthbias="-20"
+				size="111"
+				color=".1 .1 .8"
+			/>
+		</template>
+
+		<template name="flameup_head">
+			
+			<billboard
+				position="{position}"
+				bone="{bone}"
+				material="/shared/effects/materials/whitedot_blend.material"
+				scale="{scale}"
+				depthbias="30"
+				size="120"
+				color="0 0 0"
+			/>
+			
+			<simpleemitter
+				bone="{bone}"
+				spawnrate="30"
+				particlelife="750"
+				gravity="-3"
+				speed="5"
+				drag="0.05"
+				acceleration="0.10"		
+				expirelife="300"
+				material="/shared/effects/materials/mysticenergy.material"
+				offsetsphere="0 0 0"
+				position="{position}"
+				yawspeed="360"
+				depthbias="-100"
+				inheritvelocity=".25"
+			>
+
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="20"
+					maxanglespeed="150"
+
+					startcolor=".5 .1 .2"
+					midcolor=".1 .2 .7"
+					endcolor="0 0 0"
+					midcolorpos=".4"
+
+					startframe="0"
+					endframe="1"
+					
+					startsize="20"
+					midsize="30"
+					endsize="10"
+					scale="{scale}"
+					midsizepos=".3"					
+					
+					startalpha="0"
+					midalpha=".45"
+					endalpha="0"
+					midalphapos=".01"					
+				/>
+
+				
+			</simpleemitter>
+		
+		
+			<simpleemitter
+				bone="{bone}"
+				spawnrate="30"
+				particlelife="750"
+				gravity="-10"
+				speed="2"
+				drag="0"
+				acceleration="0.10"		
+				expirelife="300"
+				material="/shared/effects/materials/mysticenergy2.material"
+				offsetsphere="0 0 0"
+				direction="0 0 -2"
+				position="{position}"
+				yawspeed="-360"
+				depthbias="-100"
+				inheritvelocity=".25"
+
+			>
+
+				<particle 
+				
+					scale="{scale}"
+					minangle="0"
+					maxangle="360"
+					minanglespeed="20"
+					maxanglespeed="150"
+					startcolor=".5 .2 .2"
+					midcolor=".2 .2 1"
+					endcolor="0 0 0"
+					midcolorpos=".4"
+					startframe="0"
+					endframe="1"
+					startsize="20"
+					midsize="30"
+					endsize="1"
+					midsizepos=".3"	
+				/>
+				
+			</simpleemitter>
+			
+			<billboard
+				position="{position}"
+				bone="{bone}"
+				material="/shared/effects/materials/whitedot.material"
+				scale="{scale}"
+				depthbias="-20"
+				size="111"
+				color=".1 .1 .8"
+			/>
+		</template>		
+		<instance name="flameup" bone="Bip01 L Finger1" scale="0.6" position="0 0 0"/>
+		<instance name="flameup" bone="Bip01 R Finger1" scale="0.6" position="0 0 0"/>
+		<instance name="flameup_head" bone="Box15" scale="0.78" position="0 0 10" />
+		
+		
+	
+		
+
+	
+	
+		<groundsprite
+			material="/shared/effects/materials/whirl_ground.material"
+			color="1 1 1"
+			size="55"
+			alpha="1"
+			yawspeed="-80"
+			
+		/>
+		
+		<billboard
+			material="/shared/effects/materials/whirl_ground.material"
+			color="0 0 0"
+			size="132"
+			alpha="1"
+			rollspeed="-100"
+			pitch="-90"
+			depthbias="-10"
+			lockup="1"
+			lockright="1"
+		/>		
+		<billboard
+			material="/shared/effects/materials/whirl_ground.material"
+			color=".1 .2 .5"
+			size="72"
+			alpha="1"
+			rollspeed="-220"
+			pitch="-90"
+			depthbias="-20"
+			lockup="1"
+			lockright="1"
+		/>		
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnparticlesystem instance="instance1" particlesystem="system1" />
+		
+      		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

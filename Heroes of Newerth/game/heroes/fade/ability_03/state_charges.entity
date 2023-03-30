@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Fade_Ability3_Charges"
+	
+	ishidden="true"
+	impactinterval="10000"
+	deathpersist="true"
+>
+	<onimpact>
+		<addcharges entity="proxy_entity" count="1" />
+	</onimpact>
+</state>

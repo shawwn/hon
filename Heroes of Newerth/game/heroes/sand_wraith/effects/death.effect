@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="Sandy Death">
+	<definitions>
+	
+		<modifier
+			life="20000"
+			name="modifier0"
+			color="1 1 1"
+			startalpha="1"			
+			midalpha="0"
+			endalpha="0"
+			midalphapos="0.05"
+		/>		
+		
+	
+		<particlesystem name="system0" space="world" >
+	<!--<model
+				life="1000"
+				model="/heroes/sand_wraith/effects/rags.mdf"
+				anim="idle"
+				color="1 1 1"
+				
+				startalpha=".6 .6 .6"
+				midalpha="1 1 1"
+				endalpha="0 0 0"
+				midalphapos=".3"
+			>
+			</model>-->
+			<model
+				life="5000"
+				model="/heroes/sand_wraith/effects/death.mdf"
+				anim="idle"
+				startcolor="1 1 1"
+				endcolor="1 1 1"
+				startalpha="1 1 1"
+				midalpha="1 1 1"
+				endalpha="1 1 1"
+				midalphapos=".25"
+			>
+			</model>
+			
+		
+			
+	
+
+      </particlesystem>
+   </definitions>
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<spawnmodifier instance="instance1" modifier="modifier0"/>  
+	
+	<waitfordeath instance="instance0" />
+	<wait duration="20000"/>
+	<!-- <die /> -->
+</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->

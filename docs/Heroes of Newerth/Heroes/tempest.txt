@@ -1,0 +1,20 @@
+Water Dude
+===========
+
+
+Good / Range / Intelligence
+
+
+
+
+Ability 1: Waveform
+Description: This is like morphling’s waveform ability. It can be cast from a puddle though (see ability below). Casting from puddle creates the puddle on the other end.
+
+Ability 2: Puddle
+Description: When activated, he collapses into a large puddle of water. He cannot be targeted or attacked. AOE damage will still hit him though. Enemy units in the puddle will get life drained from them into the puddle (which is you at this point). Use an effect like dd overhead on their origin. They will also become slowed (doesn’t need another effect, the drain effect is enough). You can return to normal form whenever you want. Waveform and Whirlpool can be cast from this form. This drains manacost per second t keep it active.
+
+Ability 3: Torrent   
+Description:  This ability has 2 versions, an inwards and an outwards version. If you cast the inwards one, a gush of water pushes units in an area inwards at target point, dealing some damage. If you cast the outwards version, it will create the gush going outwards from a point, pushing units in the area away and dealing some damage.
+
+Ultimate: Whirlpool
+Description: He creates a whirlpool effect at the location he is standing in. Enemy units in it can still attack and cast. They can move, but only in a direction not opposing the motion of the whirlpool, otherwise they move considerably slower. While they are in the whirlpool, they take damage per second. This can be cast from puddle form. This is not channel, the hero can move out anytime he wants.

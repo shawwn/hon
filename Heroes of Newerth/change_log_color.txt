@@ -1,0 +1,66 @@
+Welcome to Heroes of Newerth!
+
+*** For support, visit http://www.heroesofnewerth.com/
+
+*** Report any bugs via the website
+
+*** Discuss the game on the forums at http://forums.heroesofnewerth.com
+
+^970Version 2.0.6.1^*
+-------------
+^292-^* Fixed Helga Hammerstorm icon
+
+^970Version 2.0.6^*
+-------------
+^292-^* Added a new Alt Avatar for Gladiator: Adventure Gladiator
+^292-^* Added a new Alt Avatar for Hammerstorm: Helga Hammerstorm
+
+^292-^* Based on player feedback and data from the last month of matches significant improvements to the MM algorithm have been made which should result in matches being much more balanced
+^292-^* Groups waiting more than a few minutes in the queue should now find themselves being placed into a fair match much sooner than previously
+^717*^* This also includes groups with very high or very low MMR that were having to wait much longer than the average queue times
+
+^292-^* Added more icons and another bundle
+^292-^* Vote kick has been re-added to the game
+^717*^* A kick vote against someone can only be called once every 3 minutes
+^292-^* Concede now only requires 4/5 "Yes" votes after 30 minutes instead of normal 5/5
+^292-^* Fixed a bunch of console errors
+^292-^* Fixed an issue on the hero selection screen for the Hellbourne team
+^717*^* Part of the UI was overlapping the hero selected circle and causing issues
+^292-^* Can now click store item icons to view bundle/avatar/announcer preview windows
+^292-^* Add Romanian language to system bar language selection combobox
+^292-^* Tweak to progression interface to display 4-digit cumulative stats
+^292-^* Added a "Back" button [back to player stats] for match stats panel when clicking to view another player's stats for a particular match
+^292-^* Fixed the AFK kick vote to indicate that it is team only
+
+^292-^* Items in the shop now show their total cost by default
+^717*^* To see just the recipe cost, hold down control with the shop open
+^292-^* ^090Wards^* now have a 'Timer' bar above them that shows how much time is left at a glance
+^292-^* Fixed a bug where ^090Striders^* could get charges while on cooldown
+
+^292-^* Re-recorded ^079Gladiator's^* voice
+
+^970Version 2.0.5^*
+-------------
+^292-^* Added new Alt Avatar for Arachna, "Queen Arachna"
+^292-^* Added new Flags, Icons, and Bundles
+^292-^* Fixed up Chipper recommended items
+^292-^* "Ownage" now only plays on the fifth team kill streak, not all kills five or greater
+
+^292-^* Fixed weather effects stopping when joining a new game
+^292-^* Fixed Alt Avatars being selected during hero loading
+^292-^* Fixed a crash when someone selected an invalid Alt Avatar
+^292-^* The Wards stat is now Wards Places instead of Wards Bought
+
+^090Striders^*
+^292-^* Now begins to lose charges (and consequently, speed) when you are within 900 units of a visible enemy hero
+^717*^* The max number of charges is lowered by 1 for every 100 units closer you are to an enemy hero
+
+^079Dampeer^*
+^292-^* Fixed some abilities playing through fog
+^292-^* No longer invulnerable when charging at someone
+
+^079Legionnaire^*
+^292-^* Fixed the no damage charge bug
+
+^079Keeper of the Forest^*
+^292-^* Stealth is now removed when the attack completes, not when it starts

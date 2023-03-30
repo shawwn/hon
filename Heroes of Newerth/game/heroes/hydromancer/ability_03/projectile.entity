@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Hydromancer_Ability3"
+
+	speed="1500"
+	gravity="0"
+
+	modelscale="1.0"
+	model="/shared/models/invis.mdf"
+	traileffect="effects/trail.effect"
+	
+	canturn="true"
+	flying="true"
+	pathing="true"
+	flyheight="0"
+>
+	<onspawn>
+		<spawnaffector name="Affector_Hydromancer_Ability3" target="this_entity" owner="this_owner_entity" />
+	</onspawn>
+	<ondeath>
+			<playanim name="idle" target="source_entity" />
+	</ondeath>
+</projectile>

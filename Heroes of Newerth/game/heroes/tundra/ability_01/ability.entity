@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Tundra1"
+	
+	icon="icon.tga"
+	
+	anim="ability_1"
+	casttime="800"
+	castactiontime="500"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_dual_position"
+	casteffecttype="SuperiorMagic SuperiorPhysical"
+	targetscheme="all_other_units"
+	
+	manacost="120"
+	cooldowntime="13000"
+	novoiceresponse="true"
+	
+	range="1300"
+>
+	<onimpact>
+		<spawnunit name="Gadget_Tundra_Ability1" target="source_position" pushentity="true" duration="-1" />
+		<spawnprojectile name="Projectile_Tundra_Ability1" source="source_entity" bind="stack_entity" bindturn="true" proxy="stack_entity" target="target_position" pushentity="true" param="1" />
+		<spawnaffector name="Affector_Tundra_Ability1" target="stack_entity" />
+		<spawnunit name="Gadget_Tundra_Ability1" target="source_position" pushentity="true" duration="-1" />
+		<spawnprojectile name="Projectile_Tundra_Ability1_Return" source="source_entity" bind="stack_entity" bindturn="true" proxy="stack_entity" target="target_position" pushentity="true" param="1" />
+		<spawnaffector name="Affector_Tundra_Ability1" target="stack_entity" />
+	</onimpact>
+</ability>

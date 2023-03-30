@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="false">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world">
+
+			<sound
+				delay="100"
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2200"
+				volume="1"
+				sample="../sounds/impact.wav"
+			/>
+
+			<groundsprite
+				material="/shared/effects/materials/ground_smash_overlay.material"
+				delay="100"
+				size="118"
+				startalpha=".85"
+				endalpha="0"
+				life="1500"
+			/>
+
+			<billboard						
+				bone="_bone_centerofchest"
+				material="/shared/effects/materials/glow_01.material"
+				size="110"	
+				depthbias="-50"		
+				color=".5 .2 .0"					
+				endcolor="0"
+				life="300"						
+			/>
+
+			<simpleemitter
+				position="0 0 20"
+				life="500"
+				count="12"
+				spawnrate="1430"
+				depthbias="-150"
+				minparticlelife="1000"
+				maxparticlelife="1200"
+				speed="130"
+				drag="0.06"
+          			material="/shared/effects/materials/dust_smoke_10.material"
+				offsetsphere="40"
+         	>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					color=".5"
+					startalpha=".3"
+					endalpha="0"
+					startsize="30"
+					endsize="100"
+					scale="2"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				position="0 0 20"
+				life="1000"
+				count="12"
+				spawnrate="600"
+				depthbias="-40"
+				minparticlelife="1000"
+				maxparticlelife="2800"
+				speed="1450"
+				drag="0.1"
+				offsetsphere="50"
+          			material="/shared/effects/materials/dust_smoke_06.material"
+         		>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="0.2 .18 0"
+					endcolor="0"
+					startsize="20"
+					endsize="65"
+					startalpha=".3"
+					endalpha="0"
+					minanglespeed="-50"
+					maxanglespeed="50"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				position="0 0 20"
+				life="700"
+				count="12"
+				spawnrate="430"
+				depthbias="-20"
+				minparticlelife="600"
+				maxparticlelife="1400"
+				speed="450"
+				drag="0.1"
+				offsetsphere="42"
+          			material="/shared/effects/materials/dust_smoke_03.material"
+         		>
+				<particle 
+					minanglespeed="-80"
+					maxanglespeed="80"
+					minangle="-360"
+					maxangle="0"
+					startcolor="1"
+					endcolor="0"
+					startalpha=".3"
+					endalpha="0"
+					startsize="50"
+					endsize="95"
+					endwidth="110"
+				/>
+
+				<particle 
+					minanglespeed="-80"
+					maxanglespeed="80"
+					minangle="-360"
+					maxangle="0"
+					startcolor=".8 .7 .6"
+					endcolor="0"
+					startalpha=".3"
+					endalpha="0"
+					startsize="50"
+					endsize="95"
+					endwidth="110"
+				/>
+
+			</simpleemitter>
+
+			<billboard						
+				bone="_bone_centerofchest"
+				material="/shared/effects/materials/shieldstarfish_02.material"
+				endsize="170"	
+				depthbias="-50"		
+				color=".5 .2 .0"					
+				endcolor="0"
+				life="200"						
+			/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

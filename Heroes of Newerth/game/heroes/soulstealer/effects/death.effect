@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+	<definitions>
+	
+		<modifier
+			name="modifier0"
+			life="2500"
+			startcolor="1 1 1"
+			midcolor="1 1 1"
+			endcolor="1.5 12 11"
+			midcolorpos=".3"
+			startalpha="1"
+			midalpha="0"
+			endalpha="0"
+			midalphapos=".6"
+		/>
+		
+		<trailemitter
+			name="trail_01"
+			life="1000"
+			spawnrate="30"
+			startminparticlelife="1000"
+			startmaxparticlelife="1000"
+			endminparticlelife="1"
+			endmaxparticlelife="1" 
+			texpostime="2000"
+			texposscale="1.8"
+			texstretchscale="0"
+			position="0 0 0"
+			material="/shared/effects/materials/arrow_trail.material"
+		>
+			<particle
+				startcolor="0 0 0"
+				midcolor="0 0 0"
+				endcolor=".25 0 .5"
+				startsize="0"
+				midsize="10"
+				endsize="0"
+				midcolorpos=".1"
+				midsizepos=".1"
+			/>
+		</trailemitter>
+
+	<particlesystem name="system0" space="world" scale=".6">
+	
+		<simpleemitter
+		life="750"
+			bone="_bone_centerofchest"
+			spawnrate="20"
+			particlelife="500"
+			speed="30"
+			material="/shared/effects/materials/smokering.material"
+			offsetsphere="15"
+		>
+			<particle
+				minangle="0"
+				maxangle="360"
+				minanglespeed="-40"
+				maxanglespeed="-40"
+				startcolor=".25 0 .5"
+				endcolor="0"
+				startsize="50"
+				endsize="200"
+			/>
+		</simpleemitter>
+
+		<simpleemitter
+			spawnrate="60"
+			count="10"
+			particlelife="800"
+			gravity="-35"
+			speed="40"
+			drag="0"
+			acceleration="0"
+			position="0 0 0"
+			delay="300"
+			offsetsphere="15 15 50"
+			minangle="0"
+			maxangle="0"
+			direction="0 0 0"
+			offsetdirection="0 105 0"
+			offsetradial="0 0 0"
+		>
+
+			<particle
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+				maxanglespeed="0"
+				startcolor="0 0 0"
+				midcolor=".3 .5 1"
+				endcolor=".1 .1 .1"
+				midcolorpos=".4"
+				startframe="0"
+				endframe="1"
+				startwidth="20"
+				midwidth="15"
+				endwidth="1"
+				midwidthpos=".5"
+				startheight="100"
+				endheight="280"
+				startalpha="0"
+				midalpha=".1"
+				endalpha="0"
+				midalphapos=".5"
+				startstickiness="0"
+				endstickiness=".5"
+				lockup="true"
+			/>
+
+			<particle
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+				maxanglespeed="0"
+				startcolor="0 0 0"
+				midcolor="1 .3b .7"
+				endcolor=".1 .1 .1"
+				midcolorpos=".4"
+				startframe="0"
+				endframe="1"
+				startwidth="20"
+				midwidth="15"
+				endwidth="1"
+				midwidthpos=".5"
+				startheight="100"
+				endheight="280"
+				startalpha="0"
+				midalpha=".1"
+				endalpha="0"
+				midalphapos=".5"
+				startstickiness="0"
+				endstickiness=".5"
+				lockup="true"
+			/>
+
+		</simpleemitter>
+			<trackeremitter
+				count="22"
+				targetbone="_bone_centerofchest"
+				tracktype="angular"
+				trackspeed="11.0"
+				drag="0"
+				spawnrate="250"
+				particlelife="2000"
+				gravity="-50"
+				position="0 0 50"
+				offsetsphere="44 44 40"
+				minspeed="10.0"
+				maxspeed="220.0"
+				targetposition="0 0 0"
+				acceleration="30.0"
+				direction="0.0 0.0 1.0"
+				inheritvelocity="0.0"
+				distancelife="true"
+			>
+				<particle
+					emitter0="trail_01"
+				/>
+
+			</trackeremitter>
+
+			<simpleemitter
+				count="15"
+				spawnrate="100"
+				minparticlelife="750"
+				maxparticlelife="1250"
+				gravity="0"
+				drag="0"
+				position="0 0 100"
+				offsetsphere="50 50 0"
+				material="/shared/effects/materials/neb_add.material"
+			>
+				<particle
+					maxangle="360"
+					minanglespeed="-6"
+					maxanglespeed="6"
+					scale="5"
+					startcolor="0 .1 .25"
+					midcolor="0 .1 .25"
+					endcolor="0 0 0"
+					midcolorpos=".4"
+					startsize="15"
+					endsize="45"
+				/>
+			</simpleemitter>
+
+			<billboard
+			delay="1300"
+				life="500"
+				color="1.0 1.0 1.0"
+				midalphapos="0.25"
+				startparam="0.05555"
+				endparam="0.0"
+				startsize="250"
+				endsize="50"
+				startalpha="0"
+				midalpha=".9"
+				endalpha="0"
+				depthbias="-49"
+				position="0 0 20"
+				material="/shared/effects/materials/refract_pinch.material"
+				lockup="0"
+				pitch="0"
+			/>
+
+			<billboard
+			delay="1300"
+				life="500"
+				color="1.0 1.0 1.0"
+				midalphapos="0.25"
+				param="0.0555"
+				startsize="64"
+				endsize="264"
+				startalpha="0"
+				midalpha=".9"
+				endalpha="0"
+				depthbias="-49"
+				position="0 0 20"
+				material="/shared/effects/materials/refract_ring.material"
+				lockup="0"
+				pitch="0"
+			/>
+
+			<simpleemitter
+				life="1000"
+				bone="_bone_centerofchest"
+				spawnrate="15"
+				particlelife="750"
+				speed="30"
+				material="/shared/effects/materials/refract_swirl.material"
+				offsetsphere="45"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-40"
+					maxanglespeed="-40"
+					startalpha=".15"
+					endalpha="0"
+					startsize="60"
+					endsize="200"
+					startparam="0.2"
+					endparam="0.0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="Bip01 Spine2"
+				spawnrate="200"
+				count="155"
+				particlelife="500"
+				gravity="20"
+				speed="150"
+				drag=".01"
+				acceleration="0.0"
+				position="0 0 -7"
+				offsetsphere="0 0 0"
+				material="/shared/effects/materials/blood1.material"
+				delay="200"
+				minangle="-30"
+				maxangle="30"
+				direction="-.5 1 0"
+				offsetdirection="0 0 0"
+				offsetradial="0 0 0"
+				particledirectionalspace="local"
+			>
+				<particle
+					minangle="-360"
+					maxangle="360"
+					angle="180"
+					color=".2 .2 .2 "
+					frame=".5"
+					startsize="20"
+					midsize="10"
+					minendsize="25"
+					maxendsize="60"
+					startalpha="1"
+					midalpha=".8"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				delay="100"
+				bone="_bone_fx_04"
+				spawnrate="480"
+				life="80"
+				particlelife="500"
+				gravity="0"
+				speed="0"
+				drag=".01"
+				acceleration="0.0"
+				position="0 0 0"
+				offsetsphere="0 0 0"
+				material="/shared/effects/materials/blood1.material"
+				mininheritvelocity=".00"
+				maxinheritvelocity=".1"
+			>
+				<particle
+					minangle="-360"
+					maxangle="360"
+					angle="180"
+					color=".2 .2 .2 "
+					anglespeed="20"
+					frame=".5"
+					startsize="20"
+					maxendsize="80"
+					startalpha="1"
+					endalpha="0"
+					
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				delay="100"
+				bone="_bone_fx_14"
+				spawnrate="480"
+				life="80"
+				particlelife="500"
+				gravity="0"
+				speed="0"
+				drag=".01"
+				acceleration="0.0"
+				position="0 0 0"
+				offsetsphere="0 0 0"
+				material="/shared/effects/materials/blood1.material"
+				mininheritvelocity=".00"
+				maxinheritvelocity=".1"
+			>
+				<particle
+					minangle="-360"
+					maxangle="360"
+					angle="180"
+					color=".2 .2 .2 "
+					anglespeed="20"
+					frame=".5"
+					startsize="20"
+					maxendsize="80"
+					startalpha="1"
+					endalpha="0"
+					
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+		
+	</definitions>
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<spawnmodifier instance="instance1" modifier="modifier0"/>  
+	<camerashake2 scale="11.0" radius="1200" duration="400" frequency="22" />
+	<waitfordeath instance="instance0" />
+</thread>
+</effect>

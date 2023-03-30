@@ -1,0 +1,6 @@
+*.suo
+Release
+Debug
+*.ncb
+*.user
+VTune

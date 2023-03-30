@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" useentityeffectscale="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="entity" scale="0.64">
+
+			<simpleemitter
+				bone="_bone_head"
+				spawnrate="15"
+				minparticlelife="350"
+				maxparticlelife="1200"
+				minspeed="0"
+				maxspeed="300"
+				drag="0.07"
+				depthbias="-100"
+				offsetsphere="30"
+				angle="30"
+				material="/shared/effects/materials/phantom_smoke_04.material"
+			>
+				<particle
+					maxangle="360"
+					minanglespeed="-150"
+					maxanglespeed="150"
+					startcolor="1 0 1"
+					endcolor="0 0 0"
+					minstartsize="10"
+					maxstartsize="25"
+					endsize="110"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_head"
+				spawnrate="25"
+				minparticlelife="150"
+				maxparticlelife="800"
+				minspeed="0"
+				maxspeed="700"
+				drag="0.07"
+				angle="70"
+				offsetsphere="25 25 40"
+				material="/shared/effects/materials/mysticenergy2.material"
+			>
+				<particle
+					minangle="-40"
+					maxangle="60"
+					minanglespeed="-110"
+					maxanglespeed="110"
+					startcolor=".3 0 1"
+					endcolor="0"
+					size="15"
+					minendscale="5"
+					maxendscale="6"
+					endstickiness=".3"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_head"
+				spawnrate="35"
+				minparticlelife="100"
+				maxparticlelife="500"
+				minspeed="0"
+				maxspeed="500"
+				drag="0.05"
+				angle="20"
+				offsetsphere="25"
+				depthbias="-20"
+				material="/shared/effects/materials/femme_lightning_01.material"
+			>
+				<particle
+					minangle="-70"
+					maxangle="70"
+					minanglespeed="-110"
+					maxanglespeed="110"
+					startcolor="0 .5 1"
+					endcolor="0"
+					size="8"
+					minendscale="5"
+					maxendscale="6"
+					endstickiness=".3"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_head"
+				spawnrate="10"
+				particlelife="1000"
+				speed="12"
+				offsetsphere="15"
+				material="/shared/effects/materials/refract_ring.material"
+			>
+				<particle
+					startalpha=".7"
+					endalpha="0.0"
+					maxangle="360"
+					anglespeed="-90"
+					startsize="0"
+					endsize="270"
+					startparam=".1"
+					endparam="0"
+					
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+	  	<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

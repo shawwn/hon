@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Krixi4"
+
+	icon="icons/ability_4.tga"
+	
+	anim="ability_4"
+	casttime="1000"
+	castactiontime="500"
+	casteffect="effects/ability_04/ability_04.effect"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_self"
+	targetscheme="visible_enemy_units" 
+	targetradius="700"
+	casteffecttype="Magic"
+	
+	manacost="150,200,250"
+	cooldowntime="160000"
+>
+	<onimpact>
+		<spawnaffector name="Affector_Krixi_Ability4" target="source_entity"/>
+	</onimpact>
+	
+	<modifier key="ult_boost" modpriority="100"
+		displayname="true"
+		cooldowntime="90000"
+	>
+		<onimpact>
+			<spawnaffector name="Affector_Krixi_Ability4" target="source_entity" />
+		</onimpact>
+	</modifier>
+</ability>

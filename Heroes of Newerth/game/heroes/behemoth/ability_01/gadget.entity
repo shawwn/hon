@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Behemoth_Ability1"
+		
+	icon=""
+	portrait=""
+	model="effects/fissure.mdf"
+	skin=""
+	
+	passiveeffect="effects/impact.effect"
+	spawneffect=""
+	respawneffect=""
+	isselectable="false"
+	invulnerable="true"
+	selectsound=""
+	orderconfirmedsound=""
+	
+	preglobalscale="0.9"
+	modelscale="1.0"
+	effectscale="1.0"
+	boundsheight="38"
+	boundsradius="42"
+	selectionradius="0"
+	targetoffset="0 0 0"
+
+	canrotate="false"
+	ismobile="false"
+	isflying="false"
+	clearvision="false"
+	drawonmap="false"
+
+	attacktype="none"
+	
+	lifetime="8000"
+	
+	blocking="true"
+>
+</gadget>

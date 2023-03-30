@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Engineer_Ability4_Zap_Immunity"
+
+	icon="icon.tga"
+	passiveeffect=""
+
+	
+	effecttype=""
+>
+	<onexpired>
+		<condition target="proxy_entity" test="target_type dead" />
+		<else>
+			<condition test="not_hasstate State_Item3E">
+				<dispel type="StatusBuff" />
+				<applystate name="State_Engineer_Ability4_Zap" target="target_entity" duration="2000" />
+				<damage effecttype="Splash" amount="100" target="target_entity" />
+			</condition>
+		</else>
+	</onexpired>
+</state>

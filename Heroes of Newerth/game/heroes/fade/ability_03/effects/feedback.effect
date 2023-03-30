@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="tracker" persistent="true" scale="2">
+	<definitions>
+	
+		<simpleemitter
+			name="trail_01"
+			life="750"
+			spawnrate="100"
+			startminparticlelife="2250"
+			startmaxparticlelife="2250"
+			endminparticlelife="1"
+			endmaxparticlelife="1"
+			position="0 0 0"
+			material="/shared/effects/materials/arrow_trail_blend.material"
+		>
+			<particle
+				startcolor="0 0 0"
+				midcolor="0 0 0"
+				endcolor="0 0 0"
+				startsize="0"
+				midsize="6"
+				endsize="0"
+				startalpha=".25"
+				endalpha="0"
+				midcolorpos=".1"
+				midsizepos=".1"
+			/>
+		</simpleemitter>
+		
+		<particlesystem name="system0" space="world" >
+
+			<trackeremitter
+				count="15"
+				bone="_bone_centerofchest"
+				owner="target"
+				targetbone="_bone_centerofchest"
+				targetowner="source"
+				tracktype="angular"
+				trackspeed="10"
+				drag="0"
+				spawnrate="250"
+				particlelife="1000"
+				gravity="-50"
+				offsetsphere="5 5 5"
+				minspeed="10.0"
+				maxspeed="220.0"
+				acceleration="85"
+				direction="0 0 1"
+				inheritvelocity="0.0"
+				distancelife="true"
+			>
+					<particle
+						emitter0="trail_01"
+					/>
+			</trackeremitter>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				spawnrate="250"
+				count="15"
+				particlelife="750"
+				gravity="5"
+				speed="10"
+				acceleration="0"
+				material="/shared/effects/materials/phantom_black.material"
+				offsetsphere="40 40 0"
+				minangle="0"
+				maxangle="180"
+				direction="0 0 1"
+				offsetdirection="0 0 0"
+				offsetradial="0 0 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="0"
+					maxanglespeed="180"
+					color="0 0 0"
+					startframe="0"
+					endframe="35"
+					minsize="85"
+					maxsize="110"
+					midsizepos=".8"
+					startalpha="0"
+					midalpha=".65"
+					endalpha="0"
+					midalphapos=".3"
+				/>
+			</simpleemitter>
+
+
+		</particlesystem>
+	</definitions>
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<waitfordeath instance="instance0" />
+</thread>
+</effect>
+

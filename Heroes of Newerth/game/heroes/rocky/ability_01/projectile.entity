@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Rocky_Ability1"
+
+	speed="1200"
+	gravity="0"
+
+	modelscale="1"
+	model="/shared/models/invis.mdf"
+	
+	traileffect="effects/trail.effect"	
+	effectscale=""
+	impacteffect=""
+>
+</projectile>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Fairy_Ability3"
+
+	speed="1000"
+	gravity="0"
+
+	modelscale="2"
+	model="model.mdf"
+
+	effectscale="1.0"
+	impacteffect="impact.effect"
+	traileffect="glow.effect"
+	
+	canturn="true"
+	flying="true"
+	flyheight="100"
+	
+	maxtouches="0"
+	maxtouchespertarget="1"
+	touchradius="96"
+	touchtargetscheme="enemy_units"
+	toucheffecttype="Magic"
+>
+	<onimpact>
+		<resettouches source="this_entity"/>
+		<condition test="redirect">
+		</condition>
+		<else>
+			<retarget target="this_owner_entity" />
+		</else>
+	</onimpact>
+	
+	<ontouch>
+		<applystate name="State_Stunned" duration="750,1000,1250,1500"/>
+		<damage effecttype="Magic" amount="50,85,120,155" /> 
+	</ontouch>
+</projectile>

@@ -1,0 +1,3778 @@
+Frames: 33647
+Total Bytes: 23423115
+Snapshot Header Bytes: 605628
+Events: 32769
+Event Bytes: 776818
+Reliable Game Data Bytes: 306495
+Game Data Bytes: 143110
+State String Bytes: 0
+
+Name                               Count     Bytes    Header     Flags    Fields
+================================================================================
+Entity Snapshots                  637756  20109638   2551024   1951156  15607458
+Delete                              8834         0     35336         0         0
+
+Building_Academy                    1696     16999      6784      3396      6819
+Building_Armory                     1200     12046      4800      2404      4842
+Building_Garrison                   3512     37965     14048      7036     16881
+Building_GroveMine                  4245     45640     16980      8148     20512
+Building_Lair                        158      1616       632       321       663
+Building_Monastery                  1201     12049      4804      2406      4839
+Building_Nexus                      2360     23705      9440      4728      9537
+Building_Sanctuary                  1538     15427      6152      3082      6193
+Building_ShieldTower                1503     15118      6012      3010      6096
+Building_SiegeWorkshop              1921     19561      7684      3846      8031
+Building_SteamMine                  9859    102306     39436     19766     43104
+Building_StrataSpire                 906      9101      3624      1816      3661
+Building_Stronghold                    6        87        24        15        48
+Building_SubLair                    1636     16454      6544      3277      6633
+Consumable_AmmoPack                   13       130        52        13        65
+Consumable_AmmoSatchel                 4        40        16         4        20
+Consumable_Chainmail                  17       170        68        17        85
+Consumable_HealthMajor                44       444       176        44       224
+Consumable_HealthMinor               182      1661       728       182       751
+Consumable_HealthReplenish          1011      9160      4044      1011      4105
+Consumable_HealthShrine                6        60        24         6        30
+Consumable_ManaMajor                   6        59        24         6        29
+Consumable_ManaMinor                   2        20         8         2        10
+Consumable_ManaShrine                  4        40        16         4        20
+Consumable_Platemail                   9        82        36         9        37
+Consumable_SpeedBoost                  8        80        32         8        40
+Entity_Chest                           5       175        20         5       150
+Entity_ClientInfo                   7060     65778     28240     14302     23236
+Entity_GameInfo                        3        43        12         3        28
+Entity_NpcController                   4        84        16        12        56
+Entity_Soul                         8944    152908     35776      8944    108188
+Entity_TeamInfo                    30255    277211    121020     31001    125190
+Gadget_AmmoDepot                      34       690       136        84       470
+Gadget_DemoCharge                     34       768       136       111       521
+Gadget_ElectricEye                    72      1108       288       120       700
+Gadget_HealthShrine                    9       112        36        13        63
+Gadget_HumanOfficerSpawnFlag          66      1385       264       170       951
+Gadget_ManaShrine                      3        54        12         7        35
+Gadget_Sentry                        299      3484      1196       379      1909
+Gadget_ShieldGenerator                 8       151        32        18       101
+Gadget_Venus                        2084     29095      8336      4026     16733
+Gun_Crossbow                         269      1991      1076       269       646
+Gun_HolyBolt                          55       508       220        55       233
+Gun_ImpFire                           34       272       136        34       102
+Gun_Launcher                         174      1453       696       174       583
+Gun_Lightning                         98       958       392        98       468
+Gun_Locusts                          416      3836      1664       416      1756
+Gun_Mortar                           323      2646      1292       323      1031
+Gun_Ravager                         5078     35651     20312      5078     10261
+Gun_Repeater                        1992     14067      7968      1992      4107
+Gun_Rifle                            570      4035      2280       570      1185
+Gun_Shotgun                           40       339       160        40       139
+Gun_SniperBow                         90       752       360        90       302
+Gun_Venom                            190      1764       760       190       814
+Melee_BattleAxe                       13       104        52        13        39
+Melee_BearlothSwipe                   36       288       144        36       108
+Melee_Broadswords                     35       280       140        35       105
+Melee_ConjurerClaws                   30       240       120        30        90
+Melee_Hammer                          15       120        60        15        45
+Melee_ShifterClaws                    52       416       208        52       156
+Melee_ShortBlades                     36       288       144        36       108
+Melee_SpiritHammer                     6        48        24         6        18
+Melee_Staff                           11        88        44        11        33
+Melee_SummonerStaff                   60       480       240        60       180
+Npc_Critter                        13706    270336     54824     27773    187739
+OfficerCommand_Attack2               128      1024       512       128       384
+OfficerCommand_Follow2               128      1024       512       128       384
+OfficerCommand_Move2                 128      1024       512       128       384
+Persistant_Item                      574      5453      2296       574      2583
+Pet_Bearloth                       29691    624952    118764     65675    440513
+Pet_Imp                            23151    518367     92604     61732    364031
+PetCommand_Attack                     49       392       196        49       147
+PetCommand_Follow                     49       392       196        49       147
+PetCommand_Move                       49       392       196        49       147
+Player_Chaplain                    16314    648056     65256     66193    516607
+Player_Commander                    8804    148909     35216      9128    104565
+Player_Conjurer                    34778   1522860    139112    144646   1239102
+Player_Engineer                    28977   1167463    115908    105272    946283
+Player_Legionnaire                 22388   1018791     89552     92350    836889
+Player_Marksman                    58415   2513379    233660    237043   2042676
+Player_Observer                      622     13291      2488      2082      8721
+Player_Savage                      71097   3162211    284388    283223   2594600
+Player_Shaman                       9620    437016     38480     42906    355630
+Player_ShapeShifter                61209   2610097    244836    245120   2120141
+Player_Steambuchet                  2984    113934     11936     11200     90798
+Player_Summoner                    83208   3556566    332832    350119   2873615
+Projectile_Arrow                      56      2403       224        56      2123
+Projectile_Bolt                      302     13140      1208       302     11630
+Projectile_FrostBolt                  75      2871       300        75      2496
+Projectile_Grenade                   582     21042      2328       582     18132
+Projectile_Holy                       59      2235       236        59      1940
+Projectile_ImpFireball               521     19721      2084       521     17116
+Projectile_Locust                    501     18485      2004       501     15980
+Projectile_NpcShot                    93      4626       372       267      3987
+Projectile_Rocket                    123      4275       492       123      3660
+Projectile_SiegeFire                  17       625        68        17       540
+Projectile_SiegeStone                 19       743        76        19       648
+Projectile_VenomSpore               2658     97658     10632      2658     84368
+Prop_BaseBuilding                      2        52         8         6        38
+Prop_Mine                            724      7346      2896      1449      3001
+Prop_Scar                              2        66         8        10        48
+Siege_FireBombardment                 17       164        68        17        79
+Siege_StoneBombardment                20       191        80        20        91
+Skill_AmmoDepot                       24       217        96        24        97
+Skill_BackStab                        63       595       252        63       280
+Skill_Bash                            18       157        72        18        67
+Skill_BeastBuild                      30       240       120        30        90
+Skill_Blind                           81       773       324        81       368
+Skill_Build                           15       120        60        15        45
+Skill_Burrow                        2275     20607      9100      2275      9232
+Skill_Cheetah                         69       633       276        69       288
+Skill_CriticalStrike                  57       530       228        57       245
+Skill_DemoCharge                      55       519       220        55       244
+Skill_Disembark                        5        40        20         5        15
+Skill_DoubleSwing                     62       583       248        62       273
+Skill_ElectricEye                     48       436       192        48       196
+Skill_HealingWard                     11       109        44        11        54
+Skill_HumanOfficerPortal            3251     29439     13004      3251     13184
+Skill_Morale                          48       433       192        48       193
+Skill_Rage                            51       472       204        51       217
+Skill_Reconstitute                    25       248       100        25       123
+Skill_Riposte                         18       165        72        18        75
+Skill_Sacrifice                       61       593       244        61       288
+Skill_Sentry                          86       782       344        86       352
+Skill_ShieldGenerator                 17       146        68        17        61
+Skill_Stealth                       1047      9567      4188      1047      4332
+Skill_SteamBoost                       9        92        36         9        47
+Skill_WhirlingBlade                   24       231        96        24       111
+Spell_Attrition                       17       158        68        17        73
+Spell_BeastHeal                       18       168        72        18        78
+Spell_CommanderCenturionArmor         19       177        76        19        82
+Spell_CommanderCripple                10        92        40        10        42
+Spell_CommanderDispel                  2        16         8         2         6
+Spell_CommanderFear                   18       168        72        18        78
+Spell_CommanderHeal                   18       164        72        18        74
+Spell_CommanderLifeLeak               11       105        44        11        50
+Spell_CommanderResurrect               8        74        32         8        34
+Spell_CommanderSpeedBoost             12       110        48        12        50
+Spell_Entangle                        13       123        52        13        58
+Spell_EntangleTrap                    59       581       236        59       286
+Spell_GroupHeal                       29       290       116        29       145
+Spell_Heal                            32       301       128        32       141
+Spell_HealPet                         71       599       284        71       244
+Spell_MindWarp                        18       168        72        18        78
+Spell_Polymorph                       62       542       248        62       232
+Spell_Reincarnate                      6        48        24         6        18
+Spell_Resurrect                       14       123        56        14        53
+Spell_SummonBearloth                  97      1009       388        97       524
+Spell_SummonImp                       94       906       376        94       436
+Spell_Venus                           64       622       256        64       302
+State_Attrition                        6        90        24         6        60
+State_BeastHeal                       12       180        48        12       120
+State_Bleed                           12       180        48        12       120
+State_Blind                           22       330        88        22       220
+State_Burrowed                         5        55        20         5        30
+State_Chainmail                       51       357       204        51       102
+State_Cheetah                         18       270        72        18       180
+State_CommanderCenturionArmor         40       600       160        40       400
+State_CommanderCripple                 8       120        32         8        80
+State_CommanderFear                   45       675       180        45       450
+State_CommanderHeal                   16       240        64        16       160
+State_CommanderLifeLeak                9       135        36         9        90
+State_CommanderSpeedBoost             10       150        40        10       100
+State_Confused                        12       180        48        12       120
+State_Entangled                       33       489       132        33       324
+State_GroupHeal                       28       420       112        28       280
+State_Heal                            31       465       124        31       310
+State_HealingWard                    656      5964      2624       656      2684
+State_HealthReplenish                 13       195        52        13       130
+State_HealthShrine                    72       654       288        72       294
+State_Locust                         352      4740      1408       352      2980
+State_ManaShrine                     109      1005       436       109       460
+State_Morale                          12       180        48        12       120
+State_Morphed                         11       198        44        11       143
+State_NpcAbility                      65      1043       260        65       718
+State_Officer                         92       644       368        92       184
+State_OfficerAura                  51102    461472    204408     51102    205962
+State_PersistantItem                 288      2592      1152       288      1152
+State_PersistantReplenish             36       612       144        36       432
+State_Platemail                       28       196       112        28        56
+State_Poisoned                      2141     20049      8564      2141      9344
+State_Rage                            16       240        64        16       160
+State_Reconstitute                    12       180        48        12       120
+State_Riposte                          5        75        20         5        50
+State_Sacrifice                        9       135        36         9        90
+State_ShieldTower                   1757     15819      7028      1757      7034
+State_Spawned                        170      2550       680       170      1700
+State_SpeedBoost                       3        45        12         3        30
+State_Stealth                         26       390       104        26       260
+State_SteamBoost                       4        60        16         4        40
+State_Stunned                         53       795       212        53       530
+
+
+Building_Academy                   Count    Bytes
+=================================================
+m_v3Position                           1       12
+m_v3Angles[PITCH]                      1        4
+m_v3Angles[ROLL]                       1        4
+m_v3Angles[YAW]                        1        4
+m_yStatus                              2        2
+m_fHealth                           1696     6784
+m_uiNetFlags                           1        4
+m_ayAnim[0]                            2        2
+m_ayAnimSequence[0]                    2        2
+m_afAnimSpeed[0]                       2        8
+m_ayAnim[1]                            1        1
+m_ayAnimSequence[1]                    1        1
+m_afAnimSpeed[1]                       1        4
+m_ahEffect[0]                          1        2
+m_ayEffectSequence[0]                  1        1
+m_ahEffect[1]                          1        2
+m_ayEffectSequence[1]                  1        1
+m_ahEffect[2]                          1        2
+m_ayEffectSequence[2]                  1        1
+m_ahEffect[3]                          1        2
+m_ayEffectSequence[3]                  1        1
+m_ahEffect[4]                          1        2
+m_ayEffectSequence[4]                  1        1
+m_ahEffect[5]                          1        2
+m_ayEffectSequence[5]                  1        1
+m_ahEffect[6]                          1        2
+m_ayEffectSequence[6]                  1        1
+m_ahEffect[7]                          1        2
+m_ayEffectSequence[7]                  1        1
+m_iTeam                                1        1
+m_ySquad                               1        1
+m_uiFoundation                         1        4
+m_uiBuildAnimTime                      1        4
+m_uiStartBuildTime                     1        4
+m_uiBuildTime                          1        4
+m_fUpkeepLevel                         1        4
+m_fFoundationScale                     1        4
+Total                               1736     6882
+
+
+Building_Armory                    Count    Bytes
+=================================================
+m_v3Position                           1       12
+m_v3Angles[PITCH]                      1        4
+m_v3Angles[ROLL]                       1        4
+m_v3Angles[YAW]                        1        4
+m_yStatus                              2        2
+m_fHealth                           1200     4800
+m_uiNetFlags                           1        4
+m_ayAnim[0]                            2        2
+m_ayAnimSequence[0]                    2        2
+m_afAnimSpeed[0]                       2        8
+m_ayAnim[1]                            1        1
+m_ayAnimSequence[1]                    1        1
+m_afAnimSpeed[1]                       1        4
+m_ahEffect[0]                          1        2
+m_ayEffectSequence[0]                  1        1
+m_ahEffect[1]                          1        2
+m_ayEffectSequence[1]                  1        1
+m_ahEffect[2]                          1        2
+m_ayEffectSequence[2]                  1        1
+m_ahEffect[3]                          1        2
+m_ayEffectSequence[3]                  1        1
+m_ahEffect[4]                          1        2
+m_ayEffectSequence[4]                  1        1
+m_ahEffect[5]                          1        2
+m_ayEffectSequence[5]                  1        1
+m_ahEffect[6]                          1        2
+m_ayEffectSequence[6]                  1        1
+m_ahEffect[7]                          1        2
+m_ayEffectSequence[7]                  1        1
+m_iTeam                                1        1
+m_ySquad                               1        1
+m_uiFoundation                         1        4
+m_uiBuildAnimTime                      3       12
+m_uiStartBuildTime                     1        4
+m_uiBuildTime                          1        4
+m_fUpkeepLevel                         1        4
+m_fFoundationScale                     1        4
+Total                               1242     4906
+
+
+Building_Garrison                  Count    Bytes
+=================================================
+m_v3Position                           2       24
+m_v3Angles[PITCH]                      2        8
+m_v3Angles[ROLL]                       2        8
+m_v3Angles[YAW]                        2        8
+m_yStatus                              4        4
+m_fHealth                           3504    14016
+m_uiNetFlags                           2        8
+m_ayAnim[0]                            4        4
+m_ayAnimSequence[0]                    4        4
+m_afAnimSpeed[0]                       4       16
+m_ayAnim[1]                            2        2
+m_ayAnimSequence[1]                    2        2
+m_afAnimSpeed[1]                       2        8
+m_ahEffect[0]                          2        4
+m_ayEffectSequence[0]                  2        2
+m_ahEffect[1]                          2        4
+m_ayEffectSequence[1]                  2        2
+m_ahEffect[2]                          2        4
+m_ayEffectSequence[2]                  2        2
+m_ahEffect[3]                          2        4
+m_ayEffectSequence[3]                  2        2
+m_ahEffect[4]                          9       18
+m_ayEffectSequence[4]                 15       15
+m_ahEffect[5]                          2        4
+m_ayEffectSequence[5]                  2        2
+m_ahEffect[6]                          2        4
+m_ayEffectSequence[6]                  2        2
+m_ahEffect[7]                          2        4
+m_ayEffectSequence[7]                  2        2
+m_iTeam                                2        2
+m_ySquad                               2        2
+m_uiFoundation                         2        8
+m_uiBuildAnimTime                    694     2776
+m_uiStartBuildTime                     2        8
+m_uiBuildTime                          2        8
+m_fUpkeepLevel                         2        8
+m_fFoundationScale                     2        8
+Total                               4296    17007
+
+
+Building_GroveMine                 Count    Bytes
+=================================================
+m_v3Position                           5       60
+m_v3Angles[PITCH]                      5       20
+m_v3Angles[ROLL]                       5       20
+m_v3Angles[YAW]                        5       20
+m_yStatus                             13       13
+m_fHealth                           3869    15476
+m_uiNetFlags                           5       20
+m_ayAnim[0]                           13       13
+m_ayAnimSequence[0]                   13       13
+m_afAnimSpeed[0]                      10       40
+m_ayAnim[1]                            5        5
+m_ayAnimSequence[1]                    5        5
+m_afAnimSpeed[1]                       5       20
+m_ahEffect[0]                          5       10
+m_ayEffectSequence[0]                  5        5
+m_ahEffect[1]                          5       10
+m_ayEffectSequence[1]                  5        5
+m_ahEffect[2]                          5       10
+m_ayEffectSequence[2]                  5        5
+m_ahEffect[3]                          5       10
+m_ayEffectSequence[3]                  5        5
+m_ahEffect[4]                          9       18
+m_ayEffectSequence[4]                  9        9
+m_ahEffect[5]                          5       10
+m_ayEffectSequence[5]                  5        5
+m_ahEffect[6]                          9       18
+m_ayEffectSequence[6]                  9        9
+m_ahEffect[7]                          5       10
+m_ayEffectSequence[7]                  5        5
+m_iTeam                                5        5
+m_ySquad                               5        5
+m_uiFoundation                         5       20
+m_uiBuildAnimTime                   1202     4808
+m_uiStartBuildTime                     5       20
+m_uiBuildTime                          5       20
+m_fUpkeepLevel                         5       20
+m_fFoundationScale                     5       20
+Total                               5291    20787
+
+
+Building_Lair                      Count    Bytes
+=================================================
+m_v3Position                           1       12
+m_v3Angles[PITCH]                      1        4
+m_v3Angles[ROLL]                       1        4
+m_v3Angles[YAW]                        1        4
+m_yStatus                              2        2
+m_fHealth                            157      628
+m_uiNetFlags                           1        4
+m_ayAnim[0]                            2        2
+m_ayAnimSequence[0]                    2        2
+m_afAnimSpeed[0]                       1        4
+m_ayAnim[1]                            1        1
+m_ayAnimSequence[1]                    1        1
+m_afAnimSpeed[1]                       1        4
+m_ahEffect[0]                          1        2
+m_ayEffectSequence[0]                  1        1
+m_ahEffect[1]                          1        2
+m_ayEffectSequence[1]                  1        1
+m_ahEffect[2]                          1        2
+m_ayEffectSequence[2]                  1        1
+m_ahEffect[3]                          1        2
+m_ayEffectSequence[3]                  1        1
+m_ahEffect[4]                          3        6
+m_ayEffectSequence[4]                  3        3
+m_ahEffect[5]                          1        2
+m_ayEffectSequence[5]                  1        1
+m_ahEffect[6]                          2        4
+m_ayEffectSequence[6]                  2        2
+m_ahEffect[7]                          1        2
+m_ayEffectSequence[7]                  1        1
+m_iTeam                                1        1
+m_ySquad                               1        1
+m_uiFoundation                         1        4
+m_uiBuildAnimTime                      1        4
+m_uiStartBuildTime                     1        4
+m_uiBuildTime                          1        4
+m_fUpkeepLevel                         1        4
+m_fFoundationScale                     1        4
+Total                                202      731
+
+
+Building_Monastery                 Count    Bytes
+=================================================
+m_v3Position                           1       12
+m_v3Angles[PITCH]                      1        4
+m_v3Angles[ROLL]                       1        4
+m_v3Angles[YAW]                        1        4
+m_yStatus                              2        2
+m_fHealth                           1201     4804
+m_uiNetFlags                           1        4
+m_ayAnim[0]                            2        2
+m_ayAnimSequence[0]                    2        2
+m_afAnimSpeed[0]                       2        8
+m_ayAnim[1]                            1        1
+m_ayAnimSequence[1]                    1        1
+m_afAnimSpeed[1]                       1        4
+m_ahEffect[0]                          1        2
+m_ayEffectSequence[0]                  1        1
+m_ahEffect[1]                          1        2
+m_ayEffectSequence[1]                  1        1
+m_ahEffect[2]                          1        2
+m_ayEffectSequence[2]                  1        1
+m_ahEffect[3]                          1        2
+m_ayEffectSequence[3]                  1        1
+m_ahEffect[4]                          1        2
+m_ayEffectSequence[4]                  1        1
+m_ahEffect[5]                          1        2
+m_ayEffectSequence[5]                  1        1
+m_ahEffect[6]                          1        2
+m_ayEffectSequence[6]                  1        1
+m_ahEffect[7]                          1        2
+m_ayEffectSequence[7]                  1        1
+m_iTeam                                1        1
+m_ySquad                               1        1
+m_uiFoundation                         1        4
+m_uiBuildAnimTime                      1        4
+m_uiStartBuildTime                     1        4
+m_uiBuildTime                          1        4
+m_fUpkeepLevel                         1        4
+m_fFoundationScale                     1        4
+Total                               1241     4902
+
+
+Building_Nexus                     Count    Bytes
+=================================================
+m_v3Position                           1       12
+m_v3Angles[PITCH]                      1        4
+m_v3Angles[ROLL]                       1        4
+m_v3Angles[YAW]                        1        4
+m_yStatus                              3        3
+m_fHealth                           2359     9436
+m_uiNetFlags                           1        4
+m_ayAnim[0]                            3        3
+m_ayAnimSequence[0]                    3        3
+m_afAnimSpeed[0]                       2        8
+m_ayAnim[1]                            1        1
+m_ayAnimSequence[1]                    1        1
+m_afAnimSpeed[1]                       1        4
+m_ahEffect[0]                          1        2
+m_ayEffectSequence[0]                  1        1
+m_ahEffect[1]                          1        2
+m_ayEffectSequence[1]                  1        1
+m_ahEffect[2]                          1        2
+m_ayEffectSequence[2]                  1        1
+m_ahEffect[3]                          1        2
+m_ayEffectSequence[3]                  1        1
+m_ahEffect[4]                          3        6
+m_ayEffectSequence[4]                  3        3
+m_ahEffect[5]                          1        2
+m_ayEffectSequence[5]                  1        1
+m_ahEffect[6]                          4        8
+m_ayEffectSequence[6]                  4        4
+m_ahEffect[7]                          1        2
+m_ayEffectSequence[7]                  1        1
+m_iTeam                                1        1
+m_ySquad                               1        1
+m_uiFoundation                         1        4
+m_uiBuildAnimTime                     13       52
+m_uiStartBuildTime                     1        4
+m_uiBuildTime                          1        4
+m_fUpkeepLevel                         1        4
+m_fFoundationScale                     1        4
+Total                               2424     9600
+
+
+Building_Sanctuary                 Count    Bytes
+=================================================
+m_v3Position                           1       12
+m_v3Angles[PITCH]                      1        4
+m_v3Angles[ROLL]                       1        4
+m_v3Angles[YAW]                        1        4
+m_yStatus                              3        3
+m_fHealth                           1538     6152
+m_uiNetFlags                           1        4
+m_ayAnim[0]                            3        3
+m_ayAnimSequence[0]                    3        3
+m_afAnimSpeed[0]                       2        8
+m_ayAnim[1]                            1        1
+m_ayAnimSequence[1]                    1        1
+m_afAnimSpeed[1]                       1        4
+m_ahEffect[0]                          1        2
+m_ayEffectSequence[0]                  1        1
+m_ahEffect[1]                          1        2
+m_ayEffectSequence[1]                  1        1
+m_ahEffect[2]                          1        2
+m_ayEffectSequence[2]                  1        1
+m_ahEffect[3]                          1        2
+m_ayEffectSequence[3]                  1        1
+m_ahEffect[4]                          1        2
+m_ayEffectSequence[4]                  1        1
+m_ahEffect[5]                          1        2
+m_ayEffectSequence[5]                  1        1
+m_ahEffect[6]                          2        4
+m_ayEffectSequence[6]                  2        2
+m_ahEffect[7]                          1        2
+m_ayEffectSequence[7]                  1        1
+m_iTeam                                1        1
+m_ySquad                               1        1
+m_uiFoundation                         1        4
+m_uiBuildAnimTime                      1        4
+m_uiStartBuildTime                     1        4
+m_uiBuildTime                          1        4
+m_fUpkeepLevel                         1        4
+m_fFoundationScale                     1        4
+Total                               1583     6256
+
+
+Building_ShieldTower               Count    Bytes
+=================================================
+m_v3Position                           1       12
+m_v3Angles[PITCH]                      1        4
+m_v3Angles[ROLL]                       1        4
+m_v3Angles[YAW]                        1        4
+m_yStatus                              2        2
+m_fHealth                           1503     6012
+m_uiNetFlags                           1        4
+m_ayAnim[0]                            2        2
+m_ayAnimSequence[0]                    2        2
+m_afAnimSpeed[0]                       2        8
+m_ayAnim[1]                            1        1
+m_ayAnimSequence[1]                    1        1
+m_afAnimSpeed[1]                       1        4
+m_ahEffect[0]                          1        2
+m_ayEffectSequence[0]                  1        1
+m_ahEffect[1]                          1        2
+m_ayEffectSequence[1]                  1        1
+m_ahEffect[2]                          1        2
+m_ayEffectSequence[2]                  1        1
+m_ahEffect[3]                          1        2
+m_ayEffectSequence[3]                  1        1
+m_ahEffect[4]                          1        2
+m_ayEffectSequence[4]                  2        2
+m_ahEffect[5]                          1        2
+m_ayEffectSequence[5]                  1        1
+m_ahEffect[6]                          1        2
+m_ayEffectSequence[6]                  1        1
+m_ahEffect[7]                          1        2
+m_ayEffectSequence[7]                  1        1
+m_iTeam                                1        1
+m_ySquad                               1        1
+m_uiFoundation                         1        4
+m_uiBuildAnimTime                     13       52
+m_uiStartBuildTime                     1        4
+m_uiBuildTime                          1        4
+m_fUpkeepLevel                         1        4
+m_fFoundationScale                     1        4
+Total                               1556     6159
+
+
+Building_SiegeWorkshop             Count    Bytes
+=================================================
+m_v3Position                           1       12
+m_v3Angles[PITCH]                      1        4
+m_v3Angles[ROLL]                       1        4
+m_v3Angles[YAW]                        1        4
+m_yStatus                              2        2
+m_fHealth                           1921     7684
+m_uiNetFlags                           1        4
+m_ayAnim[0]                            2        2
+m_ayAnimSequence[0]                    2        2
+m_afAnimSpeed[0]                       2        8
+m_ayAnim[1]                            1        1
+m_ayAnimSequence[1]                    1        1
+m_afAnimSpeed[1]                       1        4
+m_ahEffect[0]                          1        2
+m_ayEffectSequence[0]                  1        1
+m_ahEffect[1]                          1        2
+m_ayEffectSequence[1]                  1        1
+m_ahEffect[2]                          1        2
+m_ayEffectSequence[2]                  1        1
+m_ahEffect[3]                          1        2
+m_ayEffectSequence[3]                  1        1
+m_ahEffect[4]                          1        2
+m_ayEffectSequence[4]                  1        1
+m_ahEffect[5]                          1        2
+m_ayEffectSequence[5]                  1        1
+m_ahEffect[6]                          1        2
+m_ayEffectSequence[6]                  1        1
+m_ahEffect[7]                          1        2
+m_ayEffectSequence[7]                  1        1
+m_iTeam                                1        1
+m_ySquad                               1        1
+m_uiFoundation                         1        4
+m_uiBuildAnimTime                     79      316
+m_uiStartBuildTime                     1        4
+m_uiBuildTime                          1        4
+m_fUpkeepLevel                         1        4
+m_fFoundationScale                     1        4
+Total                               2039     8094
+
+
+Building_SteamMine                 Count    Bytes
+=================================================
+m_v3Position                           8       96
+m_v3Angles[PITCH]                      8       32
+m_v3Angles[ROLL]                       8       32
+m_v3Angles[YAW]                        8       32
+m_yStatus                             21       21
+m_fHealth                           9843    39372
+m_uiNetFlags                           8       32
+m_ayAnim[0]                           21       21
+m_ayAnimSequence[0]                   21       21
+m_afAnimSpeed[0]                      16       64
+m_ayAnim[1]                            8        8
+m_ayAnimSequence[1]                    8        8
+m_afAnimSpeed[1]                       8       32
+m_ahEffect[0]                          8       16
+m_ayEffectSequence[0]                  8        8
+m_ahEffect[1]                          8       16
+m_ayEffectSequence[1]                  8        8
+m_ahEffect[2]                          8       16
+m_ayEffectSequence[2]                  8        8
+m_ahEffect[3]                          8       16
+m_ayEffectSequence[3]                  8        8
+m_ahEffect[4]                         18       36
+m_ayEffectSequence[4]                 30       30
+m_ahEffect[5]                          8       16
+m_ayEffectSequence[5]                  8        8
+m_ahEffect[6]                         13       26
+m_ayEffectSequence[6]                 13       13
+m_ahEffect[7]                          8       16
+m_ayEffectSequence[7]                  8        8
+m_iTeam                                8        8
+m_ySquad                               8        8
+m_uiFoundation                         8       32
+m_uiBuildAnimTime                    839     3356
+m_uiStartBuildTime                     8       32
+m_uiBuildTime                          8       32
+m_fUpkeepLevel                         8       32
+m_fFoundationScale                     8       32
+Total                              11051    43552
+
+
+Building_StrataSpire               Count    Bytes
+=================================================
+m_v3Position                           1       12
+m_v3Angles[PITCH]                      1        4
+m_v3Angles[ROLL]                       1        4
+m_v3Angles[YAW]                        1        4
+m_yStatus                              3        3
+m_fHealth                            905     3620
+m_uiNetFlags                           1        4
+m_ayAnim[0]                            3        3
+m_ayAnimSequence[0]                    3        3
+m_afAnimSpeed[0]                       2        8
+m_ayAnim[1]                            1        1
+m_ayAnimSequence[1]                    1        1
+m_afAnimSpeed[1]                       1        4
+m_ahEffect[0]                          1        2
+m_ayEffectSequence[0]                  1        1
+m_ahEffect[1]                          1        2
+m_ayEffectSequence[1]                  1        1
+m_ahEffect[2]                          1        2
+m_ayEffectSequence[2]                  1        1
+m_ahEffect[3]                          1        2
+m_ayEffectSequence[3]                  1        1
+m_ahEffect[4]                          1        2
+m_ayEffectSequence[4]                  1        1
+m_ahEffect[5]                          1        2
+m_ayEffectSequence[5]                  1        1
+m_ahEffect[6]                          2        4
+m_ayEffectSequence[6]                  2        2
+m_ahEffect[7]                          1        2
+m_ayEffectSequence[7]                  1        1
+m_iTeam                                1        1
+m_ySquad                               1        1
+m_uiFoundation                         1        4
+m_uiBuildAnimTime                      1        4
+m_uiStartBuildTime                     1        4
+m_uiBuildTime                          1        4
+m_fUpkeepLevel                         1        4
+m_fFoundationScale                     1        4
+Total                                950     3724
+
+
+Building_Stronghold                Count    Bytes
+=================================================
+m_v3Position                           1       12
+m_v3Angles[PITCH]                      1        4
+m_v3Angles[ROLL]                       1        4
+m_v3Angles[YAW]                        1        4
+m_yStatus                              1        1
+m_fHealth                              6       24
+m_uiNetFlags                           1        4
+m_ayAnim[0]                            1        1
+m_ayAnimSequence[0]                    1        1
+m_afAnimSpeed[0]                       1        4
+m_ayAnim[1]                            1        1
+m_ayAnimSequence[1]                    1        1
+m_afAnimSpeed[1]                       1        4
+m_ahEffect[0]                          1        2
+m_ayEffectSequence[0]                  1        1
+m_ahEffect[1]                          1        2
+m_ayEffectSequence[1]                  1        1
+m_ahEffect[2]                          1        2
+m_ayEffectSequence[2]                  1        1
+m_ahEffect[3]                          1        2
+m_ayEffectSequence[3]                  1        1
+m_ahEffect[4]                          1        2
+m_ayEffectSequence[4]                  1        1
+m_ahEffect[5]                          1        2
+m_ayEffectSequence[5]                  1        1
+m_ahEffect[6]                          1        2
+m_ayEffectSequence[6]                  1        1
+m_ahEffect[7]                          1        2
+m_ayEffectSequence[7]                  1        1
+m_iTeam                                1        1
+m_ySquad                               1        1
+m_uiFoundation                         1        4
+m_uiBuildAnimTime                      1        4
+m_uiStartBuildTime                     1        4
+m_uiBuildTime                          1        4
+m_fUpkeepLevel                         1        4
+m_fFoundationScale                     1        4
+Total                                 42      115
+
+
+Building_SubLair                   Count    Bytes
+=================================================
+m_v3Position                           1       12
+m_v3Angles[PITCH]                      1        4
+m_v3Angles[ROLL]                       1        4
+m_v3Angles[YAW]                        1        4
+m_yStatus                              3        3
+m_fHealth                           1636     6544
+m_uiNetFlags                           1        4
+m_ayAnim[0]                            3        3
+m_ayAnimSequence[0]                    3        3
+m_afAnimSpeed[0]                       2        8
+m_ayAnim[1]                            1        1
+m_ayAnimSequence[1]                    1        1
+m_afAnimSpeed[1]                       1        4
+m_ahEffect[0]                          1        2
+m_ayEffectSequence[0]                  1        1
+m_ahEffect[1]                          1        2
+m_ayEffectSequence[1]                  1        1
+m_ahEffect[2]                          1        2
+m_ayEffectSequence[2]                  1        1
+m_ahEffect[3]                          1        2
+m_ayEffectSequence[3]                  1        1
+m_ahEffect[4]                          1        2
+m_ayEffectSequence[4]                  1        1
+m_ahEffect[5]                          1        2
+m_ayEffectSequence[5]                  1        1
+m_ahEffect[6]                          2        4
+m_ayEffectSequence[6]                  2        2
+m_ahEffect[7]                          1        2
+m_ayEffectSequence[7]                  1        1
+m_iTeam                                1        1
+m_ySquad                               1        1
+m_uiFoundation                         1        4
+m_uiBuildAnimTime                     13       52
+m_uiStartBuildTime                     1        4
+m_uiBuildTime                          1        4
+m_fUpkeepLevel                         1        4
+m_fFoundationScale                     1        4
+Total                               1693     6696
+
+
+Consumable_AmmoPack                Count    Bytes
+=================================================
+m_uiOwnerIndex                        13       26
+m_ySlot                               13       13
+m_uiStartCooldown                     13       52
+m_uiCooldownDuration                  13       52
+m_unAmmo                              13       26
+m_uiNetFlags                          13       52
+Total                                 78      221
+
+
+Consumable_AmmoSatchel             Count    Bytes
+=================================================
+m_uiOwnerIndex                         4        8
+m_ySlot                                4        4
+m_uiStartCooldown                      4       16
+m_uiCooldownDuration                   4       16
+m_unAmmo                               4        8
+m_uiNetFlags                           4       16
+Total                                 24       68
+
+
+Consumable_Chainmail               Count    Bytes
+=================================================
+m_uiOwnerIndex                        17       34
+m_ySlot                               17       17
+m_uiStartCooldown                     17       68
+m_uiCooldownDuration                  17       68
+m_unAmmo                              17       34
+m_uiNetFlags                          17       68
+Total                                102      289
+
+
+Consumable_HealthMajor             Count    Bytes
+=================================================
+m_uiOwnerIndex                        32       64
+m_ySlot                               32       32
+m_uiStartCooldown                     37      148
+m_uiCooldownDuration                  37      148
+m_unAmmo                              44       88
+m_uiNetFlags                          32      128
+Total                                214      608
+
+
+Consumable_HealthMinor             Count    Bytes
+=================================================
+m_uiOwnerIndex                         3        6
+m_ySlot                                3        3
+m_uiStartCooldown                    181      724
+m_uiCooldownDuration                   8       32
+m_unAmmo                               5       10
+m_uiNetFlags                           3       12
+Total                                203      787
+
+
+Consumable_HealthReplenish         Count    Bytes
+=================================================
+m_uiOwnerIndex                        25       50
+m_ySlot                               25       25
+m_uiStartCooldown                   1008     4032
+m_uiCooldownDuration                  35      140
+m_unAmmo                              29       58
+m_uiNetFlags                          25      100
+Total                               1147     4405
+
+
+Consumable_HealthShrine            Count    Bytes
+=================================================
+m_uiOwnerIndex                         6       12
+m_ySlot                                6        6
+m_uiStartCooldown                      6       24
+m_uiCooldownDuration                   6       24
+m_unAmmo                               6       12
+m_uiNetFlags                           6       24
+Total                                 36      102
+
+
+Consumable_ManaMajor               Count    Bytes
+=================================================
+m_uiOwnerIndex                         3        6
+m_ySlot                                3        3
+m_uiStartCooldown                      4       16
+m_uiCooldownDuration                   4       16
+m_unAmmo                               6       12
+m_uiNetFlags                           3       12
+Total                                 23       65
+
+
+Consumable_ManaMinor               Count    Bytes
+=================================================
+m_uiOwnerIndex                         2        4
+m_ySlot                                2        2
+m_uiStartCooldown                      2        8
+m_uiCooldownDuration                   2        8
+m_unAmmo                               2        4
+m_uiNetFlags                           2        8
+Total                                 12       34
+
+
+Consumable_ManaShrine              Count    Bytes
+=================================================
+m_uiOwnerIndex                         4        8
+m_ySlot                                4        4
+m_uiStartCooldown                      4       16
+m_uiCooldownDuration                   4       16
+m_unAmmo                               4        8
+m_uiNetFlags                           4       16
+Total                                 24       68
+
+
+Consumable_Platemail               Count    Bytes
+=================================================
+m_uiOwnerIndex                         9       18
+m_ySlot                                9        9
+m_uiStartCooldown                      9       36
+m_uiCooldownDuration                   9       36
+m_unAmmo                               9       18
+m_uiNetFlags                           9       36
+Total                                 54      153
+
+
+Consumable_SpeedBoost              Count    Bytes
+=================================================
+m_uiOwnerIndex                         8       16
+m_ySlot                                8        8
+m_uiStartCooldown                      8       32
+m_uiCooldownDuration                   8       32
+m_unAmmo                               8       16
+m_uiNetFlags                           8       32
+Total                                 48      136
+
+
+Entity_Chest                       Count    Bytes
+=================================================
+m_v3Position                           5       60
+m_v3Angles                             5       60
+m_ayAnim[0]                            5        5
+m_ayAnimSequence[0]                    5        5
+m_afAnimSpeed[0]                       5       20
+m_uiSpawnTime                          5       20
+Total                                 30      170
+
+
+Entity_ClientInfo                  Count    Bytes
+=================================================
+m_uiPlayerEntityIndex                474     1896
+m_iAccountID                          28      112
+m_iClientNumber                       28      112
+m_sName                               28        0
+m_sClanName                           32        0
+m_sClanRank                           28        0
+m_iKarma                              28      112
+m_iVote                               28      112
+m_iFlags                              70      280
+m_iTeam                               48      192
+m_ySquad                              52       52
+m_fExperience                        742     2968
+m_unGold                             928     1856
+m_unSouls                            191      382
+m_iLevel                             103      412
+m_unAttributePointsSpent             207      414
+m_aiAttributes[0]                     28      112
+m_aiAttributes[1]                     35      140
+m_aiAttributes[2]                     50      200
+m_aiAttributes[3]                     44      176
+m_aiAttributes[4]                     36      144
+m_aiAttributes[5]                     28      112
+m_aiAttributes[6]                     41      164
+m_aiAttributes[7]                     48      192
+m_aiAttributes[8]                     69      276
+m_aiAttributes[9]                     45      180
+m_aiAttributes[10]                    63      252
+m_unPing                            4943     9886
+m_iKills                             200      800
+m_iDeaths                            213      852
+m_iAssists                           194      776
+m_iPersistantStats[0]                 41      164
+m_iPersistantStats[1]                 42      168
+m_iPersistantStats[2]                 42      168
+m_iPersistantStats[3]                 41      164
+m_iPersistantStats[4]                 40      160
+m_iPersistantStats[5]                 28      112
+m_iPersistantStats[6]                 42      168
+m_iPersistantStats[7]                 42      168
+m_iPersistantStats[8]                 42      168
+m_iPersistantStats[9]                 34      136
+m_iPersistantStats[10]                40      160
+m_iPersistantStats[11]                42      168
+m_iPersistantStats[12]                42      168
+m_iPersistantStats[13]                40      160
+m_iPersistantStats[14]                40      160
+m_iPersistantStats[15]                39      156
+m_iPersistantStats[16]                28      112
+m_iPersistantStats[17]                41      164
+m_iPersistantStats[18]                39      156
+m_iPersistantStats[19]                28      112
+m_iPersistantStats[20]                32      128
+m_iPersistantStats[21]                42      168
+m_iPersistantStats[22]                41      164
+m_iPersistantStats[23]                42      168
+m_iPersistantStats[24]                42      168
+m_iPersistantStats[25]                28      112
+Total                              10052    27162
+
+
+Entity_GameInfo                    Count    Bytes
+=================================================
+m_uiGamePhase                          2        8
+m_uiPhaseStartTime                     2        8
+m_uiPhaseDuration                      2        8
+m_uiGameStartTime                      1        4
+m_iGameMatchID                         2        8
+Total                                  9       36
+
+
+Entity_NpcController               Count    Bytes
+=================================================
+m_v3Position                           4       48
+m_v3Angles[PITCH]                      4       16
+m_v3Angles[ROLL]                       4       16
+m_v3Angles[YAW]                        4       16
+m_yStatus                              4        4
+m_fHealth                              4       16
+m_uiNetFlags                           4       16
+m_ayAnim[0]                            4        4
+m_ayAnimSequence[0]                    4        4
+m_afAnimSpeed[0]                       4       16
+m_ayAnim[1]                            4        4
+m_ayAnimSequence[1]                    4        4
+m_afAnimSpeed[1]                       4       16
+m_ahEffect[0]                          4        8
+m_ayEffectSequence[0]                  4        4
+m_ahEffect[1]                          4        8
+m_ayEffectSequence[1]                  4        4
+m_ahEffect[2]                          4        8
+m_ayEffectSequence[2]                  4        4
+m_ahEffect[3]                          4        8
+m_ayEffectSequence[3]                  4        4
+m_ahEffect[4]                          4        8
+m_ayEffectSequence[4]                  4        4
+m_ahEffect[5]                          4        8
+m_ayEffectSequence[5]                  4        4
+m_ahEffect[6]                          4        8
+m_ayEffectSequence[6]                  4        4
+m_ahEffect[7]                          4        8
+m_ayEffectSequence[7]                  4        4
+m_iTeam                                4        4
+m_ySquad                               4        4
+Total                                124      284
+
+
+Entity_Soul                        Count    Bytes
+=================================================
+m_v3Position                        8944   107328
+m_v3Angles                           172     2064
+m_hModel                             344      688
+m_ahEffect[0]                        344      688
+m_ayEffectSequence[0]                344      344
+Total                              10148   111112
+
+
+Entity_TeamInfo                    Count    Bytes
+=================================================
+m_iTeamID                              3       12
+m_uiBaseBuildingIndex                  3       12
+m_iCommanderClientID                   5       20
+m_uiGold                             661     2644
+m_iLevel                              24       96
+m_fExperience                        485     1940
+m_fMana                            29605   118420
+m_iPointsSpent                         3       12
+m_uiNextEconomyInterval              507     2028
+m_sName                                3        0
+m_pDefinition                          3        0
+Total                              31302   125184
+
+
+Gadget_AmmoDepot                   Count    Bytes
+=================================================
+m_v3Position                           8       96
+m_v3Angles[PITCH]                      8       32
+m_v3Angles[ROLL]                       8       32
+m_v3Angles[YAW]                        8       32
+m_yStatus                             24       24
+m_fHealth                             21       84
+m_uiNetFlags                           8       32
+m_ayAnim[0]                           24       24
+m_ayAnimSequence[0]                   24       24
+m_afAnimSpeed[0]                      16       64
+m_ayAnim[1]                            8        8
+m_ayAnimSequence[1]                    8        8
+m_afAnimSpeed[1]                       8       32
+m_ahEffect[0]                          8       16
+m_ayEffectSequence[0]                  8        8
+m_ahEffect[1]                          8       16
+m_ayEffectSequence[1]                  8        8
+m_ahEffect[2]                          8       16
+m_ayEffectSequence[2]                  8        8
+m_ahEffect[3]                          8       16
+m_ayEffectSequence[3]                  8        8
+m_ahEffect[4]                          9       18
+m_ayEffectSequence[4]                  9        9
+m_ahEffect[5]                          8       16
+m_ayEffectSequence[5]                  8        8
+m_ahEffect[6]                          8       16
+m_ayEffectSequence[6]                  8        8
+m_ahEffect[7]                          8       16
+m_ayEffectSequence[7]                  8        8
+m_iTeam                                8        8
+m_ySquad                               8        8
+m_uiSpawnTime                          8       32
+Total                                327      735
+
+
+Gadget_DemoCharge                  Count    Bytes
+=================================================
+m_v3Position                          11      132
+m_v3Angles[PITCH]                     11       44
+m_v3Angles[ROLL]                      11       44
+m_v3Angles[YAW]                       11       44
+m_yStatus                             22       22
+m_fHealth                             12       48
+m_uiNetFlags                          11       44
+m_ayAnim[0]                           33       33
+m_ayAnimSequence[0]                   33       33
+m_afAnimSpeed[0]                      11       44
+m_ayAnim[1]                           33       33
+m_ayAnimSequence[1]                   33       33
+m_afAnimSpeed[1]                      11       44
+m_ahEffect[0]                         11       22
+m_ayEffectSequence[0]                 11       11
+m_ahEffect[1]                         11       22
+m_ayEffectSequence[1]                 11       11
+m_ahEffect[2]                         11       22
+m_ayEffectSequence[2]                 11       11
+m_ahEffect[3]                         11       22
+m_ayEffectSequence[3]                 11       11
+m_ahEffect[4]                         11       22
+m_ayEffectSequence[4]                 11       11
+m_ahEffect[5]                         11       22
+m_ayEffectSequence[5]                 11       11
+m_ahEffect[6]                         11       22
+m_ayEffectSequence[6]                 11       11
+m_ahEffect[7]                         11       22
+m_ayEffectSequence[7]                 11       11
+m_iTeam                               11       11
+m_ySquad                              11       11
+m_uiSpawnTime                         11       44
+Total                                452      928
+
+
+Gadget_ElectricEye                 Count    Bytes
+=================================================
+m_v3Position                          12      144
+m_v3Angles[PITCH]                     12       48
+m_v3Angles[ROLL]                      12       48
+m_v3Angles[YAW]                       12       48
+m_yStatus                             24       24
+m_fHealth                             67      268
+m_uiNetFlags                          12       48
+m_ayAnim[0]                           24       24
+m_ayAnimSequence[0]                   24       24
+m_afAnimSpeed[0]                      12       48
+m_ayAnim[1]                           12       12
+m_ayAnimSequence[1]                   12       12
+m_afAnimSpeed[1]                      12       48
+m_ahEffect[0]                         12       24
+m_ayEffectSequence[0]                 12       12
+m_ahEffect[1]                         12       24
+m_ayEffectSequence[1]                 12       12
+m_ahEffect[2]                         12       24
+m_ayEffectSequence[2]                 12       12
+m_ahEffect[3]                         12       24
+m_ayEffectSequence[3]                 12       12
+m_ahEffect[4]                         12       24
+m_ayEffectSequence[4]                 12       12
+m_ahEffect[5]                         12       24
+m_ayEffectSequence[5]                 12       12
+m_ahEffect[6]                         12       24
+m_ayEffectSequence[6]                 12       12
+m_ahEffect[7]                         12       24
+m_ayEffectSequence[7]                 12       12
+m_iTeam                               12       12
+m_ySquad                              12       12
+m_uiSpawnTime                         12       48
+Total                                475     1156
+
+
+Gadget_HealthShrine                Count    Bytes
+=================================================
+m_v3Position                           1       12
+m_v3Angles[PITCH]                      1        4
+m_v3Angles[ROLL]                       1        4
+m_v3Angles[YAW]                        1        4
+m_yStatus                              2        2
+m_fHealth                              9       36
+m_uiNetFlags                           1        4
+m_ayAnim[0]                            2        2
+m_ayAnimSequence[0]                    2        2
+m_afAnimSpeed[0]                       1        4
+m_ayAnim[1]                            1        1
+m_ayAnimSequence[1]                    1        1
+m_afAnimSpeed[1]                       1        4
+m_ahEffect[0]                          1        2
+m_ayEffectSequence[0]                  1        1
+m_ahEffect[1]                          1        2
+m_ayEffectSequence[1]                  1        1
+m_ahEffect[2]                          1        2
+m_ayEffectSequence[2]                  1        1
+m_ahEffect[3]                          1        2
+m_ayEffectSequence[3]                  1        1
+m_ahEffect[4]                          1        2
+m_ayEffectSequence[4]                  1        1
+m_ahEffect[5]                          1        2
+m_ayEffectSequence[5]                  1        1
+m_ahEffect[6]                          1        2
+m_ayEffectSequence[6]                  1        1
+m_ahEffect[7]                          1        2
+m_ayEffectSequence[7]                  1        1
+m_iTeam                                1        1
+m_ySquad                               1        1
+m_uiSpawnTime                          1        4
+Total                                 43      110
+
+
+Gadget_HumanOfficerSpawnFlag       Count    Bytes
+=================================================
+m_v3Position                          17      204
+m_v3Angles[PITCH]                     17       68
+m_v3Angles[ROLL]                      17       68
+m_v3Angles[YAW]                       17       68
+m_yStatus                             51       51
+m_fHealth                             33      132
+m_uiNetFlags                          17       68
+m_ayAnim[0]                           51       51
+m_ayAnimSequence[0]                   51       51
+m_afAnimSpeed[0]                      34      136
+m_ayAnim[1]                           17       17
+m_ayAnimSequence[1]                   17       17
+m_afAnimSpeed[1]                      17       68
+m_ahEffect[0]                         17       34
+m_ayEffectSequence[0]                 17       17
+m_ahEffect[1]                         17       34
+m_ayEffectSequence[1]                 17       17
+m_ahEffect[2]                         17       34
+m_ayEffectSequence[2]                 17       17
+m_ahEffect[3]                         17       34
+m_ayEffectSequence[3]                 17       17
+m_ahEffect[4]                         18       36
+m_ayEffectSequence[4]                 18       18
+m_ahEffect[5]                         17       34
+m_ayEffectSequence[5]                 17       17
+m_ahEffect[6]                         17       34
+m_ayEffectSequence[6]                 17       17
+m_ahEffect[7]                         17       34
+m_ayEffectSequence[7]                 17       17
+m_iTeam                               17       17
+m_ySquad                              17       17
+m_uiSpawnTime                         17       68
+Total                                681     1512
+
+
+Gadget_ManaShrine                  Count    Bytes
+=================================================
+m_v3Position                           1       12
+m_v3Angles[PITCH]                      1        4
+m_v3Angles[ROLL]                       1        4
+m_v3Angles[YAW]                        1        4
+m_yStatus                              2        2
+m_fHealth                              2        8
+m_uiNetFlags                           1        4
+m_ayAnim[0]                            2        2
+m_ayAnimSequence[0]                    2        2
+m_afAnimSpeed[0]                       1        4
+m_ayAnim[1]                            1        1
+m_ayAnimSequence[1]                    1        1
+m_afAnimSpeed[1]                       1        4
+m_ahEffect[0]                          1        2
+m_ayEffectSequence[0]                  1        1
+m_ahEffect[1]                          1        2
+m_ayEffectSequence[1]                  1        1
+m_ahEffect[2]                          1        2
+m_ayEffectSequence[2]                  1        1
+m_ahEffect[3]                          1        2
+m_ayEffectSequence[3]                  1        1
+m_ahEffect[4]                          1        2
+m_ayEffectSequence[4]                  1        1
+m_ahEffect[5]                          1        2
+m_ayEffectSequence[5]                  1        1
+m_ahEffect[6]                          1        2
+m_ayEffectSequence[6]                  1        1
+m_ahEffect[7]                          1        2
+m_ayEffectSequence[7]                  1        1
+m_iTeam                                1        1
+m_ySquad                               1        1
+m_uiSpawnTime                          1        4
+Total                                 36       82
+
+
+Gadget_Sentry                      Count    Bytes
+=================================================
+m_v3Position                          20      240
+m_v3Angles[PITCH]                     20       80
+m_v3Angles[ROLL]                      20       80
+m_v3Angles[YAW]                       20       80
+m_yStatus                             40       40
+m_fHealth                            298     1192
+m_uiNetFlags                          20       80
+m_ayAnim[0]                           40       40
+m_ayAnimSequence[0]                   40       40
+m_afAnimSpeed[0]                      20       80
+m_ayAnim[1]                           20       20
+m_ayAnimSequence[1]                   20       20
+m_afAnimSpeed[1]                      20       80
+m_ahEffect[0]                         20       40
+m_ayEffectSequence[0]                 20       20
+m_ahEffect[1]                         20       40
+m_ayEffectSequence[1]                 20       20
+m_ahEffect[2]                         20       40
+m_ayEffectSequence[2]                 20       20
+m_ahEffect[3]                         20       40
+m_ayEffectSequence[3]                 20       20
+m_ahEffect[4]                         20       40
+m_ayEffectSequence[4]                 20       20
+m_ahEffect[5]                         20       40
+m_ayEffectSequence[5]                 20       20
+m_ahEffect[6]                         20       40
+m_ayEffectSequence[6]                 20       20
+m_ahEffect[7]                         20       40
+m_ayEffectSequence[7]                 20       20
+m_iTeam                               20       20
+m_ySquad                              20       20
+m_uiSpawnTime                         20       80
+Total                                978     2672
+
+
+Gadget_ShieldGenerator             Count    Bytes
+=================================================
+m_v3Position                           2       24
+m_v3Angles[PITCH]                      2        8
+m_v3Angles[ROLL]                       2        8
+m_v3Angles[YAW]                        2        8
+m_yStatus                              4        4
+m_fHealth                              7       28
+m_uiNetFlags                           2        8
+m_ayAnim[0]                            4        4
+m_ayAnimSequence[0]                    4        4
+m_afAnimSpeed[0]                       2        8
+m_ayAnim[1]                            2        2
+m_ayAnimSequence[1]                    2        2
+m_afAnimSpeed[1]                       2        8
+m_ahEffect[0]                          2        4
+m_ayEffectSequence[0]                  2        2
+m_ahEffect[1]                          2        4
+m_ayEffectSequence[1]                  2        2
+m_ahEffect[2]                          2        4
+m_ayEffectSequence[2]                  2        2
+m_ahEffect[3]                          2        4
+m_ayEffectSequence[3]                  2        2
+m_ahEffect[4]                          2        4
+m_ayEffectSequence[4]                  2        2
+m_ahEffect[5]                          2        4
+m_ayEffectSequence[5]                  2        2
+m_ahEffect[6]                          2        4
+m_ayEffectSequence[6]                  2        2
+m_ahEffect[7]                          2        4
+m_ayEffectSequence[7]                  2        2
+m_iTeam                                2        2
+m_ySquad                               2        2
+m_uiSpawnTime                          2        8
+Total                                 75      176
+
+
+Gadget_Venus                       Count    Bytes
+=================================================
+m_v3Position                          23      276
+m_v3Angles[PITCH]                   1804     7216
+m_v3Angles[ROLL]                      46      184
+m_v3Angles[YAW]                     1802     7208
+m_yStatus                             69       69
+m_fHealth                            262     1048
+m_uiNetFlags                          23       92
+m_ayAnim[0]                           73       73
+m_ayAnimSequence[0]                  304      304
+m_afAnimSpeed[0]                      46      184
+m_ayAnim[1]                           23       23
+m_ayAnimSequence[1]                   23       23
+m_afAnimSpeed[1]                      23       92
+m_ahEffect[0]                         23       46
+m_ayEffectSequence[0]                 23       23
+m_ahEffect[1]                         23       46
+m_ayEffectSequence[1]                 23       23
+m_ahEffect[2]                         23       46
+m_ayEffectSequence[2]                 23       23
+m_ahEffect[3]                         23       46
+m_ayEffectSequence[3]                 23       23
+m_ahEffect[4]                         27       54
+m_ayEffectSequence[4]                 27       27
+m_ahEffect[5]                         23       46
+m_ayEffectSequence[5]                 23       23
+m_ahEffect[6]                         23       46
+m_ayEffectSequence[6]                 23       23
+m_ahEffect[7]                         23       46
+m_ayEffectSequence[7]                 23       23
+m_iTeam                               23       23
+m_ySquad                              23       23
+m_uiSpawnTime                         23       92
+Total                               4966    17494
+
+
+Gun_Crossbow                       Count    Bytes
+=================================================
+m_uiOwnerIndex                        36       72
+m_ySlot                               36       36
+m_uiStartCooldown                     36      144
+m_uiCooldownDuration                  36      144
+m_unAmmo                             269      538
+m_uiNetFlags                          36      144
+Total                                449     1078
+
+
+Gun_HolyBolt                       Count    Bytes
+=================================================
+m_uiOwnerIndex                        11       22
+m_ySlot                               11       11
+m_uiStartCooldown                     55      220
+m_uiCooldownDuration                  17       68
+m_unAmmo                              11       22
+m_uiNetFlags                          11       44
+Total                                116      387
+
+
+Gun_ImpFire                        Count    Bytes
+=================================================
+m_uiOwnerIndex                        34       68
+m_ySlot                               34       34
+m_uiStartCooldown                     34      136
+m_uiCooldownDuration                  34      136
+m_unAmmo                              34       68
+m_uiNetFlags                          34      136
+Total                                204      578
+
+
+Gun_Launcher                       Count    Bytes
+=================================================
+m_uiOwnerIndex                        13       26
+m_ySlot                               13       13
+m_uiStartCooldown                     91      364
+m_uiCooldownDuration                  23       92
+m_unAmmo                              96      192
+m_uiNetFlags                          13       52
+Total                                249      739
+
+
+Gun_Lightning                      Count    Bytes
+=================================================
+m_uiOwnerIndex                        52      104
+m_ySlot                               52       52
+m_uiStartCooldown                     98      392
+m_uiCooldownDuration                  69      276
+m_unAmmo                              52      104
+m_uiNetFlags                          52      208
+Total                                375     1136
+
+
+Gun_Locusts                        Count    Bytes
+=================================================
+m_uiOwnerIndex                        60      120
+m_ySlot                               60       60
+m_uiStartCooldown                    416     1664
+m_uiCooldownDuration                  98      392
+m_unAmmo                              60      120
+m_uiNetFlags                          60      240
+Total                                754     2596
+
+
+Gun_Mortar                         Count    Bytes
+=================================================
+m_uiOwnerIndex                        13       26
+m_ySlot                               13       13
+m_uiStartCooldown                    166      664
+m_uiCooldownDuration                  23       92
+m_unAmmo                             170      340
+m_uiNetFlags                          13       52
+Total                                398     1187
+
+
+Gun_Ravager                        Count    Bytes
+=================================================
+m_uiOwnerIndex                        35       70
+m_ySlot                               35       35
+m_uiStartCooldown                     35      140
+m_uiCooldownDuration                  35      140
+m_unAmmo                            5078    10156
+m_uiNetFlags                          35      140
+Total                               5253    10681
+
+
+Gun_Repeater                       Count    Bytes
+=================================================
+m_uiOwnerIndex                        35       70
+m_ySlot                               35       35
+m_uiStartCooldown                     35      140
+m_uiCooldownDuration                  35      140
+m_unAmmo                            1992     3984
+m_uiNetFlags                          36      144
+Total                               2168     4513
+
+
+Gun_Rifle                          Count    Bytes
+=================================================
+m_uiOwnerIndex                        15       30
+m_ySlot                               15       15
+m_uiStartCooldown                     15       60
+m_uiCooldownDuration                  15       60
+m_unAmmo                             570     1140
+m_uiNetFlags                          15       60
+Total                                645     1365
+
+
+Gun_Shotgun                        Count    Bytes
+=================================================
+m_uiOwnerIndex                        15       30
+m_ySlot                               15       15
+m_uiStartCooldown                     15       60
+m_uiCooldownDuration                  15       60
+m_unAmmo                              40       80
+m_uiNetFlags                          15       60
+Total                                115      305
+
+
+Gun_SniperBow                      Count    Bytes
+=================================================
+m_uiOwnerIndex                        36       72
+m_ySlot                               36       36
+m_uiStartCooldown                     36      144
+m_uiCooldownDuration                  36      144
+m_unAmmo                              90      180
+m_uiNetFlags                          36      144
+Total                                270      720
+
+
+Gun_Venom                          Count    Bytes
+=================================================
+m_uiOwnerIndex                        30       60
+m_ySlot                               30       30
+m_uiStartCooldown                    190      760
+m_uiCooldownDuration                  51      204
+m_unAmmo                              30       60
+m_uiNetFlags                          30      120
+Total                                361     1234
+
+
+Melee_BattleAxe                    Count    Bytes
+=================================================
+m_uiOwnerIndex                        13       26
+m_ySlot                               13       13
+m_uiStartCooldown                     13       52
+m_uiCooldownDuration                  13       52
+m_unAmmo                              13       26
+m_uiNetFlags                          13       52
+Total                                 78      221
+
+
+Melee_BearlothSwipe                Count    Bytes
+=================================================
+m_uiOwnerIndex                        36       72
+m_ySlot                               36       36
+m_uiStartCooldown                     36      144
+m_uiCooldownDuration                  36      144
+m_unAmmo                              36       72
+m_uiNetFlags                          36      144
+Total                                216      612
+
+
+Melee_Broadswords                  Count    Bytes
+=================================================
+m_uiOwnerIndex                        35       70
+m_ySlot                               35       35
+m_uiStartCooldown                     35      140
+m_uiCooldownDuration                  35      140
+m_unAmmo                              35       70
+m_uiNetFlags                          35      140
+Total                                210      595
+
+
+Melee_ConjurerClaws                Count    Bytes
+=================================================
+m_uiOwnerIndex                        30       60
+m_ySlot                               30       30
+m_uiStartCooldown                     30      120
+m_uiCooldownDuration                  30      120
+m_unAmmo                              30       60
+m_uiNetFlags                          30      120
+Total                                180      510
+
+
+Melee_Hammer                       Count    Bytes
+=================================================
+m_uiOwnerIndex                        15       30
+m_ySlot                               15       15
+m_uiStartCooldown                     15       60
+m_uiCooldownDuration                  15       60
+m_unAmmo                              15       30
+m_uiNetFlags                          15       60
+Total                                 90      255
+
+
+Melee_ShifterClaws                 Count    Bytes
+=================================================
+m_uiOwnerIndex                        52      104
+m_ySlot                               52       52
+m_uiStartCooldown                     52      208
+m_uiCooldownDuration                  52      208
+m_unAmmo                              52      104
+m_uiNetFlags                          52      208
+Total                                312      884
+
+
+Melee_ShortBlades                  Count    Bytes
+=================================================
+m_uiOwnerIndex                        36       72
+m_ySlot                               36       36
+m_uiStartCooldown                     36      144
+m_uiCooldownDuration                  36      144
+m_unAmmo                              36       72
+m_uiNetFlags                          36      144
+Total                                216      612
+
+
+Melee_SpiritHammer                 Count    Bytes
+=================================================
+m_uiOwnerIndex                         6       12
+m_ySlot                                6        6
+m_uiStartCooldown                      6       24
+m_uiCooldownDuration                   6       24
+m_unAmmo                               6       12
+m_uiNetFlags                           6       24
+Total                                 36      102
+
+
+Melee_Staff                        Count    Bytes
+=================================================
+m_uiOwnerIndex                        11       22
+m_ySlot                               11       11
+m_uiStartCooldown                     11       44
+m_uiCooldownDuration                  11       44
+m_unAmmo                              11       22
+m_uiNetFlags                          11       44
+Total                                 66      187
+
+
+Melee_SummonerStaff                Count    Bytes
+=================================================
+m_uiOwnerIndex                        60      120
+m_ySlot                               60       60
+m_uiStartCooldown                     60      240
+m_uiCooldownDuration                  60      240
+m_unAmmo                              60      120
+m_uiNetFlags                          60      240
+Total                                360     1020
+
+
+Npc_Critter                        Count    Bytes
+=================================================
+m_v3Position                       10899   130788
+m_v3Angles[PITCH]                    215      860
+m_v3Angles[ROLL]                     215      860
+m_v3Angles[YAW]                    12062    48248
+m_yStatus                            234      234
+m_fHealth                            723     2892
+m_uiNetFlags                         215      860
+m_ayAnim[0]                          723      723
+m_ayAnimSequence[0]                  788      788
+m_afAnimSpeed[0]                     221      884
+m_ayAnim[1]                          236      236
+m_ayAnimSequence[1]                  236      236
+m_afAnimSpeed[1]                     215      860
+m_ahEffect[0]                        215      430
+m_ayEffectSequence[0]                215      215
+m_ahEffect[1]                        237      474
+m_ayEffectSequence[1]                568      568
+m_ahEffect[2]                        215      430
+m_ayEffectSequence[2]                215      215
+m_ahEffect[3]                        215      430
+m_ayEffectSequence[3]                215      215
+m_ahEffect[4]                        228      456
+m_ayEffectSequence[4]                230      230
+m_ahEffect[5]                        215      430
+m_ayEffectSequence[5]                215      215
+m_ahEffect[6]                        215      430
+m_ayEffectSequence[6]                215      215
+m_ahEffect[7]                        215      430
+m_ayEffectSequence[7]                215      215
+m_iTeam                              215      215
+m_ySquad                             215      215
+m_fMana                              234      936
+m_fStamina                           568     2272
+m_ySelectedItem                      215      215
+m_yDefaultAnim                       215      215
+m_hDefinition                        215      430
+Total                              32702   198565
+
+
+OfficerCommand_Attack2             Count    Bytes
+=================================================
+m_uiOwnerIndex                       128      256
+m_ySlot                              128      128
+m_uiStartCooldown                    128      512
+m_uiCooldownDuration                 128      512
+m_unAmmo                             128      256
+m_uiNetFlags                         128      512
+Total                                768     2176
+
+
+OfficerCommand_Follow2             Count    Bytes
+=================================================
+m_uiOwnerIndex                       128      256
+m_ySlot                              128      128
+m_uiStartCooldown                    128      512
+m_uiCooldownDuration                 128      512
+m_unAmmo                             128      256
+m_uiNetFlags                         128      512
+Total                                768     2176
+
+
+OfficerCommand_Move2               Count    Bytes
+=================================================
+m_uiOwnerIndex                       128      256
+m_ySlot                              128      128
+m_uiStartCooldown                    128      512
+m_uiCooldownDuration                 128      512
+m_unAmmo                             128      256
+m_uiNetFlags                         128      512
+Total                                768     2176
+
+
+Persistant_Item                    Count    Bytes
+=================================================
+m_uiOwnerIndex                       127      254
+m_ySlot                              127      127
+m_uiStartCooldown                    574     2296
+m_uiCooldownDuration                 167      668
+m_unAmmo                             127      254
+m_uiNetFlags                         127      508
+m_unItemData                         127      254
+Total                               1376     4361
+
+
+Pet_Bearloth                       Count    Bytes
+=================================================
+m_v3Position                       18562   222744
+m_v3Angles[PITCH]                   3417    13668
+m_v3Angles[ROLL]                      36      144
+m_v3Angles[YAW]                    24092    96368
+m_yStatus                             72       72
+m_fHealth                          18622    74488
+m_uiNetFlags                          36      144
+m_ayAnim[0]                         2114     2114
+m_ayAnimSequence[0]                 2126     2126
+m_afAnimSpeed[0]                      36      144
+m_ayAnim[1]                          154      154
+m_ayAnimSequence[1]                  501      501
+m_afAnimSpeed[1]                      36      144
+m_ahEffect[0]                         36       72
+m_ayEffectSequence[0]                 36       36
+m_ahEffect[1]                         98      196
+m_ayEffectSequence[1]                698      698
+m_ahEffect[2]                         64      128
+m_ayEffectSequence[2]                284      284
+m_ahEffect[3]                         36       72
+m_ayEffectSequence[3]                 36       36
+m_ahEffect[4]                         91      182
+m_ayEffectSequence[4]                 95       95
+m_ahEffect[5]                         36       72
+m_ayEffectSequence[5]                 36       36
+m_ahEffect[6]                         36       72
+m_ayEffectSequence[6]                 36       36
+m_ahEffect[7]                         36       72
+m_ayEffectSequence[7]                 36       36
+m_iTeam                               36       36
+m_ySquad                              36       36
+m_fMana                               72      288
+m_fStamina                          4712    18848
+m_ySelectedItem                       36       36
+m_yDefaultAnim                        36       36
+m_iCurrentMovement                  2029     8116
+Total                              78451   442330
+
+
+Pet_Imp                            Count    Bytes
+=================================================
+m_v3Position                       11914   142968
+m_v3Angles[PITCH]                   5812    23248
+m_v3Angles[ROLL]                      34      136
+m_v3Angles[YAW]                    19898    79592
+m_yStatus                             67       67
+m_fHealth                          13424    53696
+m_uiNetFlags                          34      136
+m_ayAnim[0]                          888      888
+m_ayAnimSequence[0]                  895      895
+m_afAnimSpeed[0]                      34      136
+m_ayAnim[1]                          101      101
+m_ayAnimSequence[1]                  463      463
+m_afAnimSpeed[1]                      34      136
+m_ahEffect[0]                         34       68
+m_ayEffectSequence[0]                 34       34
+m_ahEffect[1]                         64      128
+m_ayEffectSequence[1]                510      510
+m_ahEffect[2]                         34       68
+m_ayEffectSequence[2]                 34       34
+m_ahEffect[3]                         34       68
+m_ayEffectSequence[3]                 34       34
+m_ahEffect[4]                         53      106
+m_ayEffectSequence[4]                 53       53
+m_ahEffect[5]                         34       68
+m_ayEffectSequence[5]                 34       34
+m_ahEffect[6]                         34       68
+m_ayEffectSequence[6]                 34       34
+m_ahEffect[7]                         34       68
+m_ayEffectSequence[7]                 34       34
+m_iTeam                               34       34
+m_ySquad                              34       34
+m_fMana                            12736    50944
+m_fStamina                          1867     7468
+m_ySelectedItem                       34       34
+m_yDefaultAnim                        34       34
+m_iCurrentMovement                   845     3380
+Total                              70270   365799
+
+
+PetCommand_Attack                  Count    Bytes
+=================================================
+m_uiOwnerIndex                        49       98
+m_ySlot                               49       49
+m_uiStartCooldown                     49      196
+m_uiCooldownDuration                  49      196
+m_unAmmo                              49       98
+m_uiNetFlags                          49      196
+Total                                294      833
+
+
+PetCommand_Follow                  Count    Bytes
+=================================================
+m_uiOwnerIndex                        49       98
+m_ySlot                               49       49
+m_uiStartCooldown                     49      196
+m_uiCooldownDuration                  49      196
+m_unAmmo                              49       98
+m_uiNetFlags                          49      196
+Total                                294      833
+
+
+PetCommand_Move                    Count    Bytes
+=================================================
+m_uiOwnerIndex                        49       98
+m_ySlot                               49       49
+m_uiStartCooldown                     49      196
+m_uiCooldownDuration                  49      196
+m_unAmmo                              49       98
+m_uiNetFlags                          49      196
+Total                                294      833
+
+
+Player_Chaplain                    Count    Bytes
+=================================================
+m_v3Position                       11061   132732
+m_v3Angles[PITCH]                   7314    29256
+m_v3Angles[ROLL]                      21       84
+m_v3Angles[YAW]                     9044    36176
+m_yStatus                             46       46
+m_fHealth                           7113    28452
+m_uiNetFlags                          36      144
+m_ayAnim[0]                          893      893
+m_ayAnimSequence[0]                  931      931
+m_afAnimSpeed[0]                     551     2204
+m_ayAnim[1]                          351      351
+m_ayAnimSequence[1]                  372      372
+m_afAnimSpeed[1]                      41      164
+m_ahEffect[0]                         11       22
+m_ayEffectSequence[0]                 11       11
+m_ahEffect[1]                         24       48
+m_ayEffectSequence[1]                118      118
+m_ahEffect[2]                         18       36
+m_ayEffectSequence[2]                 70       70
+m_ahEffect[3]                         11       22
+m_ayEffectSequence[3]                 11       11
+m_ahEffect[4]                         74      148
+m_ayEffectSequence[4]                103      103
+m_ahEffect[5]                         11       22
+m_ayEffectSequence[5]                 11       11
+m_ahEffect[6]                         11       22
+m_ayEffectSequence[6]                 11       11
+m_ahEffect[7]                         11       22
+m_ayEffectSequence[7]                 11       11
+m_iTeam                               11       11
+m_ySquad                              11       11
+m_fMana                            12630    50520
+m_fStamina                          9142    36568
+m_ySelectedItem                      222      222
+m_yDefaultAnim                        76       76
+m_v3Velocity                       11122   133464
+m_iCurrentAction                     353     1412
+m_uiCurrentActionEndTime             651     2604
+m_uiLastActionTime                 12290    49160
+m_uiLastMeleeAttackTime              143      572
+m_uiLastMeleeAttackLength             74      296
+m_yAttackSequence                    115      115
+m_fFov                                11       44
+m_uiTargetIndex                       11       44
+m_yFirstPersonAnim                    45       45
+m_yFirstPersonAnimSequence            83       83
+m_fFirstPersonAnimSpeed               11       44
+m_iClientNum                          14       56
+m_iMoveFlags                        1095     4380
+m_iCurrentMovement                  1388     5552
+m_uiDeathTime                         14       56
+m_uiLoadoutTime                       16       64
+m_uiWheelTime                         11       44
+m_yOrder                              16       16
+m_yOrderSequence                      21       21
+m_uiOrderEntIndex                     12       24
+m_v3OrderPos                          20      240
+m_yOfficerOrder                       11       11
+m_yOfficerOrderSequence               11       11
+m_uiOfficerOrderEntIndex              11       22
+m_v3OfficerOrderPos                   11      132
+m_uiPetIndex                          11       22
+Total                              87954   518435
+
+
+Player_Commander                   Count    Bytes
+=================================================
+m_v3Position                        8574   102888
+m_v3Angles[PITCH]                      2        8
+m_v3Angles[ROLL]                       2        8
+m_v3Angles[YAW]                        2        8
+m_yStatus                              2        2
+m_fHealth                              2        8
+m_uiNetFlags                           2        8
+m_ayAnim[0]                            6        6
+m_ayAnimSequence[0]                   86       86
+m_afAnimSpeed[0]                       2        8
+m_ayAnim[1]                            4        4
+m_ayAnimSequence[1]                   84       84
+m_afAnimSpeed[1]                       2        8
+m_ahEffect[0]                          2        4
+m_ayEffectSequence[0]                  2        2
+m_ahEffect[1]                          2        4
+m_ayEffectSequence[1]                  2        2
+m_ahEffect[2]                          2        4
+m_ayEffectSequence[2]                  2        2
+m_ahEffect[3]                          2        4
+m_ayEffectSequence[3]                  2        2
+m_ahEffect[4]                          2        4
+m_ayEffectSequence[4]                  2        2
+m_ahEffect[5]                          2        4
+m_ayEffectSequence[5]                  2        2
+m_ahEffect[6]                          2        4
+m_ayEffectSequence[6]                  2        2
+m_ahEffect[7]                          2        4
+m_ayEffectSequence[7]                  2        2
+m_iTeam                                2        2
+m_ySquad                               2        2
+m_fMana                                2        8
+m_fStamina                             2        8
+m_ySelectedItem                      183      183
+m_yDefaultAnim                         2        2
+m_v3Velocity                           2       24
+m_iCurrentAction                     165      660
+m_uiCurrentActionEndTime             165      660
+m_uiLastActionTime                     2        8
+m_uiLastMeleeAttackTime                2        8
+m_uiLastMeleeAttackLength              2        8
+m_yAttackSequence                      2        2
+m_fFov                                 2        8
+m_uiTargetIndex                        2        8
+m_yFirstPersonAnim                     2        2
+m_yFirstPersonAnimSequence             2        2
+m_fFirstPersonAnimSpeed                2        8
+m_iClientNum                           2        8
+m_iMoveFlags                           2        8
+m_iCurrentMovement                     2        8
+m_uiDeathTime                          2        8
+m_uiLoadoutTime                        2        8
+m_uiWheelTime                          2        8
+m_yOrder                               2        2
+m_yOrderSequence                       2        2
+m_uiOrderEntIndex                      2        4
+m_v3OrderPos                           2       24
+m_yOfficerOrder                        2        2
+m_yOfficerOrderSequence                2        2
+m_uiOfficerOrderEntIndex               2        4
+m_v3OfficerOrderPos                    2       24
+m_uiPetIndex                           2        4
+Total                               9375   104893
+
+
+Player_Conjurer                    Count    Bytes
+=================================================
+m_v3Position                       28342   340104
+m_v3Angles[PITCH]                  14399    57596
+m_v3Angles[ROLL]                      32      128
+m_v3Angles[YAW]                    18553    74212
+m_yStatus                            119      119
+m_fHealth                          19879    79516
+m_uiNetFlags                         118      472
+m_ayAnim[0]                         1957     1957
+m_ayAnimSequence[0]                 2073     2073
+m_afAnimSpeed[0]                    1364     5456
+m_ayAnim[1]                          941      941
+m_ayAnimSequence[1]                 1046     1046
+m_afAnimSpeed[1]                     132      528
+m_ahEffect[0]                         30       60
+m_ayEffectSequence[0]                 30       30
+m_ahEffect[1]                         66      132
+m_ayEffectSequence[1]                466      466
+m_ahEffect[2]                         53      106
+m_ayEffectSequence[2]                148      148
+m_ahEffect[3]                         32       64
+m_ayEffectSequence[3]                 34       34
+m_ahEffect[4]                        171      342
+m_ayEffectSequence[4]                240      240
+m_ahEffect[5]                         30       60
+m_ayEffectSequence[5]                 30       30
+m_ahEffect[6]                         30       60
+m_ayEffectSequence[6]                 30       30
+m_ahEffect[7]                        263      526
+m_ayEffectSequence[7]                263      263
+m_iTeam                               30       30
+m_ySquad                              30       30
+m_fMana                            22728    90912
+m_fStamina                         22919    91676
+m_ySelectedItem                      456      456
+m_yDefaultAnim                       317      317
+m_v3Velocity                       28285   339420
+m_iCurrentAction                     779     3116
+m_uiCurrentActionEndTime            1147     4588
+m_uiLastActionTime                 29683   118732
+m_uiLastMeleeAttackTime              383     1532
+m_uiLastMeleeAttackLength            362     1448
+m_yAttackSequence                    339      339
+m_fFov                                30      120
+m_uiTargetIndex                       30      120
+m_yFirstPersonAnim                   212      212
+m_yFirstPersonAnimSequence           314      314
+m_fFirstPersonAnimSpeed               30      120
+m_iClientNum                          54      216
+m_iMoveFlags                        2260     9040
+m_iCurrentMovement                  3297    13188
+m_uiDeathTime                         54      216
+m_uiLoadoutTime                       33      132
+m_uiWheelTime                         30      120
+m_yOrder                              30       30
+m_yOrderSequence                      30       30
+m_uiOrderEntIndex                     30       60
+m_v3OrderPos                          30      360
+m_yOfficerOrder                       30       30
+m_yOfficerOrderSequence               30       30
+m_uiOfficerOrderEntIndex              30       60
+m_v3OfficerOrderPos                   30      360
+m_uiPetIndex                          30       60
+Total                             204943  1244153
+
+
+Player_Engineer                    Count    Bytes
+=================================================
+m_v3Position                       22362   268344
+m_v3Angles[PITCH]                  11063    44252
+m_v3Angles[ROLL]                      21       84
+m_v3Angles[YAW]                    15721    62884
+m_yStatus                             51       51
+m_fHealth                          17641    70564
+m_uiNetFlags                          59      236
+m_ayAnim[0]                         1565     1565
+m_ayAnimSequence[0]                 1630     1630
+m_afAnimSpeed[0]                    1136     4544
+m_ayAnim[1]                          389      389
+m_ayAnimSequence[1]                  909      909
+m_afAnimSpeed[1]                      28      112
+m_ahEffect[0]                         15       30
+m_ayEffectSequence[0]                 15       15
+m_ahEffect[1]                         24       48
+m_ayEffectSequence[1]                156      156
+m_ahEffect[2]                         19       38
+m_ayEffectSequence[2]                 48       48
+m_ahEffect[3]                         15       30
+m_ayEffectSequence[3]                 15       15
+m_ahEffect[4]                        129      258
+m_ayEffectSequence[4]                180      180
+m_ahEffect[5]                         15       30
+m_ayEffectSequence[5]                 15       15
+m_ahEffect[6]                         15       30
+m_ayEffectSequence[6]                 15       15
+m_ahEffect[7]                         15       30
+m_ayEffectSequence[7]                 15       15
+m_iTeam                               15       15
+m_ySquad                              15       15
+m_fMana                             5679    22716
+m_fStamina                         17302    69208
+m_ySelectedItem                      201      201
+m_yDefaultAnim                       138      138
+m_v3Velocity                       22490   269880
+m_iCurrentAction                    1015     4060
+m_uiCurrentActionEndTime            1161     4644
+m_uiLastActionTime                 24971    99884
+m_uiLastMeleeAttackTime               93      372
+m_uiLastMeleeAttackLength             86      344
+m_yAttackSequence                     77       77
+m_fFov                                15       60
+m_uiTargetIndex                       15       60
+m_yFirstPersonAnim                   115      115
+m_yFirstPersonAnimSequence           645      645
+m_fFirstPersonAnimSpeed               15       60
+m_iClientNum                          22       88
+m_iMoveFlags                        2205     8820
+m_iCurrentMovement                  2494     9976
+m_uiDeathTime                         22       88
+m_uiLoadoutTime                       19       76
+m_uiWheelTime                         15       60
+m_yOrder                              19       19
+m_yOrderSequence                      27       27
+m_uiOrderEntIndex                     22       44
+m_v3OrderPos                          23      276
+m_yOfficerOrder                       15       15
+m_yOfficerOrderSequence               15       15
+m_uiOfficerOrderEntIndex              15       30
+m_v3OfficerOrderPos                   15      180
+m_uiPetIndex                          15       30
+Total                             152272   948755
+
+
+Player_Legionnaire                 Count    Bytes
+=================================================
+m_v3Position                       18827   225924
+m_v3Angles[PITCH]                  10060    40240
+m_v3Angles[ROLL]                      21       84
+m_v3Angles[YAW]                    12831    51324
+m_yStatus                             71       71
+m_fHealth                          13836    55344
+m_uiNetFlags                          35      140
+m_ayAnim[0]                         1383     1383
+m_ayAnimSequence[0]                 1461     1461
+m_afAnimSpeed[0]                    1037     4148
+m_ayAnim[1]                          635      635
+m_ayAnimSequence[1]                  675      675
+m_afAnimSpeed[1]                     111      444
+m_ahEffect[0]                         13       26
+m_ayEffectSequence[0]                 13       13
+m_ahEffect[1]                         43       86
+m_ayEffectSequence[1]                322      322
+m_ahEffect[2]                         25       50
+m_ayEffectSequence[2]                232      232
+m_ahEffect[3]                         17       34
+m_ayEffectSequence[3]                312      312
+m_ahEffect[4]                        196      392
+m_ayEffectSequence[4]                259      259
+m_ahEffect[5]                         13       26
+m_ayEffectSequence[5]                 13       13
+m_ahEffect[6]                         13       26
+m_ayEffectSequence[6]                 13       13
+m_ahEffect[7]                         13       26
+m_ayEffectSequence[7]                 13       13
+m_iTeam                               13       13
+m_ySquad                              13       13
+m_fMana                             9991    39964
+m_fStamina                         18369    73476
+m_ySelectedItem                      148      148
+m_yDefaultAnim                       140      140
+m_v3Velocity                       19043   228516
+m_iCurrentAction                     910     3640
+m_uiCurrentActionEndTime            1244     4976
+m_uiLastActionTime                 20547    82188
+m_uiLastMeleeAttackTime              440     1760
+m_uiLastMeleeAttackLength            411     1644
+m_yAttackSequence                    375      375
+m_fFov                                13       52
+m_uiTargetIndex                       13       52
+m_yFirstPersonAnim                   107      107
+m_yFirstPersonAnimSequence           316      316
+m_fFirstPersonAnimSpeed               13       52
+m_iClientNum                          22       88
+m_iMoveFlags                        1978     7912
+m_iCurrentMovement                  2308     9232
+m_uiDeathTime                         25      100
+m_uiLoadoutTime                       17       68
+m_uiWheelTime                         13       52
+m_yOrder                              13       13
+m_yOrderSequence                      13       13
+m_uiOrderEntIndex                     13       26
+m_v3OrderPos                          13      156
+m_yOfficerOrder                       13       13
+m_yOfficerOrderSequence               13       13
+m_uiOfficerOrderEntIndex              13       26
+m_v3OfficerOrderPos                   13      156
+m_uiPetIndex                          13       26
+Total                             139079   839042
+
+
+Player_Marksman                    Count    Bytes
+=================================================
+m_v3Position                       47511   570132
+m_v3Angles[PITCH]                  24017    96068
+m_v3Angles[ROLL]                      66      264
+m_v3Angles[YAW]                    31184   124736
+m_yStatus                            156      156
+m_fHealth                          24960    99840
+m_uiNetFlags                         101      404
+m_ayAnim[0]                         3645     3645
+m_ayAnimSequence[0]                 3815     3815
+m_afAnimSpeed[0]                    2511    10044
+m_ayAnim[1]                         1137     1137
+m_ayAnimSequence[1]                 1303     1303
+m_afAnimSpeed[1]                      70      280
+m_ahEffect[0]                         36       72
+m_ayEffectSequence[0]                 36       36
+m_ahEffect[1]                         86      172
+m_ayEffectSequence[1]                315      315
+m_ahEffect[2]                         61      122
+m_ayEffectSequence[2]                234      234
+m_ahEffect[3]                         36       72
+m_ayEffectSequence[3]                 36       36
+m_ahEffect[4]                        188      376
+m_ayEffectSequence[4]                319      319
+m_ahEffect[5]                         36       72
+m_ayEffectSequence[5]                 36       36
+m_ahEffect[6]                         36       72
+m_ayEffectSequence[6]                 36       36
+m_ahEffect[7]                         36       72
+m_ayEffectSequence[7]                 36       36
+m_iTeam                               36       36
+m_ySquad                              36       36
+m_fMana                            34565   138260
+m_fStamina                         38119   152476
+m_ySelectedItem                      625      625
+m_yDefaultAnim                       327      327
+m_v3Velocity                       47790   573480
+m_iCurrentAction                    1373     5492
+m_uiCurrentActionEndTime            2247     8988
+m_uiLastActionTime                 50188   200752
+m_uiLastMeleeAttackTime              685     2740
+m_uiLastMeleeAttackLength            605     2420
+m_yAttackSequence                    544      544
+m_fFov                                42      168
+m_uiTargetIndex                       36      144
+m_yFirstPersonAnim                   294      294
+m_yFirstPersonAnimSequence           591      591
+m_fFirstPersonAnimSpeed               36      144
+m_iClientNum                          54      216
+m_iMoveFlags                        5638    22552
+m_iCurrentMovement                  5656    22624
+m_uiDeathTime                         57      228
+m_uiLoadoutTime                       50      200
+m_uiWheelTime                         36      144
+m_yOrder                              44       44
+m_yOrderSequence                      45       45
+m_uiOrderEntIndex                     39       78
+m_v3OrderPos                          39      468
+m_yOfficerOrder                       36       36
+m_yOfficerOrderSequence               36       36
+m_uiOfficerOrderEntIndex              36       72
+m_v3OfficerOrderPos                   36      432
+m_uiPetIndex                          36       72
+Total                             332016  2048666
+
+
+Player_Observer                    Count    Bytes
+=================================================
+m_v3Position                         330     3960
+m_v3Angles[PITCH]                    518     2072
+m_v3Angles[ROLL]                     220      880
+m_v3Angles[YAW]                      552     2208
+m_yStatus                            205      205
+m_fHealth                            203      812
+m_uiNetFlags                         205      820
+m_ayAnim[0]                          203      203
+m_ayAnimSequence[0]                  204      204
+m_afAnimSpeed[0]                     203      812
+m_ayAnim[1]                          203      203
+m_ayAnimSequence[1]                  204      204
+m_afAnimSpeed[1]                     203      812
+m_ahEffect[0]                        203      406
+m_ayEffectSequence[0]                203      203
+m_ahEffect[1]                        203      406
+m_ayEffectSequence[1]                203      203
+m_ahEffect[2]                        203      406
+m_ayEffectSequence[2]                203      203
+m_ahEffect[3]                        203      406
+m_ayEffectSequence[3]                203      203
+m_ahEffect[4]                        203      406
+m_ayEffectSequence[4]                203      203
+m_ahEffect[5]                        203      406
+m_ayEffectSequence[5]                203      203
+m_ahEffect[6]                        203      406
+m_ayEffectSequence[6]                203      203
+m_ahEffect[7]                        203      406
+m_ayEffectSequence[7]                203      203
+m_iTeam                              203      203
+m_ySquad                             203      203
+m_fMana                              203      812
+m_fStamina                           203      812
+m_ySelectedItem                      204      204
+m_yDefaultAnim                       203      203
+m_v3Velocity                         294     3528
+m_iCurrentAction                     203      812
+m_uiCurrentActionEndTime             203      812
+m_uiLastActionTime                   203      812
+m_uiLastMeleeAttackTime              203      812
+m_uiLastMeleeAttackLength            203      812
+m_yAttackSequence                    203      203
+m_fFov                               203      812
+m_uiTargetIndex                      203      812
+m_yFirstPersonAnim                   203      203
+m_yFirstPersonAnimSequence           203      203
+m_fFirstPersonAnimSpeed              203      812
+m_iClientNum                         203      812
+m_iMoveFlags                         203      812
+m_iCurrentMovement                   203      812
+m_uiDeathTime                        203      812
+m_uiLoadoutTime                      203      812
+m_uiWheelTime                        203      812
+m_yOrder                             203      203
+m_yOrderSequence                     203      203
+m_uiOrderEntIndex                    203      406
+m_v3OrderPos                         203     2436
+m_yOfficerOrder                      203      203
+m_yOfficerOrderSequence              203      203
+m_uiOfficerOrderEntIndex             203      406
+m_v3OfficerOrderPos                  203     2436
+m_uiPetIndex                         203      406
+Total                              13492    43111
+
+
+Player_Savage                      Count    Bytes
+=================================================
+m_v3Position                       59787   717444
+m_v3Angles[PITCH]                  32969   131876
+m_v3Angles[ROLL]                      69      276
+m_v3Angles[YAW]                    40932   163728
+m_yStatus                            216      216
+m_fHealth                          49014   196056
+m_uiNetFlags                         156      624
+m_ayAnim[0]                         4286     4286
+m_ayAnimSequence[0]                 4477     4477
+m_afAnimSpeed[0]                    3006    12024
+m_ayAnim[1]                         1598     1598
+m_ayAnimSequence[1]                 1700     1700
+m_afAnimSpeed[1]                     179      716
+m_ahEffect[0]                         35       70
+m_ayEffectSequence[0]                 35       35
+m_ahEffect[1]                         99      198
+m_ayEffectSequence[1]                633      633
+m_ahEffect[2]                         59      118
+m_ayEffectSequence[2]                480      480
+m_ahEffect[3]                         35       70
+m_ayEffectSequence[3]                 35       35
+m_ahEffect[4]                        387      774
+m_ayEffectSequence[4]                553      553
+m_ahEffect[5]                         35       70
+m_ayEffectSequence[5]                 35       35
+m_ahEffect[6]                         35       70
+m_ayEffectSequence[6]                 35       35
+m_ahEffect[7]                         35       70
+m_ayEffectSequence[7]                 35       35
+m_iTeam                               35       35
+m_ySquad                              35       35
+m_fMana                            17889    71556
+m_fStamina                         46190   184760
+m_ySelectedItem                      512      512
+m_yDefaultAnim                       445      445
+m_v3Velocity                       60305   723660
+m_iCurrentAction                    1974     7896
+m_uiCurrentActionEndTime            9794    39176
+m_uiLastActionTime                 64495   257980
+m_uiLastMeleeAttackTime              898     3592
+m_uiLastMeleeAttackLength            803     3212
+m_yAttackSequence                    760      760
+m_fFov                                35      140
+m_uiTargetIndex                       35      140
+m_yFirstPersonAnim                   548      548
+m_yFirstPersonAnimSequence          7373     7373
+m_fFirstPersonAnimSpeed              317     1268
+m_iClientNum                          54      216
+m_iMoveFlags                        6771    27084
+m_iCurrentMovement                  7457    29828
+m_uiDeathTime                         58      232
+m_uiLoadoutTime                       69      276
+m_uiWheelTime                         35      140
+m_yOrder                              41       41
+m_yOrderSequence                      43       43
+m_uiOrderEntIndex                     39       78
+m_v3OrderPos                          39      468
+m_yOfficerOrder                       35       35
+m_yOfficerOrderSequence               35       35
+m_uiOfficerOrderEntIndex              35       70
+m_v3OfficerOrderPos                   35      420
+m_uiPetIndex                          35       70
+Total                             428174  2600426
+
+
+Player_Shaman                      Count    Bytes
+=================================================
+m_v3Position                        8070    96840
+m_v3Angles[PITCH]                   4088    16352
+m_v3Angles[ROLL]                       8       32
+m_v3Angles[YAW]                     4773    19092
+m_yStatus                             23       23
+m_fHealth                           6968    27872
+m_uiNetFlags                          21       84
+m_ayAnim[0]                          537      537
+m_ayAnimSequence[0]                  558      558
+m_afAnimSpeed[0]                     448     1792
+m_ayAnim[1]                          214      214
+m_ayAnimSequence[1]                  226      226
+m_afAnimSpeed[1]                      14       56
+m_ahEffect[0]                          6       12
+m_ayEffectSequence[0]                  6        6
+m_ahEffect[1]                         20       40
+m_ayEffectSequence[1]                150      150
+m_ahEffect[2]                         10       20
+m_ayEffectSequence[2]                 50       50
+m_ahEffect[3]                          6       12
+m_ayEffectSequence[3]                  6        6
+m_ahEffect[4]                         37       74
+m_ayEffectSequence[4]                 49       49
+m_ahEffect[5]                          6       12
+m_ayEffectSequence[5]                  6        6
+m_ahEffect[6]                          6       12
+m_ayEffectSequence[6]                  6        6
+m_ahEffect[7]                          6       12
+m_ayEffectSequence[7]                  6        6
+m_iTeam                                6        6
+m_ySquad                               6        6
+m_fMana                             8336    33344
+m_fStamina                          4708    18832
+m_ySelectedItem                      133      133
+m_yDefaultAnim                        12       12
+m_v3Velocity                        8095    97140
+m_iCurrentAction                     193      772
+m_uiCurrentActionEndTime             335     1340
+m_uiLastActionTime                  8709    34836
+m_uiLastMeleeAttackTime              102      408
+m_uiLastMeleeAttackLength             91      364
+m_yAttackSequence                     85       85
+m_fFov                                 6       24
+m_uiTargetIndex                        6       24
+m_yFirstPersonAnim                     6        6
+m_yFirstPersonAnimSequence             6        6
+m_fFirstPersonAnimSpeed                6       24
+m_iClientNum                          10       40
+m_iMoveFlags                         280     1120
+m_iCurrentMovement                   918     3672
+m_uiDeathTime                         11       44
+m_uiLoadoutTime                        6       24
+m_uiWheelTime                          6       24
+m_yOrder                               6        6
+m_yOrderSequence                       6        6
+m_uiOrderEntIndex                      6       12
+m_v3OrderPos                           6       72
+m_yOfficerOrder                        6        6
+m_yOfficerOrderSequence                6        6
+m_uiOfficerOrderEntIndex               6       12
+m_v3OfficerOrderPos                    6       72
+m_uiPetIndex                           6       12
+Total                              58450   356641
+
+
+Player_ShapeShifter                Count    Bytes
+=================================================
+m_v3Position                       48973   587676
+m_v3Angles[PITCH]                  24750    99000
+m_v3Angles[ROLL]                      68      272
+m_v3Angles[YAW]                    33911   135644
+m_yStatus                            208      208
+m_fHealth                          25749   102996
+m_uiNetFlags                         239      956
+m_ayAnim[0]                         2272     2272
+m_ayAnimSequence[0]                 2441     2441
+m_afAnimSpeed[0]                    1519     6076
+m_ayAnim[1]                         1307     1307
+m_ayAnimSequence[1]                 1414     1414
+m_afAnimSpeed[1]                     177      708
+m_ahEffect[0]                         52      104
+m_ayEffectSequence[0]                 52       52
+m_ahEffect[1]                        138      276
+m_ayEffectSequence[1]                724      724
+m_ahEffect[2]                         89      178
+m_ayEffectSequence[2]                351      351
+m_ahEffect[3]                         56      112
+m_ayEffectSequence[3]                 61       61
+m_ahEffect[4]                        237      474
+m_ayEffectSequence[4]                344      344
+m_ahEffect[5]                         52      104
+m_ayEffectSequence[5]                 52       52
+m_ahEffect[6]                         52      104
+m_ayEffectSequence[6]                 52       52
+m_ahEffect[7]                        152      304
+m_ayEffectSequence[7]                153      153
+m_iTeam                               52       52
+m_ySquad                              52       52
+m_fMana                            37000   148000
+m_fStamina                         43051   172204
+m_ySelectedItem                      441      441
+m_yDefaultAnim                       224      224
+m_v3Velocity                       49140   589680
+m_iCurrentAction                    1200     4800
+m_uiCurrentActionEndTime            2218     8872
+m_uiLastActionTime                 53337   213348
+m_uiLastMeleeAttackTime              892     3568
+m_uiLastMeleeAttackLength            792     3168
+m_yAttackSequence                    750      750
+m_fFov                                52      208
+m_uiTargetIndex                       52      208
+m_yFirstPersonAnim                   190      190
+m_yFirstPersonAnimSequence           207      207
+m_fFirstPersonAnimSpeed               52      208
+m_iClientNum                          95      380
+m_iMoveFlags                        4731    18924
+m_iCurrentMovement                  4095    16380
+m_uiDeathTime                         96      384
+m_uiLoadoutTime                       59      236
+m_uiWheelTime                         52      208
+m_yOrder                              52       52
+m_yOrderSequence                      52       52
+m_uiOrderEntIndex                     52      104
+m_v3OrderPos                          52      624
+m_yOfficerOrder                       54       54
+m_yOfficerOrderSequence               53       53
+m_uiOfficerOrderEntIndex              53      106
+m_v3OfficerOrderPos                   52      624
+m_uiPetIndex                          52      104
+Total                             344947  2128880
+
+
+Player_Steambuchet                 Count    Bytes
+=================================================
+m_v3Position                        2601    31212
+m_v3Angles[PITCH]                      5       20
+m_v3Angles[ROLL]                       5       20
+m_v3Angles[YAW]                      730     2920
+m_yStatus                             23       23
+m_fHealth                            161      644
+m_uiNetFlags                          16       64
+m_ayAnim[0]                           91       91
+m_ayAnimSequence[0]                  103      103
+m_afAnimSpeed[0]                      50      200
+m_ayAnim[1]                           35       35
+m_ayAnimSequence[1]                   48       48
+m_afAnimSpeed[1]                       5       20
+m_ahEffect[0]                          5       10
+m_ayEffectSequence[0]                  5        5
+m_ahEffect[1]                         10       20
+m_ayEffectSequence[1]                 88       88
+m_ahEffect[2]                          5       10
+m_ayEffectSequence[2]                  5        5
+m_ahEffect[3]                          5       10
+m_ayEffectSequence[3]                  5        5
+m_ahEffect[4]                         23       46
+m_ayEffectSequence[4]                 29       29
+m_ahEffect[5]                          5       10
+m_ayEffectSequence[5]                  5        5
+m_ahEffect[6]                          5       10
+m_ayEffectSequence[6]                  5        5
+m_ahEffect[7]                          5       10
+m_ayEffectSequence[7]                  5        5
+m_iTeam                                5        5
+m_ySquad                               5        5
+m_fMana                              112      448
+m_fStamina                           312     1248
+m_ySelectedItem                       40       40
+m_yDefaultAnim                         5        5
+m_v3Velocity                        2627    31524
+m_iCurrentAction                      91      364
+m_uiCurrentActionEndTime              91      364
+m_uiLastActionTime                  2606    10424
+m_uiLastMeleeAttackTime                5       20
+m_uiLastMeleeAttackLength              5       20
+m_yAttackSequence                      5        5
+m_fFov                                 5       20
+m_uiTargetIndex                        5       20
+m_yFirstPersonAnim                     5        5
+m_yFirstPersonAnimSequence             5        5
+m_fFirstPersonAnimSpeed                5       20
+m_iClientNum                           7       28
+m_iMoveFlags                         284     1136
+m_iCurrentMovement                    86      344
+m_uiDeathTime                          7       28
+m_uiLoadoutTime                        7       28
+m_uiWheelTime                       2422     9688
+m_yOrder                               5        5
+m_yOrderSequence                       5        5
+m_uiOrderEntIndex                      5       10
+m_v3OrderPos                           5       60
+m_yOfficerOrder                        5        5
+m_yOfficerOrderSequence                5        5
+m_uiOfficerOrderEntIndex               5       10
+m_v3OfficerOrderPos                    5       60
+m_uiPetIndex                           5       10
+Total                              12875    91637
+
+
+Player_Summoner                    Count    Bytes
+=================================================
+m_v3Position                       63343   760116
+m_v3Angles[PITCH]                  37227   148908
+m_v3Angles[ROLL]                      80      320
+m_v3Angles[YAW]                    44603   178412
+m_yStatus                            242      242
+m_fHealth                          53583   214332
+m_uiNetFlags                         199      796
+m_ayAnim[0]                         3795     3795
+m_ayAnimSequence[0]                 4018     4018
+m_afAnimSpeed[0]                    2708    10832
+m_ayAnim[1]                         2002     2002
+m_ayAnimSequence[1]                 2338     2338
+m_afAnimSpeed[1]                     114      456
+m_ahEffect[0]                         60      120
+m_ayEffectSequence[0]                 60       60
+m_ahEffect[1]                        134      268
+m_ayEffectSequence[1]               1199     1199
+m_ahEffect[2]                         94      188
+m_ayEffectSequence[2]                295      295
+m_ahEffect[3]                         63      126
+m_ayEffectSequence[3]                 75       75
+m_ahEffect[4]                        272      544
+m_ayEffectSequence[4]                348      348
+m_ahEffect[5]                         60      120
+m_ayEffectSequence[5]                 60       60
+m_ahEffect[6]                         60      120
+m_ayEffectSequence[6]                 60       60
+m_ahEffect[7]                        354      708
+m_ayEffectSequence[7]                355      355
+m_iTeam                               60       60
+m_ySquad                              60       60
+m_fMana                            63311   253244
+m_fStamina                         46300   185200
+m_ySelectedItem                     1025     1025
+m_yDefaultAnim                       385      385
+m_v3Velocity                       63759   765108
+m_iCurrentAction                    2086     8344
+m_uiCurrentActionEndTime            3202    12808
+m_uiLastActionTime                 65971   263884
+m_uiLastMeleeAttackTime              824     3296
+m_uiLastMeleeAttackLength            741     2964
+m_yAttackSequence                    695      695
+m_fFov                                60      240
+m_uiTargetIndex                       60      240
+m_yFirstPersonAnim                   318      318
+m_yFirstPersonAnimSequence           568      568
+m_fFirstPersonAnimSpeed               60      240
+m_iClientNum                         106      424
+m_iMoveFlags                        6045    24180
+m_iCurrentMovement                  6478    25912
+m_uiDeathTime                        106      424
+m_uiLoadoutTime                       68      272
+m_uiWheelTime                         60      240
+m_yOrder                              62       62
+m_yOrderSequence                      63       63
+m_uiOrderEntIndex                     61      122
+m_v3OrderPos                          63      756
+m_yOfficerOrder                       63       63
+m_yOfficerOrderSequence               63       63
+m_uiOfficerOrderEntIndex              63      126
+m_v3OfficerOrderPos                   60      720
+m_uiPetIndex                         190      380
+Total                             480837  2883699
+
+
+Projectile_Arrow                   Count    Bytes
+=================================================
+m_yStatus                             56       56
+m_v3Origin                            56      672
+m_v3Angles                            56      672
+m_v3Velocity                          56      672
+m_uiOriginTime                        50      200
+Total                                274     2272
+
+
+Projectile_Bolt                    Count    Bytes
+=================================================
+m_yStatus                            302      302
+m_v3Origin                           302     3624
+m_v3Angles                           302     3624
+m_v3Velocity                         302     3624
+m_uiOriginTime                       229      916
+Total                               1437    12090
+
+
+Projectile_FrostBolt               Count    Bytes
+=================================================
+m_yStatus                             57       57
+m_v3Origin                            75      900
+m_v3Angles                            57      684
+m_v3Velocity                          57      684
+m_uiOriginTime                        57      228
+Total                                303     2553
+
+
+Projectile_Grenade                 Count    Bytes
+=================================================
+m_yStatus                            153      153
+m_v3Origin                           582     6984
+m_v3Angles                           153     1836
+m_v3Velocity                         582     6984
+m_uiOriginTime                       582     2328
+Total                               2052    18285
+
+
+Projectile_Holy                    Count    Bytes
+=================================================
+m_yStatus                             44       44
+m_v3Origin                            59      708
+m_v3Angles                            44      528
+m_v3Velocity                          44      528
+m_uiOriginTime                        44      176
+Total                                235     1984
+
+
+Projectile_ImpFireball             Count    Bytes
+=================================================
+m_yStatus                            388      388
+m_v3Origin                           521     6252
+m_v3Angles                           388     4656
+m_v3Velocity                         388     4656
+m_uiOriginTime                       388     1552
+Total                               2073    17504
+
+
+Projectile_Locust                  Count    Bytes
+=================================================
+m_yStatus                            356      356
+m_v3Origin                           501     6012
+m_v3Angles                           356     4272
+m_v3Velocity                         356     4272
+m_uiOriginTime                       356     1424
+Total                               1925    16336
+
+
+Projectile_NpcShot                 Count    Bytes
+=================================================
+m_yStatus                             87       87
+m_v3Origin                            93     1116
+m_v3Angles                            87     1044
+m_v3Velocity                          87     1044
+m_uiOriginTime                        87      348
+m_fScale                              87      348
+m_hModel                              87      174
+m_ahEffect[0]                         87      174
+m_ayEffectSequence[0]                 87       87
+Total                                789     4422
+
+
+Projectile_Rocket                  Count    Bytes
+=================================================
+m_yStatus                             78       78
+m_v3Origin                           123     1476
+m_v3Angles                            78      936
+m_v3Velocity                          78      936
+m_uiOriginTime                        78      312
+Total                                435     3738
+
+
+Projectile_SiegeFire               Count    Bytes
+=================================================
+m_yStatus                             12       12
+m_v3Origin                            17      204
+m_v3Angles                            12      144
+m_v3Velocity                          12      144
+m_uiOriginTime                        12       48
+Total                                 65      552
+
+
+Projectile_SiegeStone              Count    Bytes
+=================================================
+m_yStatus                             15       15
+m_v3Origin                            19      228
+m_v3Angles                            15      180
+m_v3Velocity                          15      180
+m_uiOriginTime                        15       60
+Total                                 79      663
+
+
+Projectile_VenomSpore              Count    Bytes
+=================================================
+m_yStatus                           1874     1874
+m_v3Origin                          2658    31896
+m_v3Angles                          1874    22488
+m_v3Velocity                        1874    22488
+m_uiOriginTime                      1874     7496
+Total                              10154    86242
+
+
+Prop_BaseBuilding                  Count    Bytes
+=================================================
+m_v3Position                           2       24
+m_v3Angles[PITCH]                      2        8
+m_v3Angles[ROLL]                       2        8
+m_v3Angles[YAW]                        2        8
+m_yStatus                              2        2
+m_fHealth                              2        8
+m_uiNetFlags                           2        8
+m_ayAnim[0]                            2        2
+m_ayAnimSequence[0]                    2        2
+m_afAnimSpeed[0]                       2        8
+m_ayAnim[1]                            2        2
+m_ayAnimSequence[1]                    2        2
+m_afAnimSpeed[1]                       2        8
+m_ahEffect[0]                          2        4
+m_ayEffectSequence[0]                  2        2
+m_ahEffect[1]                          2        4
+m_ayEffectSequence[1]                  2        2
+m_ahEffect[2]                          2        4
+m_ayEffectSequence[2]                  2        2
+m_ahEffect[3]                          2        4
+m_ayEffectSequence[3]                  2        2
+m_ahEffect[4]                          2        4
+m_ayEffectSequence[4]                  2        2
+m_ahEffect[5]                          2        4
+m_ayEffectSequence[5]                  2        2
+m_ahEffect[6]                          2        4
+m_ayEffectSequence[6]                  2        2
+m_ahEffect[7]                          2        4
+m_ayEffectSequence[7]                  2        2
+m_iTeam                                2        2
+m_ySquad                               2        2
+m_fScale                               2        8
+m_hModel                               2        4
+Total                                 66      154
+
+
+Prop_Mine                          Count    Bytes
+=================================================
+m_v3Position                           5       60
+m_v3Angles[PITCH]                      5       20
+m_v3Angles[ROLL]                       5       20
+m_v3Angles[YAW]                        5       20
+m_yStatus                             28       28
+m_fHealth                              5       20
+m_uiNetFlags                           5       20
+m_ayAnim[0]                            5        5
+m_ayAnimSequence[0]                    5        5
+m_afAnimSpeed[0]                       5       20
+m_ayAnim[1]                            5        5
+m_ayAnimSequence[1]                    5        5
+m_afAnimSpeed[1]                       5       20
+m_ahEffect[0]                          5       10
+m_ayEffectSequence[0]                  5        5
+m_ahEffect[1]                          5       10
+m_ayEffectSequence[1]                  5        5
+m_ahEffect[2]                          5       10
+m_ayEffectSequence[2]                  5        5
+m_ahEffect[3]                          5       10
+m_ayEffectSequence[3]                  5        5
+m_ahEffect[4]                          7       14
+m_ayEffectSequence[4]                  7        7
+m_ahEffect[5]                          5       10
+m_ayEffectSequence[5]                  5        5
+m_ahEffect[6]                          5       10
+m_ayEffectSequence[6]                  5        5
+m_ahEffect[7]                          5       10
+m_ayEffectSequence[7]                  5        5
+m_iTeam                                5        5
+m_ySquad                               5        5
+m_fScale                               5       20
+m_hModel                               5       10
+m_uiBuildingIndex                      5       20
+m_uiTotalGold                          5       20
+m_uiHarvestedGold                    709     2836
+m_uiHarvestRate                        5       20
+m_uiRaidBonus                          5       20
+Total                                921     3330
+
+
+Prop_Scar                          Count    Bytes
+=================================================
+m_v3Position                           2       24
+m_v3Angles[PITCH]                      2        8
+m_v3Angles[ROLL]                       2        8
+m_v3Angles[YAW]                        2        8
+m_yStatus                              2        2
+m_fHealth                              2        8
+m_uiNetFlags                           2        8
+m_ayAnim[0]                            2        2
+m_ayAnimSequence[0]                    2        2
+m_afAnimSpeed[0]                       2        8
+m_ayAnim[1]                            2        2
+m_ayAnimSequence[1]                    2        2
+m_afAnimSpeed[1]                       2        8
+m_ahEffect[0]                          2        4
+m_ayEffectSequence[0]                  2        2
+m_ahEffect[1]                          2        4
+m_ayEffectSequence[1]                  2        2
+m_ahEffect[2]                          2        4
+m_ayEffectSequence[2]                  2        2
+m_ahEffect[3]                          2        4
+m_ayEffectSequence[3]                  2        2
+m_ahEffect[4]                          2        4
+m_ayEffectSequence[4]                  2        2
+m_ahEffect[5]                          2        4
+m_ayEffectSequence[5]                  2        2
+m_ahEffect[6]                          2        4
+m_ayEffectSequence[6]                  2        2
+m_ahEffect[7]                          2        4
+m_ayEffectSequence[7]                  2        2
+m_iTeam                                2        2
+m_ySquad                               2        2
+m_fScale                               2        8
+m_hModel                               2        4
+m_uiBuildingIndex                      2        8
+Total                                 68      162
+
+
+Siege_FireBombardment              Count    Bytes
+=================================================
+m_uiOwnerIndex                         5       10
+m_ySlot                                5        5
+m_uiStartCooldown                     17       68
+m_uiCooldownDuration                   9       36
+m_unAmmo                               5       10
+m_uiNetFlags                           5       20
+Total                                 46      149
+
+
+Siege_StoneBombardment             Count    Bytes
+=================================================
+m_uiOwnerIndex                         5       10
+m_ySlot                                5        5
+m_uiStartCooldown                     20       80
+m_uiCooldownDuration                   9       36
+m_unAmmo                               5       10
+m_uiNetFlags                           5       20
+Total                                 49      161
+
+
+Skill_AmmoDepot                    Count    Bytes
+=================================================
+m_uiOwnerIndex                        15       30
+m_ySlot                               15       15
+m_uiStartCooldown                     24       96
+m_uiCooldownDuration                  19       76
+m_unAmmo                              15       30
+m_uiNetFlags                          15       60
+Total                                103      307
+
+
+Skill_BackStab                     Count    Bytes
+=================================================
+m_uiOwnerIndex                        36       72
+m_ySlot                               36       36
+m_uiStartCooldown                     63      252
+m_uiCooldownDuration                  52      208
+m_unAmmo                              36       72
+m_uiNetFlags                          36      144
+Total                                259      784
+
+
+Skill_Bash                         Count    Bytes
+=================================================
+m_uiOwnerIndex                        13       26
+m_ySlot                               13       13
+m_uiStartCooldown                     18       72
+m_uiCooldownDuration                  15       60
+m_unAmmo                              13       26
+m_uiNetFlags                          13       52
+Total                                 85      249
+
+
+Skill_BeastBuild                   Count    Bytes
+=================================================
+m_uiOwnerIndex                        30       60
+m_ySlot                               30       30
+m_uiStartCooldown                     30      120
+m_uiCooldownDuration                  30      120
+m_unAmmo                              30       60
+m_uiNetFlags                          30      120
+Total                                180      510
+
+
+Skill_Blind                        Count    Bytes
+=================================================
+m_uiOwnerIndex                        52      104
+m_ySlot                               52       52
+m_uiStartCooldown                     81      324
+m_uiCooldownDuration                  76      304
+m_unAmmo                              52      104
+m_uiNetFlags                          52      208
+Total                                365     1096
+
+
+Skill_Build                        Count    Bytes
+=================================================
+m_uiOwnerIndex                        15       30
+m_ySlot                               15       15
+m_uiStartCooldown                     15       60
+m_uiCooldownDuration                  15       60
+m_unAmmo                              15       30
+m_uiNetFlags                          15       60
+Total                                 90      255
+
+
+Skill_Burrow                       Count    Bytes
+=================================================
+m_uiOwnerIndex                        52      104
+m_ySlot                               52       52
+m_uiStartCooldown                   2275     9100
+m_uiCooldownDuration                  98      392
+m_unAmmo                              52      104
+m_uiNetFlags                          52      208
+Total                               2581     9960
+
+
+Skill_Cheetah                      Count    Bytes
+=================================================
+m_uiOwnerIndex                        52      104
+m_ySlot                               52       52
+m_uiStartCooldown                     69      276
+m_uiCooldownDuration                  68      272
+m_unAmmo                              52      104
+m_uiNetFlags                          52      208
+Total                                345     1016
+
+
+Skill_CriticalStrike               Count    Bytes
+=================================================
+m_uiOwnerIndex                        35       70
+m_ySlot                               35       35
+m_uiStartCooldown                     57      228
+m_uiCooldownDuration                  48      192
+m_unAmmo                              35       70
+m_uiNetFlags                          35      140
+Total                                245      735
+
+
+Skill_DemoCharge                   Count    Bytes
+=================================================
+m_uiOwnerIndex                        36       72
+m_ySlot                               36       36
+m_uiStartCooldown                     55      220
+m_uiCooldownDuration                  44      176
+m_unAmmo                              36       72
+m_uiNetFlags                          36      144
+Total                                243      720
+
+
+Skill_Disembark                    Count    Bytes
+=================================================
+m_uiOwnerIndex                         5       10
+m_ySlot                                5        5
+m_uiStartCooldown                      5       20
+m_uiCooldownDuration                   5       20
+m_unAmmo                               5       10
+m_uiNetFlags                           5       20
+Total                                 30       85
+
+
+Skill_DoubleSwing                  Count    Bytes
+=================================================
+m_uiOwnerIndex                        35       70
+m_ySlot                               35       35
+m_uiStartCooldown                     62      248
+m_uiCooldownDuration                  50      200
+m_unAmmo                              35       70
+m_uiNetFlags                          35      140
+Total                                252      763
+
+
+Skill_ElectricEye                  Count    Bytes
+=================================================
+m_uiOwnerIndex                        36       72
+m_ySlot                               36       36
+m_uiStartCooldown                     48      192
+m_uiCooldownDuration                  46      184
+m_unAmmo                              36       72
+m_uiNetFlags                          36      144
+Total                                238      700
+
+
+Skill_HealingWard                  Count    Bytes
+=================================================
+m_uiOwnerIndex                         6       12
+m_ySlot                                6        6
+m_uiStartCooldown                     11       44
+m_uiCooldownDuration                  10       40
+m_unAmmo                               6       12
+m_uiNetFlags                           6       24
+Total                                 45      138
+
+
+Skill_HumanOfficerPortal           Count    Bytes
+=================================================
+m_uiOwnerIndex                       128      256
+m_ySlot                              128      128
+m_uiStartCooldown                   3251    13004
+m_uiCooldownDuration                 205      820
+m_unAmmo                             128      256
+m_uiNetFlags                         128      512
+Total                               3968    14976
+
+
+Skill_Morale                       Count    Bytes
+=================================================
+m_uiOwnerIndex                        35       70
+m_ySlot                               35       35
+m_uiStartCooldown                     48      192
+m_uiCooldownDuration                  44      176
+m_unAmmo                              35       70
+m_uiNetFlags                          35      140
+Total                                232      683
+
+
+Skill_Rage                         Count    Bytes
+=================================================
+m_uiOwnerIndex                        35       70
+m_ySlot                               35       35
+m_uiStartCooldown                     51      204
+m_uiCooldownDuration                  47      188
+m_unAmmo                              35       70
+m_uiNetFlags                          35      140
+Total                                238      707
+
+
+Skill_Reconstitute                 Count    Bytes
+=================================================
+m_uiOwnerIndex                        13       26
+m_ySlot                               13       13
+m_uiStartCooldown                     25      100
+m_uiCooldownDuration                  22       88
+m_unAmmo                              13       26
+m_uiNetFlags                          13       52
+Total                                 99      305
+
+
+Skill_Riposte                      Count    Bytes
+=================================================
+m_uiOwnerIndex                        13       26
+m_ySlot                               13       13
+m_uiStartCooldown                     18       72
+m_uiCooldownDuration                  17       68
+m_unAmmo                              13       26
+m_uiNetFlags                          13       52
+Total                                 87      257
+
+
+Skill_Sacrifice                    Count    Bytes
+=================================================
+m_uiOwnerIndex                        52      104
+m_ySlot                               52       52
+m_uiStartCooldown                     61      244
+m_uiCooldownDuration                  61      244
+m_unAmmo                              52      104
+m_uiNetFlags                          52      208
+Total                                330      956
+
+
+Skill_Sentry                       Count    Bytes
+=================================================
+m_uiOwnerIndex                        60      120
+m_ySlot                               60       60
+m_uiStartCooldown                     86      344
+m_uiCooldownDuration                  77      308
+m_unAmmo                              60      120
+m_uiNetFlags                          60      240
+Total                                403     1192
+
+
+Skill_ShieldGenerator              Count    Bytes
+=================================================
+m_uiOwnerIndex                        15       30
+m_ySlot                               15       15
+m_uiStartCooldown                     17       68
+m_uiCooldownDuration                  17       68
+m_unAmmo                              15       30
+m_uiNetFlags                          15       60
+Total                                 94      271
+
+
+Skill_Stealth                      Count    Bytes
+=================================================
+m_uiOwnerIndex                        36       72
+m_ySlot                               36       36
+m_uiStartCooldown                   1047     4188
+m_uiCooldownDuration                  81      324
+m_unAmmo                              36       72
+m_uiNetFlags                          36      144
+Total                               1272     4836
+
+
+Skill_SteamBoost                   Count    Bytes
+=================================================
+m_uiOwnerIndex                         5       10
+m_ySlot                                5        5
+m_uiStartCooldown                      9       36
+m_uiCooldownDuration                   9       36
+m_unAmmo                               5       10
+m_uiNetFlags                           5       20
+Total                                 38      117
+
+
+Skill_WhirlingBlade                Count    Bytes
+=================================================
+m_uiOwnerIndex                        13       26
+m_ySlot                               13       13
+m_uiStartCooldown                     24       96
+m_uiCooldownDuration                  20       80
+m_unAmmo                              13       26
+m_uiNetFlags                          13       52
+Total                                 96      293
+
+
+Spell_Attrition                    Count    Bytes
+=================================================
+m_uiOwnerIndex                        11       22
+m_ySlot                               11       11
+m_uiStartCooldown                     17       68
+m_uiCooldownDuration                  15       60
+m_unAmmo                              11       22
+m_uiNetFlags                          11       44
+Total                                 76      227
+
+
+Spell_BeastHeal                    Count    Bytes
+=================================================
+m_uiOwnerIndex                         6       12
+m_ySlot                                6        6
+m_uiStartCooldown                     18       72
+m_uiCooldownDuration                   9       36
+m_unAmmo                               6       12
+m_uiNetFlags                           6       24
+Total                                 51      162
+
+
+Spell_CommanderCenturionArmor      Count    Bytes
+=================================================
+m_uiOwnerIndex                         2        4
+m_ySlot                                2        2
+m_uiStartCooldown                     19       76
+m_uiCooldownDuration                   4       16
+m_unAmmo                               2        4
+m_uiNetFlags                           2        8
+Total                                 31      110
+
+
+Spell_CommanderCripple             Count    Bytes
+=================================================
+m_uiOwnerIndex                         2        4
+m_ySlot                                2        2
+m_uiStartCooldown                     10       40
+m_uiCooldownDuration                   3       12
+m_unAmmo                               2        4
+m_uiNetFlags                           2        8
+Total                                 21       70
+
+
+Spell_CommanderDispel              Count    Bytes
+=================================================
+m_uiOwnerIndex                         2        4
+m_ySlot                                2        2
+m_uiStartCooldown                      2        8
+m_uiCooldownDuration                   2        8
+m_unAmmo                               2        4
+m_uiNetFlags                           2        8
+Total                                 12       34
+
+
+Spell_CommanderFear                Count    Bytes
+=================================================
+m_uiOwnerIndex                         2        4
+m_ySlot                                2        2
+m_uiStartCooldown                     18       72
+m_uiCooldownDuration                   4       16
+m_unAmmo                               2        4
+m_uiNetFlags                           2        8
+Total                                 30      106
+
+
+Spell_CommanderHeal                Count    Bytes
+=================================================
+m_uiOwnerIndex                         2        4
+m_ySlot                                2        2
+m_uiStartCooldown                     18       72
+m_uiCooldownDuration                   3       12
+m_unAmmo                               2        4
+m_uiNetFlags                           2        8
+Total                                 29      102
+
+
+Spell_CommanderLifeLeak            Count    Bytes
+=================================================
+m_uiOwnerIndex                         2        4
+m_ySlot                                2        2
+m_uiStartCooldown                     11       44
+m_uiCooldownDuration                   4       16
+m_unAmmo                               2        4
+m_uiNetFlags                           2        8
+Total                                 23       78
+
+
+Spell_CommanderResurrect           Count    Bytes
+=================================================
+m_uiOwnerIndex                         2        4
+m_ySlot                                2        2
+m_uiStartCooldown                      8       32
+m_uiCooldownDuration                   3       12
+m_unAmmo                               2        4
+m_uiNetFlags                           2        8
+Total                                 19       62
+
+
+Spell_CommanderSpeedBoost          Count    Bytes
+=================================================
+m_uiOwnerIndex                         2        4
+m_ySlot                                2        2
+m_uiStartCooldown                     12       48
+m_uiCooldownDuration                   3       12
+m_unAmmo                               2        4
+m_uiNetFlags                           2        8
+Total                                 23       78
+
+
+Spell_Entangle                     Count    Bytes
+=================================================
+m_uiOwnerIndex                         6       12
+m_ySlot                                6        6
+m_uiStartCooldown                     13       52
+m_uiCooldownDuration                   9       36
+m_unAmmo                               6       12
+m_uiNetFlags                           6       24
+Total                                 46      142
+
+
+Spell_EntangleTrap                 Count    Bytes
+=================================================
+m_uiOwnerIndex                        30       60
+m_ySlot                               30       30
+m_uiStartCooldown                     59      236
+m_uiCooldownDuration                  50      200
+m_unAmmo                              30       60
+m_uiNetFlags                          30      120
+Total                                229      706
+
+
+Spell_GroupHeal                    Count    Bytes
+=================================================
+m_uiOwnerIndex                        11       22
+m_ySlot                               11       11
+m_uiStartCooldown                     29      116
+m_uiCooldownDuration                  21       84
+m_unAmmo                              11       22
+m_uiNetFlags                          11       44
+Total                                 94      299
+
+
+Spell_Heal                         Count    Bytes
+=================================================
+m_uiOwnerIndex                        11       22
+m_ySlot                               11       11
+m_uiStartCooldown                     32      128
+m_uiCooldownDuration                  17       68
+m_unAmmo                              11       22
+m_uiNetFlags                          11       44
+Total                                 93      295
+
+
+Spell_HealPet                      Count    Bytes
+=================================================
+m_uiOwnerIndex                        60      120
+m_ySlot                               60       60
+m_uiStartCooldown                     71      284
+m_uiCooldownDuration                  65      260
+m_unAmmo                              60      120
+m_uiNetFlags                          60      240
+Total                                376     1084
+
+
+Spell_MindWarp                     Count    Bytes
+=================================================
+m_uiOwnerIndex                         6       12
+m_ySlot                                6        6
+m_uiStartCooldown                     18       72
+m_uiCooldownDuration                   9       36
+m_unAmmo                               6       12
+m_uiNetFlags                           6       24
+Total                                 51      162
+
+
+Spell_Polymorph                    Count    Bytes
+=================================================
+m_uiOwnerIndex                        52      104
+m_ySlot                               52       52
+m_uiStartCooldown                     62      248
+m_uiCooldownDuration                  61      244
+m_unAmmo                              52      104
+m_uiNetFlags                          52      208
+Total                                331      960
+
+
+Spell_Reincarnate                  Count    Bytes
+=================================================
+m_uiOwnerIndex                         6       12
+m_ySlot                                6        6
+m_uiStartCooldown                      6       24
+m_uiCooldownDuration                   6       24
+m_unAmmo                               6       12
+m_uiNetFlags                           6       24
+Total                                 36      102
+
+
+Spell_Resurrect                    Count    Bytes
+=================================================
+m_uiOwnerIndex                        11       22
+m_ySlot                               11       11
+m_uiStartCooldown                     14       56
+m_uiCooldownDuration                  13       52
+m_unAmmo                              11       22
+m_uiNetFlags                          11       44
+Total                                 71      207
+
+
+Spell_SummonBearloth               Count    Bytes
+=================================================
+m_uiOwnerIndex                        60      120
+m_ySlot                               60       60
+m_uiStartCooldown                     96      384
+m_uiCooldownDuration                  92      368
+m_unAmmo                              60      120
+m_uiNetFlags                          61      244
+Total                                429     1296
+
+
+Spell_SummonImp                    Count    Bytes
+=================================================
+m_uiOwnerIndex                        60      120
+m_ySlot                               60       60
+m_uiStartCooldown                     94      376
+m_uiCooldownDuration                  90      360
+m_unAmmo                              60      120
+m_uiNetFlags                          60      240
+Total                                424     1276
+
+
+Spell_Venus                        Count    Bytes
+=================================================
+m_uiOwnerIndex                        30       60
+m_ySlot                               30       30
+m_uiStartCooldown                     64      256
+m_uiCooldownDuration                  49      196
+m_unAmmo                              30       60
+m_uiNetFlags                          30      120
+Total                                233      722
+
+
+State_Attrition                    Count    Bytes
+=================================================
+m_uiOwnerIndex                         6       12
+m_uiStartTime                          6       24
+m_uiDuration                           6       24
+Total                                 18       60
+
+
+State_BeastHeal                    Count    Bytes
+=================================================
+m_uiOwnerIndex                        12       24
+m_uiStartTime                         12       48
+m_uiDuration                          12       48
+Total                                 36      120
+
+
+State_Bleed                        Count    Bytes
+=================================================
+m_uiOwnerIndex                        12       24
+m_uiStartTime                         12       48
+m_uiDuration                          12       48
+Total                                 36      120
+
+
+State_Blind                        Count    Bytes
+=================================================
+m_uiOwnerIndex                        22       44
+m_uiStartTime                         22       88
+m_uiDuration                          22       88
+Total                                 66      220
+
+
+State_Burrowed                     Count    Bytes
+=================================================
+m_uiOwnerIndex                         5       10
+m_uiStartTime                          5       20
+m_uiDuration                           5       20
+Total                                 15       50
+
+
+State_Chainmail                    Count    Bytes
+=================================================
+m_uiOwnerIndex                        51      102
+m_uiStartTime                         51      204
+m_uiDuration                          51      204
+Total                                153      510
+
+
+State_Cheetah                      Count    Bytes
+=================================================
+m_uiOwnerIndex                        18       36
+m_uiStartTime                         18       72
+m_uiDuration                          18       72
+Total                                 54      180
+
+
+State_CommanderCenturionArmor      Count    Bytes
+=================================================
+m_uiOwnerIndex                        40       80
+m_uiStartTime                         40      160
+m_uiDuration                          40      160
+Total                                120      400
+
+
+State_CommanderCripple             Count    Bytes
+=================================================
+m_uiOwnerIndex                         8       16
+m_uiStartTime                          8       32
+m_uiDuration                           8       32
+Total                                 24       80
+
+
+State_CommanderFear                Count    Bytes
+=================================================
+m_uiOwnerIndex                        45       90
+m_uiStartTime                         45      180
+m_uiDuration                          45      180
+Total                                135      450
+
+
+State_CommanderHeal                Count    Bytes
+=================================================
+m_uiOwnerIndex                        16       32
+m_uiStartTime                         16       64
+m_uiDuration                          16       64
+Total                                 48      160
+
+
+State_CommanderLifeLeak            Count    Bytes
+=================================================
+m_uiOwnerIndex                         9       18
+m_uiStartTime                          9       36
+m_uiDuration                           9       36
+Total                                 27       90
+
+
+State_CommanderSpeedBoost          Count    Bytes
+=================================================
+m_uiOwnerIndex                        10       20
+m_uiStartTime                         10       40
+m_uiDuration                          10       40
+Total                                 30      100
+
+
+State_Confused                     Count    Bytes
+=================================================
+m_uiOwnerIndex                        12       24
+m_uiStartTime                         12       48
+m_uiDuration                          12       48
+Total                                 36      120
+
+
+State_Entangled                    Count    Bytes
+=================================================
+m_uiOwnerIndex                        32       64
+m_uiStartTime                         33      132
+m_uiDuration                          32      128
+Total                                 97      324
+
+
+State_GroupHeal                    Count    Bytes
+=================================================
+m_uiOwnerIndex                        28       56
+m_uiStartTime                         28      112
+m_uiDuration                          28      112
+Total                                 84      280
+
+
+State_Heal                         Count    Bytes
+=================================================
+m_uiOwnerIndex                        31       62
+m_uiStartTime                         31      124
+m_uiDuration                          31      124
+Total                                 93      310
+
+
+State_HealingWard                  Count    Bytes
+=================================================
+m_uiOwnerIndex                        10       20
+m_uiStartTime                        656     2624
+m_uiDuration                          10       40
+Total                                676     2684
+
+
+State_HealthReplenish              Count    Bytes
+=================================================
+m_uiOwnerIndex                        13       26
+m_uiStartTime                         13       52
+m_uiDuration                          13       52
+Total                                 39      130
+
+
+State_HealthShrine                 Count    Bytes
+=================================================
+m_uiOwnerIndex                         1        2
+m_uiStartTime                         72      288
+m_uiDuration                           1        4
+Total                                 74      294
+
+
+State_Locust                       Count    Bytes
+=================================================
+m_uiOwnerIndex                       262      524
+m_uiStartTime                        352     1408
+m_uiDuration                         262     1048
+Total                                876     2980
+
+
+State_ManaShrine                   Count    Bytes
+=================================================
+m_uiOwnerIndex                         4        8
+m_uiStartTime                        109      436
+m_uiDuration                           4       16
+Total                                117      460
+
+
+State_Morale                       Count    Bytes
+=================================================
+m_uiOwnerIndex                        12       24
+m_uiStartTime                         12       48
+m_uiDuration                          12       48
+Total                                 36      120
+
+
+State_Morphed                      Count    Bytes
+=================================================
+m_uiOwnerIndex                        11       22
+m_uiStartTime                         11       44
+m_uiDuration                          11       44
+m_hModel                              11       22
+m_cDisguiseTeam                       11       11
+Total                                 55      143
+
+
+State_NpcAbility                   Count    Bytes
+=================================================
+m_uiOwnerIndex                        58      116
+m_uiStartTime                         65      260
+m_uiDuration                          58      232
+m_yNpcStateFlags                      58       58
+m_hIcon                               58      116
+Total                                297      782
+
+
+State_Officer                      Count    Bytes
+=================================================
+m_uiOwnerIndex                        92      184
+m_uiStartTime                         92      368
+m_uiDuration                          92      368
+Total                                276      920
+
+
+State_OfficerAura                  Count    Bytes
+=================================================
+m_uiOwnerIndex                       259      518
+m_uiStartTime                      51102   204408
+m_uiDuration                         259     1036
+Total                              51620   205962
+
+
+State_PersistantItem               Count    Bytes
+=================================================
+m_uiOwnerIndex                       288      576
+m_uiStartTime                        288     1152
+m_uiDuration                         288     1152
+m_unItemData                         288      576
+Total                               1152     3456
+
+
+State_PersistantReplenish          Count    Bytes
+=================================================
+m_uiOwnerIndex                        36       72
+m_uiStartTime                         36      144
+m_uiDuration                          36      144
+m_unItemData                          36       72
+Total                                144      432
+
+
+State_Platemail                    Count    Bytes
+=================================================
+m_uiOwnerIndex                        28       56
+m_uiStartTime                         28      112
+m_uiDuration                          28      112
+Total                                 84      280
+
+
+State_Poisoned                     Count    Bytes
+=================================================
+m_uiOwnerIndex                       122      244
+m_uiStartTime                       2141     8564
+m_uiDuration                         134      536
+Total                               2397     9344
+
+
+State_Rage                         Count    Bytes
+=================================================
+m_uiOwnerIndex                        16       32
+m_uiStartTime                         16       64
+m_uiDuration                          16       64
+Total                                 48      160
+
+
+State_Reconstitute                 Count    Bytes
+=================================================
+m_uiOwnerIndex                        12       24
+m_uiStartTime                         12       48
+m_uiDuration                          12       48
+Total                                 36      120
+
+
+State_Riposte                      Count    Bytes
+=================================================
+m_uiOwnerIndex                         5       10
+m_uiStartTime                          5       20
+m_uiDuration                           5       20
+Total                                 15       50
+
+
+State_Sacrifice                    Count    Bytes
+=================================================
+m_uiOwnerIndex                         9       18
+m_uiStartTime                          9       36
+m_uiDuration                           9       36
+Total                                 27       90
+
+
+State_ShieldTower                  Count    Bytes
+=================================================
+m_uiOwnerIndex                         1        2
+m_uiStartTime                       1757     7028
+m_uiDuration                           1        4
+Total                               1759     7034
+
+
+State_Spawned                      Count    Bytes
+=================================================
+m_uiOwnerIndex                       170      340
+m_uiStartTime                        170      680
+m_uiDuration                         170      680
+Total                                510     1700
+
+
+State_SpeedBoost                   Count    Bytes
+=================================================
+m_uiOwnerIndex                         3        6
+m_uiStartTime                          3       12
+m_uiDuration                           3       12
+Total                                  9       30
+
+
+State_Stealth                      Count    Bytes
+=================================================
+m_uiOwnerIndex                        26       52
+m_uiStartTime                         26      104
+m_uiDuration                          26      104
+Total                                 78      260
+
+
+State_SteamBoost                   Count    Bytes
+=================================================
+m_uiOwnerIndex                         4        8
+m_uiStartTime                          4       16
+m_uiDuration                           4       16
+Total                                 12       40
+
+
+State_Stunned                      Count    Bytes
+=================================================
+m_uiOwnerIndex                        53      106
+m_uiStartTime                         53      212
+m_uiDuration                          53      212
+Total                                159      530

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="1">
+	<definitions>
+		<particlesystem name="system0" space="world">
+		<twopointtrailemitter
+			life="135"
+			bone_a="_bone_weapon1"
+			bone_b="_bone_weapon3"
+			spawnrate="500"
+			particlelife="200"
+			texpostime="165"
+			texposscale="1"
+			texstretchscale="0.0"
+			material="/shared/effects/materials/swoosh_white.material"
+			subframepose="true"
+		>
+			<particle
+				startcolor="2 0 0"
+				endcolor="0 0 0"
+			/>
+		</twopointtrailemitter>
+		
+		<billboard
+			life="500"
+			bone="_bone_centerofchest"
+			material="/shared/effects/materials/whitedot.material"
+			startcolor="0 0 0"
+			midcolor=".3 0 0"
+			endcolor="0 0 0"
+			size="150"
+			depthbias="-30"
+		/>
+				
+		<simpleemitter
+			life="1000"
+			bone="_bone_head"
+			spawnrate="20"
+			particlelife="850"
+			gravity="0"
+			speed="100"
+			drag=".01"
+			acceleration="0.0"
+			position="0 0 0"
+			offsetsphere="10 10 10"
+			material="/shared/effects/materials/blood1.material"
+			direction="0 0 0"
+			offsetdirection="0 0 0"
+			offsetradial="0 0 0"
+		>
+			<particle 
+				minangle="-360"
+				maxangle="360"
+				angle="180"
+				startcolor=".5"
+				endcolor=".25"
+				startsize="35"
+				midsize="75"
+				minendsize="100"
+				maxendsize="125"
+				startalpha="0"
+				midalpha=".5"
+				endalpha="0"
+				midalphapos=".2"
+			/>
+		</simpleemitter>	
+			
+			
+			<billboard			
+				life="1000"
+				bone="_bone_lefteye"
+				startcolor=".2 0 0"
+				midcolor=".1 0 0"
+				endcolor="0"
+				midcolorpos=".85"
+				size="18"
+				material="/shared/effects/materials/glow_01.material"
+				depthbias="-10"
+				position="0 -5 0"
+			/>		
+			
+			<billboard			
+				life="1000"
+				bone="_bone_righteye"
+				startcolor=".2 0 0"
+				midcolor=".1 0 0"
+				endcolor="0"
+				midcolorpos=".85"
+				size="18"
+				material="/shared/effects/materials/glow_01.material"
+				depthbias="-10"
+				position="0 -5 0"
+			/>			
+
+		</particlesystem>
+	
+
+
+
+		
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1"/>
+		<waitfordeath instance="instance0" />
+	
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+

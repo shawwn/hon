@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1" useentityeffectscale="1">
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale=".8">
+
+			<template name="magnets">
+
+				<billboard
+					bone="_bone_centerofchest"
+					size="85"
+					life="500"
+					startcolor="0 0 0"
+					midcolor="0 .1 2"
+					endcolor="0 0 0"
+					material="/shared/effects/materials/whitedot.material"
+					loop="true"
+				/>
+			
+				<billboard
+					bone="{bone}"
+					size="40"
+					life="300"
+					startcolor="0 0 0"
+					midcolor=".5"
+					endcolor="0 0 0"
+					material="/shared/effects/materials/whitedot.material"
+					loop="true"
+				/>
+
+				<billboard
+					bone="{bone}"
+					size="100"
+					life="300"
+					startcolor="0 0 0"
+					midcolor="0 .1 2"
+					endcolor="0 0 0"
+					material="/shared/effects/materials/whitedot.material"
+					loop="true"
+				/>
+<!--
+				<billboard
+					bone="{bone}"
+					life="350"
+					param="0.1"	
+					startsize="50"
+					endsize="150"
+					startalpha="0"
+					midalpha=".4"
+					endalpha="0"				
+					depthbias="0"
+					material="/shared/effects/materials/refract_swell.material"
+					lockup="1"
+					lockright="1"
+					pitch="90"
+					loop="true"
+				/>
+
+				<simpleemitter
+					bone="{bone}"
+					spawnrate="20"
+					particlelife="200"
+					speed="300"
+					inheritvelocity="0.0"
+					offsetsphere="0 0 0"
+				>
+					<particle
+					>
+						<trailemitter
+							life="200"
+							spawnrate="61"
+							startminparticlelife="200"
+							startmaxparticlelife="200"
+							offsetsphere="5 5 5"
+							endminparticlelife="1"
+							endmaxparticlelife="1" 
+							texpostime="200"
+							texposscale="0"
+							texstretchscale="1"
+							position="0 0 0"
+							material="/shared/effects/materials/arrow_trail.material"
+						>
+							<particle
+								startcolor="1 1 1"
+								midcolor="0 .5 1"
+								endcolor="0 0 0"
+								startsize="8"
+								endsize="0"
+								midcolorpos=".1"
+								midsizepos=".1"
+							/>
+						</trailemitter>
+					</particle>
+				</simpleemitter>
+
+				<simpleemitter
+					bone="{bone}"
+					spawnrate="20"
+					particlelife="200"
+					speed="300"
+					inheritvelocity="0.0"
+					offsetsphere="15 15 0"
+				>
+					<particle
+					>
+						<trailemitter
+							life="200"
+							spawnrate="61"
+							startminparticlelife="200"
+							startmaxparticlelife="200"
+							offsetsphere="5 5 5"
+							endminparticlelife="1"
+							endmaxparticlelife="1" 
+							texpostime="200"
+							texposscale="0"
+							texstretchscale="1"
+							position="0 0 0"
+							material="/shared/effects/materials/arrow_trail.material"
+						>
+							<particle
+								startcolor="1 1 1"
+								midcolor="0 .35 1"
+								endcolor="0 0 0"
+								startsize="5"
+								endsize="0"
+								midcolorpos=".1"
+								midsizepos=".1"
+							/>
+						</trailemitter>
+					</particle>
+				</simpleemitter>
+-->
+			</template>
+
+			
+
+			
+			<instance name="magnets" bone="_bone_weapon3"/>
+			<instance name="magnets" bone="_bone_altweapon3"/>
+			<instance name="magnets" bone="_bone_fx_06"/>
+			<instance name="magnets" bone="_bone_fx_11"/>
+			
+
+			
+			<template name="link">
+				<beam
+					bone_a="{bone1}"
+					bone_b="{bone2}"
+					size="{size}"
+					startcolor="0 .5 1"
+					endcolor="0"
+					expirelife="200"
+					material="/shared/effects/materials/femme_lightning_10.material"
+					startframe="{startframe}"
+					framespeed="{framespeed}"
+				/>
+				<beam
+					bone_a="{bone1}"
+					bone_b="{bone2}"
+					size="{size}"
+					startcolor="0 0 1"
+					endcolor="0"
+					expirelife="200"
+					material="/shared/effects/materials/femme_lightning_10.material"
+					startframe="{startframe}"
+					framespeed="{framespeed}"
+				/>
+			</template>
+			
+			<instance name="link" bone1="_bone_fx_02" bone2="_bone_fx_04" size="30" startframe=".2" framespeed="3"/>
+			<instance name="link" bone1="_bone_fx_01" bone2="_bone_fx_03" size="32" startframe=".5" framespeed="4.5"/>
+			<instance name="link" bone1="Box18" bone2="Box20" size="26" startframe=".2" framespeed="3"/>
+			<instance name="link" bone1="Box20" bone2="Box21" size="30" startframe=".2" framespeed="3"/>
+			<instance name="link" bone1="Box21" bone2="Box19" size="28" startframe=".2" framespeed="3"/>
+			<instance name="link" bone1="Box07" bone2="Box09" size="30" startframe=".2" framespeed="3"/>
+			<instance name="link" bone1="Box09" bone2="Box08" size="32" startframe=".2" framespeed="3"/>
+			<instance name="link" bone1="Box08" bone2="Box06" size="30" startframe=".2" framespeed="3"/>
+			<instance name="link" bone1="Box06" bone2="Box07" size="29" startframe=".2" framespeed="3"/>
+			<instance name="link" bone1="_bone_fx_12" bone2="_bone_fx_14" size="30" startframe=".2" framespeed="3"/>
+			<instance name="link" bone1="_bone_fx_13" bone2="_bone_fx_15" size="28" startframe=".2" framespeed="3"/>
+			<instance name="link" bone1="_bone_fx_07" bone2="_bone_fx_10" size="30" startframe=".2" framespeed="3"/>
+			<instance name="link" bone1="_bone_fx_08" bone2="_bone_fx_09" size="28" startframe=".2" framespeed="3"/>
+			
+			<instance name="link" bone1="_bone_fx_02" bone2="_bone_fx_04" size="30" startframe=".2" framespeed="3"/>
+			<instance name="link" bone1="_bone_fx_01" bone2="_bone_fx_03" size="32" startframe=".5" framespeed="4.5"/>
+			<instance name="link" bone1="Box18" bone2="Box20" size="30" startframe=".2" framespeed="3"/>
+			<instance name="link" bone1="Box20" bone2="Box21" size="30" startframe=".2" framespeed="3"/>
+			<instance name="link" bone1="Box21" bone2="Box19" size="30" startframe=".2" framespeed="3"/>
+			<instance name="link" bone1="Box07" bone2="Box09" size="30" startframe=".2" framespeed="3"/>
+			<instance name="link" bone1="Box09" bone2="Box08" size="30" startframe=".2" framespeed="3"/>
+			<instance name="link" bone1="Box08" bone2="Box06" size="30" startframe=".2" framespeed="3"/>
+			<instance name="link" bone1="Box06" bone2="Box07" size="30" startframe=".2" framespeed="3"/>
+			<instance name="link" bone1="_bone_fx_12" bone2="_bone_fx_14" size="30" startframe=".2" framespeed="3"/>
+			<instance name="link" bone1="_bone_fx_13" bone2="_bone_fx_15" size="28" startframe=".2" framespeed="3"/>
+			<instance name="link" bone1="_bone_fx_07" bone2="_bone_fx_10" size="30" startframe=".2" framespeed="3"/>
+			<instance name="link" bone1="_bone_fx_08" bone2="_bone_fx_09" size="28" startframe=".2" framespeed="3"/>
+
+		</particlesystem>
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+
+

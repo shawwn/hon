@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Maliken_Ability4"
+
+	radius="400"
+	
+	targetselection="all"
+	targetscheme="enemy_heroes"
+	effecttype=""
+	persist="true"
+	
+	effect=""
+	impacteffect=""
+>
+	<onimpact>
+		<order command="wander" force="true" forceduration="750,1250,2000" source="target_entity" target="target_position" />
+		<applystate name="State_Maliken_Ability4_Fear" duration="800,1300,2050" target="target_entity" />
+	</onimpact>
+</affector>

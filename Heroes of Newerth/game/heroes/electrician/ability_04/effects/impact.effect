@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1" useentityeffectscale="1">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="1.6">
+				
+			<simpleemitter
+				delay="0"
+				count="52"
+				spawnrate="1500"
+				 bone="_bone_centerofchest"
+				particlelife="800"			
+				gravity="5"
+				minspeed="1"
+				maxspeed="150"
+				drag=".04"
+				
+				
+				pitchspeed="79"
+				material="/shared/effects/materials/whitedot.material"
+				offsetsphere="5 5 5"
+				
+				inheritvelocity="0.35"
+				
+				direction="0 0 1"
+				
+			>
+
+
+				<particle 
+					
+					startcolor="1 1 .2"
+					
+					midcolor="1 .3 0"
+					endcolor="0 0 0"
+					startheightdistort=".06"
+				
+					endframe="15"
+					
+					startsize="2"
+					midsize="3"
+					endsize="3"
+					
+					startalpha="0"
+					midalpha="0"
+					endalpha="0"
+					midalphapos="0"
+					startstickiness="0"
+					endstickiness="0"
+					turn="1"
+
+				/>
+			</simpleemitter>	
+			
+	
+		</particlesystem>
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+
+

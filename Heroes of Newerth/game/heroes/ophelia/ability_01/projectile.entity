@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Ophelia_Ability1"
+
+	speed="3000"
+	gravity="2500"
+	canturn="false"
+	modelscale="4"
+	model="projectile/hive/model.mdf"
+
+	traileffect="projectile/trail.effect"
+	impacteffect="projectile/impact.effect"
+>
+
+</projectile>

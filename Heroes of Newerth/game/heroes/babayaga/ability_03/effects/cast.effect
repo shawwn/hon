@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="ability_02" useentityeffectscale="1" >
+	<definitions>
+	
+
+		<particlesystem name="system0" space="world" scale="1.2">
+			
+			
+			<light
+				life="250"			
+				startcolor="4 2 12"				
+				endcolor="0 0 0"
+				midcolorpos=".2"
+				falloffstart="00"
+				falloffend="255"
+				position="0 0 20"	
+			/>
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".6"
+				sample="../sounds/cast.wav"
+			/>
+
+	
+			<billboard
+				delay="0"
+				life="700"
+				color="1.0 1.0 1.0"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="0.0"
+				midalphapos="0.75"
+				startparam=".05"
+				endparam="0.0"
+				startsize="128"
+				endsize="1200"
+				depthbias="-100"
+				position="0 0 120"
+				material="/shared/effects/materials/refract_ring.material"
+				lockup="true"
+				pitch="90"
+			/>
+
+
+			
+			<simpleemitter			
+				count="12"
+				particlelife="2000"
+				spawnrate="100"
+				gravity="-0"
+				speed="2.0"
+				acceleration="0.0"		
+				position="0 0 40"			
+				
+				direction="0 0 1"
+				minangle="90"
+				maxangle="90"
+				
+			>
+				<particle
+					directionalspace="local"	
+				
+					turn="1"
+					
+				>	
+					<simpleemitter			
+						count="3"
+						spawnrate="22"
+						particlelife="322"
+						particledirectionalspace="local"
+						material="/shared/effects/materials/shout_blend.material"
+						inheritvelocity="1"
+						speed="700"
+						direction="0 1 0"
+						minangle="0"
+						maxangle="1"
+						depthbias="-100"
+					>
+						<particle
+							size="77"
+							startscale="1"
+							endscale="5"
+							startcolor=".2 .5 1"
+							endcolor="1 0 1"
+							turn="0"
+							startalpha=".4"
+							
+							endalpha="0"
+							lockup="1"
+							lockright="1"
+							pitch="-90" 
+							
+						/>
+					</simpleemitter>			
+				</particle>
+			</simpleemitter>
+
+
+			<simpleemitter			
+				count="1"
+				particlelife="2000"
+				spawnrate="10000"
+				gravity="-0"
+				speed="0.0"
+				acceleration="0.0"		
+				position="0 0 40"			
+				
+				
+			>
+				<particle>				
+					<simpleemitter			
+						count="60"
+						spawnrate="1055"
+						particlelife="1000"
+						gravity="0"
+						minspeed="233.0"
+						maxspeed="430"
+						acceleration="0.0"
+						timenudge="0"
+						position="0 0 40"
+						offsetsphere="50 50 20"
+						
+						material="/shared/effects/materials/bat.material"
+						
+					>
+						<particle
+							color="00 0 0"
+							midcolorpos="0.5"
+							startalpha="1"
+							midalpha="1"
+							endalpha="0"
+							minframe="0"
+							maxframe="1"
+							framespeed="2"		
+							minscale="22"
+							maxscale="25"								
+							turn="true"
+						/>
+					</simpleemitter>			
+				</particle>
+			</simpleemitter>				
+
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+	 
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

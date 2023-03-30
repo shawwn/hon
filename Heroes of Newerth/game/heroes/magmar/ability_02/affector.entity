@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Magmar_Ability2"
+
+	radius="300,350,400,550"
+	lifetime="-1"
+	effect="effects/aoe2.effect"
+	targetselection="all"
+	targetscheme="nonneutral_enemy_units"
+	effecttype="magic"
+>
+	<onframeimpact>
+		<damage effecttype="Magic Splash" amount="20,40,60,80" b="frametime" op="mult"/>
+		<applystate name="State_Magmar_Ability2_Damageeffects" continuous="true" timeout="frametime" />
+	</onframeimpact>
+</affector>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Malphas_Ability3"
+
+	
+	
+	icon="icon.tga"
+	
+	effecttype="StatusDebuff"
+>
+	<onframe >
+		<damage effecttype="Magic DOT" amount="5,10,15" b="frametime" op="mult"/>
+	</onframe>
+</state>

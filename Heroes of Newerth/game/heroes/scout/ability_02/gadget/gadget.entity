@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Scout_Ability2"
+	
+	
+	
+	icon="/heroes/scout/ability_02/icon.tga"
+	portrait="icon.tga"
+	
+	model="model.mdf"
+	
+	preglobalscale="0.9"
+	modelscale="2.5"
+	effectscale="0.9"
+	boundsheight="64"
+	boundsradius="16"
+	isselectable="true"
+	iscontrollable="true"
+	selectionradius="20"
+	targetoffset="0 0 64"
+
+	canrotate="false"
+	ismobile="false"
+	unitwalking="true"
+
+	maxhealth="200"
+	inventory0="Ability_Gadget_Scout2_2"
+	inventory1="Ability_Gadget_Scout2"
+
+	immunity="GadgetImmunity"
+	unittype="electriceye"
+
+	attacktype="none"
+	combattype="Ranged"
+	stealthtype="ward"
+	fadetime="500"
+	stealthproximity="150"
+
+	sightrangeday="800"
+	sightrangenight="800"
+	revealtype="ward"
+	revealrange="800"
+	
+	goldbountymin="15"
+	goldbountymax="21"
+	experiencebounty="20"
+	
+	nothreat="true"
+	
+	corpsetime="1000"
+	corpsefadetime="1000"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+	
+>
+	<onspawn>
+		<startfade />
+		<addcharges entity="proxy_entity" count="1"  />
+	</onspawn>
+	<ondeath>
+		<playeffect effect="death.effect" source="source_entity" target="" />
+		<addcharges entity="proxy_entity" count="-1" />
+	</ondeath>
+</gadget>

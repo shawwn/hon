@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<statenetaccum
+	name="State_Moraxus_Ability4"
+
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+	
+	modifierkey="moraxusulton"
+	impactinterval="100"
+	
+	effecttype=""
+	
+	shield="true"
+	maxaccumulator="400,600,800"
+>
+	<oninflict>
+		<setaccumulator value="200,300,400" />
+	</oninflict>
+	
+	<onimpact>
+		<areaofeffect
+			radius="800"
+			targetselection="all"
+			targetscheme="nonillusion_enemy_heroes"
+		/>
+		<setvar0 a="2" b="result" op="mult" />
+		<setaccumulator value="accumulator" valueb="var0" valueop="add" />
+		<setaccumulator value="accumulator" valueb="400,600,800" valueop="min" />
+	</onimpact>
+	
+	<ondamaged>
+		<setvar0 a="source_damage" />
+		<condition test="var0 ge accumulator">
+			<evaluate a="var0" b="accumulator" op="sub" />
+			<changedamage b="result" op="min" />
+			<setaccumulator value="0" />
+		</condition>
+		<else>
+			<changedamage b="0" op="min" />
+			<evaluate a="accumulator" b="var0" op="sub" />
+			<setaccumulator value="result" />
+		</else>
+	</ondamaged>
+	
+	<onexpired>
+		<areaofeffect
+			radius="400"
+			targetselection="all"
+			targetscheme="enemy_units"
+			effecttype="Magic"
+		>
+			<damage effecttype="Magic" amount="1" b="accumulator" op="mult" />
+			<playeffect effect="effects/impact.effect" source="target_entity" target="" />
+		</areaofeffect>
+		<popup name="morult" a="accumulator" source="source_entity" target="source_entity"/>
+		<playeffect effect="effects/cast.effect" source="source_entity" target="" />
+	</onexpired>
+	
+	<onframe />
+</statenetaccum>

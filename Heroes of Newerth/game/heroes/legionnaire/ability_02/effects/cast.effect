@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="ability_02">
+	<definitions>
+	
+		<modifier
+			name="modifier0"
+			life="2000"
+			startcolor="2.5 1.25 0"
+			endcolor="1 1 1"
+		/>
+
+		<particlesystem name="system0" space="world" scale="1">
+			<model
+				life="650"
+				parentmodel="true"
+				parentskeleton="true"
+				startcolor="1 1 1"
+				midcolor="5 2 0"
+				endcolor="1 1 1"
+				startscale="1.05"
+				midscale="1.05"
+				endscale="1.05"
+				midscalepos=".25"
+				material="/shared/effects/materials/shell2.material"
+				position="0 0 0"
+			/>
+		
+			<simpleemitter
+				bone="_bone_centerofchest"
+				life="500"
+				spawnrate="40"
+				particlelife="750"
+				gravity="0"
+				offsetsphere="15 15 0"
+				minspeed="5"
+				maxspeed="15"
+				material="/shared/effects/materials/phantom_smoke_04.material"
+			>
+				<particle 
+					startcolor="1 .35 0"
+					midcolor="1 .35 0"
+					endcolor="0 0 0"
+					midcolorpos="0.2"
+					minangle="0"
+					maxangle="360"
+					startsize="0"
+					endsize="105"
+					minanglespeed="-190"
+					maxanglespeed="190"
+					anchor="1"
+				/>
+			</simpleemitter>
+			
+			<skeletonemitter
+				bone="_bone_centerofchest"
+				life="500"
+				spawnrate="50"
+				particlelife="750"
+				gravity="0"
+				offsetsphere="15 15 0"
+				minspeed="5"
+				maxspeed="15"
+				material="/shared/effects/materials/phantom_smoke_04.material"
+			>
+				<particle 
+					startcolor="1 .35 0"
+					midcolor="1 .35 0"
+					endcolor="0 0 0"
+					midcolorpos="0.2"
+					minangle="0"
+					maxangle="360"
+					startsize="0"
+					endsize="105"
+					minanglespeed="-190"
+					maxanglespeed="190"
+					anchor="1"
+				/>
+			</skeletonemitter>
+
+	</particlesystem>
+</definitions>
+
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<spawnmodifier instance="instance1" modifier="modifier0"/>  
+	<waitfordeath instance="instance0" />
+</thread>
+
+</effect>
+
+
+
+
+
+
+

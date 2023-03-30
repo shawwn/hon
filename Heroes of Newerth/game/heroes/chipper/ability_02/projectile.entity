@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Chipper_Ability2"
+
+	lifetime="750"
+	useexactlifetime="true"
+	gravity="5500"
+
+	model="effects/tar_projectile/model.mdf"
+	modelscale="1.25"
+	traileffect="effects/trail.effect"
+	impacteffect=""
+>
+	<onimpact>
+		<spawnaffector name="Affector_Chipper_Ability2" target="target_position" />
+		<playeffect effect="effects/impact.effect" source="target_position" target="" occlude="true" />		
+	</onimpact>
+</projectile>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Hantumon_Ability1"
+
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+	
+	misschance="0.4,0.5,0.6,0.7"
+	movespeedslow="0.25"
+	attackspeed="-0.25"
+	silenced="true"
+	
+	effecttype="StatusDebuff"
+>
+</state>

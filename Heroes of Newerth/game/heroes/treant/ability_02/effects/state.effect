@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="1">	
+
+			<sound
+				soundloop="true"
+				fadein="200"
+				fadeout="300"
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2000"
+				volume=".3"
+				sample="../sounds/state.wav"
+			/>
+
+			<template name="glowboards">
+				<model
+					model="eyeball/model.mdf"
+					scale=".5"
+					anim="idle"
+					position="0 0 220.0"
+					directionalspace="local"
+					alpha="1.0"
+					yawspeed="10"
+					loop="true"
+					expirelife="2000"
+					color="1 1.5 1"
+				>
+				
+					<billboard
+						material="/shared/effects/materials/whitedot.material"
+						position="0 0 0"
+						startsize="150"
+						midsize="200"
+						endsize="150"
+						color=".15 .075 .0"
+						lockup="true"
+						lockright="true"
+						pitch="90"
+						life="2000"
+						loop="true"
+						depthbias="-280"
+					/>
+					
+					<simpleemitter
+						spawnrate="10"
+						minparticlelife="1500"
+						maxparticlelife="3000"
+						gravity="0"
+						drag="0"
+						position="0 0 0"
+						offsetsphere="25 25 0"
+						material="/shared/effects/materials/phantom_smoke_04.material"
+					>
+						<particle 
+							maxangle="360"
+							minanglespeed="-6"
+							maxanglespeed="6"
+							startcolor="0 0 0"
+							midcolor=".35 .15 0"
+							endcolor="0 0 0"
+							startalpha="1 1 1"
+							endalpha="0 0 0"
+							startsize="0"
+							endsize="150"
+							endanchor="0"
+						/>
+					</simpleemitter>
+
+					<simpleemitter
+						spawnrate="4"
+						particlelife="1750"
+						gravity="10"
+						speed="5"
+						drag="0"
+						acceleration="0.0"
+						position="0 0 0"
+						offsetsphere="20 20 0"
+						material="/shared/effects/materials/heathaze.material"
+						loop="true"
+					>
+						<particle 
+						angle="180"
+						startparam=".035"
+						endparam="0.0"
+						startcolor="1 1 1"
+						frame=".1"
+						startalpha="0"
+						midalpha=".2"
+						endalpha="0"
+						startsize="150" 
+						endsize="200"
+						/>
+					</simpleemitter>
+					
+					<simpleemitter
+						spawnrate="3"
+						particlelife="1500"
+						gravity="10"
+						speed="5"
+						drag="0"
+						acceleration="0.0"
+						position="0 0 -175"
+						offsetsphere="100 100 0"
+						material="/shared/effects/materials/leaf_01.material"
+						loop="true"
+					>
+						<particle 
+						minangle="0"
+						maxangle="360"
+						color="0 .15 0"
+						frame=".1"
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"
+						startsize="50" 
+						endsize="25"
+						/>
+					</simpleemitter>
+				</model>
+
+				<billboard
+					material="/shared/effects/materials/whitedot.material"
+					position="0 0 {pos1}"
+					startsize="{startsize}"
+					midsize="{midsize}"
+					endsize="{startsize}"
+					color=".15 .075 .0"
+					lockup="true"
+					lockright="true"
+					pitch="90"
+					life="2000"
+					loop="true"
+					depthbias="-280"
+				/>	
+			</template>
+			
+			<instance name="glowboards" midsize="200" startsize="150" pos1="0"/>
+			<instance name="glowboards" midsize="200" startsize="150" pos1="-100"/>
+		
+			
+			<simpleemitter
+				spawnrate="2"
+				particlelife="1400"
+				acceleration="50"
+				position="0 0 -50"
+				depthbias="-230"
+				material="/shared/effects/materials/rad_add.material"
+				offsetsphere="0 0 0"
+				minangle="0"
+				maxangle="360"
+				direction="0 0 0"
+				particledirectionalspace="local"
+			>
+				<particle 
+					minangle="-120"
+					maxangle="120"
+					minanglespeed="100"
+					startcolor="0 0 0"
+					midcolor=".1 .055 0"
+					endcolor="0 0 0"
+					midcolorpos=".7"
+					maxanglespeed="0"
+					startframe="0"
+					endframe="1"
+					size="250"
+					midsizepos=".7"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".7"
+					anchor="1"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				spawnrate="3"
+				particlelife="1000"
+				gravity="-55"
+				speed="40"
+				drag=".08"
+				acceleration="0"
+				position="0 0 50"
+				material="/shared/effects/materials/phantom_smoke_04.material"
+				offsetsphere="50 50 70"
+				minangle="90"
+				maxangle="-90"
+			>
+				<particle 
+					startcolor="0 0 0"
+					midcolor=".5 .25 0"
+					endcolor="0"
+					midcolorpos=".1"
+					startframe="0"
+					endframe="1"
+					startwidth="20"
+					midwidth="15"
+					endwidth="6"
+					midwidthpos=".5"
+					startheight="0"
+					endheight="1000"
+					lockup="true"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				spawnrate="10"
+				minparticlelife="1200"
+				maxparticlelife="1800"
+				gravity="1"
+				speed="3"
+				drag="0"
+				acceleration="0"
+				position="0 0 75"
+				material="/shared/effects/materials/star_05.material"
+				offsetsphere="60 60 50"
+				minangle="0"
+				maxangle="360"
+				direction="0 0 0"
+			>
+				<particle 
+					minanglespeed="0"
+					maxanglespeed="100"
+					color="1 .5 0"
+					midcolorpos=".7"
+					startframe="0"
+					endframe="1"
+					startsize="2.5"
+					midsize="10"
+					endsize="2.5"
+					midsizepos=".5"
+					midalphapos=".3"
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

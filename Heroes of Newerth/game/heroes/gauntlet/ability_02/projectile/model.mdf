@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="export.max" file="model.model" type="K2">
+
+	<anim name="idle" clip="default_1.clip" loop="true" fps="30" loopbackframe="-1"/>
+	
+	<anim name="hand_closed" clip="hand_closed.clip" loop="true" fps="30" loopbackframe="-1"/>
+	
+	<anim name="hand_grab" clip="hand_grab.clip" loop="false" fps="30" loopbackframe="-1"/>
+	
+	<anim name="hand_open" clip="hand_open.clip" loop="true" fps="30" loopbackframe="-1"/>
+</model>

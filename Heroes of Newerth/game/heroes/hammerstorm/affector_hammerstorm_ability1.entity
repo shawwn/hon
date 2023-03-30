@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Hammerstorm_Ability1"
+
+	radius="300"
+	
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Magic"
+>
+	<onimpact>
+		<applystate name="State_Stunned" duration="2000" />
+		<damage effecttype="Magic" amount="100,175,250,325" />
+	</onimpact>
+</affector>

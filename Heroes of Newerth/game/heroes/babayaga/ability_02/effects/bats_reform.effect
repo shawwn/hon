@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="ability_02">
+	<definitions>
+	
+	
+		<modifier
+			name="modifier0"
+			life="1500"
+			startalpha="0"
+			endalpha="1"
+	
+		/>
+		
+		<particlesystem name="system0" space="world" scale="0.8">
+			<light
+				life="250"			
+				startcolor="7 2 12"			
+				endcolor="0 0 0"
+				midcolorpos=".2"
+				falloffstart="00"
+				falloffend="255"
+				position="0 0 20"	
+			/>
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".5"
+				sample="../sounds/cast2.wav"
+			/>
+
+	
+			<simpleemitter 
+				bone="_bone_centerofchest"
+				count="20"
+         		spawnrate="222"				
+				minparticlelife="800"
+          		maxparticlelife="1200"
+          		gravity="0"
+          		drag="0"
+				speed="20"
+				position="0 0 0"
+				offsetsphere="140 140 140"
+          		material="/shared/effects/materials/neb_blend.material"
+				inheritvelocity="0.25"
+
+      		>
+  				
+				<particle 
+					maxangle="360"			
+					minanglespeed="-44"
+					maxanglespeed="44"
+					
+					scale="6"					
+					startcolor=".55 .0 .5"	
+					endcolor=".1 .0 .3"		
+					
+					startalpha="0"
+					midalpha=".3"
+					endalpha="0"
+					
+					
+					startsize="55"
+					midsize="13"
+					endsize="10"
+					startstickiness="0"
+					endstickiness="1"					
+				/>
+        	</simpleemitter>
+
+			<simpleemitter 
+				bone="_bone_centerofchest"
+				count="10"
+         		spawnrate="222"				
+				minparticlelife="800"
+          		maxparticlelife="1200"
+          		gravity="0"
+          		drag="0"
+				speed="50"
+				position="0 0 0"
+				offsetsphere="20 20 20"
+          		material="/shared/effects/materials/neb_blend.material"
+				inheritvelocity="0.25"
+
+      		>
+  				
+				<particle 
+					maxangle="360"			
+					minanglespeed="-44"
+					maxanglespeed="44"
+					
+					scale="6"					
+					color=".1 0 .2"	
+							
+					
+					startalpha="0"
+					midalpha=".7"
+					endalpha="0"
+					
+					
+					startsize="75"
+					midsize="11"
+					endsize="44"
+									
+				/>
+        	</simpleemitter>			
+			<trackeremitter				
+				count="85"	
+				targetbone="_bone_centerofchest"			
+				
+				tracktype="angular"
+				trackspeed="21.0" 				
+				spawnrate="850"
+				particlelife="1200"
+				gravity="0"
+				offsetsphere="200 200 200"
+				minspeed="180.0"
+				maxspeed="220.0"
+				
+				targetposition="0 0 0"
+				
+				acceleration="30.0"
+				direction="0.0 0.0 1.0"
+				material="/shared/effects/materials/bat.material"
+				inheritvelocity="0.0"
+				distancelife="true"
+			>
+				<particle
+							color="1 1 1"
+							midcolorpos="0.5"
+							startalpha="1"
+							midalpha="1"
+							endalpha="0"
+							minframe="0"
+							maxframe="1"
+							framespeed="2"		
+							minscale="22"
+							maxscale="25"								
+							turn="true"
+				>
+					
+										
+					
+				</particle>
+				
+				
+			</trackeremitter>		
+
+	
+		<orbiteremitter	
+			count="50"
+			delay="300"
+			bone="_bone_centerofchest"
+			spawnrate="520"
+			particlelife="1000"
+			gravity="0.0"
+			minspeed="2"
+			maxspeed="2.5"
+			acceleration="0" 
+			drag="0.0"
+			minangle="-90" 
+			maxangle="90" 
+			position="0.0 0.0 0" 
+			origin="1.0 1 30" 
+			orbit="1.0 0.0 1.0" 
+			direction="0.0 0.0 1.0" 
+			offset="15.14 0 20"
+			cylindrical="false" 
+			material="/shared/effects/materials/bat.material"
+			
+		>
+			<particle
+							color="1 1 1"
+							midcolorpos="0.5"
+							startalpha="1"
+							midalpha="1"
+							endalpha="0"
+							minframe="0"
+							maxframe="1"
+							framespeed="2"		
+							minscale="22"
+							maxscale="25"								
+							turn="true"
+			/>
+		</orbiteremitter>
+<!--
+-->
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+	  <spawnmodifier instance="instance1" modifier="modifier0"/> 
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

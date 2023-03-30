@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Frosty_Ability4_Self"
+
+	
+	ishidden="true"
+	icon="icon.tga"
+>
+	<aura state="State_Frosty_Ability4" radius="635" targetscheme="enemy_units" duration="1000" />
+</state>

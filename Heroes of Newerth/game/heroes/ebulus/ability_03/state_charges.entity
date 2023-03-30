@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Ebulus_Ability3_Charges"
+	
+	ishidden="true"
+	impactinterval="5000"
+	maxcharges="1,2,2,3"
+
+>
+	<oninflict>
+		<starttimer entity="proxy_entity" duration="5000" />
+	</oninflict>
+	<onimpact>
+		<addcharges entity="proxy_entity" count="1" />
+		<condition test="charges gt 1">
+			<starttimer entity="proxy_entity" duration="5000" />
+			<changeduration b="5000" op="max" />
+		</condition>
+		<removecharge />
+		<setaccumulator entity="proxy_entity" value="1" />
+	</onimpact>
+</state>

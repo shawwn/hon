@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Fairy_Ability4"
+
+	radius="250"
+	impactdelay="4000"
+	lifetime="4000"
+	targetselection="closest"
+	maxtotalimpacts="2,3,4"
+	targetscheme="ally_heroes"
+	maximpactspertarget="1"
+	passiveeffect=""
+>
+	<onimpact>
+		<unbind target="target_entity" />
+		<teleport source="target_entity" target="proxy_position" interpolate="false" />
+		<disjoint target="target_entity" />
+	</onimpact>
+</affector>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="1">
+
+			<sound
+				linearfalloff="true"
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".7"
+				sample="../sounds/cast.wav"
+			/>
+			
+			<simpleemitter
+				position="0 250 0"
+				count="6"
+				spawnrate="1000"
+				particlelife="1000"
+				acceleration="0.0"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+				offsetsphere="25 25 0"
+			>
+				<particle
+					turn="1"
+				>
+					<groundsprite
+						delay="700"
+						name="emitter0"
+						count="1"
+						loop="false"
+						material="/shared/effects/materials/splatter_blend.material"
+						life="1000"
+						minsize="30"
+						maxsize="40"
+						position="-5 20 0"
+						minyaw="-360"
+						maxyaw="360"
+						startcolor=".25 0 0"
+						midcolor=".25 0 0"
+						endcolor=".25 0 0"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".75"
+					/>
+				</particle>
+			</simpleemitter>
+
+			<simpleemitter
+				delay="150"
+				position="0 50 0"
+				count="1"
+				spawnrate="1000"
+				particlelife="1000"
+				acceleration="0.0"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+			>
+				<particle
+					turn="1"
+				>
+					<model
+						life="750"
+						anim="idle"
+						model="chunks/model.mdf"
+						color="1 0 0"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".5"
+						startscale="1"
+						midscale="1"
+						endscale="1"
+						position="0 0 30"
+						pitch="-90"
+						roll="90"
+						yaw="90"
+					>
+
+						<template name="beam">
+							<beam
+								life="750"
+								bone_a="{a}"
+								bone_b="{b}"
+								color="{colorz}"
+								size="{sizez}"
+								startalpha="1"
+								midalpha="1"
+								endalpha="0"
+								midalphapos=".25"
+								position="0 0 0"
+								position_b="0 0 0"
+								material="/shared/effects/materials/goo.material"
+							/>
+						</template>
+
+						<instance name="beam" a="Box05" b="Box11" colorz=".6 0 0" sizez="20"/>
+						<instance name="beam" a="Box09" b="Box11" colorz=".6 0 0" sizez="20"/>
+						<instance name="beam" a="Box07" b="Box15" colorz=".4 0 0" sizez="10"/>
+						<instance name="beam" a="Box01" b="Box05" colorz=".4 0 0" sizez="20"/>
+						<instance name="beam" a="Box08" b="Box09" colorz=".6 0 0" sizez="15"/>
+						<instance name="beam" a="Box01" b="_CTRLS16" colorz=".4 0 0" sizez="20"/>
+
+						<template name="gooSplats">
+							<simpleemitter
+								count="4"
+								bone="{boner}"
+								life="750"
+								particlelife="750"
+								spawnrate="35"
+								speed="180"
+								gravity="22"
+								minangle="0"
+								maxangle="30"
+								material="/shared/effects/materials/blood1.material"
+								offsetsphere="25 25 0"
+								position="0 0 0"
+						
+							>
+								<particle 
+									minanglespeed="-100"
+									maxanglespeed="100"
+									minangle="-60"
+									maxangle="60"
+									color=".5 0 0"
+									startsize="25"
+									endsize="75"
+									startalpha="0"
+									midalpha="1"
+									endalpha="0"
+								/>
+							</simpleemitter>
+							
+							<simpleemitter
+								count="4"
+								bone="{boner}"
+								life="750"
+								particlelife="550"
+								spawnrate="15"
+								speed="180"
+								gravity="22"
+								minangle="0"
+								maxangle="30"
+								material="/shared/effects/materials/soul_projectile.material"
+								offsetsphere="25 25 0"
+								position="0 0 0"
+						
+							>
+								<particle 
+									minanglespeed="-100"
+									maxanglespeed="100"
+									minangle="-60"
+									maxangle="60"
+									color=".5 0 0"
+									startsize="15"
+									endsize="35"
+									startalpha="0"
+									midalpha="1"
+									endalpha="0"
+								/>
+							</simpleemitter>
+						</template>
+
+						<instance name="gooSplats" boner="Box01"/>
+						<instance name="gooSplats" boner="Box02"/>
+						<instance name="gooSplats" boner="Box03"/>
+						<instance name="gooSplats" boner="Box04"/>
+						<instance name="gooSplats" boner="Box05"/>
+						<instance name="gooSplats" boner="Box06"/>
+						<instance name="gooSplats" boner="Box07"/>
+						<instance name="gooSplats" boner="Box08"/>
+						<instance name="gooSplats" boner="Box09"/>
+						<instance name="gooSplats" boner="Box10"/>
+						<instance name="gooSplats" boner="Box11"/>
+						<instance name="gooSplats" boner="Box12"/>
+						<instance name="gooSplats" boner="Box13"/>
+						<instance name="gooSplats" boner="Box14"/>
+						<instance name="gooSplats" boner="Box15"/>
+						<instance name="gooSplats" boner="Box16"/>
+
+					</model>
+				</particle>
+			</simpleemitter>
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+
+
+
+
+
+
+

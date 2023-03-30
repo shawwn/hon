@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<material>
+	<parameters>
+		<float
+			name="fTexRotate"
+			value="0.0"
+			valuespeed="5.5"
+		/>
+	</parameters>
+	<phase
+		name="color"
+		vs="mesh_unlit_shell_2denviro_anim2"
+		ps="mesh_unlit"
+		srcblend="BLEND_SRC_ALPHA"
+		dstblend="BLEND_ONE"
+		cull="CULL_BACK"
+		translucent="true"
+		depthwrite="false"
+		alphawrite="false"
+	>
+		<sampler
+			name="diffuse"
+			texture="/shared/effects/textures/quadmap4.jpg"
+			repeat_u="true"
+			repeat_v="true"
+			mipmaps="true"
+			fullquality="false"
+			nocompress="false"
+			filtering="true"
+		/>
+	</phase>
+</material>

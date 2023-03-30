@@ -1,0 +1,1077 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: DirectX 8.1 - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release VC 6.0/DirectX.res" /d "NDEBUG" "C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\DirectX 8.1\DirectX.rc"" 
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP1E4.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /I "..\Common Source\\" /I "..\Common Source\SpeedWind\\" /I "." /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /FR"Release VC 6.0/" /Fp"Release VC 6.0/DirectX.pch" /YX /Fo"Release VC 6.0/" /Fd"Release VC 6.0/" /FD /c 
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\DirectX 8.1\DirectXExample.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\Navigation.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\DirectX 8.1\SpeedTreeForestDirectX8.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\DirectX 8.1\SpeedTreeWrapper.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\Transform.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\DirectX 8.1\d3dapp.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\DirectX 8.1\d3dutil.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\DirectX 8.1\dxutil.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\SpeedTreeForest.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\SpeedWind\SpeedWind.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\SpeedWind\SpeedWindParser.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP1E4.tmp" 
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP1E5.tmp" with contents
+[
+dsound.lib dinput8.lib dxerr8.lib d3dx8dt.lib d3d8.lib d3dxof.lib dxguid.lib winmm.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib SpeedTreeRT.lib /nologo /subsystem:windows /incremental:no /pdb:"Release VC 6.0/SpeedTreeRT DirectX 8.1.pdb" /machine:I386 /out:"..\..\bin\VC 6.0\Release\SpeedTreeRT DirectX 8.1.exe" /libpath:"..\..\lib\VC 6.0\Release" 
+".\Release VC 6.0\DirectXExample.obj"
+".\Release VC 6.0\Navigation.obj"
+".\Release VC 6.0\SpeedTreeForestDirectX8.obj"
+".\Release VC 6.0\SpeedTreeWrapper.obj"
+".\Release VC 6.0\Transform.obj"
+".\Release VC 6.0\d3dapp.obj"
+".\Release VC 6.0\d3dutil.obj"
+".\Release VC 6.0\dxutil.obj"
+".\Release VC 6.0\DirectX.res"
+".\Release VC 6.0\SpeedTreeForest.obj"
+".\Release VC 6.0\SpeedWind.obj"
+".\Release VC 6.0\SpeedWindParser.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP1E5.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+DirectXExample.cpp
+Navigation.cpp
+SpeedTreeForestDirectX8.cpp
+SpeedTreeWrapper.cpp
+Transform.cpp
+d3dapp.cpp
+d3dutil.cpp
+dxutil.cpp
+SpeedTreeForest.cpp
+SpeedWind.cpp
+Add up vector stuff here
+
+SpeedWindParser.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+SpeedTreeRT DirectX 8.1.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: DirectX 8.1 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug VC 6.0/DirectX.res" /d "_DEBUG" "C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\DirectX 8.1\DirectX.rc"" 
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP1E7.tmp" with contents
+[
+/nologo /MDd /W3 /GX /Zi /Od /I "..\Common Source\\" /I "..\Common Source\SpeedWind\\" /I "." /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /FR"Debug VC 6.0/" /Fp"Debug VC 6.0/DirectX.pch" /YX /Fo"Debug VC 6.0/" /Fd"Debug VC 6.0/" /FD /GZ /c 
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\DirectX 8.1\DirectXExample.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\Navigation.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\DirectX 8.1\SpeedTreeForestDirectX8.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\DirectX 8.1\SpeedTreeWrapper.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\Transform.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\DirectX 8.1\d3dapp.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\DirectX 8.1\d3dutil.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\DirectX 8.1\dxutil.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\SpeedTreeForest.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\SpeedWind\SpeedWind.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\SpeedWind\SpeedWindParser.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP1E7.tmp" 
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP1E8.tmp" with contents
+[
+dsound.lib dinput8.lib dxerr8.lib d3dx8dt.lib d3d8.lib d3dxof.lib dxguid.lib winmm.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib SpeedTreeRT.lib /nologo /subsystem:windows /incremental:no /pdb:"Debug VC 6.0/SpeedTreeRT DirectX 8.1.pdb" /debug /machine:I386 /out:"..\..\bin\VC 6.0\Debug\SpeedTreeRT DirectX 8.1.exe" /pdbtype:sept /libpath:"..\..\lib\VC 6.0\Release" 
+".\Debug VC 6.0\DirectXExample.obj"
+".\Debug VC 6.0\Navigation.obj"
+".\Debug VC 6.0\SpeedTreeForestDirectX8.obj"
+".\Debug VC 6.0\SpeedTreeWrapper.obj"
+".\Debug VC 6.0\Transform.obj"
+".\Debug VC 6.0\d3dapp.obj"
+".\Debug VC 6.0\d3dutil.obj"
+".\Debug VC 6.0\dxutil.obj"
+".\Debug VC 6.0\DirectX.res"
+".\Debug VC 6.0\SpeedTreeForest.obj"
+".\Debug VC 6.0\SpeedWind.obj"
+".\Debug VC 6.0\SpeedWindParser.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP1E8.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+DirectXExample.cpp
+Navigation.cpp
+SpeedTreeForestDirectX8.cpp
+SpeedTreeWrapper.cpp
+Transform.cpp
+d3dapp.cpp
+d3dutil.cpp
+dxutil.cpp
+SpeedTreeForest.cpp
+SpeedWind.cpp
+Add up vector stuff here
+
+SpeedWindParser.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+SpeedTreeRT DirectX 8.1.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: DirectX9 - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release VC 6.0/DirectX9.res" /d "NDEBUG" "C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\DirectX9\DirectX9.rc"" 
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP1EB.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /I "..\Common Source\\" /I "..\Common Source\SpeedWind\\" /I "." /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release VC 6.0/DirectX9.pch" /YX /Fo"Release VC 6.0/" /Fd"Release VC 6.0/" /FD /c 
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\DirectX9\DirectXExample.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\Navigation.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\DirectX9\SpeedTreeForestDirectX9.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\DirectX9\SpeedTreeWrapper.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\Transform.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\DirectX9\d3dapp.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\DirectX9\d3denumeration.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\DirectX9\d3dsettings.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\DirectX9\d3dutil.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\DirectX9\dxutil.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\SpeedTreeForest.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\SpeedWind\SpeedWind.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\SpeedWind\SpeedWindParser.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP1EB.tmp" 
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP1EC.tmp" with contents
+[
+dsound.lib dinput8.lib dxerr9.lib d3dx9.lib d3d9.lib d3dxof.lib dxguid.lib winmm.lib comctl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib SpeedTreeRT.lib /nologo /subsystem:windows /incremental:no /pdb:"Release VC 6.0/SpeedTreeRT DirectX 9.0.pdb" /machine:I386 /out:"..\..\bin\VC 6.0\Release\SpeedTreeRT DirectX 9.0.exe" /libpath:"..\..\lib\VC 6.0\Release" 
+".\Release VC 6.0\DirectXExample.obj"
+".\Release VC 6.0\Navigation.obj"
+".\Release VC 6.0\SpeedTreeForestDirectX9.obj"
+".\Release VC 6.0\SpeedTreeWrapper.obj"
+".\Release VC 6.0\Transform.obj"
+".\Release VC 6.0\d3dapp.obj"
+".\Release VC 6.0\d3denumeration.obj"
+".\Release VC 6.0\d3dsettings.obj"
+".\Release VC 6.0\d3dutil.obj"
+".\Release VC 6.0\dxutil.obj"
+".\Release VC 6.0\DirectX9.res"
+".\Release VC 6.0\SpeedTreeForest.obj"
+".\Release VC 6.0\SpeedWind.obj"
+".\Release VC 6.0\SpeedWindParser.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP1EC.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+DirectXExample.cpp
+Navigation.cpp
+SpeedTreeForestDirectX9.cpp
+SpeedTreeWrapper.cpp
+Transform.cpp
+d3dapp.cpp
+d3denumeration.cpp
+d3dsettings.cpp
+d3dutil.cpp
+dxutil.cpp
+SpeedTreeForest.cpp
+SpeedWind.cpp
+Add up vector stuff here
+
+SpeedWindParser.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+SpeedTreeRT DirectX 9.0.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: DirectX9 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug VC 6.0/DirectX9.res" /d "_DEBUG" "C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\DirectX9\DirectX9.rc"" 
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP1F0.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "..\Common Source\\" /I "..\Common Source\SpeedWind\\" /I "." /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /FR"Debug VC 6.0/" /Fp"Debug VC 6.0/DirectX9.pch" /YX /Fo"Debug VC 6.0/" /Fd"Debug VC 6.0/" /FD /GZ /c 
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\DirectX9\DirectXExample.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\Navigation.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\DirectX9\SpeedTreeForestDirectX9.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\DirectX9\SpeedTreeWrapper.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\Transform.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\DirectX9\d3dapp.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\DirectX9\d3denumeration.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\DirectX9\d3dsettings.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\DirectX9\d3dutil.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\DirectX9\dxutil.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\SpeedTreeForest.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\SpeedWind\SpeedWind.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\SpeedWind\SpeedWindParser.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP1F0.tmp" 
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP1F1.tmp" with contents
+[
+dsound.lib dinput8.lib dxerr9.lib d3dx9.lib d3d9.lib d3dxof.lib dxguid.lib winmm.lib comctl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib SpeedTreeRT.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug VC 6.0/SpeedTreeRT DirectX 9.0.pdb" /debug /machine:I386 /out:"..\..\bin\VC 6.0\Debug\SpeedTreeRT DirectX 9.0.exe" /pdbtype:sept /libpath:"..\..\lib\VC 6.0\Release" 
+".\Debug VC 6.0\DirectXExample.obj"
+".\Debug VC 6.0\Navigation.obj"
+".\Debug VC 6.0\SpeedTreeForestDirectX9.obj"
+".\Debug VC 6.0\SpeedTreeWrapper.obj"
+".\Debug VC 6.0\Transform.obj"
+".\Debug VC 6.0\d3dapp.obj"
+".\Debug VC 6.0\d3denumeration.obj"
+".\Debug VC 6.0\d3dsettings.obj"
+".\Debug VC 6.0\d3dutil.obj"
+".\Debug VC 6.0\dxutil.obj"
+".\Debug VC 6.0\DirectX9.res"
+".\Debug VC 6.0\SpeedTreeForest.obj"
+".\Debug VC 6.0\SpeedWind.obj"
+".\Debug VC 6.0\SpeedWindParser.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP1F1.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+DirectXExample.cpp
+Navigation.cpp
+SpeedTreeForestDirectX9.cpp
+SpeedTreeWrapper.cpp
+Transform.cpp
+d3dapp.cpp
+d3denumeration.cpp
+d3dsettings.cpp
+d3dutil.cpp
+dxutil.cpp
+SpeedTreeForest.cpp
+SpeedWind.cpp
+Add up vector stuff here
+
+SpeedWindParser.cpp
+Linking...
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP1F3.tmp" with contents
+[
+/nologo /o"Debug VC 6.0/DirectX9.bsc" 
+".\Debug VC 6.0\DirectXExample.sbr"
+".\Debug VC 6.0\Navigation.sbr"
+".\Debug VC 6.0\SpeedTreeForestDirectX9.sbr"
+".\Debug VC 6.0\SpeedTreeWrapper.sbr"
+".\Debug VC 6.0\Transform.sbr"
+".\Debug VC 6.0\d3dapp.sbr"
+".\Debug VC 6.0\d3denumeration.sbr"
+".\Debug VC 6.0\d3dsettings.sbr"
+".\Debug VC 6.0\d3dutil.sbr"
+".\Debug VC 6.0\dxutil.sbr"
+".\Debug VC 6.0\SpeedTreeForest.sbr"
+".\Debug VC 6.0\SpeedWind.sbr"
+".\Debug VC 6.0\SpeedWindParser.sbr"]
+Creating command line "bscmake.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP1F3.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+SpeedTreeRT DirectX 9.0.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: Gamebryo 1.1 - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP1F4.tmp" with contents
+[
+/nologo /G5 /MD /W3 /GX /O2 /I "C:\Program Files\NDL\Gamebryo 1.1 Evaluation\SDK\Win32\Include" /I "..\Common Source\\" /I "..\Common Source\SpeedWind\\" /I "." /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /D "STRICT" /FR"Release VC 6.0/" /Fp"Release VC 6.0/Gamebryo 1.1.pch" /YX /Fo"Release VC 6.0/" /Fd"Release VC 6.0/" /FD /c 
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\Navigation.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Gamebryo 1.1\SpeedTreeRTExampleApp.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Gamebryo 1.1\SpeedTreeShader.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Gamebryo 1.1\SpeedTreeWrapper.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\Transform.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\SpeedWind\SpeedWind.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\SpeedWind\SpeedWindParser.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\SpeedTreeForest.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP1F4.tmp" 
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP1F5.tmp" with contents
+[
+NiApplication.lib NiInput.lib NiSystem.lib NiMain.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib SpeedTreeRT.lib /nologo /subsystem:windows /incremental:no /pdb:"Release VC 6.0/SpeedTreeRT Gamebryo 1.1.pdb" /machine:I386 /out:"../../bin/VC 6.0/Release/SpeedTreeRT Gamebryo 1.1.exe" /libpath:"C:\Program Files\NDL\Gamebryo 1.1 Evaluation\SDK\Win32\Lib\VC6\ReleaseLib" /libpath:"..\..\lib\VC 6.0\Release" 
+".\Release VC 6.0\Navigation.obj"
+".\Release VC 6.0\SpeedTreeRTExampleApp.obj"
+".\Release VC 6.0\SpeedTreeShader.obj"
+".\Release VC 6.0\SpeedTreeWrapper.obj"
+".\Release VC 6.0\Transform.obj"
+".\Release VC 6.0\SpeedWind.obj"
+".\Release VC 6.0\SpeedWindParser.obj"
+".\Release VC 6.0\SpeedTreeForest.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP1F5.tmp"
+<h3>Output Window</h3>
+Compiling...
+Navigation.cpp
+SpeedTreeRTExampleApp.cpp
+C:\PROGRAM FILES\MICROSOFT DIRECTX 9.0 SDK (SUMMER 2004)\INCLUDE\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+SpeedTreeShader.cpp
+SpeedTreeWrapper.cpp
+C:\PROGRAM FILES\MICROSOFT DIRECTX 9.0 SDK (SUMMER 2004)\INCLUDE\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+Transform.cpp
+SpeedWind.cpp
+Add up vector stuff here
+
+SpeedWindParser.cpp
+SpeedTreeForest.cpp
+C:\Program Files\NDL\Gamebryo 1.1 Evaluation\SDK\Win32\Include\NiD3DShaderConstantMap.h(126) : warning C4786: '?SetDefinedConstant@NiD3DShaderConstantMap@@MAEIPAVNiD3DShaderProgram@@PAVNiD3DShaderConstantMapEntry@@PAVNiGeometry@@PBVNiSkinInstance@@PBVPartition@NiSkinPartition@@PAVNiGeometryBufferData@@PBVNiPropertyState@@PBVNiDynamicEffectState@@ABVNiTransform@@ABVNiBound@@I@Z' : identifier was truncated to '255' characters in the browser information
+C:\Program Files\NDL\Gamebryo 1.1 Evaluation\SDK\Win32\Include\NiD3DShaderConstantMap.h(137) : warning C4786: '?SetAttributeConstant@NiD3DShaderConstantMap@@MAEIPAVNiD3DShaderProgram@@PAVNiD3DShaderConstantMapEntry@@PAVNiGeometry@@PBVNiSkinInstance@@PBVPartition@NiSkinPartition@@PAVNiGeometryBufferData@@PBVNiPropertyState@@PBVNiDynamicEffectState@@ABVNiTransform@@ABVNiBound@@I@Z' : identifier was truncated to '255' characters in the browser information
+C:\Program Files\NDL\Gamebryo 1.1 Evaluation\SDK\Win32\Include\NiD3DSCM_Pixel.h(75) : warning C4786: '?SetDefinedConstant@NiD3DSCM_Pixel@@MAEIPAVNiD3DShaderProgram@@PAVNiD3DShaderConstantMapEntry@@PAVNiGeometry@@PBVNiSkinInstance@@PBVPartition@NiSkinPartition@@PAVNiGeometryBufferData@@PBVNiPropertyState@@PBVNiDynamicEffectState@@ABVNiTransform@@ABVNiBound@@I@Z' : identifier was truncated to '255' characters in the browser information
+C:\Program Files\NDL\Gamebryo 1.1 Evaluation\SDK\Win32\Include\NiD3DSCM_Pixel.h(86) : warning C4786: '?SetAttributeConstant@NiD3DSCM_Pixel@@MAEIPAVNiD3DShaderProgram@@PAVNiD3DShaderConstantMapEntry@@PAVNiGeometry@@PBVNiSkinInstance@@PBVPartition@NiSkinPartition@@PAVNiGeometryBufferData@@PBVNiPropertyState@@PBVNiDynamicEffectState@@ABVNiTransform@@ABVNiBound@@I@Z' : identifier was truncated to '255' characters in the browser information
+C:\Program Files\NDL\Gamebryo 1.1 Evaluation\SDK\Win32\Include\NiD3DSCM_Vertex.h(127) : warning C4786: '?SetDefinedConstant@NiD3DSCM_Vertex@@MAEIPAVNiD3DShaderProgram@@PAVNiD3DShaderConstantMapEntry@@PAVNiGeometry@@PBVNiSkinInstance@@PBVPartition@NiSkinPartition@@PAVNiGeometryBufferData@@PBVNiPropertyState@@PBVNiDynamicEffectState@@ABVNiTransform@@ABVNiBound@@I@Z' : identifier was truncated to '255' characters in the browser information
+C:\Program Files\NDL\Gamebryo 1.1 Evaluation\SDK\Win32\Include\NiD3DSCM_Vertex.h(138) : warning C4786: '?SetAttributeConstant@NiD3DSCM_Vertex@@MAEIPAVNiD3DShaderProgram@@PAVNiD3DShaderConstantMapEntry@@PAVNiGeometry@@PBVNiSkinInstance@@PBVPartition@NiSkinPartition@@PAVNiGeometryBufferData@@PBVNiPropertyState@@PBVNiDynamicEffectState@@ABVNiTransform@@ABVNiBound@@I@Z' : identifier was truncated to '255' characters in the browser information
+Linking...
+
+
+
+<h3>Results</h3>
+SpeedTreeRT Gamebryo 1.1.exe - 0 error(s), 6 warning(s)
+<h3>
+--------------------Configuration: Gamebryo 1.1 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP1F7.tmp" with contents
+[
+/nologo /G5 /MD /W3 /Gm /GX /Zi /Od /I "C:\Program Files\NDL\Gamebryo 1.1 Evaluation\SDK\Win32\Include" /I "..\Common Source\\" /I "..\Common Source\SpeedWind\\" /I "." /D "_DEBUG" /D "STRICT" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /FR"Debug VC 6.0/" /Fp"Debug VC 6.0/Gamebryo 1.1.pch" /YX /Fo"Debug VC 6.0/" /Fd"Debug VC 6.0/" /FD /GZ /c 
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\Navigation.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Gamebryo 1.1\SpeedTreeRTExampleApp.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Gamebryo 1.1\SpeedTreeShader.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Gamebryo 1.1\SpeedTreeWrapper.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\Transform.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\SpeedWind\SpeedWind.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\SpeedWind\SpeedWindParser.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\SpeedTreeForest.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP1F7.tmp" 
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP1F8.tmp" with contents
+[
+NiApplication.lib NiInput.lib NiSystem.lib NiMain.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib dinput.lib SpeedTreeRT.lib /nologo /subsystem:windows /incremental:no /pdb:"Debug VC 6.0/SpeedTreeRT Gamebryo 1.1.pdb" /debug /machine:I386 /out:"../../bin/VC 6.0/Debug/SpeedTreeRT Gamebryo 1.1.exe" /pdbtype:sept /libpath:"C:\Program Files\NDL\Gamebryo 1.1 Evaluation\SDK\Win32\Lib\VC6\DebugLib" /libpath:"..\..\lib\VC 6.0\Release" 
+".\Debug VC 6.0\Navigation.obj"
+".\Debug VC 6.0\SpeedTreeRTExampleApp.obj"
+".\Debug VC 6.0\SpeedTreeShader.obj"
+".\Debug VC 6.0\SpeedTreeWrapper.obj"
+".\Debug VC 6.0\Transform.obj"
+".\Debug VC 6.0\SpeedWind.obj"
+".\Debug VC 6.0\SpeedWindParser.obj"
+".\Debug VC 6.0\SpeedTreeForest.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP1F8.tmp"
+<h3>Output Window</h3>
+Compiling...
+Navigation.cpp
+SpeedTreeRTExampleApp.cpp
+C:\PROGRAM FILES\MICROSOFT DIRECTX 9.0 SDK (SUMMER 2004)\INCLUDE\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+SpeedTreeShader.cpp
+SpeedTreeWrapper.cpp
+C:\PROGRAM FILES\MICROSOFT DIRECTX 9.0 SDK (SUMMER 2004)\INCLUDE\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+Transform.cpp
+SpeedWind.cpp
+Add up vector stuff here
+
+SpeedWindParser.cpp
+SpeedTreeForest.cpp
+C:\Program Files\NDL\Gamebryo 1.1 Evaluation\SDK\Win32\Include\NiD3DShaderConstantMap.h(126) : warning C4786: '?SetDefinedConstant@NiD3DShaderConstantMap@@MAEIPAVNiD3DShaderProgram@@PAVNiD3DShaderConstantMapEntry@@PAVNiGeometry@@PBVNiSkinInstance@@PBVPartition@NiSkinPartition@@PAVNiGeometryBufferData@@PBVNiPropertyState@@PBVNiDynamicEffectState@@ABVNiTransform@@ABVNiBound@@I@Z' : identifier was truncated to '255' characters in the browser information
+C:\Program Files\NDL\Gamebryo 1.1 Evaluation\SDK\Win32\Include\NiD3DShaderConstantMap.h(137) : warning C4786: '?SetAttributeConstant@NiD3DShaderConstantMap@@MAEIPAVNiD3DShaderProgram@@PAVNiD3DShaderConstantMapEntry@@PAVNiGeometry@@PBVNiSkinInstance@@PBVPartition@NiSkinPartition@@PAVNiGeometryBufferData@@PBVNiPropertyState@@PBVNiDynamicEffectState@@ABVNiTransform@@ABVNiBound@@I@Z' : identifier was truncated to '255' characters in the browser information
+C:\Program Files\NDL\Gamebryo 1.1 Evaluation\SDK\Win32\Include\NiD3DSCM_Pixel.h(75) : warning C4786: '?SetDefinedConstant@NiD3DSCM_Pixel@@MAEIPAVNiD3DShaderProgram@@PAVNiD3DShaderConstantMapEntry@@PAVNiGeometry@@PBVNiSkinInstance@@PBVPartition@NiSkinPartition@@PAVNiGeometryBufferData@@PBVNiPropertyState@@PBVNiDynamicEffectState@@ABVNiTransform@@ABVNiBound@@I@Z' : identifier was truncated to '255' characters in the browser information
+C:\Program Files\NDL\Gamebryo 1.1 Evaluation\SDK\Win32\Include\NiD3DSCM_Pixel.h(86) : warning C4786: '?SetAttributeConstant@NiD3DSCM_Pixel@@MAEIPAVNiD3DShaderProgram@@PAVNiD3DShaderConstantMapEntry@@PAVNiGeometry@@PBVNiSkinInstance@@PBVPartition@NiSkinPartition@@PAVNiGeometryBufferData@@PBVNiPropertyState@@PBVNiDynamicEffectState@@ABVNiTransform@@ABVNiBound@@I@Z' : identifier was truncated to '255' characters in the browser information
+C:\Program Files\NDL\Gamebryo 1.1 Evaluation\SDK\Win32\Include\NiD3DSCM_Vertex.h(127) : warning C4786: '?SetDefinedConstant@NiD3DSCM_Vertex@@MAEIPAVNiD3DShaderProgram@@PAVNiD3DShaderConstantMapEntry@@PAVNiGeometry@@PBVNiSkinInstance@@PBVPartition@NiSkinPartition@@PAVNiGeometryBufferData@@PBVNiPropertyState@@PBVNiDynamicEffectState@@ABVNiTransform@@ABVNiBound@@I@Z' : identifier was truncated to '255' characters in the browser information
+C:\Program Files\NDL\Gamebryo 1.1 Evaluation\SDK\Win32\Include\NiD3DSCM_Vertex.h(138) : warning C4786: '?SetAttributeConstant@NiD3DSCM_Vertex@@MAEIPAVNiD3DShaderProgram@@PAVNiD3DShaderConstantMapEntry@@PAVNiGeometry@@PBVNiSkinInstance@@PBVPartition@NiSkinPartition@@PAVNiGeometryBufferData@@PBVNiPropertyState@@PBVNiDynamicEffectState@@ABVNiTransform@@ABVNiBound@@I@Z' : identifier was truncated to '255' characters in the browser information
+Linking...
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP1FA.tmp" with contents
+[
+/nologo /o"Debug VC 6.0/Gamebryo 1.1.bsc" 
+".\Debug VC 6.0\Navigation.sbr"
+".\Debug VC 6.0\SpeedTreeRTExampleApp.sbr"
+".\Debug VC 6.0\SpeedTreeShader.sbr"
+".\Debug VC 6.0\SpeedTreeWrapper.sbr"
+".\Debug VC 6.0\Transform.sbr"
+".\Debug VC 6.0\SpeedWind.sbr"
+".\Debug VC 6.0\SpeedWindParser.sbr"
+".\Debug VC 6.0\SpeedTreeForest.sbr"]
+Creating command line "bscmake.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP1FA.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+SpeedTreeRT Gamebryo 1.1.exe - 0 error(s), 6 warning(s)
+<h3>
+--------------------Configuration: Huge Forest - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release VC 6.0/Huge Forest.res" /d "NDEBUG" "C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Huge Forest\Huge Forest.rc"" 
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP1FB.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /I "..\Common Source\\" /I "..\Common Source\SpeedWind\\" /I "." /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fr"Release VC 6.0/" /Fp"Release VC 6.0/Huge Forest.pch" /YX /Fo"Release VC 6.0/" /Fd"Release VC 6.0/" /FD /c 
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\Console.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\extgl.c"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Huge Forest\Forest.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\GraphOverlay.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\IdvFont.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\IdvVertexBuffer.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Huge Forest\LensFlare.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Huge Forest\LodPlanes.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Huge Forest\main.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Huge Forest\Navigation.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\nv_dds.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\TgaFormat.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Huge Forest\Tree.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\SpeedWind\SpeedWind.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\SpeedWind\SpeedWindParser.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP1FB.tmp" 
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP1FC.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib SpeedTreeRT.lib /nologo /subsystem:console /incremental:no /pdb:"Release VC 6.0/Huge_Forest.pdb" /machine:I386 /out:"..\..\bin\VC 6.0\Release\Huge_Forest.exe" /libpath:"..\..\lib\VC 6.0\Release" 
+".\Release VC 6.0\Console.obj"
+".\Release VC 6.0\extgl.obj"
+".\Release VC 6.0\Forest.obj"
+".\Release VC 6.0\GraphOverlay.obj"
+".\Release VC 6.0\IdvFont.obj"
+".\Release VC 6.0\IdvVertexBuffer.obj"
+".\Release VC 6.0\LensFlare.obj"
+".\Release VC 6.0\LodPlanes.obj"
+".\Release VC 6.0\main.obj"
+".\Release VC 6.0\Navigation.obj"
+".\Release VC 6.0\nv_dds.obj"
+".\Release VC 6.0\TgaFormat.obj"
+".\Release VC 6.0\Tree.obj"
+".\Release VC 6.0\Huge Forest.res"
+".\Release VC 6.0\SpeedWind.obj"
+".\Release VC 6.0\SpeedWindParser.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP1FC.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+Console.cpp
+extgl.c
+Forest.cpp
+GraphOverlay.cpp
+IdvFont.cpp
+IdvVertexBuffer.cpp
+LensFlare.cpp
+LodPlanes.cpp
+main.cpp
+Navigation.cpp
+nv_dds.cpp
+TgaFormat.cpp
+Tree.cpp
+SpeedWind.cpp
+Add up vector stuff here
+
+SpeedWindParser.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+Huge_Forest.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: Huge Forest - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug VC 6.0/Huge Forest.res" /d "NDEBUG" "C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Huge Forest\Huge Forest.rc"" 
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP1FE.tmp" with contents
+[
+/nologo /MDd /W3 /GX /Zi /Od /I "..\Common Source\\" /I "..\Common Source\SpeedWind\\" /I "." /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fr"Debug VC 6.0/" /Fp"Debug VC 6.0/Huge Forest.pch" /YX /Fo"Debug VC 6.0/" /Fd"Debug VC 6.0/" /FD /c 
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\Console.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\extgl.c"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Huge Forest\Forest.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\GraphOverlay.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\IdvFont.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\IdvVertexBuffer.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Huge Forest\LensFlare.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Huge Forest\LodPlanes.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Huge Forest\main.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Huge Forest\Navigation.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\nv_dds.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\TgaFormat.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Huge Forest\Tree.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\SpeedWind\SpeedWind.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\SpeedWind\SpeedWindParser.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP1FE.tmp" 
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP1FF.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib SpeedTreeRT.lib /nologo /subsystem:console /incremental:no /pdb:"Debug VC 6.0/Huge_Forest.pdb" /debug /machine:I386 /out:"..\..\bin\VC 6.0\Debug\Huge_Forest.exe" /libpath:"..\..\lib\VC 6.0\Release" 
+".\Debug VC 6.0\Console.obj"
+".\Debug VC 6.0\extgl.obj"
+".\Debug VC 6.0\Forest.obj"
+".\Debug VC 6.0\GraphOverlay.obj"
+".\Debug VC 6.0\IdvFont.obj"
+".\Debug VC 6.0\IdvVertexBuffer.obj"
+".\Debug VC 6.0\LensFlare.obj"
+".\Debug VC 6.0\LodPlanes.obj"
+".\Debug VC 6.0\main.obj"
+".\Debug VC 6.0\Navigation.obj"
+".\Debug VC 6.0\nv_dds.obj"
+".\Debug VC 6.0\TgaFormat.obj"
+".\Debug VC 6.0\Tree.obj"
+".\Debug VC 6.0\Huge Forest.res"
+".\Debug VC 6.0\SpeedWind.obj"
+".\Debug VC 6.0\SpeedWindParser.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP1FF.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+Console.cpp
+extgl.c
+Forest.cpp
+GraphOverlay.cpp
+IdvFont.cpp
+IdvVertexBuffer.cpp
+LensFlare.cpp
+LodPlanes.cpp
+main.cpp
+Navigation.cpp
+nv_dds.cpp
+TgaFormat.cpp
+Tree.cpp
+SpeedWind.cpp
+Add up vector stuff here
+
+SpeedWindParser.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+Huge_Forest.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: Huge Forest Launcher - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release VC 6.0/ForestLauncher.res" /d "NDEBUG" "C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Huge Forest Launcher\ForestLauncher.rc"" 
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP201.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /FR"Release VC 6.0/" /Fp"Release VC 6.0/ForestLauncher.pch" /Yu"stdafx.h" /Fo"Release VC 6.0/" /Fd"Release VC 6.0/" /FD /c 
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Huge Forest Launcher\ForestLauncher.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Huge Forest Launcher\ForestLauncherDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP201.tmp" 
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP202.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /FR"Release VC 6.0/" /Fp"Release VC 6.0/ForestLauncher.pch" /Yc"stdafx.h" /Fo"Release VC 6.0/" /Fd"Release VC 6.0/" /FD /c 
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Huge Forest Launcher\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP202.tmp" 
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP203.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release VC 6.0/Huge Forest Launcher.pdb" /machine:I386 /out:"..\..\bin\VC 6.0\Release\Huge Forest Launcher.exe" 
+".\Release VC 6.0\ForestLauncher.obj"
+".\Release VC 6.0\ForestLauncherDlg.obj"
+".\Release VC 6.0\StdAfx.obj"
+".\Release VC 6.0\ForestLauncher.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP203.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+ForestLauncher.cpp
+ForestLauncherDlg.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+Huge Forest Launcher.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: Huge Forest Launcher - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug VC 6.0/ForestLauncher.res" /d "_DEBUG" "C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Huge Forest Launcher\ForestLauncher.rc"" 
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP207.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Debug VC 6.0/ForestLauncher.pch" /Yu"stdafx.h" /Fo"Debug VC 6.0/" /Fd"Debug VC 6.0/" /FD /GZ /c 
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Huge Forest Launcher\ForestLauncher.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Huge Forest Launcher\ForestLauncherDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP207.tmp" 
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP208.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Debug VC 6.0/ForestLauncher.pch" /Yc"stdafx.h" /Fo"Debug VC 6.0/" /Fd"Debug VC 6.0/" /FD /GZ /c 
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Huge Forest Launcher\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP208.tmp" 
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP209.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Debug VC 6.0/Huge Forest Launcher.pdb" /debug /machine:I386 /out:"..\..\bin\VC 6.0\Debug\Huge Forest Launcher.exe" /pdbtype:sept 
+".\Debug VC 6.0\ForestLauncher.obj"
+".\Debug VC 6.0\ForestLauncherDlg.obj"
+".\Debug VC 6.0\StdAfx.obj"
+".\Debug VC 6.0\ForestLauncher.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP209.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+ForestLauncher.cpp
+ForestLauncherDlg.cpp
+Generating Code...
+Linking...
+LINK : warning LNK4075: ignoring /EDITANDCONTINUE due to /INCREMENTAL:NO specification
+
+
+
+<h3>Results</h3>
+Huge Forest Launcher.exe - 0 error(s), 1 warning(s)
+<h3>
+--------------------Configuration: OpenGL - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP20B.tmp" with contents
+[
+/nologo /ML /W3 /GX /O2 /I "..\Common Source\\" /I "..\Common Source\SpeedWind\\" /I "." /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /FR"Release VC 6.0/" /Fp"Release VC 6.0/OpenGL.pch" /YX /Fo"Release VC 6.0/" /Fd"Release VC 6.0/" /FD /c 
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\extgl.c"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\IdvVertexBuffer.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\OpenGL\main.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\Navigation.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\nv_dds.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\OpenGL\SpeedTreeForestOpenGL.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\OpenGL\SpeedTreeWrapper.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\Transform.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\VertexProgram.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\SpeedTreeForest.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\SpeedWind\SpeedWind.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\SpeedWind\SpeedWindParser.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP20B.tmp" 
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP20C.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib SpeedTreeRT.lib /nologo /subsystem:console /incremental:no /pdb:"Release VC 6.0/SpeedTreeRT OpenGL.pdb" /machine:I386 /out:"..\..\bin\VC 6.0\Release\SpeedTreeRT OpenGL.exe" /libpath:"..\..\lib\VC 6.0\Release" 
+".\Release VC 6.0\extgl.obj"
+".\Release VC 6.0\IdvVertexBuffer.obj"
+".\Release VC 6.0\main.obj"
+".\Release VC 6.0\Navigation.obj"
+".\Release VC 6.0\nv_dds.obj"
+".\Release VC 6.0\SpeedTreeForestOpenGL.obj"
+".\Release VC 6.0\SpeedTreeWrapper.obj"
+".\Release VC 6.0\Transform.obj"
+".\Release VC 6.0\VertexProgram.obj"
+".\Release VC 6.0\SpeedTreeForest.obj"
+".\Release VC 6.0\SpeedWind.obj"
+".\Release VC 6.0\SpeedWindParser.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP20C.tmp"
+<h3>Output Window</h3>
+Compiling...
+extgl.c
+IdvVertexBuffer.cpp
+main.cpp
+Navigation.cpp
+nv_dds.cpp
+SpeedTreeForestOpenGL.cpp
+SpeedTreeWrapper.cpp
+Transform.cpp
+VertexProgram.cpp
+SpeedTreeForest.cpp
+SpeedWind.cpp
+Add up vector stuff here
+
+SpeedWindParser.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+SpeedTreeRT OpenGL.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: OpenGL - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP20E.tmp" with contents
+[
+/nologo /MDd /W3 /GX /Zi /Od /I "..\Common Source\\" /I "..\Common Source\SpeedWind\\" /I "." /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /FAs /Fa"Debug VC 6.0/" /FR"Debug VC 6.0/" /Fp"Debug VC 6.0/OpenGL.pch" /YX /Fo"Debug VC 6.0/" /Fd"Debug VC 6.0/" /FD /c 
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\extgl.c"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\IdvVertexBuffer.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\OpenGL\main.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\Navigation.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\nv_dds.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\OpenGL\SpeedTreeForestOpenGL.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\OpenGL\SpeedTreeWrapper.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\Transform.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\VertexProgram.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\SpeedTreeForest.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\SpeedWind\SpeedWind.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\SpeedWind\SpeedWindParser.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP20E.tmp" 
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP20F.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib SpeedTreeRT.lib /nologo /subsystem:console /incremental:no /pdb:"Debug VC 6.0/SpeedTreeRT OpenGL.pdb" /map:"Debug VC 6.0/SpeedTreeRT OpenGL.map" /debug /machine:I386 /out:"..\..\bin\VC 6.0\Debug\SpeedTreeRT OpenGL.exe" /libpath:"..\..\lib\VC 6.0\Release" 
+".\Debug VC 6.0\extgl.obj"
+".\Debug VC 6.0\IdvVertexBuffer.obj"
+".\Debug VC 6.0\main.obj"
+".\Debug VC 6.0\Navigation.obj"
+".\Debug VC 6.0\nv_dds.obj"
+".\Debug VC 6.0\SpeedTreeForestOpenGL.obj"
+".\Debug VC 6.0\SpeedTreeWrapper.obj"
+".\Debug VC 6.0\Transform.obj"
+".\Debug VC 6.0\VertexProgram.obj"
+".\Debug VC 6.0\SpeedTreeForest.obj"
+".\Debug VC 6.0\SpeedWind.obj"
+".\Debug VC 6.0\SpeedWindParser.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP20F.tmp"
+<h3>Output Window</h3>
+Compiling...
+extgl.c
+IdvVertexBuffer.cpp
+main.cpp
+Navigation.cpp
+nv_dds.cpp
+SpeedTreeForestOpenGL.cpp
+SpeedTreeWrapper.cpp
+Transform.cpp
+VertexProgram.cpp
+SpeedTreeForest.cpp
+SpeedWind.cpp
+Add up vector stuff here
+
+SpeedWindParser.cpp
+Linking...
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP213.tmp" with contents
+[
+/nologo /o"Debug VC 6.0/OpenGL.bsc" 
+".\Debug VC 6.0\extgl.sbr"
+".\Debug VC 6.0\IdvVertexBuffer.sbr"
+".\Debug VC 6.0\main.sbr"
+".\Debug VC 6.0\Navigation.sbr"
+".\Debug VC 6.0\nv_dds.sbr"
+".\Debug VC 6.0\SpeedTreeForestOpenGL.sbr"
+".\Debug VC 6.0\SpeedTreeWrapper.sbr"
+".\Debug VC 6.0\Transform.sbr"
+".\Debug VC 6.0\VertexProgram.sbr"
+".\Debug VC 6.0\SpeedTreeForest.sbr"
+".\Debug VC 6.0\SpeedWind.sbr"
+".\Debug VC 6.0\SpeedWindParser.sbr"]
+Creating command line "bscmake.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP213.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+SpeedTreeRT OpenGL.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: The Valley - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP214.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /I "..\Common Source\\" /I "..\Common Source\SpeedWind\\" /I "." /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /D "_AFXDLL" /FR"Release VC 6.0/" /Fp"Release VC 6.0/The Valley.pch" /YX /Fo"Release VC 6.0/" /Fd"Release VC 6.0/" /FD /c 
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\BoundaryShapeManager.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\CameraPathManager.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\Console.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\extgl.c"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\GraphOverlay.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\IdvFont.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\IdvMeshImporter.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\IdvPath.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\IdvTerrainImporter.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\IdvVertexBuffer.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\LensFlare.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\Main.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\Navigation.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\nv_dds.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\RegisterCombiner.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\Rocks.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\Scene.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\Sky.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\SoundTrack.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\TgaFormat.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\Tree.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\TreeInstance.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\LibVector_Source\Region.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\LibVector_Source\RotTransform.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\LibVector_Source\Transform.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\LibVector_Source\Vec.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\LibVector_Source\Vec3.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\SpeedWind\SpeedWind.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\SpeedWind\SpeedWindParser.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP214.tmp" 
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP215.tmp" with contents
+[
+SpeedTreeRT.lib nvparse_mtdll.lib vfw32.lib /nologo /subsystem:console /incremental:no /pdb:"Release VC 6.0/The Valley.pdb" /machine:I386 /out:"..\..\bin\VC 6.0\Release\The Valley.exe" /libpath:"..\..\lib\VC 6.0\Release" 
+".\Release VC 6.0\BoundaryShapeManager.obj"
+".\Release VC 6.0\CameraPathManager.obj"
+".\Release VC 6.0\Console.obj"
+".\Release VC 6.0\extgl.obj"
+".\Release VC 6.0\GraphOverlay.obj"
+".\Release VC 6.0\IdvFont.obj"
+".\Release VC 6.0\IdvMeshImporter.obj"
+".\Release VC 6.0\IdvPath.obj"
+".\Release VC 6.0\IdvTerrainImporter.obj"
+".\Release VC 6.0\IdvVertexBuffer.obj"
+".\Release VC 6.0\LensFlare.obj"
+".\Release VC 6.0\Main.obj"
+".\Release VC 6.0\Navigation.obj"
+".\Release VC 6.0\nv_dds.obj"
+".\Release VC 6.0\RegisterCombiner.obj"
+".\Release VC 6.0\Rocks.obj"
+".\Release VC 6.0\Scene.obj"
+".\Release VC 6.0\Sky.obj"
+".\Release VC 6.0\SoundTrack.obj"
+".\Release VC 6.0\TgaFormat.obj"
+".\Release VC 6.0\Tree.obj"
+".\Release VC 6.0\TreeInstance.obj"
+".\Release VC 6.0\Region.obj"
+".\Release VC 6.0\RotTransform.obj"
+".\Release VC 6.0\Transform.obj"
+".\Release VC 6.0\Vec.obj"
+".\Release VC 6.0\Vec3.obj"
+".\Release VC 6.0\SpeedWind.obj"
+".\Release VC 6.0\SpeedWindParser.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP215.tmp"
+<h3>Output Window</h3>
+Compiling...
+BoundaryShapeManager.cpp
+CameraPathManager.cpp
+Console.cpp
+extgl.c
+GraphOverlay.cpp
+IdvFont.cpp
+IdvMeshImporter.cpp
+IdvPath.cpp
+IdvTerrainImporter.cpp
+IdvVertexBuffer.cpp
+LensFlare.cpp
+Main.cpp
+Navigation.cpp
+nv_dds.cpp
+RegisterCombiner.cpp
+Rocks.cpp
+Scene.cpp
+Sky.cpp
+SoundTrack.cpp
+TgaFormat.cpp
+Tree.cpp
+TreeInstance.cpp
+Region.cpp
+RotTransform.cpp
+Transform.cpp
+Vec.cpp
+Vec3.cpp
+SpeedWind.cpp
+Add up vector stuff here
+
+SpeedWindParser.cpp
+Linking...
+LINK : warning LNK4075: ignoring /EDITANDCONTINUE due to /INCREMENTAL:NO specification
+LINK : warning LNK4098: defaultlib "MSVCRTD" conflicts with use of other libs; use /NODEFAULTLIB:library
+LINK : warning LNK4089: all references to "KERNEL32.dll" discarded by /OPT:REF
+
+
+
+<h3>Results</h3>
+The Valley.exe - 0 error(s), 3 warning(s)
+<h3>
+--------------------Configuration: The Valley - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP217.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "..\Common Source\\" /I "..\Common Source\SpeedWind\\" /I "." /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /D "_AFXDLL" /FR"Debug VC 6.0/" /Fp"Debug VC 6.0/The Valley.pch" /YX /Fo"Debug VC 6.0/" /Fd"Debug VC 6.0/" /FD /GZ /c 
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\BoundaryShapeManager.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\CameraPathManager.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\Console.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\extgl.c"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\GraphOverlay.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\IdvFont.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\IdvMeshImporter.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\IdvPath.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\IdvTerrainImporter.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\IdvVertexBuffer.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\LensFlare.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\Main.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\Navigation.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\nv_dds.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\RegisterCombiner.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\Rocks.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\Scene.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\Sky.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\SoundTrack.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\TgaFormat.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\Tree.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\TreeInstance.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\LibVector_Source\Region.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\LibVector_Source\RotTransform.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\LibVector_Source\Transform.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\LibVector_Source\Vec.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley\LibVector_Source\Vec3.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\SpeedWind\SpeedWind.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\SpeedWind\SpeedWindParser.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP217.tmp" 
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP218.tmp" with contents
+[
+SpeedTreeRT.lib nvparse_mtdll.lib vfw32.lib /nologo /subsystem:console /incremental:no /pdb:"Debug VC 6.0/The Valley.pdb" /debug /machine:I386 /out:"..\..\bin\VC 6.0\Debug\The Valley.exe" /pdbtype:sept /libpath:"..\..\lib\VC 6.0\Release" 
+".\Debug VC 6.0\BoundaryShapeManager.obj"
+".\Debug VC 6.0\CameraPathManager.obj"
+".\Debug VC 6.0\Console.obj"
+".\Debug VC 6.0\extgl.obj"
+".\Debug VC 6.0\GraphOverlay.obj"
+".\Debug VC 6.0\IdvFont.obj"
+".\Debug VC 6.0\IdvMeshImporter.obj"
+".\Debug VC 6.0\IdvPath.obj"
+".\Debug VC 6.0\IdvTerrainImporter.obj"
+".\Debug VC 6.0\IdvVertexBuffer.obj"
+".\Debug VC 6.0\LensFlare.obj"
+".\Debug VC 6.0\Main.obj"
+".\Debug VC 6.0\Navigation.obj"
+".\Debug VC 6.0\nv_dds.obj"
+".\Debug VC 6.0\RegisterCombiner.obj"
+".\Debug VC 6.0\Rocks.obj"
+".\Debug VC 6.0\Scene.obj"
+".\Debug VC 6.0\Sky.obj"
+".\Debug VC 6.0\SoundTrack.obj"
+".\Debug VC 6.0\TgaFormat.obj"
+".\Debug VC 6.0\Tree.obj"
+".\Debug VC 6.0\TreeInstance.obj"
+".\Debug VC 6.0\Region.obj"
+".\Debug VC 6.0\RotTransform.obj"
+".\Debug VC 6.0\Transform.obj"
+".\Debug VC 6.0\Vec.obj"
+".\Debug VC 6.0\Vec3.obj"
+".\Debug VC 6.0\SpeedWind.obj"
+".\Debug VC 6.0\SpeedWindParser.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP218.tmp"
+<h3>Output Window</h3>
+Compiling...
+BoundaryShapeManager.cpp
+CameraPathManager.cpp
+Console.cpp
+extgl.c
+GraphOverlay.cpp
+IdvFont.cpp
+IdvMeshImporter.cpp
+IdvPath.cpp
+IdvTerrainImporter.cpp
+IdvVertexBuffer.cpp
+LensFlare.cpp
+Main.cpp
+Navigation.cpp
+nv_dds.cpp
+RegisterCombiner.cpp
+Rocks.cpp
+Scene.cpp
+Sky.cpp
+SoundTrack.cpp
+TgaFormat.cpp
+Tree.cpp
+TreeInstance.cpp
+Region.cpp
+RotTransform.cpp
+Transform.cpp
+Vec.cpp
+Vec3.cpp
+SpeedWind.cpp
+Add up vector stuff here
+
+SpeedWindParser.cpp
+Linking...
+LINK : warning LNK4075: ignoring /EDITANDCONTINUE due to /INCREMENTAL:NO specification
+
+
+
+<h3>Results</h3>
+The Valley.exe - 0 error(s), 1 warning(s)
+<h3>
+--------------------Configuration: The Valley Launcher - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release VC 6.0/HiRes Launcher.res" /d "NDEBUG" /d "_AFXDLL" "C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley Launcher\HiRes Launcher.rc"" 
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP21A.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release VC 6.0/HiRes Launcher.pch" /Yu"stdafx.h" /Fo"Release VC 6.0/" /Fd"Release VC 6.0/" /FD /c 
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley Launcher\HiRes Launcher.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley Launcher\HiRes LauncherDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP21A.tmp" 
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP21B.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release VC 6.0/HiRes Launcher.pch" /Yc"stdafx.h" /Fo"Release VC 6.0/" /Fd"Release VC 6.0/" /FD /c 
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley Launcher\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP21B.tmp" 
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP21C.tmp" with contents
+[
+opengl32.lib /nologo /subsystem:windows /incremental:no /pdb:"Release VC 6.0/The Valley Launcher.pdb" /machine:I386 /out:"../../bin/VC 6.0/Release/The Valley Launcher.exe" 
+".\Release VC 6.0\HiRes Launcher.obj"
+".\Release VC 6.0\HiRes LauncherDlg.obj"
+".\Release VC 6.0\StdAfx.obj"
+".\Release VC 6.0\HiRes Launcher.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP21C.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+HiRes Launcher.cpp
+HiRes LauncherDlg.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+The Valley Launcher.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: The Valley Launcher - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug VC 6.0/HiRes Launcher.res" /d "_DEBUG" /d "_AFXDLL" "C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley Launcher\HiRes Launcher.rc"" 
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP21E.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug VC 6.0/HiRes Launcher.pch" /Yu"stdafx.h" /Fo"Debug VC 6.0/" /Fd"Debug VC 6.0/" /FD /GZ /c 
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley Launcher\HiRes Launcher.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley Launcher\HiRes LauncherDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP21E.tmp" 
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP21F.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug VC 6.0/HiRes Launcher.pch" /Yc"stdafx.h" /Fo"Debug VC 6.0/" /Fd"Debug VC 6.0/" /FD /GZ /c 
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\The Valley Launcher\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP21F.tmp" 
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP220.tmp" with contents
+[
+opengl32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug VC 6.0/The Valley Launcher.pdb" /debug /machine:I386 /out:"../../bin/VC 6.0/Debug/The Valley Launcher.exe" /pdbtype:sept 
+".\Debug VC 6.0\HiRes Launcher.obj"
+".\Debug VC 6.0\HiRes LauncherDlg.obj"
+".\Debug VC 6.0\StdAfx.obj"
+".\Debug VC 6.0\HiRes Launcher.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP220.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+HiRes Launcher.cpp
+HiRes LauncherDlg.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+The Valley Launcher.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

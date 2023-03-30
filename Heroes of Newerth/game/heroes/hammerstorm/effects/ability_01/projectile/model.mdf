@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="model.max" file="model.model" type="K2">
+	<spawnevent cmd="StartEffect effects/ability_01_projectile.effect" /> 
+	<anim name="idle" clip="clips/default_1.clip" fps="30" loop="true"/>
+</model>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Pestilence_Ability1"
+
+	
+	
+	icon="icon.tga"
+	passiveeffect="effects/sprint.effect"
+	
+	movespeedmultiplier="0.1,0.2,0.3,0.4"
+	incomingdamagemultiplier="0.1"
+	modifierkey="sprint"
+	effecttype="StatusBuff"
+>
+</state>

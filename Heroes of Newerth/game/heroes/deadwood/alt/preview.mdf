@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="default.max" file="high.model" type="K2" >
+
+	<anim name="idle" clip="clips/default_1.clip" loop="true" blendtime="500">
+		<startevent cmd="StopEffect 0"/>
+		<startevent cmd="StopEffect 1"/>
+	</anim>
+
+</model>

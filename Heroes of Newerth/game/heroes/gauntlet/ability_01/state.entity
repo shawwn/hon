@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Gauntlet_Ability1"
+
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+	
+	modifierkey="gauntlet_charged"
+	
+	movespeed="10,20,30,40"
+
+	effecttype="StatusBuff"
+>		
+	<onframe />
+	
+	<onattackimpact>
+		<cantarget targetscheme="enemy_units">
+			<setproxy entity="this_entity" target="target_entity" />
+			<playeffect effect="effects/impact.effect" source="target_position" target="target_position" occlude="true" />
+			<damage effecttype="Magic" amount="120,180,260,320"/>
+			<areaofeffect
+				radius="250"
+				targetselection="all"
+				targetscheme="organic_enemy_units"
+				effecttype="Magic"
+				center="this_proxy_entity"
+				ignore="this_proxy_entity"
+			>
+				<damage effecttype="Magic Splash" amount="120,180,260,320"/>
+				<distance source="this_proxy_entity" target="target_entity" />
+				<evaluate a="275" b="result" op="sub" />
+				<evaluate a="result" b="11" op="mult" />
+				<push force="result" duration="50" source="this_proxy_entity" />
+			</areaofeffect>
+			<expire />
+		</cantarget>
+	</onattackimpact>
+	
+	<modifier key="Alt" modpriority="1"
+		altavatar="true"
+		
+		passiveeffect="../alt/ability_01/effects/state.effect"
+	/>
+</state>

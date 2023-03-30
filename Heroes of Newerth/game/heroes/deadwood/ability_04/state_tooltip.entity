@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Deadwood_Ability4_Tooltip"
+
+	icon="icon.tga"
+	passiveeffect=""
+>
+	<onframe />
+</state>

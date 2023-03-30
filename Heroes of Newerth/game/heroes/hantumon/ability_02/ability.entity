@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Hantumon2"
+
+	
+	
+	icon="icon.tga"
+	
+	anim="ability_2_start"
+	casttime="1000"
+	castactiontime="300"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_entity"
+	targetscheme="all_other_units"
+	casteffecttype="Physical"
+	
+	manacost="50"
+	cooldowntime="20000,15000,10000,5000"
+	
+	range="700"
+>
+	<onimpact >
+		<teleport interpolate="false" facetarget="true" specifyangle="true" angle="180"/>
+		<cantarget targetscheme="ally_units">
+			<playeffect effect="effects/warpin.effect" source="source_entity" target="target_entity" />
+		</cantarget>
+		<cantarget targetscheme="enemy_units">
+			<bonusdamageadd a="30,60,90,120" target="source_entity"/>
+			<condition test="target_angle ge 105">
+				<hasmodifier name="hantumon_backstab_1">
+					<bonusdamageadd target="source_entity" a="0.25" b="source_agility" op="mult"/>
+				</hasmodifier>
+				<hasmodifier name="hantumon_backstab_2">
+					<bonusdamageadd target="source_entity" a="0.50" b="source_agility" op="mult"/>
+				</hasmodifier>
+				<hasmodifier name="hantumon_backstab_3">
+					<bonusdamageadd target="source_entity" a="0.75" b="source_agility" op="mult"/>
+				</hasmodifier>
+				<hasmodifier name="hantumon_backstab_4">
+					<bonusdamageadd target="source_entity" a="1" b="source_agility" op="mult"/>
+				</hasmodifier>
+			</condition>
+			<attack />
+			<playanim name="ability_2_attack" variations="1" length="400" target="source_entity" />
+			<playeffect effect="effects/ability_02.effect" source="target_entity" target="" />
+			<order command="attack" />
+		</cantarget>
+	</onimpact>
+</ability>

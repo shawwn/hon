@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="impact" useentityeffectscale="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" useentityeffectscale="true" scale="1">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2500"
+				volume=".2"
+				sample="/shared/sounds/impacts/flesh_%.wav"
+			/>
+
+			
+		<template name="pulse">
+					<billboard
+						delay="{delay}"
+						life="600"
+						startcolor=".4 .2 .8"
+						endcolor="0 0 0"
+						
+						startalpha="1.0"
+						midalpha="1.0"
+						endalpha="0.0"
+						midalphapos="0.75"
+						startparam="0.05"
+						endparam="0.0"				
+						
+						startsize="40"
+						
+						endsize="180"
+						midsizepos=".4"				
+						
+						depthbias="-50"
+						position="0 0 60"
+						material="/shared/effects/materials/corona_06.material"
+						lockup="true"
+						pitch="90"
+					/>
+					
+					
+		</template>		
+		<instance name="pulse" delay="0"/>
+		<instance name="pulse" delay="80"/>
+		<instance name="pulse" delay="160"/>			
+			
+			
+			
+			
+			
+			<simpleemitter	
+				bone="_bone_centerofchest"
+				count="1"
+				particlelife="2000"
+				spawnrate="10000"
+				gravity="-0"
+				speed="0.0"
+				acceleration="0.0"		
+				position="0 0 40"			
+				
+				
+			>
+				<particle>				
+					<simpleemitter			
+						count="6"
+						spawnrate="1055"
+						particlelife="800"
+						gravity="0"
+						minspeed="133.0"
+						maxspeed="230"
+						acceleration="0.0"
+						timenudge="0"
+						position="0 0 40"
+						offsetsphere="50 50 20"
+						
+						material="/shared/effects/materials/bat.material"
+						
+					>
+						<particle
+							color="1 1 1"
+							midcolorpos="0.5"
+							startalpha="1"
+							midalpha="1"
+							endalpha="0"
+							minframe="0"
+							maxframe="1"
+							framespeed="2"		
+							minscale="25"
+							maxscale="40"								
+							turn="true"
+						/>
+					</simpleemitter>			
+				</particle>
+			</simpleemitter>			
+		
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->

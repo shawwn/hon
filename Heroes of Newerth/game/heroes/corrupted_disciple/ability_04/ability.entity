@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_CorruptedDisciple4"
+
+	icon="icon.tga"
+	statuseffecttooltip="State_CorruptedDisciple_Ability4_Enemy"
+	
+	anim="ability_4"
+	casttime="1000"
+	castactiontime="0"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="self_position"
+	targetscheme="nonboss_visible_enemy_units"
+	casteffecttype="Physical"
+
+	frontqueue="true"
+	inheritmovement="true"
+	novoiceresponse="true"
+	
+	manacost="100"
+	cooldowntime="80000,70000,60000"
+>
+	<onimpact>
+		<applystate name="State_CorruptedDisciple_Ability4_Self" target="source_entity" duration="20000,25000,30000" />
+	</onimpact>
+</ability>

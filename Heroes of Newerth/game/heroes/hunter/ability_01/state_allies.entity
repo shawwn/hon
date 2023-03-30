@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Hunter_Ability1_Allies"
+
+	icon="icon.tga"
+	
+	passiveeffect="effects/state.effect"
+	
+	effecttype="StatusBuff"
+	
+	deniable="true"
+	silenced="true"
+	basedamagemultiplier="0.2,0.4,0.6,0.8"
+>
+	<onframe >
+		<damage amount="20,15,10,5" b="frametime" op="mult" effecttype="Magic DOT"/>
+	</onframe>
+</state>

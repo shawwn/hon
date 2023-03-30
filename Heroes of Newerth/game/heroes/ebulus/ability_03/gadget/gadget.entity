@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Ebulus_Ability3"
+	
+	icon="../icon.tga"
+	portrait="../icon.tga"
+	model="ward.mdf"
+	skin=""
+	
+	passiveeffect=""
+	spawneffect=""
+	respawneffect=""
+	selectsound=""
+	orderconfirmedsound=""
+	
+	preglobalscale="1.575"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="64"
+	boundsradius="16"
+	selectionradius="20"
+	targetoffset="0 0 64"
+
+	movespeed="0"
+	turnrate="320"
+	ismobile="false"
+	canrotate="true"
+	unitwalking="false"
+	
+	maxhealth="60,110,160,210"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0"
+
+	armor="0"
+	magicarmor="0"
+	immunity="GadgetImmunity"
+
+	canattack="true"
+	hoveronmap="false"
+	
+	attackduration="800"
+	attackactiontime="250"
+	attackcooldown="1500"
+	attackdamagemin="9,17,26,34"
+	attackdamagemax="11,21,32,42"
+	attacknumanims="1"
+	attackoffset="0 25 110"
+	attackprojectile="Projectile_EbulusWardAttack"
+	attackrange="600"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect=""
+	attacktype="ranged"
+	combattype="Ranged"
+	
+	aggrorange="600"
+	sightrangeday="300"
+	sightrangenight="300"
+
+	experiencebounty="6"
+	goldbountymin="10"
+	goldbountymax="15"
+	
+	lifetime="40000"
+	
+	unittype="PseudoPet"
+	
+	corpsetime="2000"
+>
+	<onattackimpact>
+		<cantarget targetscheme="enemy_units">
+			<applystate name="State_Ebulus_Ward_Attack" duration="5000" />
+		</cantarget>
+	</onattackimpact>
+</gadget>

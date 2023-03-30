@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Empath_Ability4"
+		
+	icon=""
+	portrait=""
+	modelscale="1"
+	model="/shared/models/invis.mdf"
+	skin=""
+	
+	passiveeffect="effects/impact.effect"
+	spawneffect=""
+	respawneffect=""
+	isselectable="false"
+	invulnerable="true"
+	selectsound=""
+	orderconfirmedsound=""
+	unitwalking="true"
+	drawonmap="false"
+	
+	preglobalscale="0.9"
+	effectscale="1.0"
+	boundsheight="38"
+	boundsradius="42"
+	selectionradius="0"
+	targetoffset="0 0 0"
+
+	canrotate="false"
+	ismobile="false"
+	isflying="false"
+	clearvision="true"
+	
+	sightrangeday="200"
+	sightrangenight="200"
+
+	attacktype="none"
+	
+	lifetime="4000,6000,8000"
+	corpsetime="0"
+	deathtime="0"
+	corpsefadetime="1000"
+	
+	blocking="false"
+	
+>
+	<onspawn>
+		<killtrees radius="75" />
+	</onspawn>
+
+	<aura state="State_Empath_Ability4_Aura" radius="75" targetscheme="ally_heroes" ignoreinvulnerable="true" notooltip="true" />
+	
+	<modifier key="ult_boost" modpriority="100"
+		displayname="true"
+		passiveeffect="effects/impact.effect"
+	/>
+</gadget>

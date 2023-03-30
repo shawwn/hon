@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Scar_Ability2_Snare"
+
+	icon="icon.tga"
+	passiveeffect=""
+	
+	effecttype="StatusDebuff"
+
+	movespeedslow="0.3,0.37,0.44,0.50"
+>
+</state>

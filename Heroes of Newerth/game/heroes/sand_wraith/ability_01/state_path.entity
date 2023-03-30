@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_SandWraith_Ability1_Path"
+
+	icon="icon.tga"
+	passiveeffect="effects/state_self.effect"
+	movespeedmultiplier="0.05,0.09,0.14,0.18"
+	unitwalking="true"
+	treewalking="true"
+	cliffwalking="true"
+	buildingwalking="true"
+>
+</state>

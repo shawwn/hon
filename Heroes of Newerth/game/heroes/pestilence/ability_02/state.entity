@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Pestilence_Ability2"
+
+	
+	
+	icon="icon.tga"
+	passiveeffect="state.effect"
+	
+	movespeedslow="0.2"
+	
+	effecttype="StatusDebuff"
+>
+</state>

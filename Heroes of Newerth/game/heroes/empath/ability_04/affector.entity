@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<linearaffector
+	name="Affector_Empath_Ability4"
+
+	minlength="0"
+	maxlength="800"
+	subsegmentoffset="90"
+	subsegmentlength="84"
+>
+	<onimpact>
+		<spawnunit name="Gadget_Empath_Ability4" target="target_position" fixedposition="true"/>
+	</onimpact>
+</linearaffector>

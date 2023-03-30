@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Chronos_Ability4_Ally"
+
+	icon="icon.tga"
+	displaylevel="true"
+	passiveeffect=""
+	
+	attackspeedslow="0.8"
+	movespeedslow="0.8"
+	castspeed="-0.8"
+>
+</state>

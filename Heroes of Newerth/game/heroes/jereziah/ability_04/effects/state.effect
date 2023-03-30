@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="entity" scale="1">
+			
+			<billboard
+				bone="_bone_overhead"
+				startcolor=".9 .7 0"
+				midcolor=".8 .5 0"
+				endcolor=".9 .7 0"
+				position="0 0 50"
+				material="/shared/effects/materials/sol.material"
+				startsize="20"
+				endsize="80"
+				depthbias="-60"
+				life="500"
+			/>
+
+			<billboard
+				bone="_bone_overhead"
+				startcolor="0 0 0"
+				midcolor="1.8 1.2 0"
+				endcolor="0 0 0"
+				position="0 0 35"
+				material="/shared/effects/materials/corona_06.material"
+				startsize="15"
+				midsize="20"
+				endsize="15"
+				pitch="100"
+				depthbias="-160"
+				lockup="1"
+				lockright="1"
+				loop="true"
+				life="900"
+				expirelife="300"
+			/>
+
+			<billboard
+				bone="_bone_overhead"
+				startcolor="8 .5 0"
+				midcolor="1.8 0.4 0"
+				endcolor="8 .5 0"
+				position="0 0 35"
+				material="/shared/effects/materials/sol.material"
+				startsize="15"
+				midsize="70"
+				endsize="15"
+				pitch="100"
+				depthbias="-160"
+				lockup="1"
+				lockright="1"
+				loop="true"
+				life="900"
+				yawspeed="360"
+				expirelife="300"
+			/>
+	
+			<billboard
+				bone="_bone_centerofchest"
+				startcolor="0.8 0.2 0"
+				midcolor="0.8 0.2 0"
+				endcolor="0.8 0.2 0"
+				position="0 0 -10"
+				material="/shared/effects/materials/whitedot.material"
+				startsize="40"
+				midsize="120"
+				endsize="40"
+				directionalspace="world"
+				depthbias="-90"
+				lockup="0"
+				lockright="0"
+				loop="true"
+				life="900"
+				yawspeed="0"
+				expirelife="300"
+			/>
+			<billboard
+				
+				startcolor="0.4 0.2 0"
+				midcolor="0.4 0.2 0"
+				endcolor="0.4 0.2 0"
+				position="0 0 0"
+				material="/shared/effects/materials/whitedot.material"
+				startsize="120"
+				midsize="40"
+				endsize="120"
+				directionalspace="world"
+				depthbias="-60"
+				lockup="0"
+				lockright="0"
+				loop="true"
+				life="900"
+				yawspeed="0"
+				expirelife="300"
+			/>
+				
+		
+			<simpleemitter
+				spawnrate="5"
+				particlelife="950"
+				gravity="-150"
+				speed="150"
+				drag="1"
+				acceleration="0.00"		
+				expirelife="300"
+				material="/shared/effects/materials/corona_06.material"
+				offsetsphere="0 0 0"
+				direction="0 0 1"
+				position="0 0 35"
+				particlecolor="0.2 0.2 0.2"
+				
+			>
+				<particle 
+					angle="0"
+					startcolor=".5 .4 .0"
+					midcolor=".0 .0 .0"
+					endcolor="0 0 0"
+					midcolorpos=".4"
+					startframe="0"
+					endframe="1"
+					startsize="60"
+					midsize="120"
+					endsize="0"
+					
+					
+					stickiness="0"
+					depthbias="-90"
+
+				/>
+
+			</simpleemitter>
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	
+	</thread>
+
+</effect>

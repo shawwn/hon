@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Rocky_Ability2"
+
+	gravity="4500"
+	lifetime="1000"
+	useexactlifetime="true"
+>
+	<onimpact>
+		<spawnaffector name="Affector_Rocky_Ability2_Units" target="target_position" />
+		<spawnaffector name="Affector_Rocky_Ability2_Buildings" target="target_position" />
+		<playeffect effect="effects/impact.effect" source="target_position" target="" occlude="true" />
+	</onimpact>
+	
+	<onimpactinvalid>
+		<spawnaffector name="Affector_Rocky_Ability2_Units" target="target_position" />
+		<spawnaffector name="Affector_Rocky_Ability2_Buildings" target="target_position" />
+		<playeffect effect="effects/impact.effect" source="target_position" target="" occlude="true" />
+	</onimpactinvalid>
+</projectile>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Hellbringer_Ability3"
+
+	radius="250"
+	
+	lifetime="0"
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Magic"
+>
+	<onimpact>
+		<applystate name="State_Hellbringer_Ability3" duration="5500,7000,8500,10000"/>
+	</onimpact>
+</affector>

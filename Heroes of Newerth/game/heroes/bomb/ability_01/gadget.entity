@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Bombardier_Ability1"
+	
+	model="effects/model/dynamite.mdf"
+	passiveeffect="effects/passive.effect"
+
+	sightrangeday="500"
+	sightrangenight="500"
+	
+	selectionradius="40"
+	boundsheight="64"
+	boundsradius="16"
+
+	deathtime="0"
+	corpsetime="0"
+	
+	unitwalking="true"
+	invulnerable="false"
+	flying="false"
+	drawonmap="false"
+	
+	lifetime="10000"
+	
+	maxhealth="2"
+	healthregen="0"
+	maxmana="0"
+	manaregen="0"
+	
+	cancarryitems="false"
+	nothreat="true"
+	
+	armor="0"
+	magicarmor="0"
+	immunity="GadgetImmunity"
+	
+	canattack="false"
+	attacktype="ranged"
+	
+	aggrorange="0"
+>
+	<ondamaged>
+		<condition test="accumulator eq 1">
+			<changedamage b="1" op="min"/>
+			<setaccumulator entity="this_proxy_entity" value="1" />
+		</condition>
+		<else>
+			<changedamage b="1" op="min"/>
+			<setaccumulator value="1" />
+		</else>
+	</ondamaged>
+</gadget>

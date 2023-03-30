@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Arachna1"
+
+	statuseffecttooltip="State_Arachna_Ability1"
+	statuseffectheader="true"
+	icon="icon.tga"
+
+	casttime="1000"
+	castactiontime="200"
+	casteffect="effects/cast.effect"
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+	cooldowntime="2000,2000,0,0"
+	noninterrupting="true"
+	
+	activatescheme="canattack"
+	actiontype="attack"
+	targetscheme="enemy_units"
+	casteffecttype="Magic Attack"
+	projectile="Projectile_Ability_Arachna1"
+	manacost="12"
+>
+	<onimpact>
+		<applystate name="State_Arachna_Ability1" duration="3000" />
+	</onimpact>
+</ability>

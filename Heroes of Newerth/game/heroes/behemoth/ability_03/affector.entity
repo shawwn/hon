@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Behemoth_Ability3"
+
+	radius="280"
+	targetscheme="enemy_units"
+	targetselection="all"
+	effecttype="Magic"
+>
+	<onimpact>
+		<applystate name="State_Stunned" duration="300,700,1200,1500" />
+		<damage effecttype="Magic" amount="25,45,75,115" />
+	</onimpact>
+</affector>

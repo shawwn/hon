@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="elec_eye_death">
+	<definitions>
+		<particlesystem name="system0" space="entity">
+
+	
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="1800"
+				volume=".45"
+				sample="../sounds/death.wav"
+			/>
+
+      </particlesystem>
+	  
+		<modifier
+			color="1 1 1"
+			alpha="0"
+		/>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance1" particlesystem="system0" />
+		<spawnmodifier instance="instance0"/>
+		<waitfordeath  instance="instance0"/>
+		<waitfordeath  instance="instance1"/>
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+
+
+

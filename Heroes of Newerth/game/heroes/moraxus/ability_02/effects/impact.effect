@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" useentityeffectscale="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="2">
+
+			<sound
+				linearfalloff="true"
+				falloffstart="0"
+				falloffend="2200"
+				volume="0.75"
+				sample="../sounds/impact.wav"
+			/>
+		
+			<simpleemitter
+				bone="Box005"
+				count="1"
+				spawnrate="5000"
+				particlelife="750"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+			>
+				<particle
+					turn="1"
+				>
+					<model
+						bone="Box005"
+						model="regular_shield_shatter/model.mdf"
+						anim="idle"
+						scale="1.25"
+						life="2500"
+						startalpha="1"
+						endalpha="0"
+						position="0 0 0"
+						color="1 1 1"
+						directionalspace="local"
+						yaw="-90"
+					>
+					
+							<template name="redTrails">
+								<simpleemitter
+									life="250"
+									bone="{bone}"
+									position="0 10 0"
+									spawnrate="50"
+									particlelife="750"
+									gravity="0"
+									offsetsphere="0 0 0"
+									drag="0"
+									acceleration="0"
+									direction="0 0 0"
+									material="/shared/effects/materials/light_rays.material"
+								>
+									<particle 
+										startcolor="0 .25 .5"
+										midcolor="0 .025 .25"
+										endcolor="0 0 0"
+										midcolorpos="0.5"
+										minangle="0"
+										maxangle="360"
+										startsize="15"
+										midsize="15"
+										endsize="5"
+										midsizepos=".8"
+										startalpha="0"
+										midalpha="0"
+										endalpha="0"
+										startanchor=".25"
+										endanchor="0"
+									/>
+								</simpleemitter>
+							</template>
+							
+						<instance name="redTrails" bone="Box001"/>
+						<instance name="redTrails" bone="Box002"/>
+						<instance name="redTrails" bone="Box003"/>
+						<instance name="redTrails" bone="Box004"/>
+						<instance name="redTrails" bone="Box005"/>
+						<instance name="redTrails" bone="Box006"/>
+						<instance name="redTrails" bone="Box007"/>
+						<instance name="redTrails" bone="Box008"/>
+						<instance name="redTrails" bone="Box010"/>
+						<instance name="redTrails" bone="Box011"/>
+						<instance name="redTrails" bone="Box012"/>
+						<instance name="redTrails" bone="Box013"/>
+						
+					</model>
+				</particle>
+			</simpleemitter>
+
+			<simpleemitter
+				count="5"
+				life="500"
+				bone="Box005"
+				spawnrate="30"
+				particlelife="500"
+				gravity="0"
+				speed="0"
+				material="/shared/effects/materials/dust_smoke_02.material"
+				offsetsphere="15 15 15"
+				position="0 0 0"
+				inheritvelocity=".025"
+			>
+				<particle
+					startcolor="0 .25 1"
+					midcolor="0 .25 1"
+					endcolor="0 .25 1"
+					midcolorpos=".75"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".75"
+					minangle="-360"
+					maxangle="360"
+					startsize="80"
+					endsize="20"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+			count="5"
+				life="500"
+				bone="Box005"
+				spawnrate="15"
+				particlelife="500"
+				gravity="0"
+				speed="22.20"
+				material="/shared/effects/materials/femme_lightning_01.material"
+				offsetsphere="3"
+				position="0 0 0"
+				inheritvelocity=".025"
+			>
+				<particle
+					startcolor=".25 .25 .5"
+					midcolor="0 .25 1"
+					endcolor="0 0 0"
+					midcolorpos=".5"
+					startalpha="0"
+					midalpha="0"
+					endalpha="0"
+					midalphapos=".9"
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="0"
+					maxanglespeed="30"
+					startsize="95"
+					endsize="20"
+				/>
+			</simpleemitter>
+
+			<billboard
+				bone="Box005"
+				life="250"
+				color=".1 .2 .5"
+				startsize="25"
+				endsize="150"
+				depthbias="-50"
+				position="0 0 0"
+				material="/shared/effects/materials/whitedot.material"
+				lockup="0"
+				pitch="0"
+			/>
+
+			<billboard
+				bone="Box005"
+				life="350"
+				color="1 1 1"
+				midalphapos=".25"
+				param=".1"
+				startsize="50"
+				endsize="400"
+				startalpha="0"
+				midalpha="1"
+				endalpha="0"
+				depthbias="-49"
+				position="0 0 0"
+				material="/shared/effects/materials/refract_ring.material"
+				lockup="0"
+				pitch="0"
+			/>
+
+			<simpleemitter
+				spawnrate="1000"
+				particlelife="500"
+				bone="Box005"
+				count="15"
+				gravity="0"
+				minspeed="50"
+				maxspeed="200"
+				drag=".05"
+				material="/shared/effects/materials/smash_add.material"
+				minangle="0"
+				maxangle="360"
+				direction="0 0 1"
+			>
+				<particle 
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="0"
+					startcolor="0 0 0"
+					midcolor=".1 .4 .6"
+					endcolor="0 0 0"
+					midcolorpos=".5"
+					startsize="75"
+					endsize="10"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				spawnrate="30"
+				particlelife="500"
+				bone="Box005"
+				life="150"
+				material="/shared/effects/materials/starlight.material"
+				direction="0 0 1"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="0 0 0"
+					midcolor=".5"
+					endcolor="0 0 0"
+					midcolorpos=".7"
+					minstartwidth="150"
+					maxstartwidth="350"
+					endwidth="0"
+					height="10"
+					scale="0.65"
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

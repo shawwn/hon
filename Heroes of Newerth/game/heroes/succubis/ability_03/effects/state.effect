@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1" useentityeffectscale="1">
+	<definitions>
+	
+		<particlesystem name="system0" space="entity" scale="1.85">
+
+			<sound
+				soundloop="true"
+				fadein="500"
+				fadeout="500"
+				volume=".5"
+				sample="../sounds/state.wav"
+				linearfalloff="true"
+				falloffstart="0"
+				falloffend="2000"
+			/>
+		
+			<simpleemitter
+				count="1"
+				bone="_bone_overhead"
+				spawnrate="2000"
+				position="0 0 0"
+				offsetsphere="0 0 0"
+				expirelife="500"
+				startparticlealpha="1"
+				endparticlealpha="0"
+			>
+				<particle>
+					<model
+						bone="_bone_overhead"
+						model="model.mdf"
+						anim="idle_1"
+						startcolor="1 1 1"
+						expirelife="500"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".5"
+						scale=".8"
+						yawspeed="-10"
+					>
+						<billboard
+							expirelife="500"
+							bone="Bip01 Spine2"
+							material="/shared/effects/materials/whitedot.material"
+							startcolor=".25 0 0"
+							endcolor="0 0 0"
+							size="50"
+							depthbias="-25"
+						/>
+					</model>
+
+					<model
+						bone="_bone_overhead"
+						model="model.mdf"
+						anim="idle_2"
+						startcolor="1 1 1"
+						expirelife="500"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".5"
+						scale=".8"
+						yawspeed="-10"
+					>
+						<billboard
+							expirelife="500"
+							bone="Bip01 Spine2"
+							material="/shared/effects/materials/whitedot.material"
+							startcolor=".25 0 0"
+							endcolor="0 0 0"
+							size="50"
+							depthbias="-25"
+						/>
+					</model>
+
+					<model
+						bone="_bone_overhead"
+						model="model.mdf"
+						anim="idle_3"
+						startcolor="1 1 1"
+						expirelife="500"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".5"
+						scale=".8"
+						yawspeed="-10"
+					>
+						<billboard
+							expirelife="500"
+							bone="Bip01 Spine2"
+							material="/shared/effects/materials/whitedot.material"
+							startcolor=".25 0 0"
+							endcolor="0 0 0"
+							size="50"
+							depthbias="-25"
+						/>
+					</model>
+				</particle>
+			</simpleemitter>
+
+			<simpleemitter
+				spawnrate="3"
+				particlelife="750"
+				bone="_bone_overhead"
+				gravity="0"
+				speed="2"
+				drag="0"
+				acceleration="2"
+				position="0 0 0"
+				material="/shared/effects/materials/wisp_02.material"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					minanglespeed="85"
+					maxanglespeed="85"
+					startcolor="0 0 0"
+					midcolor=".95 .1 .5"
+					endcolor="0 0 0"
+					midcolorpos=".7"
+					startsize="75"
+					midsize="50"
+					endsize="10"
+					midsizepos=".5"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				spawnrate="3"
+				bone="_bone_overhead"
+				minparticlelife="1000"
+				maxparticlelife="1250"
+				gravity="-1"
+				minspeed="25"
+				maxspeed="32"
+				drag="0"
+				acceleration="5"
+				position="0 0 0"
+				material="/shared/effects/materials/sleep_01.material"
+				minangle="-20"
+				maxangle="20"
+				direction="0 0 1"
+				offsetsphere="10 10 0"
+			>
+				<particle 
+					minangle="10"
+					maxangle="10"
+					minanglespeed="0"
+					maxanglespeed="0"
+					startcolor="0 0 0"
+					midcolor="1 .2 .2"
+					endcolor="0 0 0"
+					midcolorpos=".35"
+					startsize="5"
+					midsize="30"
+					endsize="60"
+					midsizepos=".5"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".5"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_overhead"
+				position="0 0 0" 
+				spawnrate="15"
+				particlelife="850"
+				gravity="-25"
+				offsetsphere="5 5 0"
+				minspeed="5"
+				maxspeed="15"
+				drag="0"
+				acceleration="0.0"
+				direction="0 0 1"
+				material="/shared/effects/materials/phantom_smoke_03.material"
+				inheritvelocity="0.25"
+			>
+				<particle 
+					startcolor="0 0 0"
+					midcolor=".4 0 0"
+					endcolor="0 0 0"
+					midcolorpos="0.4"
+					minangle="0"
+					maxangle="360"
+					startsize="55"
+					midsize="40"
+					endsize="15"
+					startalpha=".2 .2 .2"
+					midsizepos=".8"
+					minanglespeed="-90"
+					maxanglespeed="90"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				bone="_bone_overhead"
+				spawnrate="5"
+				particlelife="200"
+				gravity="0"
+				speed="0"
+				acceleration="0"
+				timenudge="0"
+				position="0 0 0"
+				material="/shared/effects/materials/blink.material"
+			>
+				<particle
+					minangle="0"
+					maxangle="90"
+					anglespeed="90"
+					startcolor="1 0 0"
+					midcolor="1 .75 .75"
+					endcolor="0 0 0"
+					midcolorpos=".1"
+					startsize="10"
+					midsize="15"
+					endsize="0"
+				/>
+			</simpleemitter>
+			
+		</particlesystem>
+		
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+</effect>

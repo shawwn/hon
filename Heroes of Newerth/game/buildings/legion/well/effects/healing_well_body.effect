@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="water_splash_01">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="1">
+		
+	
+		
+		<template name="fountain">			
+
+			<billboard
+				bone="{bone}"
+				color="0 .05 .061"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="1.0"
+				midalphapos="0.75"
+				startparam=".05"
+				endparam="0.00"
+				
+				size="368"
+				depthbias="0"
+				position="0 0 0"
+				material="/shared/effects/materials/whitedot.material"
+				lockup="true"
+				pitch="90"
+			/>
+			
+			<billboard
+				bone="{mesh}"
+				color="0 .24 .2"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="0.0"
+				midalphapos="0.75"
+				startparam=".05"
+				endparam="0.00"
+				
+				size="168"
+				depthbias="-110"
+				position="0 0 0"
+				material="/shared/effects/materials/whitedot.material"
+				
+			/>			
+			
+			<simpleemitter		
+				bone="{bone}"
+				spawnrate="12"
+				particlelife="2500"			
+				speed="10"
+				drag="0"
+				offsetsphere=" 10 10 0"
+				acceleration="0"
+				material="/shared/effects/materials/water_ring_blend.material"
+			>
+
+				<particle
+					color="1.0 1.0 1.0"
+					startalpha="0"
+					midalpha=".16"
+					endalpha="0.0"
+					midalphapos="0.75"
+
+					startsize="8"
+					endsize="188"
+					depthbias="0"
+					position="0 0 2"
+					lockup="true"
+					pitch="90"
+				/>
+			</simpleemitter>	
+
+			
+			<simpleemitter		
+				bone="{bone}"
+				spawnrate="15"
+				particlelife="2500"			
+				speed="10"
+				drag="0"
+				offsetsphere="40 40 0"
+				acceleration="0"
+				material="/shared/effects/materials/refract_waterring.material"
+			>
+
+				<particle
+					color="1.0 1.0 1.0"
+					startalpha="1.0"
+					midalpha="1.0"
+					endalpha="0.0"
+					midalphapos="0.75"
+					startparam=".05"
+					endparam="0.00"
+					startsize="8"
+					endsize="168"
+					depthbias="0"
+					position="0 0 4"
+					lockup="true"
+					pitch="90"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter		
+				bone="{bone}"
+				spawnrate="21"
+				particlelife="2500"			
+				speed="10"
+				drag="0"
+				offsetsphere=" 10 10 0"
+				acceleration="0"
+				material="/shared/effects/materials/refract_ripples.material"
+			>
+
+				<particle
+					color="1.0 1.0 1.0"
+					startalpha="1.0"
+					midalpha="1.0"
+					endalpha="0.0"
+					midalphapos="0.75"
+					startparam=".05"
+					endparam="0.00"
+					startsize="8"
+					endsize="188"
+					depthbias="0"
+					position="0 0 4"
+					lockup="true"
+					pitch="90"
+				/>
+			</simpleemitter>			
+
+			<simpleemitter		
+				bone="{bone}"
+				spawnrate="1"
+				particlelife="2500"			
+				speed="10"
+				drag="0"
+				offsetsphere="40 40 0"
+				acceleration="0"
+				material="/shared/effects/materials/refract_waterring.material"
+			>
+
+				<particle
+					color="1.0 1.0 1.0"
+					startalpha="1.0"
+					midalpha="1.0"
+					endalpha="0.0"
+					midalphapos="0.75"
+					startparam=".05"
+					endparam="0.00"
+					startsize="11"
+					endsize="0"
+					depthbias="0"
+					position="0 0 4"
+					lockup="true"
+					pitch="90"
+				/>
+			</simpleemitter>	
+			
+			
+
+
+
+
+			
+
+				
+
+
+			<meshemitter		
+				mesh="{mesh}"
+				spawnrate="110"		
+				gravity="18"
+				speed="200"
+				drag="0"
+				minangle="0"
+				maxangle="10"
+				position="0 0 0"
+				particlelife="1200"
+				material="/shared/effects/materials/refract_stream.material"			
+			>
+				<particle 
+				param=".2"			
+				startsize="5"
+					endsize="33"				
+					color="1 1 1"
+					turn="1"
+					startheightdistort=".5"
+					endheightdesitort="0"
+					
+				/>
+			</meshemitter>
+			
+
+			<meshemitter		
+				mesh="{mesh}"
+				spawnrate="50"		
+				gravity="18"
+				speed="400"
+				drag="0"
+				minangle="0"
+				maxangle="30"
+				position="0 0 0"
+				particlelife="400"
+				material="/shared/effects/materials/refract_stream.material"			
+			>
+				<particle 
+				param=".2"			
+				startsize="11"
+					endsize="11"				
+					color="1 1 1"
+					turn="1"
+					startheightdistort=".5"
+					endheightdesitort=".5"
+					
+				/>
+			</meshemitter>
+
+			
+			
+	
+
+
+			<meshemitter		
+				mesh="{mesh}"
+				spawnrate="32"		
+				gravity="18"
+				speed="200"
+				drag="0"
+				minangle="0"
+				maxangle="10"
+				position="0 0 10"
+				particlelife="600"
+				material="/shared/effects/materials/water_spray_blend.material"			
+			>
+				<particle 
+				param=".2"			
+				startsize="24"
+					endsize="112"				
+					color="1 1 1"
+					startalpha="1"
+					endalpha="0"
+					turn="1"
+					startheightdistort="0"
+					endheightdesitort="0"					
+				/>
+			</meshemitter>
+			
+			
+
+			
+		
+		
+		</template>
+	
+
+
+
+		<instance name="fountain" bone="_bone_splash01" mesh="_invis_lion01"/>
+		<instance name="fountain" bone="_bone_splash02" mesh="_invis_lion02"/>
+		<instance name="fountain" bone="_bone_splash03" mesh="_invis_lion03"/>		
+		
+		
+		
+		
+		
+		
+		<!--<model
+				position="0 0 10"
+				name="circleOfBones"
+				model="/world/props/halloween_props/ghost_rig/circlingghostrig.mdf"
+				anim="idle"
+				scale="1"
+				color="1"
+				pitch="0"
+				
+			>
+			<twopointtrailemitter
+				timenudge="1400"
+				name="trail01"
+				bone_a="_bone_fx1"
+				bone_b="_bone_fx2"
+				spawnrate="120"
+				particlelife="450"
+				gravity="5"
+				subframepose="1"
+				drag="0.01"
+				speed="100"
+				direction="0 -1 0"
+				minangle="0"
+				maxangle="0"
+				texpostime="250"
+				texposscale="0"
+				texstretchscale="1"
+				material="/shared/effects/materials/ghost.material"
+				inheritvelocity="0.25"
+			>
+				<particle
+					startcolor=".5 .5 .5" 
+					midcolor=".4 .4 .4"
+					endcolor=".1 .1 .1"
+					startanchor="1"
+					endanchor=".1"
+					alpha=".8"
+				/>
+			</twopointtrailemitter>
+</model>-->
+        
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_ForsakenArcher2"
+	icon="icon.tga"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+	
+	anim=""
+	casttime="0"
+	castactiontime="0"
+	frontqueue="true"
+	inheritmovement="true"
+	noninterrupting="true"
+	noresponse="true"
+
+	actiontype="toggle"
+	casteffecttype=""
+	
+	manacost="0"
+	toggleoffmanacost="0"
+	cooldowntime="0"
+	
+	targetscheme=""
+>
+	<onattack />
+	<modifier key="ForsakenArcher_Ability2_Active" condition="toggle_active" modpriority="100"
+	>
+		<onattack>
+			<split count="3" range="600" damagemult="0.35,0.45,0.55,0.65" targetscheme="visible_enemy_units" />
+			<playeffect effect="effects/trail.effect" source="source_entity" />
+		</onattack>
+	</modifier>
+</ability>

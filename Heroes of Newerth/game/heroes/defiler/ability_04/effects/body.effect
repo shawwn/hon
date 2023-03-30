@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect  deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+			
+			<model
+				name="bird"
+				model="bird.mdf"
+				scale=".3"
+				anim="idle"
+				yaw="0"
+				position="0.0 0.0 200.0"
+				directionalspace="local"
+				alpha=".45"
+				color=".5 0 .25"
+				expirelife="200"
+			>
+
+			<twopointtrailemitter		
+				
+				bone_a="_bone_fx05"
+				bone_b="_bone_fx3"
+				spawnrate="70"
+				particlelife="400"
+				position="0 20 0"
+				texpostime="400"
+				texposscale="0"
+				texstretchscale="1"				
+				material="/shared/effects/materials/soul_projectile.material"
+				expirelife="500"
+			>
+				<particle 				
+					startcolor=".85 0 .5"
+					endcolor="-1 -1 -1"
+					startalpha=".6"
+					endalpha="0"
+				/>
+			</twopointtrailemitter>	
+				
+			<twopointtrailemitter		
+				
+				bone_a="_bone_fx4"
+				bone_b="_bone_fx2"
+				spawnrate="70"
+				particlelife="400"
+				position="0 20 0"
+				texpostime="400"
+				texposscale="0"
+				texstretchscale="1"				
+				material="/shared/effects/materials/soul_projectile.material"
+				expirelife="500"
+			>
+				<particle 				
+					startcolor=".85 0 .5"
+					endcolor="-1 -1 -1"
+					startalpha=".6"
+					endalpha="0"
+				/>
+			</twopointtrailemitter>	
+			
+			<simpleemitter
+				bone="Box03"
+				spawnrate="25"
+				particlelife="900"
+				offsetsphere="15"
+				angle="10"
+				material="/shared/effects/materials/phantom_smoke_03.material"
+				expirelife="500"
+			>
+				<particle
+					startcolor="0"
+					midcolor="1 0 .8"
+					midcolorpos="0.3"
+					endcolor="0"
+					startsize="30"
+					endsize="45"
+					maxangle="360"
+					depthbias="-80"
+					minendscale="1"
+					maxendscale="3"
+			 	/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="Box03"
+				spawnrate="20"
+				particlelife="700"
+				offsetsphere="25"
+				material="/shared/effects/materials/smoke_particle.material"
+				expirelife="500"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					startalpha="0"
+					midalpha=".5"
+					midalphapos="0.3"
+					endalpha="0"
+					color=".2"
+					startsize="20"
+					endsize="40"
+					depthbias="-80"
+					minendscale="1"
+					maxendscale="3"
+			 	/>
+			</simpleemitter>		
+			</model>
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

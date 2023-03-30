@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Predator_Ability1_StrikeAnim"
+
+	speed="1500"
+	gravity="2500"
+	
+	modelscale="1.0"
+	model=""
+	
+	
+	canturn="false"
+	flying="false"
+	flyheight="0"
+	impactdistance="220"
+>
+	<ondeath>
+		<spawnaffector name="Affector_Predator_Ability1" target="proxy_entity" />
+		<playanim name="ability_1_hit" target="this_owner_entity" />
+	</ondeath>
+
+</projectile>

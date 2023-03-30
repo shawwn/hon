@@ -1,0 +1,52 @@
+Setup:
+------
+
+Ok, So a generic melee agility hero is attacking, he has the following stats. 
+
+Initial Damage: 20-25
+Initial Agility: 15
+
+Base Damage: 35-40 (For this case, lets assume the dice gives 40)
+
+
+
+The hero has the following items. Battle Fury, Buriza, Basher, Mask of Death. 
+
+He also has a passive ability that deals 100% of your agility as bonus pure damage.
+
+
+The Attacker has attack type HERO, the defender has attack type FORTIFIED. (for this example, HEROvsFORTIFIED=75%)
+
+
+The defender has the following items. Butterfly, Vanguard, 10 armor, 5 magical armor. 
+
+The attacker cast a spell like chen's ability penitentce, amplifies damage the target receives by 20%.
+
+
+
+Walkthrough:
+------------
+
+The attack now consiststs of:
+
+Primary Damage -- Base Damage: 
+								-40 (dice gave 40 from 35-40 range)	(ATTACK/HERO_CLASS/PHYSICAL_TYPE/DIRECT)
+								
+								
+Primary Damage -- Bonus Damage: 
+								-100 (bonus damage from the items he has) (ATTACK/HERO_CLASS/PHYSICAL_TYPE/DIRECT)
+								
+Secondary Damage -- Bonus Damage:
+								-25 (bonus trigger from basher) (ATTACK/HERO_CLASS/MAGICAL_TYPE/DIRECT)
+								-15 (bonus from passive above) (ATTACK/HERO_CLASS/PURE_TYPE/DIRECT)
+								
+
+
+Now with the critical strike, after the primary damages are decided, critical strike is now applied to the primary totals, to give you the new final primary damage. This is the ammount used for lifesteal and cleave.
+
+
+
+If you have cleave, the following step is done for all the units factored in, if its 35% cleave, then the percetnage is taken off now and the subtype DIRECT is replaced with the subtype SPLASH. Now we assume the attack hasn't been evaded. Next step, the first thing that happens is the primary attack classification. So everything is now reduced by 75%. everything. Now the next thing is vanguard reduction, this will reduce 30 physical attack damage. After that, the physical portions are reduced by physical armor, the magical portions by magical armor. Now at this point, the damage that comes from the final primary damage is processed for you as lifesteal.
+
+So now the only remaining part is any final stage amplifications. This is done after all the stuff described above. The appropriate HP is lost all at the same time from the target. This happens in the same frame as the life stealing and the triggered effects, like the ministun. The stun portion is just treated as another ability that affects the target. 
+

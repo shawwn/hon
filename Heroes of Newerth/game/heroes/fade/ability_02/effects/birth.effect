@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="ability_02">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1.5">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2500"
+				volume=".65"
+				sample="../sounds/impact.wav"
+			/>
+
+			<simpleemitter 
+				bone="_bone_centerofchest"
+				count="20"
+         		spawnrate="222"				
+				minparticlelife="600"
+          		maxparticlelife="2200"
+          		gravity="0"
+          		drag="0"
+				speed="20"
+				position="0 0 0"
+				offsetsphere="20 20 20"
+          		material="/shared/effects/materials/neb_blend.material"
+      		>
+  				<particle 
+					maxangle="360"			
+					minanglespeed="-44"
+					maxanglespeed="44"
+					scale="5"					
+					color="0 0 0"	
+					startalpha="1"
+					endalpha="0"
+					startsize="5"
+					midsize="13"
+					endsize="10"					
+				/>
+        	</simpleemitter>		
+
+			<simpleemitter 
+				bone="_bone_centerofchest"
+				count="20"
+         		spawnrate="222"				
+				minparticlelife="600"
+          		maxparticlelife="2200"
+          		gravity="0"
+          		drag="0"
+				speed="20"
+				position="0 0 0"
+				offsetsphere="20 20 20"
+          		material="/shared/effects/materials/phantom_smoke_16.material"
+      		>
+  				<particle 
+					maxangle="360"			
+					minanglespeed="-44"
+					maxanglespeed="44"
+					scale="5"					
+					startcolor=".1 0 .1"
+					endcolor="0 0 0"	
+					midcolorpos=".2"
+					startsize="5"
+					midsize="13"
+					endsize="10"					
+				/>
+        	</simpleemitter>	
+
+	</particlesystem>
+</definitions>
+
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<spawnmodifier instance="instance1" modifier="modifier0"/>  
+	
+	<waitfordeath instance="instance0" />
+	<!-- <die /> -->
+</thread>
+
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+
+
+
+
+
+
+

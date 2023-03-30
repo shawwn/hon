@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="true">
+
+	<definitions>
+
+		<modifier
+			name="modifier0"
+			delay="200"
+			life="800"
+			startcolor="4 2 5"
+			endcolor="1.0 1.0 1.0"
+		/>
+		
+		<particlesystem name="system0" space="world" useentityeffectscale="true" scale="1">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="1500"
+				volume=".2"
+				sample="../sounds/impact.wav"
+			/>
+
+			<simpleemitter
+				life="400"
+	         		bone="Bip01 Spine1"			
+				position="0 0 5"				
+				spawnrate="5000"
+				depthbias="-100"
+				maxparticlelife="500"
+				count="20"
+				direction="0 0 1"	
+          			material="/shared/effects/materials/smash_add.material"
+         	>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="0"
+					midcolor=".8 0 1"
+					endcolor="0"
+					midcolorpos="0.25"
+					startsize="40"
+					endsize="75"
+					startanchor="1.0"
+					midanchor="0.9"
+					endanchor="0.8"
+					flare="1"
+					startheight="50"
+					endheight="100"
+					scale=".4"
+				/>
+			</simpleemitter>
+
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				timenudge="500"
+				life="1200"
+				spawnrate="25"
+				particlelife="1000"
+				offsetsphere="40"
+				angle="10"
+				material="/shared/effects/materials/phantom_smoke_03.material"
+			>
+				<particle
+					startcolor="0"
+					midcolor="1 0 .8"
+					midcolorpos="0.3"
+					endcolor="0"
+					startsize="30"
+					endsize="45"
+					maxangle="360"
+					depthbias="-80"
+					minendscale="1"
+					maxendscale="3"
+					endstickiness="0"
+			 	/>
+			</simpleemitter>
+
+			<billboard
+				bone="_bone_centerofchest"
+				life="570"
+				startalpha="0"
+				midalpha=".5"
+				endalpha="0.0"
+				startparam=".5"
+				endparam="0.0"
+				startsize="128"
+				endsize="100"
+				depthbias="-40"
+				material="/shared/effects/materials/refract_ripple.material"
+			/>		
+			
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0"  particlesystem="system0" />	
+		<spawnmodifier instance="instance1" modifier="modifier0"/>  
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />	  
+	</thread>
+
+</effect>

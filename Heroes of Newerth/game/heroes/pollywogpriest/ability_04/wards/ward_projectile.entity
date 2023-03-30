@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_PollywogPriestWardAttack"
+
+	speed="3000"
+	gravity="0"
+	canturn="false"
+	rollspeed="360"
+	model="/shared/models/invis.mdf"
+
+
+	impacteffect="effects/impact.effect"
+	traileffect="effects/projectile.effect"
+>
+</projectile>

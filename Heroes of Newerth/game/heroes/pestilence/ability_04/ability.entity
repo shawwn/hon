@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Pestilence4"
+
+	statuseffecttooltip="State_Pestilence_Ability4"
+	icon="icon.tga"
+	
+	anim="ability_4"
+	casttime="1000"
+	castactiontime="100"
+	casteffect="effects/cast.effect"
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_entity"
+	targetscheme="enemy_units"
+	casteffecttype="SuperiorMagic"
+	
+	manacost="25"
+	cooldowntime="10000"
+	projectile="Projectile_Pestilence_Ability4"
+	range="700"
+	novoiceresponse="true"
+>
+	<onactivateimpact>
+		<playeffect effect="effect/cast.effect" source="source_entity" target="target_entity"/>
+	</onactivateimpact>
+	<onimpact >
+		<applystate name="State_Pestilence_Ability4" duration="30000"/>
+	</onimpact>
+	
+	
+</ability>

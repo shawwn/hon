@@ -1,0 +1,13 @@
+Kraken:
+========
+Ability 1: Gush
+Description: Target an enemy unit, a gush of water is fired on it, lowering its armor, slowing it and dealing damage.
+
+Ability 2: Charge
+Description: Targets a nearby point. Your hero will charge to it, slowing and damaging units he impacts with. Units in front of him won’t impede his movements, they will be moved aside.
+
+Ability 3: Slow Aura
+Description:  This water based creates a suction that slows all nearby enemies when they get into range.
+
+Ultimate: Sink
+Description: This is a 2 part ability. The first part involves choosing a location. After that, your ability button is replaced with another icon. This lasts until you press it or a certain amount of time runs out. When you activate it, the ground will sink and there will be a water effect going inwards. Units in this sink can’t get out during the casting period. Units outside can enter it, but once they do they are unable to walk out of it (they can still blink/teleport out or move freely inside it). His is a somewhat small deformation, a little more than a hero size radius. After this deformation happens, it lasts for a brief period (2 seconds) and then, if your hero is still alive, all units in that area will be sucked through (with some visual effect in this area) and out to the originally targeted location. You cannot use teleportation abilities before you create the deformation nor can you create the initial source near a fountain.

@@ -1,0 +1,222 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PANEL DIALOGEX 0, 0, 108, 220
+STYLE DS_SETFONT | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CTEXT           "S2 Games\nModel Exporter\nVersion 4",IDC_STATIC,6,12,62,25
+    GROUPBOX        "Export options",IDC_STATIC,6,48,95,131
+    CONTROL         "Force static",IDC_EXPOPT_FORCE_STATIC,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,59,81,10
+    PUSHBUTTON      "Close",IDC_CLOSE,25,203,57,10
+    PUSHBUTTON      "Scene Info",IDC_SCENE_INFO,15,183,76,17
+    CONTROL         "Remove Hierarchy",IDC_EXPOPT_REMOVE_HIERARCHY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,74,81,10
+    CONTROL         114,IDC_STATIC,"Static",SS_BITMAP,68,7,33,34
+    CONTROL         "Copy textures",IDC_EXPOPT_COPY_TEXTURES,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,88,81,10
+    PUSHBUTTON      "Export",IDC_EXPORT_BUTTON,10,161,40,14
+    CONTROL         "Geometry",IDC_EXPOPT_GEOMETRY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,103,81,10
+    CONTROL         "Materials",IDC_EXPOPT_MATERIALS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,133,81,10
+    CONTROL         "Model Definition",IDC_EXPOPT_MDF,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,118,81,10
+    CONTROL         "Animation",IDC_EXPOPT_ANIMATION,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,147,81,10
+    PUSHBUTTON      "Clip",IDC_EXPORT_CLIP,57,161,40,14
+END
+
+IDD_SCENE_INFO DIALOG  0, 0, 341, 226
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION
+CAPTION "Scene Info"
+FONT 8, "Courier New"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,284,205,50,14
+    EDITTEXT        IDC_DETAILS,7,7,327,191,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL | WS_HSCROLL
+END
+
+IDD_STATUS_BAR DIALOG  0, 0, 272, 49
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "blahblah",IDC_STATUS_MESSAGE,7,7,258,12
+    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",0x1,7,23,258,7
+    RTEXT           "Static",IDC_SECONDARY_STATUS_MESSAGE,7,34,132,10
+    CONTROL         "Progress1",IDC_PROGRESS2,"msctls_progress32",WS_BORDER,147,36,118,6
+END
+
+IDD_OBJ_PANEL DIALOGEX 0, 0, 110, 194
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_MESH_NAME,15,18,78,12,ES_AUTOHSCROLL
+    CONTROL         "Exclude normals",IDC_MESH_EXCLUDENRMLS,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_TABSTOP,14,34,79,10
+    CONTROL         "Normal mesh",IDC_MESH_R_NORMAL,"Button",BS_AUTORADIOBUTTON,15,60,78,8
+    CONTROL         "Reference bone",IDC_MESH_R_BONE,"Button",BS_AUTORADIOBUTTON,15,84,78,8
+    CONTROL         "Collision surface",IDC_MESH_R_SURF,"Button",BS_AUTORADIOBUTTON,15,73,78,8
+    CONTROL         "Sprite",IDC_MESH_R_SPRITE,"Button",BS_AUTORADIOBUTTON,15,97,78,8
+    CONTROL         "Ground plane",IDC_MESH_R_GROUND,"Button",BS_AUTORADIOBUTTON,15,108,78,10
+    EDITTEXT        IDC_MESH_MATERIAL_NAME,15,135,78,12,ES_AUTOHSCROLL
+    GROUPBOX        "Mesh",IDC_STATIC,7,7,96,114
+    GROUPBOX        "Material",IDC_STATIC,7,124,96,63
+    EDITTEXT        IDC_MESH_MATERIAL_PSH,15,169,78,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MESH_MATERIAL_VSH,15,151,78,12,ES_AUTOHSCROLL
+    CONTROL         "Roof",IDC_MESH_ROOF,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_TABSTOP,14,47,79,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_PANEL, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 101
+        VERTGUIDE, 53
+        VERTGUIDE, 68
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 213
+        HORZGUIDE, 24
+        HORZGUIDE, 48
+    END
+
+    IDD_SCENE_INFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 334
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 219
+    END
+
+    IDD_STATUS_BAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 265
+        TOPMARGIN, 7
+    END
+
+    IDD_OBJ_PANEL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 103
+        VERTGUIDE, 15
+        VERTGUIDE, 54
+        VERTGUIDE, 93
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 187
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "TECH: "
+            VALUE "FileDescription", "S2 Games model exporter"
+            VALUE "FileVersion", "1.0.0.0"
+            VALUE "InternalName", "s2Exporter"
+            VALUE "LegalTrademarks", "3D Studio MAX, Biped, Character Studio, Heidi, Kinetix and Physique are registered trademarks and 3ds max, combustion, Discreet, DWG Unplugged, DXF, FLI and FLC are trademarks of Autodesk, Inc."
+            VALUE "OriginalFilename", "s2Exporter.dlu"
+            VALUE "ProductName", "3ds max"
+            VALUE "ProductVersion", "1.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP                  "logo.bmp"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

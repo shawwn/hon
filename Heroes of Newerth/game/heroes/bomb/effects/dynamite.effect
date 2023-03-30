@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" deferred="true" useentityeffectscale="0">
+	<definitions>
+	<!--
+		<modifier
+			life="5000"
+			color="1 1 1"
+			startalpha="1"
+			midalpha="1"
+			endalpha="0"
+			midalphapos=".05"
+		/>
+-->
+		<particlesystem name="system0" space="entity" scale="1.5">
+			
+		</particlesystem>
+		
+		<particlesystem name="system1" space="world" scale="1.0">
+			
+			<simpleemitter
+				bone="_bone_fx_02"
+				spawnrate="500"
+				particlelife="60"
+				gravity="-2"
+				minspeed="420"
+				maxspeed="600"
+				material="/shared/effects/materials/whitedot.material"
+				offsetsphere="0 0 0"
+				minangle="5"
+				maxangle="15"
+				direction="0 1 0"
+				position="0 0 0"
+				directionalspace="local"
+			>
+				<particle 
+					startstickiness="0"
+					endstickiness="0"
+					startcolor="1 .25 0"
+					midcolor="1 0 0"
+					endcolor="0 0 0"
+					startsize="5"
+					endsize="0"	
+					turn="1"
+					heightdistort="0.01"				
+				
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				delay="250"
+				bone="_bone_fx_02"
+				spawnrate="250"
+				minparticlelife="100"
+				maxparticlelife="150"
+				gravity="20"
+				minspeed="100"
+				maxspeed="200"
+				drag=".01"
+				material="/shared/effects/materials/spark_10.material"
+				offsetsphere="2"
+				minangle="0"
+				maxangle="15"
+				direction="0 1 0"
+				directionalspace="local"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="1"
+					midcolor="1 .55 0"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					minstartsize="8"
+					maxstartsize="12"
+					midsize="15"
+					endsize="10"
+					startalpha="0"
+					midalpha=".7"
+					endalpha="0"
+					midalphapos=".5"
+				/>
+			</simpleemitter>
+
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnparticlesystem instance="instance2" particlesystem="system1" />
+		<spawnmodifier instance="instance1"/>
+		<waitfordeath  instance="instance0"/>
+		<waitfordeath  instance="instance1"/>
+		<waitfordeath  instance="instance2"/>
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="true" deferred="true">
+	<definitions>
+	
+	
+		
+		<particlesystem name="system0" space="world" scale="1.2">
+
+			<sound
+				delay="222"
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="1800"
+				volume="0.4" 
+				sample="/heroes/pyromancer/sounds/impact_%.wav"
+			/>
+			
+			<simpleemitter
+				count="50"
+				spawnrate="250"
+				bone="_bone_centerofchest"
+				minparticlelife="500"
+				maxparticlelife="750"
+				gravity="0"
+				speed="100"
+				offsetsphere="50 50 50"
+				material="/shared/effects/materials/mysticenergy.material"
+			>
+				<particle
+					startcolor="0 1 0"
+					midcolor="0 1 0"
+					endcolor="0 0 0"
+					minsize="6"
+					maxsize="12"
+					maxangle="360"
+					minendscale="1"
+					maxendscale="4"
+					endstickiness="0"
+				/>
+			</simpleemitter>
+
+			<model
+				life="100"
+				parentmodel="true"
+				parentskeleton="true"
+				startcolor="0 0 0"
+				midcolor=".25 1 0"
+				endcolor="0 0 0"
+				startscale="1"
+				midscale="1.05"
+				endscale="1"
+				midscalepos=".4"
+				material="/shared/effects/materials/shell4.material"
+				startalpha="0"
+				endalpha="10"
+			/>
+			
+			<model
+				delay="100"
+				life="100"
+				parentmodel="true"
+				parentskeleton="true"
+				startcolor="0 0 0"
+				midcolor=".25 1 0"
+				endcolor="0 0 0"
+				startscale="1"
+				midscale="1.05"
+				endscale="1"
+				midscalepos=".4"
+				material="/shared/effects/materials/shell4.material"
+				startalpha="0"
+				endalpha="10"
+			/>
+			
+			<model
+				delay="200"
+				life="100"
+				parentmodel="true"
+				parentskeleton="true"
+				startcolor="0 0 0"
+				midcolor=".25 1 0"
+				endcolor="0 0 0"
+				startscale="1"
+				midscale="1.05"
+				endscale="1"
+				midscalepos=".4"
+				material="/shared/effects/materials/shell4.material"
+				startalpha="0"
+				endalpha="10"
+			/>
+			
+			<model
+				delay="300"
+				life="100"
+				parentmodel="true"
+				parentskeleton="true"
+				startcolor="0 0 0"
+				midcolor=".25 1 0"
+				endcolor="0 0 0"
+				startscale="1"
+				midscale="1.05"
+				endscale="1"
+				midscalepos=".4"
+				material="/shared/effects/materials/shell4.material"
+				startalpha="0"
+				endalpha="10"
+			/>
+	
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>  
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" /> 
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Hammerstorm_Ability4"
+
+	
+	
+	icon="icons/ability_4.tga"
+	passiveeffect="effects/ability_04/ability_04.effect"
+	displaylevel="true"
+	
+	basedamagemultiplier="1.0,1.25,1.5"
+	
+	modifierkey="ability4"
+	
+	effecttype="StatusBuff"
+>
+</state>

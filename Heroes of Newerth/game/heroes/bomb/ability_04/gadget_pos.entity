@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Bombardier_Ability4_Pos0"
+
+	icon=""
+	portrait=""
+	model="/shared/models/invis.mdf"
+	passiveeffect=""
+	impacteffect=""
+	
+	boundsheight="0"
+	boundsradius="0"
+	isselectable="false"
+	selectionradius="0"
+	targetoffset="0 0 0"
+
+	canrotate="false"
+	ismobile="false"
+
+	attacktype="none"
+	combattype="Ranged"
+
+
+	unitwalking="true"
+	canattack="false"
+	deathtime="0"
+	corpsetime="0"
+	invulnerable="true"
+	flying="false"
+	drawonmap="false"
+	
+	lifetime="6000"
+>
+</gadget>

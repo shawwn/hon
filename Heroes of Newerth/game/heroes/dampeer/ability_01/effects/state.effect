@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="1">
+
+	<definitions>
+
+	<particlesystem name="system0" space="entity" scale="1">
+
+			<billboard
+				size="65"
+				position="0 0 40"
+				bone="_bone_overhead"
+				expirelife="500"
+				material="/shared/effects/materials/terror.material"
+				startalpha="1"
+				endalpha="0"
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="1 1 1"
+			/>
+
+			<billboard
+				startsize="100"
+				endsize="65"
+				position="0 0 40"
+				bone="_bone_overhead"
+				life="500"
+				material="/shared/effects/materials/terror.material"
+				startalpha="1"
+				endalpha="0"
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="1 1 1"
+			/>	
+
+			<billboard
+				width="100"
+				height="2.5"
+				position="0 0 40"
+				flare="true"
+				bone="_bone_overhead"
+				life="750"
+				material="/shared/effects/materials/whitedot.material"
+				startcolor=".5 0 0"
+				endcolor="0  0 0"
+			/>
+			
+			<billboard
+				size="250"
+				position="0 0 40"
+				bone="_bone_overhead"
+				life="750"
+				material="/shared/effects/materials/whitedot.material"
+				startcolor=".25 0 0"
+				endcolor="0  0 0"
+			/>
+
+			<simpleemitter
+				bone="_bone_overhead"
+				count="1"
+				particlelife="350"
+				speed="0"
+				drag="0"
+				position="0 0 40"
+				acceleration="0"
+				material="/shared/effects/materials/flare_05.material"
+			>
+				<particle
+					startcolor="0 0 0"
+					midcolor=".5 .25 .05"
+					endcolor="0 0 0"
+					midalphapos="0.9"
+					startsize="95"
+					endsize="0"
+					depthbias="0"
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

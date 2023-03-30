@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Bephelgor_Ability3"
+	ishidden="true"
+	effecttype=""
+	displaylevel="true"
+	impactinterval="500"
+>
+	<oninflict>
+		<setcharges a="0" />
+	</oninflict>
+	<onimpact>
+		<condition test="charges eq 5">
+			<spawnunit name="Pet_Bephelgor_Ability3" target="target_position" offsetspace="source_entity" offset="50 250" owner="" team="" count="1"  />
+		</condition>
+		<condition test="charges eq 4">
+			<spawnunit name="Pet_Bephelgor_Ability3" target="target_position" offsetspace="source_entity" offset="-50 200" owner="" team="" count="1"  />
+			<setcharges a="5" />
+		</condition>
+		<condition test="charges eq 3">
+			<spawnunit name="Pet_Bephelgor_Ability3" target="target_position" offsetspace="source_entity" offset="0 250" owner="" team="" count="1"  />
+			<setcharges a="4" />
+		</condition>
+		<condition test="charges eq 2">
+			<spawnunit name="Pet_Bephelgor_Ability3" target="target_position" offsetspace="source_entity" offset="0 225" owner="" team="" count="1"  />
+			<setcharges a="3" />
+		</condition>
+		<condition test="charges eq 1">
+			<spawnunit name="Pet_Bephelgor_Ability3" target="target_position" offsetspace="source_entity" offset="-25 225" owner="" team="" count="1"  />
+			<setcharges a="2" />
+		</condition>
+		<condition test="charges eq 0">
+			<spawnunit name="Pet_Bephelgor_Ability3" target="target_position" offsetspace="source_entity" offset="25 200" owner="" team="" count="1"  />
+			<setcharges a="1" />
+		</condition>
+	</onimpact>
+</state>

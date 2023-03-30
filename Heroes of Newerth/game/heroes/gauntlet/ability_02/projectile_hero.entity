@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Gauntlet_Ability2_Hero"
+
+	speed="1500"
+	gravity="2300"
+	
+	canturn="false"
+	flying="false"
+	flyheight="0"
+	impactdistance="100"
+>
+	<onspawn>
+		<playanim name="nohand_flying_1" target="this_owner_entity" />
+	</onspawn>
+	
+	<onimpact>
+		<playanim name="idle" target="this_owner_entity" />
+		<areaofeffect
+			radius="999999"
+			center="target_position"
+			targetselection="all"
+			targetscheme="Gauntlet_Gadget"
+			ignoreinvulnerable="true"
+		>
+			<kill target="target_entity" source="" />
+		</areaofeffect>
+		<expirestate name="State_Gauntlet_NoHand" target="this_owner_entity"/>
+		<expirestate name="State_Gauntlet_Ability2_HeroMod" target="this_owner_entity"/>
+		<order command="attack" force="true" forceduration="150" source="source_entity" target="target_entity" queue="front" />
+	</onimpact>
+	
+</projectile>

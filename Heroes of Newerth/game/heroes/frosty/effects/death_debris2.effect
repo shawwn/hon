@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="death_debris">
+	<definitions>
+	
+		<modifier
+			name="modifier0"
+			color="1 1 1"
+			alpha="0"
+		/>	
+		
+		<particlesystem name="system0" space="world" scale="1.0">
+			
+			<debris
+				life="3000"
+				model="/heroes/frosty/effects/death.mdf"
+				yaw="0"
+				anim="idle"
+				minspeed="80.0"
+				maxspeed="120.0"
+				minrotationspeed="200.0"
+				maxrotationspeed="250.0"
+				gravity="20.0"
+				minangle="0"
+				maxangle="60"
+				collide="true"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="0.0"
+				midalphapos="0.9"
+				bounce="0.7"
+				reflect="0.6"
+				animpose="true"
+				param0="1.0"
+			/>
+
+						<debris
+				life="3000"
+				model="/heroes/frosty/effects/deathPedestal.mdf"
+				yaw="0"
+				anim="idle"
+				minspeed="80.0"
+				maxspeed="120.0"
+				minrotationspeed="200.0"
+				maxrotationspeed="250.0"
+				gravity="20.0"
+				minangle="0"
+				maxangle="60"
+				collide="true"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="0.0"
+				midalphapos="0.9"
+				bounce="0.7"
+				reflect="0.6"
+				animpose="true"
+				param0="1.0"
+			/>
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>  
+		<waitfordeath instance="instance0" />
+		<wait duration="20000"/>
+		<!-- <die /> -->
+	</thread>
+</effect>
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+

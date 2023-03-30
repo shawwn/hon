@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_Krixi"
+
+	team="Legion"
+	icon="icons/hero.tga"
+	portrait="icons/hero.tga"
+	model="model.mdf"
+	skin=""
+	
+	passiveeffect="effects/body.effect"
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="sounds/voice/select_%.wav"
+	selectedflavorsound="sounds/voice/select_flavour_%.wav"
+	confirmmovesound="sounds/voice/move_%.wav"
+	confirmattacksound="sounds/voice/attack_%.wav"
+	nomanasound="sounds/voice/no_mana.wav"
+	cooldownsound="sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="sounds/voice/taunt_prior.wav"
+	tauntkillsound="sounds/voice/taunt_after.wav"
+	
+	preglobalscale="1.62"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="112"
+	boundsradius="24"
+	selectionradius="44"
+	targetoffset="0 0 64"
+
+	movespeed="320"
+	turnrate="360"
+	turnsmoothing="0.05"
+
+	maxhealth="150"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="0"
+	magicarmor="5.5"
+
+	inventory0="Ability_Krixi1"
+	inventory1="Ability_Krixi2"
+	inventory2="Ability_Krixi3"
+	inventory3="Ability_Krixi4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8="Ability_Taunt"
+
+	attackduration="1000"
+	attackactiontime="405"
+	attackcooldown="1700"
+	attackdamagemin="26"
+	attackdamagemax="32"
+	attacknumanims="2"
+	attackoffset="25 20 120"
+	attackprojectile="Projectile_KrixiAttack"
+	attackrange="330"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect=""
+	attacktype="ranged"
+	combattype="Hero"
+
+	aggrorange="800"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="Agility"
+	strength="17"
+	strengthperlevel="1.95"
+	agility="22"
+	agilityperlevel="2.8"
+	intelligence="18"
+	intelligenceperlevel="1.85"
+	
+	previewmodel="preview.mdf"
+	previewpos="0 0 -100"
+	previewangles="0 0 20"
+	previewscale="1.95"
+>
+	<recommendeditem name="Item_ManaPotion" />	
+	<recommendeditem name="Item_MinorTotem" />
+	<recommendeditem name="Item_RunesOfTheBlight" />
+	<recommendeditem name="Item_HealthPotion" />
+	<recommendeditem name="Item_HomecomingStone" />
+	
+	<recommendeditem name="Item_IronShield" />
+	<recommendeditem name="Item_Strength5" />
+	<recommendeditem name="Item_Soulscream" />
+	<recommendeditem name="Item_Bottle" />
+	<recommendeditem name="Item_EnhancedMarchers" />
+	<recommendeditem name="Item_Steamboots" />
+	<recommendeditem name="Item_Immunity" />
+	<recommendeditem name="Item_Intelligence7" />
+	<recommendeditem name="Item_LifeSteal4" />
+	<recommendeditem name="Item_Evasion" />
+	
+	<modifier key="frost" modpriority="100"
+		attackprojectile="Projectile_Frost"
+	>
+	</modifier>
+	
+	<!-- Staff of the master upgrade effect-->
+	<modifier key="ult_boost" modpriority="100"
+		passiveeffect="effects/boost.effect"
+	>
+	</modifier>
+
+	<modifier key="Sexy" modpriority="1"
+		altavatar="true"
+		
+		icon="alt/icon.tga"
+		portrait="alt/icon.tga"
+		model="alt/model.mdf"
+		
+		preglobalscale="1.62"
+		infoheight="200"
+		attackprojectile="Projectile_KrixiAttackAlt"
+		previewmodel="alt/preview.mdf"
+		previewpos="0 0 -150"
+		previewangles="0 0 -20"
+		previewscale="1.95"
+	>
+	</modifier>
+</hero>

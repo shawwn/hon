@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Hellbringer4"
+
+	
+	
+	icon="icon.tga"
+	
+	anim="ability_4"
+	casttime="1000"
+	castactiontime="0"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+	
+	targetmaterial="/shared/materials/area_cast_indicator_simple.material"
+	targetradius="600"
+	actiontype="target_position"
+	targetscheme="enemy_units_and_trees"
+	casteffecttype="SuperiorMagic"
+	
+	range="1200"
+	manacost="200,300,400"
+	cooldowntime="165000"
+>
+	<onimpact >
+		<playeffect effect="effects/star.effect" source="target_position" target="" occlude="true"/>
+		<spawnaffector name="Affector_Hellbringer_Ability4" target="target_position" />
+	</onimpact>
+</ability>

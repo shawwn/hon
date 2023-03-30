@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Accursed4"
+	
+	statuseffecttooltip="State_Accursed_Ability4"
+	
+	icon="icon.tga"
+	passiveeffect=""
+	
+	anim="ability_4"
+	casttime="0"
+	castactiontime="0"
+	
+	casteffecttype="Physical"
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_self"
+	manacost="0"
+	cooldowntime="60000"
+>
+	<onimpact>
+		<disjoint target="source_entity" />
+		<dispel type="StatusDebuff" target="source_entity" />
+		<dispel type="StatusDisable" target="source_entity" />
+		<applystate name="State_Accursed_Ability4" duration="3000,4000,5000" target="source_entity" />
+	</onimpact>
+	
+	<modifier key="ult_boost" modpriority="100"
+		displayname="true"
+		nosilence="true"
+	>
+		<onimpact>
+			<disjoint target="source_entity" />
+			<dispel type="StatusDebuff" target="source_entity" />
+			<dispel type="StatusDisable" target="source_entity" />
+			<applystate name="State_Accursed_Ability4" duration="5000,6000,7000" target="source_entity" />
+		</onimpact>
+	</modifier>
+	
+</ability>

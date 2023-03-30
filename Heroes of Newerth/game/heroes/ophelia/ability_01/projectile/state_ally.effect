@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+	<definitions>
+		<particlesystem name="system0" space="entity">
+
+					<billboard
+						
+						bone="Bip01 R Hand"
+						expirelife="200"
+						startcolor=".6 .5 .0"
+						endcolor="0 0 0"
+						startalpha="1.0"
+						midalpha="1.0"
+						endalpha="0.0"
+						midalphapos="0.75"
+						startparam="0.05"
+						endparam="0.0"
+										
+						size="50"
+						
+						midsizepos=".4"
+						rollspeed="20"				
+						depthbias="0"
+						position="0 0 0"
+						material="/shared/effects/materials/flare_05.material"
+						lockup="true"
+						pitch="90"
+					/>
+					
+					<billboard
+						
+						bone="Bip01 L Hand"
+						expirelife="200"
+						startcolor=".6 .5 .0"
+						endcolor="0 0 0"
+						startalpha="1.0"
+						midalpha="1.0"
+						endalpha="0.0"
+						midalphapos="0.75"
+						startparam="0.05"
+						endparam="0.0"
+										
+						size="50"
+						
+						midsizepos=".4"
+						rollspeed="20"				
+						depthbias="0"
+						position="0 0 0"
+						material="/shared/effects/materials/flare_05.material"
+						lockup="true"
+						pitch="90"
+					/>
+		<simpleemitter
+		
+			spawnrate="60"
+			expirelife="200"
+			bone="Bip01 Spine"
+			particlelife="600"			
+			gravity="-25"
+			speed="10"
+			drag="0"
+			acceleration="0"
+			position="0 0 0"
+			material="/shared/effects/materials/phantom_smoke_10.material"
+			offsetsphere="20 20 70"
+			minangle="-45"
+			maxangle="45"
+			direction="0 0 0"
+			offsetdirection="0 105 0"
+			offsetradial="0 0 0"
+			yawspeed="360"
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+				maxanglespeed="0"
+				
+				startcolor="0 0 0"
+				midcolor="0.5 .1 1"
+				endcolor="0 0 0"
+				midcolorpos=".4"
+				startframe="0"
+				endframe="1"
+				startwidth="10"
+				midwidth="25"
+				endwidth="3"
+				midwidthpos=".5"
+				startheight="0"
+				endheight="50"
+				startalpha="0"
+				midalpha=".1"
+				endalpha="0"
+				startstickiness="0"
+				endstickiness=".6"
+				lockup="true"
+			/>
+
+			
+
+		</simpleemitter>
+
+		
+
+
+
+		
+
+			
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+

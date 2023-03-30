@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="1" deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="2.3">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".8" 
+				sample="/heroes/kraken/ability_02/sounds/ability_02.wav"
+			/>
+
+			<billboard	
+				life="700"
+				bone="_bone_centerofchest"
+				startcolor="0 0  0 "
+				midcolor="0 .7 1"
+				endcolor="0"
+				size="200"
+				material="/shared/effects/materials/glow_01.material"
+				depthbias="-50"
+				position="0 -5 0"
+			/>		
+			
+			<template name="trail">	
+				<twopointtrailemitter
+					life="700"
+			 		bone_a="{bone_a}"
+					bone_b="{bone_b}"
+					spawnrate="44"
+					particlelife="500"
+					texpostime="500"
+					texposscale="0.0"
+					texstretchscale="1.0"
+					material="/shared/effects/materials/swoosh_add.material"
+					subframepos="true"
+				>
+	         			<particle
+						startcolor=".75"
+						midcolor="0 .15 .3"
+						midcolorpos="0.3"
+						endcolor="0" 
+					/>
+				</twopointtrailemitter>
+			</template>
+		
+			<instance name="trail"
+			 	bone_a="Bip01 L Clavicle"
+				bone_b="Bip01 L Hand"
+			/>
+				
+			<instance name="trail"
+				bone_a="Bip01 R Clavicle"
+				bone_b="Bip01 R Hand"
+			/>
+					
+			<instance name="trail"
+				bone_a="Bip01 R Foot"
+				bone_b="Bip01 R Thigh"
+			/>
+
+			<instance name="trail"
+				bone_a="Bip01 L Foot"
+				bone_b="Bip01 L Thigh"
+			/>
+
+			<trailemitter
+				life="500"
+				position="0 0 5"				
+				spawnrate="30"
+				depthbias="-40"
+				maxparticlelife="1500"
+				offsetsphere="20"
+				angle="5"
+          			material="/shared/effects/materials/whitewater_02.material"
+         	>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="0"
+					midcolor=".5"
+					endcolor="0"
+					midcolorpos="0.25"
+					startsize="20"
+					endsize="85"
+				/>
+			</trailemitter>
+
+			<simpleemitter
+				life="500"
+				directionalspace="local"
+				position="0 -32 5"				
+				spawnrate="20"
+				depthbias="-100"
+				maxparticlelife="1500"
+				offsetsphere="0"
+				speed="100"
+				angle="5"
+				direction="0 -1 0"	
+          			material="/shared/effects/materials/refract_outsplash.material"
+         	>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-80"
+					maxanglespeed="80"
+					startalpha="1"
+					midalpha=".6"
+					endalpha="0"
+					startsize="50"
+					endsize="55"
+					param="0.3"
+				/>
+			</simpleemitter>
+			
+		</particlesystem>
+	
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

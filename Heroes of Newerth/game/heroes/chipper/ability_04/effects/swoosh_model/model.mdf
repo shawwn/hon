@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="export.max" file="model.model" type="K2">
+
+	<anim name="idle" clip="default_1.clip" loop="true" fps="30"/>
+
+</model>

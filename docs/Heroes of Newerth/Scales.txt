@@ -1,0 +1,17 @@
+Each unit will have 4 properties:
+
+
+PreGlobalScale:
+	-This scale is not needed functionally, but is in place to make the following scale values intuitive. This scale is used to make any unit post exporting have the same size. This operates BEFORE the following scales, so all of the following are affected by this by design.
+
+
+UnitEffectScale:
+	-This scale just increases the scale of effects that are done on this unit. This is given to provide more flexible options for non-standard unit proportions. If you want an effect to look bigger on a unit, increase this.
+
+UnitModelScale:
+	-This scale increases the physical model scale of the unit, without affecting the effect scale. If you want a unit to look bigger, increase this.
+
+
+PostGlobalScale:
+	-This is a scale that operates after all other previous scales. This scales effects and model together based on this value. This is useful for stuff like Avatar mode or Bloodlust or anything that changes scales ingame and needs to maintain proper effect properties.
+

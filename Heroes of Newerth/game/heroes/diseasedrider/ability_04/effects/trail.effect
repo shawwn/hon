@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1.1">
+			<light	
+				expirelife="200"					
+				startcolor="1.2 3.6 0"						
+				endcolor="0 0 0"
+				midcolorpos=".2"
+				falloffstart="50"
+				falloffend="125"	
+				position="0 0 0"
+			/>	
+
+			
+			
+			<simpleemitter
+				spawnrate="50"
+				particlelife="2000"
+				gravity="-.2"
+				speed="10"
+				drag="0.07"
+				acceleration="0.0"		
+				mintimenudge="0"
+				maxtimenudge="1000"
+				position="0 0 0"
+				material="/shared/effects/materials/smoke_particle.material"
+				offsetsphere="20 50 15"
+				inheritvelocity=".5"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-30"
+					color=".6 .6 .2"
+					maxanglespeed="30"
+					startsize="50"
+					endsize="80"
+					startalpha="0"
+					midalpha=".6"
+					endalpha="0"
+					midalphapos=".2"
+					startanchor="0"
+					endanchor="0"					
+				 />			
+
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-50"
+					color=".8 .8 .2"
+					maxanglespeed="50"
+					startsize="50"
+					endsize="80"
+					startalpha="0"
+					midalpha=".6"
+					endalpha="0"
+					midalphapos=".2"
+					startanchor="0"
+					endanchor="0"
+					
+				 />					 
+			</simpleemitter>	
+			
+
+
+			<template name="trail">
+				<twopointtrailemitter				
+					expirelife="500"
+					bone_a="{bone_a}"
+					bone_b="{bone_b}"
+					spawnrate="50"
+					
+					position="0 120 0"
+					
+					startminparticlelife="500"
+					startmaxparticlelife="500"		
+					
+					endminparticlelife="1"
+					endmaxparticlelife="1" 
+					
+					texpostime="500"
+					texposscale="0"
+					texstretchscale="1"				
+					material="/shared/effects/materials/dis_trail.material"
+				>
+					<particle
+						startalpha="1"
+						midalpha="1"
+						endalpha="1"
+						midalphapos="1"
+						color="0 0 0" 
+						
+					/>
+				</twopointtrailemitter>
+			</template>
+		
+			<instance name="trail" bone_a="Box11" bone_b="Box15"/>
+			<instance name="trail" bone_a="Box21" bone_b="Box17"/>
+			
+			<simpleemitter
+				spawnrate="150"
+				particlelife="1000"
+				gravity="-.2"
+				speed="130"
+				drag="0.07"
+				acceleration="0.0"		
+				mintimenudge="0"
+				maxtimenudge="1000"
+				position="0 0 0"
+				material="/shared/effects/materials/smoke_particle.material"
+				offsetsphere="20 50 15"
+				inheritvelocity=".5"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-30"
+					color=".6 .6 .2"
+					maxanglespeed="30"
+					startsize="10"
+					endsize="20"
+					startalpha="0"
+					midalpha=".6"
+					endalpha="0"
+					midalphapos=".2"
+					startanchor="0"
+					endanchor="0"					
+				 />			
+
+			
+			</simpleemitter>		
+	
+
+			<twopointtrailemitter				
+				expirelife="500"
+				bone_a="Box11"
+				bone_b="Box17"
+				spawnrate="50"
+				
+				position="0 120 0"
+				
+				startminparticlelife="500"
+				startmaxparticlelife="500"		
+				
+				endminparticlelife="1"
+				endmaxparticlelife="1" 
+				
+				texpostime="500"
+				texposscale="0"
+				texstretchscale="1"				
+				material="/shared/effects/materials/goo_trail_blend.material"
+			>
+				<particle
+					color=".5 .5 .2"					
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".2"
+					startsize="86"
+					midsize="60"				
+					endsize="62"	
+					
+				/>
+			</twopointtrailemitter>
+
+		
+			<trackeremitter				
+				inheritvelocity="0.25"
+				tracktype="distance"
+				trackspeed="1.4" 
+				spawnrate="300"
+				particlelife="1800"
+				offsetsphere="78 78 58"
+				minspeed="10.0"
+				maxspeed="260"
+				direction="0 0 1"
+				material="/shared/effects/materials/fly.material"
+			>
+				<particle 
+					startalpha="1"
+					endalpha="0"
+					midalphapos=".7"
+					maxangle="359"
+					maxanglespeed="30"
+					minanglespeed="-30"
+					minscale="2.5"
+					maxscale="4.5"	
+					color="0.5 0.5 0.1"
+				/>
+			</trackeremitter>
+		
+			<skeletonemitter
+				spawnrate="420"
+				particlelife="800"
+				gravity=""
+				speed="25"
+				drag="0.00"
+				acceleration="0.0"		
+				mintimenudge="0"
+				maxtimenudge="1000"
+				position="0 0 0"
+				material="/shared/effects/materials/whitedot.material"
+				offsetsphere="0 0 0"
+				inheritvelocity=".4"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-30"
+					color=".6 .6 .2"
+					maxanglespeed="30"
+					startsize="15"
+					endsize="0"
+					startalpha="0"
+					midalpha=".6"
+					endalpha="0"
+					midalphapos=".2"
+					startanchor="0"
+					endanchor="0"					
+				 />
+			</skeletonemitter>
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

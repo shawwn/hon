@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="chainsofdoom" deferred="true" useentityeffectscale="false">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+			
+			<beam
+				expirelife="500"
+				owner_a="source"
+				owner_b="target"
+				bone_a="_bone_righthand"
+				size="9"
+				color="1 1 1"
+				startalpha="1"
+				endalpha="0"
+				material="/shared/effects/materials/chainlinkconnect.material"
+				framespeed="1.75"
+				tile="2.0"
+			/>
+		
+			<beam
+				expirelife="500"
+				owner_a="source"
+				owner_b="target"
+				bone_b="_bone_righthand"
+				size="7"
+				color="1 1 1"
+				
+				tile="2"
+				startalpha="1"
+				endalpha="0"
+				material="/shared/effects/materials/chainlinkconnect.material"
+				framespeed="1.75"
+			/>	
+	
+		
+		</particlesystem>
+		
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

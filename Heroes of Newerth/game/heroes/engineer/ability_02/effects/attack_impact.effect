@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" deferred="true" useentityeffectscale="1">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="0.6">
+
+			<simpleemitter
+				bone="_bone_fx_01"
+				minparticlelife="1000"
+				maxparticlelife="1750"
+				spawnrate="1500"
+				count="5"
+				gravity="-25"
+				minspeed="0"
+				maxspeed="35"
+				minangle="0"
+				maxangle="20"
+				drag="0.2"
+				offsetsphere="30 30 0"
+				material="/shared/effects/materials/dust_smoke_10.material"
+			>
+				<particle
+					startcolor="1 1 1"
+					midcolor=".6 .6 .6"
+					endcolor="0 0 0"
+					startscale="0.2"
+					endscale="2"
+					startalpha="0"
+					midalpha=".5"
+					endalpha="0"
+					midalphapos=".25"
+					size="100"
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="-50"
+					maxanglespeed="50"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_fx_01"
+				count="5"
+				gravity="-5"
+				spawnrate="250"
+				minparticlelife="700"
+				maxparticlelife="1000"
+				material="/shared/effects/materials/whitewater_02.material"
+				offsetsphere="0"
+				minangle="-90"
+				maxangle="-90"
+				direction="0 0 -1"
+				offsetradial="10"
+				position="0 0 0"
+				depthbias="-150"
+			>
+				<particle
+					startcolor=".5 .5 .5"
+					endcolor="0"
+					midcolorpos="0"
+					startsize="0"
+					maxangle="400"
+					maxendsize="200"
+					endstickiness=".3"
+				/>
+			</simpleemitter>
+			
+			<template name="shells">
+				<simpleemitter
+				count="1"
+					bone="{bone}"
+					spawnrate="5"
+					minparticlelife="1250"
+					maxparticlelife="1750"
+					gravity="100"
+					speed="750"
+					drag="0"
+					acceleration="0"
+					position="0 0 50"
+					material="/shared/effects/materials/bullet.material"
+					offsetsphere="0 0 0"
+					minangle="0"
+					maxangle="10"
+					direction="0 0 1"
+					offsetdirection="0 0 0"
+					offsetradial="0 0 0"
+					collide="true"
+				>
+					<particle
+						minanglespeed="100"
+						maxanglespeed="250"
+						color="1 .8 .2"
+						startframe="0"
+						endframe="1"
+						startsize="35"
+						midsize="50"
+						endsize="35"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".45"
+					/>
+				</simpleemitter>
+			</template>
+			
+			<instance name="shells" bone="_bone_fx_02"/>
+			
+			
+			<simpleemitter
+				bone="_bone_fx_02"
+				minparticlelife="1000"
+				maxparticlelife="1750"
+				spawnrate="1500"
+				count="5"
+				gravity="-25"
+				minspeed="0"
+				maxspeed="35"
+				minangle="0"
+				maxangle="20"
+				drag="0.2"
+				offsetsphere="30 30 0"
+				material="/shared/effects/materials/dust_smoke_10.material"
+			>
+				<particle
+					startcolor="1 1 1"
+					midcolor=".6 .6 .6"
+					endcolor="0 0 0"
+					startscale="0.2"
+					endscale="1"
+					startalpha="0"
+					midalpha=".5"
+					endalpha="0"
+					midalphapos=".25"
+					size="100"
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="-50"
+					maxanglespeed="50"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				bone="_bone_fx_02"
+				position="0 0 25"
+				count="2"
+				spawnrate="110"
+				particlelife="1600"
+				gravity="1.0"
+				speed="10.0"
+				drag="0.0"
+				acceleration="0.0"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+				offsetdirection="0 0 0"
+				offsetradial="0 0 0"
+				particledirectionalspace="local"
+				inheritvelocity="0"
+				offsetsphere="15 15 0"
+			>
+				<particle
+				>
+					<billboard
+						life="100"
+						material="/shared/effects/materials/flash_01.material"
+						lockup="1"
+						lockright="1"
+						pitch="90"
+						param=".012"
+						minsize="75"
+						maxsize="165"
+						directionalspace="local"
+						color=".5"
+					/>
+				</particle>
+			</simpleemitter>
+
+			<simpleemitter
+				count="5"
+				bone="_bone_fx_02"
+				delay="50"
+				minspawnrate="25"
+				maxspawnrate="50"
+				minparticlelife="500"
+				maxparticlelife="1000"
+				gravity="5"
+				minspeed="200"
+				maxspeed="300"
+				drag="0.01"
+				position="0 0 0"
+				pitchspeed="79"
+				material="/shared/effects/materials/whitedot.material"
+				offsetsphere="5 5 0"
+				inheritvelocity="0"
+				direction="0 0 1"
+				minangle="0"
+				maxangle="25"
+			>
+				<particle
+					startcolor="1 1 1"
+					midcolor="1 .5 .25"
+					endcolor="0 0 0"
+					heightdistort=".1"
+					endframe="15"
+					startsize="1"
+					midsize="5"
+					endsize="5"
+					startalpha="0"
+					midalpha="0"
+					endalpha="0"
+					midalphapos="0"
+					turn="1"
+				/>
+			</simpleemitter>
+	
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+</effect>
+
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Hammerstorm4"
+
+	
+	
+	
+	statuseffecttooltip="State_Hammerstorm_Ability4"
+	icon="icons/ability_4.tga"
+	anim="ability_4"
+	casttime="1000"
+	castactiontime="100"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_self"
+	frontqueue="true"
+	casteffecttype="Magic"
+	
+	manacost="100,150,200"
+	cooldowntime="80000"
+	
+	targetscheme=""
+>
+	<onimpact >
+		<applystate name="State_Hammerstorm_Ability4" duration="25000" target="source_entity"/>
+	</onimpact>
+</ability>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Gauntlet_Ability2_Grabbed"
+
+	speed="1500"
+	gravity="2300"
+		
+	canturn="false"
+	flying="false"
+	flyheight="0"
+>
+	<onimpact>
+		<playanim name="idle" target="this_owner_entity" />
+		<kill target="proxy_entity" source="" />
+		<spawnprojectile name="Projectile_Gauntlet_Ability2_Hero" source="this_owner_entity" bind="this_owner_entity" bindstate="State_Gauntlet_Ability2" proxy="proxy_entity" target="target_position" pushentity="true" />
+	</onimpact>
+</projectile>

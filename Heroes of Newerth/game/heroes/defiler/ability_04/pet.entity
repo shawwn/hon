@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pet
+	name="Pet_Defiler_Ability4"
+		
+	icon="icon.tga"
+	portrait="icon.tga"
+	model="/shared/models/invis.mdf"
+	skin=""
+	
+	isunit="false"
+	
+	passiveeffect="effects/body.effect"
+	spawneffect=""
+	respawneffect=""
+	selectsound=""
+	orderconfirmedsound=""
+	iscontrollable="false"
+	
+	preglobalscale="1.17"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="64"
+	boundsradius="8"
+	isselectable="false"
+	selectionradius="0"
+	targetoffset="0 0 0"
+
+	movespeed="400"
+	turnrate="720"
+
+	cancarryitems="false"
+	invulnerable="true"
+	flying="true"
+	flyheight="0"
+	
+	diewithowner="true"
+	deathtime="0"
+	corpsetime="0"
+	
+	attackduration="0"
+	attackactiontime="0"
+	attackcooldown="2000"
+	attackdamagemin="43"
+	attackdamagemax="48"
+	attacknumanims="2"
+	attackoffset="0 60 100"
+	attackprojectile=""
+	attackrange="10"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="effects/impact.effect"
+	attackeffecttype=""
+	attacktype="melee"
+	combattype="Hero"
+	drawonmap="false"
+
+	aggrorange="600"
+	wanderrange="700"
+	maxdistancefromowner="2000"
+	
+	lifetime="30000"
+	unittype="PseudoPet"
+>
+	<onspawn>
+		<order command="wander" source="this_entity" target="this_owner_entity" />
+		<applystate name="State_Defiler_Ability4" proxy="this_owner_entity" duration="1000" />
+	</onspawn>
+		
+	<onattackingdamageevent>
+		<condition target="target_entity" test="target_type powerup">
+			<setvalue name="damage_attempted" a="0" />
+		</condition>
+		<condition target="target_entity" test="target_type chest">
+			<setvalue name="damage_attempted" a="0" />
+		</condition>
+	</onattackingdamageevent>
+	
+	<ondamage>
+		<accumulatedamage scale="0.25" />
+	</ondamage>
+	
+	<onexpired>
+		<heal target="this_owner_entity" a="accumulator" />
+	</onexpired>
+</pet>

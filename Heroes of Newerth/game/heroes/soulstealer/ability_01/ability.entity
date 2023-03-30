@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Soulstealer1"
+
+	icon="icon.tga"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="facing"
+	targetradius="275"
+	casteffecttype="Magic"
+	targetscheme="enemy_units"
+	
+	manacost="75"
+	cooldowntime="10000"
+	
+	modifierkey="raze1,raze2,raze3,raze4"
+	
+	interface="triple"
+>
+	<onimpact effectdescription="true"/>
+	
+	<modifier key="raze1" modpriority="90"
+		disabled="true"
+	/>
+	
+	<modifier key="raze2" modpriority="90"
+		disabled="true"
+	/>
+	
+	<modifier key="raze3" modpriority="90"
+		disabled="true"
+	/>
+	
+	<modifier key="raze4" modpriority="90"
+		disabled="true"
+	/>
+</ability>

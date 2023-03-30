@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="rig.max" file="high.model" type="K2" high="high.model" med="med.model" low="low.model" >
+	
+	<anim name="idle" clip="clips/default_1.clip" fps="30" loop="true"/>
+	
+	<anim name="portrait" clip="clips/portrait.clip" loop="true"/>
+
+	<anim name="item_1" clip="clips/item_1.clip" fps="35"/>
+	
+	<anim name="taunt_1" clip="clips/taunt_1.clip" fps="30" loop="false"/>
+	
+	<anim name="ability_2" clip="clips/ability_2.clip" fps="30" loop="false"/>
+
+	<anim name="ability_3_idle" clip="clips/ability_3_default.clip" fps="30" numframes="47" loop="true">
+		<startevent cmd="PlaySoundLinear /heroes/hunter/sounds/idle.wav 0 2000 .5 0 200 300"/>
+		<frameevent frame="1" cmd="PlaySoundLinear /heroes/hunter/sounds/move.wav 0 2400 .62"/>
+		<frameevent frame="19" cmd="PlaySoundLinear /heroes/hunter/sounds/move.wav 0 2400 .62"/>
+		<frameevent frame="34" cmd="PlaySoundLinear /heroes/hunter/sounds/move.wav 0 2400 .62"/>
+	</anim>
+
+	<anim name="ability_3_attack" clip="clips/ability_3_attack.clip" fps="30" loop="false">
+		<startevent cmd="StopSound 0"/>
+		<frameevent frame="12" cmd="PlaySoundLinear /shared/sounds/attacks/attack_medium_%.wav 400 2000 .65"/>
+		<frameevent frame="11" cmd="PlaySoundLinear /heroes/hunter/ability_03/sounds/ability_03_grunt_%.wav 400 2000 1"/>
+	</anim>
+
+	<anim name="ability_3_walk" clip="clips/ability_3_walk.clip" fps="33" loop="true">
+		<frameevent frame="3" cmd="PlaySoundLinear /heroes/hunter/sounds/move2.wav 0 2400 .62"/>
+		<frameevent frame="22" cmd="PlaySoundLinear /heroes/hunter/sounds/move2.wav 0 2400 .62"/>
+		<frameevent frame="41" cmd="PlaySoundLinear /heroes/hunter/sounds/move2.wav 0 2400 .62"/>
+		<frameevent frame="63" cmd="PlaySoundLinear /heroes/hunter/sounds/move2.wav 0 2400 .62"/>
+		<startevent cmd="StopSound 0"/>
+	</anim>
+
+	<anim name="ability_4" clip="clips/ability_4.clip" fps="30" loop="false">
+		<frameevent frame="9" cmd="PlaySoundLinear /shared/sounds/attacks/attack_medium_%.wav 400 2000 .65"/>
+		<frameevent frame="6" cmd="PlaySoundLinear /heroes/hunter/ability_04/sounds/ability_04_grunt.wav 400 2000 1"/>
+	</anim>
+
+	<anim name="attack_1" clip="clips/attack_1.clip" fps="32" loop="false">
+		<startevent cmd="StopSound 0"/>
+		<frameevent frame="15" cmd="PlaySoundLinear /shared/sounds/attacks/attack_medium_%.wav 400 2000 .65"/>
+	</anim>
+
+	<anim name="attack_2" clip="clips/attack_2.clip" fps="33" loop="false">
+		<startevent cmd="StopSound 0"/>
+		<frameevent frame="12" cmd="PlaySoundLinear /shared/sounds/attacks/attack_medium_%.wav 400 2000 .65"/>
+	</anim>
+
+	<anim name="walk_1" clip="clips/walk_1.clip" fps="33" numframes="51" loop="true">
+		<startevent cmd="StopSound 0"/>
+		<frameevent frame="5" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="10" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="19" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="24" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="26" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="31" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="42" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="47" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+
+		<frameevent frame="5" cmd="StartEffect /shared/effects/footstep_l_#GetTerrainType()#.effect"/>
+		<frameevent frame="19" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+		<frameevent frame="26" cmd="StartEffect /shared/effects/footstep_l_#GetTerrainType()#.effect"/>
+		<frameevent frame="42" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+	</anim>
+
+	<anim name="death_1" clip="clips/death_1.clip" fps="25" loop="true" loopbackframe="-1">
+		<startevent cmd="StopSound 0"/>
+		<frameevent frame="20" cmd="StartEffect effects/death.effect"/>
+		<frameevent frame="12" cmd="PlaySoundLinear /heroes/hunter/sounds/death.wav 400 2000 1"/>
+	</anim>
+		
+	<anim name="knock_1" clip="clips/knock_1.clip" loop="true" loopbackframe="-1"/>
+	
+	<anim name="getup_1" clip="clips/getup_1.clip"/>		
+				
+</model>

@@ -1,0 +1,21 @@
+Pudge from dota
+
+Ability 1:
+----------
+Throws a hook towards a point, collides with the first unit it hits and drags it back. Deals damage if it is an enemy unit. Upon impact, a blood effect can play at the target (but that and rupture is really as far as we are going with gore in this game). Hooked unit cannot issue orders while in transfer.
+
+
+Ability 2:
+----------
+Releases this rotting diseases stored inside him. Hurts you and nearby enemy units and slows them. Doesn't cost mana to turn on and off, but must be able to cast spells (not stunned). 
+
+
+Ability 3:
+----------
+This is a passive. It gives him bonus magic resitances and increases str when he kills units (minor effect). 
+
+
+Ultimate:
+---------
+Targets an enemy unit and disables it while dealing damage over time to it (Dismember).
+

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="ward_rig2.max" file="high.model" type="K2" >
+<anim name="idle" clip="high.clip" loop="1"/>
+</model>

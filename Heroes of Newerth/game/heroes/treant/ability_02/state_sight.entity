@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Treant_Ability2_Sight_Self"
+
+	icon="icon.tga"
+	sighted="true"
+	revealed="true"
+
+>
+</state>

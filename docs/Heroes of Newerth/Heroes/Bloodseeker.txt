@@ -1,0 +1,12 @@
+Ability 1: Blood Rage
+Description: Drives a unit into a bloodthristy rage. That unit is unable to cast spells, has its attack damage increased, and loses a small amount of hit points every second. This can be casted on enemy or ally or self.
+
+Ability 2: Bloodbath
+Description: Whenever Bloodseeker kills a unit, he bathes himself in its blood, regenerating some hp. 
+
+Ability 3: Strygwyr's Thirst
+Description: Enables Strygwyr to sense the bleeding of any enemy hero below 40% hp. If it finds one, Strygwyr gains vision of that unit and increases move speed. When this happens, the secondary heads should play some animation to try to make it feel more real, like they are the ones that sensed blood.
+
+Ultimate: Rupture
+Description: He releases a small unique creature from inside his hands that flies towards an enemy unit and ruptures him. This causes initial damage and causes the target to bleed. The more the target moves the more he bleeds and takes damage.
+

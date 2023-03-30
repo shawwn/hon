@@ -1,0 +1,4 @@
+The goal with the attack speed metrics here is to provide a more intuitive representation of what is happening below. Right now 10% doesn't really mean 10%.
+
+
+All heroes will start with 100 attack speed. This 100 means you take 1.7 seconds per attack. The 100 is your base attack speed. If you get gloves of haste (15%) for example, it would mean the same effect as it is right now, but instead of saying 15%, we say +15 attack speed. This in effect means the same thing, but does not imply percentage growth over non-base attack speed bonuses. That being said, things will operate by percentages. They will have the option of operating on either base attack speed or on bonus attack speed or total. 

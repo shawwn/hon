@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Hydromancer2"
+	
+	icon="icon.tga"
+	
+	anim="ability_2"
+	casttime="500"
+	castactiontime="200"
+	casteffect="projectile/effects/cast.effect"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_entity"
+	casteffecttype="Magic"
+	targetscheme="enemy_units"
+	
+	manacost="85,95,105,115"
+	cooldowntime="10000"
+
+	range="750"
+>
+	<onimpact>
+		<spawnunit name="Gadget_Hydromancer_Ability2_Reveal" count="1" target="source_position" pushentity="true" />
+		<spawnprojectile name="Projectile_Hydromancer_Ability2" source="source_entity" target="target_entity" bind="stack_entity" proxy="stack_entity" />
+	</onimpact>
+</ability>

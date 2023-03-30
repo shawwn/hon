@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Mumra_Ability2_Immune"
+
+	radius="190"
+	lifetime="3000,4000,5000,6000"
+
+	targetselection="all"
+	targetscheme="all_units"
+>
+	<onframeimpact>
+		<applystate name="State_Mumra_Ability2_Aggro" duration="100" />
+	</onframeimpact>
+
+	<onimpact>
+		<applystate name="State_Mumra_Ability2_Immunity" continuous="true" timeout="frametime" />
+	</onimpact>
+</affector>

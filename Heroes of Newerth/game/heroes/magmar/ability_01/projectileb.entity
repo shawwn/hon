@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Magmar_Ability1b"
+
+	speed="3000"
+	gravity="0"
+
+	modelscale="1.0"
+	model="effects/gunk.mdf"
+	
+	canturn="0"
+	flying="true"
+	flyheight="11"
+	
+	touchradius="145"
+	touchtargetscheme="enemy_units"
+	toucheffecttype="Magic"
+
+	maxtouchespertarget="1"
+>
+	<ontouch>
+		<applystate name="State_Magmar_Ability1_Enemy" duration="500"/>
+		<unbind target="target_entity" />
+		<spawnprojectile name="Projectile_Magmar_Ability1_Toss" source="target_entity" target="target_entity" bind="target_entity" ignoretargetoffset="true" noresponse="true" />
+	</ontouch>
+</projectile>

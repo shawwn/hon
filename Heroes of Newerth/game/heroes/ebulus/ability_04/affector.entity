@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Ebulus_Ability4"
+
+	radiusstart="50"
+	radiusend="950"
+	
+	innerradiusoffset="100"
+	
+	lifetime="1800"
+	maximpactspertarget="1"
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Magic"
+	persist="true"
+	impacteffect="effects/impact.effect"
+	effect="effects/cast.effect"
+>
+	<onimpact>
+		<applystate name="State_Ebulus_Ability4" duration="12000" />
+	</onimpact>
+</affector>

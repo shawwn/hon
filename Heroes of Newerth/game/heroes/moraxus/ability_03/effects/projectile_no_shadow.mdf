@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="" file="projectile_no_shadow.model" type="K2" >
+<anim name="idle" clip="projectile.clip" fps="150" loop="true"/>
+<anim name="idle_slow" clip="projectile.clip" fps="90" loop="true"/>
+
+</model>

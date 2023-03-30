@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="default.max" file="nymph.model" type="K2" >
+<spawnevent cmd="StartEffect glow.effect"/>
+
+	<anim name="idle" clip="default_1.clip" fps="42" loop="true"/>
+	
+</model>

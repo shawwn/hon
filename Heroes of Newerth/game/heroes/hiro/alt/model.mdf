@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="rig.max" file="high.model" type="K2" high="high.model" med="high.model" low="high.model" >
+	<spawnevent cmd="StartEffect effects/body_01.effect 0"/>
+	
+	<anim name="idle" clip="clips/default_1.clip" fps="30" loop="true">
+	</anim>
+	
+	<anim name="portrait" clip="clips/portrait_1.clip" fps="30" loop="true"/>
+	
+	<anim name="item_1" clip="clips/attack_1.clip" fps="35"/>
+	
+	<anim name="ability_1_start" clip="clips/ability_2.clip" fps="30" loop="false"/>
+
+	<anim name="ability_1" clip="clips/ability_1.clip" fps="48" loop="true" >
+		<startevent cmd="PlaySoundLinear /heroes/hiro/ability_01/sounds/ability_01.wav 1500 2500 .4"/>
+		<frameevent frame="1" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="6" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="12" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="18" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="24" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+	</anim>
+	
+	<anim name="ability_1_attack" clip="clips/attack_1.clip" fps="40" loop="false">
+		<frameevent frame="11" cmd="PlaySoundLinear /heroes/hiro/sounds/attack_%.wav  400 2000 .65"/>
+	</anim>
+	
+	<anim name="ability_2" clip="clips/ability_2_melee.clip" fps="50" loop="false"/>
+	<anim name="ability_2_ranged" clip="clips/ability_2.clip" fps="50" loop="false"/>
+
+	<anim name="ability_3" clip="clips/ability_3.clip" fps="32"/>
+	
+	<anim name="ability_4_attack1" clip="clips/ability_4_atk1.clip" fps="36" loop="false" blendtime="50">
+		<frameevent frame="1" cmd="PlaySoundLinear /heroes/hiro/ability_04/sounds/ability_04_grunt.wav 1500 2500 .5"/>
+		<frameevent frame="3" cmd="StartEffect effects/ability_04/bloodsplat.effect" />
+		<frameevent frame="1" cmd="PlaySoundLinear /heroes/hiro/sounds/slash_1.wav 400 2000 .65"/>
+		<frameevent frame="1" cmd="PlaySoundLinear /heroes/hiro/sounds/attack_1.wav 400 2000 .65"/>
+	</anim>
+
+	<anim name="ability_4_attack2" clip="clips/ability_4_atk2.clip" fps="36" loop="false" blendtime="50">
+		<frameevent frame="3" cmd="StartEffect effects/ability_04/bloodsplat.effect" />
+		<frameevent frame="1" cmd="PlaySoundLinear /heroes/hiro/sounds/slash_2.wav 400 2000 .65"/>
+		<frameevent frame="1" cmd="PlaySoundLinear /heroes/hiro/sounds/attack_2.wav 400 2000 .65"/>
+	</anim>
+
+	<anim name="ability_4_attack3" clip="clips/ability_4_atk3.clip" fps="36" loop="false" blendtime="50">
+		<frameevent frame="3" cmd="StartEffect effects/ability_04/bloodsplat.effect" />
+		<frameevent frame="1" cmd="PlaySoundLinear /heroes/hiro/sounds/slash_3.wav 400 2000 .65"/>
+		<frameevent frame="1" cmd="PlaySoundLinear /heroes/hiro/sounds/attack_3.wav 400 2000 .65"/>
+	</anim>
+
+	<anim name="ability_4_attack4" clip="clips/ability_4_atk4.clip" fps="36" loop="false" blendtime="50">
+		<frameevent frame="3" cmd="StartEffect effects/ability_04/bloodsplat.effect" />
+		<frameevent frame="1" cmd="PlaySoundLinear /heroes/hiro/sounds/slash_4.wav 400 2000 .65"/>
+		<frameevent frame="1" cmd="PlaySoundLinear /heroes/hiro/sounds/attack_4.wav 400 2000 .65"/>
+	</anim>
+
+	<anim name="attack_1" clip="clips/attack_1.clip" fps="32" loop="false">
+		<frameevent frame="12" cmd="PlaySoundLinear /heroes/hiro/sounds/move_%.wav 0 800 .1"/>
+		<frameevent frame="11" cmd="PlaySoundLinear /heroes/hiro/sounds/attack_%.wav  400 2000 .65"/>
+	</anim>
+
+	<anim name="attack_2" clip="clips/attack_2.clip" fps="32" loop="false">
+		<frameevent frame="12" cmd="PlaySoundLinear /heroes/hiro/sounds/move_%.wav 0 800 .1"/>>
+		<frameevent frame="4" cmd="PlaySoundLinear /heroes/hiro/sounds/attack_grunt_%.wav 500 2000 .75"/>
+		<frameevent frame="8" cmd="PlaySoundLinear /heroes/hiro/sounds/attack_%.wav  400 2000 .65"/>
+	</anim>
+
+	<anim name="walk_1" clip="clips/walk_1.clip" fps="30" loop="true" blendtime= "150">
+		<frameevent frame="3" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="8" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="16" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="21" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		
+		<frameevent frame="3" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+		<frameevent frame="8" cmd="PlaySoundLinear /heroes/hiro/sounds/move_%.wav 0 800 .1"/>
+		<frameevent frame="16" cmd="StartEffect /shared/effects/footstep_l_#GetTerrainType()#.effect"/>
+		<frameevent frame="21" cmd="PlaySoundLinear /heroes/hiro/sounds/move_%.wav 0 800 .1"/>
+	</anim>
+
+	<anim name="bored_1" clip="clips/bored_1.clip" fps="30" loop="false"/>
+
+	<anim name="taunt_1" clip="clips/taunt_1.clip" fps="30" loop="false">
+		<frameevent frame="11" cmd="PlaySoundLinear /heroes/hiro/sounds/move_%.wav 0 800 .1"/>
+	</anim>
+
+	<anim name="death_1" clip="clips/death_1.clip" fps="25" loop="true" loopbackframe="-1">
+		<frameevent frame="4" cmd="PlaySoundLinear /heroes/hiro/sounds/death.wav 0 1800"/>
+		<frameevent frame="5" cmd="PlaySoundLinear /heroes/hiro/sounds/move_%.wav 0 800 1"/>
+		<frameevent frame="25" cmd="PlaySoundLinear /heroes/hiro/sounds/move_%.wav 0 800 1"/>
+		<frameevent frame="20" cmd="PlaySoundLinear /heroes/vanya/sounds/attack_1.wav 0 1800 .3"/>
+		<frameevent frame="23" cmd="StartEffect effects/death.effect"/>
+	</anim>
+
+	<anim name="knock_1" clip="clips/knock_1.clip" loop="true" loopbackframe="-1"/>
+	
+	<anim name="getup_1" clip="clips/getup_1.clip"/>	
+</model>

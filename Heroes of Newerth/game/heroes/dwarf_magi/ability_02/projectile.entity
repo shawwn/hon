@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_DwarfMagi_Ability2"
+
+	speed="950"
+	gravity="500"
+
+	modelscale="1"
+	model="effects/hammer.mdf"
+
+	effectscale="2.0"
+	impacteffect="effects/impact.effect"
+	traileffect="effects/projectile.effect"
+	deatheffect="effects/death.effect"
+>
+</projectile>

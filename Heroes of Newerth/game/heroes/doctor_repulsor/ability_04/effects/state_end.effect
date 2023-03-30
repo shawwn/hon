@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect  deferred="1">
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+			
+			
+			<simpleemitter
+				spawnrate="1000"
+				count="1"
+				particlelife="5500"
+				offsetsphere="0 25 0"
+				position="0 0 0"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+			>
+				<particle>
+					<billboard
+						life="550"
+						startcolor="0.05 0.2 0.4"
+						midcolor="0.05 0.2 0.4"
+						endcolor="0"
+						startsize="350"
+						endsize="0"
+						depthbias="-50"
+						material="/shared/effects/materials/whitedot.material"
+						position="0 0 25"
+					/>
+					
+					<billboard
+						position="0 0 50"
+						delay="0"
+						life="350"
+						param="0.1"	
+						startsize="150"
+						endsize="300"
+						startalpha="0"
+						midalpha=".35"
+						endalpha="0"				
+						depthbias="0"
+						material="/shared/effects/materials/refract_swell.material"
+						lockup="1"
+						lockright="1"
+						pitch="90"
+					/>
+					
+					<billboard
+						position="0 0 50"
+						delay="175"
+						life="350"
+						param="0.1"	
+						startsize="150"
+						endsize="300"
+						startalpha="0"
+						midalpha=".35"
+						endalpha="0"				
+						depthbias="0"
+						material="/shared/effects/materials/refract_swell.material"
+						lockup="1"
+						lockright="1"
+						pitch="90"
+					/>
+				</particle>
+			</simpleemitter>
+	
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+	  
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Hantumon1"
+	
+	statuseffecttooltip="State_Hantumon_Ability1"
+	icon="icon.tga"
+	
+	anim="ability_1"
+	casttime="1000"
+	castactiontime="200"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_position"
+	targetradius="250,275,300,325"
+	targetmaterial="/shared/materials/area_cast_legion_indicator.material"
+	casteffecttype="Magic"
+	targetscheme="enemy_units"
+	
+	manacost="75,80,85,90"
+	cooldowntime="15000"
+	
+	range="425"
+>
+	<onimpact >
+		<spawnunit name="Gadget_Hantumon_Ability1" target="target_position"/>
+	</onimpact>
+</ability>

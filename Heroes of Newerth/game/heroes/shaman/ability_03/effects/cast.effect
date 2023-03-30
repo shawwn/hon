@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="chain_lightning">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="1">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2500"
+				volume="0.85" 
+				sample="../sounds/cast.wav"
+			/>
+
+			<model
+				life="5000"
+				model="/shared/effects/models/legion_death_rig/model.mdf"
+				anim="idle"
+				yawspeed="90"
+				pitchspeed="45"
+				startscale="5"
+				endscale="3"
+			>
+				<template name="ghosts">
+					<twopointtrailemitter
+						life="1500"
+						name="trail01"
+						bone_a="{bone01}"
+						bone_b="{bone02}"
+						spawnrate="30"
+						particlelife="1800"
+						texpostime="1800"
+						texposscale="0"
+						texstretchscale="1"
+						material="/shared/effects/materials/soul_projectile.material"
+					>
+						<particle
+							startcolor="0 1 0"
+							midcolor="0 1 0"
+							endcolor="0 1 0"
+							startalpha="1"
+							midalpha=".5"
+							endalpha="0"
+						/>
+					</twopointtrailemitter>
+				</template>
+				
+				<instance name="ghosts" bone01="_bone_01" bone02="_bone_02" />
+				<instance name="ghosts" bone01="_bone_03" bone02="_bone_04" />
+				<instance name="ghosts" bone01="_bone_05" bone02="_bone_06" />
+				<instance name="ghosts" bone01="_bone_07" bone02="_bone_08" />
+				<instance name="ghosts" bone01="_bone_09" bone02="_bone_10" />
+				<instance name="ghosts" bone01="_bone_11" bone02="_bone_12" />
+				<instance name="ghosts" bone01="_bone_13" bone02="_bone_14" />
+				<instance name="ghosts" bone01="_bone_15" bone02="_bone_16" />
+					
+			</model>
+			
+			<model
+				life="1000"
+				model="/shared/effects/models/circle_of_bones/model.mdf"
+				anim="idle"
+				yawspeed="90"
+				pitchspeed="180"
+				startscale="1"
+				midscale="2"
+				endscale="1"
+			>
+				<template name="ghosts02">
+					<twopointtrailemitter
+						life="1500"
+						name="trail01"
+						bone_a="{bone01}"
+						bone_b="{bone02}"
+						spawnrate="30"
+						particlelife="1750"
+						texpostime="1750"
+						texposscale="0"
+						texstretchscale="1"
+						material="/shared/effects/materials/soul_projectile.material"
+					>
+						<particle
+							startcolor="0 1 0"
+							midcolor="0 1 0"
+							endcolor="0 1 0"
+							startalpha="1"
+							midalpha=".5"
+							endalpha="0"
+						/>
+					</twopointtrailemitter>
+				</template>
+				
+				<instance name="ghosts02" bone01="_bone_fx_01" bone02="_bone_fx_02" />
+				<instance name="ghosts02" bone01="_bone_fx_03" bone02="_bone_fx_04" />
+				<instance name="ghosts02" bone01="_bone_fx_05" bone02="_bone_fx_06" />
+				<instance name="ghosts02" bone01="_bone_fx_07" bone02="_bone_fx_08" />
+				<instance name="ghosts02" bone01="_bone_fx_09" bone02="_bone_fx_10" />
+				<instance name="ghosts02" bone01="_bone_fx_11" bone02="_bone_fx_12" />
+				<instance name="ghosts02" bone01="_bone_fx_13" bone02="_bone_fx_14" />
+				<instance name="ghosts02" bone01="_bone_fx_15" bone02="_bone_fx_16" />
+					
+			</model>
+		
+			<model
+				life="650"
+				parentmodel="true"
+				parentskeleton="true"
+				startcolor="0 1 0"
+				endcolor="0 0 0"
+				startscale="1.5"
+				midscale="1"
+				endscale="1"
+				midscalepos=".4"
+				material="/shared/effects/materials/shell2.material"
+				position="0 0 0"
+			/>
+			
+			<model
+			delay="500"
+				life="650"
+				parentmodel="true"
+				parentskeleton="true"
+				startcolor="0 0 0"
+				midcolor="0 1 0"
+				endcolor="0 0 0"
+				startscale="1"
+				midscale="1"
+				endscale="1"
+				midscalepos=".25"
+				material="/shared/effects/materials/shell2.material"
+				position="0 0 0"
+			/>
+			
+			<simpleemitter
+				count="25"
+				bone="_bone_centerofchest"					
+				spawnrate="1000"
+				particlelife="500"
+				gravity="0"
+				offsetsphere="15 15 15"
+				drag="0"
+				acceleration="0"
+				direction="0 0 0"
+				material="/shared/effects/materials/phantom_smoke_04.material"
+			>
+				<particle 
+					startcolor="0 .5 0"
+					midcolor="0 .5 0"
+					endcolor="0 0 0"
+					midcolorpos="0.4"				
+					minangle="0"
+					maxangle="360"
+					startsize="50"
+					midsize="25"				
+					endsize="10"
+					startalpha=".2 .2 .2"
+					midsizepos=".8"
+					minanglespeed="-90"
+					maxanglespeed="90"
+					anchor=".25"
+					/>			
+			</simpleemitter>
+			
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+</effect>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect entityeffectscale="true" deferred="1">
+
+	<definitions>
+
+		<particlesystem name="system0" space="global" scale="1" >
+
+			<billboard
+				size="150"
+				color=".3 .1 0"
+				depthbias="-60"
+				material="/shared/effects/materials/whitewater_02.material"
+			/>
+
+			<simpleemitter
+				spawnrate="35"
+				particlelife="300"
+				offsetsphere="35 15 0"
+				material="/shared/effects/materials/bad_healing_smoke_12.material"
+				direction="0 -1 0"
+				angle="0"
+			>
+				<particle
+					startcolor="1 .65 0.32"
+					midcolor="1 .5 0.2"
+					endcolor="0"
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					startsize="80"
+					endsize="30"
+					maxangle="360"
+					depthbias="-30"
+					minanglespeed="-35"
+					maxanglespeed="35"
+			 	/>
+			</simpleemitter>
+
+			<simpleemitter
+				startspawnrate="45"
+				endspawnrate="0"
+				particlelife="700"
+				offsetsphere="35 5 0"
+        			material="/shared/effects/materials/dust.material"
+				direction="0 -1 0"
+				speed="100"
+				angle="0"
+			>
+				<particle
+					startcolor=".4"
+					endcolor="0"
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					startsize="70"
+					endsize="60"
+					maxangle="360"
+					depthbias="-30"
+					minanglespeed="-35"
+					maxanglespeed="35"
+			 	/>
+			</simpleemitter>
+
+			<trailemitter
+				spawnrate="100"
+				particlelife="800"
+				texpostime="200"
+			 	texposscale="0"
+			 	texstretchscale=".5"
+				material="/shared/effects/materials/smash_add.material"
+			>
+				<particle
+					 startcolor="1 .3 0"
+					 endcolor="0"
+					 startsize="80"
+					 endsize="30"
+				 />
+			</trailemitter>
+
+			<trailemitter
+				spawnrate="100"
+				particlelife="800"
+				texpostime="500"
+			 	texposscale="0"
+			 	texstretchscale=".8"
+				material="/shared/effects/materials/luna_moon_symbol_02.material"
+			>
+				<particle
+					 startcolor="1 .3 0"
+					 endcolor="0"
+					 startsize="120"
+					 endsize="30"
+				 />
+			</trailemitter>
+
+			<simpleemitter
+				spawnrate="35"
+				minparticlelife="200"
+				maxparticlelife="800"
+				offsetsphere="60 15 15"
+				position="0 10 0"
+				angle="10"
+				material="/shared/effects/materials/phantom_smoke_04.material"
+			>
+				<particle
+					startcolor="0"
+					midcolor="1 .50 0.1"
+					endcolor="0"
+					startsize="25"
+					endsize="50"
+					maxangle="360"
+					depthbias="-130"
+					minendscale="1"
+					maxendscale="3"
+			 	/>
+			</simpleemitter>
+
+			<simpleemitter
+				offsetsphere="30 15 5"
+				spawnrate="10"
+				particlelife="1000"
+				speed="180.0"
+				direction="0 -1 0"
+				angle="10"
+				material="/shared/effects/materials/refract_outsplash.material"
+			>
+				<particle
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					startsize="100"
+					endsize="170"
+					param=".2"
+					depthbias="-60"
+					maxangle="360"
+				/>
+			</simpleemitter>
+
+			<billboard
+				size="300"
+				color=".3 .1 0"
+				depthbias="-60"
+				material="/shared/effects/materials/glow_01.material"
+			/>
+
+			<simpleemitter
+				spawnrate="20"
+				minparticlelife="500"
+				maxparticlelife="1200"			
+				gravity="24"
+				minspeed="350"
+				maxspeed="1600"
+				drag=".02"
+				material="/shared/effects/materials/spark_10.material"
+				offsetsphere="2"
+				minangle="-10"
+				maxangle="40"
+				direction="0 -1 0"
+				directionalspace="local"
+				inheritvelocity="-.3"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="1"
+					midcolor="1 .6 0"
+					endcolor="0"
+					midcolorpos=".2"
+					minstartsize="18"
+					maxstartsize="26"
+					midsize="12"
+					endsize="6"
+					startalpha="0"
+					midalpha=".7"
+					endalpha="0"
+					midalphapos=".5"
+					turn="true"
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

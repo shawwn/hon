@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+	<definitions>
+
+		<particlesystem name="system0" space="local" scale="1">
+		
+
+			<sound
+				soundloop="true"
+				fadein="100"
+				fadeout="200"
+				volume="1"
+				sample="../sounds/trail.wav"
+				linearfalloff="true"
+				falloffstart="1000" 
+				falloffend="2500" 
+			/>	
+
+	
+		
+			<simpleemitter
+				bone="_bone_09"
+				
+				spawnrate="100"
+				particlelife="750"
+			
+				gravity="0"
+				minspeed="50"
+				maxspeed="100"
+				drag="0"
+				acceleration="0"
+				position="0 0 0"
+				material="/shared/effects/materials/dust_smoke_10.material"
+				minangle="0"
+				maxangle="20"
+				direction="0 0 1"
+				offsetsphere="20 20 0"
+			>
+				<particle
+					minangle="0"
+					maxangle="0"
+					minanglespeed="50"
+					maxanglespeed="150"
+					startcolor=".7 .7 .7"
+					endcolor=".25 .25 .25"
+					startsize="50"
+					endsize="20"
+					startalpha=".5"
+					midalpha=".2"
+					endalpha="0"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				bone="_bone_09"
+				
+				spawnrate="1100"
+				
+		
+				particlelife="200"			
+				gravity="-25"
+				speed="20"
+				drag=".005"
+				material="/shared/effects/materials/spark_10.material"
+				offsetsphere="2"
+				
+				direction="0 0 1"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="1"
+					midcolor="1 .4 0"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					minstartsize="18"
+					maxstartsize="26"
+					midsize="12"
+					endsize="6"
+					startalpha="0"
+					midalpha=".7"
+					endalpha="0"
+					midalphapos=".5"
+				/>
+			</simpleemitter>
+			
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+

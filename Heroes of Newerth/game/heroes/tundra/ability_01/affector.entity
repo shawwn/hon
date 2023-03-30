@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Tundra_Ability1"
+
+	radius="150"
+	lifetime="-1"
+	
+	maximpactspertarget="1"
+	targetselection="all"
+	targetscheme="enemy_units"
+	
+	destroytrees="true"
+>
+	<onimpact>
+		<applystate name="State_Tundra_Ability1" duration="3000" />
+	</onimpact>
+</affector>

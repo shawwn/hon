@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Hydromancer_Ability2"
+	
+	icon="icon.tga"
+	passiveeffect=""
+	
+	ishidden="true"
+
+>
+	<onexpired>
+		<playanim name="knock_1" target="target_entity" />
+	</onexpired>
+</state>

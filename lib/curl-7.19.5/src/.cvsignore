@@ -1,0 +1,5 @@
+LIB-Debug
+LIB-Release
+DLL-Debug
+DLL-Release
+*.user

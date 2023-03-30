@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="goo_impact_test">
+	<definitions>
+		<particlesystem name="system0" space="entity" scale="1.2">
+
+		<simpleemitter
+		
+			spawnrate="150"
+			count="20"
+			bone="_bone_centerofchest"
+			particlelife="800"			
+			gravity="20"
+			speed="165"
+			drag=".02"
+			acceleration="0"
+			position="0 0 0"
+			timenudge="-100"
+			material="/shared/effects/materials/poison_09.material"
+			offsetsphere="5 5 5"
+			minangle="20"
+			maxangle="-20"
+			directionalspace="global"
+			direction="0 0 1"
+			offsetdirection="0 0 0"
+			offsetradial="0 0 0"
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+				maxanglespeed="0"
+				startcolor="0 1 0"
+				midcolor="0 1 0"
+				endcolor="0 0 0"
+				midcolorpos=".2"
+
+				startframe="0"
+				endframe="1"
+				startsize="1"
+				midsize="32.5"
+				endsize="65"
+				startalpha="0"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".5"
+
+				startstickiness=".2"
+				endstickiness="0"
+
+			/>
+
+		</simpleemitter>
+
+
+		<simpleemitter
+		
+			spawnrate="150"
+			count="20"
+			bone="_bone_centerofchest"
+			particlelife="1000"			
+			gravity="23"
+			speed="250"
+			drag=".013"
+			acceleration="0"
+			position="0 0 0"
+			timenudge="-450"
+			material="/shared/effects/materials/poison_09.material"
+			offsetsphere="3 3 3"
+			minangle="15"
+			maxangle="-15"
+			directionalspace="global"
+			direction="0 0 1"
+			offsetdirection="0 0 0"
+			offsetradial="0 0 0"
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+				maxanglespeed="0"
+				startcolor="0 1 0"
+				midcolor="0 1 0"
+				endcolor="0 0 0"
+				midcolorpos=".2"
+
+				startframe="0"
+				endframe="1"
+				startsize="1"
+				midsize="20"
+				endsize="40"
+				startalpha="0"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".5"
+
+				startstickiness=".2"
+				endstickiness="0"		
+
+			/>
+
+		</simpleemitter>
+
+		
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

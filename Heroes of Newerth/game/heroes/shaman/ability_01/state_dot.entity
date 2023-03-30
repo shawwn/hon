@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Shaman_Ability1_Damage"
+
+	
+	
+	icon="icon.tga"
+	passiveeffect=""
+	deniable="true"
+	
+>
+	<onframe >
+		<damage effecttype="Physical DOT" amount="7,14,21,28" b="frametime" op="mult" />
+	</onframe>
+</state>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="skull.max" file="skull.model" type="K2" >
+	<anim name="idle" clip="skull.clip" loop="1" loopbackframe="-1" fps="100"/>
+</model>

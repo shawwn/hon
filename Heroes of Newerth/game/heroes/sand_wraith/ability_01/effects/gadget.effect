@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="	" deferred="1">
+	<definitions>
+
+	
+		<particlesystem name="system0" space="world" scale="0.75">
+
+
+	
+			
+			
+			<terrainemitter
+				position="0 0 0"
+				spawnrate="11111"
+				count="2"
+				
+				gravity="0"			
+				offsetsphere="80 80 0"
+				direction="1 0 0"
+				minangle="-180"
+				maxangle="180"
+				speed="0"
+				directionalspace="global"
+				inheritvelocity="0"
+				depthbias="-20"
+			>
+				<particle
+										
+				>
+				
+
+					<groundsprite
+						delay="0"
+						material="/shared/effects/materials/sand_groun.material"	
+						minscale="2.2"
+						maxscale="2.65"
+						expirelife="600"
+						color=".5 .47 .4"
+						minyaw="-360"
+						maxyaw="360"
+						startalpha="0.4"							
+						endalpha="0"
+					/>
+					
+					
+				</particle>
+			</terrainemitter>		
+			
+			
+				
+			
+			
+      </particlesystem>
+   </definitions>
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<spawnmodifier instance="instance1" modifier="modifier0"/>  
+	
+	<waitfordeath instance="instance0" />
+	<wait duration="20000"/>
+	<!-- <die /> -->
+</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Valkyrie_Ability2"
+	
+	
+	
+	icon=""
+	portrait=""
+	model=""
+	
+	preglobalscale="1.0"
+	modelscale="1.0"
+	effectscale="1.0"
+	boundsheight="0"
+	boundsradius="0"
+	isselectable="false"
+	selectionradius="0"
+	targetoffset="0 0 0"
+
+	canrotate="false"
+	ismobile="false"
+
+	attacktype="none"
+	combattype="Ranged"
+
+	sightrangeday="0"
+	sightrangenight="0"
+	unitwalking="true"
+	canattack="false"
+	deathtime="0"
+	corpsetime="0"
+	
+	invulnerable="true"
+	flying="false"
+	drawonmap="false"
+
+>
+	<ondeath>
+		<kill target="proxy_entity" source="" />
+	</ondeath>
+
+</gadget>

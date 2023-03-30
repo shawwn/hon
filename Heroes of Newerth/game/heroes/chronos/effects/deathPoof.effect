@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect>
+
+	<definitions>
+
+		<particlesystem name="system0" space="world">
+			
+			<light
+				life="350"			
+				startcolor="2 4 8"			
+				endcolor="0 0 0"
+				position="0 0 40"	
+			/>
+			
+			<model		
+				position="0 0 230"
+				life="1000"
+				model="/shared/effects/models/orb/orb.mdf"
+				anim="idle"
+				scale=".5"
+				color="2"	
+			/>
+			
+			<billboard
+				delay="150"
+				position="0 0 230"
+				life="350"
+				color="0 0.4 .8"
+				endcolor="0"
+				startsize="25"
+				endsize="400"
+				material="/shared/effects/materials/stomp_01.material"
+				lockup="1"
+				pitch="90"
+			/>	
+
+			<simpleemitter
+				life="400"	
+				spawnrate="20"		
+				particlelife="400"			
+				speed="30"
+				position="0 0 230"
+				material="/shared/effects/materials/blink.material"
+				offsetsphere="15"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-40"
+					maxanglespeed="-40"
+					startcolor="0"
+					midcolor="1 1 1"
+					endcolor="0"		
+					startsize="200"
+					endsize="0"
+					startstickiness="-1"
+					endstickiness="1"
+				/>
+			</simpleemitter>
+		
+			<simpleemitter
+				life="400"	
+				spawnrate="35"		
+				particlelife="1000"			
+				speed="30"
+				position="0 0 230"
+				material="/shared/effects/materials/phantom_smoke_13.material"
+				offsetsphere="45"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-40"
+					maxanglespeed="-40"
+					startcolor="0 .3 .5"
+					endcolor="0"		
+					startsize="0"
+					endsize="100"
+					startstickiness="-1"
+					endstickiness="1"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				life="700"
+				position="0 0 230"				
+				spawnrate="5000"
+				depthbias="-100"
+				particlelife="1400"
+				count="35"
+				direction="0 0 1"
+				offsetsphere="10"	
+          			material="/shared/effects/materials/smash_add.material"
+         	>
+				<particle 
+					minanglespeed="-180"
+					maxanglespeed="180"
+					minangle="0"
+					maxangle="360"
+					startcolor="0"
+					midcolor="0 0.4 1"
+					endcolor="0"
+					midcolorpos="0.25"
+					startsize="40"
+					endsize="75"
+					startanchor="1.0"
+					midanchor="0.9"
+					endanchor="0.8"
+					flare="1"
+					startheight="100"
+					endheight="0"
+				/>
+			</simpleemitter>
+
+			<billboard
+				delay="160"
+				position="0 0 230"
+				life="1200"
+				startalpha="1.0"				
+				endalpha="0"
+				startparam="0.15"
+				endparam="0.0"				
+				startsize="50"
+				endsize="350"
+				material="/shared/effects/materials/refract_bubble.material"
+			/>
+
+		</particlesystem>
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->

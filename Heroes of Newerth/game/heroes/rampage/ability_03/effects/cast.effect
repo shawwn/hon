@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="">
+	<definitions>
+
+		<modifier
+			name="modifier0"
+			life="1000"
+			startcolor="1 1 1"
+			endcolor="1 1 1"
+			alpha="1"
+		/>	
+
+		<particlesystem name="system0" space="world" scale="1" >
+
+			<simpleemitter
+				bone="Bip01 Head"
+				life="150"
+				particlelife="1200"
+				spawnrate="25"
+				speed="250"
+				gravity="10"
+				direction="0 -1 0"
+				particledirectionalspace="local"
+				minangle="0"
+				maxangle="5"
+				material="/shared/effects/materials/blood1.material"
+				offsetsphere="15 15 15"
+				position="0 0 0"
+			>
+				<particle 
+					minanglespeed="-100"
+					maxanglespeed="100"
+					minangle="-360"
+					maxangle="360"
+					color=".35 0 0"
+					startsize="40"
+					minendsize="60"
+					maxendsize="100"
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				bone="Bip01 Head"
+				life="150"
+				particlelife="1200"
+				spawnrate="40"
+				speed="150"
+				gravity="10"
+				direction="0 -1 0"
+				particledirectionalspace="local"
+				minangle="0"
+				maxangle="25"
+				material="/shared/effects/materials/smoke_particle.material"
+				offsetsphere="0 0 0"
+				position="0 0 0"
+			>
+				<particle 
+					minanglespeed="-100"
+					maxanglespeed="100"
+					minangle="-360"
+					maxangle="360"
+					color=".4 .3 .25"
+					startsize="50"
+					minendsize="80"
+					maxendsize="150"
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+      </particlesystem>
+   </definitions>
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<spawnmodifier instance="instance1" modifier="modifier0"/>  
+	
+	<waitfordeath instance="instance0" />
+	<wait duration="20000"/>
+	<!-- <die /> -->
+</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_FlintBeastwood_Ability1"
+
+	speed="2000"
+	gravity="15000"
+
+	modelscale="1"
+	model="effects/flare/model.mdf"
+
+	effectscale="1.0"
+	traileffect="effects/trail.effect"
+	impacteffect=""
+>	
+	<onimpact>
+		<areaofeffect
+			radius="300"
+			targetselection="all"
+			targetscheme="enemy_units_and_Towers"
+			effecttype="Magic"
+		>
+			<cantarget targetscheme="enemy_units">
+				<applystate name="State_FlintBeastwood_Ability1_DoT" duration="2000" />
+			</cantarget>
+			<else>
+				<damage effecttype="Magic" amount="25,50,75,100" />
+			</else>
+		</areaofeffect>
+		<spawnunit name="Gadget_FlintBeastwood_Ability1" count="1" target="target_position" />
+		<spawnaffector name="Affector_FlintBeastwood_Ability1" target="target_position" />
+	</onimpact>
+</projectile>

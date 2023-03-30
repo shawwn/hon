@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="true">
+	<definitions>
+		<particlesystem name="system0" space="entity" scale="1">
+
+			<sound
+				soundloop="true"
+				fadein="200"
+				fadeout="300"
+				linearfalloff="true" 
+				falloffstart="600"
+				falloffend="1800"
+				volume=".7"
+				sample="/heroes/hunter/ability_03/sounds/ability_03.wav"
+			/>
+			
+			<billboard			
+				startcolor="1 0 0"
+				endcolor="0.2 0 0"
+				startsize="100"
+				midsize="120"
+				endsize="100"
+				material="/shared/effects/materials/shieldstarfish.material"
+				depthbias="-50"
+				position="0 0 30"
+				loop="true"
+				life="1000"
+			/>		
+			
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+

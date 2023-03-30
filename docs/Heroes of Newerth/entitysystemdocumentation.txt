@@ -1,0 +1,1847 @@
+S01 Order of Documentation
+
+	S01	Entity Structure
+	S01 Events
+	S02 Actions
+	S03 Broken Actions
+	S04 Tutorial Actions
+	S05	Tool (Ability/Item) Properties
+	S06 Tool actiontype List
+	S07 Ability-specific properties
+	S08 Entity Action Targets
+	S09 Commands / Orders
+	510 Dynamic Values
+	
+	
+S01 Notes
+	
+		uint - Non negative integer
+		int - Integer
+		float - Float Number, any number, can include decimals
+		bool - true or false
+		TargetScheme is a valid targetscheme in the base.gamemechanics file
+		
+		Properties are all of the valid properties that can go in the "top half" of the type of entity listed
+		The format is "XXXXX YYYYY" where X's are the property and Y's are the input needed. Ends up being XXXX="ZZZZZ" where Z's are the value that fits the type that Y is.
+		Properties are all multi-level unless stated otherwise
+		
+		Actions list the default value in quotes
+		All actions have a source and target even if they are not stated explicitly
+		
+	
+	
+S01	Entity Structure						// Everything in the actual game is an entity that can be modified and changed
+
+																Entity
+								 __________________________________|____________________________________________
+								/					/				|				\				\			\
+								|				Projectile		Affector		Linear Affector		Game		Order
+								|
+							  Units  // List of types of units:
+								|				Hero		Gadget		Pet
+								|				Neutral		Critter		Gadget
+								|				Shop		Powerup		Building
+								|			
+								---------------	Units can own slaves	// A unit's stats are the stats/conditions of all of the slaves added together
+													|
+												  Slaves
+												/		\
+											States		Tools
+														/	\
+												   Ability	Item
+
+Order-specific Properties
+	
+	triggerrange="0"
+	
+Game-specific Properties					// None of these can be multi-level
+
+	startinggold uint
+	repickcost uint
+	randombonus uint
+	heropoolsize uint
+	bancount uint
+	extratime uint
+	
+	alternatepicks bool
+	
+	goldpertick uint
+	incomeinterval uint
+	experiencemultiplier float
+	towerdenygoldmultiplier float
+	
+	nolobby bool
+	noheroselect bool
+	nodev bool
+	
+Linear Affector-specific Properties
+
+	lifetime uint
+	radius float
+	minlength float
+	maxlength float
+	impactdelay uint
+	impactinterval uint
+	maxintervals uint
+	maxtotalimpacts uint
+	maximpactsperinterval uint
+	maximpactspertarget uint
+	maximpactspertargetperinterval uint
+	subsegmentoffset float
+	subsegmentlength float
+	targetselection		// Valid includes "all", "random_angle_distance", "random_position", "random", "furthest", and "closest"
+	targetscheme TargetScheme
+	effecttype uint
+	persist bool
+	destroytrees bool
+
+	effect Effect No-MultiLevel
+	impacteffect Effect No-MultiLevel
+	bridgeeffect Effect No-MultiLevel
+	linkeffect Effect No-MultiLevel
+
+Affector-specific Properties
+	
+	lifetime uint
+	
+	radius float							// Can change over the duration by adding start or end to the end of the word. Example: radiusstart, radiusend
+	innerradiusoffset float					// Can change over the duration by adding start or end to the end of the word. Example: innerradiusoffsetstart, innerradiusoffsetend
+	arc float								// Can change over the duration by adding start or end to the end of the word. Example: arcstart, arcend
+	angle float								// Can change over the duration by adding start or end to the end of the word. Example: anglestart, angleend
+	speed float								// Can change over the duration by adding start or end to the end of the word. Example: speedstart, speedend
+	
+	impactdelay uint
+	impactinterval uint
+	maxintervals uint
+	maxtotalimpacts uint
+	maximpactsperinterval uint
+	maximpactspertarget uint
+	maximpactspertargetperinterval uint
+	targetselection							// Valid includes "all", "random_angle_distance", "random_position", "random", "furthest", and "closest"
+	targetscheme TargetScheme
+	ignoreinvulnerable bool
+	effecttype uint
+	persist bool
+	destroytrees bool
+	canturn bool
+
+	effect Effect No-MultiLevel
+	impacteffect Effect No-MultiLevel
+	bridgeeffect Effect No-MultiLevel
+	linkeffect Effect No-MultiLevel
+	
+Projectile-specific Properties
+
+	
+Unit-specific Properties					// These properties are valid in all unit types
+
+	icon
+	portrait
+	Model
+	mapicon
+	mapiconcolor R G B
+	mapiconsize float
+	skin
+	drawonmap bool
+	partialcontrolshare bool
+	idleanim Anim
+	walkanim Anim
+	deniedanim Anim
+	gibanim Anim
+	
+	passiveeffect Effect
+	spawneffect Effect
+	selectedsound Sample No-MultiLevel
+	selectedflavorsound Sample No-MultiLevel
+	confirmmovesound Sample No-MultiLevel
+	confirmattacksound Sample No-MultiLevel
+	tauntedsound Sample No-MultiLevel
+	tauntkillsound Sample No-MultiLevel
+	nomanasound Sample No-MultiLevel
+	cooldownsound Sample No-MultiLevel
+
+	preglobalscale float
+	modelscale float
+	effectscale float
+	infoheight float
+	boundsradius float
+	boundsheight float
+	isselectable bool
+	nocorpse bool
+	iscontrollable bool
+	isunit bool No-MultiLevel
+	noglobalselect bool No-MultiLevel
+	noblockneutralspawn bool No-MultiLevel
+	selectionradius float
+	targetoffset 0 0 0
+
+	ismobile bool
+	canattack bool
+	canrotate bool
+	movespeed float
+	slowresistance float
+	turnrate float No-MultiLevel
+	turnsmoothing float No-MultiLevel
+	blocking bool
+	antiblocking bool
+
+	maxhealth float
+	healthregen float
+	maxmana float
+	manaregen float
+	
+	armortype ArmorType
+	armor float
+	magicarmortype MagicArmorType
+	magicarmor float
+
+	lifesteal float
+
+	healthregenreduction float
+	manaregenreduction float
+	
+	cancarryitems bool
+	dropitemsondeath bool
+	passiveinventory bool
+	inventory0
+	inventory1
+	inventory2
+	inventory3
+	inventory4
+	inventory5
+	inventory6
+	inventory7
+	inventory8
+	sharedinventory0
+	sharedinventory1
+	sharedinventory2
+
+	attacktype
+	attackeffecttype
+	attackrange float
+	attackprojectile
+	attackrangebuffer float
+	attackoffset 0 0 0
+	attackdamagetype
+	attackdamagemin float
+	attackdamagemax float
+	attackcooldown uint
+	attackduration uint
+	attackactiontime uint
+	attacktargetscheme
+	attacknonlethal bool
+	attackstarteffect Effect
+	attackactioneffect Effect
+	attackimpacteffect Effect
+	
+	revealrange float
+	revealtype
+	stealthtype
+	fadetime uint
+	stealthproximity float
+	immunity
+
+	threatscheme
+	threateffecttype
+	aggrorange float
+	aggroscheme
+	proximityrange float
+	proximityscheme
+	sightrangeday float
+	sightrangenight float
+	wanderrange float
+	defaultbehavior
+
+	goldbountymin uint
+	goldbountymax uint
+	goldbountyteam uint
+	goldbountyconsolation uint
+	experiencebounty float
+
+	corpsetime uint No-MultiLevel
+	corpsefadetime uint No-MultiLevel
+	corpsefadeeffect Effect No-MultiLevel
+	
+	attackanim No-MultiLevel
+	attacknumanims uint No-MultiLevel
+	deathanim No-MultiLevel
+	deathnumanims uint No-MultiLevel
+	altdeathanim No-MultiLevel
+	altdeathnumanims uint No-MultiLevel
+	deathtime uint No-MultiLevel
+	expireanim No-MultiLevel
+	expirenumanims uint No-MultiLevel
+
+	tiltfactor float No-MultiLevel
+	tiltspeed float No-MultiLevel
+	corpsetiltfactor float No-MultiLevel
+	corpsetiltspeed float No-MultiLevel
+
+	invulnerable bool
+	alwaysvisible bool
+	hidden bool
+	alwaystargetable bool
+	
+	flying bool
+	flyheight float
+	groundoffset float
+
+	unitwalking bool
+	treewalking bool
+	cliffwalking bool
+	buildingwalking bool
+	antiwalking bool
+	clearVision bool
+	deniable bool
+	deniablePercent float
+	smackable bool
+	nothreat bool
+	truestrike bool
+
+	shopaccess
+	remoteshopaccess
+	sharedshopaccess
+	sharedremoteshopaccess
+	restrictitemaccess
+	stashaccess bool
+
+	diewithowner bool
+	relayexperience bool
+	maxdistancefromowner float
+	prefertouch bool
+	
+Hero-specific Properties				// No-MultiLevel
+
+	ismobile  bool
+	canattack bool
+	canrotate bool
+	combattype Hero
+	cancarryitems bool
+
+	team 								// Hellbourne or Legion
+	primaryattribute
+	strength float
+	strengthperlevel float
+	agility float
+	agilityperlevel float
+	intelligence float
+	intelligenceperlevel float
+
+	respawneffect
+	announcersound
+
+	defaultbehavior
+	
+	
+	
+S05	Tool (Ability/Item) Properties			
+
+	actiontype actiontype
+	maxlevel uint
+	baselevel uint
+	
+	casteffect effect
+	actioneffect effect
+	impacteffect effect
+	bridgeeffect effect
+	
+	anim animation
+	animchannel int
+	casttime uint
+	castactiontime uint
+	channeltime uint
+	manacost float
+	toggleoffmanacost float
+	activemanacost float
+	triggeredmanacost float
+	cooldowntime uint
+	toggleoffcooldowntime uint
+	cooldownondamage uint
+	range float
+	forcerange float
+	minrange float
+	rangebuffer float
+	targetradius float
+	maxdelta float
+	forcedelta float
+	targetmaterial material
+	allowoutofrangecast bool
+	allowoutofboundscast bool
+	allowautocast bool
+	usepathforrange bool
+	casteffecttype EffectType
+	targetscheme TargetScheme
+	ignoreinvulnerable bool
+	projectile projectile_name
+	statuseffecttooltip state_name1
+	statuseffecttooltip2 state_name2
+
+	useproxy bool
+	proxytargetscheme TargetScheme
+	proxyeffecttype EffectType
+	proxyselectionradius float
+	proxyselectionmethod TargetSelection 	(// Valid includes "all", "random_angle_distance", "random_position", "random", "furthest", and "closest")
+	proxyallowinvulnerable bool
+	proxytargetmaterial material
+	
+	searchradius float
+	disabled bool
+	
+	notargetradius floar
+	notargetmaterial material
+	nocasteffecttype EffectType
+	notargettargetscheme TargetScheme
+	notargetignoreinvulnerable bool
+
+	ischanneling bool
+	deferchannelcost bool
+	deferchannelimpact bool
+	channelrange float
+	
+	cooldowntype string
+	frontqueue bool
+	inheritmovement bool
+	noninterrupting bool
+	ignorecooldown bool
+	autotoggleoffwhendisabled bool
+	autotoggleoffwithtriggeredmanacost bool
+	nostopanim bool
+	noresponse bool
+	novoiceresponse bool
+	needvision bool
+	doubleactivate bool
+	activatescheme ActivateScheme
+	carryscheme CarryScheme
+	clonescheme CloneScheme
+	chargecost uint
+	attackeffecttype EffectType
+	attackdamagetype EffectType	
+	
+	
+S06 Tool actiontype List
+	
+	passive
+	toggle
+	no_target
+	target_entity
+	target_position
+	global
+	target_self
+	facing
+	self_position
+	attack
+	attack_toggle
+	target_dual
+	target_dual_position
+	target_vector
+	
+S01 Events									// Used to declare where you want actions to happen. Usually the most "outside" tags. Can be called in all entities.
+
+	<onframe />								// Processed once each frame
+	<onframeimpact />						// Processed once each frame per target (affectors only)
+	<oninterval />							// Processed once each interval (affectors)
+	<onbegin />								// The owner has activated this entity (orders only)
+	<onstart />								// This entity has begun to activate
+	<onprecost />							// A chance for the tool to modifier its activation cost
+	<onaction />							// This entity has reached its action time (called once per activatation)
+	<onpreimpact />							// This entity has reached its action time (before impact, called once per valid target)
+	<onpredamage />							// This tool's specific damage event only. Runs before damage is even calculated, to modify damage done but after evasion
+	<ondamageevent />						// This tool's specific damage event and damage done. Used mainly in attack abilities to modifier the damage of an attack. Runs right before the damage is done, so you can still modify it
+	<ondoubleactivate />					// Tool has been double-activated (needs to be tagged as double activate)
+	<onimpact />							// This entity has reached its action time (called once per valid target)
+	<onimpactinvalid />						// This entity has reached its action but the impact was invalid
+	<oncomplete />							// Tool successfully activates (orders only)
+	<oncancel />							// Tool failed to activate (orders only)
+	<onactivatestart />						// The owner activated an ability or item (start of activation, earliest point)
+	<onactivateprecost />					// The owner activated an ability or item (before the cost of that ability is taken)
+	<onactivatepreimpact />					// The owner activated an ability or item and it has reached its action time (before impact)
+	<onactivateimpact />					// The owner activated an ability or item and it has reached its action time
+	<onactivateend />						// Processed after an activated tool reaches the end of its cast time
+	<onabilitystart />						// The owner has activated an ability other than this entity
+	<onabilityimpact />						// An ability other than this entity has reached its action time
+	<onabilityfinish />						// An ability other than this entity has finished sucessfully
+	<onabilityend />						// Processed after an activated ability other than this entity reaches the end of its cast time
+	<ontoggleon />							// This tool with action type "toggle" has been turned on
+	<ontoggleoff />							// This tool with action type "toggle" has been turned off
+	<onchannelstart />						// The owner has started the channel time of this entity
+	<onchannelframe />						// Processed each frame the owner is channeling this tool
+	<onchannelbreak />						// The owner has stopped channeling before the channel time completed
+	<onchannelend />						// The owner has completed the full channel time of this entity
+	<onattackstart />						// Processed when the owner begins an attack (earliest point, good for overriding animations /> adding impact actions)
+	<onattack />							// Processed when the owner reaches the attack action time
+	<onattackpreimpact />					// Processed when the owner successfully attacks another entity before damage and evasion
+	<onattackpredamage /					// Processed when the owner successfully attacks another entity before damage
+	<onattackdamageevent />					// Called every time this entity deals damage. Includes <damage /> calls
+	<onattackimpact />						// Processed when the owner successfully attacks another entity and impacts (this is the same time as onattack for melee heroes with no projectile)
+	<onattackimpactinvalid />				// Processed when the owner successfully attacks another entity but the impact was invalid
+	<onattackend />							// Processed when the owner completes an attack, successful or not
+	<onattackedstart />						// An attack has been started on this entity (earliest point, includes spells)
+	<onattackedpreimpact />					// This entity has been attacked, but damage/effects/evasion have not yet been applied (includes spells)
+	<onattackedpredamage />					// This entity has been attacked, but damage/effects have not yet been applied (includes spells)
+	<onattackeddamageevent />				// Called every time this entity takes damage. This includes the <damage /> call
+	<onattackedpostimpact />				// This entity has been attacked and damage/effects have been applied (does not trigger on a miss/evade, includes spells)
+	<onattackingstart />					// This entity has started an attack (includes spells and damage calls, everything)
+	<onattackingpreimpact />				// Processed when the owner successfully attacks another entity before damage and evasion (includes spells and damage calls, everything)
+	<onattackingpredamage />				// Processed when the owner successfully attacks another entity before damage (includes spells and damage calls, everything)
+	<onattackingdamageevent />				// Called every time this entity deals damage. This is the first event of a <damage /> call (includes spells and damage calls, everything)
+	<onattackingpostimpact />				// Processed when the owner successfully attacks another entity after damage and evasion (includes spells and damage calls, everything)
+
+	<ondamage />							// This entity has dealt some amount of damage (after damage is dealt)
+	<ondamaged />							// This entity has taken some amount of damage (after damage is dealt)
+	<onstunned />							// This entity has been stunned (no longer used)
+	<onkilled />							// This entity has been killed
+	<onexpired />							// This entity has died due to its lifetime expiring
+	<ondeath />								// This entity has dieded :(
+	<onkill />								// This entity killed another entity
+	<onindirectkill />						// This entity indirectly killed another entity (through pets, for example)
+
+	<onspawn />								// Processed when spawn is called
+	<onrespawn />							// Processed when respawn is called
+	<onlevelup />							// Hero levelup
+
+	<oninflict />							// New state applied to an entity
+	<onrefresh />							// Resfreshed state on an entity
+	<oninflicted />							// Entity has had a new state applied to it
+	<onownerrespawn />						// This entity's owner has respawned
+	<onrelease />							// This entity has lost its binding (?)
+	<ontouch />								// This entity collided with another entity (touch needs to be declared, used in projectiles)
+	<ontouched />							// This entity has been touched by another entity
+	<onthink />								// Executed before neutral NPC "thinking" occurs
+	<ontargetacquired />					// Executed when a unit changes or acquires a target
+
+	<onlearn />								// This ability was just learned for the first time
+	<onupgrade />							// This tool was leveluped
+	<oncreate />							// Item was created
+	<onpurchase />							// Item was just purchased
+	<ontimer />								// Timer trigger (or finishes/expires)
+	<onpickup />							// Item was moved into a new inventory
+
+	<checkcost />							// Runs every frame, can call <invalidate /> to 'grey' out an ability until a condition is met / used to check for custom manacosts
+	<checktriggeredcost />					// Runs when the ability is triggered (if it is toggled, for example). Used to check for custom manacosts.
+	<activatecost />						// Runs when an ability is activated and the manacost is taken (if applicable), used to do custom manacosts or costs for using abilities
+	<getthreatlevel />						// Used for custom agro scripting, based on base.gamemechanics level of threat
+
+	<onlobbystart />						// For custom maps, not used yet
+	<onaddplayer />							// For custom maps, not used yet
+	<onentergame />							// For custom maps, not used yet
+	
+	
+S02 Actions									// What you want to happen within a certain Event. These are the "inside" tags.
+		
+	<absorbdamage							// When in a damage event, absorbs the max amount of damage. When the max is exceeded, passes true
+		max="0"
+	/>
+	
+	<accumulatedamage						// All damage done to the entity is added to this entity's accumulator at the given scale
+		entity="this_entity"
+		scale="0"
+	/>
+	
+	<activatemodifierkey					// Activates the named modifier key on the given entity
+		entity="this_entity"
+		name="Name"
+	/>
+
+	<addattackpreimpactactions />			// Adds the sub actions to the current attack's preimpact
+	
+	<addattackpredamageactions />			// Adds the sub actions to the current attack's predamage
+	
+	<addattackdamageeventactions />			// Adds the sub actions to the current attack's damageevent
+	
+	<addattackimpactactions />				// Adds the sub actions to the current attack's impact
+	
+	<addattackimpactinvalidactions />		// Adds the sub actions to the current attack's impactinvalid
+	
+	<addcharges								// Adds count worth of charges to the entity for the given duration. Default duration is infinite.
+		entity="this_entity"
+		count="1"
+		timed="false"						// Each charge's duration is independent of each other if true. Otherwise, adding a charge resets the duration of all charges.
+		duration="-1"
+	/>
+	
+	<addcritical							// Used in attack/damage event, gives a given chance to multiply damage by the multiplier
+		chance="1.0"
+		multiplier="1.0"
+	/>
+		
+	<adjustagility							// Usable only in an abilityattribute ability. Permenantly increases the entity's agility by the value.
+		entity="this_entity"
+		value="0"
+	/>
+	
+	<adjustintelligence						// Usable only in an abilityattribute ability. Permenantly increases the entity's intelligence by the value.
+		entity="this_entity"
+		value="0"
+	/>
+	
+	<adjuststrength							// Usable only in an abilityattribute ability. Permenantly increases the entity's strength by the value.
+		entity="this_entity"
+		value="0"
+	/>
+	
+	<aggression								// Gives sight of the source to the target as if they attacked them from fog
+		source="source_entity"
+		target="target_entity"
+	/>
+	
+	<applystate								// Applies a state with the given name to the target for the duration
+		name="Name"
+		duration="0"
+		charges="0"							// Sets the initial charges of the state
+		chargesmult="0"						// Multiplies the state's charges by this value
+		ischannel="false"					// Used in channels to designate if this state should auto-expire when the channel ends
+		istoggle="false"					// Used in toggles to designate if this state should auto-expire when the toggle ends
+		proxy="Proxy"						// Sets the initial proxy of the state
+		pushentity="false"					// Pushes this state onto the stack after it is created
+		stack="false"						// Lets multiple copies of the same state from different source stack on the same target
+		continuous="false"					// Makes this state have no duration, it will last until it is manually expired elsewhere
+		timeout="0"							// How often the state checks if it should start it's expire or expire itself. Usually set to "frametime"
+		spawner="inflictor_entity"
+		inflictor="source_entity"
+		target="target_entity"
+		statelevel="0"						// Sets the level of the state
+	/>
+	
+	<areaofeffect							// Does an instant AOE with the given parameters, hitting every unit in the radius that fits the targetscheme and selection. This should be used instead of affectors for instant 0 duration AOEs.
+		targetscheme="TargetScheme"
+		effecttype="EffectType"
+		ignoreinvulnerable="false"
+		target_position="center"
+		targetselection"all"				// Valid includes "all", "random_angle_distance", "random_position", "random", "furthest", and "closest"
+		radius="0"
+		innerradiusoffset="0"
+		maxtotalimpacts="0"
+		maximpactspertarget="1"
+		firsttarget="FirstTarget"			// Given entity is the first target every time
+		ignore="Ignore"						// Given entity is ignored
+		global="false"
+		includetrees="false"
+	>
+											// Can do more actions here, every unit hit runs through these actions in order of being hit
+	</areaofeffect>
+	
+	<attack									// Does an instant attack from the source to the target if the targetscheme and effecttype of the target are valid (from the source)
+		source="source_entity"
+		target="target_entity"
+		targetscheme="TargetScheme"
+		effecttype="EffectType"
+		facetarget="false"					// Instantly turns the source to face the target when the attack is done
+	/>
+	
+	<attackaction							// Does an instant attack from the source to the target if the targetscheme and effecttype of the target are valid (from the source). Skips the normal attack events before the action.
+		source="source_entity"
+		target="target_entity"
+		targetscheme="TargetScheme"
+		effecttype="EffectType"
+	/>
+	
+	<aura									// Causes an aura that has radius and applies the state and/or gadget listed as long as the effecttype and targetscheme are met. The duration is how long the state stays on them outside of the aura.
+		state="Name"
+		gadget="Name"
+		radius="0"
+		duration="0"
+		targetscheme="TargetScheme"
+		effecttype="EffectType"
+		ignoreinvulnerable="false"
+		condition=""						// Sets a condition for the state to be applied to enemies
+		reflexivestate=""					// A state that is applied to the owner of the aura when an enemy is under its effects
+		propagatecondition=""				// Sets a condition for the aura to be active
+		stack="false"						// Lets multiple aura of the same state stack
+		notooltip="false"					// Removes the tooltip for the aura
+	/>
+	
+	<bind									// Binds the target to the entity
+		target="target_entity"
+		entity="this_entity"
+		vertical="false"					// When true, the bound target retains it's z position instead of snapping to the projectile's
+		turn="false"						// Turns the target to face in the direction the projectile is traveling
+		unbindondeath="false"				// Unbinds the target when it dies
+		nopush="false"						// When true, when the  to a projectile will not break channeling
+	/>
+	
+	<bonusdamageadd							// Adds the listed damage (a, or a / b with the operator) to the next attack, uses source if the target is blank
+		source="source_entity"
+		target=""
+		a="0"
+		b="0"
+		op="Operator"						// Valid operators are NONE "none", ADDITION "add", SUBTRACT "sub", MULTIPLY "mult", DIVIDE "div", MINIMUM "min", and MAXIMUM "max".
+	/>
+	
+	<bonusdamagemult						// Used in <onattack />, multiplies the attackdamage by the value (a, or a / b with the operator), uses source if the target is blank
+		source="source_entity"
+		target=""
+		a="0"
+		b="0"
+		op="Operator"						// Valid operators are NONE "none", ADDITION "add", SUBTRACT "sub", MULTIPLY "mult", DIVIDE "div", MINIMUM "min", and MAXIMUM "max".
+	/>
+	
+	<bounce									// Causes the current attack or projectile to bounce the count number of times, searching the range around the bounce-off-of target, multiplying damage by damagemult and only hitting the targets of the fitting targetscheme.
+		count="0"
+		range="0"
+		damagemult="0"
+		targetscheme="TargetScheme"
+		seek="random"						// Controls how the bounce target is choosen. Can also be closest or farthest
+		maxbouncespertarget="1"
+	/>
+	
+	<breakchannel							// Breaks any current channeling abilities of the entity
+		entity="this_entity"
+	/>
+	
+	<broadcastmessage						// Broadcasts the type of message at the source entity's position, used right now to alert the team when a courier dies based on type
+		source="source_entity"
+		type="Type"							// Currently can only be either "walkingcourier" or "flyingcourier"
+	/>
+
+	<calculatedamage						// Returns the damage after reduction calculations from the source to the target of the given amount, effecttype, and supertype.
+		source="source_entity"
+		target="target_entity"
+		amount="0"
+		effecttype="EffectType"
+		supertype="SuperType"
+	/>
+
+	<canactivate />							// Returns true if the ability can be activated. For example, if the target is stunned, it will return false since you can't use abilities while stunned.
+	
+	<canattack />							// Runs the same check that your auto attack. Basically a <cantarget /> using your attack target scheme automatically.
+	
+	<cancel									// Used in orders, cancel the entity (order) when called
+		entity="this_entity"
+	/>
+	
+	<cantarget								// Checks if the source can hit the target given the parameters. Example: If targetscheme is enemy_units and you attack an allied creep, it will return false, but if you attack an enemy creep it's true.
+		source="source_entity"
+		target="target_entity"
+		targetscheme="TargetScheme"
+		effecttype="EffectType"
+		ignoreinvulnerable="false"
+	/>
+	
+	<casteffecttype							// Used to check if the current ability in the event caused by the entity has the selected effecttype. For example, can be used to check if someone uses an attack ability so power supply won't gain charges.
+		entity="this_entity"
+		effecttype="EffectType"
+	/>
+	
+	<chain									// Used in affectors, when the onimpact is hit and this is inside, will basically call the affector again on top of the current target (excluding it from possible targets) as many times as chained. Example, chain lightning
+		count="0"
+	/>
+	
+	<chance									// Passes the call if it randoms past the chance value
+		threshold="0"						
+	/>
+	
+	<changeaccumulator						// Sets the accumulator of the entity to a and b using the op. a in this action is always accumulator of the entity before the change.
+		entity="this_entity"
+		b="0"
+		op="ValueOp"						// Valid operators are NONE "none", ADDITION "add", SUBTRACT "sub", MULTIPLY "mult", DIVIDE "div", MINIMUM "min", and MAXIMUM "max".
+	/>
+	
+	<changecurrentcombatdamage				// Used in a combat event to change the current combat damage. Takes the combat damage before change as a and sets it using b and op.
+		b="0"
+		op="ValueOp"						// Valid operators are NONE "none", ADDITION "add", SUBTRACT "sub", MULTIPLY "mult", DIVIDE "div", MINIMUM "min", and MAXIMUM "max".
+	/>
+	
+	<changedamage							// Used to change the current damage. Takes the damage before change as a and sets it using b and op. Example is setting the incoming damage to 1 so a pet can take a certain number of hits.
+		b="0"
+		op="ValueOp"						// Valid operators are NONE "none", ADDITION "add", SUBTRACT "sub", MULTIPLY "mult", DIVIDE "div", MINIMUM "min", and MAXIMUM "max".
+	/>
+	
+	<changeduration							// Used to change the current duration. Takes the duration before change as a and sets it using b and op. Starts the duration over even if it was half done.
+		b="0"
+		op="ValueOp"						// Valid operators are NONE "none", ADDITION "add", SUBTRACT "sub", MULTIPLY "mult", DIVIDE "div", MINIMUM "min", and MAXIMUM "max".
+	/>
+	
+	<changehealth							// Used to change the current target's health by +- the value set by a/b/op.
+		source="source_entity"
+		target="target_entity"
+		a="0"
+		b="0"
+		op="ValueOp"						// Valid operators are NONE "none", ADDITION "add", SUBTRACT "sub", MULTIPLY "mult", DIVIDE "div", MINIMUM "min", and MAXIMUM "max".
+	/>
+	
+	<changetotalduration					// Used to change the total duration. Takes the duration before change as a and sets it using b and op. If a state is half done, it will still be half done after this.
+		b="0"
+		op="ValueOp"
+	/>	
+	
+	<clearcriticals />						// Removes all current criticals out of the current combat event
+	
+	<clearproxy								// Clears the current proxy of given index of the current entity
+		index="0"
+	/>
+	
+	<clonebackpack							// Clones the source's backpack into the target's
+		source="source_entity"
+		target="target_entity"
+	/>
+	
+	<combatsupertype						// When used inside of a combat Event, checks if the current supertype matches. If so, it passes true. (Can only be spell or attack)
+		supertype="SuperType"
+	/>
+	
+	<combateffecttype						// When used inside of a combat Event, checks if the current effecttype matches. If so, passes true. Can be any effecttype.
+		effecttype="EffectType"
+	/>
+	
+	<compare								// Compares two values, A and B, using the operator choosen. Passes to below when true.
+		a="ValueA"
+		b="ValueB"
+		op="Operator"					
+	/>
+	
+	<complete								// Used in orders, completes the current order when called
+		entity="this_entity"
+	/>
+	
+	<condition								// Used to check against certain conditions or compare two values. Passes to below if returns true
+		source="source_entity"
+		target="target_entity"
+		test=""								// Valid operators are EQUALS "eq", NOT_EQUALS "ne", LESS_THAN "lt", LESS_THAN_OR_EQUALS "le", GREATER_THAN "gt", GREATER_THAN_OR_EQUALS "ge". Can also check for "isready", which returns true if the ability is ready to activate.
+	/>
+	
+	<consume								// Checks for the given item number and if the recipe is used/charges are counted and consumes them, usually resulting in a live unit morphing into another unit as a result. Exmaple: Ground to winged courier
+		item="Item"
+		count="1"
+		userecipe="false"
+		ignorecharge="false"
+	/>
+	
+	<currentdamagesupertype					// Only used in <ondamage /> and  <ondamaged />. Checks if the current supertype matches. If so, passes true. (Can only be spell or attack)
+		supertype="SuperType"
+	/>
+	
+	<currentdamageeffecttype				// Only used in <ondamage /> and  <ondamaged />. Checks if the current effecttype matches. If so, passes true. Can be any effecttype.
+		effecttype="EffectType"
+	/>
+	
+	<damage									// Deals the given damage from the source to the target of the given effecttype. Can change the damage based on b/op.
+		source="source_entity"
+		target="target_entity"
+		min="0"								// Has to be a number, cannot be a variable
+		max="0"								// Has to be a number, cannot be a variable
+		amount="0"							// Has to be a number, cannot be a variable. CAN ONLY USE MIN/MAX OR AMOUNT, NOT BOTH.
+		effecttype="EffectType"
+		nonlethal="false"					// Can this damage kill?
+		b="0"
+		op="Operator"						// Valid operators are NONE "none", ADDITION "add", SUBTRACT "sub", MULTIPLY "mult", DIVIDE "div", MINIMUM "min", and MAXIMUM "max"
+		inflictor="this_entity"
+		supertype="SuperType"
+	/>
+	
+	<damagesupertype						// When used inside of a damage Event, checks if the current supertype matches. If so, it passes true. (Can only be spell or attack)
+		supertype="SuperType"
+	/>
+	
+	<damageeffecttype						// When used inside of a damage Event, checks if the current effecttype matches. If so, passes true. Can be any effecttype.
+		effecttype="EffectType"
+	/>
+	
+	<deactivatemodifierkey					// Turns off the named modifier key of the entity
+		entity="this_entity"
+		name="Name"
+	/>
+	
+	<defer									// Defers the application of a state for a set amoutn of time
+		time="Time"
+		mult="0"
+	/>
+	
+	<delete									// The source deletes the target entity from the world
+		source="source_entity"
+		target="target_entity"
+	/>
+	
+	<disjoint								// Disjoints the target entity, causing any midair projectiles to not hit this target
+		source="source_entity"
+		target="target_entity"
+	/>
+	
+	<dispel									// Removes all of the states with the type given off the target
+		source="source_entity"
+		target="target_entity"
+		type="Type"
+	/>
+	
+	<distance								// Returns the distance between the source and target (in units)
+		source="source_entity"
+		target="target_entity"
+	/>
+	
+	<else />								// Everything that can return true/false causes an else to happen after the tag close. For example, can be used to cover situations outside of the condition you are testing. Only usable AFTER something that would return it anyawy.
+	
+	<elsecondition							// Used to check against certain conditions or compare two values. Passes to below if returns true. Replaces an else command.
+		source="source_entity"
+		target="target_entity"
+		test=""								// Valid operators are EQUALS "eq", NOT_EQUALS "ne", LESS_THAN "lt", LESS_THAN_OR_EQUALS "le", GREATER_THAN "gt", GREATER_THAN_OR_EQUALS "ge". Can also check for "isready", which returns true if the ability is ready to activate.
+	/>
+	
+	<entitytype								// Checks if the target is the given entity type. If it is, passes true.
+		source="source_entity"
+		target="target_entity"
+		type="Type"
+	/>
+	
+	<evaluate								// Evaluates the given math and returns it as the result.
+		a="0"
+		b="0"
+		op="ValueOp"						// Valid operators are NONE "none", ADDITION "add", SUBTRACT "sub", MULTIPLY "mult", DIVIDE "div", MINIMUM "min", and MAXIMUM "max".
+	/>
+	
+	<expire									// Expires the entity (a state) immediately
+		entity="this_entity"
+	/>
+	
+	<expirestate							// The source expires a state named Name off the target
+		source="source_entity"
+		target="target_entity"
+		name="Name"
+	/>
+	
+	<forgetattacks							// Causes the target to stop current attacks and remove current aquired targets. Used when a hero goes stealth mainly so they do not finish an attack and break the stealth
+		source="source_entity"
+		target="target_entity"
+	/>
+	
+	<givemana								// The source gives the target the amount worth of mana after the b/op operation
+		source="source_entity"
+		target="target_entity"
+		amount="0"							// Cannot be a variable, has to be a number
+		b="0"
+		op="AmountOp"						// Valid operators are NONE "none", ADDITION "add", SUBTRACT "sub", MULTIPLY "mult", DIVIDE "div", MINIMUM "min", and MAXIMUM "max".
+	/>
+	
+	<hasmodifier							// Checks if the target entity has the named modifier active. If yes, passes true
+		entity="this_entity"
+		name="Name"
+	/>
+	
+	<heal									// The source heals the target the amount worth of health after the a/b/op
+		source="source_entity"
+		target="target_entity"
+		a="0"
+		b="0"
+		op="AmountOp"						// Valid operators are NONE "none", ADDITION "add", SUBTRACT "sub", MULTIPLY "mult", DIVIDE "div", MINIMUM "min", and MAXIMUM "max".
+	/>
+	
+	<invalidate />							// Used in <checkcost /> and <activatecost /> to invalidate the cast of an ability if certain conditions are met. When called, just cancels the cast of the ability as if it never happened.
+	
+	<kill									// The source kills the target instantly.
+		source="source_entity"
+		target="target_entity"
+		experiencebountymul="1.0"			// Experience the target gives when it dies from this action
+		goldbountymult="1.0"				// Gold the target gives when it dies from this action
+		nocorpse="false"
+		nodeathanim="false"
+	/>
+	
+	<killillusions />						// If the current target was an illusion, kills it instantly
+	
+	<killtrees								// Kills all the trees in the radius
+		radius="0"							// No radius means to kill the target entity if it is a tree
+		usealtdeathanims="false"
+	/>
+	
+	<levelpets								// Levels the named pets to the value level
+		name="Name"
+		value="Value"						// Usually this is "level", so when an ability levels up it transfers it's current level to the pet
+	/>
+	
+	<lockbackpack							// Locks the entity's backpack so any items in it cannot be dropped, sold or moved and that entity cannot purchase more into the backpack
+		entity="this_entity"
+	/>
+	
+	<morph									// The source morphs the target into the named entity. Usually a self cast
+		source="source_entity"
+		target="target_entity"
+		name="Name"
+	/>
+	
+	<multcharges							// Multiplies the entity's charges by the value and sets that as the new number of charges
+		entity="this_entity"
+		value="0"
+	/>
+	
+	<negate									// Negates the effects of an offensive spell targetted at the owner when triggered.
+		immunitytype="ImmunityType"			// Only negates spells of the given immunity type
+	/>
+	
+	<order									// The source issues an order of the given command to the target unit.
+		source="source_entity"
+		target="target_entity"
+		command="Command"					// Can be such things as attack, wander, stop, assist, follow, hold, etc. Can also be "event" which calls an order.entity of the given OrderName
+		parameter="Parameter"				// Unused
+		queue="back"						// Can be set to front or back
+		force="false"						// Forces the entity to do this order and nothing else for the duration
+		forceduration="0"					// Only used if force is true, and says how long it lasts
+		restrict="false"					// Sets to true if the event order is used
+		ordername="Name"					// Name of the order.entity to use
+		value0="Value0"						// Unused
+		duration="0"						// Duration of the order
+		block="Block"						// Used in tutorial, unused
+	/>
+	
+	<peekstack />							// Sets the current stack as the result
+	
+	<ping									// Issues a map ping of the given name at the target position
+		name="Name"
+		position="target_position"
+	/>
+	
+	<playanim								// Plays the animation of given Name with X variations included at the given speed and length
+		source="source_entity"
+		target="target_entity"
+		name="Name"
+		variations="0"
+		channel="Channel"					// Artisty-Thing
+		speed="1.0"
+		length="Length"
+		seq="Seq"							// Used in animations used in quick succession that you don't want reset between
+	/>
+	
+	
+	<playeffect								// Plays the listed effect at the source position/entity with a given owner
+		source="source_entity"
+		target=""
+		effect="Effect"
+		owner="source_entity"
+		occlude="false"						// Should this effect hide itself in fog?
+	/>
+	
+	<playtauntsound							// The source plays his taunting sound at the target
+		source="source_entity"
+		target="target_entity"
+	/>
+	
+	<popentity />							// Removes the top entity stack item
+	
+	<popstack />							// Removes the top value stack item
+	
+	<popup									// The source plays popup Name at the target position with the value of a/b/op
+		source="source_entity"
+		target="target_entity"
+		name="Name"
+		a="0"
+		b="0"
+		op="Operator"						// Valid operators are NONE "none", ADDITION "add", SUBTRACT "sub", MULTIPLY "mult", DIVIDE "div", MINIMUM "min", and MAXIMUM "max".
+	/>
+	
+	<print									// Prints the text in the console when called
+		text="Text"						
+	/>
+	
+	<printdebuginfo />						// Prints the debug information into the console when called
+	
+	<printvalue								// Prints the given value with a custom label (if wanted) when called
+		label="Label"
+		value="value"
+	/>
+	
+	<protecteddeath							// The source protects the target from death, used in Aegis
+		source="source_entity"
+		target="target_entity"
+	/>
+	
+	<push									// The source pushes the target the value force/forceb/forceop for the given duration
+		source="source_entity"
+		target="target_entity"
+		force="0"
+		forceb="0"
+		forceop="Operator"					// Valid operators are NONE "none", ADDITION "add", SUBTRACT "sub", MULTIPLY "mult", DIVIDE "div", MINIMUM "min", and MAXIMUM "max".
+		duration="0"
+		frame="false"						// Instead of duration, pushes every frame as long as the push is applied
+		perpendicular="false"				// Pushes in a perpendicular direction from the source. Used as a "push to the side" movement
+	/>
+	
+	<pushability							// Pushes the given named ability onto the stack
+		name="Name"
+	/>
+	
+	<pushentity								// Pushes the given named entity onto the stack, OR, searches in a radius for the first available target and pushes that entity onto the tsack
+		entity="Entity"
+		searchfortarget="false"
+		searchorigin="source_entity"
+		radius="0"
+		targetscheme="TargetScheme"
+		ignoreinvulnerable="false"
+	/>
+	
+	<pushentitybyname						// Pushes the given named entity onto the stack
+		name="Name"
+	/>
+	
+	<pushentityproxy						// Pushes the given named entity's proxy (by index) onto the stack
+		entity="this_entity"
+		index="0"
+	/>
+	
+	<pushentitysearch						// Searches in a radius for the first available target and pushes that entity onto the tsack
+		origin="source_position"
+		radius="0"
+		targetscheme="TargetScheme"
+		ignoreinvulnerable="false"
+		global="false"						// Sets it to a global search instead of a radius
+	/>
+	
+	<pushstack								// Pushes the given value after a/b/op onto the stack
+		a="0"
+		b="0"
+		op="Operator"						// Valid operators are NONE "none", ADDITION "add", SUBTRACT "sub", MULTIPLY "mult", DIVIDE "div", MINIMUM "min", and MAXIMUM "max".
+	/>
+	
+	<recallpets								// Causes the named pet to get a move order back to its owner
+		name="Name"
+	/>
+	
+	<reducecooldown							// Reduces the cooldown of the entity by the duration given
+		entity="this_entity"
+		duration="0"
+	/>
+	
+	<refreshabilities						// The source refreshes the target's abilities
+		source="source_entity"
+		target="target_entity"
+	/>
+	
+	<refreshinventoryitems					// The source refreshes the target's items in their inventory except those in the exclude line, seperated by spaces
+		source="source_entity"
+		target="target_entity"
+		excluded="Excluded"
+	/>
+	
+	<removecharge							// Removes one charge from the entity
+		entity="this_entity"
+	/>
+	
+	<resetattackcooldown					// Resets the source's attack cooldown
+		source="source_entity"
+	/>
+	
+	<resetcooldown							// Resets the cooldown of the entity
+		entity="this_entity"
+	/>
+	
+	<resettimer								// Resets the timer of the entity
+		entity="this_entity"
+	/>
+	
+	<resettouches							// Resets the touches of the source
+		source="source_entity"
+	/>
+	
+	
+	<retarget								// Used for projectiles, retargets it towards the target in mid-flight
+		source="source_entity"
+		target="target_entity"
+	/>
+	
+	<return />								// Causes a projectile to be returned back to its origin
+	
+	<savehealth								// Saves the current target's health to this entity so it can be used later through the "healthlost" variable
+		source="source_entity"
+		target="target_entity"
+		entity="this_entity"
+	/>
+	
+	<scaledamage							// Scales the current incoming damage by the % given through scale
+		scale="1"
+	/>
+	
+	<setaccumulator							// Sets the entity's accumulator based on a/b/op. Accumulator is a permenant value that persists through all events.
+		entity="this_entity"
+		value="0"
+		valueb="0"
+		valueop="ValueOp"					// Valid operators are NONE "none", ADDITION "add", SUBTRACT "sub", MULTIPLY "mult", DIVIDE "div", MINIMUM "min", and MAXIMUM "max"
+	/>
+	
+	<setactivemodifierkey					// Sets the active modifier key of the entity to the name given
+		entity="this_entity"
+		name="Name"
+	/>
+	
+	<setattackactioneffect					// Overrides the current attack's action effect to the effect given
+		effect="Effect"
+	/>
+	
+	<setattackimpacteffect					// Overrides the current attack's impact effect to the effect given
+		effect="Effect"
+	/>
+	
+	<setattackprojectile					// Overrides the current attack's projectile to the one named
+		name="Name"
+	/>
+	
+	<setcharges								// Sets the charges of the entity to the value of a/b/op
+		entity="this_entity"
+		a="0"
+		b="0"
+		op="Operator"						// Valid operators are NONE "none", ADDITION "add", SUBTRACT "sub", MULTIPLY "mult", DIVIDE "div", MINIMUM "min", and MAXIMUM "max"
+	/>
+	
+	<setdamage								// Sets the damage of the current event to the value of a/b/op
+		a="0"
+		b="0"
+		op="Operator"						// Valid operators are NONE "none", ADDITION "add", SUBTRACT "sub", MULTIPLY "mult", DIVIDE "div", MINIMUM "min", and MAXIMUM "max"
+	/>
+	
+	<seteffecttype							// Sets the effecttype of the value in name to the given type
+		name="Name"							// An example of this is combat_damagetype in the <onpreimpact /> event to change the attacks effecttype
+		effecttype="Effecttype"
+	/>
+	
+	<setent0								// Sets the entity as the ent0 variable that can be recalled later. Only exists inside of the event it is made, so it 'expires' quickly.
+		entity="Entity"
+		name="Name"
+	/>
+	
+	<setent1								// Sets the entity as the ent1 variable that can be recalled later. Only exists inside of the event it is made, so it 'expires' quickly.
+		entity="Entity"
+		name="Name"
+	/>
+	
+	<setent2								// Sets the entity as the ent2 variable that can be recalled later. Only exists inside of the event it is made, so it 'expires' quickly.
+		entity="Entity"
+		name="Name"
+	/>
+	
+	<setent3								// Sets the entity as the ent3 variable that can be recalled later. Only exists inside of the event it is made, so it 'expires' quickly.
+		entity="Entity"
+		name="Name"
+	/>
+	
+	<setgoldlossbonus						// Sets the target's bonus gold lost from death to the value given
+		source="source_entity"
+		target="target_entity"
+		value="0"
+	/>
+	
+	<setgoldlossmultiplier					// Sets the target's gold lost from death multiplied by the value
+		source="source_entity"
+		target="target_entity"
+		value="0"
+	/>
+	
+	<setignoreattackcooldown				// Unused
+		source="source_entity"
+		target="target_entity"
+		value="0"
+	/>
+	
+	<setparam								// Sets the parameter of the entity to the value of a/b/op. Parameter is a permenant value that persists through all events.
+		entity="this_entity"
+		a="0"
+		b="0"
+		op="Operator"						// Valid operators are NONE "none", ADDITION "add", SUBTRACT "sub", MULTIPLY "mult", DIVIDE "div", MINIMUM "min", and MAXIMUM "max".
+	/>
+	
+	<setproxy								// Sets the proxy of the entity to the target or can search for a target instead of declaring one outright. The proxy is a permenant entity that is remembered through all events of that entity
+		entity="this_entity"
+		target="target_entity"
+		searchfortarget="false"
+		searchorigin="source_entity"
+		radius="0"
+		targetscheme="TargetScheme"
+		ignoreinvulnerable="false"
+		index="0"							// Index of the proxy for orders
+	/>
+	
+	<setrespawnhealthmultiplier				// Sets the health of the target when they respawn to the value as a percent
+		source="source_entity"
+		target="target_entity"
+		value="1.0"
+	/>
+	
+	<setrespawnmanamultiplier				// Sets the mana of the target when they respawn to the value as a percent
+		source="source_entity"
+		target="target_entity"
+		value="1.0"
+	/>
+	
+	<setrespawnposition						// Sets the respawn position of the target when they respawn to the position listed
+		source="source_entity"
+		target="target_entity"
+		position="target_position"
+	/>
+	
+	<setrespawntime							// Sets the whole respawn time of the target when they die to the value of a/b/op
+		source="source_entity"
+		target="target_entity"
+		a="0"
+		b="0"
+		op="Operator"						// Valid operators are NONE "none", ADDITION "add", SUBTRACT "sub", MULTIPLY "mult", DIVIDE "div", MINIMUM "min", and MAXIMUM "max".
+	/>
+	
+	<setrespawntimebonus					// Changes the bonus respawn time of the target to the value listed when they are killed (used in <onkilled /> )
+		source="source_entity"
+		target="target_entity"
+		value="Value"
+	/>
+	
+	<setrespawntimemultiplier				// Changes the bonus respawn time of the target to their bonus time multiplied by the value listed when they are killed (used in <onkilled /> )
+		source="source_entity"
+		target="target_entity"
+		value="Value"
+	/>
+	
+	<setvalue								// Sets the named value to the value of a/b/op. Values that can be changed:	combat_basedamage
+																														combat_additionaldamage
+																														combat_damagemultiplier
+																														combat_bonusdamage
+																														combat_bonusmultiplier
+																														combat_lifesteal
+																														combat_evasion
+																														combat_misschance
+																														combat_nonlethal
+																														combat_truestrike
+																														combat_negated
+																														combat_deflection
+																														combat_manacost
+																														combat_cooldowntime
+																														combat_attackability
+																														damage_attempted
+																														damage_deflection
+		name="Name"
+		a="0"
+		b="0"
+		op="Operator"						// Valid operators are NONE "none", ADDITION "add", SUBTRACT "sub", MULTIPLY "mult", DIVIDE "div", MINIMUM "min", and MAXIMUM "max".
+	/>
+	
+	<setvar0								// Sets the value of a/b/op to the variable var0, which can be called later in the same event. Only exists inside of the event it is created.
+		a="0"
+		b="0"
+		op="Operator"						// Valid operators are NONE "none", ADDITION "add", SUBTRACT "sub", MULTIPLY "mult", DIVIDE "div", MINIMUM "min", and MAXIMUM "max".
+	/>
+	
+	<setvar1								// Sets the value of a/b/op to the variable var1, which can be called later in the same event. Only exists inside of the event it is created.
+		a="0"
+		b="0"
+		op="Operator"						// Valid operators are NONE "none", ADDITION "add", SUBTRACT "sub", MULTIPLY "mult", DIVIDE "div", MINIMUM "min", and MAXIMUM "max".
+	/>
+	
+	<setvar2								// Sets the value of a/b/op to the variable var2, which can be called later in the same event. Only exists inside of the event it is created.
+		a="0"
+		b="0"
+		op="Operator"						// Valid operators are NONE "none", ADDITION "add", SUBTRACT "sub", MULTIPLY "mult", DIVIDE "div", MINIMUM "min", and MAXIMUM "max".
+	/>
+	
+	<setvar3								// Sets the value of a/b/op to the variable var3, which can be called later in the same event. Only exists inside of the event it is created.
+		a="0"
+		b="0"
+		op="Operator"						// Valid operators are NONE "none", ADDITION "add", SUBTRACT "sub", MULTIPLY "mult", DIVIDE "div", MINIMUM "min", and MAXIMUM "max".
+	/>
+	
+	<spawnaffector							// Spawns a named affector at the target position or on the target entity with any number of properties
+		name="Name"
+		source="source_entity"
+		target="target_entity"
+		direction="target_position"			// Direction the affector is facing
+		firsttarget="target_entity"
+		level="LevelProperty"
+		owner="source_entity"
+		ischannel="false"
+		istoggle="false"
+		distance="0"						// Distance away from the target the affector spawns
+		count="1"
+		countb="0"
+		countop="CountOperator"				// Valid operators are NONE "none", ADDITION "add", SUBTRACT "sub", MULTIPLY "mult", DIVIDE "div", MINIMUM "min", and MAXIMUM "max".
+		distribute="false"					// Distributes the count worth of affectors evenly around the target going outwards
+		proxy="Proxy"						// Sets the proxy entity
+		pushentity="false"					// Pushes this entity onto the stack
+		param="0"							// Sets the parameter of this affector
+		positionorigin="source_entity"		// Used for setting the origin for the position modifiers
+		positionvalue="0"					
+		positionmodifier=""					// This includes "start", "end", "pointonline", "maxonline", "minonline", "percentonline", "pointpastline"
+		ignore="Ignored"					// Entity to be ignored
+	/>
+	
+	<spawnillusion							// Spawns count number of illusions of the target for lifetime duration. The damage they deal and take can be changed, along with the effects associated with them. Owner is who controls them.
+		source="source_entity"
+		target="target_entity"
+		count="1"
+		lifetime="0"
+		receivedamagemultiplier="1.0"
+		inflictdamagemultiplier="1.0"
+		spawneffect="Effect"
+		deatheffect="Effect"
+		owner="source_entity"
+		uncontrollable="false"
+		pushentity="false"					// Pushes the illusion onto the stack
+		playdeathanim="false"				// Illusion plays the death animations of the unit copied when it is killed or not
+		inheritactions="false"				// Smoothly inherits the actions of the unit spawned so if they were spawned on top of them, it would be impossible to tell the difference between real and illusion
+		spawncircular="false"				// Spawns illusions in a circle instead of on top of the target, moves the target as part of the circle
+		spawncircularradius="0"				// Radius of the circle when spawncircular is true
+	/>
+	
+	<spawnitem								// The source spawns the named item at the target, offset by the distance (x/y). Offsetspace is who the offset is based off of (what direction they are facing is 'front')
+		source="source_entity"
+		target="target_entity"
+		name="Name"
+		offset="0 0"
+		offsetspace="target_entity"
+	/>
+	
+	<spawnlinearaffector					// Spawns a named linear affector at the target position or on the target entity with any number of properties. basically a line of affectors of the given name as far as the target_position
+		name="Name"
+		source="source_entity"
+		target="target_entity"
+		direction="target_position"			// Direction the affector is facing
+		firsttarget="target_entity"
+		level="LevelProperty"
+		owner="source_entity"
+		ischannel="false"
+		istoggle="false"
+		pushentity="false"					// Pushes this entity onto the stack
+		targetorigin="target_entity"
+		targetvalue=""
+		targetmodifier=""
+		directionorigin="target_position"
+		directionvalue=""
+		directionmodifier=""				// can be "pointpastline" for example
+	/>
+	
+	<spawnprojectile						// Spawns a projectile from the source (with offset) to the target
+		source="source_entity"
+		target="target_entity"
+		name="Name"
+		bind=""								// Binds the entity listed to the projectile
+		bindturn="false"					// Makes the bound entity turn in the direction the projectile does
+		bindnopush="false"					// Makes it so binding to the projectile does not stop channeling
+		unbindondeath="false"				// Unbinds the bound entity if they die
+		bindstate=""						// A state to be on the bound target as long as they are bound
+		ignoretargetoffset="false"			// Ignores the target's offset when it binds them
+		proxy=""							// Sets the listed entity as the proxy of this projectile
+		offset="0 0 0"
+		offsetspace="source_entity"			// Sets who the offset is based off of
+		ischannel="false"
+		istoggle="false"
+		pushentity="false"					// Pushes this projectile onto the stack when created
+		param="0"							// Sets the param of this projectile when created
+		noresponse="false"					// Makes it so this projectile cannot be responded to. This involves things like Nullstone or reactionary abilities. It will not proc those
+	/>
+	
+	<spawnunit								// The source spawns a unit (Name) at the target, spawning count number of them with other properties
+		source="source_entity"
+		target="target_entity"
+		name="Name"
+		count="0"
+		mount="entity"						// Mounts (binds) the unit to the entity
+		bind="entity"						// Binds the entity to this unit
+		fixedposition="false"				// Fixes the position of the unit to where it spawns
+		inheritmodifiers="true"				// Makes the unit inherit the modifiers of the source
+		ischannel="false"
+		istoggle="false"
+		maxactive="0"						// Only this number of this unit can be active at once
+		facing="entity"						// Sets the facing direction of the spawned unit in relation to the entity listed
+		angle="0"							// Angle it is turned when spawned
+		offset="0 0 0"						// Offset from the offsetspace entity
+		offsetspace="target_entity"			// Entity is who the offset is based off of for where it spawns
+		pushentity="false"					// Pushes this unit into the stack when created
+		lifetime="0"						// Sets the lifetime to the value of a/b/op
+		lifetimeb="0"
+		lifetimeop="LifetimeOp"				// Valid operators are NONE "none", ADDITION "add", SUBTRACT "sub", MULTIPLY "mult", DIVIDE "div", MINIMUM "min", and MAXIMUM "max".
+		proxy="entity"						// Sets the proxy of this unit to the entity listed
+		team=""								// Sets the team of the spawned unit. Usually a "result" after an <evaluate a="target_team" /> call
+		snaptargettogrid="false"			// Snaps the unit to the grid
+	/>
+	
+	<splashdamage							// Causes a splash damage call usually in <onattack /> or added as an impact action for onattackstart. It only hits the targets and effecttypes that are valid. Splash deals value of a/b/op
+		targetscheme="TargetScheme"
+		effecttype="EffectType"
+		radius="0"
+		a="0"								// Can use "total_adjusted_damage" if this is splashing normal attacks
+		b="0"
+		op="Operator"						// Valid operators are NONE "none", ADDITION "add", SUBTRACT "sub", MULTIPLY "mult", DIVIDE "div", MINIMUM "min", and MAXIMUM "max".
+		nonlethal="false"					// Can the splash kill?
+		centerontarget="false"				// Centers the splash circle on the target hit instead of on the attacking hero. Used for ranged splash.
+		supertype="SuperType"
+	/>
+	
+	<split									// Used in <onattack /> and splits the attack into count # of different projectiles that hit units within the range/targetscheme given. Damage the split shots do is multiplied by the damagemult.
+		count="0"
+		range="0"
+		damagemult="0.0"
+		targetscheme="TargetScheme"
+	/>
+	
+	<startattack							// Starts an attack from the source to the target as long as the targetscheme and effecttype pass.
+		source="source_entity"
+		target="target_entity"
+		targetscheme="TargetScheme"
+		effecttype="EffectType"
+		facetarget="false"					// Causes the source to face the target
+	/>
+	
+	<startcooldown							// Starts the cooldown of the entity listed or toolname if one is given for the duration of a/b/op
+		entity="this_entity"
+		toolname=""
+		duration="0"								
+		durationb="0"
+		durationop="Operator"				// Valid operators are NONE "none", ADDITION "add", SUBTRACT "sub", MULTIPLY "mult", DIVIDE "div", MINIMUM "min", and MAXIMUM "max".
+	/>
+	
+	<startexpire							// Starts the expire time of the listed entity (a state) if it is continuous and has a duration that can run out
+		entity="this_entity"
+	/>
+	
+	<startfade								// Starts the entity listed to fade into stealth over the duration of a/b/op. If no duratoin is given, uses the fadetime of the state. Also a stealthtype is required.
+		entity="this_entity"
+		a="0"
+		b="0"
+		op="Operator"						// Valid operators are NONE "none", ADDITION "add", SUBTRACT "sub", MULTIPLY "mult", DIVIDE "div", MINIMUM "min", and MAXIMUM "max".
+	/>
+	
+	<starttimer								// Starts the timer of the entity listed for the duration of a/b/op
+		entity="this_entity"
+		duration="0"								
+		durationb="0"
+		durationop="Operator"				// Valid operators are NONE "none", ADDITION "add", SUBTRACT "sub", MULTIPLY "mult", DIVIDE "div", MINIMUM "min", and MAXIMUM "max".
+	/>
+	
+	<takecontrol							// Transfers the target to be under the source's control. Maxactive limits the maximum number of units you can have active through this call.
+		source="source_entity"
+		target="target_entity"
+		maxactive="0"
+	/>
+	
+	<takemana								// The source takes the target's mana in the amount of a/b/op
+		source="source_entity"
+		target="target_entity"
+		amount="0"							// Can only be a number, not a variable
+		amountb="0"
+		amountop="Operator"					// Valid operators are NONE "none", ADDITION "add", SUBTRACT "sub", MULTIPLY "mult", DIVIDE "div", MINIMUM "min", and MAXIMUM "max".
+	/>
+	
+	<targettype								// Checks if the target is the given target type. If it is, passes true.
+		source="source_entity"
+		target="target_entity"
+		type="Type"
+	/>
+	
+	<teleport								// Teleports the source to the target
+		source="source_entity"
+		target="target_entity"
+		interpolate="false"					// Interpolates between the two points to try to make it "smoother"
+		facetarget="false"					// Faces the source towards the target when moved
+		specifyangle="false"				// Can specify the angle of the source at the end of the teleport. used with angle
+		angle="0"
+		positionorigin="source_entity"
+		positionvalue=""
+		positionmodifier=""					// This includes "start", "end", "pointonline", "maxonline", "minonline", "percentonline", "pointpastline"
+	/>
+	
+	<testactivate							// If the target is within X distance of the source, passes true
+		source="source_entity"
+		target="target_entity"
+		distance="0"
+	/>
+	
+	<testnearby								// Used mainly in the <onthink /> of NPCs to make them check for conditions. Returns a number based on the valid targets in range that met the conditions of the test
+		radius="0"
+		targetscheme="TargetScheme"
+		ignoreinvulnerable="false"
+		origin="source_entity"
+	/>
+	
+	<toggleoff								// Toggles off the named ability when used
+		name="Name"
+	/>
+	
+	<transferitemstohero />					// Used only by couriers at the moment, runs the source (courier) to the target (user of the ability) and tranfers the items the hero owns to him.
+	
+	<transferstate							// Steals the state named under entity from the target and applies it to the source
+		source="source_entity"
+		target="target_entity"
+		entity="this_entity"
+	/>
+	
+	<unbind									// Unbinds the target from anything he is bound to
+		target="target_entity"
+	/>
+	
+	<useability								// Causes the source to use the ability in slot on the target. Can force this for a duration and restrict it's usage as well. Can be used with an order.entity
+		source="source_entity"
+		target="target_entity"
+		slot="-1"
+		queue="front"
+		force="false"
+		forceduration="0"
+		restrict="false"
+		ordername=""
+		value0=""							// Unused
+		block=""							// Unused
+	/>
+	
+	<useitem								// Causes the source to use the item on the target. Can force this for a duration and restrict it's usage as well. Can be used with an order.entity
+		source="source_entity"
+		target="target_entity"
+		queue="front"
+		force="false"
+		forceduration="0"
+		restrict="false"
+		ordername=""
+		value0=""							// Unused
+		block=""							// Unused
+	/>
+	
+	
+S03 Broken Actions							// These exist but are most likely broken.
+	
+	<soullink />
+	<breaksoullink />
+	
+
+S04 Tutorial Actions						// These actions exists but are only to be used in the Tutorial or other such maps that use threads and very custom scripting
+	
+	<changeteam />
+	<clientuitrigger />
+	<closeshop />
+	<createcamera />
+	<giveitem />
+	<lockcontrol />
+	<lockitem />
+	<lockshop />
+	<movecamera />
+	<openshop />
+	<setactiverecipe />
+	<setactiveshop />
+	<setaicontroller />
+	<setcamera />
+	<setexperience />
+	<setgamephase />
+	<setgold />
+	<sethero />
+	<setinterface />
+	<setlevel />
+	<setoverlayinterface />
+	<setowner />
+	<setscriptvalue />
+	<setteamsize />
+	<spawn />
+	<spawnclientthread />
+	<spawnneutrals />
+	<spawnthread />
+	<startmatch />
+	<terminate />
+	<unlockcontrol />
+	<unlockitem />
+	<unlockshop />
+	<wait />
+	<waituntilcompare />
+	<waituntilcondition />
+	<waituntilmessage />
+	<yield />
+	<foreachitem />
+	<foreachplayer />
+	<loop />
+	<scriptcondition />
+	<scriptthread />
+	<setpos0 />
+	<setpos1 />
+	<setpos2 />
+	<setpos3 />
+	<while />
+	<whilescriptcondition />
+	
+	
+
+	
+	
+	
+
+	
+
+	
+S08	Entity Action Targets
+
+	source_entity
+	source_position
+	source_target_offset
+	source_attack_offset
+	source_owner_entity
+	source_owner_position
+	target_entity
+	target_position
+	target_target_offset
+	target_attack_offset
+	target_owner_entity
+	target_owner_position
+	inflictor_entity
+	inflictor_position
+	inflictor_target_offset
+	inflictor_owner_entity
+	inflictor_owner_position
+	proxy_entity
+	proxy_position
+	stack_entity
+	stack_position
+	this_entity
+	this_position
+	this_target_offset
+	this_attack_offset
+	this_owner_entity
+	this_owner_position
+	this_inflictor_entity
+	this_inflictor_position
+	this_spawner_entity
+	this_spawner_position
+	this_target_entity
+	this_target_position
+	this_owner_target_entity
+	this_owner_target_position
+	this_proxy_entity
+	this_proxy_position
+	this_proxy_entity1
+	this_proxy_position1
+	this_proxy_entity2
+	this_proxy_position2
+	this_proxy_entity3
+	this_proxy_position3
+	delta_position
+	ent0
+	ent0_position
+	ent1
+	ent1_position
+	ent2
+	ent2_position
+	ent3
+	ent3_position
+	
+
+S09 Commands / Orders
+
+	attack
+	move
+	stop
+	hold
+	follow
+	patrol
+	ability
+	ability2
+	attack_move
+	sentry
+	dropitem
+	giveitem
+	touch
+	guard
+	wander
+	aggressive_wander
+	aggro
+	event
+	guard_follow
+	follow_guard
+	assist
+	attack_follow
+	
+510 Dynamic Values
+
+	result
+	stack
+	var0
+	var1
+	var2
+	var3
+
+	frametime
+	lifetime_remaining
+	charges
+
+	healthlost
+	movement
+	accumulator
+	param
+	lifetime
+	team
+	time
+	castduration
+	owner_counter
+	level
+
+	source_entity
+	target_entity
+	inflictor_entity
+	proxy_entity
+	owner_entity
+	stack_entity
+	this_proxy_entity
+
+	target_damage
+	source_damage
+
+	target_health
+	target_health_percent
+	target_maxhealth
+	target_missinghealth
+	target_missinghealth_percent
+	target_mana
+	target_mana_percent
+	target_maxmana
+	target_missingmana
+	target_missingmana_percent
+	target_strength
+	target_intelligence
+	target_agility
+	target_attackspeed
+	target_castspeed
+	target_movespeed
+	target_attackactiontime
+	target_attackduration
+	target_attackcooldown
+	target_attackdamage
+	target_accumulator
+	target_lifetime
+	target_team
+	
+	source_health
+	source_health_percent
+	source_maxhealth
+	source_missinghealth
+	source_missinghealth_percent
+	source_mana
+	source_mana_percent
+	source_maxmana
+	source_missingmana
+	source_missingmana_percent
+	source_strength
+	source_intelligence
+	source_agility
+	source_attackspeed
+	source_castspeed
+	source_movespeed
+	source_attackactiontime
+	source_attackduration
+	source_attackcooldown
+	source_attackdamage
+	source_accumulator
+	source_lifetime
+	source_team
+
+	total_adjusted_damage
+	applied_damage
+	combat_target
+	combat_effecttype
+	combat_damagetype
+	combat_supertype
+	combat_basedamage
+	combat_additionaldamage
+	combat_damagemultiplier
+	combat_bonusdamage
+	combat_bonusmultiplier
+	combat_lifesteal
+	combat_evasion
+	combat_misschance
+	combat_nonlethal
+	combat_truestrike
+	combat_negated
+	combat_deflection
+	combat_manacost
+	combat_cooldowntime
+	combat_attackability
+
+	damage_supertype
+	damage_effecttype
+	damage_attempted
+	damage_applied
+	damage_deflection
+	damage_target
+	damage_attacker
+	damage_inflictor
+	

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Empath2"
+
+	icon="icon.tga"
+	statuseffecttooltip="State_Boobed"
+
+	
+	anim="ability_2"
+	casttime="1000"
+	castactiontime="100"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_entity"
+	targetscheme="other_ally_heroes"
+	casteffecttype="Physical"
+	range="600"
+	
+	manacost="50"
+	cooldowntime="12000"
+
+	
+>
+	<onimpact>
+		<setproxy target="target_entity" />
+		<applystate name="State_Empath_Ability2_Uberboob" spawner="this_entity" target="target_entity" proxy="stack_entity" pushentity="true" continuous="true" />
+		<applystate name="State_Empath_Boobable" target="target_entity" proxy="stack_entity" pushentity="true" continuous="true" />
+		<applystate name="State_Empath_Ability2_Boobme2" target="source_entity" continuous="true"/>
+	</onimpact>
+	
+	<modifier key="Empath_boobsout" modpriority="100"
+	ignorecooldown="true"
+	anim=""
+	icon="icon_b.tga"
+	casttime="0"
+	castactiontime="0"
+	noresponse="true"
+	manacost="0"
+	actiontype="no_target"
+	cooldowntime="12000"
+	>
+		<onimpact>
+			<printdebuginfo />
+			<expirestate name="State_Empath_Ability2_Uberboob" target="this_proxy_entity" />
+			<expirestate name="State_Empath_Boobable" target="this_proxy_entity" />
+			<expirestate name="State_Empath_Ability2_Boobme2" target="source_entity" />
+		</onimpact>
+	</modifier>
+</ability>

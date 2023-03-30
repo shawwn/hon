@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_DwarfMagi3"
+
+	statuseffecttooltip="State_DwarfMagi_Ability3"
+	icon="icon.tga"
+	
+	anim="ability_3"
+	casttime="800"
+	castactiontime="250"
+	casteffect="cast.effect"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_entity"
+	targetscheme="ally_units"
+	casteffecttype="Magic"
+	
+	manacost="75"
+	cooldowntime="20000"
+	
+	range="600"
+
+	doubleactivate="true"
+>
+	<onimpact>
+		<applystate name="State_DwarfMagi_Ability3" duration="30000" target="target_entity" />
+	</onimpact>
+	
+	<modifier key="DwarfMagi_Ability4_1" modpriority="100"
+		cooldowntime="15000"
+	>
+		<onimpact>
+			<applystate name="State_DwarfMagi_Ability3" duration="30000" target="target_entity" />
+			<chance threshold="0.25">
+				<areaofeffect
+					radius="600"
+					maxtotalimpacts="1"
+					targetselection="random"
+					targetscheme="ally_units"
+					center="source_position"
+					ignore="target_entity"
+				>
+					<applystate name="State_DwarfMagi_Ability3" duration="30000"/>
+				</areaofeffect>
+				<popup name="multicast" a="2" source="source_entity" target="source_entity" />
+			</chance>
+		</onimpact>
+	</modifier>
+
+	<modifier key="DwarfMagi_Ability4_2" modpriority="100"
+		cooldowntime="10000"
+	>
+		<onimpact>
+			<applystate name="State_DwarfMagi_Ability3" duration="30000" target="target_entity" />
+			<setaccumulator entity="this_entity" value="1" />
+			<chance threshold="0.4">
+				<setaccumulator entity="this_entity" value="2" />
+				<chance threshold="0.5">
+					<setaccumulator entity="this_entity" value="3" />
+				</chance>
+				<popup name="multicast" a="accumulator" source="source_entity" target="source_entity" />
+			</chance>
+			<condition test="accumulator eq 2" >
+				<areaofeffect
+					radius="600"
+					maxtotalimpacts="1"
+					targetselection="random"
+					targetscheme="ally_units"
+					center="source_position"
+					ignore="target_entity"
+				>
+					<applystate name="State_DwarfMagi_Ability3" duration="30000"/>
+				</areaofeffect>
+			</condition>
+			<condition test="accumulator eq 3" >
+				<areaofeffect
+					radius="600"
+					maxtotalimpacts="2"
+					targetselection="random"
+					targetscheme="ally_units"
+					center="source_position"
+					ignore="target_entity"
+				>
+					<applystate name="State_DwarfMagi_Ability3" duration="30000"/>
+				</areaofeffect>
+			</condition>
+		</onimpact>
+	</modifier>
+	
+	<modifier key="DwarfMagi_Ability4_3" modpriority="100"
+		cooldowntime="5000"
+	>
+		<onimpact>
+			<applystate name="State_DwarfMagi_Ability3" duration="30000" target="target_entity" />
+			<setaccumulator entity="this_entity" value="1" />
+			<chance threshold="0.5">
+				<setaccumulator entity="this_entity" value="2" />
+				<chance threshold="0.5">
+					<setaccumulator entity="this_entity" value="3" />
+					<chance threshold="0.5">
+						<setaccumulator entity="this_entity" value="4" />
+					</chance>
+				</chance>
+				<popup name="multicast" a="accumulator" source="source_entity" target="source_entity" />
+			</chance>
+			<condition test="accumulator eq 2" >
+				<areaofeffect
+					radius="600"
+					maxtotalimpacts="1"
+					targetselection="random"
+					targetscheme="ally_units"
+					center="source_position"
+					ignore="target_entity"
+				>
+					<applystate name="State_DwarfMagi_Ability3" duration="30000"/>
+				</areaofeffect>
+			</condition>
+			<condition test="accumulator eq 3" >
+				<areaofeffect
+					radius="600"
+					maxtotalimpacts="2"
+					targetselection="random"
+					targetscheme="ally_units"
+					center="source_position"
+					ignore="target_entity"
+				>
+					<applystate name="State_DwarfMagi_Ability3" duration="30000"/>
+				</areaofeffect>
+			</condition>
+			<condition test="accumulator eq 4" >
+				<areaofeffect
+					radius="600"
+					maxtotalimpacts="3"
+					targetselection="random"
+					targetscheme="ally_units"
+					center="source_position"
+					ignore="target_entity"
+				>
+					<applystate name="State_DwarfMagi_Ability3" duration="30000"/>
+				</areaofeffect>
+			</condition>
+		</onimpact>
+	</modifier>
+</ability>

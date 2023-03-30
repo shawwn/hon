@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_CorruptedDisciple_Ability4_Self"
+
+	icon="icon.tga"
+	
+	impactinterval="850,750,600"
+	passiveeffect="effects/state.effect"
+	effecttype="Physical"
+>
+	<oninflict>
+		<setaccumulator value="50000" />
+		<areaofeffect
+			radius="525"
+			targetselection="all"
+			targetscheme="nonboss_visible_enemy_units"
+			effecttype="Physical"
+		>
+			<condition test="target_health lt accumulator">
+				<setproxy entity="this_entity" target="target_entity" />
+				<setvar0 a="target_health" />
+				<setaccumulator entity="this_entity" value="var0" />
+			</condition>
+		</areaofeffect>
+		<condition test="result eq 0">
+			<setaccumulator value="50000" />
+			<setproxy entity="this_entity" target="" />
+		</condition>
+		<else>
+			<spawnprojectile name="Projectile_CorruptedDisciple_Ability4" source="source_entity" target="this_proxy_entity" offset="0 0 150" noresponse="true" />
+			<setaccumulator value="50000" />
+		</else>
+	</oninflict>
+
+	<onimpact>
+		<areaofeffect
+			radius="525"
+			targetselection="all"
+			targetscheme="nonboss_visible_enemy_units"
+			effecttype="Physical"
+		>
+			<condition test="target_health lt accumulator">
+				<setproxy entity="this_entity" target="target_entity" />
+				<setvar0 a="target_health" />
+				<setaccumulator entity="this_entity" value="var0" />
+			</condition>
+		</areaofeffect>
+		<condition test="result eq 0">
+			<setaccumulator value="50000" />
+			<setproxy entity="this_entity" target="" />
+		</condition>
+		<else>
+			<spawnprojectile name="Projectile_CorruptedDisciple_Ability4" source="source_entity" target="this_proxy_entity" offset="0 0 150" noresponse="true" />
+			<setaccumulator value="50000" />
+		</else>
+	</onimpact>
+</state>

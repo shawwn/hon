@@ -1,0 +1,72 @@
+
+class [!output CLASS_NAME]ClassDesc : public ClassDesc2 {
+	public:
+	int 			IsPublic() { return TRUE; }
+[!if STATIC_TYPE]	
+	void *			Create(BOOL loading = FALSE) { return &the[!output CLASS_NAME]; }
+[!else]
+[!if MATERIAL_TYPE]	
+	void *			Create(BOOL loading = FALSE) { return new [!output CLASS_NAME](loading); }
+[!else]
+	void *			Create(BOOL loading = FALSE) { return new [!output CLASS_NAME](); }
+[!endif]
+[!endif]
+	const TCHAR *	ClassName() { return GetString(IDS_CLASS_NAME); }
+	SClass_ID		SuperClassID() { return [!output SUPER_CLASS_ID]; }
+	Class_ID		ClassID() { return [!output CLASS_NAME]_CLASS_ID; }
+[!if SKIN_GIZMO_TYPE]
+	// The Skin modifier checks the category to decide whether the modifier is a Skin Gizmo.  This 
+	// must not be changed
+	const TCHAR* 	Category() { return GetString(IDS_PW_GIZMOCATEGORY); }
+[!else]
+	const TCHAR* 	Category() { return GetString(IDS_CATEGORY); }
+[!endif]
+
+	const TCHAR*	InternalName() { return _T("[!output CLASS_NAME]"); }	// returns fixed parsable name (scripter-visible name)
+	HINSTANCE		HInstance() { return hInstance; }					// returns owning module handle
+	
+[!if MANIP_TYPE]
+	BOOL IsManipulator() { return TRUE; }
+
+	/********************************************************************************************************
+	*
+	Returns true if the class is a manipulator and it can manipulates the ReferenceTarget passed 
+	to it.  In this case it simple states that it can manipulate itself.    
+	*
+	\********************************************************************************************************/
+    
+	BOOL CanManipulate(ReferenceTarget* hTarget) {
+		//TODO: Return TRUE if it can manipulate the ReferenceTarget.
+        return hTarget->ClassID() == ClassID() && hTarget->SuperClassID() == SuperClassID();
+    }
+
+    Manipulator* CreateManipulator(RefTargetHandle hTarget, INode* pNode);
+[!endif]
+
+};
+
+static [!output CLASS_NAME]ClassDesc [!output CLASS_NAME]Desc;
+ClassDesc2* Get[!output CLASS_NAME]Desc() { return &[!output CLASS_NAME]Desc; }
+
+[!if SPACE_WARP_TYPE]
+/*===========================================================================*\
+ |	Class Descriptor for the World Space Object
+\*===========================================================================*/
+
+class [!output CLASS_NAME]ObjClassDesc : public ClassDesc2 {
+	public:
+	int 			IsPublic()							{ return TRUE; }
+	void *			Create(BOOL loading = FALSE)		{ return new [!output CLASS_NAME]Object; }
+	const TCHAR *	ClassName()							{ return GetString(IDS_CLASS_NAME); }
+	SClass_ID		SuperClassID()						{ return WSM_OBJECT_CLASS_ID; }
+	Class_ID		ClassID()							{ return WARPOBJ_CLASS_ID; }
+	const TCHAR* 	Category()							{ return _T("");}
+
+	// Hardwired name, used by MAX Script as unique identifier
+	const TCHAR*	InternalName()						{ return _T("[!output CLASS_NAME]Object"); }
+	HINSTANCE		HInstance()							{ return hInstance; }
+};
+
+static [!output CLASS_NAME]ObjClassDesc [!output CLASS_NAME]ObjDesc;
+ClassDesc2* Get[!output CLASS_NAME]ObjDesc() { return &[!output CLASS_NAME]ObjDesc; }
+[!endif]

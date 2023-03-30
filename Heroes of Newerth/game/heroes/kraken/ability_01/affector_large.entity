@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Kraken_Ability1_Large"
+
+	radius="325"
+
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Physical Splash"
+>
+	<onimpact>
+		<damage effecttype="Physical Splash Cleave" amount="30,50,70,90" />
+	</onimpact>
+</affector>

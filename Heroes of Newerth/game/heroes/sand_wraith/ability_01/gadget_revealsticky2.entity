@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_SandWraith_Ability1_RevealSticky2"
+	
+	isselectable="false"
+
+	canrotate="false"
+	ismobile="false"
+
+	attacktype="none"
+	combattype="Ranged"
+	canattack="false"
+
+	sightrangeday="500"
+	sightrangenight="500"
+
+	deathtime="0"
+	corpsetime="0"
+	invulnerable="true"
+	flying="true"
+	clearvision="true"
+	drawonmap="false"
+>
+</gadget>

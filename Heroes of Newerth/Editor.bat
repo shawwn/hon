@@ -1,0 +1,1 @@
+start /B hon.exe -mod game;editor

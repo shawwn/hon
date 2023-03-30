@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Hunter_Ability3_Self"
+
+	
+	
+	icon="icon.tga"
+	
+	passiveeffect="effects/thirst.effect"
+	
+	effecttype="StatusBuff"
+	
+	movespeedmultiplier="0.11,0.22,0.33,0.44"
+	modifierkey="bloodthirst"
+>
+</state>

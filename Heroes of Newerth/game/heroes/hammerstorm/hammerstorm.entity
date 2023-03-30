@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_Hammerstorm"
+
+	team="Legion"
+	icon="icons/hero.tga"
+	portrait="icons/hero.tga"
+	model="model.mdf"
+	skin=""
+	
+	passiveeffect=""
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="sounds/voice/select_%.wav"
+	selectedflavorsound="sounds/voice/select_flavour_%.wav"
+	confirmmovesound="sounds/voice/move_%.wav"
+	confirmattacksound="sounds/voice/attack_%.wav"
+	nomanasound="sounds/voice/no_mana.wav"
+	cooldownsound="sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="sounds/voice/taunt_prior.wav"
+	tauntkillsound="sounds/voice/taunt_after.wav"
+	
+	preglobalscale="1.935"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="112"
+	boundsradius="24"
+	selectionradius="48"
+	targetoffset="0 0 92"
+
+	movespeed="295"
+	turnrate="540"
+	turnsmoothing="0.08"
+
+	maxhealth="150"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="-1.0"
+	magicarmor="5.5"
+
+	inventory0="Ability_Hammerstorm1"
+	inventory1="Ability_Hammerstorm2"
+	inventory2="Ability_Hammerstorm3"
+	inventory3="Ability_Hammerstorm4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8="Ability_Taunt"
+
+	attackduration="1000"
+	attackactiontime="400"
+	attackcooldown="1700"
+	attackdamagemin="31"
+	attackdamagemax="33"
+	attacknumanims="2"
+	attackoffset="0 30 100"
+	attackprojectile=""
+	attackrange="125"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="effects/attack_impact.effect"
+	attacktype="melee"
+	combattype="Hero"
+
+	aggrorange="600"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="Strength"
+	strength="23"
+	strengthperlevel="2.7"
+	agility="21"
+	agilityperlevel="2.0"
+	intelligence="14"
+	intelligenceperlevel="1.3"
+	
+	previewmodel="preview.mdf"
+	previewpos="0 0 -50"
+	previewangles="0 0 0"
+	previewscale="1.8"
+>
+	<recommendeditem name="Item_ManaPotion" />
+	<recommendeditem name="Item_MinorTotem" />
+	<recommendeditem name="Item_RunesOfTheBlight" />
+	<recommendeditem name="Item_HealthPotion" />
+	<recommendeditem name="Item_HomecomingStone" />
+	
+	<recommendeditem name="Item_Strength5" />
+	<recommendeditem name="Item_PowerSupply" />
+	<recommendeditem name="Item_Bottle" />
+	<recommendeditem name="Item_Steamboots" />
+	<recommendeditem name="Item_ElderParasite" />
+	<recommendeditem name="Item_Insanitarius" />
+	<recommendeditem name="Item_Immunity" />
+	<recommendeditem name="Item_BehemothsHeart" />
+
+	<modifier key="ability4" modpriority="100"
+		attackanim="str_attack_%"
+		attacknumanims="2"
+		attackactioneffect="effects/ability_04/ground_impact.effect"
+		attackimpacteffect="effects/attack_ultimate_impact.effect"
+	/>
+	
+	<modifier key="Alt" modpriority="1"
+		altavatar="true"
+		
+		icon="alt/icon.tga"
+		portrait="alt/icon.tga"
+		model="alt/model.mdf"
+		preglobalscale="2.435"
+		previewmodel="alt/preview.mdf"
+		previewpos="0 0 -50"
+		previewangles="0 0 0"
+		previewscale="2.1"
+		
+		selectedsound="alt/sounds/voice/select_%.wav"
+		selectedflavorsound="alt/sounds/voice/select_flavour_%.wav"
+		confirmmovesound="alt/sounds/voice/move_%.wav"
+		confirmattacksound="alt/sounds/voice/attack_%.wav"
+		nomanasound="alt/sounds/voice/no_mana.wav"
+		cooldownsound="alt/sounds/voice/cooldown.wav"
+		announcersound="alt/sounds/voice/hero_select.wav"
+		tauntedsound="alt/sounds/voice/taunt_prior.wav"
+		tauntkillsound="alt/sounds/voice/taunt_after.wav"
+	>
+	</modifier>	
+</hero>

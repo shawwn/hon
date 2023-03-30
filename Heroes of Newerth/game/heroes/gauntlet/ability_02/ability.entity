@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Gauntlet2"
+	
+	icon="icon.tga"
+	
+	anim="ability_2"
+	casttime="800"
+	castactiontime="200"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_position"
+	casteffecttype="Physical Push"
+	targetscheme="all_other_heroes"
+	casteffect="Physical"
+	
+	manacost="125"
+	cooldowntime="20000"
+
+	range="800,950,1100,1250"
+	
+	novoiceresponse="true"
+>
+	<onimpact>
+		<spawnunit name="Gadget_Gauntlet_Ability2" target="target_position" duration="-1" pushentity="true"/>
+		<spawnprojectile name="Projectile_Gauntlet_Ability2" source="source_entity" target="target_position" proxy="stack_entity" offset="0 0 0" />
+		<applystate name="State_Gauntlet_Ability2_HeroMod" target="source_entity" continuous="true" />
+	</onimpact>
+</ability>

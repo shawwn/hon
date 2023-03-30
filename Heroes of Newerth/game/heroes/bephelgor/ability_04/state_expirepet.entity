@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Bephelgor_Ability4_ExpirePet"
+
+	icon="icon.tga"
+	passiveeffect=""
+	revealed="false"
+	sighted="true"
+	ishidden="true"
+	
+	effecttype=""
+>
+	
+	<ondeath>
+		<kill target="proxy_entity" source="" />
+	</ondeath>
+	
+	<aura
+		gadget="Gadget_Bephelgor_Ability2"
+		radius="0"
+		targetscheme="self"
+	/> 
+</state>

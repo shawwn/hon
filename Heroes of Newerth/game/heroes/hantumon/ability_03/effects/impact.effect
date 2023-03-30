@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="true" >
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="0.75" >
+
+
+			<simpleemitter
+				spawnrate="500"
+				bone="_bone_centerofchest"
+				count="4"
+				particlelife="500"			
+				material="/shared/effects/materials/blob_add.material"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="1 0 0"
+					endcolor="0"
+					size="1"
+					minscale="2"
+					maxscale="6"
+					flare="1"
+					minheight="1"
+					maxheight="2"
+					minwidth="20"
+					maxwidth="30"
+				/>
+			</simpleemitter>
+
+			<billboard					
+				size="65"
+				maxroll="360"
+				bone="_bone_centerofchest"
+				life="400"
+				depthbias="-20"
+				material="/shared/effects/materials/blink.material"
+				startcolor="1 1 1"
+				endcolor="0"
+			/>
+
+			<billboard					
+				size="50"
+				maxroll="360"
+				bone="_bone_centerofchest"
+				life="300"
+				depthbias="-10"
+				material="/shared/effects/materials/corona_07.material"
+				startcolor="1 .2 .2"
+				endcolor="0"
+			/>
+
+			<billboard					
+				size="60"
+				maxroll="360"
+				bone="_bone_centerofchest"
+				life="300"
+				depthbias="-10"
+				material="/shared/effects/materials/shock_01.material"
+				startcolor="1"
+				endcolor="0"
+			/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+      		<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+      		<waitfordeath instance="instance0"/>
+   	</thread>
+
+</effect>

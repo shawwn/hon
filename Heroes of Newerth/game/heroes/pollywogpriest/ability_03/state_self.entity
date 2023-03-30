@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_PollywogPriest_Ability3_Self"
+	
+	icon=""
+	passiveeffect=""
+	ishidden="true"
+	
+	alwaystransmitdata="true"
+
+	effecttype=""
+>
+</state>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Accursed_Ability4"
+	
+	icon="icon.tga"
+	passiveeffect="ability.effect"
+	effecttype=""
+	
+	displaylevel="true"
+	modifierkey="blue_sword"	
+>
+	<ondamaged priority="1">
+		<heal target="source_entity" a="source_damage" />
+		<scaledamage scale="0.0" />
+	</ondamaged>
+
+	<onattackimpact>
+		<playeffect effect="../effects/impact_blue.effect" source="target_entity" target="" />
+	</onattackimpact>
+	
+	<onframe />
+</state>

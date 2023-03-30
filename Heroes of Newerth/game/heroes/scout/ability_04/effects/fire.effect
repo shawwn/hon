@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="idleEffects">
+	<definitions>
+		<particlesystem name="system0" space="world">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".75"
+				sample="../sounds/cast.wav"
+			/>
+		
+			<simpleemitter
+				spawnrate="50"
+				bone="_bone_fx_01"
+				particlelife="1700"
+				life="500"
+				gravity="-10"
+				speed="200"
+				drag=".2"
+				material="/shared/effects/materials/spark_10.material"
+				offsetsphere="15"
+				minangle="120"
+				maxangle="40"
+			>
+				<particle 
+					startcolor=".6 1 0"
+					endcolor="0 0 0"
+					size="6"
+					startalpha="0"
+					midalpha=".7"
+					endalpha="0"
+					midalphapos=".5"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				timenudge="1000"
+				bone="_bone_fx_01"
+				life="600"
+				spawnrate="40"
+				particlelife="1200"
+				gravity="0"
+				offsetsphere="15"
+				minspeed="5"
+				maxspeed="15"
+				material="/shared/effects/materials/phantom_smoke_04.material"
+			>
+				<particle 
+					startcolor=".5 1 0"
+					midcolor=".2 .6 0"
+					endcolor="-1"
+					midcolorpos="0.2"
+					minangle="0"
+					maxangle="360"
+					startsize="0"
+					endsize="105"
+					minanglespeed="-190"
+					maxanglespeed="190"
+				/>
+			</simpleemitter>
+
+			<billboard
+				bone="_bone_fx_01"
+				life="000"
+				startcolor=".6 .1 0"
+				midcolor=".8 .1 0"
+				midcolorpos="0.3"
+				endcolor="0"
+				startsize="70"
+				endsize="0"
+				depthbias="-50"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+
+			<billboard
+				maxroll="360"
+				bone="_bone_fx_01"
+				life="250"
+				startcolor=".45 .2 0"
+				endcolor="0"
+				size="40"
+				depthbias="-50"
+				material="/shared/effects/materials/flare1.material"
+			/>
+
+			<billboard
+				bone="_bone_fx_01"
+				life="800"
+				startalpha="0"
+				midalpha=".3"
+				endalpha="0"
+				startsize="50"
+				endsize="200"
+				depthbias="-50"
+				material="/shared/effects/materials/refract_ring.material"
+				param="0.25"
+			/>
+
+			<simpleemitter
+				bone="_bone_fx_01"
+				spawnrate="1000"
+				count="15"
+				maxparticlelife="400"
+				depthbias="-50"
+				material="/shared/effects/materials/flame.material"
+				life="400"
+			>
+				<particle
+					startcolor=".6 .2 0"
+					endcolor="0"
+					minangle="-360"
+					maxangle="360"
+					flare="true"
+					maxsize="32"
+					endscale="5"
+					startscale="1"
+					startheight="25"
+					endheight="4"
+					minwidth="1"
+					maxwidth="3"
+				/>
+				<particle
+					startcolor=".4 .1 0"
+					endcolor="0"
+					minangle="-360"
+					maxangle="360"
+					flare="true"
+					maxsize="32"
+					endscale="5"
+					startscale="1"
+					startheight="25"
+					endheight="4"
+					minwidth="1"
+					maxwidth="3"
+				/>
+			</simpleemitter>
+			<simpleemitter
+			life="250"
+				bone="_bone_fx_01"
+				spawnrate="40"
+				particlelife="500"
+				gravity="-10"
+				speed="10"
+				drag=".003"
+				acceleration="00"
+				position="0 20 0"
+				material="/shared/effects/materials/flame.material"
+				offsetsphere="10 10 0"
+				minangle="0"
+				maxangle="0"
+				direction="0 0 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="180"
+					minanglespeed="50"
+					startcolor="0 .3 .2"
+					midcolor="0 .3 .2"
+					endcolor="0 .3 .2"
+					midcolorpos="1"
+					maxanglespeed="0"
+					startsize="20"
+					midsize="35"
+					endsize="10"
+					startalpha=".1"
+					midalpha=".3"
+					endalpha="0"
+					startanchor="1"
+					endanchor=".5"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+			life="250"
+				bone="_bone_fx_01"
+				spawnrate="50"
+				particlelife="1500"
+				gravity="-5"
+				speed="-100"
+				drag="0.07"
+				acceleration="0.0"
+				mintimenudge="0"
+				maxtimenudge="1000"
+				material="/shared/effects/materials/smoke_particle.material"
+				offsetsphere="15 15 15"
+				inheritvelocity=".25"
+				direction="0 0 1"
+				position="0 20 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-30"
+					startcolor="0 .75 .25"
+					endcolor="0 0 0"
+					maxanglespeed="30"
+					startsize="35"
+					endsize="75"
+					startalpha="0"
+					midalpha=".25"
+					endalpha="0"
+					midalphapos=".2"
+					startanchor="0"
+					endanchor="0"
+				/>
+
+				<particle
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-50"
+					color="0 .75 .25"
+					maxanglespeed="50"
+					startsize="35"
+					endsize="75"
+					startalpha="0"
+					midalpha=".25"
+					endalpha="0"
+					midalphapos=".2"
+					startanchor="0"
+					endanchor="0"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+			life="250"
+				bone="_bone_fx_01"
+				spawnrate="50"
+				particlelife="2000"
+				gravity="-.2"
+				speed="10"
+				drag="0.07"
+				acceleration="0.0"
+				mintimenudge="0"
+				maxtimenudge="1000"
+				material="/shared/effects/materials/smoke_particle.material"
+				offsetsphere="15 15 15"
+				position="0 20 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-30"
+					startcolor="0 .75 .25"
+					endcolor="0 0 0"
+					maxanglespeed="30"
+					startsize="35"
+					endsize="75"
+					startalpha="0"
+					midalpha=".25"
+					endalpha="0"
+					midalphapos=".2"
+					startanchor="1"
+					endanchor=".5"
+				/>
+
+				<particle
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-50"
+					color="0 .75 .25"
+					maxanglespeed="50"
+					startsize="35"
+					endsize="75"
+					startalpha="0"
+					midalpha=".25"
+					endalpha="0"
+					midalphapos=".2"
+					startanchor="1"
+					endanchor=".5"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+			life="250"
+				bone="_bone_fx_01"
+				spawnrate="4"
+				particlelife="1000"
+				gravity="-.2"
+				speed="10"
+				drag="0.07"
+				acceleration="0.0"
+				mintimenudge="0"
+				maxtimenudge="1000"
+				material="/shared/effects/materials/refract_wave2.material"
+				offsetsphere="20 20 0"
+				inheritvelocity="0"
+				position="0 20 0"
+			>
+				<particle
+					pitch="-90"
+					minyaw="-360"
+					maxyaw="360"
+					startsize="35"
+					endsize="100"
+					param="0.015"
+					startalpha="1"
+					endalpha="0"
+					lockright="1"
+					lockup="1"
+					anchor="`"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+			life="250"
+				bone="_bone_fx_01"
+				spawnrate="40"
+				particlelife="500"
+				gravity="-10"
+				speed="10"
+				drag=".003"
+				acceleration="00"
+				position="0 20 0"
+				material="/shared/effects/materials/flame.material"
+				offsetsphere="10 10 0"
+				minangle="0"
+				maxangle="0"
+				direction="0 0 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="180"
+					minanglespeed="50"
+					startcolor="0 .3 .2"
+					midcolor=".3 .3 .2"
+					endcolor=".3 .3 .2"
+					midcolorpos="1"
+					maxanglespeed="0"
+					startsize="20"
+					midsize="35"
+					endsize="10"
+					startalpha=".1"
+					midalpha=".3"
+					endalpha="0"
+					startanchor="1"
+					endanchor=".5"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+			life="250"
+				bone="_bone_fx_01"
+				spawnrate="40"
+				particlelife="500"
+				gravity="-10"
+				speed="10"
+				drag=".003"
+				acceleration="00"
+				position="0 20 0"
+				material="/shared/effects/materials/flame.material"
+				offsetsphere="15 15 0"
+				minangle="0"
+				maxangle="0"
+				direction="0 0 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="180"
+					minanglespeed="50"
+					startcolor=".2 .3 .2"
+					midcolor=".2 .3 .2"
+					endcolor=".2 .3 .2"
+					midcolorpos="1"
+					maxanglespeed="0"
+					startsize="20"
+					midsize="35"
+					endsize="10"
+					startalpha=".1"
+					midalpha=".3"
+					endalpha="0"
+					startstickiness="0"
+					endstickiness="0"
+				/>
+			</simpleemitter>
+			
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+</effect>
+
+

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" useentityscale="true">
+	<definitions>
+	
+		<modifier
+			name="modifier0"
+			startcolor="1.5 .5 0"
+			endcolor="1 1 1"
+			life="750"
+		/>
+
+		<particlesystem name="system0" space="world" scale="1" useentityscale="true">
+		
+			<template name="smokey">		
+				<simpleemitter
+					bone="{bone}"
+					life="400"
+					spawnrate="650"
+					count="10"
+					minparticlelife="0"
+					maxparticlelife="1000"
+					gravity="0"
+					minspeed="0"
+					maxspeed="0"
+					drag="0.06"
+					offsetsphere="10 10 10"
+					depthbias="-30"
+					material="/shared/effects/materials/phantom_smoke_04.material"
+				>
+					<particle
+						minangle="-180"
+						maxangle="180"
+						minanglespeed="-150"
+						maxanglespeed="150"
+						turn="1"
+						startcolor="0 0 0"
+						midcolor="5 .25 0"
+						endcolor="0 0 0"
+						size="8"
+						minendscale="2"
+						maxendscale="8"
+						anchor="1"
+					/>
+				</simpleemitter>		
+			</template>
+			
+			<instance name="smokey" bone="Box03"/>
+			<instance name="smokey" bone="Box04"/>
+			
+			<template name="lightning">			
+				<simpleemitter
+					bone="{bone}"
+					life="2500"
+					spawnrate="380"
+					count="20"
+					particlelife="250"			
+					gravity="0"
+					speed="40"
+					drag="0"
+					acceleration="0"
+					position="0 0 0"
+					material="/shared/effects/materials/lightning_01.material"
+					offsetsphere="16 16 16"
+					minangle="360"
+					maxangle="180"
+					direction="0 0 0"
+				>
+					<particle 
+						minangle="0"
+						maxangle="360"
+						minanglespeed="50"
+						maxanglespeed="190"
+						color=".1 .05 0"
+						midcolorpos=".8"
+						startframe="0"
+						endframe="1"
+						startsize="20"
+						midsize="30"
+						endsize="30"
+						anchor=".5"
+					/>
+				</simpleemitter>
+			</template>
+			
+			<instance name="lightning" bone="Box03"/>
+			<instance name="lightning" bone="Box04"/>
+	
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+		<spawnmodifier instance="instance1" modifier="modifier0"/> 
+		<waitfordeath instance="instance0" />
+	</thread>
+</effect>

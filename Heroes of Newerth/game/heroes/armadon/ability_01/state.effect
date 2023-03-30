@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deffered="1" useentityeffectscale="1">
+	<definitions>
+
+		
+		
+		<particlesystem name="system0" space="world" scale="4.5">
+
+	
+		<template name="beam">
+			<beam
+				expirelife="1000"
+				delay="100"			
+				bone_a="{a}"
+				bone_b="{b}"
+				size="{size}"
+				color=".6 .5 .0"
+				startalpha="1"
+				endalpha="0"
+				position="0 0 0"				
+				position_b="0 0 0"
+				material="/shared/effects/materials/goo.material"
+				startframe="{frame}"
+				framespeed="5"
+			/>	
+		</template>		
+		
+
+		
+			<instance name="beam" a="_bone_righthand" b="_bone_lefthand" size="15" frame=".6"/>
+			<instance name="beam" a="_bone_righthand" b="_bone_rightfoot" size="15" frame="5"/>
+			<instance name="beam" a="_bone_lefthand" b="_bone_leftfoot" size="15" frame="5"/>
+			<instance name="beam" a="_bone_centerofchest" b="_bone_origin" position_b="20 22 0" size="14" frame="1"/>
+			<instance name="beam" a="_bone_head" b="_bone_origin" position_b="20 34 0" size="12" frame="1"/>
+			<instance name="beam" a="_bone_head" b="_bone_origin" position_a="12 44 0" size="12" frame="1"/>
+			<instance name="beam" a="_bone_lefthand" b="_bone_origin" position_b="-30 20 0" size="12" frame="5"/>
+				
+			<instance name="beam" a="_bone_leftfoot" b="_bone_rightfoot" size="15" frame="5"/>
+			<instance name="beam" a="_bone_lefthand L ForeArm" b="Bip01 Spine" size="15" frame="5"/>
+			
+			<instance name="beam" a="_bone_righthand" b="_bone_head" size="15" frame="5"/>			
+			<instance name="beam" a="_bone_lefthand" b="_bone_head"  size="15" frame="5"/>
+			
+			<instance bame="beam" a="_bone_leftfoot" b="_bone_origin" size="13" position_b="20 20 500"/>			
+			
+			<instance name="beam" a="" b="_bone_leftfoot" size="15" frame=".8"/>
+		
+		<simpleemitter
+			
+			particlelife="1500"				
+			spawnrate="1"
+			speed="10"
+			gravity="10"					
+			bone="_bone_centerofchest"
+			particledirectionalspace="local"
+			
+			offsetsphere="0 0 0"
+			position="0 0 0"
+	
+		>
+
+			<particle>
+			
+				<simpleemitter
+					count="10"
+					particlelife="1100"				
+					spawnrate="111"
+					speed="90"
+					gravity="14"
+					inheritvelocity="0.25"		
+					bone="_bone_centerofchest"
+					particledirectionalspace="local"
+					material="/shared/effects/materials/splatter_blend.material"
+					offsetsphere="0 0 0"
+					position="0 0 0"
+			
+				>
+
+					<particle 
+						minanglespeed="-100"
+						maxanglespeed="100"				
+						
+						minangle="-360"
+						maxangle="360"
+						color=".4 .34 .0"
+						
+						startsize="3"
+						minendsize="8"				
+						maxendsize="15"
+						startalpha=".5"
+						midalpha=".5"
+						endalpha="0"
+					/>
+				</simpleemitter>			
+			</particle>
+		</simpleemitter>			
+	
+
+		
+
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

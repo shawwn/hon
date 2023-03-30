@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Gladiator_Ability4_Chariot"
+
+	speed="750"
+	gravity="0"
+
+	modelscale="1.75"
+	model="chariot/model.mdf"
+	traileffect="effects/trail.effect"
+	canturn="false"
+	flying="true"
+	flyheight="0"
+	deatheffect=""
+>
+	<onimpact>
+		<kill target="proxy_entity" source="" />
+	</onimpact>
+
+</projectile>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Hiro4"
+
+	
+	
+	statuseffecttooltip="State_Hiro_Ability4"
+	icon="icons/ability_4.tga"
+	
+	casttime="1700,2500,3700"
+	castactiontime="300"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_entity"
+	targetscheme="organic_enemy_units"
+	casteffecttype="Physical"
+	
+	manacost="200,275,350"
+	cooldowntime="130000,120000,110000"
+
+	range="450"
+>
+	<onimpact>
+		<applystate name="State_Stunned" duration="100"  target="target_entity" />
+		<applystate name="State_Hiro_Ability4" duration="400" target="source_entity"/>
+		<teleport interpolate="true" facetarget="true"/>
+		<damage effecttype="Physical" min="150" max="250"/>
+<!--		<popup name="bonus_damage" target="source_entity" a="result"/> -->
+		<playanim name="ability_4_attack" variations="4" length="400" target="source_entity"/>
+		<order command="attack"/>
+		<spawnaffector name="Affector_Hiro_Ability4" target="target_position" />
+	</onimpact>
+	
+	<modifier key="ult_boost" modpriority="100"
+		displayname="true"
+		cooldowntime="110000,100000,90000"
+	>
+		<onimpact>
+			<applystate name="State_Stunned" duration="100"  target="target_entity" />
+			<applystate name="State_Hiro_Ability4" duration="400" target="source_entity"/>
+			<teleport interpolate="true" facetarget="true"/>
+			<damage effecttype="Physical" min="150" max="250"/>
+	<!--		<popup name="bonus_damage" target="source_entity" a="result"/> -->
+			<playanim name="ability_4_attack" variations="4" length="400" target="source_entity"/>
+			<order command="attack"/>
+			<spawnaffector name="Affector_Hiro_Ability4" target="target_position" />
+		</onimpact>
+	</modifier>	
+</ability>

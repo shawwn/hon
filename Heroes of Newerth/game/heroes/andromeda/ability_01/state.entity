@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Andromeda_Stunned_Visual"
+	
+	icon="icon.tga"
+	ishidden="true"
+	passiveeffect="effects/state.effect"
+	frozen="1"
+>
+	<onexpired>
+		
+	</onexpired>
+</state>

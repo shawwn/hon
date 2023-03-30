@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world">
+
+			<billboard
+				expirelife="300"
+				bone="robot"
+				material="/shared/effects/materials/whitedot.material"
+				startcolor=".4 .1 0"
+				endcolor="0"
+				size="20"
+				depthbias="-30"
+			/>
+
+			<billboard
+				life="500"
+				bone="robot"
+				material="/shared/effects/materials/whitedot.material"
+				startcolor=".85 .45 0"
+				endcolor="0 0 0"
+				size="20"
+				depthbias="-30"
+			/>
+			
+			<simpleemitter
+				spawnrate="80"
+				bone="robot"
+				particlelife="650"			
+				gravity="-5"
+				speed="240"
+				material="/shared/effects/materials/spark_10.material"
+				offsetsphere="10 10 10"
+				minangle="0"
+				maxangle="120"
+			>
+				<particle 
+					startcolor="1 .5 .2"
+					endcolor="0 0 0"
+					minstartsize="2"
+					maxstartsize="15"
+					midsize="4"
+					endsize="1"
+					startalpha="0"
+					midalpha=".7"
+					endalpha="0"
+					midalphapos=".5"
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

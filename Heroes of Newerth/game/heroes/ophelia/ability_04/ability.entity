@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Ophelia4"
+
+	icon="icon.tga"
+	
+	maxlevel="3"
+	requiredlevel="6,11,16"
+	
+	anim="ability_4"
+	casttime="800"
+	castactiontime="300"
+
+	actiontype="global"
+	casteffecttype="SuperiorMagic"
+	targetscheme="nongadget_ally_units"
+	
+	novoiceresponse="true"
+	
+	manacost="200,300,400"
+	cooldowntime="120000"
+>
+	<onaction>
+		<playeffect effect="effects/cast2.effect"/>
+		<playeffect effect="effects/cast_self.effect"/>
+	</onaction>
+
+	<onimpact >
+		<condition test="target_type mine">
+			<condition test="not_target_type self" target="target_entity" source="source_entity">
+				<heal a="target_missinghealth"/>
+				<playeffect effect="effects/cast.effect" source="target_entity" />
+			</condition>
+		</condition>
+		<condition test="target_type hero">
+			<heal a="200,300,400"/>
+			<playeffect effect="effects/cast.effect" source="target_entity" />
+		</condition>
+	</onimpact>
+	
+	<modifier key="ult_boost" modpriority="100"
+		displayname="true"
+		cooldowntime="30000"
+	/>
+</ability>

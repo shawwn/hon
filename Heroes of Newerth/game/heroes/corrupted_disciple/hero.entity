@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_CorruptedDisciple"
+
+	team="Hellbourne"
+	icon="icon.tga"
+	portrait="icon.tga"
+	model="model.mdf"
+	skin=""
+	
+	passiveeffect="effects/body.effect"
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="sounds/voice/select_%.wav"
+	selectedflavorsound="sounds/voice/select_flavour_%.wav"
+	confirmmovesound="sounds/voice/move_%.wav"
+	confirmattacksound="sounds/voice/attack_%.wav"
+	nomanasound="sounds/voice/no_mana.wav"
+	cooldownsound="sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="sounds/voice/taunt_prior.wav"
+	tauntkillsound="sounds/voice/taunt_after.wav"
+	
+	preglobalscale="1.45"
+	modelscale="1.0"
+	effectscale="1"
+	boundsheight="112"
+	boundsradius="24"
+	selectionradius="48"
+	targetoffset="0 0 64"
+
+	movespeed="290"
+	turnrate="450"
+	turnsmoothing="0.05"
+	
+	maxhealth="150"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="-.98"
+	magicarmor="5.5"
+
+	inventory0="Ability_CorruptedDisciple1"
+	inventory1="Ability_CorruptedDisciple2"
+	inventory2="Ability_CorruptedDisciple3"
+	inventory3="Ability_CorruptedDisciple4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8="Ability_Taunt"
+
+	attackduration="1000"
+	attackactiontime="300"
+	attackcooldown="1700"
+	attackdamagemin="22"
+	attackdamagemax="26"
+	attacknumanims="2"
+	attackoffset="20 24 100"
+	attackprojectile="Projectile_CorruptedDisciple_Attack"
+	attackrange="475"
+	attackstarteffect=""
+	attackactioneffect="projectile/effects/attack_impact.effect"
+	attackimpacteffect=""
+	attacktype="ranged"
+	combattype="Hero"
+
+	aggrorange="800"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+	
+	corpsetime="3300"
+	corpsefadetime="3000"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+
+	primaryattribute="Agility"
+	strength="19"
+	strengthperlevel="1.9"
+	agility="22"
+	agilityperlevel="2.5"
+	intelligence="19"
+	intelligenceperlevel="1.8"
+>
+	<recommendeditem name="Item_ManaPotion" />
+	<recommendeditem name="Item_MinorTotem" />
+	<recommendeditem name="Item_RunesOfTheBlight" />
+	<recommendeditem name="Item_HealthPotion" />
+	<recommendeditem name="Item_HomecomingStone" />
+	
+	<recommendeditem name="Item_Soulscream" />	
+	<recommendeditem name="Item_Strength5" />
+	<recommendeditem name="Item_Steamboots" />
+	<recommendeditem name="Item_Gloves3" />
+	<recommendeditem name="Item_Pierce" />
+	<recommendeditem name="Item_ManaBurn2" />
+	<recommendeditem name="Item_Weapon3" />
+	<recommendeditem name="Item_StrengthAgility" />
+	<recommendeditem name="Item_Lightning2" />
+	<recommendeditem name="Item_BehemothsHeart" />
+	<recommendeditem name="Item_Evasion" />
+</hero>

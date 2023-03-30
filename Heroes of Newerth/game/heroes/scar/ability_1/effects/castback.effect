@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect>
+	<definitions>
+		<modifier
+			name="modifier1"
+			material="refract.material"
+			life="300"
+			startparam0="1"			
+			endparam0="0"			
+		/>	
+	</definitions>
+	
+		<particlesystem name="system0" space="world" scale="1" >
+	
+			<simpleemitter
+				spawnrate="115"
+				particlelife="500"
+				offsetsphere="40 5 15"
+				material="/shared/effects/materials/water_spray_blend.material"
+				direction="0 -1 0"
+				speed="55"
+				angle="20"
+				inheritvelocity="0.25"
+			>
+				<particle
+					startcolor=".4"
+					endcolor=".3 .35 .4"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					startsize="50"
+					endsize="45"
+					maxangle="360"
+					depthbias="-10"
+					minanglespeed="-65"
+					maxanglespeed="65"
+				 />
+			</simpleemitter>
+
+		</particlesystem>			
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0"/>	
+		<spawnmodifier instance="instance1" modifier="modifier1"/> 		
+		<waitfordeath instance="instance1"/>
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Shaman_Ability4"
+	lifetime="0"
+	radius="600"
+
+	targetselection="all"
+	targetscheme="all_heroes"
+	effecttype="Magic"
+
+>
+	<onimpact>
+		<cantarget targetscheme="enemy_heroes">
+			<applystate name="State_Shaman_Ability4_Enemies" duration="12000,18000,24000" />
+		</cantarget>
+		<cantarget targetscheme="ally_heroes">
+			<applystate name="State_Shaman_Ability4" duration="12000,18000,24000" />
+		</cantarget>
+	</onimpact>
+	
+	<modifier key="ult_boost" modpriority="100"
+		radius="800"
+	>
+		<onimpact>
+			<cantarget targetscheme="enemy_heroes">
+				<applystate name="State_Shaman_Ability4_Enemies" duration="18000,24000,30000" />
+			</cantarget>
+			<cantarget targetscheme="ally_heroes">
+				<applystate name="State_Shaman_Ability4" duration="18000,24000,30000" />
+			</cantarget>
+		</onimpact>
+	</modifier>
+</affector>

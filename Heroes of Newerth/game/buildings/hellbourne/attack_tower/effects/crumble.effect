@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect>
+
+	<definitions>
+
+		<particlesystem name="system0" space="world">
+
+			<model
+				position="0 0 0"
+				maxyaw="360"
+				life="4000"
+				model="/buildings/hellbourne/attack_tower/effects/death/model.mdf"
+				anim="idle"
+				startcolor="1"
+				midcolor=".3"
+				endcolor=".2"
+				midcolorpos=".015"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".5"
+			>
+				<template name="trails">
+					<simpleemitter	
+						bone="{bone}"
+						spawnrate="45"
+						life="{life}"				
+						minparticlelife="1100"			
+						maxparticlelife="1800"	
+						depthbias="-20"			
+						material="/shared/effects/materials/smoke_particle.material"
+						minangle="0"			
+						maxangle="22"
+						offsetsphere="3"
+						gravity="-1"
+						inherityvelocity="-.5"
+					>
+						<particle 
+							minangle="-25"
+							maxangle="25"
+							minanglespeed="-20"
+							maxanglespeed="20"
+							color="{color}"
+							startsize="15"
+							endsize="30"
+							startalpha="0"
+							midalpha=".5"
+							endalpha="0"
+						/>
+					</simpleemitter>
+
+					<simpleemitter	
+						bone="{bone}"
+						startspawnrate="255"
+						life="1600"				
+						minparticlelife="1400"			
+						maxparticlelife="1600"	
+						depthbias="-20"			
+						material="/shared/effects/materials/spark_10.material"
+						maxspeed="50"
+						offsetsphere="15"
+					>
+						<particle 
+							startcolor="2 1 0"
+							endcolor="0"
+							size="1"
+							minscale="1"
+							maxscale="2"
+							startalpha="1"
+							midalpha="1"
+							endalpha="0"
+						/>
+					</simpleemitter>
+
+					<billboard
+						bone="{bone}"
+						life="0"
+						startcolor=".2 .05 0"
+						endcolor="0"
+						size="70"
+						depthbias="-30"
+						material="/shared/effects/materials/whitedot.material"
+					/>
+
+				</template>
+
+				<instance name="trails" bone="Object17" life="1400" color=".3" />
+				<instance name="trails" bone="Object42" life="1800" color=".2"/>
+				<instance name="trails" bone="Object11" life="1000" color=".3"/>
+				<instance name="trails" bone="Object41" life="1800" color=".25"/>
+				<instance name="trails" bone="Object14" life="1800" color=".35"/>
+
+			</model>
+
+		</particlesystem>
+
+		<modifier
+			color="1"
+			alpha="0"
+		/>
+
+   	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance1" particlesystem="system0" />
+		<spawnmodifier instance="instance0"/>
+		<waitfordeath  instance="instance0"/>
+		<waitfordeath  instance="instance1"/>
+	</thread>
+
+</effect>

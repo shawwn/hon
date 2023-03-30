@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="fireshield" deferred="true" useentityeffectscale="true">
+	<definitions>
+		<particlesystem name="system0" space="entity" scale="1">
+
+			<template name="axes">
+
+				<model 
+					life="300"
+					bone="_bone_axe_01"
+					model="model_charge2/model.mdf"
+					anim="idle"
+					startcolor="5"
+					endcolor="1"
+					scale="2.5"
+					directionalspace="local"
+					yaw="180"
+				>
+				</model>
+
+				<model 
+					delay="300"
+					bone="_bone_axe_01"
+					startalpha="1"
+					endalpha="0"
+					model="model_charge2/model.mdf"
+					anim="idle"
+					scale="2.5"
+					expirelife="500"
+					directionalspace="local"
+					yaw="180"
+				>
+
+				</model>
+
+				<model 
+					life="300"
+					bone="_bone_axe_02"
+					model="model_charge2/model.mdf"
+					anim="idle"
+					startcolor="5"
+					endcolor="1"
+					scale="2.5"
+					directionalspace="local"
+					yaw="180"
+				>
+				</model>
+
+				<model 
+					delay="300"
+					bone="_bone_axe_02"
+					startalpha="1"
+					endalpha="0"
+					model="model_charge2/model.mdf"
+					anim="idle"
+					scale="2.5"
+					expirelife="500"
+					directionalspace="local"
+					yaw="180"
+				>
+
+				</model>
+
+				<model 
+					life="300"
+					bone="_bone_axe_03"
+					model="model_charge1/model.mdf"
+					anim="idle"
+					startcolor="5"
+					endcolor="1"
+					scale="2"
+					directionalspace="local"
+					yaw="180"
+				>
+				</model>
+				
+				<model 
+					delay="300"
+					bone="_bone_axe_03"
+					startalpha="1"
+					endalpha="0"
+					model="model_charge1/model.mdf"
+					anim="idle"
+					scale="2"
+					expirelife="500"
+					directionalspace="local"
+					yaw="180"
+				>
+
+				</model>
+
+				<model 
+					life="300"
+					bone="_bone_axe_04"
+					model="model_charge1/model.mdf"
+					anim="idle"
+					startcolor="5"
+					endcolor="1"
+					scale="2"
+					directionalspace="local"
+					yaw="180"
+				>
+				</model>
+				
+				<model 
+					delay="300"
+					bone="_bone_axe_04"
+					startalpha="1"
+					endalpha="0"
+					model="model_charge1/model.mdf"
+					anim="idle"
+					scale="2"
+					expirelife="500"
+					directionalspace="local"
+					yaw="180"
+				>
+
+				</model>
+
+			</template>
+
+			<instance name="axes" bone1="_bone_weapon3" />
+	
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

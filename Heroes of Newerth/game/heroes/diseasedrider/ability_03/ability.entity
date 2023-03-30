@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_DiseasedRider3"
+
+	icon="icon.tga"
+	
+	anim="ability_3"
+	casttime="1100"
+	castactiontime="400"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_entity"
+	targetscheme="ally_creeps"
+	casteffecttype="Magic Transfigure"
+
+	manacost="25"
+	cooldowntime="55000,50000,45000,40000"
+	
+	range="400"
+>
+	<onimpact>
+		<playeffect effect="effects/impact.effect" target="source_entity" source="target_entity" />
+		<playeffect effect="effects/self.effect" target="source_entity" source="source_entity" />
+		<playeffect effect="effects/target.effect" target="target_entity" source="target_entity" />
+		<setvar0 a="target_health" b=".15,.3,.45,.6" op="mult"/> 
+		<givemana target="source_entity" amount="var0" />
+		<popup name="bonus_mana" a="var0" source="source_entity" target="source_entity" />		
+		<kill target="target_entity" source="source_entity" />		
+	</onimpact>
+</ability>

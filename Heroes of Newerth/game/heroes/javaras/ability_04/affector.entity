@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Javaras_Ability4"
+
+	radius="325"
+	targetscheme="enemy_units"
+	targetselection="all"
+	effecttype="Magic"
+>
+
+	<onimpact>
+		<damage effecttype="Magic" amount="1" b="param" op="mult" />
+	</onimpact>
+</affector>

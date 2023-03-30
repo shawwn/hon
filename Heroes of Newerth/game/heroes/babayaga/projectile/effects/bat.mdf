@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="bat_1.max" file="bat.model" type="K2" >
+	<spawnevent cmd="StartEffect trail.effect" /> 
+	<anim name="idle" clip="projectile.clip" loop="1" fps="180"/>
+</model>

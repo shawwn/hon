@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Chipper_Ability1"
+	
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+	
+	deniable="true"
+>
+	<oninflict>
+		<addcharges count="1" timed="true" />
+	</oninflict>
+	
+	<onrefresh>
+		<addcharges count="1" timed="true" />
+	</onrefresh>
+
+	<onframe>
+		<evaluate a="15,20,25,30" b="charges" op="mult" />
+		<evaluate a="result" b="frametime" op="mult" />
+		<damage effecttype="Magic DOT" amount="1" b="result" op="mult"/>
+	</onframe>
+</state>

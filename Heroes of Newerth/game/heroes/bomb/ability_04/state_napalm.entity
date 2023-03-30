@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Bombardier_Ability4_Napalm"
+	
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+
+	effecttype="StatusDebuff"	
+>
+	<onframe>
+		<damage effecttype="Magic" amount="60,90,120" b="frametime" op="mult" />
+	</onframe> 
+
+</state>

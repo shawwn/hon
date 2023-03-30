@@ -1,0 +1,35 @@
+/examples.dsw/1.2/Fri Aug 22 01:12:41 2008//
+/examples.sln/1.2/Fri Aug 22 01:12:41 2008//
+D/3d////
+D/bin////
+D/cdplayer////
+D/channelgroups////
+D/dsp_custom////
+D/dsp_effectperspeaker////
+D/dsppluginviewer////
+D/effects////
+D/filecallbacks////
+D/fsb////
+D/generatetone////
+D/geometry////
+D/loadfrommemory////
+D/media////
+D/multiplesoundcard////
+D/multispeakeroutput////
+D/netstream////
+D/offlinedecoding////
+D/pitchdetection////
+D/playlist////
+D/playsound////
+D/playstream////
+D/plugin_dev////
+D/readtags////
+D/realtimestitching////
+D/recording////
+D/recordtodisk////
+D/ripnetstream////
+D/soundgroups////
+D/submixing////
+D/useplugins////
+D/usercreatedsound////
+D/virtualvoices////

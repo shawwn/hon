@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+	
+		<modifier
+			name="modifier0"
+			startcolor="1 1 1"
+			midcolor="1 1 1"
+			endcolor="1 1 1"
+			midcolorpos=".5"
+			expirelife="500"
+			startalpha="1"
+			endalpha="0"
+		/>
+
+		<particlesystem name="system0" space="world" scale="1">
+		
+			<model
+				position="0 -10 0"
+				scale="1"
+				expirelife="250"
+				model="../skeleton_rider/model.mdf"
+				anim="idle"
+				color="1 1 1"
+				startalpha="1"
+				endalpha="0"
+			/>
+		
+			<simpleemitter
+				count="150"
+				bone="leftWheel"			
+				spawnrate="50"
+				particlelife="1000"
+				gravity="0"
+				speed="0"
+				drag="0"
+				acceleration="0"
+				position="0 0 0"				
+			>
+				<particle>	
+					<groundsprite	
+						life="450"
+						material="/shared/effects/materials/ground_smash_overlay.material"
+						minsize="6"
+						maxsize="8"					
+						color="1 1 1"
+						startalpha="1"
+						midalpha="5"
+						endalpha="0"
+						position="0 0 0"
+					/>	
+				</particle>
+			</simpleemitter>
+			
+			<simpleemitter
+				count="150"
+				bone="rightWheel"			
+				spawnrate="50"
+				particlelife="1000"
+				gravity="0"
+				speed="0"
+				drag="0"
+				acceleration="0"
+				position="0 0 0"				
+			>
+				<particle>	
+					<groundsprite	
+						life="600"
+						material="/shared/effects/materials/ground_smash_overlay.material"
+						minsize="6"
+						maxsize="8"					
+						color="1 1 1"
+						startalpha="1"
+						midalpha=".5"
+						endalpha="0"
+						position="0 0 0"
+					/>	
+				</particle>
+			</simpleemitter>
+
+			<twopointtrailemitter
+				life="3000"
+			 	bone_a="rightWheel"
+				bone_b="leftWheel"
+				spawnrate="100"
+				particlelife="500"
+				texpostime="500"
+				texposscale="0"
+				texstretchscale="1.0"
+				material="/shared/effects/materials/swoosh_add.material"
+				subframepos="true"
+			>
+	         	<particle
+					startcolor=".1 .1 .1"
+					endcolor="0" 
+				/>
+			</twopointtrailemitter>
+			
+			<template name="dust">
+				<simpleemitter
+					bone="{bone}"
+					gravity="-1"
+					spawnrate="30"
+					minparticlelife="800"
+					maxparticlelife="1650"
+					offsetsphere="65 65 0"
+					material="/shared/effects/materials/dust_smoke_10.material"
+					depthbias="-55"
+					inheritvelocity="-0.1"
+				>
+					<particle 
+						minangle="-180"
+						maxangle="180"		
+						color="0.7 0.65 .56"
+						size="8"
+						minstartscale="5"
+						maxstartscale="10"
+						minendscale="15"
+						maxendscale="20"
+						startalpha="0"
+						midalpha=".2"
+						midalphapos="0.2"
+						endalpha="0"
+					/>
+				</simpleemitter>
+			</template>
+			
+			<instance name="dust" bone="leftWheel"/>
+			<instance name="dust" bone="rightWheel"/>
+			<instance name="dust" bone="leftWing_01"/>
+			<instance name="dust" bone="rightWing_01"/>
+			
+			
+			<template name="wheelDust">
+				<simpleemitter
+					bone="{bone}"
+					spawnrate="50"
+					minparticlelife="250"
+					maxparticlelife="1000"
+					inheritvelocity=".05"
+					position="0 -10 0"
+					material="/shared/effects/materials/smoke_particle.material"
+					minangle="0"
+					maxangle="40"
+					direction="0 0 1"
+					offsetsphere="20 20 5"
+				>
+					<particle
+						angle="-90"
+						minangle="0"
+						maxangle="30"
+						minanglespeed="-55"
+						maxanglespeed="55"
+						startcolor=".7 .5 .25"
+						midcolorpos=".75"
+						midcolor="0.7 .65 .56"
+						endcolor="0.7 .65 .56"
+						startsize="15"
+						midsize="45"
+						midsizepos=".2"
+						endsize="185"
+						startalpha=".35"
+						endalpha="0"
+						turn="true"
+					/>
+				</simpleemitter>
+			</template>
+			
+			<instance name="wheelDust" bone="leftWheel"/>
+			<instance name="wheelDust" bone="rightWheel"/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>  
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" /> 
+	</thread>
+
+</effect>

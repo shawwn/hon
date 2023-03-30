@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect>
+	<definitions>
+		<particlesystem name="system0" space="world">
+		
+			
+				
+			<twopointtrailemitter
+			 	bone_a="_bone_fx_06"
+				bone_b="_bone_fx_03"
+				spawnrate="200"
+				particlelife="500"
+				texpostime="500"
+				texposscale="0.0"
+				texstretchscale="1.0"
+				material="/shared/effects/materials/swoosh_add.material"
+				subframepose="true"
+			>
+	         	<particle
+					startcolor="0 .1 .4"
+					endcolor="0 0 0" 
+				/>
+			</twopointtrailemitter>
+			
+			<twopointtrailemitter
+				bone_a="_bone_fx_16"
+				bone_b="_bone_fx_13"
+				spawnrate="200"
+				particlelife="500"
+				texpostime="500"
+				texposscale="0.0"
+				texstretchscale="1.0"
+				material="/shared/effects/materials/swoosh_add.material"
+				subframepose="true"
+			>
+	            <particle
+					startcolor="0 .1 .6"
+					endcolor="0 0 0" 
+				/>
+			</twopointtrailemitter>
+					
+			
+			<beam
+				bone_a="_bone_fx_05"
+				bone_b="_bone_fx_08"
+				
+				size="70"
+
+				color="0 .1 .6"
+
+
+				alpha=".0001"
+
+				material="/shared/effects/materials/bow_glow_03.material"
+
+				framespeed="5"
+				
+			/>
+
+			<beam
+				bone_a="_bone_fx_06"
+				bone_b="_bone_fx_03"
+				
+				size="70"
+
+				color="0 .1 .6"
+
+
+				alpha=".0001"
+
+				material="/shared/effects/materials/bow_glow_03.material"
+
+				framespeed="5"
+				
+			/>
+
+<beam
+				bone_a="_bone_fx_18"
+				bone_b="_bone_fx_15"
+				
+				size="70"
+
+				color="0 .1 .6"
+
+
+				alpha=".0001"
+
+				material="/shared/effects/materials/bow_glow_03.material"
+
+				framespeed="5"
+				
+			/>
+<beam
+				bone_a="_bone_fx_16"
+				bone_b="_bone_fx_13"
+				
+				size="70"
+
+				color="0 .1 .6"
+
+
+				alpha=".0001"
+
+				material="/shared/effects/materials/bow_glow_03.material"
+
+				framespeed="5"
+				
+			/>	
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+

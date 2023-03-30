@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Gauntlet_Ability2_Grabbed_Hand"
+
+	speed="1500"
+	gravity="2300"
+		
+	canturn="false"
+	flying="false"
+	flyheight="80"
+>
+	<onspawn>
+		<areaofeffect
+			radius="999999"
+			center="proxy_position"
+			targetselection="all"
+			targetscheme="Gauntlet_Gadget"
+			ignoreinvulnerable="true"
+		>
+			<bind target="target_entity" vertical="true" turn="true" />
+		</areaofeffect>
+		<spawnprojectile name="Projectile_Gauntlet_Ability2_Grabbed" source="proxy_entity" bind="proxy_entity" proxy="target_entity" bindstate="State_Gauntlet_Ability2" target="target_entity" />
+	</onspawn>
+</projectile>

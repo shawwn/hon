@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Krixi_Ability4"
+
+	radius="700"
+	
+	impactinterval="600"
+	maxintervals="4,7,10"
+	maximpactsperinterval="1"
+	maximpactspertarget="4"
+	targetselection="random"
+	targetscheme="visible_enemy_units"
+	effecttype="Magic"
+	
+	effect=""
+	impacteffect="effects/ability_04/ability_04_impact.effect"
+>
+	<onimpact>
+		<damage effecttype="Magic" amount="300" />
+	</onimpact>
+
+	<modifier key="ult_boost" modpriority="100"
+		maximpactspertarget="5"
+		maxintervals="4,8,12"
+	>
+	</modifier>
+</affector>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1" useentityeffectscale="1">
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale=".75">
+
+			<template name="magnets">
+			
+				<billboard
+					size="100"
+					life="500"
+					startcolor="0 0 0"
+					midcolor="0 .1 2"
+					endcolor="0 0 0"
+					material="/shared/effects/materials/whitedot.material"
+					loop="true"
+					position="0 0 100"
+				/>
+			
+				<simpleemitter
+					spawnrate="20"
+					particlelife="250"
+					speed="300"
+					inheritvelocity="0.0"
+					offsetsphere="10 10 10"
+					position="0 0 100"
+				>
+					<particle
+					>
+						<trailemitter
+							life="200"
+							spawnrate="61"
+							startminparticlelife="250"
+							startmaxparticlelife="250"
+							offsetsphere="5 5 5"
+							endminparticlelife="1"
+							endmaxparticlelife="1" 
+							texpostime="200"
+							texposscale="0"
+							texstretchscale="1"
+							position="0 0 0"
+							material="/shared/effects/materials/arrow_trail.material"
+						>
+							<particle
+								startcolor="1 1 1"
+								midcolor="0 .5 1"
+								endcolor="0 0 0"
+								startsize="6"
+								endsize="0"
+								midcolorpos=".1"
+								midsizepos=".1"
+							/>
+						</trailemitter>
+					</particle>
+				</simpleemitter>
+
+				<billboard
+					bone="_bone_center"
+					size="100"
+					life="500"
+					startcolor="0 0 0"
+					midcolor="0 .1 2"
+					endcolor="0 0 0"
+					material="/shared/effects/materials/whitedot.material"
+					loop="true"
+				/>
+			
+				<billboard
+					bone="{bone}"
+					size="40"
+					life="300"
+					startcolor="0 0 0"
+					midcolor=".5"
+					endcolor="0 0 0"
+					material="/shared/effects/materials/whitedot.material"
+					loop="true"
+				/>
+
+				<billboard
+					bone="{bone}"
+					size="100"
+					life="300"
+					startcolor="0 0 0"
+					midcolor="0 .1 2"
+					endcolor="0 0 0"
+					material="/shared/effects/materials/whitedot.material"
+					loop="true"
+				/>
+				
+				<billboard
+					bone="{bone}"
+					life="350"
+					param="0.1"	
+					startsize="50"
+					endsize="150"
+					startalpha="0"
+					midalpha=".4"
+					endalpha="0"				
+					depthbias="0"
+					material="/shared/effects/materials/refract_swell.material"
+					lockup="1"
+					lockright="1"
+					pitch="90"
+					loop="true"
+				/>
+
+				<simpleemitter
+					bone="{bone}"
+					spawnrate="20"
+					particlelife="200"
+					speed="300"
+					inheritvelocity="0.0"
+					offsetsphere="0 0 0"
+				>
+					<particle
+					>
+						<trailemitter
+							life="200"
+							spawnrate="61"
+							startminparticlelife="200"
+							startmaxparticlelife="200"
+							offsetsphere="5 5 5"
+							endminparticlelife="1"
+							endmaxparticlelife="1" 
+							texpostime="200"
+							texposscale="0"
+							texstretchscale="1"
+							position="0 0 0"
+							material="/shared/effects/materials/arrow_trail.material"
+						>
+							<particle
+								startcolor="1 1 1"
+								midcolor="0 .5 1"
+								endcolor="0 0 0"
+								startsize="5"
+								endsize="0"
+								midcolorpos=".1"
+								midsizepos=".1"
+							/>
+						</trailemitter>
+					</particle>
+				</simpleemitter>
+
+				<simpleemitter
+					bone="{bone}"
+					spawnrate="20"
+					particlelife="200"
+					speed="300"
+					inheritvelocity="0.0"
+					offsetsphere="15 15 0"
+				>
+					<particle
+					>
+						<trailemitter
+							life="200"
+							spawnrate="61"
+							startminparticlelife="200"
+							startmaxparticlelife="200"
+							offsetsphere="5 5 5"
+							endminparticlelife="1"
+							endmaxparticlelife="1" 
+							texpostime="200"
+							texposscale="0"
+							texstretchscale="1"
+							position="0 0 0"
+							material="/shared/effects/materials/arrow_trail.material"
+						>
+							<particle
+								startcolor="1 1 1"
+								midcolor="0 .35 1"
+								endcolor="0 0 0"
+								startsize="5"
+								endsize="0"
+								midcolorpos=".1"
+								midsizepos=".1"
+							/>
+						</trailemitter>
+					</particle>
+				</simpleemitter>
+
+			</template>
+
+			<instance name="magnets" bone="_bone_center"/>
+			<instance name="magnets" bone="Box03"/>
+			<instance name="magnets" bone="Box06"/>
+			<instance name="magnets" bone="Box02"/>
+			<instance name="magnets" bone="Box05"/>
+			
+			<template name="link">
+				<beam
+					bone_a="{bone1}"
+					bone_b="{bone2}"
+					size="{size}"
+					startcolor="0 .5 1"
+					endcolor="0"
+					expirelife="200"
+					material="/shared/effects/materials/femme_lightning_10.material"
+					startframe="{startframe}"
+					framespeed="{framespeed}"
+				/>
+				<beam
+					bone_a="{bone1}"
+					bone_b="{bone2}"
+					size="{size}"
+					startcolor="0 0 1"
+					endcolor="0"
+					expirelife="200"
+					material="/shared/effects/materials/femme_lightning_10.material"
+					startframe="{startframe}"
+					framespeed="{framespeed}"
+				/>
+			</template>
+			
+			<instance name="link" bone1="Box03" bone2="Box05" size="30" startframe=".2" framespeed="3"/>
+			<instance name="link" bone1="Box03" bone2="Box06" size="30" startframe=".2" framespeed="3"/>
+			<instance name="link" bone1="Box02" bone2="Box05" size="30" startframe=".2" framespeed="3"/>
+			<instance name="link" bone1="_bone_fx_01" bone2="_bone_fx_02" size="30" startframe=".2" framespeed="3"/>
+
+		</particlesystem>
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+
+

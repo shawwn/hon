@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_BabaYaga_Ability3"
+
+	radius="400,450,475,500"
+	
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Magic"
+>
+	<onimpact>
+		<damage effecttype="Magic" amount="85,165,225,300" />
+		<playeffect effect="effects/impact.effect" target="source_entity" source="target_entity"/>
+	</onimpact>
+</affector>

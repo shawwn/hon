@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="dragon_slave" persistent="true" useentityeffectscale="true">
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1.2">
+		
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2500"
+				volume=".85"
+				sample="../sounds/cast.wav"
+			/>	
+			
+
+			<simpleemitter
+				count="1"
+				spawnrate="5000"
+				particlelife="750"
+				acceleration="0.0"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+				offsetsphere="25 25 0"
+			>
+				<particle
+					turn="1"
+				>
+					<model
+						position="0 0 0"
+						life="2000"
+						name="emitter0" 
+						anim="idle"
+						model="spirit/model.mdf"
+						startscale="2"
+						endscale="2.75"
+						startcolor="0 0 0"
+						midcolor="0 0 0"
+						endcolor="0 0 0"
+						midcolorpos=".75"
+						startalpha="0"
+						midalpha="0"
+						endalpha="0"
+						midalphapos=".4"
+						minyaw="-10"
+						maxyaw="10"
+					>
+					
+						<template name="trails">
+							
+							<twopointtrailemitter
+								name="trail01"
+								position="0 0 0"
+								bone_a="{bone01}"
+								bone_b="{bone02}"
+								spawnrate="120"
+								particlelife="500"
+								subframepose="1"
+								direction="0 -1 0"
+								minangle="0"
+								maxangle="0"
+								texpostime="500"
+								texposscale="0"
+								texstretchscale="1"
+								material="/shared/effects/materials/hide.material"
+							>
+								<particle
+									color="0 0 0"
+									alpha=".25"
+								/>
+							</twopointtrailemitter>
+						</template>
+						
+						<instance name="trails" bone01="_bone_fx_01"  bone02="_bone_fx_02"/>
+						<instance name="trails" bone01="Bip01 R UpperArm"  bone02="Bip01 R Hand"/>
+						<instance name="trails" bone01="Bip01 L Forearm"  bone02="Bip01 Head"/>
+						<instance name="trails" bone01="Bip01 L UpperArm"  bone02="Bip01 R UpperArm"/>
+						<instance name="trails" bone01="Bip01 Head"  bone02="Bip01 R Hand"/>
+						<instance name="trails" bone01="Bip01 Head"  bone02="Bip01 L Hand"/>
+						
+					</model>
+					
+					<model
+						position="0 0 0"
+						life="1500"
+						name="emitter0" 
+						anim="idle2"
+						model="spirit/model.mdf"
+						startscale="2.75"
+						endscale="2"
+						startcolor="0 0 0"
+						midcolor="0 0 0"
+						endcolor="0 0 0"
+						midcolorpos=".75"
+						startalpha="0"
+						midalpha="0"
+						endalpha="0"
+						midalphapos=".4"
+						minyaw="-10"
+						maxyaw="10"
+					>
+					
+						<template name="trails01">
+							
+							<twopointtrailemitter
+								name="trail01"
+								position="0 0 0"
+								bone_a="{bone01}"
+								bone_b="{bone02}"
+								spawnrate="120"
+								particlelife="{life}"
+								subframepose="1"
+								direction="0 -1 0"
+								minangle="0"
+								maxangle="0"
+								texpostime="750"
+								texposscale="0"
+								texstretchscale="1"
+								material="/shared/effects/materials/hide.material"
+							>
+								<particle
+									color=".2 0 .5"
+									alpha=".25"
+								/>
+							</twopointtrailemitter>
+						</template>
+						
+						<instance name="trails01" life="500" bone01="_bone_fx_01"  bone02="_bone_fx_02"/>
+						<instance name="trails01" life="600" bone01="Bip01 R UpperArm"  bone02="Bip01 R Hand"/>
+						<instance name="trails01" life="550" bone01="Bip01 L Forearm"  bone02="Bip01 Head"/>
+						<instance name="trails01" life="750" bone01="Bip01 L UpperArm"  bone02="Bip01 R UpperArm"/>
+						<instance name="trails01" life="700" bone01="Bip01 Head"  bone02="Bip01 R Hand"/>
+						<instance name="trails01" life="400" bone01="Bip01 Head"  bone02="Bip01 L Hand"/>
+						
+					</model>
+					
+				</particle>
+			</simpleemitter>
+
+			<simpleemitter
+				delay="50"
+				count="20"				
+				spawnrate="30"
+				particlelife="850"
+				gravity="0"
+				speed="0"
+				drag="0"
+				acceleration="0"
+				position="0 0 0"
+				offsetsphere="75 75 0"
+			>
+				<particle>
+
+					<simpleemitter	
+						offsetsphere="60 60 0"
+						spawnrate="500"
+						count="5"
+						particlelife="12bn00"
+						gravity="-3"
+						drag=".05"
+						acceleration="0"
+						speed="250"
+						position="0 0 35"
+						direction="0 0 0"
+						material="/shared/effects/materials/phantom_smoke_04.material"
+					>
+						<particle
+							minangle="-360"
+							maxangle="360"
+							startcolor="0 0 0"
+							midcolor="0 0 0"
+							endcolor="0 0 0"
+							minstartsize="10"
+							maxstartsize="30"
+							minendsize="75"
+							maxendsize="100"
+							minanglespeed="-30"
+							maxanglespeed="33"
+							anchor="1"
+							lockup="0"
+							lockright="false"
+							turn="false"
+						/>
+					</simpleemitter>
+					
+				</particle>
+			</simpleemitter>
+			
+			<simpleemitter
+				delay="0"
+				count="8"				
+				spawnrate="24"
+				particlelife="850"
+				gravity="0"
+				speed="0"
+				drag="0"
+				acceleration="0"
+				position="0 0 0"
+				offsetsphere="25 25 0"
+			>
+				<particle>
+
+					<groundsprite
+						position="0 0 0"
+						life="2500"
+						material="/shared/effects/materials/tar_groundsprite.material"
+						startsize="55"
+						endsize="75"
+						startalpha=".3"
+						midalpha=".3"
+						endalpha="0"
+						midalphapos=".5"
+						maxyaw="360"
+						color="1 1 1"
+					/>
+					
+					<groundsprite
+						position="0 0 0"
+						life="2500"
+						material="/shared/effects/materials/tar_groundsprite.material"
+						startsize="55"
+						endsize="75"
+						startalpha=".3"
+						midalpha=".3"
+						endalpha="0"
+						midalphapos=".5"
+						maxyaw="360"
+						color="1 1 1"
+					/>
+					
+				</particle>
+			</simpleemitter>
+
+			<simpleemitter
+				delay="0"
+				offsetsphere="100 100 0"
+				spawnrate="25"
+				count="15"
+				particlelife="1000"
+				gravity="-.5"
+				acceleration="0"
+				speed="10"
+				position="0 0 50"
+				material="/shared/effects/materials/dust_smoke_10.material"
+				inheritvelocity="0"
+			>
+				<particle
+						minangle="-360"
+						maxangle="360"
+						startcolor=".5 0 .75"
+						endcolor="0 0 0"
+						minstartsize="75"
+						maxstartsize="150"
+						minendsize="200"
+						maxendsize="300"
+						minanglespeed="-30"
+						maxanglespeed="33"
+						startalpha="0"
+						midalpha=".25"
+						endalpha="0"
+						frame="1"
+						framespeed="1"
+						startanchor="0"
+						endanchor=".4"
+						lockup="0"
+						lockright="false"
+						turn="false"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				delay="0"
+				offsetsphere="100 100 0"
+				spawnrate="44"
+				count="26"
+				particlelife="1900"
+				gravity="-.5"
+				acceleration="0"
+				speed="10"
+				position="0 0 50"
+				material="/shared/effects/materials/pyroclast_01.material"
+				inheritvelocity="0"
+			>
+				<particle
+						minangle="-360"
+						maxangle="360"
+						color="0 0 0"
+						minstartsize="10"
+						maxstartsize="50"
+						minendsize="100"
+						maxendsize="200"
+						minanglespeed="-30"
+						maxanglespeed="33"
+						startalpha="0"
+						midalpha=".25"
+						endalpha="0"
+						frame="1"
+						framespeed="1"
+						startanchor="0"
+						endanchor=".15"
+						lockup="0"
+						lockright="false"
+						turn="false"
+				/>
+
+			</simpleemitter>
+		
+		
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

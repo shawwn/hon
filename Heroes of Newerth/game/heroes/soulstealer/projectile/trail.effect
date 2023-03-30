@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect persistent="1">
+	<definitions>
+
+		
+		
+	<particlesystem name="system0" space="world" scale="1">
+	
+
+
+		<twopointtrailemitter		
+			life="1100"
+			name="trail01"
+			bone_a="_bone_02"
+			bone_b="_bone_01"
+			spawnrate="30"
+			
+			
+			startparticlealpha="1"
+			midparticlealpha="1"
+			endparticlealpha="0	"
+			particlelife="1100"
+
+			texpostime="1100"
+			texposscale="0"
+			texstretchscale="1"				
+			material="/shared/effects/materials/soul_projectile.material"
+		>
+			<particle 				
+					
+				startcolor="1 1 1"
+				endcolor="1 1 1"
+				
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+			/>
+		</twopointtrailemitter>					
+
+		
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

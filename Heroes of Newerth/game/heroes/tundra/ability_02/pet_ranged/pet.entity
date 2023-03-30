@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pet
+	name="Pet_Tundra_Ability2_Ranged"
+
+	icon="icon.tga"
+	portrait="icon.tga"
+	model="model.mdf"
+	skin=""
+	
+	passiveeffect=""
+	spawneffect=""
+	respawneffect=""
+	selectsound=""
+	orderconfirmedsound=""
+	
+	preglobalscale="1.1"
+	modelscale="1.0"
+	effectscale="1.0"
+	boundsheight="64"
+	boundsradius="16"
+	selectionradius="32"
+	targetoffset="0 0 0"
+
+	movespeed="350"
+	turnrate="450"
+	turnsmoothing="0.05"
+
+	maxhealth="400,400,400,500"
+	healthregen="1.5"
+	maxmana="0"
+	manaregen="0"
+
+	armor="0"
+	magicarmor="0"
+
+	cancarryitems="false"
+	inventory0="Ability_Tundra2_Pet_Ability1"
+	inventory1=""
+	inventory2=""
+	inventory3=""
+
+	attackduration="1000"
+	attackactiontime="633"
+	attackcooldown="1000"
+	attackdamagemin="23,23,23,43"
+	attackdamagemax="29,29,29,49"
+	attacknumanims="2"
+	attackoffset="0 20 60"
+	attackprojectile="Projectile_TundraPetRangedAttack"
+	attackrange="550"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect=""
+	attacktype="ranged"
+	combattype="Ranged"
+
+	aggrorange="600"
+	sightrangeday="1400"
+	sightrangenight="800"
+	
+	goldbountymin="26"
+	goldbountymax="38"
+	experiencebounty="59"
+	
+	deniablepercent="0.5"
+	
+	lifetime="60000"
+	
+	unittype="summoned"
+>
+</pet>

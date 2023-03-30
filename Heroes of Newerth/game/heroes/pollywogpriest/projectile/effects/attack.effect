@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+
+			<billboard
+				bone="_bone_weapon3"
+				material="/shared/effects/materials/whitedot.material"
+				startcolor="0 .5 .3"
+				endcolor="0"
+				life="400"
+				size="125"
+				maxroll="360"
+			/>
+
+			<billboard
+				bone="_bone_weapon3"
+				material="/shared/effects/materials/starlight.material"
+				startcolor="0 .7 .5"
+				endcolor="0"
+				life="400"
+				startsize="15"
+				endsize="100"
+				maxroll="360"
+			/>
+
+			<billboard
+				position="0 82 55"
+				material="/shared/effects/materials/rhasta_01.material"
+				startcolor="0 1 .5"
+				endcolor="0"
+				life="400"
+				size="45"
+				maxroll="360"
+			/>
+
+			<billboard
+				position="0 82 55"
+				material="/shared/effects/materials/starlight.material"
+				startcolor="0 .65 .5"
+				endcolor="0"
+				life="400"
+				size="105"
+				maxroll="360"
+			/>
+
+			<simpleemitter
+				position="0 82 55"
+				maxspawnrate="700"
+				minspawnrate="400"
+				count="12"
+				minparticlelife="150"
+				maxparticlelife="550"			
+				gravity="2"
+				minspeed="85"
+				maxspeed="175"
+				drag=".01"
+				material="/shared/effects/materials/frost_flash_10.material"
+				offsetsphere="10 10 10"
+				minangle="0"
+				maxangle="360"
+			>
+				<particle 
+					color="0 1 1"
+					minanglespeed="-50"
+					maxanglespeed="-150"
+					startsize="55"
+					midsize="55"
+					endsize=".1"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".3"
+					startstickiness=".2"
+					endstickiness="0"
+					weight=".10"
+				/>
+				<particle 
+					color=".3 .3 .65"
+					minanglespeed="50"
+					maxanglespeed="150"
+					startsize="70"
+					midsize="70"
+					endsize=".1"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".3"
+					startstickiness=".2"
+					endstickiness="0"
+					weight=".30"
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

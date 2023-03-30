@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Maliken_Ability2_Healing"
+	
+	icon="icon_heal.tga"
+	passiveeffect="effects/state_heal.effect"
+	damage="-10,-20,-30,-40"
+	displaylevel="true"
+	modifierkey="swordhealing1,swordhealing2,swordhealing3,swordhealing4"
+	modifierkey2="swordhealing"
+	
+	effecttype=""
+>
+	<oninflict>
+		<playanim name="ability_2_LifeDefault" target="source_entity" />
+	</oninflict>
+	<onframe />
+	
+	<onattackimpact>
+		<condition test="not_target_type building">
+			<heal target="source_entity" a="10,20,30,40" />
+		</condition>
+	</onattackimpact>
+		
+	<modifier key="malikenult_1" modpriority="100"
+		passiveeffect="../ability_04/effects/body_heal.effect"
+	>
+		<onattackstart>
+			<setattackprojectile name="Projectile_MalikenAttack_Life" />
+			<setattackimpacteffect effect="../projectile/effects/impact_heal.effect" />
+			<playanim name="attacklife_" speed="source_attackspeed" variations="2" target="source_entity" />
+		</onattackstart>
+	</modifier>
+	
+	<modifier key="malikenult_2" modpriority="100"
+		passiveeffect="../ability_04/effects/body_heal.effect"
+	>
+		<onattackstart>
+			<setattackprojectile name="Projectile_MalikenAttack_Life" />
+			<setattackimpacteffect effect="../projectile/effects/impact_heal.effect" />
+			<playanim name="attacklife_" speed="source_attackspeed" variations="2" target="source_entity" />
+		</onattackstart>
+	</modifier>
+	
+	<modifier key="malikenult_3" modpriority="100"
+		passiveeffect="../ability_04/effects/body_heal.effect"
+	>
+		<onattackstart>
+			<setattackprojectile name="Projectile_MalikenAttack_Life" />
+			<setattackimpacteffect effect="../projectile/effects/impact_heal.effect" />
+			<playanim name="attacklife_" speed="source_attackspeed" variations="2" target="source_entity" />
+		</onattackstart>
+	</modifier>
+	
+	<modifier key="Alt" modpriority="1"
+		altavatar="true"
+		
+		passiveeffect="../alt/ability_02/effects/body_heal.effect"
+	>
+	</modifier>
+</state>

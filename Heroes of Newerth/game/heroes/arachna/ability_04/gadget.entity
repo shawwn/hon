@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Arachna_Ability4"
+	
+	model=""
+	isselectable="false"
+	attacktype="none"
+
+	sightrangeday="200"
+	sightrangenight="200"
+
+
+	deathtime="0"
+	corpsetime="0"
+	
+	invulnerable="true"
+	flying="true"
+	drawonmap="false"
+>
+
+</gadget>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Succubis4"
+
+	statuseffecttooltip="State_Succubis_Ability4"
+	icon="icon.tga"
+	
+	anim="ability_4"
+	casttime="1000"
+	castactiontime="0"
+	channeltime="5100"
+	
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_entity"
+	ischanneling="true"
+	targetscheme="enemy_units"
+	casteffecttype="SuperiorMagic"
+	novoiceresponse="true"
+	
+	manacost="150,250,350"
+	cooldowntime="120000,110000,100000"
+	
+	range="625"
+	channelrange="725"
+>
+	<onchannelstart>
+		<applystate name="State_Succubis_Ability4" target="target_entity" ischannel="true"/>
+		<applystate name="State_Succubis_Ability4_Self" target="source_entity" ischannel="true"/>
+		<damage effecttype="Magic" amount="0.000001"/>
+	</onchannelstart>
+	
+	<onimpact>
+		
+	</onimpact>
+	
+	<modifier key="ult_boost" modpriority="100"/>
+</ability>

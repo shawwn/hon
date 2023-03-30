@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pet
+	name="Pet_Tundra_Ability2_Flying"
+	
+	icon="icon.tga"
+	portrait="icon.tga"
+	model="model.mdf"
+	skin=""
+	
+	passiveeffect=""
+	spawneffect=""
+	respawneffect=""
+	selectsound=""
+	orderconfirmedsound=""
+	
+	preglobalscale="1.3"
+	modelscale="1.0"
+	effectscale="1.0"
+	boundsheight="64"
+	boundsradius="16"
+	selectionradius="32"
+	targetoffset="0 0 0"
+
+	movespeed="270,270,400,400"
+	turnrate="450"
+	turnsmoothing="0.05"
+
+	maxhealth="100,100,200,200"
+	healthregen="0.5,0.5,1.5,1.5"
+	maxmana="0"
+	manaregen="0"
+
+	armor="0,0,5,5"
+	magicarmor="0"
+	immunity="SplashImmunity"
+
+	cancarryitems="false"
+	inventory0=",,Ability_Tundra2_Pet_Flying_Ability1,Ability_Tundra2_Pet_Flying_Ability1"
+	inventory1=""
+	inventory2=""
+	inventory3=""
+
+	mapicon="/shared/icons/minimap_scoutowl.tga"
+	mapiconsize="0.05"
+	mapiconcolor="1 1 1 1"
+	
+	canattack="false"
+	attacktargetscheme="nothing"
+	attacktype="none"
+	combattype="Melee"
+
+	aggrorange="0"
+	sightrangeday="500,500,1600,1600"
+	sightrangenight="500,500,1200,1200"
+	clearvision="true"
+	
+	goldbountymin="30,30,40,40"
+	goldbountymax="30,30,40,40"
+	experiencebounty="20,20,77,77"
+	
+	deniablepercent="0.5"
+	
+	lifetime="60000"
+	
+	flying="true"
+	
+	unittype="summoned TundraBird"
+>
+</pet>

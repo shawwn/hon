@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Ebulus4"
+
+	
+	
+	statuseffecttooltip="State_Ebulus_Ability4"
+	icon="icon.tga"
+	
+	anim="ability_4"
+	casttime="1000"
+	castactiontime="200"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="self_position"
+	targetscheme="enemy_units"
+	casteffecttype="Magic"
+	casteffect=""
+	
+	manacost="200,300,400"
+	cooldowntime="140000,120000,100000"
+>
+	<onimpact>
+		<applystate name="State_Ebulus_Ability4_Vision" duration="3000" target="source_entity" />
+		<spawnaffector name="Affector_Ebulus_Ability4" target="source_position"/>
+	</onimpact>
+	
+	<modifier key="ult_boost" modpriority="100"
+		displayname="true"
+		cooldowntime="140000,120000,60000"
+	/>
+</ability>

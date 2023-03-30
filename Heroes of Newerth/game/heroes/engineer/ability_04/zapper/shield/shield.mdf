@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="model_high.max" file="shield.model" type="K2"  >
+	<anim name="spawn_1" clip="shield_birth_1.clip" fps="30" />
+	
+	<anim name="idle" clip="shield_default_1.clip" fps="30"  loop="true"/>
+
+	<anim name="death_1" clip="shield_default_1.clip" fps="35" loop="false">
+		<frameevent frame="1" cmd="starteffect ../shield_death/death.effect 0"/>
+	</anim>
+	
+</model>

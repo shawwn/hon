@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="posed_2.max" file="soul.model" type="K2" >
+<anim name="idle"  clip="soul.clip" loop="0" fps="130"/>
+</model>

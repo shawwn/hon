@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="purgeEffect" deferred="true" useentityeffectscale="true">
+	<definitions>
+		<particlesystem name="system1" space="world" scale="3.7">
+			<!--
+			<beam
+				life="100"
+				delay="400"
+				owner_b="target"
+				owner_a="source"
+				bone_b="_bone_centerofchest"
+				
+				size="55"
+				color="0 1  1"
+				
+				alpha="1.0"
+				material="/shared/effects/materials/femme_lightning_10.material"
+				startframe=".6"
+				framespeed="5"
+			/>
+			<beam
+				life="100"
+				delay="400"
+				owner_b="target"
+				owner_a="source"
+				bone_b="_bone_centerofchest"
+				
+				size="55"
+				color="0 1  1"
+				
+				alpha="1.0"
+				material="/shared/effects/materials/femme_lightning_10.material"
+				startframe=".2"
+				framespeed="5"
+			/>			
+-->
+			<sound
+				soundloop="true"
+				linearfalloff="true"
+				falloffstart="0"
+				falloffend="2000"
+				volume=".2"
+				fadein="100"
+				fadeout="400"
+				sample="../sounds/state.wav"
+			/>
+
+			<model
+				bone="_bone_centerofchest"
+				name="ring"
+				model="manaburn1_sphere/shield.mdf"
+				anim="idle"
+				yawspeed="0"
+				scale=".6"
+				color=".0 .2 .2"
+			/>
+			
+			<model
+				bone="_bone_centerofchest"
+				position="0 0 0"
+				expirelife="500"
+				name="emitter0" 
+				anim="hand_grab"
+				model="../../ability_02/projectile/model.mdf"
+				scale="1"
+				startcolor="1.5 1.5 1.85"
+				midcolor="1 1 1"
+				endcolor="1 1 1"
+				midcolorpos=".75"
+				startalpha="1"
+				endalpha="0"
+			/>
+		
+			<!--blueSmoke-->
+			<simpleemitter
+				timenudge="1000"
+				bone="_bone_centerofchest"			
+         		spawnrate="15"				
+				minparticlelife="1500"
+          		maxparticlelife="3000"
+				offsetsphere="20 20 0"
+				material="/shared/effects/materials/phantom_smoke_17.material"
+			>
+  				<particle 
+					maxangle="360"			
+					minanglespeed="-6"
+					maxanglespeed="6"
+					startcolor="0 0 0"
+					midcolor=".02 .04 .035"
+					endcolor="0 0 0"
+					startalpha=".5 1 1"
+					endalpha="0 0 0"
+					startsize="0"
+					endsize="175"
+					endanchor="0"
+					stickiness="1"
+				/>
+        	</simpleemitter>
+
+			<!--blueBoltSmoke-->
+			<simpleemitter
+				timenudge="1000"
+				bone="_bone_centerofchest"
+         		spawnrate="15"
+				minparticlelife="1500"
+          			maxparticlelife="3000"
+				offsetsphere="110 110 110"
+				material="/shared/effects/materials/lightning_10.material"
+			>
+  				<particle 
+					maxangle="360"
+					minanglespeed="-6"
+					maxanglespeed="6"
+					startcolor="0 0 0"
+					midcolor=".00 .03 .03"
+					endcolor="0 0 0"
+					startalpha=".5 1 1"
+					endalpha="0 0 0"
+					startsize="0"
+					endsize="150 0 0"
+					endanchor="0"
+					stickiness="1"
+				/>
+        	</simpleemitter>
+
+			<!-- white to light -->
+			<simpleemitter
+				spawnrate="50"
+				bone="_bone_centerofchest"
+				particlelife="300"
+				gravity="0"
+				speed="70"
+				drag="0"
+				acceleration="0"
+				position="0 0 0"
+				material="/shared/effects/materials/lightning_02.material"
+				offsetsphere="1 1 1"
+				minangle="360"
+				maxangle="180"
+				direction="1 0 0"
+				offsetdirection="0 0 0"
+				offsetradial="0 0 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="50"
+					maxanglespeed="150"
+					startcolor="1 1 1"
+					midcolor="0 .1 .1"
+					endcolor="0 0 0"
+					midcolorpos=".8"
+					startframe="0"
+					endframe="1"
+					startsize="1"
+					midsize="30"
+					endsize="50"
+					startalpha="0"
+					midalpha=".3"
+					endalpha="0"
+					midalphapos=".5"
+					startstickiness="0"
+					endstickiness="0"
+				/>
+
+
+			</simpleemitter>
+
+			<!--white lightning -->
+			<simpleemitter
+				spawnrate="50"
+				bone="_bone_centerofchest"
+				maxparticlelife="500"
+				gravity="0"
+				speed="70"
+				drag="0"
+				acceleration="0"
+				position="0 0 0"
+				material="/shared/effects/materials/lightning_02.material"
+				offsetsphere="25"
+				minangle="360"
+				maxangle="180"
+				direction="1 0 0"
+				offsetdirection="0 0 0"
+				
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="50"
+					maxanglespeed="150"
+					startcolor=".5 1 .8"
+					midcolor=".5 1 .8"
+					endcolor="0 0 0"
+					midcolorpos=".8"
+
+					startsize="1"
+					midsize="10"
+					maxendsize="15"
+
+					startstickiness="0"
+					endstickiness="1"
+					flare="1"
+				/>
+			</simpleemitter>
+			
+			<model
+				life="350"
+				parentmodel="true"
+				parentskeleton="true"
+				alpha="5"
+				startcolor=".25 .75 1"
+				endcolor="0"
+				startsize="2"
+				endsize="0"
+				material="/shared/effects/materials/shell4.material"
+				expirelife="300"
+			/>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				spawnrate="100"
+				particlelife="50"
+				drag=".51"
+				material="/shared/effects/materials/mysticenergy.material"
+				yawspeed="360"
+				offsetsphere="25 25 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="20"
+					maxanglespeed="150"
+					startcolor="1 1 1"
+					endcolor="0 0 0"
+					startsize="2"
+					midsize="10"
+					endsize="2"
+					midsizepos=".3"
+					startalpha="0"
+					midalpha=".45"
+					endalpha="0"
+					midalphapos=".01"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				bone="_bone_lefthand"
+				spawnrate="100"
+				particlelife="50"
+				drag=".51"
+				material="/shared/effects/materials/mysticenergy.material"
+				yawspeed="360"
+				offsetsphere="5 5 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="20"
+					maxanglespeed="150"
+					startcolor="1 1 1"
+					endcolor="0 0 0"
+					startsize="2"
+					midsize="10"
+					endsize="2"
+					midsizepos=".3"
+					startalpha="0"
+					midalpha=".45"
+					endalpha="0"
+					midalphapos=".01"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				bone="_bone_righthand"
+				spawnrate="100"
+				particlelife="50"
+				drag=".51"
+				material="/shared/effects/materials/mysticenergy.material"
+				yawspeed="360"
+				offsetsphere="5 5 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="20"
+					maxanglespeed="150"
+					startcolor="1 1 1"
+					endcolor="0 0 0"
+					startsize="2"
+					midsize="10"
+					endsize="2"
+					midsizepos=".3"
+					startalpha="0"
+					midalpha=".45"
+					endalpha="0"
+					midalphapos=".01"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				bone="_bone_head"
+				spawnrate="100"
+				particlelife="50"
+				drag=".51"
+				material="/shared/effects/materials/mysticenergy.material"
+				yawspeed="360"
+				offsetsphere="5 5 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="20"
+					maxanglespeed="150"
+					startcolor="1 1 1"
+					endcolor="0 0 0"
+					startsize="2"
+					midsize="10"
+					endsize="2"
+					midsizepos=".3"
+					startalpha="0"
+					midalpha=".45"
+					endalpha="0"
+					midalphapos=".01"
+				/>
+			</simpleemitter>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<simpleemitter
+				position="0 0 50"
+				life="200"
+				count="15"
+				spawnrate="2000"
+				depthbias="-40"
+				minparticlelife="250"
+				maxparticlelife="500"
+				speed="200"
+				drag="0.05"
+				offsetsphere="0"
+          		material="/shared/effects/materials/phantom_smoke_04.material"
+         	>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="1 .45 0"
+					endcolor="0"
+					startsize="25"
+					endsize="50"
+					minanglespeed="-80"
+					maxanglespeed="80"
+					startstickiness="0"
+					endstickiness="1"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				bone="_bone_centerofchest"
+				life="200"
+				count="15"
+				spawnrate="2000"
+				depthbias="-40"
+				minparticlelife="400"
+				maxparticlelife="800"
+				speed="200"
+				drag="0.05"
+				offsetsphere="0"
+          		material="/shared/effects/materials/phantom_smoke_04.material"
+         	>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="0 .5 1"
+					endcolor="0"
+					startsize="25"
+					endsize="50"
+					minanglespeed="-80"
+					maxanglespeed="80"
+					startstickiness="0"
+					endstickiness="1"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				life="1000"
+				spawnrate="1100"
+				count="55"
+				minparticlelife="250"
+				maxparticlelife="750"			
+				gravity="0"
+				minspeed="150"
+				maxspeed="200"
+				drag=".015"
+				material="/shared/effects/materials/spark_10.material"
+				offsetsphere="5 5 5"
+				minangle="0"
+				maxangle="90"
+		
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="1"
+					midcolor="1 .4 0"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					minstartsize="4"
+					maxstartsize="4"
+					midsize="4"
+					endsize="4"
+					startalpha="0"
+					midalpha=".7"
+					endalpha="0"
+					midalphapos=".5"
+					startstickiness="0"
+					endstickiness="1"
+				/>
+			</simpleemitter>
+			
+			<billboard
+				bone="_bone_centerofchest"
+				life="350"
+				startcolor=".5 .5 0"
+				midcolor=".5 .5 0"
+				endcolor="0 0 0"
+				startparam=".5"
+				endparam="0.4"
+				startsize="25"
+				endsize="90"
+				depthbias="-100"
+				material="/shared/effects/materials/stomp_01.material"
+				lockup="true"
+				pitch="90"
+			/>
+			
+			<billboard
+				bone="_bone_centerofchest"
+				life="1000"
+				startcolor=".35 .075 0"
+				midcolor=".35 .075 0"
+				midcolorpos="0.3"
+				endcolor="0"
+				startsize="125"
+				endsize="0"
+				depthbias="0"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+			
+			<billboard
+				bone="_bone_centerofchest"
+				delay="0"
+				life="350"
+				param="0.1"	
+				startsize="50"
+				endsize="125"
+				startalpha="0"
+				midalpha=".25"
+				endalpha="0"				
+				depthbias="0"
+				material="/shared/effects/materials/refract_swell.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+			/>
+			
+			<billboard
+				bone="_bone_centerofchest"
+				delay="175"
+				life="350"
+				param="0.1"	
+				startsize="50"
+				endsize="125"
+				startalpha="0"
+				midalpha=".25"
+				endalpha="0"				
+				depthbias="0"
+				material="/shared/effects/materials/refract_swell.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+			/>
+	
+		</particlesystem>
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnparticlesystem instance="instance1" particlesystem="system1" />	
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+	</thread>
+</effect>
+
+
+
+
+
+
+

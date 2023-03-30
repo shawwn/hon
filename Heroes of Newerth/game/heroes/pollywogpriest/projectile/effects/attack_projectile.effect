@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="attack_projectile" deferred="true">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="2.3">
+
+			<billboard
+				material="/shared/effects/materials/rhasta_01.material"
+				color="0 1.4 2"
+				size="35"
+				rollspeed="720"
+			/>
+
+			<trailemitter
+				spawnrate="50"
+				particlelife="300"
+				texpostime="500"
+			 	texposscale="0.0"
+			 	texstretchscale="1.0"
+				material="/shared/effects/materials/froststreak.material"
+				
+			>
+				<particle
+					 startcolor="1 1 1"
+					 midcolor="0 .8 .4"
+					 endcolor="0 .8 .2"
+					 startsize="28"
+					 endsize="5"
+			 />
+
+			</trailemitter>
+
+
+
+			<simpleemitter
+			
+				spawnrate="55"
+				particlelife="250"			
+				gravity="0"
+				speed="2"
+				drag="0"
+				acceleration="0"
+				position="0 0 0"
+
+
+				material="/shared/effects/materials/frost_flash_10.material"
+				offsetsphere="8 8 8"
+				minangle="360"
+				maxangle="180"
+				direction="0 0 1"
+				offsetdirection="0 0 0"
+				offsetradial="0"
+			>
+
+				<particle 
+					minangle="135"
+					maxangle="210"
+					minanglespeed="-50"
+					maxanglespeed="-150"
+					startcolor="2 2 2"
+					midcolor="2 2 2"
+					endcolor="2 2 2"
+					midcolorpos=".2"
+
+					startframe="0"
+					endframe="1"
+
+					startsize="40"
+					midsize="40"
+					endsize=".1"
+					midsizepos=".4"
+
+
+
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".5"
+					startstickiness="0"
+					endstickiness="0"
+				/>
+
+				<particle 
+					minangle="135"
+					maxangle="210"
+					minanglespeed="-50"
+					maxanglespeed="-150"
+					startcolor="0 .5 1"
+					midcolor="2 2 2"
+					endcolor="0 0.5 1"
+					midcolorpos=".2"
+
+					startframe="0"
+					endframe="1"
+
+					startsize="40"
+					midsize="18"
+					endsize=".1"
+					midsizepos=".4"
+
+
+
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".5"
+					startstickiness="0"
+					endstickiness="0"
+				/>
+
+			</simpleemitter>
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

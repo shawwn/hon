@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Empath1"
+
+	icon="icon.tga"
+	statuseffecttooltip="State_Empath_Ability1_Boobed"
+	
+	anim="ability_1"
+	casttime="500"
+	castactiontime="250"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_entity"
+	targetscheme="enemy_heroes"
+	casteffecttype="Magic"
+	range="500"
+	
+	manacost="110,125,140,155"
+	cooldowntime="12000"
+>
+	<onimpact>
+		<applystate name="State_Empath_Ability1_Boobed" target="target_entity"  duration="5000" proxy="stack_entity" pushentity="true" />
+		<applystate name="State_Empath_Boobable" target="target_entity"  duration="5000" proxy="stack_entity" pushentity="true" />
+		<applystate name="State_Empath_Ability1_Boobme" target="source_entity" duration="5000" />
+	</onimpact>
+</ability>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="PROJECTILE.max" file="projectile.model" type="K2" >
+
+<spawnevent cmd="StartEffect passive.effect"/> 
+
+	<anim name="idle" clip="projectile.clip" loop="true" loopbackframe="1" fps="90"/>
+
+</model>

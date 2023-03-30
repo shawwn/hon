@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="1">
+	<definitions>
+		<particlesystem name="system0" space="world ">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".7"
+				sample="/heroes/hunter/ability_01/sounds/ability_01.wav"
+			/>
+	
+
+			<billboard			
+	
+				bone="_bone_lefthand"
+				color="0 0 0"
+				size="30"
+				material="/shared/effects/materials/whitedot_blend.material"
+				loop="true"
+				depthbias="-30"
+				position="0 0 0"
+			/>			
+			
+			<billboard					
+				size="50"
+				position="0 0 40"
+				bone="_bone_overhead"
+				life="700"
+				loop="1"
+				material="/shared/effects/materials/silence.material"
+				color="1 1 1"
+				startalpha="1"			
+				midalpha=".4"
+				endalpha="1"
+		
+			>
+			</billboard>			
+			
+			<billboard			
+				
+				bone="_bone_righthand"
+				color="0 0 0"
+				size="30"
+				material="/shared/effects/materials/whitedot_blend.material"
+				loop="true"
+				depthbias="-30"
+				position="0 0 0"
+			/>	
+			<simpleemitter
+				bone="_bone_lefthand"
+				spawnrate="2"
+				particlelife="1800"
+				gravity="2.0"
+				speed="10"
+				drag="3.0"
+				acceleration="0.25"
+				material="/shared/effects/materials/heathaze.material"
+				position="0 0 0"
+				offsetsphere="2 2 2"
+			>
+				<particle
+					color="1 1 1"
+					midcolorpos="0.5"
+					startalpha="0.0"
+					midalpha=".5"
+					endalpha="0"
+					angle="0"
+					anglespeed="15"
+					startsize="90"
+					endsize="25"
+					lockup="false"
+					lockright="false"
+					pitch="0"
+					param=".025"
+					depthbias="-0"
+					anchor="1"
+				/>
+			</simpleemitter>
+	
+			<simpleemitter
+				bone="_bone_righthand"
+				spawnrate="2"
+				particlelife="1800"
+				gravity="2.0"
+				speed="10"
+				drag="3.0"
+				acceleration="0.25"
+				material="/shared/effects/materials/heathaze.material"
+				position="0 0 0"
+				offsetsphere="2 2 2"
+			>
+				<particle
+					color="1 1 1"
+					midcolorpos="0.5"
+					startalpha="0.0"
+					midalpha=".5"
+					endalpha="0"
+					angle="0"
+					anglespeed="15"
+					startsize="90"
+					endsize="25"
+					lockup="false"
+					lockright="false"
+					pitch="0"
+					param=".025"
+					depthbias="-30"
+					anchor="1"
+				/>
+			</simpleemitter>
+
+	
+			<billboard			
+	
+				bone="_bone_centerofchest"
+				color=".2 0 0"
+				size="200"
+				material="/shared/effects/materials/glow_01.material"
+				loop="true"
+				depthbias="-50"
+				position="0 0 0"
+			/>		
+			
+			
+			<billboard			
+	
+				bone="_bone_lefthand"
+				color="1 1 .7"
+				size="50"
+				material="/shared/effects/materials/pent_add.material"
+				loop="true"
+				depthbias="-50"
+				position="0 0 0"
+			/>			
+	
+			
+			<billboard			
+				
+				bone="_bone_righthand"
+				color="1 1 .7"
+				size="50"
+				material="/shared/effects/materials/pent_add.material"
+				loop="true"
+				depthbias="-50"
+				position="0 -5 0"
+			/>			
+
+			
+		</particlesystem>
+	
+
+
+
+		
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1"/>
+		<waitfordeath instance="instance0" />
+	
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+

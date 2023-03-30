@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<building
+	name="Building_LegionTower"
+	
+	
+	
+	icon="icon.tga"
+	portrait="icon.tga"
+	model="model.mdf"
+	mapicon="/shared/icons/minimap_tower.tga"
+	mapiconsize="0.03"
+	skin=""
+	
+	passiveeffect=""
+	destroyedsound=""
+	lowhealtheffect="effects/damage_02.effect"
+	lowhealthsound=""
+	selectsound=""
+	
+	preglobalscale="2.25"
+	modelscale="1.0"
+	effectscale="1.53"
+	boundsheight="256"
+	boundsradius="86"
+	selectionradius="115"
+	targetoffset="0 0 64"
+
+	maxhealth="1300,1600"
+	healthregen="0"
+
+	armor="18,18,25,30"
+	magicarmor="0"
+
+	canattack="true"
+	
+	attackduration="1000,950"
+	attackactiontime="50"
+	attackcooldown="1000,950"
+	attackdamagemin="100,120,122"
+	attackdamagemax="120,140,182"
+	attacknumanims="1"
+	attackoffset="0 0 270"
+	attackprojectile="Projectile_GoodTowerAttack"
+	attackrange="700"
+	attackstarteffect="effects/attack_tower_fire.effect"
+	attackactioneffect="effects/attack_tower_aae.effect"
+	attackimpacteffect=""
+	attacktype="ranged"
+	combattype="Tower"
+	immunity="DisableImmunity"
+	noheroarmorreduction="false,false,false,true"
+
+	aggrorange="700"
+	sightrangeday="1900"
+	sightrangenight="800"
+	revealrange="900"
+	revealtype="tower"
+	
+	goldbountymin="452,502,552,602"
+	goldbountymax="470,520,570,620"
+	goldbountyteam="200,240,280,320"
+	goldbountyconsolation="315,350,385,420"
+	
+	
+	unittype="Tower"
+	
+	istower="true"
+>
+	<modifier
+		key="easymode"
+		priority="100"
+		maxhealth="1000,1300"
+		attackdamagemin="70,90,92"
+		attackdamagemax="90,100,152"
+	/>
+	
+	<modifier
+		key="casual"
+		priority="100"
+		unsharedexperiencebounty="150,200,250,300"
+		globalexperience="true"
+		deadexperience="true"
+		goldbountymin="300,350,400,450"
+		goldbountymax="300,350,400,450"
+		goldbountyteam="300,350,400,450"
+		goldbountyconsolation="300,350,400,450"
+	/>
+	
+	<modifier key="grimmscrossingmod" modpriority="100"
+		attacktargetscheme="attack_minus_neutrals"
+	/>
+</building>

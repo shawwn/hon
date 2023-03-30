@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Scout2_Detonate"
+	
+	icon="gadget/icon.tga"
+	
+	anim=""
+	casttime="0"
+	castactiontime="0"
+	
+	
+	actiontype="target_self"
+	frontqueue="true"
+	inheritmovement="true"
+	targetscheme="electriceyes"
+	noninterrupting="true"
+	manacost="0"
+	cooldowntime="10000"
+	keyslot="2"
+	
+	useproxy="true"
+	proxytargetscheme="electriceyes"
+	proxyeffecttype=""
+	proxyselectionradius="999999"
+	proxyselectionmethod="closest"
+	proxytargetmaterial=""
+	novoiceresponse="true"
+	nosilence="true"
+	noresponse="true"
+>
+	<onimpact effectdescription="true">
+		<useability slot="0" source="proxy_entity" />
+	</onimpact>
+	<modifier key="eye1" modpriority="90"
+		baselevel="1"
+	/>
+	
+	<modifier key="eye2" modpriority="90"
+		baselevel="2"
+	/>
+	
+	<modifier key="eye3" modpriority="90"
+		baselevel="3"
+	/>
+	
+	<modifier key="eye4" modpriority="90"
+		baselevel="4"
+	/>
+</ability>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Fairy_Ability4_NoPort"
+
+	model="/shared/models/invis.mdf"
+	skin=""
+	unitwalking="true"
+	diewithowner="false"
+	
+	stealthtype="Unrevealable"
+	fadetime="0"
+	
+	passiveeffect=""
+	spawneffect=""
+	respawneffect=""
+	deatheffect=""
+	selectsound=""
+	isselectable="false"
+	orderconfirmedsound=""
+	expireeffect=""
+	preglobalscale="1.35"
+	modelscale=".75"
+	effectscale="0.9"
+	boundsheight="64"
+	boundsradius="16"
+	selectionradius="36"
+	targetoffset="0 0 0"
+
+	sightrangeday="0"
+	sightrangenight="0"
+	drawonmap="false"
+	invulnerable="true"
+	canattack="false"
+
+	corpsetime="0"
+	corpsefadetime="0"
+	deathtime="0"
+	
+	unittype="Nymphora_NoPort"
+>
+</gadget>

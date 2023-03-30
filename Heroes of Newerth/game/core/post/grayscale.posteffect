@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<posteffect>
+	<filter material="grayscale.material" />
+	<filter material="blur_h.material" />
+	<filter material="blur_v.material" />
+</posteffect>
+

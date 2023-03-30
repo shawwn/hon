@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" deferred="true" useentityeffectscale="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="entity" scale="2">
+
+			<sound
+				soundloop="true"
+				fadein="200"
+				fadeout="300"
+				volume=".15"
+				sample="../sounds/state.wav"
+				linearfalloff="true"
+				falloffstart="1000"
+				falloffend="2200"
+			/>
+		
+			<simpleemitter
+				bone="_bone_overhead"
+				count="1"
+				particlelife="400"
+				gravity="-6"
+				speed="0.0"
+				acceleration="0.0"
+				timenudge="0"
+				position="0 0 "
+				material="/shared/effects/materials/blink.material"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					startcolor="0 0 0"
+					midcolor=".25 .4 .4"
+					endcolor="0 0 0"
+					midcolorpos=".1"
+					startsize="125"
+					midsize="75"
+					endsize="0"
+				/>
+			</simpleemitter>
+			
+			<model
+				position="0 0 0"
+				bone="_bone_overhead"
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="1 1 1"
+				midcolorpos=".5"
+				scale="2"
+				model="butterfly.mdf"
+				anim="idle"
+				yaw="180"
+				expirelife="500"
+				startalpha="1"
+				endalpha="0"
+			>
+			</model>
+			
+			<simpleemitter		
+				bone="_bone_overhead"			
+				spawnrate="50"
+				minparticlelife="800"
+				maxparticlelife="1000"
+				gravity="20"
+				offsetsphere="10 10 0"
+				drag=".05"
+				acceleration="0"
+				direction="0 0 0"
+				material="/shared/effects/materials/phantom_smoke_04.material"
+			>
+				<particle 
+					startcolor="0 0 0"
+					midcolor="0 .25 1"
+					endcolor="0 0 0"
+					midcolorpos=".25"				
+					minangle="0"
+					maxangle="360"
+					startsize="50"
+					midsize="35"				
+					endsize="20"
+					midsizepos=".5"
+				/>			
+			</simpleemitter>
+			
+			<billboard
+				bone="_bone_overhead"
+				life="1000"	
+				material="/shared/effects/materials/whitedot.material"
+				startcolor="0 0 0"
+				midcolor="0 0.5 .8"
+				endcolor="0 0 0"
+				midcolorpos=".5"
+				size="50"
+				loop="true"
+			/>
+			
+<!--
+			<model
+				position="0 0 30"
+				bone="_bone_center"
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="1 1 1"
+				midcolorpos=".5"
+				scale="1.25"
+				model="model.mdf"
+				anim="idle"
+				yawspeed="0"
+				expirelife="500"
+				startalpha="1"
+				endalpha="0"
+			>
+
+				<template name="magicTrail">
+					<simpleemitter		
+						bone="{bone}"			
+						spawnrate="25"
+						minparticlelife="800"
+						maxparticlelife="1000"
+						gravity="0"
+						offsetsphere="10 10 0"
+						drag="0"
+						acceleration="0"
+						direction="0 0 0"
+						material="/shared/effects/materials/phantom_smoke_04.material"
+					>
+						<particle 
+							startcolor="0 0 0"
+							midcolor="0 .25 1"
+							endcolor="0 0 0"
+							midcolorpos=".25"				
+							minangle="0"
+							maxangle="360"
+							startsize="30"
+							midsize="10"				
+							endsize="5"
+							midsizepos=".5"
+						/>			
+					</simpleemitter>
+				</template>
+				
+				<instance name="magicTrail" bone="root01"/>
+				<instance name="magicTrail" bone="root02"/>
+				<instance name="magicTrail" bone="root03"/>
+				<instance name="magicTrail" bone="root04"/>
+				<instance name="magicTrail" bone="root05"/>
+				
+			</model>
+
+			<model
+				position="0 0 30"
+				bone="_bone_center"
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="1 1 1"
+				midcolorpos=".5"
+				scale="1"
+				model="model.mdf"
+				anim="idle"
+				pitch="180"
+				yaw="90"
+				expirelife="500"
+				startalpha="1"
+				endalpha="0"
+			>
+			
+				<template name="magicTrail01">
+					<simpleemitter		
+						bone="{bone}"			
+						spawnrate="25"
+						minparticlelife="800"
+						maxparticlelife="1000"
+						gravity="0"
+						offsetsphere="10 10 0"
+						drag="0"
+						acceleration="0"
+						direction="0 0 0"
+						material="/shared/effects/materials/phantom_smoke_04.material"
+					>
+						<particle 
+							startcolor="0 0 0"
+							midcolor="0 .1 1"
+							endcolor="0 0 0"
+							midcolorpos=".25"				
+							minangle="0"
+							maxangle="360"
+							startsize="30"
+							midsize="10"				
+							endsize="5"
+							midsizepos=".5"
+						/>			
+					</simpleemitter>
+				</template>
+				
+				<instance name="magicTrail01" bone="root01"/>
+				<instance name="magicTrail01" bone="root02"/>
+				<instance name="magicTrail01" bone="root03"/>
+				<instance name="magicTrail01" bone="root04"/>
+				<instance name="magicTrail01" bone="root05"/>
+				
+			</model>
+-->
+		</particlesystem>
+
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

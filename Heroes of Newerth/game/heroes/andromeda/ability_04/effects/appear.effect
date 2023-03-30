@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="dragon_slave" persistent="true" useentityeffectscale="true">
+	<definitions>
+
+				
+	
+		
+	<particlesystem name="system0" space="world" scale="1">
+
+		<sound
+			linearfalloff="true" 
+			falloffstart="1000"
+			falloffend="2500"
+			volume=".7"
+			sample="../sounds/cast.wav"
+		/>
+		
+		<simpleemitter
+			delay="0"
+			count="1"
+			startparticlecolor="1"
+			endparticlecolor="0"
+			startparticlealpha="1"
+			endparticlealpha="0"
+			spawnrate="33"
+			particlelife="600"
+			drag="0.0"
+			acceleration="0.0"			
+			minangle="0"
+			maxangle="0"			
+		>
+			<particle>		
+				
+
+				<groundsprite
+					life="1200"
+					material="/shared/effects/materials/whirl_ground.material"
+					color="1 1 1"
+					startsize="100"
+					endsize="155"
+					startalpha="1"
+					endalpha="0"
+					depthbias="-20"
+					yawspeed="-80"					
+				/>		
+			
+				
+			</particle>	
+		</simpleemitter>
+		
+
+
+		<light
+			
+			life="250"			
+			startcolor=".6 11 20"			
+			endcolor="0 0 0"
+			midcolorpos=".2"
+			falloffstart="00"
+			falloffend="255"
+			position="0 0 20"	
+		/>		
+		
+		<simpleemitter
+			life="300"
+			spawnrate="15"
+			particlelife="400"
+			gravity="-6"
+			speed="0.0"
+			acceleration="0.0"
+			timenudge="0"
+			position="0 0 0"
+			material="/shared/effects/materials/flare_01.material"
+		>
+			<particle
+				startcolor="1 1 1"
+				endcolor="0.0 0.0 0.0"
+
+
+				startalpha=".02"
+				endalpha="0"
+
+				minangle="0"
+				maxangle="360"
+				minanglespeed="0"
+				maxanglespeed="0"
+
+				startsize="200"
+				midsize="120"
+				endsize="50"
+
+				lockup="true"
+				pitch="90"
+
+			/>
+		</simpleemitter>
+
+		
+		
+		<simpleemitter
+			
+			count="1"
+			particlelife="200"
+			gravity="-6"
+			speed="0.0"
+			acceleration="0.0"
+			timenudge="0"
+			position="0 0 40"
+			
+			material="/shared/effects/materials/blink.material"
+		>
+			<particle
+				anglespeed="20"
+				startcolor="0 0 0"
+				midcolor="1 1 1"
+				endcolor="0.0 0.0 0.0"
+				midcolorpos=".1"
+
+
+				startsize="350"
+				midsize="220"
+				endsize="0"
+
+
+			/>
+		</simpleemitter>		
+
+
+		<billboard
+			position="0 0 20"
+			life="300"
+			color="1 1 1"
+			startalpha="1.0"				
+			endalpha="1"
+			startparam="0.1"
+			endparam="0.0"				
+			startsize="128"
+			endsize="524"
+			material="/shared/effects/materials/refract_pinch.material"
+			lockup="1"
+			pitch="90"
+		/>
+
+	
+    
+		
+
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

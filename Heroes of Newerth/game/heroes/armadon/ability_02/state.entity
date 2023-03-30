@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Armadon_Ability2"
+	
+	icon="icon.tga"
+	passiveeffect=""
+	effecttype=""
+	maxcharges="6"
+>
+	<onframe />
+
+	<oninflict>
+		<addcharges count="1" timed="true" />
+		<damage effecttype="Physical Splash" amount="20,40,60,80" target="target_entity" />
+	</oninflict>
+
+	<onrefresh>
+		<evaluate a="30" b="charges" op="mult" />
+		<setvar0 a="result" b="20,40,60,80" op="add" />
+		<damage effecttype="Physical Splash" amount="1" b="var0" op="mult"/>
+		<addcharges count="1" timed="true" />
+	</onrefresh>
+</state>

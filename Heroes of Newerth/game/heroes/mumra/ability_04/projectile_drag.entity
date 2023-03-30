@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Mumra_Ability4_Drag"
+
+	gravity="0"
+	useexactlifetime="true"
+	lifetime="500"
+
+	modelscale="1.0"
+	model=""
+	
+	canturn="false"
+	flying="true"
+
+
+>
+	<onspawn>
+		<spawnaffector name="Affector_Mumra_Ability4" count="1" target="this_entity" owner="this_owner_entity" />
+	</onspawn>
+	<onimpact>
+		<playeffect effect="effects/impact.effect" source="source_position" target="source_position"/>	
+		<kill source="" target="proxy_entity" />
+	</onimpact>
+</projectile>

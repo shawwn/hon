@@ -1,0 +1,958 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package>
+
+	<style name="sysbar_btn_up" color="#36435c" />
+	<style name="sysbar_btn_overdn" color="#0745b7" />
+	<style name="sysbar_btn_selected" color="#3d7ef4" />
+
+	<texture file="/ui/fe2/frames/sysbar_back_tl.tga" nocompress="true" />
+	<texture file="/ui/fe2/frames/sysbar_back_t.tga" nocompress="true" />
+	<texture file="/ui/fe2/frames/sysbar_back_tr.tga" nocompress="true" />
+	<texture file="/ui/fe2/frames/sysbar_back_l.tga" nocompress="true" />
+	<texture file="/ui/fe2/frames/sysbar_back_c.tga" nocompress="true" />
+	<texture file="/ui/fe2/frames/sysbar_back_r.tga" nocompress="true" />
+	<texture file="/ui/fe2/frames/sysbar_back_bl.tga" nocompress="true" />
+	<texture file="/ui/fe2/frames/sysbar_back_b.tga" nocompress="true" />
+	<texture file="/ui/fe2/frames/sysbar_back_br.tga" nocompress="true" />
+	
+	<texture file="elements/link.tga" nocompress="true" />
+	<texture file="elements/unlink.tga" nocompress="true" />
+	
+	<!-- Global Panel Controls (supports groups, exclusive/nonexclusive show/hides, etc.) -->
+	<trigger name="ShowHidePanelToggle"/>
+	<trigger name="SysbarDropDownBtnRefresh"/>
+	<template name="ShowHidePanelToggleHelper">
+		<panel noclick="true" color="invisible"
+			onload="
+				CreateString('editor_last_sysbar_dropdown', '');
+			"
+			watch="ShowHidePanelToggle"
+			ontrigger="
+				If(
+					{sysbar_dropdown=false},
+					Split(
+						If(
+							( IsVisible('{panel}') and StringEquals(param0, '{panel}') ) or StringEmpty(param0),
+							Set('editor_last_sysbar_dropdown', '')
+						),
+						If(
+							!IsVisible('{panel}') and StringEquals(param0, '{panel}'),
+							Set('editor_last_sysbar_dropdown', '{panel}')
+						)
+					)
+				);
+				
+				If(
+					{sysbar_dropdown=false},
+					Trigger('SysbarDropDownBtnRefresh')
+				);
+				
+				If(
+					!IsVisible('{panel}'),
+					If(
+						StringEquals('{panel}', param0),
+						Split(
+							ShowWidget('{panel}'),
+							{showcmd=''},
+							Call('{panel}', 'SleepWidget({showDelay=200}, \'Slide(\\\'{shownX=0}\\\', \\\'{shownY=0}\\\', {showTime=300});\');')
+						)
+					),
+					If(
+						StringEquals('{panel}', param0) or ({exclusive=false} and StringEquals('{panelGroup=NoGroup}', param1)),
+						Split(
+							{hidecmd=''},
+							Call('{panel}', 'Slide(\'{hiddenX=-110%}\', \'{hiddenY=-110%}\', {hideDelay=200}); SleepWidget({hideDelay=200}, \'HideWidget(\\\'{panel}\\\');\');')
+						)
+					)
+				);
+			"
+		/>
+	</template>
+	
+	<instance name="ShowHidePanelToggleHelper" sysbar_dropdown="true" panel="file_menu" shownX="-0.5h" shownY="0" hiddenX="-0.5h" hiddenY="-13.4h" panelGroup="EditorSysBarGroup" exclusive="true" showDelay="100" hideDelay="200" showTime="200" showcmd="CallEvent('offclick_helper', 0)" hidecmd="CallEvent('offclick_helper', 1)" />
+	<instance name="ShowHidePanelToggleHelper" sysbar_dropdown="true" panel="grid_size" shownX="-2.1h" shownY="0" hiddenX="-2.1h" hiddenY="-4.9h" panelGroup="EditorSysBarGroup" exclusive="true" showDelay="100" hideDelay="200" showTime="200" showcmd="CallEvent('offclick_helper', 0)" />
+	<instance name="ShowHidePanelToggleHelper" sysbar_dropdown="true" panel="script_list" shownX="-9.4h" shownY="0" hiddenX="-9.4h" hiddenY="-24.0h" panelGroup="EditorSysBarGroup" exclusive="true" showDelay="100" hideDelay="200" showTime="200" showcmd="CallEvent('offclick_helper', 0)" />
+	<instance name="ShowHidePanelToggleHelper" sysbar_dropdown="true" panel="properties" shownX="-21.1h" shownY="0" hiddenX="-21.1h" hiddenY="-25.4h" panelGroup="EditorSysBarGroup" exclusive="true" showDelay="100" hideDelay="200" showTime="200" showcmd="CallEvent('offclick_helper', 0)" />
+	
+	<panel name="offclick_helper" color="invisible" noclick="true"
+		onevent0="Call('offclick_catcher', 'SleepWidget(650, \'ShowWidget();\');');"
+		onevent1="HideWidget('offclick_catcher');"
+	/>
+
+	<template name="menu_text_button">
+		<button
+			name="{id}"
+			height="2.4h"
+			width="-1.0h"
+			align="center"
+			color="invisible"
+			onclick="PlaySound('/shared/sounds/ui/ccpanel/button_close_02.wav'); {onclick}"
+			onmouseover="PlaySound('/shared/sounds/ui/ccpanel/button_over_01.wav');"
+		>
+			<widgetstate statename="up">
+				<label x="0.6h" font="dyn_10" color="white" shadow="true" textvalign="center" content="{label}" />
+			</widgetstate>
+			<widgetstate statename="over">
+				<frame texture="/ui/frames/rounded_bg_white.tga" borderthickness="0.5h" color="#18202ef3" blockinput="false" noclick="true"/>
+				<frame texture="/ui/frames/roundframe.tga" color="#2c3c57" borderthickness="0.5h" blockinput="false" noclick="true"/>
+				<label x="0.6h" font="dyn_10" color="white" shadow="true" textvalign="center" content="{label}" />
+			</widgetstate>
+			<widgetstate statename="down" x="1" y="1">
+				<frame texture="/ui/frames/rounded_bg_white.tga" borderthickness="0.5h" color="#18202ef3" blockinput="false" noclick="true"/>
+				<frame texture="/ui/frames/roundframe.tga" color="#2c3c57" borderthickness="0.5h" blockinput="false" noclick="true"/>
+				<label x="0.6h" font="dyn_10" color="white" shadow="true" textvalign="center" content="{label}" />
+			</widgetstate>
+		</button>
+	</template>	
+	
+	<!-- Sysbar Drop Comboboxes -->
+	<template name="sysbar_combobox_username_item">
+		<label height="100%" y="-4%" x="35@" font="dyn_10" color="{color=white}" textvalign="center" noclick="true" shadow="true" shadowoffset="1" content="{label}" />
+	</template>
+
+	<template name="sysbar_combobox_lang_item">
+		<image width="100@" height="100%" x="35@" y="14%" noclick="true" texture="{texture}"/>
+		<label height="100%" y="-4%" x="160@" font="dyn_10" color="{color=white}" textvalign="center" noclick="true" shadow="true" shadowoffset="1" content="{label}"/>
+	</template>
+
+	<template name="sysbar_combobox_state">
+		<widgetstate statename="{state}">
+			<panel color="invisible">
+				<frame texture="/ui/frames/rounded_bg_white.tga" borderthickness="0.4h" color="{color}" blockinput="false" noclick="true"/>
+				<frame texture="/ui/frames/roundframe.tga" color="0 0 0 1" borderthickness="0.4h" blockinput="false" noclick="true"/>
+
+				<panel grow="true" height="100%" align="right" float="right" padding="0.5h" noclick="true">
+					<panel width="1" height="100%" valign="center" noclick="true">
+						<panel height="86%" color="0 0 0 1" valign="center" noclick="true" />
+					</panel>
+					<panel grow="true" height="100%" noclick="true">
+						<image width="40@" height="40%" valign="center" texture="/ui/elements/arrow_down.tga" noclick="true" />
+					</panel>
+					<panel width="1" height="100%" color="invisible"/>
+				</panel>
+			</panel>
+		</widgetstate>
+	</template>
+	
+	<template name="btn_pin">
+		<button
+			name="{id}"
+			numstates="2"
+			x="{x}" y="{y}"
+			width="{width=100%}" height="{height=100%}"
+			align="{align}" valign="{valign}"
+			group="{group}"
+			visible="{visible=true}"
+			color="invisible"
+			onclick="If(GetButtonState() == 1, HideWidget('offclick_catcher'), ShowWidget('offclick_catcher')); PlaySound('/shared/sounds/ui/ccpanel/button_close_02.wav'); HideWidget('{tip_id}'); {onclick}"
+			onmouseover="PlaySound('/shared/sounds/ui/ccpanel/button_over_01.wav'); ShowWidget('{tip_id}');"
+			onmouseout="HideWidget('{tip_id}');"
+		>
+			<widgetstate statename="up1">
+				<panel width="100@" height="100%" noclick="true">
+					<frame texture="/ui/frames/rounded_bg_white.tga" borderthickness="0.5h" color="#005b7e" blockinput="false" noclick="true"/>
+					<frame texture="/ui/frames/roundframe.tga" color="0 0 0 1" borderthickness="0.5h" blockinput="false" noclick="true"/>
+					<image width="1.3h" height="1.3h" align="center" valign="center" color=".75 .75 .75 1" texture="/ui/elements/pin.tga" noclick="true" />
+				</panel>				
+				<label x="115@" height="100%" textvalign="center" font="dyn_9" color="white" shadow="true" content="mapedit_pin" />
+			</widgetstate>
+			<widgetstate statename="over1">
+				<panel width="100@" height="100%" noclick="true">
+					<frame texture="/ui/frames/rounded_bg_white.tga" borderthickness="0.5h" color="#005b7e" blockinput="false" noclick="true"/>
+					<frame texture="/ui/frames/roundframe.tga" color="0 0 0 1" borderthickness="0.5h" blockinput="false" noclick="true"/>
+					<image width="1.3h" height="1.3h" align="center" valign="center" color="1 1 1 1" texture="/ui/elements/pin.tga" noclick="true" />
+				</panel>				
+				<label x="115@" height="100%" textvalign="center" font="dyn_9" color="white" shadow="true" content="mapedit_pin" />
+			</widgetstate>
+			<widgetstate statename="down1" x="1" y="1">
+				<panel width="100@" height="100%" noclick="true">
+					<frame texture="/ui/frames/rounded_bg_white.tga" borderthickness="0.5h" color="#005b7e" blockinput="false" noclick="true"/>
+					<frame texture="/ui/frames/roundframe.tga" color="0 0 0 1" borderthickness="0.5h" blockinput="false" noclick="true"/>
+					<image width="1.3h" height="1.3h" align="center" valign="center" color="1 1 1 1" texture="/ui/elements/pin.tga" noclick="true" />
+				</panel>				
+				<label x="115@" height="100%" textvalign="center" font="dyn_9" color="white" shadow="true" content="mapedit_pin" />
+			</widgetstate>
+			
+			<widgetstate statename="up2">
+				<panel width="100@" height="100%" noclick="true">
+					<frame texture="/ui/frames/rounded_bg_white.tga" borderthickness="0.5h" color="#910000" blockinput="false" noclick="true"/>
+					<frame texture="/ui/frames/roundframe.tga" color="0 0 0 1" borderthickness="0.5h" blockinput="false" noclick="true"/>
+					<image width="1.3h" height="1.3h" align="center" valign="center" color=".75 .75 .75 1" texture="/ui/elements/pin.tga" noclick="true" />
+				</panel>				
+				<label x="115@" height="100%" textvalign="center" font="dyn_9" color="white" shadow="true" content="mapedit_unpin" />
+			</widgetstate>
+			<widgetstate statename="over2">
+				<panel width="100@" height="100%" noclick="true">
+					<frame texture="/ui/frames/rounded_bg_white.tga" borderthickness="0.5h" color="#dc0000" blockinput="false" noclick="true"/>
+					<frame texture="/ui/frames/roundframe.tga" color="0 0 0 1" borderthickness="0.5h" blockinput="false" noclick="true"/>
+					<image width="1.3h" height="1.3h" align="center" valign="center" color="1 1 1 1" texture="/ui/elements/pin.tga" noclick="true" />
+				</panel>				
+				<label x="115@" height="100%" textvalign="center" font="dyn_9" color="white" shadow="true" content="mapedit_unpin" />
+			</widgetstate>
+			<widgetstate statename="down2" x="1" y="1">
+				<panel width="100@" height="100%" noclick="true">
+					<frame texture="/ui/frames/rounded_bg_white.tga" borderthickness="0.5h" color="#dc0000" blockinput="false" noclick="true"/>
+					<frame texture="/ui/frames/roundframe.tga" color="0 0 0 1" borderthickness="0.5h" blockinput="false" noclick="true"/>
+					<image width="1.3h" height="1.3h" align="center" valign="center" color="1 1 1 1" texture="/ui/elements/pin.tga" noclick="true" />
+				</panel>				
+				<label x="115@" height="100%" textvalign="center" font="dyn_9" color="white" shadow="true" content="mapedit_unpin" />
+			</widgetstate>
+		</button>
+	</template>
+	
+	<template name="menu_sep">
+		<panel height="1.6h" noclick="true">
+			<panel y="1" width="-1.0h" height="1" align="center" valign="center" color="0 0 0 1" noclick="true" />
+			<panel y="2" width="-1.0h" height="1" align="center" valign="center" color="#1f2d43" noclick="true" />
+		</panel>
+	</template>
+	
+	
+	<template name="drop_menu">	
+		<panel 
+			name="{id}"
+			width="{width}"
+			height="100%"
+			visible="true"
+		>				
+			<button
+				width="100%" height="100%"
+				color="invisible"
+				onmouseover="ShowWidget('{tipname}'); PlaySound('/shared/sounds/ui/button_over_01.wav');"
+				onmouseout="HideWidget('{tipname}');"
+				onclick="PlaySound('/shared/sounds/ui/button_click_01.wav'); {onclick}"
+			>				
+				<widgetstate statename="up">
+					<frame texture="frames/rounded_bg_grad.tga" borderthickness="0.4h" style="sysbar_btn_up"/>
+					<frame texture="frames/rounded_bg_grad.tga" borderthickness="0.4h" style="sysbar_btn_selected" visible="false" watch="SysbarDropDownBtnRefresh" ontrigger="SetVisible(StringEquals(editor_last_sysbar_dropdown, '{target_panel}'));"/>
+					<frame texture="/ui/frames/roundframe.tga" color="0 0 0 1" borderthickness="0.4h"/>
+					<panel grow="true" height="100%" float="right" padding="0.6h" noclick="true">					
+						<label x="0.8h" fitx="true" height="100%" textvalign="center" font="dyn_10" color="white" shadow="true" content="{label}" />					
+						<panel width="1" height="100%" valign="center">
+							<panel height="70%" valign="center" color="0 0 0 1"/>
+						</panel>					
+						<panel grow="true" height="100%" noclick="true">
+							<image width="40@" height="40%" valign="center" texture="/ui/elements/arrow_down.tga" noclick="true" watch="SysbarDropDownBtnRefresh" ontrigger="SetVisible(!StringEquals(editor_last_sysbar_dropdown, '{target_panel}'));" />
+							<image width="40@" height="40%" valign="center" texture="/ui/elements/arrow_up.tga" visible="false" noclick="true" watch="SysbarDropDownBtnRefresh" ontrigger="SetVisible(StringEquals(editor_last_sysbar_dropdown, '{target_panel}'));" />
+						</panel>
+					</panel>
+				</widgetstate>					
+				<widgetstate statename="over">
+					<frame texture="frames/rounded_bg_grad.tga" borderthickness="0.4h" style="sysbar_btn_overdn"/>
+					<frame texture="frames/rounded_bg_grad.tga" borderthickness="0.4h" style="sysbar_btn_selected" visible="false" watch="SysbarDropDownBtnRefresh" ontrigger="SetVisible(StringEquals(editor_last_sysbar_dropdown, '{target_panel}'));"/>
+					<frame texture="/ui/frames/roundframe.tga" color="0 0 0 1" borderthickness="0.4h"/>
+					<panel grow="true" height="100%" float="right" padding="0.6h" noclick="true">					
+						<label x="0.8h" fitx="true" height="100%" textvalign="center" font="dyn_10" color="white" shadow="true" content="{label}" />					
+						<panel width="1" height="100%" valign="center">
+							<panel height="70%" valign="center" color="0 0 0 1"/>
+						</panel>					
+						<panel grow="true" height="100%" noclick="true">
+							<image width="40@" height="40%" valign="center" texture="/ui/elements/arrow_down.tga" noclick="true" watch="SysbarDropDownBtnRefresh" ontrigger="SetVisible(!StringEquals(editor_last_sysbar_dropdown, '{target_panel}'));" />
+							<image width="40@" height="40%" valign="center" texture="/ui/elements/arrow_up.tga" visible="false" noclick="true" watch="SysbarDropDownBtnRefresh" ontrigger="SetVisible(StringEquals(editor_last_sysbar_dropdown, '{target_panel}'));" />
+						</panel>					
+						<panel width="0" height="100%" noclick="true" />					
+					</panel>
+				</widgetstate>					
+				<widgetstate statename="down" x="1" y="1">
+					<frame texture="frames/rounded_bg_grad.tga" borderthickness="0.4h" style="sysbar_btn_overdn"/>
+					<frame texture="frames/rounded_bg_grad.tga" borderthickness="0.4h" style="sysbar_btn_selected" visible="false" watch="SysbarDropDownBtnRefresh" ontrigger="SetVisible(StringEquals(editor_last_sysbar_dropdown, '{target_panel}'));"/>
+					<frame texture="/ui/frames/roundframe.tga" color="0 0 0 1" borderthickness="0.4h"/>
+					<panel grow="true" height="100%" float="right" padding="0.6h" noclick="true">					
+						<label x="0.8h" fitx="true" height="100%" textvalign="center" font="dyn_10" color="white" shadow="true" content="{label}" />					
+						<panel width="1" height="100%" valign="center">
+							<panel height="70%" valign="center" color="0 0 0 1"/>
+						</panel>					
+						<panel grow="true" height="100%" noclick="true">
+							<image width="40@" height="40%" valign="center" texture="/ui/elements/arrow_down.tga" noclick="true" watch="SysbarDropDownBtnRefresh" ontrigger="SetVisible(!StringEquals(editor_last_sysbar_dropdown, '{target_panel}'));" />
+							<image width="40@" height="40%" valign="center" texture="/ui/elements/arrow_up.tga" visible="false" noclick="true" watch="SysbarDropDownBtnRefresh" ontrigger="SetVisible(StringEquals(editor_last_sysbar_dropdown, '{target_panel}'));" />
+						</panel>					
+						<panel width="0" height="100%" noclick="true" />					
+					</panel>
+				</widgetstate>					
+			</button>
+		</panel>	
+	</template>
+	
+	<panel visible="true" name="systembar" width="100%" height="2.6h" noclick="true">
+	
+		<!-- File Menu -->
+		<panel
+			name="file_menu"
+			y="-13.4h"
+			x="-0.5h"
+			width="21.0h" height="14.0h"
+			align="left"
+			visible="false"
+		>		
+			<panel y="-1.0h" width="-2.0h" height="-2.5h" align="center" valign="bottom" noclick="true">
+				<frame y="0" texture="frames/rounded_bg_white.tga" borderthickness="0.6h" color="#121822f4" noclick="true"/>
+				<frame y="0" texture="frames/roundframe.tga" color="#2c3c57" borderthickness="0.6h" noclick="true" />			
+				<panel y="1.4h" float="bottom" padding="0" noclick="true">
+					<instance name="menu_text_button" label="mapedit_new_map" onclick="Call('file_new', 'FadeIn(250);');" />
+					<instance name="menu_text_button" label="mapedit_load_map" onclick="Call('file_load', 'FadeIn(250);');" />
+					<instance name="menu_text_button" label="mapedit_save" onclick="Save();" />
+					<instance name="menu_text_button" label="mapedit_saveas" onclick="Call('file_save_as', 'FadeIn(250);');" />
+				</panel>
+			</panel>
+		</panel>
+		
+		<!-- Grid Slider -->
+		<panel
+			name="grid_size"
+			visible="false"
+			y="-4.9h"
+			x="-2.1h"
+			width="31.0h" height="8.0h"
+			align="right"
+		>		
+			<panel y="-1.0h" width="-2.0h" height="-2.5h" align="center" valign="bottom">
+				<frame y="0" texture="frames/rounded_bg_white.tga" borderthickness="0.6h" color="#121822f4" noclick="true"/>
+				<frame y="0" texture="frames/roundframe.tga" color="#2c3c57" borderthickness="0.6h" noclick="true" />
+				
+				<instance
+					name="options_slider_container"
+					y="2.0h"
+					cvar="vid_terrainShowGrid"
+					tip_id="grid_tip"
+					slider_name="grid_slider"
+					label="mapedit_gridsize"
+					labelwidth="46%"
+					minvalue="0"
+					maxvalue="5"
+				/>			
+			</panel>	
+		</panel>
+		
+		<!-- Script List  -->
+		<panel
+			name="script_list"
+			visible="false"
+			y="-24.0h"
+			x="-9.4h"
+			width="34.0h" height="26.5h"
+			align="right"
+		>
+			<panel y="-0.5h" width="-1.0h" height="-2.0h" align="center" valign="bottom">
+				<frame y="0" texture="frames/rounded_bg_white.tga" borderthickness="0.6h" color="#121822f4" noclick="true"/>
+				<frame y="0" texture="frames/roundframe.tga" color="#2c3c57" borderthickness="0.6h" noclick="true" />
+				
+				<panel name="script_panel" y="2.0h" width="-2.0h" height="20.0h" align="center" noclick="true" visible="true">				
+					<panel name="global_script_editor_panel" group="mode_panels" width="100%" visible="true" float="bottom" noclick="true">
+						
+						<panel width="100%" height="3.0h" noclick="true">
+							<label height="100%" font="dyn_10" textvalign="center" color="white" shadow="true" noclick="true" content="mapedit_script_new" />
+							
+							<panel width="17.0h" height="-0.6h" align="right" valign="center" noclick="true">					
+								<image x="-2.4h" width="1.0h" height="1.0h" align="left" valign="center" texture="/ui/info/arrow.tga" />					
+								
+								<panel x="-9.0h" width="-8.0h" align="right" noclick="true">
+									<frame texture="frames/rounded_bg_white.tga" borderthickness="0.6h" color="0 0 0 1" noclick="true"/>
+									<frame texture="frames/roundframe.tga" color=".3 .3 .3 1" borderthickness="0.6h" noclick="true" />
+									<textbox
+										name="custom_script_name"
+										width="-1.0h" height="-1.0h"
+										align="center" valign="center"
+										font="dyn_9" textcolor="white"
+										color="invisible"
+										onload="CreateString('_custom_script'); CreateString('list_select_none'); Set('list_select_none', 'selectnone');"
+										onchange="Set('_custom_script', this); if(!StringEquals(selected_script,this), Call('script_listbox', 'ListBoxCmd(list_select_none);'));"
+									/>
+								</panel>
+								
+								<instance
+									name="button2"									
+									x="-2.4h"
+									width="6.0h" height="2.0h"
+									align="right" valign="center"
+									label="general_edit"
+									borderthickness="0.4h"
+									onclick="if(IsValidScriptName(_custom_script), Split(Set('le_globalScript',true),Set('le_currentScript',_custom_script),ShowWidget('script_editor_back')),Call('custom_script_name','EraseInputLine();'));"
+								/>
+								<instance name="tip_mark" tip_id="scripts_new" width="2.0h" height="2.0h" valign="center" align="right" />
+							</panel>
+							
+						</panel>
+											
+						<instance name="menu_sep" />
+						
+						<panel height="3.0h" float="right">
+							<label fitx="true" fitxpadding="0.5h" height="100%" textvalign="center" font="dyn_10" color="white" shadow="true"  content="mapedit_script_existing" noclick="true" />
+							<instance name="tip_mark" tip_id="scripts_existing" width="1.6h" height="1.6h" valign="center" />
+						</panel>
+						
+						<panel height="13.5h" noclick="true">
+							<frame texture="frames/rounded_bg_white.tga" borderthickness="0.6h" color="0 0 0 1" noclick="true"/>
+							<frame texture="frames/roundframe.tga" color="#2c3c57" borderthickness="0.6h" noclick="true" />
+							<listbox
+								name="script_listbox"
+								width="-0.8h" height="-0.8h"
+								align="center" valign="center"
+								color="0 0 0 1"
+								font="dyn_10"
+								itemwidth="100%"
+								itemheight="2.5h"
+								select="true"
+								hoverselect="fals"
+								hoverhighlight="true"
+								highlight="under"
+								highlightcolor="#46adff42"
+								highlightbordercolor="invisible"
+								selectedcolor="#346dff52"
+								selectedbordercolor="invisible"
+								backgroundimage="/ui/fe2/elements/comm_item_bg.tga"
+								backgroundimagecolor="#1d2f3b"
+								colortransition="true"
+								colortransitiontime="250"
+								scrollbarplaceholder="true"
+								scrollbarsize="2.0h"
+								scrolltexture="/ui/info/combobox.tga"
+								handleheight="2.0h"
+								exteriorscrollbars="false"
+								watch1="ClearScriptList"
+								ontrigger1="Clear();"
+								watch2="ScriptList"
+								ontrigger2="ListBoxCmd('add ' # param0); if(StringEquals(selected_script,param0),ListBoxCmd('selectlast'));"								
+								onload="CreateString('selected_script');"
+								onselect="Set('selected_script', this); Call('custom_script_name', 'SetInputLine(selected_script);');"
+							/>
+						</panel>
+						
+					</panel>
+				</panel>			
+							
+			</panel>	
+		</panel>
+		
+		<!-- Properties -->
+		<panel
+			name="properties"
+			visible="false"
+			y="-25.4h"
+			x="-21.1h"
+			width="35.0h" height="28.2h"
+			align="right"
+		>		
+			<panel y="-1.0h" width="-2.0h" height="-2.5h" align="center" valign="bottom" noclick="true">
+				<frame y="0" texture="frames/rounded_bg_white.tga" borderthickness="0.6h" color="#121822f4" noclick="true"/>
+				<frame y="0" texture="frames/roundframe.tga" color="#2c3c57" borderthickness="0.6h" noclick="true" />
+				
+				<panel grow="true" y="1.6h" width="-2.0h" align="center" noclick="true" float="bottom">
+				
+					<!-- Map Name -->
+					<panel width="100%" height="3.0h" noclick="true">
+						<label height="100%" font="dyn_10" textvalign="center" color="white" shadow="true" noclick="true" content="mapedit_newmap_name" />
+						<panel width="18.0h" height="-0.6h" align="right" valign="center" noclick="true">					
+							<image x="-2.4h" width="1.0h" height="1.0h" align="left" valign="center" texture="/ui/info/arrow.tga" />					
+							<panel x="-2.4h" width="-1.8h" align="right" noclick="true">
+								<frame texture="frames/rounded_bg_white.tga" borderthickness="0.6h" color="0 0 0 1" noclick="true"/>
+								<frame texture="frames/roundframe.tga" color=".3 .3 .3 1" borderthickness="0.6h" noclick="true" />
+								<textbox
+									width="-1.0h" height="-1.0h"
+									align="center" valign="center"
+									font="dyn_9" textcolor="white"
+									color="invisible"									
+									onshow="SetInputLine(GetFancyName()); HideWidget('marker_mapname');"
+									onenter="SetFancyName(this); SetFocus(false); HideWidget('marker_mapname');"
+									onlosefocus="SetInputLine(GetFancyName()); HideWidget('marker_mapname');"
+									onesc="SetInputLine(GetFancyName()); HideWidget('marker_mapname');"									
+									onchange="ShowWidget('marker_mapname');"
+								/>								
+								<!-- Not Saved Marker -->
+								<frame
+									name="marker_mapname"
+									visible="false"
+									texture="frames/roundframe.tga"
+									color="1 0 0 1"
+									borderthickness="0.6h"
+									noclick="true"
+								/>								
+							</panel>
+							<instance name="tip_mark" tip_id="newmap_name" width="2.0h" height="2.0h" valign="center" align="right" />					
+						</panel>							
+					</panel>
+				
+					<!-- Map Size -->
+					<panel width="100%" height="3.0h" noclick="true">
+						<label height="100%" font="dyn_10" textvalign="center" color="white" shadow="true" noclick="true" content="mapedit_newmap_size" />
+						<panel width="6.0h" height="-0.6h" align="right" valign="center" noclick="true">					
+							<image x="-2.4h" width="1.0h" height="1.0h" align="left" valign="center" texture="/ui/info/arrow.tga" />					
+							<panel x="-2.4h" width="-1.8h" align="right" noclick="true">
+								<frame texture="frames/rounded_bg_white.tga" borderthickness="0.6h" color="0 0 0 1" noclick="true"/>
+								<frame texture="frames/roundframe.tga" color=".3 .3 .3 1" borderthickness="0.6h" noclick="true" />
+								<label
+									width="100%"
+									height="100%"
+									textalign="center"
+									textvalign="center"
+									font="dyn_9"
+									color=".3 .3 .3 1"
+									shadow="true"
+									noclick="true"
+									onshow="SetText(GetMapSize());"
+								/>
+							</panel>
+							<instance name="tip_mark" tip_id="newmap_size" width="2.0h" height="2.0h" valign="center" align="right" />					
+						</panel>							
+					</panel>
+					
+					<!-- Map Scale -->
+					<panel width="100%" height="3.0h" noclick="true">
+						<label height="100%" font="dyn_10" textvalign="center" color="white" shadow="true" noclick="true" content="mapedit_newmap_scale" />
+						<panel width="6.0h" height="-0.6h" align="right" valign="center" noclick="true">					
+							<image x="-2.4h" width="1.0h" height="1.0h" align="left" valign="center" texture="/ui/info/arrow.tga" />					
+							<panel x="-2.4h" width="-1.8h" align="right" noclick="true">
+								<frame texture="frames/rounded_bg_white.tga" borderthickness="0.6h" color="0 0 0 1" noclick="true"/>
+								<frame texture="frames/roundframe.tga" color=".3 .3 .3 1" borderthickness="0.6h" noclick="true" />
+								<label
+									width="100%"
+									height="100%"
+									textalign="center"
+									textvalign="center"
+									font="dyn_9"
+									color=".3 .3 .3 1"
+									shadow="true"
+									noclick="true"
+									onshow="SetText(FtoA2(GetMapScale(), 0, 4));"									
+								/>
+							</panel>
+							<instance name="tip_mark" tip_id="newmap_scale" width="2.0h" height="2.0h" valign="center" align="right" />					
+						</panel>						
+					</panel>
+					
+					<!-- Min Players
+					<panel width="100%" height="3.0h" noclick="true">
+						<label height="100%" font="dyn_10" textvalign="center" color="white" shadow="true" noclick="true" content="mapedit_newmap_minplayers" />
+						<panel width="6.0h" height="-0.6h" align="right" valign="center" noclick="true">					
+							<image x="-2.4h" width="1.0h" height="1.0h" align="left" valign="center" texture="/ui/info/arrow.tga" />					
+							<panel x="-2.4h" width="-1.8h" align="right" noclick="true">
+								<frame texture="frames/rounded_bg_white.tga" borderthickness="0.6h" color="0 0 0 1" noclick="true"/>
+								<frame texture="frames/roundframe.tga" color="#30405d" borderthickness="0.6h" noclick="true" />
+								<textbox
+									width="-1.0h" height="-1.0h"
+									align="center" valign="center"
+									font="dyn_9" textcolor="white"
+									color="invisible"
+									onshow="SetInputLine(GetMinPlayersPerTeam()); HideWidget('marker_minplayers');"
+									onenter="SetMinPlayersPerTeam(this); SetInputLine(GetMinPlayersPerTeam()); SetFocus(false); HideWidget('marker_minplayers');"
+									onlosefocus="SetMinPlayersPerTeam(this); SetInputLine(GetMinPlayersPerTeam()); HideWidget('marker_minplayers');"
+									onesc="SetInputLine(GetMinPlayersPerTeam()); HideWidget('marker_minplayers');"
+									onchange="ShowWidget('marker_minplayers');"									
+								/>
+								<frame
+									name="marker_minplayers"
+									visible="false"
+									texture="frames/roundframe.tga"
+									color="1 0 0 1"
+									borderthickness="0.6h"
+									noclick="true"
+								/>	
+							</panel>
+							<instance name="tip_mark" tip_id="newmap_minplayers" width="2.0h" height="2.0h" valign="center" align="right" />					
+						</panel>						
+					</panel>
+					-->
+
+					<!-- Max Players -->
+					<panel width="100%" height="3.0h" noclick="true">
+						<label height="100%" font="dyn_10" textvalign="center" color="white" shadow="true" noclick="true" content="mapedit_newmap_maxplayers" />				
+						<panel width="6.0h" height="-0.6h" align="right" valign="center" noclick="true">					
+							<image x="-2.4h" width="1.0h" height="1.0h" align="left" valign="center" texture="/ui/info/arrow.tga" />					
+							<panel x="-2.4h" width="-1.8h" align="right" noclick="true">
+								<frame texture="frames/rounded_bg_white.tga" borderthickness="0.6h" color="0 0 0 1" noclick="true"/>
+								<frame texture="frames/roundframe.tga" color="#30405d" borderthickness="0.6h" noclick="true" />
+								<textbox
+									width="-1.0h" height="-1.0h"
+									align="center" valign="center"
+									font="dyn_9" textcolor="white"
+									color="invisible"
+									onshow="SetInputLine(GetMaxPlayers()); HideWidget('marker_maxplayers');"
+									onenter="SetMaxPlayers(this); SetInputLine(GetMaxPlayers()); SetFocus(false); HideWidget('marker_maxplayers');"
+									onlosefocus="SetMaxPlayers(this); SetInputLine(GetMaxPlayers()); HideWidget('marker_maxplayers');"
+									onesc="SetInputLine(GetMaxPlayers()); HideWidget('marker_maxplayers');"
+									onchange="ShowWidget('marker_maxplayers');"	
+								/>
+								<!-- Not Saved Marker -->
+								<frame
+									name="marker_maxplayers"
+									visible="false"
+									texture="frames/roundframe.tga"
+									color="1 0 0 1"
+									borderthickness="0.6h"
+									noclick="true"
+								/>	
+							</panel>
+							<instance name="tip_mark" tip_id="newmap_maxplayers" width="2.0h" height="2.0h" valign="center" align="right" />					
+						</panel>				
+					</panel>
+					
+					<!-- Texture Scale -->
+					<panel width="100%" height="3.0h" noclick="true">
+						<label height="100%" font="dyn_10" textvalign="center" color="white" shadow="true" noclick="true" content="mapedit_newmap_texturescalse" />				
+						<panel width="6.0h" height="-0.6h" align="right" valign="center" noclick="true">					
+							<image x="-2.4h" width="1.0h" height="1.0h" align="left" valign="center" texture="/ui/info/arrow.tga" />					
+							<panel x="-2.4h" width="-1.8h" align="right" noclick="true">
+								<frame texture="frames/rounded_bg_white.tga" borderthickness="0.6h" color="0 0 0 1" noclick="true"/>
+								<frame texture="frames/roundframe.tga" color="#30405d" borderthickness="0.6h" noclick="true" />
+								<textbox
+									width="-1.0h" height="-1.0h"
+									align="center" valign="center"
+									font="dyn_9" textcolor="white"
+									color="invisible"
+									onshow="SetInputLine(FtoA2(GetTextureScale(), 0, 4)); HideWidget('marker_txtscale');"
+									onenter="SetTextureScale(this); SetInputLine(FtoA2(GetTextureScale(), 0, 4)); SetFocus(false); RebuildTerrain(); HideWidget('marker_txtscale');"
+									onlosefocus="SetTextureScale(this); SetInputLine(FtoA2(GetTextureScale(), 0, 4)); HideWidget('marker_txtscale');"
+									onesc="SetInputLine(FtoA2(GetTextureScale(), 0, 4)); HideWidget('marker_txtscale');"
+									onchange="ShowWidget('marker_txtscale');"	
+								/>
+								<!-- Not Saved Marker -->
+								<frame
+									name="marker_txtscale"
+									visible="false"
+									texture="frames/roundframe.tga"
+									color="1 0 0 1"
+									borderthickness="0.6h"
+									noclick="true"
+								/>	
+							</panel>
+							<instance name="tip_mark" tip_id="newmap_texturescale" width="2.0h" height="2.0h" valign="center" align="right" />					
+						</panel>				
+					</panel>
+					
+					<!-- Modifiers -->
+					<panel width="100%" height="3.0h" noclick="true">
+						<label height="100%" font="dyn_10" textvalign="center" color="white" shadow="true" noclick="true" content="mapedit_newmap_modifiers" />
+						<panel width="18.0h" height="-0.6h" align="right" valign="center" noclick="true">					
+							<image x="-2.4h" width="1.0h" height="1.0h" align="left" valign="center" texture="/ui/info/arrow.tga" />					
+							<panel x="-2.4h" width="-1.8h" align="right" noclick="true">
+								<frame texture="frames/rounded_bg_white.tga" borderthickness="0.6h" color="0 0 0 1" noclick="true"/>
+								<frame texture="frames/roundframe.tga" color=".3 .3 .3 1" borderthickness="0.6h" noclick="true" />
+								<textbox
+									width="-1.0h" height="-1.0h"
+									align="center" valign="center"
+									font="dyn_9" textcolor="white"
+									color="invisible"
+									onshow="SetInputLine(GetModifiers()); HideWidget('marker_modifiers');"
+									onenter="SetModifiers(this); SetFocus(false); HideWidget('marker_modifiers');"
+									onlosefocus="SetInputLine(GetModifiers()); HideWidget('marker_modifiers');"
+									onesc="SetInputLine(GetModifiers()); HideWidget('marker_modifiers');"
+									onchange="ShowWidget('marker_modifiers');"
+								/>								
+								<!-- Not Saved Marker -->
+								<frame
+									name="marker_modifiers"
+									visible="false"
+									texture="frames/roundframe.tga"
+									color="1 0 0 1"
+									borderthickness="0.6h"
+									noclick="true"
+								/>	
+							</panel>
+							<instance name="tip_mark" tip_id="newmap_modifiers" width="2.0h" height="2.0h" valign="center" align="right" />					
+						</panel>							
+					</panel>
+					
+				</panel>
+				<panel y="-0.7h" width="-2.0h" height="1.7h" align="center" valign="bottom" noclick="true">
+					<instance name="btn_pin" tip_id="pin_properties" align="left" width="6.0h" height="100%" texture="elements/pin.tga" group="le_sysbar_pin_buttons" />					
+				</panel>
+			</panel>	
+		</panel>	
+
+		<frame texture="/ui/fe2/frames/sysbar_back.tga" borderthickness="33@" color="#7aa4ee" blockinput="true" />
+
+		<!-- Left -->
+		<panel grow="true" y="-0.1h" x="0.5h" height="-0.4h" align="left" valign="center" float="right" padding="0.5h" color="invisible" noclick="true">			
+			
+			<!-- File -->
+			<instance
+				name="drop_menu"
+				id="sysbar_file"
+				label="mapedit_sysbar_file"
+				width="5.7h"
+				tipname="sysbar_file_tip"
+				onclick="Trigger('ShowHidePanelToggle', 'file_menu', 'EditorSysBarGroup');"
+				target_panel="file_menu"
+			/>
+			
+			<!-- Options 
+			<panel width="2.8h" sticky="true" stickytoinvis="false">
+				<button
+					color="invisible"
+					onmouseover="ShowWidget('sysbar_options_tip'); PlaySound('/shared/sounds/ui/button_over_01.wav');"
+					onmouseout="HideWidget('sysbar_options_tip');"
+					onclick=""
+				>
+					<widgetstate statename="up">
+						<frame texture="frames/rounded_bg_grad.tga" borderthickness="0.4h" style="sysbar_btn_up" blockinput="false" noclick="true"/>
+						<frame texture="/ui/frames/roundframe.tga" color="0 0 0 1" borderthickness="0.4h" blockinput="false" noclick="true"/>
+						<image width="70@" height="70%" align="center" valign="center" texture="/ui/fe2/systembar/icons/options.tga" color="1 1 1 1" noclick="true" />
+					</widgetstate>
+					<widgetstate statename="over">
+						<frame texture="frames/rounded_bg_grad.tga" borderthickness="0.4h" style="sysbar_btn_overdn" blockinput="false" noclick="true"/>
+						<frame texture="/ui/frames/roundframe.tga" color="0 0 0 1" borderthickness="0.4h" blockinput="false" noclick="true"/>
+						<image width="70@" height="70%" align="center" valign="center" texture="/ui/fe2/systembar/icons/options.tga" color="1 1 1 1" noclick="true" />
+					</widgetstate>
+					<widgetstate statename="down" x="1" y="1">
+						<frame texture="frames/rounded_bg_grad.tga" borderthickness="0.4h" style="sysbar_btn_overdn" blockinput="false" noclick="true"/>
+						<frame texture="/ui/frames/roundframe.tga" color="0 0 0 1" borderthickness="0.4h" blockinput="false" noclick="true"/>
+						<image width="70@" height="70%" align="center" valign="center" texture="/ui/fe2/systembar/icons/options.tga" color="1 1 1 1" noclick="true" />
+					</widgetstate>
+				</button>
+			</panel>
+			-->
+			
+			
+		</panel>		
+		
+		<!-- Center -->
+		<panel grow="true" y="-0.1h" x="0.5h" height="-0.4h" align="center" valign="center" float="right" padding="0.2h" color="invisible" noclick="true" regrow="true">
+		
+			<!-- Current Tool Category -->
+			<panel grow="true" height="100%" regrow="true">
+				<frame texture="/ui/frames/rounded_bg_white.tga" borderthickness="0.4h" color=".3 .3 .3 .5"/>
+				<frame texture="/ui/frames/roundframe.tga" color="0 0 0 1" borderthickness="0.4h"/>
+				<panel grow="true" height="100%" float="right" padding="0.8h" noclick="true" regrow="true">
+					<label x="0.8h" fitx="true" height="100%" textvalign="center" font="dyn_10" color="white" shadow="true" content="Category Name" watch="EditorRefreshToolDisplay" ontrigger="SetText(Translate('mapedit_' # le_tool_current));" />
+					<panel width="1" height="100%" valign="center">
+						<panel height="70%" valign="center" color="0 0 0 1"/>
+					</panel>
+					<label fitx="true" regrow="true" fitxpadding="0.8h" height="100%" textvalign="center" font="dyn_10" color="white" shadow="true" content="Tool Name" watch="EditorRefreshToolDisplay" ontrigger="SetText(Translate('mapedit_' # le_tool_current # '_' # le_subtool_current));"  />
+				</panel>
+			</panel>
+			
+			<!-- Current Tool Tooltip -->
+			<panel width="100@" height="100%">
+				<instance name="tip_mark" tip_id="TMP_currenttool_tip" width="1.9h" height="1.9h" valign="center" />
+			</panel>
+
+		</panel>
+
+
+		<!-- Right -->
+		<panel grow="true" y="-0.1h" x="-0.5h" height="-0.4h" align="right" valign="center" float="right" padding="0.5h" color="invisible" noclick="true">		
+		
+			<!-- Map Properties -->
+			<instance
+				name="drop_menu"
+				id="sysbar_properties"
+				label="mapedit_sysbar_properties"
+				width="10.2h"
+				tipname="sysbar_properties_tip"
+				onclick="Trigger('ShowHidePanelToggle', 'properties', 'EditorSysBarGroup');"
+				target_panel="properties"
+			/>
+			
+			<!-- Grid -->
+			<instance
+				name="drop_menu"
+				id="sysbar_gred"
+				label="mapedit_sysbar_grid"
+				width="6.4h"
+				tipname="sysbar_grid_tip"
+				onclick="Trigger('ShowHidePanelToggle', 'grid_size', 'EditorSysBarGroup');"
+				target_panel="grid_size"
+			/>
+		
+			<!-- Environment -->
+			<panel 
+				name="sysbar_enviro"
+				width="11.5h"
+				height="100%"
+				visible="true"
+			>				
+				<button
+					width="100%" height="100%"
+					color="invisible"
+					onmouseover="ShowWidget('sysbar_enviro_tip'); PlaySound('/shared/sounds/ui/button_over_01.wav');"
+					onmouseout="HideWidget('sysbar_enviro_tip');"
+					onclick="PlaySound('/shared/sounds/ui/button_click_01.wav'); ShowWidget('enviro_btn_on'); Call('enviro_settings', 'FadeIn(250);');"
+				>				
+					<widgetstate statename="up">
+						<frame texture="frames/rounded_bg_grad.tga" borderthickness="0.4h" style="sysbar_btn_up"/>
+						<frame texture="frames/rounded_bg_grad.tga" borderthickness="0.4h" style="sysbar_btn_selected" visible="false"/>
+						<frame texture="/ui/frames/roundframe.tga" color="0 0 0 1" borderthickness="0.4h"/>
+						<label height="100%" textvalign="center" textalign="center" font="dyn_10" color="white" shadow="true" content="mapedit_sysbar_environment" />
+					</widgetstate>					
+					<widgetstate statename="over">
+						<frame texture="frames/rounded_bg_grad.tga" borderthickness="0.4h" style="sysbar_btn_overdn"/>
+						<frame texture="frames/rounded_bg_grad.tga" borderthickness="0.4h" style="sysbar_btn_selected" visible="false"/>
+						<frame texture="/ui/frames/roundframe.tga" color="0 0 0 1" borderthickness="0.4h"/>
+						<label height="100%" textvalign="center" textalign="center" font="dyn_10" color="white" shadow="true" content="mapedit_sysbar_environment" />
+					</widgetstate>					
+					<widgetstate statename="down" x="1" y="1">
+						<frame texture="frames/rounded_bg_grad.tga" borderthickness="0.4h" style="sysbar_btn_overdn"/>
+						<frame texture="frames/rounded_bg_grad.tga" borderthickness="0.4h" style="sysbar_btn_selected" visible="false"/>
+						<frame texture="/ui/frames/roundframe.tga" color="0 0 0 1" borderthickness="0.4h"/>
+						<label height="100%" textvalign="center" textalign="center" font="dyn_10" color="white" shadow="true" content="mapedit_sysbar_environment" />
+					</widgetstate>					
+				</button>
+				<button
+					name="enviro_btn_on"
+					visible="false"
+					width="100%" height="100%"
+					color="invisible"
+					onmouseover="ShowWidget('sysbar_enviro_tip'); PlaySound('/shared/sounds/ui/button_over_01.wav');"
+					onmouseout="HideWidget('sysbar_enviro_tip');"
+					onclick="PlaySound('/shared/sounds/ui/button_click_01.wav'); HideWidget('enviro_btn_on'); Call('enviro_settings', 'FadeOut(250);');"
+				>				
+					<widgetstate statename="up">
+						<frame texture="frames/rounded_bg_grad.tga" borderthickness="0.4h" style="sysbar_btn_selected"/>
+						<frame texture="frames/rounded_bg_grad.tga" borderthickness="0.4h" style="sysbar_btn_selected" visible="false"/>
+						<frame texture="/ui/frames/roundframe.tga" color="0 0 0 1" borderthickness="0.4h"/>
+						<label height="100%" textvalign="center" textalign="center" font="dyn_10" color="white" shadow="true" content="mapedit_sysbar_environment" />
+					</widgetstate>					
+					<widgetstate statename="over">
+						<frame texture="frames/rounded_bg_grad.tga" borderthickness="0.4h" style="sysbar_btn_overdn"/>
+						<frame texture="frames/rounded_bg_grad.tga" borderthickness="0.4h" style="sysbar_btn_selected" visible="false"/>
+						<frame texture="/ui/frames/roundframe.tga" color="0 0 0 1" borderthickness="0.4h"/>
+						<label height="100%" textvalign="center" textalign="center" font="dyn_10" color="white" shadow="true" content="mapedit_sysbar_environment" />
+					</widgetstate>					
+					<widgetstate statename="down" x="1" y="1">
+						<frame texture="frames/rounded_bg_grad.tga" borderthickness="0.4h" style="sysbar_btn_overdn"/>
+						<frame texture="frames/rounded_bg_grad.tga" borderthickness="0.4h" style="sysbar_btn_selected" visible="false"/>
+						<frame texture="/ui/frames/roundframe.tga" color="0 0 0 1" borderthickness="0.4h"/>
+						<label height="100%" textvalign="center" textalign="center" font="dyn_10" color="white" shadow="true" content="mapedit_sysbar_environment" />
+					</widgetstate>					
+				</button>
+
+			</panel>
+
+			<!-- Scripts 
+			<instance
+				name="drop_menu"
+				id="sysbar_scripts"
+				label="mapedit_sysbar_scripts"
+				width="7.8h"
+				tipname="sysbar_scripts_tip"
+				onclick="Trigger('ShowHidePanelToggle', 'script_list', 'EditorSysBarGroup');"
+			/>
+			-->
+
+			<!-- Quit Button -->
+			<panel name="sysbar_quit" visible="true" width="2.0h" height="2.0h" valign="center" color="invisible">
+				<button
+					color="invisible"
+					onclick="PlaySound('/shared/sounds/ui/ccpanel/button_close_02.wav'); Call('quit_confirm', 'FadeIn(250)'));"
+					onmouseover="PlaySound('/shared/sounds/ui/ccpanel/button_over_01.wav');"
+				>
+					<widgetstate statename="up">
+						<frame texture="frames/rounded_bg_grad.tga" borderthickness="0.5h" color="#520000" blockinput="false" noclick="true"/>
+						<frame texture="/ui/frames/roundframe.tga" color="0 0 0 1" borderthickness="0.5h" blockinput="false" noclick="true"/>
+						<image width="1.3h" height="1.3h" align="center" valign="center" color=".75 .75 .75 1" texture="/ui/elements/closex.tga" noclick="true" />
+					</widgetstate>
+					<widgetstate statename="over">
+						<frame texture="frames/rounded_bg_grad.tga" borderthickness="0.5h" color="#c50000" blockinput="false" noclick="true"/>
+						<frame texture="/ui/frames/roundframe.tga" color="0 0 0 1" borderthickness="0.5h" blockinput="false" noclick="true"/>
+						<image width="1.3h" height="1.3h" align="center" valign="center" color="1 1 1 1" texture="/ui/elements/closex.tga" noclick="true" />
+					</widgetstate>
+					<widgetstate statename="down" x="1" y="1">
+						<frame texture="frames/rounded_bg_grad.tga" borderthickness="0.5h" color="#9c0000" blockinput="false" noclick="true"/>
+						<frame texture="/ui/frames/roundframe.tga" color="0 0 0 1" borderthickness="0.5h" blockinput="false" noclick="true"/>
+						<image width="1.3h" height="1.3h" align="center" valign="center" color="1 1 1 1" texture="/ui/elements/closex.tga" noclick="true" />
+					</widgetstate>
+				</button>
+			</panel>
+
+		</panel>
+	
+	</panel>
+	
+	
+	
+	<!-- Combobox Testing -->
+	
+	<panel color=".3 .3 .3 1" visible="0">
+	
+		<!-- Fake Bar -->
+		<panel height="4.0h" color=".1 .1 .1 1" />
+	
+	
+		<combobox
+			name="men1"
+			x="1.0h" y="1.0h"
+			width="13.0h"
+			height="2h"
+			align="left" valign="top"
+			color="invisible"
+			itemwidth="30.0h"
+			itemheight="40h"
+
+			highlightbordercolor="invisible"
+		>
+			
+			<widgetstate statename="up">
+				<frame texture="frames/rounded_bg_grad.tga" borderthickness="0.4h" style="sysbar_btn_up"/>
+				<frame texture="/ui/frames/roundframe.tga" color="0 0 0 1" borderthickness="0.4h"/>
+				<panel grow="true" height="100%" float="right" padding="0.6h" noclick="true">					
+					<label x="0.8h" fitx="true" height="100%" textvalign="center" font="dyn_10" color="white" shadow="true" content="I'm Menu 1, Hi" />					
+					<panel width="1" height="100%" valign="center">
+						<panel height="70%" valign="center" color="0 0 0 1"/>
+					</panel>					
+					<panel grow="true" height="100%" noclick="true">
+						<image width="40@" height="40%" valign="center" texture="/ui/elements/arrow_down.tga" noclick="true" watch="" ontrigger="" />
+						<image width="40@" height="40%" valign="center" texture="/ui/elements/arrow_up.tga" visible="false" noclick="true" watch="" ontrigger="" />
+					</panel>
+				</panel>
+			</widgetstate>
+			
+			<widgetstate statename="over">
+				<frame texture="frames/rounded_bg_grad.tga" borderthickness="0.4h" style="sysbar_btn_overdn"/>
+				<frame texture="/ui/frames/roundframe.tga" color="0 0 0 1" borderthickness="0.4h"/>
+				<panel grow="true" height="100%" float="right" padding="0.6h" noclick="true">					
+					<label x="0.8h" fitx="true" height="100%" textvalign="center" font="dyn_10" color="white" shadow="true" content="I'm Menu 1, Hi" />					
+					<panel width="1" height="100%" valign="center">
+						<panel height="70%" valign="center" color="0 0 0 1"/>
+					</panel>					
+					<panel grow="true" height="100%" noclick="true">
+						<image width="40@" height="40%" valign="center" texture="/ui/elements/arrow_down.tga" noclick="true" watch="" ontrigger="" />
+						<image width="40@" height="40%" valign="center" texture="/ui/elements/arrow_up.tga" visible="false" noclick="true" watch="" ontrigger="" />
+					</panel>					
+					<panel width="0" height="100%" noclick="true" />					
+				</panel>
+			</widgetstate>
+			
+			<widgetstate statename="down">
+				<frame texture="frames/rounded_bg_grad.tga" borderthickness="0.4h" style="sysbar_btn_overdn"/>
+				<frame texture="/ui/frames/roundframe.tga" color="0 0 0 1" borderthickness="0.4h"/>
+				<panel grow="true" height="100%" float="right" padding="0.6h" noclick="true">					
+					<label x="0.8h" fitx="true" height="100%" textvalign="center" font="dyn_10" color="white" shadow="true" content="I'm Menu 1, Hi" />					
+					<panel width="1" height="100%" valign="center">
+						<panel height="70%" valign="center" color="0 0 0 1"/>
+					</panel>					
+					<panel grow="true" height="100%" noclick="true">
+						<image width="40@" height="40%" valign="center" texture="/ui/elements/arrow_down.tga" noclick="true" watch="" ontrigger="" />
+						<image width="40@" height="40%" valign="center" texture="/ui/elements/arrow_up.tga" visible="false" noclick="true" watch="" ontrigger="" />
+					</panel>					
+					<panel width="0" height="100%" noclick="true" />					
+				</panel>
+			</widgetstate>
+			
+			<widgetstate statename="listbg">
+				
+				<frame texture="/ui/frames/roundframe.tga" color="0 0 0 1" borderthickness="0.4h"/>
+			</widgetstate>
+			
+			<widgetstate statename="itembg">
+				<panel width="100%" />
+			</widgetstate>
+			
+			<widgetstate statename="itemhighlight">
+
+			</widgetstate>
+			
+			
+			<listitem><panel width="-1.0h" align="center" /></listitem>
+			<!--
+			<listitem><panel width="-1.0h" align="center" color="1 1 0 .3"/></listitem>
+			<listitem><panel width="-1.0h" align="center" color="0 1 0 .3"/></listitem>
+			<listitem><panel width="-1.0h" align="center" color="1 0 1 .3"/></listitem>
+			<listitem><panel width="-1.0h" align="center" color="1 0 0 .3"/></listitem>
+			<listitem><panel width="-1.0h" align="center" color="1 1 0 .3"/></listitem>
+			-->
+			
+		</combobox>
+	
+	</panel>
+
+
+</package>

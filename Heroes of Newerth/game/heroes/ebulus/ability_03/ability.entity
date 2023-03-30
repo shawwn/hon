@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Ebulus3"
+
+	icon="icon.tga"
+	
+	anim="ability_3"
+	casttime="1000"
+	castactiontime="200"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_position"
+	casteffecttype="Physical"
+	
+	manacost="20"
+	cooldowntime="0"
+	range="850"
+	
+	maxcharges="1,1,2,2"
+	initialcharges="1,1,2,2"
+>
+	<onlearn>
+		<setcharges a="1" />
+		<setaccumulator value="1" />
+	</onlearn>
+	
+	<onupgrade>
+		<addcharges count="0,0,1,0" />
+	</onupgrade>
+	
+	<onimpact >
+		<setvar0 a="0" />
+		<spawnprojectile name="Projectile_Ebulus_Ability_03_Seed" source="source_entity" target="target_position"/>
+		<condition test="accumulator eq 4">
+			<setaccumulator value="0" />
+		</condition>		
+		<condition test="accumulator eq 3">
+			<setaccumulator value="4" />
+		</condition>
+		<condition test="accumulator eq 2">
+			<setaccumulator value="3" />
+		</condition>
+		<condition test="accumulator eq 1">
+			<setaccumulator value="2" />
+		</condition>
+		<condition test="accumulator eq 0">
+			<setaccumulator value="1" />
+		</condition>
+		<applystate name="State_Ebulus_Ability3_Charges" target="source_entity" duration="5000" proxy="this_entity" pushentity="true" />
+		<addcharges entity="stack_entity" count="1" />
+		<removecharge />
+		<condition test="charges eq 0">
+			<setactivemodifierkey name="slitherwardsdisabled" />
+		</condition>
+	</onimpact>
+	
+	<ondeath>
+		<setcharges a="1,1,2,2" />
+	</ondeath>
+
+	<modifier key="slitherwardsdisabled" modpriority="100"
+		disabled="true"
+	>
+		<onframe>
+			<condition test="charges gt 0">
+				<setactivemodifierkey name="" />
+			</condition>
+		</onframe>
+	</modifier>
+
+</ability>

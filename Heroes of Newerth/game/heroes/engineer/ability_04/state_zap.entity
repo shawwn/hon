@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Engineer_Ability4_Zap"
+	
+	icon="icon.tga"
+	passiveeffect="zapper/state.effect"
+	
+	movespeedslowstart="1"
+	movespeedslowend="0.0"
+	
+	silenced="true"
+	perplexed="true"
+	
+	effecttype="StatusDebuff"
+>
+	<onimpact>
+		<playeffect effect="zapper/impact.effect" target="source_entity" source="target_entity" />
+	</onimpact>
+</state>

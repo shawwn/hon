@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale=".7" entityeffectscale="true">
+
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="2500"
+				falloffend="2500"
+				volume=".75"
+				sample="../sounds/cast.wav"
+			/>
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="2500"
+				falloffend="2500"
+				volume=".75"
+				sample="../sounds/cast2.wav"
+			/>
+
+			<simpleemitter
+				count="26"
+				particlelife="1300"				
+				spawnrate="650"
+				minspeed="100"
+				maxspeed="750"
+				gravity="10"
+				direction="0 0 1"
+				minangle="0"
+				maxangle="25"
+				drag="0.01"
+				material="/shared/effects/materials/sand_blend.material"
+				offsetsphere="25 25 10"
+				position="0 0 40"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-60"
+					maxanglespeed="60"
+					startsize="40"
+					endsize="120"
+					color="1 1 .5"				
+					startalpha=".5"
+					midalpha=".5"
+					endalpha="0"
+					startstickiness="0"
+					endstickiness=".4"
+				/>
+			</simpleemitter>
+
+			
+			<simpleemitter
+				count="2"
+				particlelife="1300"				
+				spawnrate="650"
+				minspeed="100"
+				maxspeed="750"
+				gravity="20"
+				direction="0 0 1"
+				minangle="0"
+				maxangle="1"
+				drag="0.01"
+				material="/shared/effects/materials/pyroclast_03.material"
+				offsetsphere="25 25 10"
+				position="0 0 40"
+			>
+				<particle 
+					depthbias="-100"
+					startcolor=".8 .8 .5 "
+					endcolor=".5 .5 .3"					
+					height="500"
+					startwidth="50"
+					endwidth="200"
+					startscale="1"
+					endscale="2"
+					startalpha="1"
+					endalpha="0"
+					lockup="1"
+					lockright="1"
+				/>
+			</simpleemitter>			
+
+			
+			<simpleemitter
+				life="400"
+				position="0 0 30"
+				spawnrate="10"
+				bone="_bone_centerofchest"
+				particlelife="800"
+				gravity="-1"
+				material="/shared/effects/materials/pyroclast_03.material"
+				offsetsphere="32 32 0"
+				direction="1 0 0"
+				minangle="-180"
+				maxangle="180"
+				speed="0"
+				directionalspace="global"
+				inheritvelocity=".3"
+				depthbias="-20"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					anglespeed="20"
+					startsize="20"
+					midsize="100"
+					endsize="110"
+					lockup="true"
+					lockright="true"
+					pitch="90"
+					
+					startcolor=".8 .8 .5 "
+					endcolor=".5 .5 .3"					
+					
+					
+					
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".75"
+				/>
+			</simpleemitter >
+						
+			
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

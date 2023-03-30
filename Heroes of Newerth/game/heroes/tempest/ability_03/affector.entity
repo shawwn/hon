@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Tempest_Ability3"
+
+	radius="400"
+	lifetime="8000"
+	effect="effects/meteor.effect"
+	targetselection="all"
+	targetscheme="enemy_nonboss_units"
+	effecttype="Magic"
+	destroytrees="true"
+>
+	<onframeimpact>
+		<pushstack a="frametime" b="target_maxhealth" op="mult" />
+		<damage effecttype="Magic DOT" amount="0.03,0.04,0.05,0.06" b="result" op="mult" />
+		<applystate name="State_Tempest_Ability3_Tooltip" continuous="true" timeout="frametime" />
+	</onframeimpact>
+</affector>

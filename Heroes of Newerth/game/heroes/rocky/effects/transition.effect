@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="">
+	<definitions>				
+	
+		<particlesystem name="system0" space="entity" >
+			
+			<simpleemitter
+				bone="_bone_centerofchest"
+				position="0 0 25"
+				life="400"
+				spawnrate="500"
+				speed="20"
+				drag="0.15"
+				direction="0 0 1"
+				minparticlelife="1000"
+				maxparticlelife="1500"
+				offsetsphere="30 30 30"
+				count="20"
+				depthbias="-100"
+				gravity="2"
+				material="/shared/effects/materials/dust_smoke_10.material"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					color=".65"
+					startalpha="0"
+					midalpha=".5"
+					endalpha="0"
+					midalphapos=".3"
+					startsize="75"
+					endsize="100"
+				/>
+			</simpleemitter>
+	
+      </particlesystem>
+   </definitions>
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<spawnmodifier instance="instance1" modifier="modifier0"/>  
+	
+	<waitfordeath instance="instance0" />
+	<!-- <die /> -->
+</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->

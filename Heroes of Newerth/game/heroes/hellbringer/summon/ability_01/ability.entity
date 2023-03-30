@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Malphas1"
+
+	
+	
+	
+	icon="icon.tga"
+	
+	maxlevel="3"
+	actiontype="passive"
+>
+	<aura state="State_Malphas_Ability1" radius="225" targetscheme="enemy_units"/>
+</ability>

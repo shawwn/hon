@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" useentityeffectscale="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1.2"> 
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="1200"
+				volume="0.25" 
+				soundloop="true"
+				fadein="500"
+				fadeout="500"
+				sample="../sounds/heal.wav"
+			/>
+
+			<billboard
+				expirelife="300"
+				bone="_bone_centerofchest"
+				size="120"
+				startcolor=".25 .1 0"
+				endcolor="0"
+				material="/shared/effects/materials/rainbow_add.material"
+				depthbias="-40"
+				yawspeed="100"
+			/>
+
+			<billboard
+				expirelife="300"
+				bone="_bone_centerofchest"
+				size="120"
+				startcolor=".25 .1 0"
+				endcolor="0"
+				material="/shared/effects/materials/rainbow_add.material"
+				yaw="180"
+				depthbias="-40"
+				yawspeed="230"
+			/>
+
+			<billboard
+				expirelife="300"
+				bone="_bone_centerofchest"
+				size="170"
+				startcolor=".45 .1 0"
+				endcolor="0"
+				material="/shared/effects/materials/whitedot.material"
+				depthbias="-60"
+			/>
+		
+			<simpleemitter
+				spawnrate="30"
+				bone="_bone_centerofchest"
+				particlelife="1200"
+				speed="2"
+				drag=".1"
+				acceleration="150"
+				position="0 0 -5"
+				timenudge="200"
+				material="/shared/effects/materials/highlight_add.material"
+				offsetsphere="5 5 5"
+				minangle="0"
+				maxangle="360"
+			>
+				<particle 
+					angle="90"
+					startcolor="0 0 0"
+					midcolor=".5 .2 0"
+					endcolor="0 0 0"
+					midcolorpos=".7"
+					startsize="60"
+					midsize="9"
+					endsize="0"
+					turn="1"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				spawnrate="25"
+				minparticlelife="750"
+				maxparticlelife="1500"
+				material="/shared/effects/materials/phantom_smoke_04.material"
+			>
+				<particle 
+					maxangle="360"
+					minanglespeed="-6"
+					maxanglespeed="6"
+					startcolor="0 0 0"
+					midcolor=".25 0 0"
+					endcolor="0 0 0"
+					startalpha=".8 .8 .8"
+					endalpha="0 0 0"
+					startsize="0"
+					endsize="135"
+				/>
+				<particle 
+					maxangle="360"
+					minanglespeed="-6"
+					maxanglespeed="6"
+					startcolor="0 0 0"
+					midcolor=".25 .1 0"
+					endcolor="0 0 0"
+					endalpha="0 0 0"
+					startsize="0"
+					endsize="135"
+				/>
+			</simpleemitter> 			
+
+			<simpleemitter
+				spawnrate="30"
+				bone="_bone_centerofchest"
+				minparticlelife="750"
+				maxparticlelife="1700"
+				gravity="-4.8"
+				acceleration="50"
+				position="0 0 -5"
+				timenudge="200"
+				material="/shared/effects/materials/star_03.material"
+				offsetsphere="18 18 30"
+				minangle="0"
+				maxangle="360"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="0 0 0"
+					midcolor="1 .5 0"
+					endcolor="0 0 0"
+					midcolorpos=".7"
+					startsize="10"
+					midsize="9"
+					endsize="0"
+				/>
+			</simpleemitter>
+
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				spawnrate="25"
+				particlelife="1000"			
+				gravity="-4"
+				speed="5"
+				drag=".02"
+				position="0 0 5"
+				material="/shared/effects/materials/heathaze.material"
+				offsetsphere="5"
+			>
+				<particle 
+					startparam=".1"
+					endparam="0"
+					startsize="20"
+					midsize="50"
+					endsize="20"
+					startalpha="0"
+					midalpha=".5"
+					endalpha="0"
+					midalphapos=".3"
+					depthbias="-5"
+				/>
+			</simpleemitter>		
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

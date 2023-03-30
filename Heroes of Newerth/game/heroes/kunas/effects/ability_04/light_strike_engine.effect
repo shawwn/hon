@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="bolt_lightning_02" useentityeffectscale="true">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="1.5">
+			
+			<sound
+				sample="/heroes/kunas/ability_01/sounds/ability_01_impact_0%.wav"
+				volume="0.2"
+				linearfalloff="true"
+				falloffstart="1000"
+				falloffend="1800"
+			/>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				offsetsphere="25 25 0"
+				spawnrate="222"
+				count="5"
+				particlelife="1000"
+				gravity="-.5"
+				acceleration="0"
+				speed="20"
+				position="0 0 20"
+				material="/shared/effects/materials/pyroclast_01.material"
+			>
+				<particle
+					minangle="-360"
+					maxangle="360"
+					color=".25 1 .9"
+					startsize="10"
+					endsize="100"
+					minanglespeed="-30"
+					maxanglespeed="33"
+					startalpha="0"
+					midalpha=".25"
+					endalpha="0"
+					frame="1"
+					framespeed="1"
+					anchor="1"
+					lockup="0"
+					lockright="false"
+					turn="false"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				bone="_bone_centerofchest"
+				offsetsphere="25 25 0"
+				spawnrate="222"
+				count="5"
+				particlelife="1000"
+				gravity="-.5"
+				acceleration="0"
+				speed="20"
+				position="0 0 20"
+				material="/shared/effects/materials/pyroclast_01.material"
+			>
+				<particle
+					minangle="-360"
+					maxangle="360"
+					color=".9 .5 .25"
+					startsize="10"
+					endsize="100"
+					minanglespeed="-30"
+					maxanglespeed="33"
+					startalpha="0"
+					midalpha=".25"
+					endalpha="0"
+					frame="1"
+					framespeed="1"
+					anchor="1"
+					lockup="0"
+					lockright="false"
+					turn="false"
+				/>
+			</simpleemitter>
+
+			<model
+				life="650"
+				model="hammer.mdf"
+				anim="idle"
+				scale="2.25"
+				startcolor="1 .5 0"
+				midcolor="1 .5 0"
+				endcolor="0 0 0"
+				midcolorpos=".5"
+				position="0 0 40"
+				alpha="1"
+				directionalspace="global"
+			>
+				<twopointtrailemitter
+					life="1000"
+					name="trail01"
+					bone_a="_bone_01"
+					bone_b="_bone_02"
+					spawnrate="45"
+					startminparticlelife="350"
+					startmaxparticlelife="350"
+					endminparticlelife="1"
+					endmaxparticlelife="1" 
+					texpostime="500"
+					texposscale="1"
+					texstretchscale="0"
+					material="/shared/effects/materials/arrow_trail.material"
+				>
+					<particle 
+						startcolor=".1 .1 .5" 
+						midcolor=".4 .15 0"
+						endcolor="0 0 0"
+					/>
+				</twopointtrailemitter>
+
+				<twopointtrailemitter
+					life="1000"
+					name="trail01"
+					bone_a="_bone_03"
+					bone_b="_bone_04"
+					spawnrate="45"
+					startminparticlelife="350"
+					startmaxparticlelife="350"
+					endminparticlelife="1"
+					endmaxparticlelife="1"
+					texpostime="350"
+					texposscale="1"
+					texstretchscale="0"
+					material="/shared/effects/materials/arrow_trail.material"
+				>
+					<particle 
+						startcolor=".1 .1 .5"
+						midcolor=".4 .1 0"
+						endcolor="0 0 0"
+					/>
+				</twopointtrailemitter>
+			</model>
+
+			<beam
+				life="250"
+				delay="200"
+				bone_a="_bone_head"
+				bone_b="_bone_head"
+				position_a="0 0 750"
+				size="40"
+				startcolor="1 .5 0"
+				endcolor="1 .5 0"
+				alpha="1"
+				material="/shared/effects/materials/femme_lightning_10.material"
+				framespeed="1.75"
+			/>
+
+			<beam
+				life="550"
+				delay="200"
+				bone_a="_bone_head"
+				bone_b="_bone_head"
+				position_a="0 0 750"
+				size="60"
+				startcolor="1 .5 0"
+				endcolor=".3 .8 .8"
+				alpha="1.0"
+				material="/shared/effects/materials/femme_lightning_10.material"
+				framespeed="1.75"
+			/>
+
+			<beam
+				life="550"
+				delay="200"
+				bone_a="_bone_head"
+				bone_b="_bone_head"
+				position_a="0 0 750"
+				size="80"
+				startcolor="1 .5 0"
+				endcolor=".5 1 1"
+				alpha="1.0"
+				material="/shared/effects/materials/femme_lightning_06.material"
+				framespeed="1.75"
+			/>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				delay="250"
+				life="250"
+				spawnrate="25"
+				particlelife="200"
+				gravity="0"
+				speed="2.0"
+				drag="0.0"
+				acceleration="0.0"
+				material="/shared/effects/materials/femme_lightning_06.material"
+				offsetsphere="5 5 5"
+				position="0 0 0"
+			>
+				<particle
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-22"
+					maxanglespeed="22"
+					startcolor=".5 .2 0"
+					endcolor=".1 .5 .5"
+					width="150"
+					height="46"
+					turn="true"
+					framespeed="1.75"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				life="2500"
+				delay="250"
+				spawnrate="280"
+				count="25"
+				particlelife="250"
+				gravity="0"
+				speed="40"
+				drag="0"
+				acceleration="0"
+				position="0 0 0"
+				material="/shared/effects/materials/lightning_01.material"
+				offsetsphere="50 50 10"
+				minangle="360"
+				maxangle="180"
+				direction="1 0 0"
+				offsetdirection="0 0 0"
+				offsetradial="0 0 0"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					minanglespeed="50"
+					maxanglespeed="190"
+					color=".2 .5 1"
+					midcolorpos=".8"
+					startframe="0"
+					endframe="1"
+					startsize="50"
+					midsize="25"
+					endsize="50"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".5"
+					startstickiness=".2"
+					endstickiness=".2"
+				/>
+			</simpleemitter>
+			
+			<model
+				delay="200"
+				life="350"
+				parentmodel="true"
+				parentskeleton="true"
+				startcolor="2.5 1 .5"
+				endcolor="0 0 0"
+				startscale="1.25"
+				midscale="1"
+				endscale="1"
+				midscalepos=".4"
+				material="/shared/effects/materials/shell4.material"
+				startalpha="0"
+				endalpha="10"
+			/>
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" /> 
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

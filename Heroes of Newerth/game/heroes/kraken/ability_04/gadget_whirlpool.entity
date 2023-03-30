@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Kraken_Ability4_Whirlpool"
+	
+	icon="icon.tga"
+	portrait="icon.tga"
+	model="effects/tentacles/model.mdf"
+	skin=""
+	unitwalking="true"
+	
+	passiveeffect="effects/ability_self.effect"
+	spawneffect="effects/spawn.effect"
+	respawneffect=""
+	selectsound=""
+	isselectable="false"
+	orderconfirmedsound=""
+	
+	preglobalscale="1.35"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="64"
+	boundsradius="16"
+	selectionradius="36"
+	targetoffset="0 0 0"
+
+	movespeed="0"
+	turnrate="0"
+	ismobile="false"
+	canrotate="false"
+
+	maxhealth="0"
+	healthregen="0"
+	maxmana="0"
+	manaregen="0"
+
+	invulnerable="true"
+	canattack="false"
+	
+	clearvision="true"
+	sightrangeday="800"
+	sightrangenight="800"
+	corpsetime="0"
+	deathtime="0"
+	
+	lifetime="3000,4000,5000"
+>
+	<aura state="State_Kraken_Ability4_Slow" radius="300" targetscheme="nonboss_organic_enemy_units" effecttype="Push" />
+	<aura state="State_Kraken_Ability4_Stun" radius="40" targetscheme="nonboss_organic_enemy_units" effecttype="Magic" />
+	
+	<onexpired>
+		<playeffect effect="effects/death.effect" source="source_position" target=""/>
+	</onexpired>
+	
+</gadget>

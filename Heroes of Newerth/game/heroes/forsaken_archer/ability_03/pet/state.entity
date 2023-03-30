@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_ForsakenArcher_Ability3_Pet_Aggro"
+	
+
+	effecttype=""
+	icon="bla.tga"
+	passiveeffect=""
+	
+	ishidden="false"
+	modifierkey="forsakenarcher_ult"
+>
+	<oninflict>
+		<order command="attack_follow" source="target_entity" target="source_entity" />
+	</oninflict>
+	
+	<onexpired>
+		<order command="assist" range="600" source="target_entity" target="source_entity" />
+	</onexpired>
+</state>

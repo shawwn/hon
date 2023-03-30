@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_FlintBeastwood_Ability1"
+
+	icon="icon.tga"
+	passiveeffect=""
+	effecttype="StatusDebuff"
+	
+	movespeedslow="0.14,0.20,0.26,0.32"
+>
+</state>

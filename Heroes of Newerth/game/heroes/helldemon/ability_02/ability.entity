@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_HellDemon2"
+
+	icon="icon.tga"
+	statuseffecttooltip2="State_HellDemon_Ability2"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+	passiveeffect=""
+	
+	actiontype="no_target"
+	frontqueue="true"
+	inheritmovement="true"
+	casttime="0"
+	castactiontime="0"
+	cooldowntime="1000"
+	cooldowntype="helldemonhealthdegenaura"
+	noresponse="true"
+>
+	<modifier key="helldemonhealthdegenaura_off" modpriority="100"
+	>
+		<onimpact>
+			<setactivemodifierkey name="" />
+		</onimpact>
+		
+		<aura state="State_HellDemon_Ability2" radius="0" targetscheme="nonboss_organic_enemy_units" propagatecondition="not_stealthed" />
+	</modifier>
+	
+	<modifier key="" modpriority="100"
+	>
+		<onimpact>
+			<setactivemodifierkey name="helldemonhealthdegenaura_off" />
+		</onimpact>
+		
+		<aura state="State_HellDemon_Ability2" radius="700,800,900,1000" targetscheme="nonboss_organic_enemy_units" propagatecondition="not_stealthed" />
+	</modifier>
+</ability>

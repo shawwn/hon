@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="" file="orbit.model" type="K2" >
+	<anim name="idle" clip="orbit.clip" loop="1" fps="60"/>
+</model>

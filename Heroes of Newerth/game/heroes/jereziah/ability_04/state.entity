@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Jereziah_Ability4"
+
+	
+	
+	icon="icon.tga"
+	armor="1000"
+	healthregen="25"
+	effecttype="StatusBuff"
+	passiveeffect="effects/state.effect"
+	
+	
+
+>
+
+</state>

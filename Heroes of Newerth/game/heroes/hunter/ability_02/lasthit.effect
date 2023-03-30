@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="deathExplosionLarge">
+	<definitions>
+	
+		
+		<modifier
+			name="modifier0"
+			life="30000"
+			color="1 1 1"
+			alpha="0"
+			
+		/>		
+		
+	
+		<particlesystem name="system0" space="entity" >
+			
+	
+			<simpleemitter
+				timenudge="100"
+				spawnrate="200"
+				particlelife="2500"
+				count="50"
+				startgravity="2"
+				endgravity="10"
+				speed="75.0"
+				material="/shared/effects/materials/leaf.material"
+				inheritvelocity="0"
+				position="0 0 60"
+				offsetsphere="20 20 20"
+				minangle="45"
+				maxangle="180"
+			>
+				<particle
+					startcolor=".6 .6 .6"
+					midcolor=".4 .4 .0"
+					endcolor="0.4 0.4 0.0"
+					midcolorpos="0.5"
+					startalpha="1.0"
+					endalpha="0"
+					angle="0"
+					anglespeed="1720"
+					startsize="10"
+					midsize="8"
+					endsize="0"
+					lockup="false"
+					lockright="false"
+					pitch="0"
+				/>
+			</simpleemitter>
+	
+	
+	
+			<model			
+				life="2800"
+				model="../gib.mdf"
+				anim="death_1"
+				yawspeed="0"
+				scale="1"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".8"
+			>	
+				<simpleemitter
+					delay="0"
+			         	bone="_bone_head"
+			         	spawnrate="20"
+						life="1380"
+			          	particlelife="500"
+			          	gravity="0"
+			         	speed="0"
+			          	drag=".01"
+			          	acceleration="0.0"
+						position="0 0 0"
+						offsetsphere="0 0 0"
+			          	material="/shared/effects/materials/blood_white.material"
+						mininheritvelocity=".00"			
+						maxinheritvelocity=".4"	
+			         	>
+			  		<particle 
+						minangle="-360"
+						maxangle="360"
+						angle="180"			
+						color=".6 .5 .0 "
+						anglespeed="20"
+						
+						frame=".5"
+
+						startsize="20"							
+						maxendsize="80"			
+
+						startalpha="1"
+						
+						endalpha="0"
+						
+					/>
+			    </simpleemitter>	
+
+				<simpleemitter
+					delay="0"
+			         	bone="_bone_body"
+			         	spawnrate="20"
+						life="1380"
+			          	particlelife="500"
+			          	gravity="0"
+			         	speed="0"
+			          	drag=".01"
+			          	acceleration="0.0"
+						position="0 0 0"
+						offsetsphere="0 0 0"
+			          	material="/shared/effects/materials/blood_white.material"
+						mininheritvelocity=".00"			
+						maxinheritvelocity=".4"	
+			         	>
+			  		<particle 
+						minangle="-360"
+						maxangle="360"
+						angle="180"			
+						color=".6 .5 .0 "
+						anglespeed="20"
+						
+						frame=".5"
+
+						startsize="20"							
+						maxendsize="80"			
+
+						startalpha="1"
+						
+						endalpha="0"
+						
+					/>
+			    </simpleemitter>	
+
+								<simpleemitter
+					delay="0"
+			         	bone="_bone_pelvis"
+			         	spawnrate="20"
+						life="1380"
+			          	particlelife="500"
+			          	gravity="0"
+			         	speed="0"
+			          	drag=".01"
+			          	acceleration="0.0"
+						position="0 0 0"
+						offsetsphere="0 0 0"
+			          	material="/shared/effects/materials/blood_white.material"
+						mininheritvelocity=".00"			
+						maxinheritvelocity=".4"	
+			         	>
+			  		<particle 
+						minangle="-360"
+						maxangle="360"
+						angle="180"			
+						color=".6 .5 .0 "
+						anglespeed="20"
+						
+						frame=".5"
+
+						startsize="20"							
+						maxendsize="80"			
+
+						startalpha="1"
+						
+						endalpha="0"
+						
+					/>
+			    </simpleemitter>	
+				
+				<simpleemitter
+					delay="0"
+			         	bone="_bone_r_arm"
+			         	spawnrate="20"
+						life="1380"
+			          	particlelife="500"
+			          	gravity="0"
+			         	speed="0"
+			          	drag=".01"
+			          	acceleration="0.0"
+						position="0 0 0"
+						offsetsphere="0 0 0"
+			          	material="/shared/effects/materials/blood_white.material"
+						mininheritvelocity=".00"			
+						maxinheritvelocity=".4"	
+			         	>
+			  		<particle 
+						minangle="-360"
+						maxangle="360"
+						angle="180"			
+						color=".6 .5 .0 "
+						anglespeed="20"
+						
+						frame=".5"
+
+						startsize="20"							
+						maxendsize="80"			
+
+						startalpha="1"
+						
+						endalpha="0"
+						
+					/>
+			    </simpleemitter>
+
+
+
+				<simpleemitter
+						delay="1233"
+			         	bone="_bone_body"			         	
+						life="3000"
+						spawnrate="4"
+						count="3"
+			          	particlelife="3000"
+			          	gravity="0"			         	
+			         	>
+			  		<particle >
+						<groundsprite
+							life="2000"						
+							material="/shared/effects/materials/blood_ground_white.material"
+
+							minyaw="-360"	
+							maxyaw="360"
+							minsize="10"
+							maxsize="40"
+
+							position="0 0 0"
+
+							color=".6 .5 .0 "
+							
+				
+							midcolorpos=".1"
+
+							startalpha="1"
+							midalpha="1"
+							endalpha="0"
+							midalphapos=".1"
+								
+						/>	
+					</particle>
+			    </simpleemitter>				
+			</model>
+		
+
+
+
+
+			<simpleemitter
+				life="401"
+				delay="0"
+				particlelife="5200"				
+				spawnrate="40"
+				speed="0"
+				gravity="0"
+				direction="0 0 0"			
+				
+				particledirectionalspace="local"
+				
+				offsetsphere="22 22 0"
+				position="0 0 0"	
+			>
+
+				<particle> 
+					<groundsprite
+						life="3000"						
+						material="/shared/effects/materials/blood_ground_white.material"
+
+						minyaw="-360"	
+						maxyaw="360"
+						minsize="20"
+						maxsize="40"
+
+						position="0 0 0"
+
+						color=".6 .5 .0 "
+						
+			
+						midcolorpos=".1"
+
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".1"
+							
+					/>						
+				</particle>
+			</simpleemitter>	
+			
+			
+			
+		<simpleemitter
+				life="401"
+				delay="930"
+				particlelife="5200"				
+				spawnrate="10"
+				speed="0"
+				gravity="0"
+				direction="0 0 0"			
+				
+				particledirectionalspace="local"
+				
+				offsetsphere="100 100 0"
+				position="0 0 0"	
+			>
+
+				<particle> 
+					<groundsprite
+						life="3000"						
+						material="/shared/effects/materials/blood_ground_white.material"
+
+						minyaw="-360"	
+						maxyaw="360"
+						minsize="20"
+						maxsize="40"
+
+						position="0 0 0"
+
+						color=".6 .5 .0 "
+						
+			
+						midcolorpos=".1"
+
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".1"
+							
+					/>						
+				</particle>
+			</simpleemitter>				
+
+
+			<simpleemitter
+				delay="0"
+				count="2"
+				particlelife="1100"				
+				spawnrate="11"
+				speed="220"
+				gravity="20"
+				direction="0 0 1"
+				minangle="0"
+				
+				maxangle="15"
+				particledirectionalspace="local"
+				material="/shared/effects/materials/venom_splash.material"
+				offsetsphere="11 11 0"
+				position="0 0 44"
+			>
+				<particle 
+					startsize="20"
+				
+					endsize="100"
+					color=".6 .4 .0 "					
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+				/>
+			</simpleemitter>		
+	
+	
+		<simpleemitter
+			count="5"
+	
+			particlelife="1500"				
+			spawnrate="110"
+			speed="280"
+			gravity="22"
+					
+			
+			minangle="0"
+			maxangle="30"
+			material="/shared/effects/materials/blood_white.material"
+			offsetsphere="0 0 0"
+			position="0 0 44"
+	
+		>
+
+			<particle 
+				minanglespeed="-100"
+				maxanglespeed="100"
+				
+				
+				minangle="-60"
+				maxangle="60"
+				color=".6 .5 .0 "
+				
+				startsize="30"
+								
+				endsize="80"
+				startalpha="1"
+				endalpha="0"
+		
+			/>
+		</simpleemitter>		
+	
+	
+      </particlesystem>
+   </definitions>
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<spawnmodifier instance="instance1" modifier="modifier0"/>  
+	
+	<waitfordeath instance="instance0" />
+	<wait duration="20000"/>
+	<!-- <die /> -->
+</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

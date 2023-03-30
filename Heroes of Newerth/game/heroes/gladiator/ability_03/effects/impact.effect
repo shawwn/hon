@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect  persistent="1">
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+
+		<sound
+			delay="0"
+			linearfalloff="true" 
+			falloffstart="500"
+			falloffend="2500"
+			volume="1.0" 
+			sample="/heroes/gladiator/ability_03/sounds/cast.wav"
+		/>
+
+		<sound
+			delay="0"
+			linearfalloff="true" 
+			falloffstart="2000"
+			falloffend="3600"
+			volume="1.0" 
+			sample="/heroes/gladiator/ability_03/sounds/impact.wav"
+		/>
+			
+		<groundsprite
+			delay="0"
+			life="2000"
+			material="/shared/effects/materials/ground_smash_overlay.material"
+			size="165"
+			color="1.0 1.0 1.0"
+			startalpha="1"
+			midalpha="1"
+			endalpha="0"
+			midalphapos="0.05"
+		/>
+
+		<billboard
+			life="500"
+			startcolor=".5 .5 0"
+			midcolor=".5 .5 0"
+			endcolor="0 0 0"
+			startparam=".5"
+			endparam="0.4"
+			startsize="100"
+			endsize="350"
+			depthbias="-100"
+			position="0 0 0"
+			material="/shared/effects/materials/stomp_01.material"
+			lockup="true"
+			pitch="90"
+		/>
+		
+		<simpleemitter
+			spawnrate="50"
+			count="1"
+			particlelife="5500"
+			offsetsphere="0 0 0"
+			position="0 0 0"
+		>
+			<particle>
+				<model
+					position="0 0 0"
+					scale="1.75"
+					life="1500"
+					model="pillar_explosion/model.mdf"
+					anim="idle"
+					color="1 1 1"
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".5"
+				/>
+			</particle>
+		</simpleemitter>
+
+		<simpleemitter
+			offsetsphere="150 150 0"
+			spawnrate="500"
+			count="25"
+			particlelife="1500"
+			gravity="-.5"
+			acceleration="0"
+			speed="20"
+			position="0 0 25"
+			material="/shared/effects/materials/pyroclast_01.material"
+		>
+			<particle
+				minangle="-360"
+				maxangle="360"
+				color=".36 .383 .3"
+				minstartsize="10"
+				maxstartsize="50"
+				minendsize="100"
+				maxendsize="200"
+				minanglespeed="-30"
+				maxanglespeed="33"
+				startalpha="0"
+				midalpha=".5"
+				endalpha="0"
+				frame="1"
+				framespeed="1"
+				anchor="1"
+				lockup="0"
+				lockright="false"
+				turn="false"
+			/>
+		</simpleemitter>
+		
+			<billboard
+				life="1000"
+				startcolor=".75 .25 0"
+				midcolor=".75 .25 0"
+				midcolorpos="0.3"
+				endcolor="0"
+				startsize="450"
+				endsize="0"
+				depthbias="0"
+				material="/shared/effects/materials/whitedot.material"
+				position="0 0 50"
+			/>
+			
+			<billboard
+				position="0 0 50"
+				delay="0"
+				life="350"
+				param="0.1"	
+				startsize="150"
+				endsize="550"
+				startalpha="0"
+				midalpha=".4"
+				endalpha="0"				
+				depthbias="0"
+				material="/shared/effects/materials/refract_swell.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+			/>
+			
+			<billboard
+				position="0 0 50"
+				delay="175"
+				life="350"
+				param="0.1"	
+				startsize="150"
+				endsize="550"
+				startalpha="0"
+				midalpha=".4"
+				endalpha="0"				
+				depthbias="0"
+				material="/shared/effects/materials/refract_swell.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+			/>
+
+	
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+	  
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+
+

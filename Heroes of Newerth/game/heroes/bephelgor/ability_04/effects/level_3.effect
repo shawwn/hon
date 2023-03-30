@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world">
+
+			<sound
+				life="3000"
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume="1"
+				sample="../sounds/pulse.wav"
+			/>
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2200"
+				volume=".45"
+				sample="../sounds/fire.wav"
+			/>
+
+			<light
+				life="1500"			
+				startcolor="10 1.5 0"			
+				endcolor="0 0 0"
+				midcolorpos=".4"
+				falloffstart="100"
+				falloffend="400"
+				position="0 0 150"	
+			/>
+			
+			<simpleemitter
+				count="1"
+				spawnrate="5000"
+				particlelife="750"
+				acceleration="0.0"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+				offsetsphere="0 0 0"
+			>
+				<particle
+				>
+					<groundsprite
+						material="/shared/effects/materials/ground_crater.material"
+						size="625"
+						startalpha=".45"
+						midalphapos=".8"
+						endalpha="0"
+						life="3000"
+					/>
+
+					<template name="cracks">
+					
+						<sound
+							delay="{delay1}"
+							position="{position}"
+							linearfalloff="true" 
+							falloffstart="0"
+							falloffend="2000"
+							volume=".35"
+							sample="../sounds/impact_crack_%.wav"
+						/>
+
+						<sound
+							delay="{delay1}"
+							position="{position}"
+							life="600"
+							fadeout="700"
+							linearfalloff="true" 
+							falloffstart="0"
+							falloffend="2200"
+							volume="1"
+							sample="/shared/sounds/ambiance/volcano_explode_%.wav"
+						/>
+
+						<!-- Smaller cracks -->
+
+						<groundsprite
+							position="{position}"
+							life="1200"
+							alpha=".5"
+							material="/shared/effects/materials/earth_cracks_reveal.material"
+							size="160"
+							startframe="1"
+							midframepos=".1"
+							endframe="0.1"
+							yaw="{yaw}"
+						/>
+
+						<groundsprite
+							life="3000"
+							position="{position}"
+							delay="1200"
+							startalpha=".5"
+							midalphapos=".9"
+							endalpha="0"
+							material="/shared/effects/materials/earth_cracks_reveal.material"
+							size="160"
+							frame=".1"
+							yaw="{yaw}"
+						/>
+				
+						<!-- Larger cracks -->
+
+						<groundsprite
+							position="{position}"
+							life="{life1}"
+							alpha=".9"
+							material="/shared/effects/materials/earth_cracks_reveal.material"
+							size="{size}"
+							startframe="1"
+							midframepos=".2"
+							endframe="0"
+							yaw="{yaw}"
+						/>
+
+						<groundsprite
+							life="4500"
+							position="{position}"
+							delay="{delay1}"
+							startalpha=".9"
+							midalphapos=".9"
+							endalpha="0"
+							material="/shared/effects/materials/earth_cracks_reveal.material"
+							size="{size}"
+							frame="0"
+							yaw="{yaw}"
+						/>
+
+						<!-- Lava filled cracks -->
+
+						<groundsprite
+							delay="{delay2}"
+							position="{position}"
+							startcolor=".3 0 0"
+							midcolorpos=".2"
+							endcolor="{color1}"
+							life="{life2}"
+							material="/shared/effects/materials/earth_cracks_reveal_add.material"
+							size="{size}"
+							startframe="1"
+							midframepos=".5"
+							endframe="0"
+							yaw="{yaw}"
+						/>
+
+						<groundsprite
+							life="3000"
+							position="{position}"
+							startcolor="{color1}"
+							midcolorpos=".6"
+							endcolor="0"
+							delay="{delay1}"
+							material="/shared/effects/materials/earth_cracks_reveal_add.material"
+							size="{size}"
+							frame="0"
+							yaw="{yaw}"
+						/>
+
+						<!-- Extra Glow -->
+
+						<groundsprite
+							position="{position}"
+							life="{life1}"
+							startcolor="0"
+							endcolor="{color2}"
+							material="/shared/effects/materials/whitedot_ground.material"
+							startsize="10"
+							endsize="80"
+						/>				
+
+						<groundsprite
+							life="2000"
+							position="{position}"
+							delay="{delay1}"
+							startcolor="{color2}"
+							midcolorpos=".8"
+							endcolor="0"
+							material="/shared/effects/materials/whitedot_ground.material"
+							size="80"
+						/>
+
+						<simpleemitter
+							timenudge="400"
+							delay="{delay2}"
+							position="{position}"
+							life="2000"
+							count="25"
+							spawnrate="3200"
+							depthbias="-40"
+							minparticlelife="1400"
+							maxparticlelife="2200"
+							minspeed="0"
+							maxspeed="350"
+							drag="0.01"
+							offsetsphere="150 150 20"
+							angle="30"
+							gravity="-3"
+							collide="1"
+								material="/shared/effects/materials/smoke_particle.material"
+							>
+							<particle 
+								minangle="0"
+								maxangle="360"
+								color=".5"
+								startsize="20"
+								endsize="215"
+								scale="1.5"
+								startalpha="0"
+								midalpha=".2"
+								endalpha="0"
+								minanglespeed="-50"
+								maxanglespeed="50"
+							/>
+						</simpleemitter>
+
+					</template>
+
+					<instance name="cracks" delay2="400" life2="200" position="-250 0 0" yaw="120" size="250" delay1="600" life1="600" color1="1 .65 0" color2=".3 .01 0" />
+					<instance name="cracks" delay2="200" life2="900" position="0 -250 0" yaw="360" size="300" delay1="1100" life1="1100" color1="1 .65 0" color2=".3 .01 0" />
+					<instance name="cracks" delay2="100" life2="300" position="-40 420 0" yaw="45" size="170" delay1="400" life1="400" color1=".3 .1 0" color2=".1 .01 0" />
+					<instance name="cracks" delay2="0" life2="700" position="250 330 0" yaw="-15" size="220" delay1="700" life1="700" color1="2 .55 0" color2=".2 .05 0" />
+					<instance name="cracks" delay2="0" life2="650" position="340 -50 0" yaw="-45" size="120" delay1="650" life1="650" color1=".5 .2 0" color2=".2 .01 0" />
+					<instance name="cracks" delay2="100" life2="800" position="0 50 0" yaw="75" size="320" delay1="900" life1="900" color1="1 .6 0" color2=".3 .01 0" />
+				</particle>
+			</simpleemitter>
+					
+			<!-- Expanding flames -->
+
+			<terrainemitter	
+				startspawnrate="0"			
+				endspawnrate="65"
+				life="1200"
+				startminparticlelife="3000"
+				startmaxparticlelife="3900"
+				endminparticlelife="1000"
+				endmaxparticlelife="1900"
+				startrange="150"
+				endrange="700"
+				collide="true"
+			>
+				<particle minscale=".5" maxscale="3">
+					<billboard
+						depthbias="-50"
+						expirelife="300"
+						startcolor=".4 .1 0"
+						endcolor="0"
+						size="50"
+						position="0 0 5"
+						material="/shared/effects/materials/whitedot.material"
+						lockup="true"
+						pitch="90"
+					/>
+
+					<simpleemitter
+						position="0 0 10"
+						spawnrate="25"
+						depthbias="-40"
+						minparticlelife="300"
+						maxparticlelife="1200"
+						minspeed="0"
+						maxspeed="60"
+						drag="0.01"
+						offsetsphere="3 3 2"
+						angle="20"
+						gravity="1"
+						collide="1"
+          					material="/shared/effects/materials/soul_projectile2.material"
+         				>
+						<particle 
+							minangle="0"
+							maxangle="360"
+							startcolor="1 .4 0"
+							midcolor=".3 .1 0"	
+							midcolorpos=".2"
+							endcolor="0"
+							startsize="5"
+							endsize="15"
+							endstickiness=".7"
+							minanglespeed="-150"
+							maxanglespeed="150"
+							minscale=".5"
+							maxscale="1.5"
+						/>
+					</simpleemitter>
+
+					<simpleemitter
+						position="0 0 8"
+						spawnrate="65"
+						depthbias="-40"
+						minparticlelife="600"
+						maxparticlelife="1800"
+						minspeed="0"
+						maxspeed="70"
+						offsetsphere="5"
+						angle="20"
+						gravity="1"
+          					material="/shared/effects/materials/blob_add.material"
+         				>
+						<particle 
+							minangle="0"
+							maxangle="360"
+							startcolor="1 .5 0"
+							midcolor=".5 .1 0"
+							midcolorpos=".1"
+							endcolor="0"
+							startsize="2"
+							endsize="0"
+							minscale=".5"
+							maxscale="1"
+						/>
+					</simpleemitter>
+				</particle>
+
+				<particle minscale=".65" maxscale="1.5">
+					<billboard
+						depthbias="-50"
+						expirelife="300"
+						startcolor=".4 .1 0"
+						endcolor="0"
+						size="30"
+						position="0 0 5"
+						material="/shared/effects/materials/whitedot.material"
+						lockup="true"
+						pitch="90"
+					/>
+
+					<simpleemitter
+						position="0 0 10"
+						spawnrate="25"
+						depthbias="-40"
+						minparticlelife="300"
+						maxparticlelife="1200"
+						minspeed="0"
+						maxspeed="90"
+						drag="0.01"
+						offsetsphere="3 3 2"
+						angle="20"
+						gravity="1"
+						collide="1"
+          					material="/shared/effects/materials/soul_projectile2.material"
+         				>
+						<particle 
+							minangle="0"
+							maxangle="360"
+							startcolor="1 .3 0"
+							midcolor=".3 .1 0"	
+							midcolorpos=".2"
+							endcolor="0"
+							startsize="5"
+							endsize="15"
+							endstickiness=".7"
+							minanglespeed="-150"
+							maxanglespeed="150"
+							minscale=".5"
+							maxscale="1.5"
+						/>
+					</simpleemitter>
+
+					<simpleemitter
+						position="0 0 8"
+						spawnrate="65"
+						depthbias="-40"
+						minparticlelife="600"
+						maxparticlelife="1800"
+						minspeed="0"
+						maxspeed="70"
+						offsetsphere="5"
+						angle="20"
+						gravity="1"
+          					material="/shared/effects/materials/blob_add.material"
+         				>
+						<particle 
+							minangle="0"
+							maxangle="360"
+							startcolor="1 .5 0"
+							midcolor=".5 .1 0"
+							midcolorpos=".1"
+							endcolor="0"
+							startsize="2"
+							endsize="0"
+							minscale=".5"
+							maxscale="1"
+						/>
+					</simpleemitter>
+				</particle>
+
+			</terrainemitter>
+
+			<!-- Pulse -->
+
+			<groundsprite
+				material="/shared/effects/materials/ground_fire_ring.material"
+				startsize="25"
+				endsize="700"
+				life="1100"
+				startcolor=".7 .4 0"
+				endcolor="0 0 0"
+			/>
+
+			<groundsprite
+				delay="100"
+				life="1100"
+				material="/shared/effects/materials/ring_ground.material"
+				startsize="110"
+				endsize="800"
+				startcolor=".6 .3 .4"
+				midcolor=".6 .3 .4"
+				endcolor="0 0 0"
+			/>
+
+			<billboard
+				life="500"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".75"
+				startparam=".25"
+				endparam="0"
+				startsize="0"
+				endsize="1500"
+				depthbias="-100"
+				position="0 0 20"
+				material="/shared/effects/materials/refract_ring.material"
+				lockup="true"
+				pitch="90"
+			/>
+
+			<billboard
+				material="/shared/effects/materials/fresnel_blend.material"			
+				color=".4 .2 0"		
+				startalpha="1"
+				endalpha="0"				
+				life="600"
+				position="0 0 10"
+				startsize="200"
+				endsize="1000"
+				depthbias="-150"			
+			/>
+
+			<billboard
+				material="/shared/effects/materials/bulb_add.material"				
+				startcolor=".2 .0 .5"				
+				endcolor="0 0 0"
+				life="1100"	
+				position="0 0 10"
+				startsize="200"
+				endsize="1200"
+				depthbias="-150"			
+			/>
+
+			<billboard
+				delay="100"
+				life="500"
+				position="0 0 120"			
+				startcolor=".4 .2 .4"
+				endcolor="0"
+				endsize="1000"
+				depthbias="-100"
+				lockup="1"
+				pitch="90"
+				maxroll="360"
+				material="/shared/effects/materials/smash_add.material"
+			/>
+
+			<billboard
+				life="1100"
+				position="0 0 50"			
+				startcolor=".8 .2 .3"
+				midcolor=".5 .2 0"
+				endcolor="0"
+				startsize="200"
+				endsize="1250"
+				depthbias="-150"
+				lockup="1"
+				pitch="90"
+				lockright="1"
+				maxroll="360"
+				material="/shared/effects/materials/pulse.material"
+			/>
+
+			<billboard
+				life="1100"
+				position="0 0 50"			
+				startcolor=".8 .2 .3"
+				midcolor=".5 .2 0"
+				endcolor="0"
+				startsize="200"
+				endsize="1250"
+				depthbias="-150"
+				lockup="1"
+				pitch="90"
+				lockright="1"
+				maxroll="360"
+				material="/shared/effects/materials/pulse.material"
+			/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<camerashake2 scale="10.0" radius="700" duration="1000" frequency="22" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<order
+	name="Order_Rampage_Ability1"
+
+	triggerrange="100"
+>
+	<onbegin>
+		<applystate name="State_Rampage_Ability1_Self" target="source_entity" continuous="true" duration="3000" pushentity="true" />
+		<setproxy index="0" target="stack_entity" />
+		<applystate name="State_Rampage_Ability1_Timer" target="source_entity" continuous="true" proxy="stack_entity" pushentity="true" />
+		<setproxy index="1" target="stack_entity" />
+		<applystate name="State_Rampage_Ability1_Sight" target="target_entity" continuous="true" proxy="stack_entity" pushentity="true" duration="2000" />
+		<setproxy index="2" target="stack_entity" />
+	</onbegin>
+	
+	<oncomplete>
+		<combatevent effecttype="AbilityBasedProjectile">
+			<applystate name="State_Rampage_Ability3" duration="1000,1500,2000,2500" />
+			<push force="147,157,163,168" duration="950,1150,1350,1550"/>
+			<damage effecttype="Magic" amount="100,140,180,220" />
+			<playeffect effect="effects/impact.effect" source="target_entity" target="" />
+		</combatevent>
+		<startexpire entity="proxy_entity" />
+		<expire entity="this_proxy_entity1" />
+		<startexpire entity="this_proxy_entity2" />
+	</oncomplete>
+	
+	<oncancel>
+		<startexpire entity="this_proxy_entity" />
+		<expire entity="this_proxy_entity1" />
+		<startexpire entity="this_proxy_entity2" />
+	</oncancel>
+	
+	<onframe>
+		<condition test="distance le 450">
+			<spawnprojectile name="Projectile_Rampage_Ability1" source="source_entity" bindstate="State_Rampage_Ability1_Warp" bind="source_entity" bindturn="true" target="target_entity" proxy="target_entity" noresponse="true"/>		
+			<cancel />
+		</condition>
+		<condition target="source_entity" test="hastrait stunned or hastrait immobilized or hastrait restrained">
+			<cancel />
+		</condition>
+	</onframe>
+</order>

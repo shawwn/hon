@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1.6">
+			<sound
+				delay="0"
+				linearfalloff="true" 
+				falloffstart="800"
+				falloffend="1800"
+				volume="1.0" 
+				sample="/heroes/gladiator/ability_04/sounds/impact.wav"
+			/>
+			
+			<groundsprite
+				life="2000"
+				material="/shared/effects/materials/whitedot_blend.material"
+				size="150"
+				color="0 0 0"
+				startalpha=".65"
+				midalpha=".65"
+				endalpha="0"
+				midalphapos="0.05"
+			/>
+			
+			<groundsprite
+				life="2000"
+				material="/shared/effects/materials/ground_smash_overlay.material"
+				size="250"
+				color="1.0 1.0 1.0"
+				startalpha=".5"
+				midalpha=".5"
+				endalpha="0"
+				midalphapos="0.05"
+			/>
+			
+			<simpleemitter
+				count="5"
+				spawnrate="5000"
+				particlelife="750"
+				acceleration="0.0"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+				offsetsphere="250 250 0"
+			>
+				<particle
+					turn="1"
+				>
+					<groundsprite
+						delay="400"
+						life="2000"
+						material="/shared/effects/materials/earth_cracks_02.material"
+						minsize="55"
+						maxsize="90"
+						color="1.0 1.0 1.0"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos="0.05"
+						minyaw="0"
+						maxyaw="360"
+					/>
+				</particle>
+			</simpleemitter>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+
+
+			<simpleemitter
+				depthbias="-30"
+				position="0 0 35"
+				life="300"
+				speed="50"
+				count="7"
+				drag=".01"
+				spawnrate="220"			
+				minparticlelife="750"
+				maxparticlelife="1500"
+				material="/shared/effects/materials/pyroclast_03.material"
+				offsetsphere="50 50 25"
+				angle="90"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-60"
+					color="1 1 1"
+					maxanglespeed="60"
+					startsize="150"
+					endsize="300"
+					startalpha="0"
+					midalpha=".15"
+					endalpha="0"
+					midalphapos=".25"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				position="0 0 40"	
+				count="14"
+				gravity="-5"
+				life="300"
+				speed="100"
+				drag="0.01"
+				depthbias="-40"
+				spawnrate="1800"			
+				minparticlelife="700"
+				maxparticlelife="1250"
+				material="/shared/effects/materials/pyroclast_03.material"
+				offsetsphere="25 25 25"
+				angle="40"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-50"
+					color="1 1 1"
+					maxanglespeed="50"
+					startsize="50"
+					minendsize="100"
+					maxendsize="200"
+					startalpha=".1"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<billboard
+				life="200"
+				startcolor=".2 .1 0"
+				endcolor="0"
+				position="0 0 40"
+				startsize="250"
+				endsize="400"
+				startalpha="1"
+				maxroll="360"
+				endalpha="0"				
+				depthbias="-95"
+				lockup="true"
+				pitch="90"
+				material="/shared/effects/materials/starlight.material"
+			/>
+
+			<billboard
+				life="300"
+				startcolor=".125 .075 .025"
+				endcolor="0 0 0"
+				startsize="25"
+				endsize="350"				
+				depthbias="-19"
+				material="/shared/effects/materials/corona_06.material"
+				lockup="1"
+				pitch="90"
+				scale="1.5"
+				maxangle="360"
+			/>
+
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<simpleemitter
+				count="1"
+				spawnrate="5000"
+				particlelife="750"
+				acceleration="0.0"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+				position="0 0 -30"
+				offsetsphere="0 0 0"
+			>
+				<particle
+					turn="1"
+				>
+					<model
+						minyaw="0"
+						maxyaw="360"
+						scale="1.25"
+						life="1500"
+						model="spikes/model.mdf"
+						anim="idle"
+						color="1 1 1"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".5"
+					/>
+					<model
+						minyaw="0"
+						maxyaw="360"
+						scale="1.3"
+						life="1500"
+						model="spikes/model.mdf"
+						anim="idle"
+						color="1 1 1"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".5"
+					/>
+					<model
+						minyaw="0"
+						maxyaw="360"
+						scale="1.3"
+						life="1500"
+						model="spikes/model.mdf"
+						anim="idle"
+						color="1 1 1"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".5"
+					/>
+				</particle>
+			</simpleemitter>
+			
+<!--
+			<simpleemitter
+				count="1"
+				spawnrate="5000"
+				particlelife="750"
+				acceleration="0.0"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+			>
+				<particle
+					turn="1"
+				>
+					<model
+						bone="root"
+						scale="1.35"
+						life="1000"
+						model="../skeleton_rider/model.mdf"
+						anim="attack_1"
+						color="1 1 1"
+						startalpha="0"
+						midalpha="1"
+						endalpha=".65"
+						midalphapos=".25"
+						directionalspace="local"
+					/>
+				</particle>
+			</simpleemitter>
+-->
+			<billboard
+				life="1000"
+				startcolor=".175 .075 0"
+				midcolor=".175 .075 0"
+				midcolorpos="0.3"
+				endcolor="0"
+				startsize="250"
+				endsize="0"
+				depthbias="0"
+				material="/shared/effects/materials/whitedot.material"
+				position="0 0 50"
+			/>
+
+			<billboard
+				position="0 0 50"
+				life="350"
+				param="0.1"	
+				startsize="150"
+				endsize="550"
+				startalpha="0"
+				midalpha=".4"
+				endalpha="0"				
+				depthbias="0"
+				material="/shared/effects/materials/refract_swell.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+			/>
+			
+			<billboard
+				position="0 0 50"
+				delay="175"
+				life="350"
+				param="0.1"	
+				startsize="150"
+				endsize="550"
+				startalpha="0"
+				midalpha=".4"
+				endalpha="0"				
+				depthbias="0"
+				material="/shared/effects/materials/refract_swell.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+			/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>  
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" /> 
+	</thread>
+
+</effect>

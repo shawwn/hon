@@ -1,0 +1,5 @@
+EXPORTS
+	initializePlugin
+	uninitializePlugin
+SECTIONS
+	.data READ WRITE

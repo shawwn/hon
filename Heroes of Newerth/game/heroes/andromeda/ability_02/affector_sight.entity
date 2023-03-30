@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Andromeda_Ability2_Sight"
+
+	lifetime="-1"
+	targetselection="none"
+	persist="false"
+	impactinterval="250"
+	
+>
+	<oninterval>
+		<spawnunit name="Gadget_Andromeda_Ability2_Sight" count="1" target="target_position" pushentity="true" />
+	</oninterval>
+</affector>

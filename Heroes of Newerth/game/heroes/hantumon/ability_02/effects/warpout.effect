@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="ability_02">
+
+	<definitions>
+	
+		<modifier
+			name="modifier0"
+			life="300"
+			startcolor="1 1 1"
+			endcolor="0 0 0"
+		/>
+	
+			
+
+			
+	
+		<particlesystem name="system0" space="world" scale="1.5">
+
+
+	
+		
+		
+			<simpleemitter 
+				bone="_bone_centerofchest"
+				count="20"
+         		spawnrate="222"				
+				minparticlelife="600"
+          		maxparticlelife="2200"
+          		gravity="0"
+          		drag="0"
+				speed="20"
+				position="0 0 0"
+				offsetsphere="20 20 20"
+          			material="/shared/effects/materials/neb_blend.material"
+      			  >
+  				<particle 
+					maxangle="360"			
+					minanglespeed="-44"
+					maxanglespeed="44"
+					
+					scale="5"					
+					color="0 0 0"	
+					startalpha="1"
+					endalpha="0"
+					
+					startsize="5"
+					midsize="13"
+					endsize="10"					
+				/>
+        	</simpleemitter>		
+		
+		
+	
+			<simpleemitter 
+				bone="_bone_centerofchest"
+				count="20"
+         		spawnrate="222"				
+				minparticlelife="600"
+          		maxparticlelife="2200"
+          		gravity="0"
+          		drag="0"
+				speed="20"
+				position="0 0 0"
+				offsetsphere="20 20 20"
+          			material="/shared/effects/materials/neb_add.material"
+      			  >
+  				<particle 
+					maxangle="360"			
+					minanglespeed="-44"
+					maxanglespeed="44"
+					
+					scale="5"					
+					startcolor=".25 .4 .5"
+					endcolor="0 0 0"	
+					midcolorpos=".2"
+					
+					startsize="5"
+					midsize="13"
+					endsize="10"					
+				/>
+        	</simpleemitter>	
+	
+
+			
+			<!-- crappy emitter - try again
+			<simpleemitter 
+				bone="_bone_centerofchest"
+				count="20"
+         		spawnrate="222"				
+				minparticlelife="100"
+          		maxparticlelife="2200"
+          		gravity="0"
+          		drag="0"
+				speed="20"
+				position="0 0 0"
+				offsetsphere="20 20 20"          			
+      			  >
+				  
+				<particle>
+					<billboard
+						life="200"
+						color="1.0 1.0 1.0"						
+						midalphapos="0.25"
+						
+						param="0.01555"	
+						
+						startsize="20"
+						endsize="164"
+						startalpha="0"
+						midalpha=".9"
+						endalpha="0"				
+						
+						depthbias="-19"
+						position="0 0 0"
+						material="/shared/effects/materials/refract_pinch.material"
+						lockup="0"
+						pitch="0"
+					/>						
+				</particle>			
+			</simpleemitter>	
+			-->
+						
+			
+	</particlesystem>
+</definitions>
+
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<spawnmodifier instance="instance1" modifier="modifier0"/>  
+	
+	<waitfordeath instance="instance0" />
+	<!-- <die /> -->
+</thread>
+
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+
+
+
+
+
+
+

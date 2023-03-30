@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="bored.max" file="head.model" type="K2">
+
+<anim name="idle" clip="head.clip"/>
+
+</model>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Bombardier_Ability3_Charges"
+	
+	ishidden="true"
+	impactinterval="10000,8000,6000,4000"
+	maxcharges="4"
+
+>
+	<oninflict>
+		<starttimer entity="this_proxy_entity" duration="10000,8000,6000,4000" />
+	</oninflict>
+	
+	<onimpact>
+		<addcharges entity="this_proxy_entity" count="1" />
+		<condition test="charges gt 1">
+			<starttimer entity="proxy_entity" duration="10000,8000,6000,4000" />
+			<changeduration b="10000,8000,6000,4000" op="max" />
+		</condition>
+		<removecharge />
+	</onimpact>
+</state>

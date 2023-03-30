@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="" file="high.model" type="K2" >
+	<spawnevent cmd="StartEffect effects/body.effect"/>
+	<anim name="idle" clip="high.clip" fps="40" loop="1"/>
+</model>

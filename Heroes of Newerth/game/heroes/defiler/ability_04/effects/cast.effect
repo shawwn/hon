@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect persistent="1" deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume="1"
+				sample="../sounds/cast.wav"
+			/>
+
+			<sound
+				life="30000"
+				soundloop="true"
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="1500"
+				volume=".2"
+				sample="../sounds/state.wav"
+				fadein="100"
+				fadeout="500"
+			/>
+
+			<simpleemitter
+				timenudge="500"
+				life="1800"
+				spawnrate="25"
+				particlelife="1200"
+				offsetsphere="40"
+				angle="10"
+				position="0 0 50"
+				material="/shared/effects/materials/phantom_smoke_03.material"
+			>
+				<particle
+					startcolor="0"
+					midcolor="1 0 .8"
+					midcolorpos="0.3"
+					endcolor="0"
+					startsize="30"
+					endsize="45"
+					maxangle="360"
+					depthbias="-80"
+					minendscale="1"
+					maxendscale="3"
+					endstickiness="0"
+			 	/>
+			</simpleemitter>
+
+			<simpleemitter
+				timenudge="500"
+				life="800"
+				spawnrate="25"
+				particlelife="1500"
+				offsetsphere="3"
+				position="0 0 50"
+				material="/shared/effects/materials/electric_impact_add.material"
+			>
+				<particle
+					startcolor="0"
+					midcolor=".4 0 .2"
+					midcolorpos="0.25"
+					endcolor="0"
+					startsize="25"
+					endsize="50"
+					maxangle="360"
+					depthbias="-180"
+					minendscale="1"
+					maxendscale="3"
+					height="12"
+					endwidth="95"
+					flare="1"
+					endstickines=".4"
+			 	/>
+			</simpleemitter>
+
+			<simpleemitter
+				life="1600"
+				position="0 0 50"
+				spawnrate="30"
+				particlelife="1700"
+				offsetsphere="45"
+				material="/shared/effects/materials/dust_smoke_10.material"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					startalpha="0"
+					midalpha=".75"
+					endalpha="0"
+					midalphapos="0.3"
+					startcolor=".30 .1 .45"
+					endcolor="0 0 0"
+					startsize="45"
+					endsize="60"
+					depthbias="-80"
+					minendscale="1"
+					maxendscale="3"
+			 	/>
+
+				<particle
+					minangle="0"
+					maxangle="360"
+					startalpha="0"
+					midalpha=".75"
+					endalpha="0"
+					midalphapos="0.3"
+					startcolor="0 0 0"
+					endcolor=".25"
+					startsize="45"
+					endsize="60"
+					depthbias="-80"
+					minendscale="1"
+					maxendscale="3"
+			 	/>
+				<particle
+					minangle="0"
+					maxangle="360"
+					startalpha="0"
+					midalpha=".5"
+					endalpha="0"
+					midalphapos="0.3"
+					color="0 0 0"
+					startsize="45"
+					endsize="60"
+					depthbias="-80"
+					minendscale="1"
+					maxendscale="3"
+			 	/>
+			</simpleemitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

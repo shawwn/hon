@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1.5">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="1800"
+				volume="0.75" 
+				sample="../sounds/impact_%.wav"
+			/>
+
+			<simpleemitter
+				spawnrate="55"
+				bone="_bone_centerofchest"
+				count="6"
+				particlelife="300"			
+				gravity="-2"
+				minspeed="15"
+				maxspeed="35"
+				offsetsphere="30"
+				minangle="-25"
+				maxangle="10"
+          			material="/shared/effects/materials/mysticenergy2.material"
+         		>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor=".6 .1 .8"
+					endcolor="0"
+					startsize="30"
+					midsize="54"
+					endsize="100"
+					midsizepos=".1"
+					midalphapos=".5"
+					startstickiness="0"
+					endstickiness=".7"
+
+				/>
+        		 </simpleemitter>
+
+			<billboard
+				bone="_bone_centerofchest"
+				material="/shared/effects/materials/stomp_01.material"
+				startcolor=".4 .2 1"
+				endcolor="0"
+				life="300"
+				startsize="50"
+				endsize="150"
+				depthbias="-30"
+			/>
+
+			<billboard
+				bone="_bone_centerofchest"
+				material="/shared/effects/materials/smash_add.material"
+				startcolor=".45 .2 .8"
+				endcolor="0"
+				life="300"
+				startsize="50"
+				endsize="150"
+				depthbias="-30"
+			/>
+
+ 		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

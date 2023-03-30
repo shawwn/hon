@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="rig.max" file="high.model" type="K2" high="high.model" med="med.model" low="low.model"  >
+
+	<anim name="idle" clip="clips/default_1.clip" loop="true" blendtime="600"/>
+	
+	<anim name="portrait" clip="clips/portrait.clip" loop="true"/> 
+	
+	<anim name="item_1" clip="clips/item_1.clip"/>
+
+	<anim name="bored_1" clip="clips/bored_1.clip"/>
+
+	<anim name="walk_1" clip="clips/walk_1.clip" fps="26" numframes="24" loop="true" blendtime="350">
+		<frameevent frame="12" cmd="PlaySoundLinear /heroes/bephelgor/sounds/move_%.wav 0 800 .1"/>
+		<frameevent frame="2" cmd="PlaySoundLinear sounds/move.wav 0 2400 .7"/>
+		<frameevent frame="1" cmd="PlaySoundLinear sounds/move_grunt_%.wav 0 800 .4"/>
+	</anim>
+
+	<anim name="taunt_1" clip="clips/taunt_1.clip"/>
+
+	<anim name="death_1" clip="clips/death_1.clip" loop="true" loopbackframe="-1">
+		<frameevent frame="10" cmd="PlaySoundLinear /heroes/bephelgor/sounds/move_%.wav 0 800 .1"/>
+		<frameevent frame="1" cmd="PlaySoundLinear sounds/death.wav 0 2400 .8"/>
+		<frameevent frame="1" cmd="StartEffect effects/death.effect"/>
+	</anim>
+
+	<anim name="attack_1" clip="clips/attack_1.clip" fps="80">
+		<frameevent frame="16" cmd="PlaySoundLinear sounds/attack_1.wav 0 2400 .7"/>
+		<frameevent frame="12" cmd="PlaySoundLinear /heroes/bephelgor/sounds/move_%.wav 0 800 .1"/>
+	</anim>
+
+	<anim name="attack_2" clip="clips/attack_2.clip" fps="80">
+		<frameevent frame="16" cmd="PlaySoundLinear sounds/attack_2.wav 0 2400 .7"/>
+		<frameevent frame="12" cmd="PlaySoundLinear /heroes/bephelgor/sounds/move_%.wav 0 800 .1"/>
+		<frameevent frame="6" cmd="PlaySoundLinear sounds/attack_grunt_%.wav 0 2400 1"/>
+	</anim>
+	
+	<anim name="ability_1" clip="clips/ability_1.clip" fps="30"/>
+
+	<anim name="ability_2" clip="clips/ability_2.clip" fps="30" blendtime="520"/>
+
+	<anim name="ability_3" clip="clips/ability_3.clip" fps="20" blendtime="220">
+		<frameevent frame="16" cmd="PlaySoundLinear ability_03/sounds/cast.wav 0 2400 .8"/>
+		<frameevent frame="23" cmd="StartEffect ability_03/effects/bite.effect"/>
+		<frameevent frame="20" cmd="PlaySoundLinear /shared/sounds/effects/gib_explode.wav 0 1800 1"/>
+	</anim>
+
+	<anim name="ability_4" clip="clips/ability_4.clip" fps="30">
+		<frameevent frame="1" cmd="PlaySoundLinear ability_04/sounds/cast.wav 0 2400 .8"/>
+		<frameevent frame="1" cmd="PlaySoundLinear ability_04/sounds/cast2.wav 0 2400 .6"/>
+	</anim>
+
+	<anim name="knock_1" clip="clips/knock_1.clip" loop="true" loopbackframe="-1"/>
+	
+	<anim name="getup_1" clip="clips/getup_1.clip"/>		
+		
+</model>

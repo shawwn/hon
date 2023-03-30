@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Fade_Ability2_ExpirePet"
+
+	icon="icon.tga"
+	passiveeffect=""
+	revealed="false"
+	sighted="true"
+	ishidden="false"
+	
+	effecttype=""
+>
+	<onframe>
+		<targettype target="this_proxy_entity" type="alive" />
+		<else>
+			<expire />
+		</else>
+	</onframe>
+
+	<onexpired>
+		<kill target="proxy_entity" source="" />
+	</onexpired>
+	
+	<ondeath>
+		<kill target="proxy_entity" source="" />
+	</ondeath>
+	
+	<aura
+		gadget="Gadget_Fade_Ability2"
+		radius="0"
+		targetscheme="self"
+	/> 
+</state>

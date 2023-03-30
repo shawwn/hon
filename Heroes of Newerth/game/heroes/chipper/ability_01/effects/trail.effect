@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="1" deferred="true">
+
+	<definitions>
+		
+		<particlesystem name="system0" space="world" scale=".65">
+
+			<sound
+				soundloop="true"
+				fadein="500"
+				fadeout="300"
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2000"
+				volume="0.45" 
+				sample="../sounds/trail.wav"
+			/>
+
+			<simpleemitter
+				bone="_bone_center"
+				minangle="-90"
+				maxangle="-90"
+				spawnrate="40"
+				minparticlelife="250"
+				maxparticlelife="1000"
+				speed="1000"
+				drag="0.1"
+				gravity="-1"
+				offsetsphere="15"
+				material="/shared/effects/materials/smoke_particle.material"
+			>
+				<particle
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="-150"
+					maxanglespeed="150"
+					turn="1"
+					color=".8"
+					startsize="40"
+					minendscale="6"
+					maxendscale="10"
+					startalpha=".3"
+					midalpha=".3"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_center"
+				spawnrate="150"
+				minparticlelife="250"
+				maxparticlelife="1000"
+				inheritvelocity=".05"
+				position="0 -10 0"
+				material="/shared/effects/materials/smoke_particle.material"
+				minangle="0"
+				maxangle="40"
+				direction="0 0 1"
+				offsetsphere="20 20 5"
+			>
+				<particle
+					angle="-90"
+					minangle="0"
+					maxangle="30"
+					minanglespeed="-55"
+					maxanglespeed="55"
+					startcolor=".7 .4 .1"
+					midcolorpos=".65"
+					midcolor=".7"
+					endcolor=".7"
+					startsize="15"
+					midsize="45"
+					midsizepos=".2"
+					endsize="185"
+					startalpha="1"
+					endalpha="0"
+					turn="true"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_center"
+				spawnrate="40"
+				minparticlelife="200"
+				maxparticlelife="400"
+				inheritvelocity=".05"
+				position="0 -10 0"
+				material="/shared/effects/materials/flame.material"
+				minangle="0"
+				maxangle="40"
+				direction="0 0 1"
+				offsetsphere="15 15 5"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-55"
+					maxanglespeed="55"
+					startcolor="2 2 0"
+					midcolorpos=".2"
+					midcolor=".7 .3 0"
+					endcolor="0"
+					startsize="15"
+					midsize="55"
+					midsizepos=".2"
+					endsize="25"
+				/>
+				<particle
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-55"
+					maxanglespeed="55"
+					startcolor="2 2 0"
+					midcolorpos=".2"
+					midcolor=".7 .15 0"
+					endcolor="0"
+					startsize="45"
+					midsize="55"
+					midsizepos=".2"
+					endsize="25"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_center"
+				spawnrate="30"
+				minparticlelife="200"
+				maxparticlelife="500"
+				inheritvelocity=".05"
+				position="0 -10 0"
+				material="/shared/effects/materials/whitedot.material"
+				minangle="0"
+				maxangle="40"
+				direction="0 0 1"
+				offsetsphere="5"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-55"
+					maxanglespeed="55"
+					startcolor="1 1 .5"
+					midcolorpos=".15"
+					midcolor=".7 .1 0"
+					endcolor="0"
+					startsize="25"
+					endsize="5"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_fx_01"
+				spawnrate="100"
+				drag=".001"
+				particlelife="750"
+				gravity="-1"
+				minspeed="20"
+				maxspeed="120"								
+				direction="0 0 1"
+				offsetsphere="15 15 0"
+				minangle="-40"
+				maxangle="40"
+				material="/shared/effects/materials/spark_10.material"
+				inheritvelocity=".15"				
+			>			
+				<particle
+					startcolor="1 .6 .3"
+					endcolor="0"
+					width="10"
+					height="15"
+					lockup="false"
+					lockright="false"
+					minangle="-360"
+					maxangle="1"
+					minanglespeed="110"
+					maxanglespeed="-110"
+				/>
+			</simpleemitter>
+
+			<twopointtrailemitter
+				bone_a="_bone_fx_03"
+				bone_b="_bone_fx_05"
+				spawnrate="50"
+				particlelife="150"
+				texpostime="250"
+				texposscale="0"
+				texstretchscale="1"
+				material="/shared/effects/materials/swoosh_add.material"
+				subframepose="true"
+			>
+				<particle
+					startcolor="0"
+					midcolor=".5 .2 0"
+					endcolor="0" 
+				/>
+			</twopointtrailemitter>
+			
+			<billboard
+				expirelife="500"
+				bone="_bone_fx_01"
+				material="/shared/effects/materials/whitedot.material"
+				size="120"
+				depthbias="-30"
+				startcolor=".3 .05 0"
+				endcolor="0"
+			/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<wait duration="20000"/>
+	</thread>
+
+</effect>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Bombardier_Ability4"
+	
+	radius="200"
+	
+	lifetime="500"
+	impactdelay="400"
+	
+	maximpactspertarget="1"
+	targetselection="all"
+	targetscheme="enemy_units"
+	destroytrees="true"
+	effecttype="Magic"
+	persist="true"
+	
+	effect="effects/bomb.effect"
+	impacteffect=""
+>
+	<onimpact>
+		<damage effecttype="Magic" amount="200,275,350" />
+	</onimpact>
+	
+	<modifier key="ult_boost" modpriority="100"
+	>
+		<onexpired>
+			<spawnunit name="Gadget_Bombardier_Ability4_Napalm" target="this_position" />
+		</onexpired>
+	</modifier>
+</affector>

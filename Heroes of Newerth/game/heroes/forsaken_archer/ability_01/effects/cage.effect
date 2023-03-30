@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1" name="ability_01">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="0.8">
+
+
+		
+
+			<simpleemitter
+				life="1000"
+				spawnrate="110"
+				count="1"				
+			>
+
+						
+				<particle				
+					
+				>
+					<model			
+						expirelife="500"				
+						startcolor=" 1 1 1"
+						endcolor="0 0 0"
+						model="cage.mdf"
+						anim="idle"
+						scale="0.34"				
+					/>
+
+					
+					<billboard
+						material="/shared/effects/materials/light_rays.material"
+						bone="_bone_center"
+						scale="1"
+						width="50"
+						height="220"
+						startcolor=".2 .4 0"
+						endcolor="0 0 0"
+						position="0 0 156"						
+						lockup="1"
+						expirelife="1000"
+					/>	
+				</particle>
+
+			</simpleemitter>
+	
+			<groundsprite			
+				material="/shared/effects/materials/ring_ground.material"
+				size="42"
+				position="0 0 0"
+				color=".125 .25 0"
+				startalpha="1"	
+				endalpha="0"
+				
+				expirelife="200"			
+			/>	
+
+
+		
+
+			
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

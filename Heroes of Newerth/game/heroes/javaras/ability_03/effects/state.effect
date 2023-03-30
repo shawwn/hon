@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="ability_02_state" deferred="1" useentityeffectscale="1">
+	<definitions>
+		<particlesystem name="system0" space="entity">
+
+<groundsprite
+				material="/shared/effects/materials/magicarmorgs.material"
+				size="80"
+				color=".0 .6 .7"
+				yaw="40"
+				life="300"
+			/>
+			<groundsprite
+				material="/shared/effects/materials/magicarmorgs.material"
+				size="80"
+				color=".0 0.2 .4"
+				yaw="300"
+				expirelife="500"
+			/>
+	
+<simpleemitter
+			life="700"
+			spawnrate="2"
+			particlelife="1400"
+			gravity="-6"
+			speed="0.0"
+			acceleration="0.0"
+			timenudge="0"
+			position="0 0 0"
+			material="/shared/effects/materials/magicarmorgs.material"
+		>
+			<particle
+				startcolor="0 .2 .5"
+				endcolor="0.0 0.0 0.0"
+
+
+				startalpha="1"
+				endalpha="0"
+
+				minangle="180"
+				maxangle="180"
+				minanglespeed="0"
+				maxanglespeed="0"
+
+				startsize="210"
+				midsize="210"
+				endsize="210"
+				
+				lockup="true"
+				pitch="90"
+
+			/>
+		</simpleemitter>
+
+
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

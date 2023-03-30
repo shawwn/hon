@@ -1,0 +1,92 @@
+This is not the same as dota warlock.
+
+Strength: 18/2.5
+Agility: 10/1
+Intelligence: 24/2.7
+
+Armor: 1
+Damage: 22-32
+Range: 600
+Movement Speed: 295
+
+
+
+Ability 1:
+----------
+Cripples target enemy unit. Slowing its movement and attack speed for a period of time.
+Lasts 5 seconds.
+Slows by 30/40/50/60
+
+Cooldown: 15
+Manacost: 75
+Cast Range: 600
+
+
+Ability 2:
+----------
+Deals damage over time to target enemy unit. Deals low dps at start and then increases over time.
+
+Interval: 1 second
+First tick starts at 5 damage and increases by 5 for each tick (5/10/15/20/25/30/35/etc)
+Duration: 8/9/10/11
+
+Cooldown: 15
+Manacost: 175
+Cast Range: 600
+
+
+
+
+Ability 3:
+----------
+This may be an aoe or a single target spell. For now we'll do aoe but there is a good chance we'll want to revert it to a single target spell. Places an effect on target enemy unit for some time. This lowers the targets magic resistance and makes it so that whenever that unit takes damage, a portion of that damage is restored to you as life. 
+
+AOE: 250
+Magic Resistance Reduction: 15/30/45/60%
+Life Return: 25/50/75/100%
+Duration: 10
+Cooldown: 7
+Manacost: 100
+Cast Range: 600
+
+
+Ultimate:
+---------
+Targets an area on the ground. The ground breaks and a big Fire Demon (melee) comes out. This stuns and damages units in the area. This Fire Demon lasts for a limited amount of time. It has immolation (deals fire damage to nearby enemy units) and fire breath (fire wave damage) and has a passive that deals minor dps to each of its attacks (in addition to regular attack damage).
+
+
+Stun Duration: 1 Second 
+Cooldown: 165
+Duration: 60
+Manacost: 200/250/300
+Casting Range: 1200
+AOE: 600
+
+Summoned Unit
+--------------
+Magic Resitance: 50%
+Immolation: 20/30/40dps
+Immolation AOE: 225
+Cannot be converted
+HP: 900/1200/1500
+Regen: 15/20/25
+Attack Damage: 50/100/150
+Armor: 5/7/10
+Bounty: 100/150/200
+XP Bounty: 100
+Vision: 1800-1800
+Movement Speed: 325
+Base Attack Speed: 1.35
+Manabase: 400
+
+DPS per attack: 5/10/15 dps, doesn't start, lasts 3 seconds.
+
+Fire Breath AOE: 250
+Distance: 400
+Damage: 100/150/200
+Cooldown: 6
+Manacost: 175
+
+
+
+Extra notes: Range/Int/Bad. This is your classic evil Warlock style character. He doesn't need and probably shouldn't be based heavily on fire. That is reserved for his ultimate summon. He is more your classic warlock/caster with a special powerhouse summon. 

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_SandWraith_Ability1_Track"
+
+	speed="857.14"
+	gravity="0"
+
+	modelscale="1.5"
+	model="effects/skull.mdf"
+	traileffect="effects/trail.effect"
+	canturn="0"
+	flying="true"
+	flyheight="90"
+	
+	touchradius="120"
+	maxtouchespertarget="1"
+	touchtargetscheme="organic_enemy_units"
+	toucheffecttype="Physical"
+>
+	<onspawn />
+	
+	<onimpact>
+		<combatevent effecttype="AbilityBasedProjectile">
+			<onimpact>
+				<applystate name="State_SandWraith_Ability1_Sticky" target="target_entity" duration="8000" />
+				<spawnaffector name="Affector_SandWraith_Ability1_Sticky" target="target_entity" />
+				<spawnaffector name="Affector_SandWraith_Ability1_VisionSticky" target="target_entity" />
+			</onimpact>
+		</combatevent>
+	</onimpact>
+	
+	<ontouch>
+		<playeffect effect="effects/impact.effect" target="target_entity" source="target_entity" />
+		<damage effecttype="Magic" amount="50,100,150,200" />
+	</ontouch>
+</projectile>

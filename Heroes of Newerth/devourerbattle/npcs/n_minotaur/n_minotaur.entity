@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<neutral
+	name="Neutral_Minotaur"
+	
+	icon="icons/creep.tga"
+	portrait="icons/creep.tga"
+	model="model.mdf"
+	skin=""
+	
+	passiveeffect=""
+	spawneffect=""
+	respawneffect=""
+	selectsound=""
+	orderconfirmedsound=""
+	
+	preglobalscale="1.80"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="64"
+	boundsradius="16"
+	selectionradius="42"
+	targetoffset="0 0 54"
+
+	movespeed="320"
+	turnrate="320"
+
+	maxhealth="1"
+	healthregen="1"
+	maxmana="200"
+	manaregen="0"
+
+	armor="4"
+	magicarmor="0"
+	immunity="TransfigureImmunity"
+
+	cancarryitems="false"
+	inventory0="Ability_Minotaur1"
+	inventory1="Ability_Minotaur2"
+	inventory2=""
+	inventory3=""
+	inventory4=""
+	inventory5=""
+	inventory6=""
+	inventory7=""
+
+	attackduration="1000"
+	attackactiontime="600"
+	attackcooldown="1650"
+	attackdamagemin="65"
+	attackdamagemax="73"
+	attacknumanims="2"
+	attackoffset="0 30 100"
+	attackprojectile=""
+	attackrange="100"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="effects/impact.effect"
+	attacktype="melee"
+	combattype="Neutral"
+
+	aggrorange="300"
+	sightrangeday="800"
+	sightrangenight="800"
+
+	experiencebounty="119"
+	goldbountymin="66"
+	goldbountymax="78"
+	
+	deniablepercent="0.5"
+	
+	corpsetime="15000"
+	corpsefadetime="5000"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+	
+	threateffecttype="NeutralAggro"
+	aggroscheme="neutral_aggro"
+	proximityscheme="neutral_aggro"
+>
+	<onspawn>
+		<areaofeffect
+			targetscheme="all_heroes"
+			effecttype=""
+			ignoreinvulnerable="true"
+			targetselection="all"
+			global="true"
+			maximpactspertarget="1"
+		>
+			<delete target="target_entity" />
+		</areaofeffect>
+		<setscriptvalue name="neutral_spawned" value="1" />
+	</onspawn>
+
+	<modifier key="casual" modpriority="100"
+		goldbountymin="90"
+		goldbountymax="90"
+	/>
+
+	<modifier key="grimmscrossingmod" modpriority="90"
+		attacktargetscheme="player_controlled_units"
+		aggrorange="200"
+	/>
+
+	<modifier key="antigrimmsplayercontrol" modpriority="100"
+		attacktargetscheme="attack"
+	/>
+	
+	<modifier key="neutralsleeping" condition="night" modpriority="110"
+		aggrorange="0"
+	/>
+</neutral>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="rig.max" file="high.model" type="K2" high="high.model" med="med.model" low="low.model" >
+
+	<anim name="idle" clip="clips/default_1.clip" fps="30" loop="true" />
+	
+	<anim name="portrait" clip="clips/portrait_1.clip" loop="true"/>
+	
+	<anim name="taunt_1" clip="clips/taunt_1.clip"/>
+
+	<anim name="bored_1" clip="clips/bored_1.clip"/>
+
+	<anim name="item_1" clip="clips/item_1.clip"/>
+		
+	<anim name="ability_1" clip="clips/ability_1.clip" fps="30" loop="false">
+		<frameevent frame="2" cmd="PlaySoundLinear /shared/sounds/attacks/attack_light_sword_%.wav 0 1800 .55"/>
+		<frameevent frame="2" cmd="PlaySoundLinear /shared/sounds/attacks/attack_medium_%.wav 0 1800 .55"/>
+		<frameevent frame="2" cmd="PlaySoundLinear /heroes/vanya/sounds/attack_%.wav 400 2000 .35"/>	
+		<frameevent frame="1" cmd="PlaySoundLinear ability_01/sounds/attack_grunt.wav 400 2000 .65"/>
+	</anim>
+	
+	<anim name="ability_2" clip="clips/ability_2.clip" fps="30" loop="false">
+		<frameevent frame="2" cmd="PlaySoundLinear /shared/sounds/attacks/attack_light_sword_%.wav 0 1800 .55"/>
+		<frameevent frame="2" cmd="PlaySoundLinear /shared/sounds/attacks/attack_medium_%.wav 0 1800 .55"/>
+	</anim>
+
+	<anim name="ability_3" clip="clips/ability_3.clip" fps="30" loop="false">
+		<frameevent frame="10" cmd="PlaySoundLinear /shared/sounds/attacks/attack_medium_%.wav 0 1800 .55"/>
+	</anim>
+		
+	<anim name="ability_4_attack" clip="clips/ability_4_attack.clip" fps="30" loop="false">
+		<frameevent frame="2" cmd="PlaySoundLinear /shared/sounds/attacks/attack_light_sword_%.wav 0 1800 .55"/>
+		<frameevent frame="2" cmd="PlaySoundLinear /shared/sounds/attacks/attack_medium_%.wav 0 1800 .55"/>
+		<frameevent frame="2" cmd="PlaySoundLinear /heroes/vanya/sounds/attack_%.wav 400 2000 .35"/>
+		<frameevent frame="2" cmd="PlaySoundLinear ability_04/sounds/attack.wav 400 2000 .55"/>
+	</anim>
+
+	<anim name="ability_4_attack2" clip="clips/ability_4_attack2.clip" fps="30" loop="false">
+		<frameevent frame="2" cmd="PlaySoundLinear /shared/sounds/attacks/attack_light_sword_%.wav 0 1800 .55"/>
+		<frameevent frame="2" cmd="PlaySoundLinear /shared/sounds/attacks/attack_medium_%.wav 0 1800 .55"/>
+		<frameevent frame="2" cmd="PlaySoundLinear /heroes/vanya/sounds/attack_%.wav 400 2000 .35"/>
+		<frameevent frame="2" cmd="PlaySoundLinear ability_04/sounds/attack.wav 400 2000 .55"/>
+	</anim>	
+
+	<anim name="ability_4_attack3" clip="clips/ability_4_attack3.clip" fps="30" loop="false">
+		<frameevent frame="2" cmd="PlaySoundLinear /shared/sounds/attacks/attack_light_sword_%.wav 0 1800 .55"/>
+		<frameevent frame="2" cmd="PlaySoundLinear /shared/sounds/attacks/attack_medium_%.wav 0 1800 .55"/>
+		<frameevent frame="2" cmd="PlaySoundLinear /heroes/vanya/sounds/attack_%.wav 400 2000 .35"/>
+		<frameevent frame="2" cmd="PlaySoundLinear ability_04/sounds/attack.wav 400 2000 .55"/>
+		<frameevent frame="1" cmd="PlaySoundLinear sounds/attack_grunt_%.wav 400 2000 .65"/>
+	</anim>	
+
+	<anim name="attack_1" clip="clips/attack_1.clip" fps="30" loop="false" blendtime="200">
+		<frameevent frame="4" cmd="PlaySoundLinear /shared/sounds/attacks/attack_light_sword_%.wav 0 1800 .55"/>
+		<frameevent frame="4" cmd="PlaySoundLinear /shared/sounds/attacks/attack_medium_%.wav 0 1800 .55"/>
+		<frameevent frame="4" cmd="PlaySoundLinear /heroes/vanya/sounds/attack_%.wav 400 2000 .35"/>
+	</anim>	
+
+	<anim name="attack_2" clip="clips/attack_2.clip" fps="30" loop="false" blendtime="200">
+		<frameevent frame="4" cmd="PlaySoundLinear /shared/sounds/attacks/attack_light_sword_%.wav 0 1800 .55"/>
+		<frameevent frame="4" cmd="PlaySoundLinear /shared/sounds/attacks/attack_medium_%.wav 0 1800 .55"/>
+		<frameevent frame="4" cmd="PlaySoundLinear /heroes/vanya/sounds/attack_%.wav 400 2000 .35"/>
+	</anim>
+
+	<anim name="attack_3" clip="clips/attack_3.clip" fps="30" loop="false" blendtime="200">
+		<frameevent frame="4" cmd="PlaySoundLinear /shared/sounds/attacks/attack_light_sword_%.wav 0 1800 .55"/>
+		<frameevent frame="4" cmd="PlaySoundLinear /shared/sounds/attacks/attack_medium_%.wav 0 1800 .55"/>
+		<frameevent frame="4" cmd="PlaySoundLinear /heroes/vanya/sounds/attack_%.wav 400 2000 .35"/>
+		<frameevent frame="3" cmd="PlaySoundLinear sounds/attack_grunt_%.wav 400 2000 .65"/>
+	</anim>
+	
+	<anim name="walk_1" clip="clips/walk_1.clip" fps="33" loop="true">
+		<frameevent frame="1" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="6" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="15" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="21" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="28" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="33" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="42" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="47" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+
+		<frameevent frame="1" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+		<frameevent frame="15" cmd="StartEffect /shared/effects/footstep_l_#GetTerrainType()#.effect"/>
+		<frameevent frame="28" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+		<frameevent frame="42" cmd="StartEffect /shared/effects/footstep_l_#GetTerrainType()#.effect"/>
+	</anim>
+	
+	<anim name="death_1" clip="clips/death_1.clip" fps="30" loop="true" loopbackframe="-1">
+		<frameevent frame="16" cmd="PlaySoundLinear sounds/death.wav 400 2000 .75"/>
+		<frameevent frame="26" cmd="StartEffect /heroes/fade/effects/death/death.effect 0"/>
+	</anim>
+
+	<anim name="knock_1" clip="clips/knock_1.clip" loop="true" loopbackframe="-1"/>
+		
+</model>

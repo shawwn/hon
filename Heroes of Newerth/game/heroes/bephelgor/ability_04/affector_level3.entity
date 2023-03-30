@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Bephelgor_Ability4_Level3"
+
+	radiusstart="50"
+	radiusend="600"
+	
+	innerradiusoffset="100"
+	
+	lifetime="700"
+	maximpactspertarget="1"
+	targetselection="all"
+	targetscheme="enemy_units_notmine"
+	effecttype="Magic"
+	persist="true"
+	impacteffect="effects/impact.effect"
+	effect="effects/level_3.effect"
+>
+	<onimpact>
+		<playeffect effect="effects/impact_level_3.effect" source="target_position" target=""/>
+		<damage effecttype="Magic" amount="300,375,450" />
+		<applystate name="State_Bephelgor_Ability4" duration="4000" />
+	</onimpact>
+</affector>

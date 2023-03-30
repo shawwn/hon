@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Scout_Ability1"
+
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+	
+	stealthtype="hero"
+	fadetime="500"
+	unitwalking="true"
+	movespeedmultiplier="0.25"
+	
+	effecttype="StatusStealth"
+>
+	<oninflict>
+		<forgetattacks />
+		<startfade />
+	</oninflict>
+	
+	<onattackstart>
+		<applystate name="State_Scout_Ability1_Attack" target="source_entity" duration="4000" />
+		<playanim name="strong_attack_1" speed="source_attackspeed" target="source_entity" />
+		<toggleoff name="Ability_Scout1" />
+	</onattackstart>
+	
+	<onattackimpact>
+	</onattackimpact>
+	
+	<onactivatepreimpact>
+		<condition test="not_entity_type Ability_Scout1" target="inflictor_entity" source="inflictor_entity">
+			<condition test="not_entity_type Ability_Scout2" target="inflictor_entity" source="inflictor_entity">
+				<condition test="not_entity_type Ability_Scout2_Detonate" target="inflictor_entity" source="inflictor_entity">
+					<toggleoff name="Ability_Scout1" />
+				</condition>
+			</condition>
+		</condition>
+	</onactivatepreimpact>
+	
+	<onexpired>
+		<toggleoff name="Ability_Scout1" />
+	</onexpired>
+</state>

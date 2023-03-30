@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Rampage_Ability1_Warp"
+	
+	icon="icon.tga"
+	passiveeffect=""
+	ishidden="true"
+
+	stunned="true"
+>
+</state>

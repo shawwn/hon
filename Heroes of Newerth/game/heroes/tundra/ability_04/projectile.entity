@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Tundra_Ability4"
+
+	speed="1000"
+	
+	modelscale="1.0"
+	model="/shared/models/invis.mdf"
+	
+	effectscale="1.0"
+	traileffect=""
+	
+	canturn="false"
+	flying="true"
+	flyheight="10"
+	
+	touchradius="250"
+	touchtargetscheme="organic_enemy_units"
+	toucheffecttype="Magic"
+	
+	maxtouchespertarget="1"
+>
+	<ontouch>
+		<condition test="target_entity eq proxy_entity" />
+		<else>
+			<push force="600" duration="400" perpendicular="true" />
+			<cantarget effecttype="Magic">
+				<applystate name="State_Tundra_Ability4_Slow" duration="2000,3000,4000"/>
+				<damage effecttype="Magic" amount="100,200,300" />
+			</cantarget>
+		</else>
+	</ontouch>
+</projectile>

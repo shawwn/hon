@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1" useentityeffectscale="1">
+	<definitions>
+	
+		<particlesystem name="system0" space="entity" scale="1.5">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".75"
+				sample="../sounds/impact.wav"
+			/>
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".55"
+				sample="/heroes/xalynx/sounds/impact_%.wav"
+			/>
+<!--
+			<model
+				bone="_bone_overhead"
+				model="sword.mdf"
+				anim="overhead_idle"
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="1 1 1"
+				midcolorpos=".5"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".5"
+				scale=".4"
+			>
+			</model>
+
+			<billboard
+				position="0 0 10"
+				bone="_bone_overhead"
+				life="1500"
+				material="/shared/effects/materials/blink.material"
+				startsize="25"
+				midsize="50"
+				endsize="25"
+				startcolor="0 0 0"
+				midcolor="1 .25 0"
+				endcolor="0 0 0"
+				midcolorpos=".1"
+				loop="true"
+				expirelife="300"
+			/>
+			
+			<billboard
+				delay="100"
+				position="0 0 10"
+				bone="_bone_overhead"
+				life="1500"
+				material="/shared/effects/materials/blink.material"
+				startsize="25"
+				midsize="70"
+				endsize="25"
+				yawspeed="45"
+				pitchspeed="45"
+				startcolor="0 0 0"
+				midcolor="1 .25 0"
+				endcolor="0 0 0"
+				midcolorpos=".1"
+				loop="true"
+				expirelife="300"
+			/>
+-->
+			<simpleemitter
+				spawnrate="10"
+				bone="_bone_centerofchest"
+				particlelife="1400"
+				gravity="-3"
+				speed="2"
+				drag=".2"
+				acceleration="1"
+				position="0 0 -1"
+				material="/shared/effects/materials/flames_03.material"
+				offsetsphere="6 6 6"
+				minangle="65"
+				maxangle="135"
+				direction="0 0 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="0"
+					startcolor="1 .5 0"
+					midcolor="1 .5 0"
+					endcolor=".7 0 0"
+					midcolorpos=".1"
+					maxanglespeed="00"
+					startframe="0"
+					endframe="1"
+					startsize="50"
+					midsize="50"
+					endsize="25"
+					midsizepos=".2"
+					startalpha="0"
+					midalpha=".2"
+					endalpha="0"
+					midalphapos=".2"
+					startstickiness="0"
+					endstickiness="0"
+				/>
+			</simpleemitter>
+
+			<template name="smokeyFire">
+				<simpleemitter
+				delay="400"
+					spawnrate="7"
+					bone="{smokeyBone}"
+					particlelife="1500"
+					gravity="-3"
+					speed="2"
+					drag=".2"
+					acceleration="1"
+					position="0 0 -1"
+					material="/shared/effects/materials/flames_03.material"
+					offsetsphere="25 25 25"
+					minangle="65"
+					maxangle="135"
+					direction="0 0 0"
+				>
+					<particle 
+						minangle="0"
+						maxangle="360"
+						minanglespeed="0"
+						startcolor="1 .5 0"
+						midcolor="1 .5 0"
+						endcolor=".7 0 0"
+						midcolorpos=".1"
+						maxanglespeed="00"
+						startframe="0"
+						endframe="1"
+						startsize="40"
+						midsize="40"
+						endsize="10"
+						midsizepos=".2"
+						startalpha="0"
+						midalpha=".3"
+						endalpha="0"
+						midalphapos=".2"
+						startstickiness="0"
+						endstickiness="0"
+					/>
+				</simpleemitter>
+			</template>
+			
+			<instance name="smokeyFire" smokeyBone="_bone_centerofchest" />
+			<instance name="smokeyFire" smokeyBone="_bone_centerofchest" />
+			<instance name="smokeyFire" smokeyBone="_bone_centerofchest" />
+				
+		
+			<template name="fire">
+				<simpleemitter
+				delay="400"
+					bone="{bone}"
+					spawnrate="10"
+					minparticlelife="200"
+					maxparticlelife="400"
+					gravity="-1.0"
+					speed="0.20"
+					drag="2.0"
+					material="/shared/effects/materials/femme_lightning_01.material"
+					offsetsphere="25 25 25"
+					inheritvelocity=".75"
+				>
+					<particle
+						startcolor="0"
+						midcolor="2 .75 0.2"
+						endcolor="0"
+						minangle="0"
+						maxangle="360"
+						minanglespeed="0"
+						maxanglespeed="30"
+						startsize="20"
+						endsize="20"
+					/>
+				</simpleemitter>
+			</template>
+
+			<instance name="fire" bone="_bone_centerofchest" />
+			<instance name="fire" bone="_bone_centerofchest" />
+			<instance name="fire" bone="_bone_centerofchest" />
+
+			<template name="blood">				
+				<simpleemitter
+				delay="100"
+					bone="{bloodyBone}"
+					spawnrate="13"
+					particlelife="850"
+					gravity="-5"
+					speed="10"
+					drag=".01"
+					acceleration="0.0"
+					position="0 0 0"
+					offsetsphere="25 25 25"
+					material="/shared/effects/materials/blood1.material"
+					direction="0 0 -1"
+					offsetdirection="0 0 0"
+					offsetradial="0 0 0"
+				>
+					<particle 
+						minangle="-360"
+						maxangle="360"
+						angle="180"
+						color=".5 .5 .5"
+						startsize="26"
+						midsize="26"
+						minendsize="80"
+						maxendsize="120"
+						startalpha="0"
+						midalpha=".5"
+						endalpha="0"
+						midalphapos=".2"
+					/>
+				</simpleemitter>
+			</template>
+
+			<instance name="blood" bloodyBone="_bone_centerofchest" />
+			<instance name="blood" bloodyBone="_bone_centerofchest" />
+			<instance name="blood" bloodyBone="_bone_centerofchest" />
+
+		</particlesystem>
+		
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		
+	</thread>
+</effect>

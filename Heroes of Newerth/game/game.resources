@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resourcelist>
+	<cursor name="arrow" file="/core/cursors/arrow.cursor" />
+	<cursor name="arrow_ally" file="/core/cursors/arrow_ally.cursor" />
+	<cursor name="arrow_enemy" file="/core/cursors/arrow_enemy.cursor" />
+	
+	<cursor name="ping_ally" file="/core/cursors/ping_ally.cursor" />
+	<cursor name="ping_enemy" file="/core/cursors/ping_enemy.cursor" />
+	
+	<cursor name="action_valid" file="/core/cursors/action_valid.cursor" />
+	<cursor name="action_invalid" file="/core/cursors/action_invalid.cursor" />
+	<cursor name="action_ally_valid" file="/core/cursors/action_ally_valid.cursor" />
+	<cursor name="action_ally_invalid" file="/core/cursors/action_ally_invalid.cursor" />
+	<cursor name="action_enemy_valid" file="/core/cursors/action_enemy_valid.cursor" />
+	<cursor name="action_enemy_invalid" file="/core/cursors/action_enemy_invalid.cursor" />
+		
+	<cursor name="scroll_down" file="/core/cursors/scroll_down.cursor" />
+	<cursor name="scroll_left" file="/core/cursors/scroll_left.cursor" />
+	<cursor name="scroll_left_down" file="/core/cursors/scroll_left_down.cursor" />
+	<cursor name="scroll_left_up" file="/core/cursors/scroll_left_up.cursor" />
+	<cursor name="scroll_right" file="/core/cursors/scroll_right.cursor" />
+	<cursor name="scroll_right_down" file="/core/cursors/scroll_right_down.cursor" />
+	<cursor name="scroll_right_up" file="/core/cursors/scroll_right_up.cursor" />
+	<cursor name="scroll_up" file="/core/cursors/scroll_up.cursor" />
+	
+	<cursor name="shop" file="/core/cursors/shop.cursor" />
+</resourcelist>

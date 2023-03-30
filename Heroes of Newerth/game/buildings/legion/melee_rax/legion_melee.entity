@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<building
+	name="Building_LegionMeleeBarracks"
+	
+	
+	
+	icon="icon.tga"
+	portrait=""
+	model="model.mdf"
+	mapicon="/shared/icons/minimap_melee.tga"
+	mapiconsize="0.03"
+	skin=""
+	
+	passiveeffect=""
+	destroyedsound=""
+	lowhealtheffect=""
+	lowhealthsound=""
+	selectsound=""
+	
+	preglobalscale="1.8"
+	modelscale="1.0"
+	effectscale="1.62"
+	boundsheight="256"
+	boundsradius="120"
+	selectionradius="130"
+	targetoffset="0 0 0"
+	
+	immunity="DisableImmunity"
+
+	maxhealth="1500"
+	healthregen="2.5"
+
+	armor="15"
+	magicarmor="0"
+
+	attacktype="none"
+	combattype="Structure"
+
+	sightrangeday="900"
+	sightrangenight="600"
+	
+	goldbountymin="352"
+	goldbountymax="370"
+	noheroarmorreduction="true"
+	
+	unittype="MeleeRax"
+	israx="true"
+>
+	<modifier key="casual" modpriority="100"
+	goldbountymin="542"
+	goldbountymax="542"
+	/>
+</building>

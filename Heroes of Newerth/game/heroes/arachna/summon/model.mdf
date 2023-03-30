@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="rig.max" file="model.model" type="K2"  >
+
+	<anim name="idle" clip="clips/default_1.clip" loop="true"/>
+
+	<anim name="walk_1" clip="clips/walk_1.clip" fps="66" loop="true">
+		<frameevent frame="1" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+		<frameevent frame="7" cmd="StartEffect /shared/effects/footstep_l_#GetTerrainType()#.effect"/>
+		<frameevent frame="12" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+	</anim>
+	
+	<anim name="attack_1" clip="clips/attack_1.clip" fps="30">
+		<frameevent frame="6" cmd="PlaySoundLinear /shared/sounds/attacks/attack_light_%.wav 0 1800 .4"/>
+		<frameevent frame="1" cmd="PlaySoundLinear sounds/attack_grunt_%.wav 0 1800 .3"/>
+	</anim>
+
+	<anim name="death_1" clip="clips/walk_1.clip" fps="20" loop="true" blendtime="100" loopbackframe="-1">
+		<frameevent frame="1" cmd="PlaySoundLinear /shared/sounds/effects/gib_explode.wav 0 1800 1"/>
+		<frameevent frame="1" cmd="StartEffect effects/death.effect"/>
+	</anim>	
+	
+	<anim name="knock_1" clip="clips/knock_1.clip" loop="true" loopbackframe="-1"/>
+	
+	<anim name="getup_1" clip="clips/getup_1.clip"/>
+			
+</model>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_GoodTowerAttack"
+
+	speed="800"
+
+	modelscale="2.0"
+	model="model.mdf"
+
+	effectscale="2.0"
+	impacteffect="effects/projectile_impact.effect"
+	traileffect="effects/projectile.effect"
+	
+	canturn="false"
+>
+</projectile>

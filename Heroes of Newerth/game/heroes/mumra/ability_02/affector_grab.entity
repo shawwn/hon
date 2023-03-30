@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Mumra_Ability2_Grab"
+
+	radius="230"
+
+	targetselection="all"
+	targetscheme="other_heroes"
+>
+	<onimpact>
+		<teleport source="target_entity" target="proxy_position" interpolate="true" />
+	</onimpact>
+</affector>

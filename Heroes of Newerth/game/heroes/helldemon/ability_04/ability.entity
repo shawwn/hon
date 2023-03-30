@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_HellDemon4"
+
+	icon="icon.tga"
+	
+	anim="ability_4"
+	casttime="1000"
+	castactiontime="500"
+	casteffect="effects/cast.effect"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_entity"
+	targetscheme="enemy_nonboss_units"
+	casteffecttype="SuperiorMagic"
+
+	manacost="175,340,500"
+	cooldowntime="100000,85000,70000"
+	
+	range="600"
+>
+	<onimpact>
+		<!-- Apply stun -->
+		<applystate name="State_Stunned" duration="1500"/>
+		
+		<!-- Math to figure out damage done, including magic resistance -->
+		<setvar0 a="target_maxhealth" b="target_health" op="sub" />
+		<setvar1 a="var0" b=".4,.6,.9" op="mult" />
+		<calculatedamage amount="var1" effecttype="Magic" />
+		<setvar2 a="result" />
+
+		<!-- Deal damage, doing an extra effect if the game things the target should have died -->
+		<popup name="execution" a="var2" source="target_entity" target="target_entity" />	
+		<cantarget effecttype="Magic">
+			<damage effecttype="Magic" amount="1" b="var1" op="mult" target="target_entity" />
+			<condition test="target_health le var2">
+				<playeffect effect="effects/impact_death.effect" source="target_entity" target="" />
+			</condition>
+			<else>
+				<playeffect effect="effects/impact.effect" source="target_entity" target="" />
+			</else>
+		</cantarget>
+	</onimpact>
+	
+	<modifier key="ult_boost" modpriority="100"
+		displayname="true"
+		manacost="150,340,500"
+		cooldowntime="70000"
+	>
+		<onimpact>
+			<!-- Apply stun -->
+			<applystate name="State_Stunned" duration="1500"/>
+			
+			<!-- Math to figure out damage done, including magic resistance. Boosted damage! -->
+			<setvar0 a="target_maxhealth" b="target_health" op="sub" />
+			<setvar1 a="var0" b=".6,.9,1.2" op="mult" />
+			<calculatedamage amount="var1" effecttype="Magic" />
+			<setvar2 a="result" />
+
+			<!-- Deal damage, doing an extra effect if the game things the target should have died -->
+			<popup name="execution" a="var2" source="target_entity" target="target_entity" />	
+			<cantarget effecttype="Magic">
+				<playeffect effect="effects/impact_death.effect" source="target_entity" target="" />
+				<damage effecttype="Magic" amount="1" b="var1" op="mult" target="target_entity" />
+				<condition test="target_health le var2">
+					<playeffect effect="effects/impact_death.effect" source="target_entity" target="" />
+				</condition>
+				<else>
+					<playeffect effect="effects/impact.effect" source="target_entity" target="" />
+				</else>
+			</cantarget>
+		</onimpact>
+	</modifier>
+</ability>

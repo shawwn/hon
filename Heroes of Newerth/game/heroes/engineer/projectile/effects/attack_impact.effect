@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" deferred="true" useentityeffectscale="1">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="0.6">
+
+		<simpleemitter
+			delay="0"
+			count="5"
+			spawnrate="120"
+			minparticelife="0"
+			maxparticlelife="1600"
+			gravity="1.0"
+			speed="10.0"
+			position="0 10 0"
+			direction="0 1 0"
+			offsetsphere="12"
+			particledirectionalspace="local"	
+		>
+			<particle
+			>
+				<billboard
+					life="100"
+					position="42 172 100"
+					material="/shared/effects/materials/flash.material"
+					lockup="1"
+					lockright="1"
+					pitch="90"
+					param=".012"
+					maxstartsize="65"
+					maxendsize="180"
+					directionalspace="local"
+				/>
+					
+			</particle>		
+
+		</simpleemitter>	
+	
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+</effect>
+
+

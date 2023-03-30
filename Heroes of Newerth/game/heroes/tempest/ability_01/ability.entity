@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Tempest1"
+
+	
+	
+	icon="icon.tga"
+	
+	anim="ability_1"
+	casttime="1000"
+	castactiontime="300"
+	casteffect="effects/cast.effect"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_entity"
+	targetscheme="enemy_units"
+	casteffecttype="Magic"
+	
+	manacost="110,130,150,160"
+	cooldowntime="15000"
+	
+	range="600"
+
+>
+	<onimpact >
+		<spawnaffector name="Affector_Tempest_Ability1" target="target_entity" />
+	
+		
+	</onimpact>
+</ability>

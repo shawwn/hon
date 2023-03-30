@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Bubbles_Ability1"
+
+	icon="icon.tga"
+	passiveeffect=""
+	displaylevel="true"
+	ishidden="true"
+	modifierkey="Bubblesorb"
+	modifierkey2="bubbles_noshell"
+	effecttype=""
+>
+	<onexpired>
+		<playanim name="idle" target="source_entity"/>
+	</onexpired>
+</state>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<material>
+	<parameters vDiffuseColor="1.7 1.8 2" fSpecularLevel="1.0000" fGlossiness="256" fOpacity="1.0000" fReflect="0.5000" />
+	<phase name="shadow" vs="mesh_shadow" ps="mesh_shadow" srcblend="BLEND_ONE" dstblend="BLEND_ZERO" translucent="false" cull="CULL_BACK" />
+	<phase name="depth" vs="mesh_depth" ps="mesh_depth" srcblend="BLEND_ONE" dstblend="BLEND_ZERO" translucent="false" cull="CULL_BACK" />
+	<phase name="color" vs="mesh_color_scene" ps="mesh_color_ice2_norefract" srcblend="BLEND_SRC_ALPHA" dstblend="BLEND_ONE_MINUS_SRC_ALPHA" translucent="true" cull="CULL_BACK" layer="1" depthwrite="true">
+		<sampler name="diffuse" texture="../color.tga" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="1.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false" filtering="true" border="false" />		
+		<sampler name="normalmap" texture="../normal.tga" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="1.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false" filtering="true" border="false" />		
+	</phase>
+	<phase name="refract" vs="mesh_color_scene" ps="mesh_color_ice2" srcblend="BLEND_ONE" dstblend="BLEND_ZERO" translucent="true" cull="CULL_BACK" layer="0" refractive="true" depthwrite="true">
+		<sampler name="diffuse" texture="../color.tga" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="1.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false" filtering="true" border="false" />		
+		<sampler name="normalmap" texture="../normal.tga" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="1.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false" filtering="true" border="false" />		
+	</phase>
+</material>

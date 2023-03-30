@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="rig.max" file="explode.model" type="K2" >
+	<anim name="idle" clip="explode.clip" loop="0" fps="45"/>
+</model>

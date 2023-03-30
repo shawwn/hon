@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1.25">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2200"
+				volume=".8" 
+				sample="/heroes/rocky/ability_04/sounds/ability_04.wav"
+			/>
+		
+		
+			<simpleemitter
+				spawnrate="1000"
+				count="1"
+				particlelife="2000"
+			>
+				<particle>
+					<debris
+						position="0 0 85"
+						life="2000"
+						model="/heroes/rocky/effects/death/death.mdf"
+						yaw="0"
+						anim="idle"
+						minspeed="200"
+						maxspeed="300"
+						minrotationspeed="200.0"
+						maxrotationspeed="250.0"
+						direction="0 0 10"
+						gravity="50.0"
+						scale=".75"
+						minangle="0"
+						maxangle="60"
+						collide="true"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0.0"
+						midalphapos="0.5"
+						startcolor=".7 .7 .7"
+						bounce="0.35"
+						reflect="0.5"
+						animpose="true"
+						param0="1.0"
+					>
+					
+						<template name="trails">
+							<simpleemitter
+								bone="{boner}"
+								position="0 0 0"
+								spawnrate="2"
+								life="600"
+								minparticlelife="750"
+								maxparticlelife="1250"
+								gravity="0"
+								offsetsphere="15 15 15"
+								drag="0"
+								acceleration="0"
+								direction="0 0 0"
+								material="/shared/effects/materials/dust_smoke_10.material"
+							>
+								<particle 
+									startcolor=".65 .65 .65"
+									midcolor=".65 .65 .65"
+									endcolor=".65 .65 .65"
+									midcolorpos="0.5"
+									minangle="0"
+									maxangle="360"
+									startsize="75"
+									midsize="50"
+									endsize="0"
+									startalpha="0"
+									midalpha=".2"
+									endalpha="0"
+									midalphapos=".2"
+									anchor=".25"
+								/>
+							</simpleemitter>
+						</template>
+						
+						<instance name="trails" boner="Object13"/>
+						<instance name="trails" boner="Object14"/>
+						<instance name="trails" boner="Object15"/>
+						<instance name="trails" boner="Object05"/>
+						<instance name="trails" boner="Object01"/>
+						<instance name="trails" boner="Object02"/>
+						<instance name="trails" boner="Object12"/>
+
+					</debris>
+				</particle>
+			</simpleemitter>
+			
+			<simpleemitter
+				count="50"
+				position="0 0 120"
+				spawnrate="500"
+				gravity="20"
+				minspeed="25"
+				maxspeed="100"
+				drag="0.15"
+				direction="0 0 1"
+				minparticlelife="750"
+				maxparticlelife="1000"
+				offsetsphere="65 65 75"
+				material="/shared/effects/materials/grass_01.material"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					color="1 1 1"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".2"
+					startsize="25"
+					endsize="50"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				count="20"
+				position="0 0 100"
+				spawnrate="500"
+				speed="20"
+				drag="0.15"
+				direction="0 0 1"
+				minparticlelife="1000"
+				maxparticlelife="1500"
+				offsetsphere="75 75 0"
+				gravity="1"
+				material="/shared/effects/materials/dust_smoke_10.material"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					color=".65"
+					startalpha="0"
+					midalpha=".5"
+					endalpha="0"
+					midalphapos=".2"
+					startsize="100"
+					endsize="150"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				delay="100"
+				bone="Object03"
+				position="0 0 0"
+				life="400"
+				spawnrate="500"
+				speed="20"
+				drag="0.15"
+				direction="0 0 1"
+				minparticlelife="1000"
+				maxparticlelife="1500"
+				offsetsphere="30 30 0"
+				count="20"
+				depthbias="-100"
+				gravity="1"
+				material="/shared/effects/materials/dust_smoke_10.material"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					color=".65"
+					startalpha="0"
+					midalpha=".2"
+					endalpha="0"
+					midalphapos=".2"
+					startsize="50"
+					endsize="75"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_fx_02"
+				position="0 0 25"
+				life="400"
+				spawnrate="500"
+				speed="20"
+				drag="0.15"
+				direction="0 0 1"
+				minparticlelife="1000"
+				maxparticlelife="1500"
+				offsetsphere="30 30 30"
+				count="20"
+				depthbias="-100"
+				gravity="1"
+				material="/shared/effects/materials/dust_smoke_10.material"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					color=".65"
+					startalpha="0"
+					midalpha=".3"
+					endalpha="0"
+					midalphapos=".2"
+					startsize="75"
+					endsize="100"
+				/>
+			</simpleemitter>
+
+
+		
+		<simpleemitter
+			delay="000"
+			position="0 -50 0"
+			life="1000"
+			spawnrate="15"
+			speed="20"
+			drag="0.15"
+			direction="0 0 1"
+			minparticlelife="1000"
+			maxparticlelife="1500"
+			offsetsphere="35 35 30"
+			count="15"
+			depthbias="-100"
+			gravity="-15"
+			material="/shared/effects/materials/dust_smoke_10.material"
+		>
+			<particle
+				minangle="0"
+				maxangle="360"
+				color=".65"
+				startalpha="0"
+				midalpha=".2"
+				endalpha="0"
+				midalphapos=".2"
+				startsize="150"
+				endsize="250"
+			/>
+		</simpleemitter>
+	
+
+	
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->

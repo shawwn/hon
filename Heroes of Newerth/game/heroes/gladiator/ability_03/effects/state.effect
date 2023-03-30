@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" useentityeffectscale="1">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+		
+			<groundsprite
+				expirelife="500"
+				material="/shared/effects/materials/spartan_helmet.material"
+				size="45"
+				color="1.0 1.0 1.0"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos="0.05"
+			/>
+		
+			<template name="trails">
+				<twopointtrailemitter
+					expirelife="500"
+					bone_a="{bone_a}"
+					bone_b="{bone_b}"
+					spawnrate="100"
+					particlelife="500"
+					texpostime="500"
+					texposscale="0"
+					texstretchscale="1.0"
+					material="/shared/effects/materials/swoosh_add.material"
+					subframepos="true"
+				>
+					<particle
+						startcolor=".5 .25 0"
+						endcolor="0"
+					/>
+				</twopointtrailemitter>
+			</template>
+			
+			<instance name="trails" bone_a="Bip01 L Clavicle" bone_b="Bip01 L Hand"/>
+			<instance name="trails" bone_a="Bip01 R Clavicle" bone_b="Bip01 R Hand"/>
+			<instance name="trails" bone_a="Bip01 R Foot" bone_b="Bip01 R Thigh"/>
+			<instance name="trails" bone_a="Bip01 L Foot" bone_b="Bip01 L Thigh"/>
+			<instance name="trails" bone_a="Bip01 Pelvis" bone_b="Bip01 Head"/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

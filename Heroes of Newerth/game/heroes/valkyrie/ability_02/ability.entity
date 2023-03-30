@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Valkyrie2"
+
+	icon="icon.tga"
+	
+	anim="ability_2"
+	casttime="1330"
+	castactiontime="500"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_position"
+	targetradius="80"
+	casteffecttype="Magic"
+	targetscheme="organic_enemy_units"
+	casteffect="effects/cast.effect"
+	
+	manacost="100"
+	cooldowntime="25000"
+
+	range="3000"
+	forcerange="3000"
+	allowoutofboundscast="true"
+>
+	<onimpact>
+		<spawnunit name="Gadget_Valkyrie_Ability2_Reveal" count="1" target="source_position" pushentity="true" />
+		<spawnprojectile name="Projectile_Valkyrie_Ability2" source="source_entity" target="target_position" bind="stack_entity" proxy="stack_entity" offset="0 140 0" />
+	</onimpact>
+</ability>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Electrician_Ability2"
+
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+	
+	effecttype=""
+>
+	<onframe />
+	
+	<aura state="State_Electrician_Ability2_Areadamage" radius="300" targetscheme="enemy_units" />
+	
+	<onattackedpostimpact>
+		<playeffect effect="effects/impact.effect" source="source_entity"/>
+	</onattackedpostimpact>
+	
+	<ondamaged>
+		<setvar0 a="source_damage" b="0.5" op="mult" />
+		<condition test="var0 ge accumulator">
+			<evaluate a="var0" b="accumulator" op="sub" />
+			<evaluate a="result" b="var0" op="add" />
+			<changedamage b="result" op="min" />
+			<expire />
+		</condition>
+		<else>
+			<changedamage b="0.5" op="mult" />
+			<evaluate a="accumulator" b="var0" op="sub" />
+			<setaccumulator value="result" />
+		</else>
+	</ondamaged>
+	
+	<onexpired>
+		<playeffect effect="effects/state_expire.effect" source="source_entity"/>
+	</onexpired>
+</state>

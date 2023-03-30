@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_ForsakenArcher_Ability4"
+
+
+	radiusstart="175"
+	radiusend="175"
+	speed="1300"
+	
+	lifetime="1000"
+	maximpactspertarget="1"
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Magic"
+	persist="true"
+	effect="effects/ability_04.effect"
+	impacteffect="effects/ability_04_impact.effect"
+	
+>
+	<onimpact>
+		<condition test="param eq 0">
+		</condition>
+		<else>
+			<damage effecttype="Magic" amount="75,150,225" b="param" op="mult"/>
+			<setparam a="param" b=".1" op="sub" />
+		</else>
+	</onimpact>
+</affector>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" useentityeffectscale="true">
+
+	<definitions>
+	
+		
+
+		<particlesystem name="system0" space="world" scale="1">
+
+			<simpleemitter
+				position="0 0 0"
+				count="1"
+				spawnrate="1000"
+				expirelife="500"
+         	>
+				<particle>
+					<model
+						position="0 0 0"
+						expirelife="500"
+						model="/shared/effects/entangle/vines.mdf"
+						anim="idle"
+						scale="4.5"
+						color=".25 .15 .05"
+						startalpha=".75"
+						endalpha="0"
+						midalphapos=".8"
+						pitch="0"
+					/>
+				</particle>
+			</simpleemitter>
+
+			
+		</particlesystem>
+
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+		<waitfordeath instance="instance0"/>
+	</thread>
+
+</effect>

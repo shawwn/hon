@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Maliken_Ability1"
+
+	
+	
+	icon="icon.tga"
+	passiveeffect=""
+	displaylevel="true"
+	ishidden="true"
+	modifierkey="malikenswordthrow"
+	effecttype=""
+>
+
+</state>

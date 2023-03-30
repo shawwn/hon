@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Scout4"
+
+	icon="icon.tga"
+	statuseffecttooltip="State_Scout_Ability4_Slow"
+	
+	anim="ability_4channel"
+	casttime="300"
+	castactiontime="300"
+	channeltime="2250,1750,1250"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_entity"
+	casteffecttype="SuperiorMagic"
+	targetscheme="nonboss_visible_enemy_units"
+	ischanneling="true"
+	deferchannelcost="true"
+	deferchannelimpact="true"
+	
+	manacost="125,175,250"
+	cooldowntime="50000,40000,30000"
+	
+	range="1500,2000,2500"
+>
+	<onchannelstart>
+		<applystate name="State_Scout_Ability4" target="target_entity" duration="2250,1750,1250" />
+		<applystate name="Self_State_Scout_Ability4"  target="source_entity" ischannel="true"/>
+	</onchannelstart>
+	
+	<onchannelend>
+		<spawnprojectile name="Projectile_Scout_Ability4" source="source_entity" offset="0 0 80" target="target_entity" noresponse="true" />
+		<playeffect effect="effects/fire.effect" source="source_entity"/>
+		<expirestate name="State_Scout_Ability1" target="source_entity" /> 
+	</onchannelend>
+	
+	<onimpact />
+</ability>

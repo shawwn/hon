@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Magmar_Ability1_Self"
+	
+	icon="icon.tga"
+	
+	passiveeffect="effects/state.effect"
+	silenced="true"
+	perplexed="true"
+	immobilized="true"
+	disarmed="true"
+	stunned="true"
+	invulnerable="true"
+>
+	<onexpired>
+		<playanim name="emerge" target="source_entity" />
+		<playeffect effect="effects/steam.effect" target="source_entity" occlude="true"/>
+	</onexpired>
+</state>

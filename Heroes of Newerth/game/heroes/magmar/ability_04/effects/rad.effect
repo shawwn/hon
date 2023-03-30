@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1" name="ability_01_impact">
+	<definitions>
+		<particlesystem name="system0" space="world"  scale="1">
+		
+			<sound
+				linearfalloff="true"
+				falloffstart="1000"
+				falloffend="2000" 
+				volume=".7" 
+				sample="../sounds/cast.wav"
+			/>
+
+			<sound
+				linearfalloff="true"
+				falloffstart="400"
+				falloffend="1800" 
+				volume="1" 
+				sample="../sounds/cast2.wav"
+			/>
+
+			<sound
+				linearfalloff="true"
+				falloffstart="1000"
+				falloffend="2000" 
+				volume=".6" 
+				sample="/heroes/rocky/ability_01/sounds/impact_%.wav"
+			/>	
+
+
+			<sound
+				soundloop="true"
+				fadein="100"
+				fadeout="2000"
+				linearfalloff="true"
+				falloffstart="1000"
+				falloffend="2000" 
+				volume=".4" 
+				life="3000"
+				sample="/heroes/magmar/ability_02/sounds/state.wav"
+			/>
+	
+
+			<simpleemitter
+				spawnrate="3"
+				count="3"
+				anchor="1"
+				timenudge="333"
+			>
+				<particle
+					particlelife="3000"
+				>
+				<groundsprite
+					delay="0"					
+					life="800"
+					color="1.0 1.0 1.0"
+					startalpha="0"					
+					midalpha=".5"
+					endalpha="0.0"
+					midalphapos="0.3"					
+					startsize="0"
+					endsize="448"			
+					material="/shared/effects/materials/pulse_ground.material"			
+				/>	
+	
+				<groundsprite
+					delay="0"
+					life="1000"
+					loop="false"			
+					material="/shared/effects/materials/coals_add.material"
+					startsize="10"
+					midsize="140"
+					endsize="140"
+					midsizepos=".2"
+					maxyaw="360"
+					startcolor="2 .5 0"
+					endcolor="0 0 0"
+				/>				
+				
+	
+				<model
+					model="rupt.mdf"
+					anim="idle"
+					minscale="0.6"
+					maxscale="1.9"
+					life="3500"
+					startalpha="1"				
+					endalpha="0"
+					minyaw="-360"
+					maxyaw="360"
+				>
+				</model>	
+				
+				</particle>
+			</simpleemitter>	
+
+			
+			<simpleemitter
+				delay="1000"
+				spawnrate="3"
+				count="3"
+				anchor="1"
+				timenudge="333"
+			>
+				<particle
+					particlelife="3000"
+				>
+				<groundsprite
+					delay="0"					
+					life="800"
+					color="1.0 1.0 1.0"
+					startalpha="0"					
+					midalpha=".4"
+					endalpha="0.0"
+					midalphapos="0.3"					
+					startsize="0"
+					endsize="548"			
+					material="/shared/effects/materials/pulse_ground.material"			
+				/>	
+				
+	
+				<groundsprite
+					delay="0"
+					life="1000"
+					loop="false"			
+					material="/shared/effects/materials/coals_add.material"
+					startsize="10"
+					midsize="140"
+					endsize="140"
+					midsizepos=".2"
+					maxyaw="360"
+					startcolor="2 .5 0"
+					endcolor="0 0 0"
+				/>				
+				
+	
+				<model
+					model="rupt.mdf"
+					anim="idle"
+					minscale="0.6"
+					maxscale="1.9"
+					life="3500"
+					startalpha="1"				
+					endalpha="0"
+					minyaw="-360"
+					maxyaw="360"
+					
+				>
+				</model>	
+	
+				
+				</particle>
+			</simpleemitter>
+
+
+			<simpleemitter
+				delay="2000"
+				spawnrate="3"
+				count="3"
+				anchor="1"
+				timenudge="333"
+			>
+				<particle
+					particlelife="3000"
+				>
+				<groundsprite
+					delay="0"					
+					life="800"
+					color="1.0 1.0 1.0"
+					startalpha="0"					
+					midalpha=".3"
+					endalpha="0.0"
+					midalphapos="0.3"					
+					startsize="0"
+					endsize="848"			
+					material="/shared/effects/materials/pulse_ground.material"			
+				/>	
+	
+	
+				<groundsprite
+					delay="0"
+					life="1000"
+					loop="false"			
+					material="/shared/effects/materials/coals_add.material"
+					startsize="10"
+					midsize="140"
+					endsize="140"
+					midsizepos=".2"
+					maxyaw="360"
+					startcolor="2 .5 0"
+					endcolor="0 0 0"
+				/>
+	
+				<model
+					model="rupt.mdf"
+					anim="idle"
+					minscale="0.6"
+					maxscale="1.9"
+					life="3500"
+					startalpha="1"				
+					endalpha="0"
+					minyaw="-360"
+					maxyaw="360"
+				>
+				</model>
+				
+				</particle>
+			</simpleemitter>				
+			
+
+			<simpleemitter
+				life="3334"
+				spawnrate="3"
+				count="3"
+				anchor="1"	
+				timenudge="333"
+			>
+				<particle
+					particlelife="3000"
+				>
+					<billboard
+					
+						name="refract"
+						life="700"
+						color="1.0 1.0 1.0"
+						startalpha="1.0"
+						midalpha="1.0"
+						endalpha="0.0"
+						midalphapos="0.75"
+						startparam=".05"
+						endparam="0.0"
+						startsize="88"
+						endsize="1268"
+						depthbias="-100"
+						position="0 0 0"
+						material="/shared/effects/materials/refract_swell.material"
+						lockup="true"
+						pitch="90"				
+					/>					
+				</particle>
+			</simpleemitter>
+			
+			<simpleemitter
+				delay="1000"
+				life="3334"
+				spawnrate="3"
+				count="3"
+				anchor="1"	
+				timenudge="333"
+			>
+				<particle
+					particlelife="3000"
+				>
+					<billboard
+					
+						name="refract"
+						life="700"
+						color="1.0 1.0 1.0"
+						startalpha="1.0"
+						midalpha="1.0"
+						endalpha="0.0"
+						midalphapos="0.75"
+						startparam=".05"
+						endparam="0.0"
+						startsize="88"
+						endsize="1568"
+						depthbias="-100"
+						position="0 0 0"
+						material="/shared/effects/materials/refract_swell.material"
+						lockup="true"
+						pitch="90"				
+					/>					
+				</particle>
+			</simpleemitter>
+			
+			<simpleemitter
+				delay="2000"
+				life="3334"
+				spawnrate="3"
+				count="3"
+				anchor="1"	
+				timenudge="333"
+			>
+				<particle
+					particlelife="3000"
+				>
+					<billboard
+					
+						name="refract"
+						life="700"
+						color="1.0 1.0 1.0"
+						startalpha="1.0"
+						midalpha="1.0"
+						endalpha="0.0"
+						midalphapos="0.75"
+						startparam=".05"
+						endparam="0.0"
+						startsize="88"
+						endsize="1868"
+						depthbias="-100"
+						position="0 0 0"
+						material="/shared/effects/materials/refract_swell.material"
+						lockup="true"
+						pitch="90"				
+					/>					
+				</particle>
+			</simpleemitter>			
+
+			
+			<terrainemitter	
+				life="2000"
+				delay="0"
+				spawnrate="8"
+				particlelife="10000"
+				startrange="400"
+				endrange="400"
+				
+			>
+
+				<particle>
+				
+				
+					<simpleemitter
+						count="41"
+						spawnrate="40"
+						particlelife="600"
+						gravity="-20"
+						speed="10"
+						drag=".003"
+						acceleration="00"
+						position="0 0 0"
+						material="/shared/effects/materials/flame.material"
+						offsetsphere="10 10 0"
+						minangle="0"
+						maxangle="0"
+						direction="0 0 0"
+					>
+						<particle 
+							minangle="0"
+							maxangle="180"
+							minanglespeed="50"
+							color=".5 .2 0"
+							
+							midcolorpos="1"
+							maxanglespeed="0"
+							startsize="10"
+							midsize="30"
+							endsize="10"
+							startalpha=".1"
+							midalpha=".3"
+							endalpha="0"
+							startanchor="1"
+							endanchor=".5"
+						/>
+					</simpleemitter>	
+					
+					
+					
+					<model
+						position="0 0 0"
+						life="1000"
+						model="../../ability_01/effects/model.mdf"
+						anim="idle"
+						startscale="1"
+						midscale="1"
+						endscale="1"
+						midscalepos=".3"					
+						startcolor="1 1 1"
+						midcolor="1 .5 .3"
+						endcolor="0 0 0"	
+							
+						
+						startalpha="1"					
+						midalpha="1"
+						endalpha="0"
+						
+						
+					/>					
+
+					<simpleemitter
+						count="1"
+						spawnrate="5"
+						particlelife="1800"
+						gravity="0"
+						speed="10"
+						drag=".003"
+						acceleration="00"
+						
+						material="/shared/effects/materials/whitedot.material"
+						offsetsphere="10 10 0"
+						minangle="0"
+						maxangle="0"
+						direction="0 0 0"
+						position="0 0 10"
+					>
+						<particle 
+							minangle="0"
+							maxangle="180"
+							minanglespeed="50"
+							startcolor=".5 .2 0"
+							endcolor="0 0 0"
+							
+							midcolorpos="1"
+							maxanglespeed="0"
+							startsize="10"
+							midsize="40"
+							endsize="100"
+							startalpha=".1"
+							midalpha=".3"
+							endalpha="0"
+							startanchor="1"
+							endanchor=".5"
+							
+							lockup="1"
+							lockright="1"
+							pitch="90"
+							
+						/>
+					</simpleemitter>						
+					
+					
+					<groundsprite
+						life="1200"							
+						material="/shared/effects/materials/crack_2_ground.material"				
+						
+						minsize="40"
+						maxsize="82"					
+						minyaw="000"
+						maxyaw="0"
+						midcolor="1 1 .5"
+								
+						minangle="55"
+						maxangle="55"				
+						angles="0 0 0"
+						
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"
+					/>						
+			
+
+					
+
+
+					<simpleemitter
+						delay="100"
+						life="1000"
+						startparticlecolor="1"
+						endparticlecolor="0"
+						spawnrate="4"
+						particlelife="2000"
+						
+						speed="180"
+						count="30"
+						drag="0.02"						
+						
+						position="0 0 0"
+						minangle="0"
+						maxangle="1"
+						direction="0 0 1"
+						material="/shared/effects/materials/whitedot.material"
+						offsetsphere="0 0 0"
+					
+					>
+						<particle 
+							minangle="0"
+							maxangle="360"
+							minanglespeed="-30"		
+							startcolor=" 1 1 0"
+							midcolor="1 0 0"
+							endcolor="0 0 0"
+							maxanglespeed="30"
+							startsize="34"
+							endsize="75"
+
+							midalphapos=".2"
+							startanchor="0"
+							endanchor="0"					
+						 />			
+
+					</simpleemitter>				
+					
+					<simpleemitter
+					
+						life="3000"
+						startparticlealpha="1"
+						endparticlealpha="0"				
+						delay="1000"
+						spawnrate="3"
+						particlelife="1000"
+						
+						speed="10"
+						count="3"
+						drag="0.18"
+							
+						gravity="4"
+						position="0 0 120"
+						
+						
+						material="/shared/effects/materials/smoke_particle.material"
+						offsetsphere="0 0 0"
+					
+					>
+						<particle 
+							minangle="0"
+							maxangle="360"
+							minanglespeed="-30"
+							color="1 1 1"
+							maxanglespeed="30"
+							startsize="65"
+							endsize="181"
+							startalpha="0"
+							midalpha=".8"
+							endalpha="0"
+							midalphapos=".2"
+							startanchor="0"
+							endanchor="0"					
+						 />			
+
+					</simpleemitter>
+
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+								
+								
+		
+					
+					
+					
+					
+					
+				</particle>
+				
+			</terrainemitter>					
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+      </particlesystem>
+   </definitions>
+   <thread>
+   
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+	  <camerashake2 scale="2" radius="1200" duration="3300" frequency="22" />
+	  <wait duration="3333" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

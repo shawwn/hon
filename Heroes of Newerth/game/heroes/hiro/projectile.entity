@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Hiro_CounterAttack"
+
+	speed="1500"
+	gravity="0"
+	canturn="false"
+	modelscale="1.00"
+
+	model="/shared/models/invis.mdf"
+	traileffect="effects/ability_02/trail.effect"
+	impacteffect="effects/ability_02/impact.effect"
+>
+	<onimpact>
+		<damage effecttype="Physical" amount="1" b="source_attackdamage" op="mult" />
+	</onimpact>
+</projectile>

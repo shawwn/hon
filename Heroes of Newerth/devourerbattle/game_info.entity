@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<game
+	name="Game_Rules"
+
+	startinggold="0"
+	repickcost="0"
+	randombonus="0"
+	goldpertick="0"
+	incomeinterval="0"
+	
+	experiencemultiplier="1.0"
+	
+	norepick="false"
+	noswap="false"
+	forcerandom="false"
+	
+	allowallheroes="false"
+	allowagility="false"
+	allowintelligence="false"
+	allowstrength="true"
+	heropoolsize="0"
+	bancount="0"
+	usecaptains="false"
+	
+	spawnpowerups="true"
+	alternatepicks="false"
+	
+	respawntimeperlevel="1000"
+	repickonrespawn="false"
+	
+	nolobby="false"
+	noheroselect="false"
+	nodev="false"
+>
+	<onlobbystart>
+		<setscriptvalue name="alreadytriggered" value="0" />
+	</onlobbystart>
+
+	<onentergame>
+		<scriptcondition name="alreadytriggered" value="0" >
+			<spawnthread name="herospawn" />
+			<setscriptvalue name="alreadytriggered" value="1" />
+		</scriptcondition>
+	</onentergame>
+	
+	<scriptthread name="herospawn">
+		<waituntilmessage name="neutral_spawned" value="1" />
+		<foreachplayer>
+			<evaluate a="target_team" />
+			<compare a="result" b="1" op="eq">
+				<spawn name="Devourer_Legion_Spawn" />
+				<setent1 name="Devourer_Legion_Spawn" />
+				<setinterface entity="target_entity" name="" />
+				<setowner entity="ent1" player="target_entity" />
+				<sethero entity="target_entity" hero="ent1" />
+				<setscriptvalue name="player_has_hero" value="1" />
+				<pushability source="ent1" name="Ability_Devourer1" />
+				<setlevel entity="stack_entity" value="1" />
+			</compare>
+			<evaluate a="target_team" />
+			<compare a="result" b="2" op="eq">
+				<spawn name="Devourer_Hellbourne_Spawn" />
+				<setent1 name="Devourer_Hellbourne_Spawn" />
+				<setinterface entity="target_entity" name="" />
+				<setowner entity="ent1" player="target_entity" />
+				<sethero entity="target_entity" hero="ent1" />
+				<setscriptvalue name="player_has_hero" value="1" />
+				<pushability source="ent1" name="Ability_Devourer1" />
+				<setlevel entity="stack_entity" value="1" />
+			</compare>
+		</foreachplayer>
+	</scriptthread>
+
+	<onkill>
+		<evaluate a="target_team" />
+		<compare a="result" b="1" op="eq">
+			<pushentitybyname name="Legion_Main" />
+			<setent1 entity="stack_entity" />
+			<damage target="ent1" amount="500" effecttype="" />
+		</compare>
+		<evaluate a="target_team" />
+		<compare a="result" b="2" op="eq">
+			<setent1 name="Hellbourne_Main" />
+			<damage target="ent1" amount="500" effecttype="" />
+		</compare>
+	</onkill>
+
+</game>

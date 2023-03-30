@@ -1,0 +1,34 @@
+General Priority:
+=================
+Non-Player Units (Creeps)
+Player Units (Heroes)
+Towers 
+
+
+
+A creep will by default attack the closest unit to it, with a variable weight given to direction (measured in extra distance to forgive in exchange for a facing unit, start this number at 150).
+
+
+
+If a creep is attacking a unit and another unit with higher  priority gets in range (175ish), it will switch to that target. Example, creeps are attacking your hero and chasing you, you run to your creeps and the creeps get off you. This same logic applies if a creep is attacking a tower and you "aggro" then, since you have higher priority. This check is triggered by the proximity range mentioned above, and also by an explicit attack. 
+
+
+
+A creep will always change its target towards you for a minimum amount of time (2 sec since last time you stopped, after that it will use regular rules to try to acquire target) when you attack another hero explicitly (so, something like frost arrows is an attack/spell hybrid and does not count as an explicit attack, no aggro).
+
+
+
+
+Variables in play:
+==================
+HEROHELPDURATION=2.0 sec
+HEROHELPRANGE=500
+PROXIMITYAGGRO=175
+
+
+
+
+Siege Units:
+=============
+
+These units will have special rules. Whenever a tower is in the siege unit's acquire range, it will lock on the tower and never give it up due to rules mentioned above.

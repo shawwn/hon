@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Defiler3"
+
+	icon="icon.tga"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+	movespeedmultiplier="0.025,0.05,0.075,0.1"
+
+	actiontype="passive"
+
+	modifierkey="Defiler_Ability3_1,Defiler_Ability3_2,Defiler_Ability3_3,Defiler_Ability3_4"
+>
+</ability>

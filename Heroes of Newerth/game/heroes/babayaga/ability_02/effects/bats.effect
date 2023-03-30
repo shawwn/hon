@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="ability_02" useentityeffectscale="1" >
+	<definitions>
+	
+		<modifier
+			name="modifier0"
+			life="1000"
+			startalpha="0"
+			endalpha="0"
+	
+		/>	
+		<particlesystem name="system0" space="world" scale="1.2">
+			
+			
+			<light
+				life="250"			
+				startcolor="7 2 12"				
+				endcolor="0 0 0"
+				midcolorpos=".2"
+				falloffstart="00"
+				falloffend="255"
+				position="0 0 20"	
+			/>
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".5"
+				sample="/heroes/babayaga/ability_02/sounds/cast.wav"
+			/>
+
+			
+			<simpleemitter 
+				bone="_bone_centerofchest"
+				count="20"
+         		spawnrate="222"				
+				minparticlelife="800"
+          		maxparticlelife="1200"
+          		gravity="0"
+          		drag="0"
+				speed="120"
+				position="0 0 0"
+				offsetsphere="20 20 20"
+          		material="/shared/effects/materials/neb_blend.material"
+				inheritvelocity="0.25"
+
+      		>
+  				
+				<particle 
+					maxangle="360"			
+					minanglespeed="-44"
+					maxanglespeed="44"
+					
+					scale="6"					
+					startcolor=".55 .0 .5"	
+					endcolor=".1 .0 .3"		
+					
+					startalpha="0"
+					midalpha=".3"
+					endalpha="0"
+					
+					
+					startsize="55"
+					midsize="13"
+					endsize="10"
+									
+				/>
+        	</simpleemitter>
+		
+			<simpleemitter 
+				bone="_bone_centerofchest"
+				count="10"
+         		spawnrate="222"				
+				minparticlelife="800"
+          		maxparticlelife="1200"
+          		gravity="0"
+          		drag="0"
+				speed="50"
+				position="0 0 0"
+				offsetsphere="20 20 20"
+          		material="/shared/effects/materials/neb_blend.material"
+				inheritvelocity="0.25"
+
+      		>
+  				
+				<particle 
+					maxangle="360"			
+					minanglespeed="-44"
+					maxanglespeed="44"
+					
+					scale="6"					
+					color=".1 0 .2"		
+					
+					startalpha="0"
+					midalpha=".7"
+					endalpha="0"
+					
+					
+					startsize="75"
+					midsize="11"
+					endsize="44"
+									
+				/>
+        	</simpleemitter>
+
+			
+			<simpleemitter			
+				count="1"
+				particlelife="2000"
+				spawnrate="10000"
+				gravity="-0"
+				speed="0.0"
+				acceleration="0.0"		
+				position="0 0 40"			
+				
+				
+			>
+				<particle>				
+					<simpleemitter			
+						count="20"
+						spawnrate="1055"
+						particlelife="1000"
+						gravity="0"
+						minspeed="133.0"
+						maxspeed="230"
+						acceleration="0.0"
+						timenudge="0"
+						position="0 0 40"
+						offsetsphere="50 50 20"
+						
+						material="/shared/effects/materials/bat.material"
+						
+					>
+						<particle
+							color="1 1 1"
+							midcolorpos="0.5"
+							startalpha="1"
+							midalpha="1"
+							endalpha="0"
+							minframe="0"
+							maxframe="1"
+							framespeed="2"		
+							minscale="22"
+							maxscale="25"								
+							turn="true"
+						/>
+					</simpleemitter>			
+				</particle>
+			</simpleemitter>	
+			
+
+						
+							<model								
+								life="150"
+								parentmodel="true"
+								parentskeleton="true"
+								anim="idle"				
+								startalpha="1"
+								endalpha="0"
+							/>							
+
+		
+
+	<!-- 	<orbiteremitter
+				timenudge="2000"
+				spawnrate="20"
+				particlelife="5000"
+				gravity="0.0"
+				minspeed=".8"
+				maxspeed="1.5"
+				acceleration="0" 
+				drag="0.0"
+				minangle="-90" 
+				maxangle="90" 
+				position="0.0 0.0 20" 
+				origin="1.0 1 30" 
+				orbit="1.0 0.0 1.0" 
+				direction="0.0 0.0 1.0" 
+				offset="3.14 0 20"
+				cylindrical="false" 
+				material="/shared/effects/materials/bat.material"
+				
+			>
+				<particle
+					color="1 1 1"
+					midcolorpos="0.5"
+					startalpha="1"
+					midalpha="1"
+					endalpha="1"
+					frame="0"
+					framespeed="4"		
+					minscale="25"
+					maxscale="33"								
+					turn="true"
+				/>
+			</orbiteremitter>
+
+-->
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+	  <spawnmodifier instance="instance1" modifier="modifier0"/> 
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

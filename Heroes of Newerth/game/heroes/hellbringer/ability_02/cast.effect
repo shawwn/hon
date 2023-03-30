@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect>
+	<definitions>
+		<particlesystem name="system0" space="world" >
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2000"
+				volume="0.85" 
+				sample="/heroes/hellbringer/ability_02/sounds/ability_02.wav"
+			/>
+
+		</particlesystem>
+	</definitions>
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<waitfordeath instance="instance0" />
+</thread>
+</effect>

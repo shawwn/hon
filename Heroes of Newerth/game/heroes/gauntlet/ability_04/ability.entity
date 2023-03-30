@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Gauntlet4"
+	
+	icon="icon.tga"
+	statuseffecttooltip="State_Gauntlet_Ability4_Statis"
+	statuseffecttooltip2="State_Gauntlet_Ability4"
+	
+	anim="ability_4"
+	casttime="600"
+	castactiontime="300"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_entity"
+	casteffecttype="Physical"
+	targetscheme="enemy_units"
+	
+	manacost="100,150,200"
+	cooldowntime="80000,70000,60000"
+	
+	range="600"
+	allowoutofboundscast="true"
+>
+	<onimpact>
+		<spawnunit name="Gadget_Gauntlet_Ability4" target="source_position" pushentity="true" duration="-1" />
+		<spawnprojectile name="Projectile_Gauntlet_Ability4" source="source_entity" bind="stack_entity" bindturn="true" proxy="stack_entity" target="target_entity" offset="0 100 0" />
+		<spawnaffector name="Affector_Gauntlet_Ability4" target="stack_entity" ignore="target_entity" proxy="stack_entity" />
+		<playanim name="nohand_idle" target="source_entity" />
+	</onimpact>
+</ability>

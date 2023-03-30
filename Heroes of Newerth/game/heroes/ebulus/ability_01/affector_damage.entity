@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Ebulus_Ability1_Damage"
+
+	radius="125"
+	speed="1500"
+	
+	lifetime="400,483,566,666"
+	maximpactspertarget="1"
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Magic"
+	persist="true"
+
+	impacteffect="effects/impact.effect"
+>
+	<onimpact>
+		<damage effecttype="Magic" amount="50,70,70,100" />
+		<popup name="poison" a="result" source="target_entity" target="source_entity" />
+		<applystate name="State_Ebulus_Ability1" duration="15000"/>
+	</onimpact>
+</affector>

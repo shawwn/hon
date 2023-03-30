@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Andromeda_Ability2_Reveal"
+	
+	
+	
+	icon=""
+	portrait=""
+	model=""
+	
+	preglobalscale="0.9"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="0"
+	boundsradius="0"
+	isselectable="false"
+	selectionradius="0"
+	targetoffset="0 0 0"
+
+	canrotate="false"
+	ismobile="false"
+
+	attacktype="none"
+	combattype="Ranged"
+	canattack="false"
+
+	sightrangeday="1000"
+	sightrangenight="1000"
+
+	deathtime="0"
+	corpsetime="0"
+	
+	invulnerable="true"
+	flying="true"
+	clearvision="true"
+	drawonmap="false"
+>
+</gadget>

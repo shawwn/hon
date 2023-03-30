@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Dampeer1"
+
+	
+	radius="250"
+	
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Magic"
+	maximpactspertarget="1"
+
+	
+>
+	<onspawn>
+		<playeffect effect="effects/cast.effect" occlude="true" source="source_position" target="source_position" />
+	</onspawn>
+
+	<onimpact>
+		<hasmodifier name="Dampeer_Soul_3">
+			<order command="wander" force="true" forceduration="1750" source="target_entity" target="target_position" />
+			<applystate name="State_Dampeer_Ability1_Fear" duration="1750" target="target_entity" />
+			<playeffect effect="effects/impact.effect" target="" source="target_entity"/>
+			<damage effecttype="Magic" amount="75,125,175,225" b="90" op="add" />
+		</hasmodifier>
+		<else>
+			<hasmodifier name="Dampeer_Soul_2">
+				<order command="wander" force="true" forceduration="1500" source="target_entity" target="target_position" />
+				<applystate name="State_Dampeer_Ability1_Fear" duration="1500" target="target_entity" />
+				<playeffect effect="effects/impact.effect" target="source_entity" source="source_entity"/>
+				<damage effecttype="Magic" amount="75,125,175,225" b="60" op="add" />
+			</hasmodifier>
+			<else>
+				<hasmodifier name="Dampeer_Soul_1">
+					<order command="wander" force="true" forceduration="1250" source="target_entity" target="target_position" />
+					<applystate name="State_Dampeer_Ability1_Fear" duration="1250" target="target_entity" />
+					<playeffect effect="effects/impact.effect" target="" source="target_entity"/>
+					<damage effecttype="Magic" amount="75,125,175,225" b="30" op="add" />
+				</hasmodifier>
+				<else>
+					<order command="wander" force="true" forceduration="1000" source="target_entity" target="target_position" />
+					<applystate name="State_Dampeer_Ability1_Fear" duration="1000" target="target_entity" />
+					<playeffect effect="effects/impact.effect" target="" source="target_entity"/>
+					<damage effecttype="Magic" amount="75,125,175,225" />
+				</else>
+			</else>
+		</else>
+	</onimpact>
+	
+
+</affector>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<material>
+	<parameters vDiffuseColor="0 0 0" fSpecularLevel="1.000" fGlossiness="2838" fBumpLevel="1.000" fOpacity="1">
+		<float name="fSpeed" value=".015"/>
+		<float name="fDiffuseOpacity" value="1"/>
+		<float name="fReflectOpacity" value="1"/>
+	</parameters>
+	<phase name="color" vs="mesh_color_water5" ps="mesh_color_water5" srcblend="BLEND_ONE" dstblend="BLEND_ONE_MINUS_SRC_ALPHA" translucent="true" cull="CULL_BACK" alphawrite="false" vampire="true" depthwrite="false" depthsortbias="10.0">
+		<sampler name="diffuse" texture="$black" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="1.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false" filtering="true" border="false"></sampler>
+		<sampler name="normalmap1" texture="/buildings/hellbourne/tarpit/tar1_n.tga" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="1.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false" filtering="true" border="false" />
+		<sampler name="normalmap2" texture="/buildings/hellbourne/tarpit/tar2_n.tga" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="1.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false" filtering="true" border="false" />
+		<samplercube name="cube" texture="/shared/textures/blackcube.tga" fps="15" mipmaps="true" fullquality="false" nocompress="false"></samplercube>
+	</phase>
+</material>

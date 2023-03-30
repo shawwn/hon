@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="dragon_stun_dragon.max" file="dragon.model" type="K2" >
+	<anim name="idle" clip="idle.clip" loop="0" />
+</model>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_DoctorRepulsor1"
+
+	icon="icon.tga"
+	
+	anim="ability_1"
+	casttime="400"
+	castactiontime="0"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="self_position"
+	targetscheme="organic_enemy_units"
+	casteffecttype="Magic"
+	
+	frontqueue="true"
+	inheritmovement="true"
+	
+	manacost="70,80,90,100"
+	cooldowntime="4000"
+>
+	<onimpact>
+		<spawnunit name="Gadget_DoctorRepulsor_Ability1" count="1" target="target_position" pushentity="true" />
+		<applystate name="State_DoctorRepulsor_Ability1" duration="1000" target="stack_entity" />
+		<spawnaffector name="Affector_DoctorRepulsor_Ability1" target="stack_entity" proxy="stack_entity" />
+	</onimpact>
+</ability>

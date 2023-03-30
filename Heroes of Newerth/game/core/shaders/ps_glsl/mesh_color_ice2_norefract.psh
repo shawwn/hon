@@ -1,0 +1,355 @@
+// (C)2009 S2 Games
+// mesh_color_ice2_norefract.psh
+// 
+// ...
+//=============================================================================
+
+//=============================================================================
+// Uniform variables
+//=============================================================================
+uniform vec3	vSunPositionView;
+
+uniform vec3	vAmbient;
+uniform vec3	vSunColor;
+
+#ifdef GROUND_AMBIENT
+uniform vec3	vViewUp;
+#endif
+
+uniform vec2	vSpec;
+
+uniform float	fFogStart;
+uniform float	fFogEnd;
+uniform float	fFogScale;
+uniform vec3	vFogColor;
+uniform float	fFogDensity;
+uniform vec3	vFog;
+
+#if (NUM_POINT_LIGHTS > 0)
+uniform vec3	vPointLightPositionView[NUM_POINT_LIGHTS];
+uniform vec3	vPointLightColor[NUM_POINT_LIGHTS];
+uniform vec2	vPointLightFalloff[NUM_POINT_LIGHTS];
+#endif
+
+//=============================================================================
+// Varying variables
+//=============================================================================
+varying vec4	v_vColor;
+
+#if (LIGHTING_QUALITY == 0 || LIGHTING_QUALITY == 1)
+varying vec3	v_vNormal;
+varying vec3	v_vTangent;
+varying vec3	v_vBinormal;
+#elif (LIGHTING_QUALITY == 2)
+varying vec3	v_vDiffLight;
+varying vec3	v_vRefract;
+#endif
+
+varying vec4	v_vPositionScreen;
+
+#if (LIGHTING_QUALITY == 0 || LIGHTING_QUALITY == 1 || FALLOFF_QUALITY == 0)
+varying vec3	v_vPositionView;
+#endif
+
+#if (SHADOWS == 1)
+varying vec4	v_vTexcoordLight;
+#endif
+
+#ifdef CLOUDS
+varying vec2	v_vClouds;
+#endif
+
+#if ((FOG_QUALITY == 1 && FOG_TYPE != 0) || (FALLOFF_QUALITY == 1 && (FOG_TYPE != 0 || SHADOWS == 1)) || FOG_OF_WAR == 1)
+varying vec4	v_vData0;
+#endif
+
+//=============================================================================
+// Samplers
+//=============================================================================
+uniform sampler2D	diffuse;
+
+#ifndef RXGB_NORMALMAP
+uniform sampler2D	normalmap;
+#else
+uniform sampler2D	normalmap_0;
+uniform sampler2D	normalmap_1;
+#endif
+
+#ifdef CLOUDS
+uniform sampler2D 	clouds;
+#endif
+
+#if (FOG_OF_WAR == 1)
+uniform sampler2D	fogofwar;
+#endif
+
+//=============================================================================
+// Shadow
+//=============================================================================
+#if (SHADOWS == 1)
+uniform vec2	vShadowLeak;
+uniform vec2	vShadowFalloff;
+
+#if (SHADOWMAP_TYPE == 0) 
+// SHADOWMAP_R32F
+uniform float	fShadowmapSize;
+uniform float	fShadowmapSizeInv;
+
+uniform sampler2D	shadowmap;
+
+//====================
+// shadow_r32f 
+//====================
+float shadow_r32f()
+{
+#if (SHADOWMAP_FILTER_WIDTH > 0)
+	// Project shadow texture coord
+	vec2 vShadowTexcoord  = (v_vTexcoordLight.xy / v_vTexcoordLight.w) - fShadowmapSizeInv * 0.5;
+	
+	// Determine the lerp amounts
+	vec2 vLerps = fract(fShadowmapSize * vShadowTexcoord);
+
+	float fDepth = v_vTexcoordLight.z / v_vTexcoordLight.w;
+
+	// Read shadow samples
+	vec4 vSamples;
+	vSamples.x = texture2D(shadowmap, vShadowTexcoord).r;
+	vSamples.y = texture2D(shadowmap, vShadowTexcoord + vec2(fShadowmapSizeInv, 0.0)).r;
+	vSamples.z = texture2D(shadowmap, vShadowTexcoord + vec2(0.0, fShadowmapSizeInv)).r;
+	vSamples.w = texture2D(shadowmap, vShadowTexcoord + vec2(fShadowmapSizeInv , fShadowmapSizeInv)).r;
+	
+	vec4 vShadow = step(fDepth, vSamples);
+
+	// Percentage-closer filtering
+	float fSample = mix(mix(vShadow.x, vShadow.y, vLerps.x), mix(vShadow.z, vShadow.w, vLerps.x), vLerps.y);
+#else
+	vec3 vShadowTexcoord = v_vTexcoordLight.xyz / v_vTexcoordLight.w;
+	float fSample = (texture2D(shadowmap, vShadowTexcoord.xy).r < vShadowTexcoord.z) ? 0.0 : 1.0;
+#endif
+
+	return clamp(fSample * vShadowLeak.x + vShadowLeak.y, 0.0, 1.0);
+}
+
+#else 
+// SHADOWMAP_DEPTH
+uniform sampler2DShadow	shadowmap;
+
+//====================
+// shadow_depth 
+//====================
+float shadow_depth()
+{
+	return clamp(shadow2DProj(shadowmap, v_vTexcoordLight).r * vShadowLeak.x + vShadowLeak.y, 0.0, 1.0);
+}
+#endif
+
+//====================
+// shadow 
+//====================
+float shadow(float fCamDistance)
+{
+	#ifdef SHADOW_FALLOFF
+	float fFade = clamp(fCamDistance * vShadowFalloff.x + vShadowFalloff.y, 0.0, 1.0);
+	#else
+	float fFade = 0.0;
+	#endif
+
+	#if (SHADOWMAP_TYPE == 0) 
+	// SHADOWMAP_R32F
+	float fShadowmap = shadow_r32f();
+	#else 
+	// SHADOWMAP_DEPTH
+	float fShadowmap = shadow_depth();
+	#endif
+
+	return clamp(fShadowmap + fFade, 0.0, 1.0);
+}
+#endif
+
+//=============================================================================
+// Pixel Shader
+//=============================================================================
+void main()
+{
+	vec4 cDiffuseColor = texture2D(diffuse, gl_TexCoord[0].xy);
+	
+#if (TEXKILL == 1)
+	if (cDiffuseColor.a < 91.0 / 255.0)
+		discard;
+#endif
+
+	cDiffuseColor *= v_vColor;
+	
+#if (LIGHTING_QUALITY == 0 || LIGHTING_QUALITY == 1)
+	vec3 vCamDirection = -normalize(v_vPositionView);
+#endif
+
+#if (FOG_TYPE != 0 || SHADOWS == 1)
+	#if (FALLOFF_QUALITY == 1)
+		float fCamDistance = v_vData0.z;
+	#else
+		float fCamDistance = length(v_vPositionView);
+	#endif
+#endif
+
+	//
+	// Shadowing
+	//
+	
+#if (SHADOWS == 1)
+	float fShadow = shadow(fCamDistance);
+#else
+	float fShadow = 1.0;
+#endif
+	
+	//
+	// Lighting
+	//
+
+#if (LIGHTING != 0)
+
+	#ifndef RXGB_NORMALMAP
+	vec4 cNormalmapColor = texture2D(normalmap, gl_TexCoord[0].xy);
+	#else
+	vec4 cNormalmapColor;
+	cNormalmapColor.rgb = texture2D(normalmap_0, gl_TexCoord[0].xy).agb;
+	cNormalmapColor.a = texture2D(normalmap_1, gl_TexCoord[0].xy).g;
+	#endif
+	
+	vec3 vTexNormal = vec3(cNormalmapColor.rgb * 2.0 - 1.0);
+	
+	vec3 vDiffuse = vAmbient;
+	vec3 vSpecular = vec3(0.0, 0.0, 0.0);
+	float fSpecular = cNormalmapColor.a * vSpec.x;
+	
+	#if (LIGHTING_QUALITY == 0 || LIGHTING_QUALITY == 1)
+	mat3 mRotation = mat3(v_vTangent, v_vBinormal, v_vNormal);
+	vec3 vNormal = normalize(mRotation * vTexNormal);
+	
+		#ifdef GROUND_AMBIENT
+	vDiffuse *= (dot(vNormal, vViewUp) * 0.375 + 0.625);
+		#endif
+	
+		#ifdef AMBIENT_OCCLUSION
+	vDiffuse *= dot(vNormal, v_vNormal);
+		#endif
+	#endif
+	
+	#if (LIGHTING_QUALITY == 2)
+	
+	vDiffuse += v_vDiffLight * fShadow;
+	
+	#else 
+	// 0 or 1
+
+	vec3 vLight = vSunPositionView;
+	vec3 vHalfAngle = normalize(vLight + vCamDirection);
+		
+		#ifdef SMOOTH_SELF_OCCLUDE
+	float fSelfOcclude = clamp(dot(v_vNormal, vLight) * 5.0, 0.0, 1.0);
+		#else
+	float fSelfOcclude = 1.0;
+		#endif
+		
+	vec2 vLit;
+	vLit.x = clamp(dot(vNormal, vLight), 0.0, 1.0);
+	vLit.y = pow(clamp(dot(vNormal, vHalfAngle), 0.0, 1.0), vSpec.y) * fSpecular;
+	vLit *= fShadow * fSelfOcclude;
+
+		#ifdef CLOUDS
+	vec3 cCloudColor = texture2D(clouds, v_vClouds).rgb;
+
+	vDiffuse += vSunColor * vLit.x * cCloudColor;
+	vSpecular += vSunColor * vLit.y * cCloudColor;
+		#else
+	vDiffuse += vSunColor * vLit.x;
+	vSpecular += vSunColor * vLit.y;
+		#endif
+		
+		#if (NUM_POINT_LIGHTS > 0 && LIGHTING_QUALITY == 0)
+	// Point Lights
+	for (int i = 0; i < NUM_POINT_LIGHTS; ++i)
+	{
+		vec3 vDeltaPosition = vPointLightPositionView[i] - v_vPositionView;
+		float fDistance = length(vDeltaPosition);
+	
+		vec3 vLight = normalize(vDeltaPosition);
+		vec3 vHalfAngle = normalize(vLight + vCamDirection);
+
+		float fAttenuation = 1.0 - clamp(fDistance * vPointLightFalloff[i].x + vPointLightFalloff[i].y, 0.0, 1.0);
+				
+		vec2 vLit; // x = diffuse, y = specular
+		vLit.x = clamp(dot(vNormal, vLight), 0.0, 1.0);
+		vLit.y = pow(clamp(dot(vNormal, vHalfAngle), 0.0, 1.0), vSpec.y) * fSpecular;
+		vLit *= fAttenuation;
+		
+		vDiffuse += vPointLightColor[i] * vLit.x;
+		vSpecular += vPointLightColor[i] * vLit.y;
+	}
+		#endif
+
+	#endif 
+	// LIGHTING_QUALITY
+
+#else 
+// LIGHTING == 0
+	vec3 vDiffuse = vec3(1.0, 1.0, 1.0);
+	vec3 vSpecular = vec3(0.0, 0.0, 0.0);
+#endif
+
+	//
+	// Fog
+	//
+
+#if (FOG_TYPE != 0) 
+// FOG_NONE
+	#if (FOG_QUALITY == 1)
+	float fFog = v_vData0.w;
+	#else
+		#if (FOG_TYPE == 0) 
+		// FOG_NONE
+	float fFog = 0.0;
+		#elif (FOG_TYPE == 1) 
+		// FOG_LINEAR
+	float fFog = clamp(fCamDistance * vFog.x + vFog.y, 0.0, 1.0) * vFog.z;
+		#elif (FOG_TYPE == 2) 
+		// FOG_EXP2
+	float fFog = 1.0 - exp2(-fCamDistance * fFogDensity);
+		#elif (FOG_TYPE == 3) 
+		// FOG_EXP
+	float fFog = 1.0 - exp(-fCamDistance * fFogDensity);
+		#elif (FOG_TYPE == 4) 
+		// FOG_HERMITE
+	float fFog = smoothstep(fFogStart, fFogEnd, fCamDistance) * fFogScale;
+		#endif
+	#endif
+#else
+	float fFog = 0.0;
+#endif
+
+	//
+	// Fresnel
+	//
+	
+	#if (LIGHTING_QUALITY == 0 || LIGHTING_QUALITY == 1)
+	float fFresnelBias = 0.5;
+	float fFresnelScale = 0.5;
+	float fFresnelPower = 5.0;
+	float fFresnel = clamp(fFresnelBias + fFresnelScale * pow(1.0 + dot(-vCamDirection, normalize(v_vNormal)), fFresnelPower), 0.0, 1.0);
+	#else
+	float fFresnel = 0.5;
+	#endif
+	
+	//
+	// Final
+	//
+	
+	vec3 vFinalColor = cDiffuseColor.rgb * vDiffuse + vSpecular;
+	
+#if (FOG_OF_WAR == 1)
+	vFinalColor *= texture2D(fogofwar, v_vData0.xy).a;
+#endif
+
+	gl_FragColor.rgb = mix(vFinalColor, vFogColor, fFog);
+	gl_FragColor.a = cDiffuseColor.a * fFresnel;
+}

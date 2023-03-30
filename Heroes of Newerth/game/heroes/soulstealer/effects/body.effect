@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="body" deferred="true" >
+	<definitions>
+		<particlesystem name="system0" space="world" scale="2">
+
+			<simpleemitter
+				bone="Bip01 Pelvis"
+				position="0 0 0"
+				spawnrate="10"
+				
+				drag="0"
+				particlelife="850"
+				gravity="5"
+				speed="0"
+				inheritvelocity=".2"
+				limitinheritvelocity="100"
+				offsetsphere="1 5 1"
+				minangle="25"
+				maxangle="10"
+				direction="-1 -1 0"
+				material="/shared/effects/materials/phantom_black.material"
+			>
+				<particle
+					startcolor="0 0 0"
+					midcolor="1 1 1"
+					endcolor="0 0 0"
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="0"
+					midcolorpos=".1"
+					maxanglespeed="0"
+					startsize="10"
+					endsize="30"
+					midsizepos=".4"
+					startalpha="0.0"
+					midalpha="1.0"
+					endalpha="0.0"
+					midalphapos="0.1"
+					
+				/>
+			</simpleemitter>
+
+			
+			<simpleemitter
+				bone="Bip01 Pelvis"
+				position="0 0 0"
+				spawnrate="10"
+				
+				drag="0"
+				particlelife="850"
+				gravity="5"
+				speed="0"
+				inheritvelocity=".2"
+				limitinheritvelocity="100"
+				offsetsphere="1 10 1"
+				minangle="25"
+				maxangle="10"
+				direction="0 -1 0"
+				material="/shared/effects/materials/phantom_black.material"
+			>
+				<particle
+					startcolor="0 0 0"
+					midcolor="1 1 1"
+					endcolor="0 0 0"
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="0"
+					midcolorpos=".1"
+					maxanglespeed="0"
+					startsize="10"
+					endsize="30"
+					midsizepos=".4"
+					startalpha="0.0"
+					midalpha="1.0"
+					endalpha="0.0"
+					midalphapos="0.1"
+					anchor="1"
+				/>
+			</simpleemitter>			
+
+			<simpleemitter
+				bone="Bip01 Pelvis"
+				
+				spawnrate="30"
+				
+				drag="0"
+				particlelife="550"
+				gravity="5"
+				speed="0"
+				inheritvelocity=".1"
+				limitinheritvelocity="100"
+				offsetsphere="1 1 1"
+				minangle="25"
+				maxangle="10"
+				direction="0 0 1"
+				material="/shared/effects/materials/purpleswirl.material"
+			>
+				<particle
+					startcolor="0 0 0"
+					midcolor=".2 .1 .2"
+					endcolor="0 0 0"
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="0"
+					midcolorpos=".1"
+					maxanglespeed="0"
+					startsize="5"
+					endsize="26"
+					midsizepos=".4"
+					startalpha="0.0"
+					midalpha="..5"
+					endalpha="0.0"
+					midalphapos="0.1"
+					depthbias="60"
+					anchor="1"
+				/>
+			</simpleemitter>
+
+			<template name="backfire">
+
+				<simpleemitter
+					bone="{bone1}"
+					position="0 0 0"
+					spawnrate="30"
+					
+					drag="0"
+					directionalspace="local"
+					particlelife="450"
+					gravity="-10"
+					speed="0"
+					inheritvelocity=".1"
+					limitinheritvelocity="100"
+					offsetsphere="1 1 1"
+					minangle="25"
+					maxangle="10"
+					direction="0 0 1"
+					material="/shared/effects/materials/phantom_black.material"
+				>
+					<particle
+						startcolor="0 0 0"
+						midcolor="1 1 1"
+						endcolor="0 0 0"
+						minangle="-180"
+						maxangle="180"
+						minanglespeed="0"
+						midcolorpos=".1"
+						maxanglespeed="0"
+						startsize="{ss}"
+						midsize="{ms}"
+						endsize="{es}"
+						midsizepos=".4"
+						startalpha="0.0"
+						midalpha="1.0"
+						endalpha="0.0"
+						midalphapos="0.1"
+						startanchor="1"
+						endanchor="1"
+					/>
+				</simpleemitter>
+				
+				<simpleemitter
+					bone="{bone1}"
+					position="0 0 0"
+					spawnrate="30"
+					
+					drag="0"
+					directionalspace="local"
+					particlelife="450"
+					gravity="-10"
+					speed="0"
+					inheritvelocity=".1"
+					limitinheritvelocity="100"
+					offsetsphere="5 1 1"
+					minangle="25"
+					maxangle="10"
+					direction="0 0 1"
+					material="/shared/effects/materials/purpleswirl.material"
+				>
+					<particle
+						startcolor="0 0 0"
+						midcolor=".2 .2 .2"
+						endcolor="0 0 0"
+						minangle="-180"
+						maxangle="180"
+						minanglespeed="0"
+						midcolorpos=".1"
+						maxanglespeed="0"
+						startsize="{ss}"
+						midsize="{ms}"
+						endsize="{es}"
+						midsizepos=".4"
+						startalpha="0.0"
+						midalpha="1.0"
+						endalpha="0.0"
+						midalphapos="0.1"
+						startanchor="1"
+						endanchor="1"
+					/>
+				</simpleemitter>
+			</template>
+			
+			<instance name="backfire" bone1="Bip01 L Hand"  ss="5" ms="10" es="0"/>
+			<instance name="backfire" bone1="Bip01 R Hand"  ss="5" ms="10" es="0"/>
+		
+			<template name="streamer">
+				<trailemitter
+					name="trail02"
+					bone="{bone}"
+					spawnrate="{spawnrate}"
+					startminparticlelife="{life}"
+					startmaxparticlelife="{life}"		
+					gravity="15"
+					drag=".1"
+					endminparticlelife="1"
+					endmaxparticlelife="1" 
+					texpostime="{life}"
+					texposscale="0"
+					texstretchscale="1"
+					speed="1"
+					position="{position}"
+					material="/shared/effects/materials/arrow_trail.material"
+					inheritvelocity=".25"
+					limitinheritvelocity="500"
+				>
+					<particle
+						startcolor=".2 .1 .5"
+						
+						endcolor="0 0 0"
+						startsize="5"
+						midsize="2"
+						endsize=".5"					
+					/>
+				</trailemitter>	
+			</template>
+			<instance name="streamer" spawnrate="120" life="300" position="0 0 0" bone="_bone_righthand"/>
+			<instance name="streamer" spawnrate="120" life="300" position="0 0 0" bone="_bone_lefthand"/>
+			<instance name="streamer" spawnrate="40" life="500" position="0 0 0" bone="Bip01 R Clavicle"/>
+			<instance name="streamer" spawnrate="40" life="500" position="0 0 0" bone="Bip01 L Clavicle"/>
+			<instance name="streamer" spawnrate="40" life="200" position="0 0 0" bone="Bip01 R Forearm"/>
+			<instance name="streamer" spawnrate="40" life="200" position="0 0 0" bone="Bip01 L Forearm"/>
+			
+			
+			<instance name="streamer" spawnrate="40" life="500" position="0 0 0" bone="Box01"/>
+			<instance name="streamer" spawnrate="40" life="200" position="2 0 0" bone="Box01"/>
+			<instance name="streamer" spawnrate="40" life="500" position="-2 0 0" bone="Box01"/>
+			<instance name="streamer" spawnrate="40" life="300" position="0 2 0" bone="Box01"/>
+			<instance name="streamer" spawnrate="40" life="400" position="0 -2 0" bone="Box01"/>
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+</effect>

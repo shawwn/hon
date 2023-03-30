@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="death_debris">
+	<definitions>
+		<modifier
+			name="modifier0"
+			skin="freeze"
+			life="1000"
+			startparam0="0"
+			midparam0="1"
+			endparam0="1"
+			midparam0pos="0.45"
+		/>	
+	</definitions>
+	<thread>
+		<spawnmodifier instance="instance0" modifier="modifier0"/> 
+		<waitfordeath instance="instance0"/>
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->

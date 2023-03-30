@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Hydromancer4"
+	statuseffecttooltip="State_Hydromancer_Ability4"
+	statuseffecttooltip2="State_Hydromancer_Ability4_Slow"
+	
+	icon="icon.tga"
+	
+	anim="ability_4"
+	casttime="300"
+	castactiontime="300"
+	
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_self"
+	targetscheme=""
+	effecttype="Magic"
+	
+	frontqueue="true"
+	inheritmovement="true"
+	
+	manacost="100,150,200"
+	cooldowntime="60000"
+	casteffect="effects/cast.effect"
+>
+	<onimpact>	
+		<!-- save old max health -->
+		<setvar0 a="source_maxhealth" /> 
+		
+		<applystate name="State_Hydromancer_Ability4" duration="15000" target="source_entity" pushentity="true" />
+		
+		<!-- max health bonus -->
+		<setvar1 a="source_maxhealth" b="var0" op="sub" /> 
+		
+		<!-- target health -->
+		<setvar2 a="source_health" b="var1" op="add" />
+		
+		<!-- current health adjusted for bonus -->
+		<setvar3 a="source_health" b="var0" op="div" />
+		<setvar3 a="var3" b="source_maxhealth" op="mult" />
+		
+		<!-- final adjustment to reach target health after the game rescales current health -->
+		<changehealth a="var2" b="var3" op="sub" />
+		
+		<!-- save bonus as the state's accumulator -->
+		<setaccumulator entity="stack_entity" value="var1" />
+
+	</onimpact>
+</ability>

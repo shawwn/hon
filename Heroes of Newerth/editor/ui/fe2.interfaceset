@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interfaceset name="fe2">
+	<interface name="le_main" file="/ui/le_main.interface" precache="true"/>
+</interfaceset>

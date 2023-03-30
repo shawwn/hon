@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Ebulus_Ability2"
+
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+	
+	movespeedslow="0.1"
+	deniable="true"
+	healthregenreduction=".4,.6,.8,1"
+	
+	effecttype="StatusDebuff"
+>
+	<onframe >
+		<damage effecttype="Magic DOT" amount="5,10,15,20" b="frametime" op="mult"/>
+	</onframe>
+</state>

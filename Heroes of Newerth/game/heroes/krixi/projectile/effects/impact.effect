@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="entity" scale="1.2">
+
+			<sound
+				sample="/heroes/krixi/sounds/impact_%.wav"
+				volume="0.75"
+				linearfalloff="true"
+				falloffstart="0"
+				falloffend="2000"
+			/>
+	
+			<simpleemitter
+				spawnrate="500"
+				bone="_bone_centerofchest"
+				timenudge="250"
+				count="20"
+				particlelife="425"
+				speed="100"
+				material="/shared/effects/materials/smoke_17.material"
+				offsetsphere="1 1 1"
+				minangle="360"
+				maxangle="180"
+				direction="1 0 0"
+			>
+				<particle 
+					minanglespeed="-50"
+					maxanglespeed="-150"
+					startsize="5"
+					midsize="20"
+					endsize="40"
+					startalpha="1"
+					midalpha=".8"
+					endalpha="0"
+					midalphapos=".5"
+				/>
+				<particle 
+					minanglespeed="50"
+					maxanglespeed="150"
+					startsize="5"
+					midsize="10"
+					endsize="25"
+					startalpha="0"
+					midalpha=".8"
+					endalpha="0"
+					midalphapos=".5"
+				/>
+			</simpleemitter>
+
+			<billboard
+				bone="_bone_centerofchest"	
+				material="/shared/effects/materials/blink.material"
+				startcolor="0 0.33 0.33"
+				endcolor="0"
+				maxroll="360"
+				size="80"
+				depthbias="-30"
+				life="300"
+			/>
+
+			<billboard
+				bone="_bone_centerofchest"	
+				material="/shared/effects/materials/twirl_03.material"
+				startcolor="0 0.53 0.63"
+				endcolor="0"
+				maxroll="360"
+				size="80"
+				depthbias="-30"
+				life="300"
+			/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

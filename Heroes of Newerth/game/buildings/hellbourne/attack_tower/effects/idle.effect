@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world">
+
+			<simpleemitter
+				bone="_boneBoxRotate"
+				spawnrate="6"
+				particlelife="2000"
+				offsetsphere="2"
+				material="/shared/effects/materials/refract_ring.material"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startsize="10"
+					endsize="95"
+					minanglespeed="-20"
+					maxanglespeed="20"
+					startalpha="0"
+					midalpha=".7"
+					endalpha="0"
+					startparam="0.05"
+					endparam="0"
+				/>
+			</simpleemitter>
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="1200"
+				volume="0.25" 
+				soundloop="true"
+				fadein="200"
+				fadeout="300"
+				sample="../sounds/idle.wav"
+			/>		
+
+			<template name="trails">
+				<simpleemitter
+					offsetsphere="5"
+					bone="{bone}"
+					spawnrate="10"
+					minparticlelife="750"
+					maxparticlelife="1550"
+					material="/shared/effects/materials/smoke_particle.material"
+				>
+					<particle 
+						maxangle="360"
+						minanglespeed="-30"
+						maxanglespeed="30"
+						startcolor=".5 0 0"
+						endcolor="0"
+						startalpha=".8"
+						endalpha="0"
+						startsize="5"
+						minendsize="35"
+						maxendsize="75"
+						endanchor="0"
+					/>
+					<particle 
+						maxangle="360"
+						minanglespeed="-30"
+						maxanglespeed="30"
+						startcolor="1 .2 0"
+						endcolor="0"
+						startalpha=".8"
+						endalpha="0"
+						startsize="5"
+						minendsize="35"
+						maxendsize="75"
+						endanchor="0"
+					/>
+				</simpleemitter>	
+
+				<simpleemitter
+					bone="{bone}"
+					spawnrate="10"
+					minparticlelife="750"
+					maxparticlelife="1250"
+					material="/shared/effects/materials/phantom_smoke_04.material"
+				>
+					<particle 
+						maxangle="360"
+						minanglespeed="-30"
+						maxanglespeed="30"
+						startcolor=".5 0 0"
+						endcolor="0"
+						startalpha=".8"
+						endalpha="0"
+						startsize="15"
+						minendsize="35"
+						maxendsize="75"
+						endanchor="0"
+					/>
+					<particle 
+						maxangle="360"
+						minanglespeed="-30"
+						maxanglespeed="30"
+						startcolor="1 .2 0"
+						endcolor="0"
+						startalpha=".8"
+						endalpha="0"
+						startsize="15"
+						minendsize="35"
+						maxendsize="75"
+						endanchor="0"
+					/>
+				</simpleemitter>
+
+				<simpleemitter
+					bone="{bone}"
+					spawnrate="10"
+					minparticlelife="350"
+					maxparticlelife="650"
+					material="/shared/effects/materials/femme_lightning_01.material"
+				>
+					<particle 
+						maxangle="360"
+						minanglespeed="-30"
+						maxanglespeed="30"
+						startcolor="1 .2 0"
+						endcolor="0"
+						startalpha=".8"
+						endalpha="0"
+						startsize="0"
+						minendsize="15"
+						maxendsize="25"
+						endanchor="0"
+					/>
+				</simpleemitter>
+			</template>
+
+			<instance name="trails" bone="_bone_fx_01" />
+			<instance name="trails" bone="_bone_fx_02" />
+			<instance name="trails" bone="_bone_fx_03" />
+			<instance name="trails" bone="_bone_fx_04" />
+
+			<model
+				expirelife="500"
+				bone="_boneBoxRotate"
+				model="gem/model.mdf"
+				anim="idle"
+				startcolor="2.5 2.5 2.5"
+				endcolor="0 0 0"
+				scale="1.25"
+			/>
+
+			<model
+				expirelife="500"
+				bone="_bone_fx_01"
+				model="skull/skull.mdf"
+				anim="idle"
+				yaw="-210"
+				pitch="60"
+				startalpha=".4"
+				endalpha="0"
+				startcolor=".8 .8 .7"
+				endcolor="0 0 0"
+				scale=".5"
+			/>
+
+			<model
+				expirelife="500"
+				bone="_bone_fx_02"
+				model="skull/skull.mdf"
+				anim="idle"
+				yaw="-145"
+				pitch="60"
+				startalpha=".4"
+				endalpha="0"
+				startcolor=".8 .8 .7"
+				endcolor="0 0 0"
+				scale=".5"
+			/>
+		
+	
+			<model
+				expirelife="500"
+				bone="_bone_fx_03"
+				model="skull/skull.mdf"
+				anim="idle"
+				yaw="-45"
+				pitch="60"
+				startalpha=".4"
+				endalpha="0"
+				startcolor=".8 .8 .7"
+				endcolor="0 0 0"
+				scale=".5"
+			/>
+			
+
+			<model
+				expirelife="500"
+				bone="_bone_fx_04"
+				model="skull/skull.mdf"
+				anim="idle"
+				yaw="45"
+				pitch="60"
+				startalpha=".4"
+				endalpha="0"
+				startcolor=".8 .8 .7"
+				endcolor="0 0 0"
+				scale=".5"
+			/>
+
+			<billboard
+				expirelife="300"
+				loop="true"
+				life="2500"
+				bone="_boneBoxRotate"
+				startcolor=".3 0 0"
+				endcolor="0"
+				startsize="10"
+				midsize="110"
+				endsize="10"
+				depthbias="-30"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+
+			<!-- Eye Glow -->
+			
+			<simpleemitter
+				depthbias="-5"
+				spawnrate="15"
+				minparticlelife="150"
+				maxparticlelife="450"
+				position="8 15 57"
+				offsetsphere="4"
+				material="/shared/effects/materials/femme_lightning_01.material"
+			>
+				<particle
+					minangle="-360"
+					maxangle="360"
+					startcolor="0"
+					midcolor=".8 .2 0"
+					endcolor="0"
+					midcolorpos=".2"
+					startsize="2"
+					endsize="12"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				depthbias="-5"
+				spawnrate="15"
+				minparticlelife="150"
+				maxparticlelife="450"
+				position="-8 15 57"
+				offsetsphere="4"
+				material="/shared/effects/materials/femme_lightning_01.material"
+			>
+				<particle
+					minangle="-360"
+					maxangle="360"
+					startcolor="0"
+					midcolor=".8 .2 0"
+					endcolor="0"
+					midcolorpos=".2"
+					startsize="2"
+					endsize="12"
+				/>
+			</simpleemitter>
+			
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

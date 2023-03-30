@@ -1,0 +1,5 @@
+-would be nice if someone did some new footstep (and hands) dust effects for when he walks
+-his body fall upon death should do a radial dust cloud ala behemoth in sav2
+-his non ground thumping attacks need an impact effect plus a bit of a pushback on the unit he hit
+-a wishlist polish item, if he left behind footstep imprints that'd be pretty dope
+-global notification sound when he spawns

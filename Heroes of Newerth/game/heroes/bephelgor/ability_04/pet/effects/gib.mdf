@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="gib.max" file="gib.model" type="K2">
+
+	<anim name="idle" clip="gib.clip" loop="true" loopbackframe="-1"/>
+
+</model>

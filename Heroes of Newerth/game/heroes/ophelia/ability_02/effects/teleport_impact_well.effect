@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="ability_02" useentityeffectscale="1">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="2">
+
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume="0.65"
+				sample="../sounds/impact_teleport.wav"
+			/>
+
+	<simpleemitter
+			spawnrate="1000"
+			count="2"
+			particlelife="750"
+			gravity="0"
+			speed="0"
+			drag="0"
+			acceleration="0"
+			position="0 0 0"
+			material="/shared/effects/materials/phantom_smoke_10.material"
+			offsetsphere="0 0 0"
+		>
+			<particle>
+				<model
+					life="5000"
+					model="/heroes/xalynx/ability_04/effects/model.mdf"
+					anim="up"
+					startscale="8"
+					midscale="0"
+					endscale="8"
+					expirelife="500"
+					startparticlealpha="1"
+					endparticlealpha="0"
+					minyaw="0"
+					maxyaw="360"
+					yawspeed="720"
+					position="0 0 150"
+					roll="180"
+					directionalspace="world"
+				>
+
+					<template name="spirits">
+						<twopointtrailemitter
+							life="1000"
+							bone_a="{bone01}"
+							bone_b="{bone02}"
+							spawnrate="150"
+							minparticlelife="400"
+							maxparticlelife="500"
+							texpostime="400"
+							texposscale="0"
+							texstretchscale="1"
+							material="/shared/effects/materials/mysticenergy.material"
+							minexpirelife="200"
+							maxexpirelife="500"
+							startparticlecolor="0 .25 0"
+							midparticlecolor="0 .4 .1"
+							endparticlecolor="0 0 0"
+							midparticlecolorpos=".7"
+							subframepose="true"
+						>
+							<particle
+							/>
+						</twopointtrailemitter>
+					</template>
+					
+					<instance name="spirits" bone01="_bone_01" bone02="_bone_02" />
+					<instance name="spirits" bone01="_bone_05" bone02="_bone_06" />
+					<instance name="spirits" bone01="_bone_07" bone02="_bone_08" />
+					<instance name="spirits" bone01="_bone_11" bone02="_bone_12" />
+					
+				</model>
+				
+		</particle>
+		</simpleemitter>
+			
+		<light
+			life="150"			
+			startcolor="11 20 .6"			
+			endcolor="0 0 0"
+			midcolorpos=".2"
+			falloffstart="00"
+			falloffend="255"
+			position="0 0 20"	
+		/>
+		
+		
+		
+		<simpleemitter
+			life="300"
+			spawnrate="15"
+			particlelife="400"
+			gravity="-6"
+			speed="0.0"
+			acceleration="0.0"
+			timenudge="0"
+			position="0 0 0"
+			material="/shared/effects/materials/flare_01.material"
+		>
+			<particle
+				startcolor=".5 1 0"
+				endcolor="0.0 0.0 0.0"
+
+
+				startalpha=".02"
+				endalpha="0"
+
+				minangle="0"
+				maxangle="360"
+				minanglespeed="0"
+				maxanglespeed="0"
+
+				startsize="150"
+				midsize="120"
+				endsize="50"
+
+				lockup="true"
+				pitch="90"
+
+			/>
+		</simpleemitter>
+
+		
+		
+		<simpleemitter
+			
+			count="1"
+			particlelife="200"
+			gravity="-6"
+			speed="0.0"
+			acceleration="0.0"
+			timenudge="0"
+			position="0 0 40"
+			
+			material="/shared/effects/materials/blink.material"
+		>
+			<particle
+				anglespeed="20"
+				startcolor="0 0 0"
+				midcolor=".3 1 .3"
+				endcolor="0.0 0.0 0.0"
+				midcolorpos=".1"
+
+
+				startsize="280"
+				midsize="220"
+				endsize="0"
+
+
+			/>
+		</simpleemitter>		
+
+
+			<billboard
+				position="0 0 20"
+				life="200"
+				color="1 1 1"
+				startalpha="1.0"				
+				endalpha="1"
+				startparam="0.05"
+				endparam="0.0"				
+				startsize="128"
+				endsize="524"
+				material="/shared/effects/materials/refract_pinch.material"
+				lockup="1"
+				pitch="90"
+			/>
+			
+			<simpleemitter
+				position="0 0 75"
+				life="500"
+				spawnrate="50"
+				drag=".001"
+				particlelife="1000"
+				gravity="0"
+				minspeed="25"
+				maxspeed="75"
+				direction="0 -1 0"
+				offsetsphere="50 50 50"
+				minangle="-40"
+				maxangle="40"
+				material="/shared/effects/materials/leaf.material"
+				inheritvelocity=".35"
+			>
+				<particle
+					startcolor=".75 .75 .1"
+					endcolor=".1 .75 .1"
+					startalpha="0"
+					midalpha=".5"
+					endalpha="0"
+					lockup="false"
+					lockright="false"
+					minscale="1"
+					maxscale="7"
+					minangle="-360"
+					maxangle="0"
+					minanglespeed="110"
+					maxanglespeed="-110"
+				/>
+			</simpleemitter>
+		
+			<simpleemitter
+				position="0 0 75"
+				life="500"
+				startspawnrate="300"
+				endspawnrate="25"
+				drag=".001"
+				particlelife="1000"
+				gravity="-1"
+				minspeed="20"
+				maxspeed="120"
+				direction="-1 0 0"
+				offsetsphere="60 60 40"
+				minangle="-40"
+				maxangle="40"
+				material="/shared/effects/materials/leaf.material"
+				inheritvelocity=".35"
+			>
+				<particle
+					startcolor=".75 .75 .1"
+					endcolor=".1 .75 .1"
+					startalpha="0"
+					midalpha=".5"
+					endalpha="0"
+					midalphapos=".85"
+					lockup="false"
+					lockright="false"
+					minscale="1"
+					maxscale="7"
+					minangle="-360"
+					maxangle="0"
+					minanglespeed="110"
+					maxanglespeed="-110"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				position="0 0 75"
+				life="500"
+				count="50"
+				spawnrate="1000"
+				particlelife="800"
+				gravity=".5"
+				minspeed="50"
+				maxspeed="150"
+				drag="0.1"
+				acceleration="0.0"
+				material="/shared/effects/materials/leaf_01.material"
+				offsetsphere="35 35 50"
+				direction="0 0 0"
+			>
+				<particle
+					startcolor=".75 .75 .1"
+					endcolor=".1 .75 .1"
+					startalpha="0"
+					midalpha=".5"
+					endalpha="0"
+					midalphapos=".25"
+					lockup="false"
+					lockright="false"
+					minscale="5"
+					maxscale="8"
+					minangle="-360"
+					maxangle="0"
+					minanglespeed="110"
+					maxanglespeed="-110"
+				/>
+			</simpleemitter>
+
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

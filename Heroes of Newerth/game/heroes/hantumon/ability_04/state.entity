@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Hantumon_Ability4"
+
+	
+	icon="icon.tga"
+	
+	passiveeffect=""
+	
+	stealthtype="hero"
+	fadetime="3000,2250,1500"
+>
+	<oninflict>
+		<startfade />
+	</oninflict>
+
+	<onattack>
+		<startfade a="source_attackduration" />
+	</onattack>
+	
+	<onactivatestart>
+		<startfade a="castduration" />
+	</onactivatestart>
+</state>

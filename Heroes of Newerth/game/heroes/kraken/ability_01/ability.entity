@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Kraken1"
+
+	icon="icon.tga"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="passive"
+	
+	cooldowntime="11000,10000,9000,8000"
+	
+	frontqueue="true"
+>
+	<onattackstart propagatetoillusions="false" >
+		<canactivate>
+			<targettype type="building" />
+			<else>
+				<cantarget targetscheme="enemy_units" effecttype="Physical">
+					<playanim name="ability_3" speed="source_attackspeed" target="source_entity" />
+					<addattackimpactactions>
+						<playeffect effect="effects/cast.effect" source="target_entity" target="" />
+						<spawnaffector name="Affector_Kraken_Ability1_Small" target="target_entity" />
+						<spawnaffector name="Affector_Kraken_Ability1_Large" target="target_entity" />
+						<startcooldown />
+					</addattackimpactactions>
+				</cantarget>
+			</else>
+		</canactivate>
+	</onattackstart>
+	
+	<onattackimpact />
+	
+	<onattack>
+		<reducecooldown duration="1000" />
+	</onattack>
+</ability>

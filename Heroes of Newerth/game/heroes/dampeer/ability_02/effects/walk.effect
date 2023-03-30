@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="1" deferred="true">
+	<definitions>
+
+		<modifier
+			life="500"
+			name="modifier0"
+			startcolor="0 0 0"
+			midcolor="0 0 0"
+			endcolor="1 1 1"
+			midcolorpos="0.25"
+		/>
+	
+		<particlesystem name="system0" space="world">
+			
+			<sound
+				linearfalloff="true"
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".7" 
+				sample="../sounds/cast.wav"
+			/>
+			
+			<model
+				life="400"
+				parentmodel="true"
+				parentskeleton="true"
+				startcolor="1 0 0"
+				endcolor="0 0 0"
+				material="/shared/effects/materials/shell.material"
+				scale="1"
+			/>
+			
+			<simpleemitter
+				position="0 0 100"
+				life="750"
+				spawnrate="5"
+				minparticlelife="500"
+				maxparticlelife="1000"
+				material="/shared/effects/materials/phantom_black.material"
+				offsetsphere="50 50 0"
+				minangle="0"
+				maxangle="360"
+				gravity="-2"
+				speed="10"
+				depthbias="-100"
+				collide="1"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-45"
+					maxanglespeed="45"
+					color="1 1 1"
+					startsize="500"
+					endsize="250"
+					startalpha="0"
+					midalpha=".65"
+					endalpha="0"
+					midalphapos=".25"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				spawnrate="50"
+				count="1"
+				particlelife="5500"
+				offsetsphere="25 25 0"
+				position="0 0 0"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+			>
+				<particle
+				turn="true"
+				>
+					<model
+						position="0 0 0"
+						scale="3.5"
+						minlife="200"
+						maxlife="300"
+						model="model_no_shadow/model.mdf"
+						anim="ability_1"
+						color="1 1 1"
+						startalpha=".8"
+						endalpha="0"
+						midalphapos=".35"
+					>
+					</model>
+					
+				</particle>
+			</simpleemitter>
+			
+			<simpleemitter
+				spawnrate="10"
+				count="5"
+				particlelife="5500"
+				offsetsphere="25 25 0"
+				position="0 0 -50"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+			>
+				<particle
+				turn="true"
+				>
+					<model
+						position="0 0 0"
+						minscale="1.75"
+						maxscale="2.5"
+						minlife="250"
+						maxlife="350"
+						model="model_no_shadow/model.mdf"
+						anim="walk_1"
+						color="1 1 1"
+						startalpha="1"
+						endalpha="0"
+						midalphapos=".35"
+					>
+					</model>
+					
+				</particle>
+			</simpleemitter>
+			
+
+			<billboard
+				life="750"
+				bone="_bone_centerofchest"
+				startcolor=".25 0 .125"
+				midcolor=".25 0 0"
+				endcolor="0"
+				size="200"
+				material="/shared/effects/materials/whitedot.material"
+				depthbias="-50"
+				position="0 -5 0"
+			/>	
+
+			<template name="trail">
+				<trailemitter
+					life="350"
+					spawnrate="50"
+					particlelife="{plife}"
+					texpostime="{tpostime}"
+					texposscale="0.0"
+					texstretchscale=".4"
+					position="{position}"
+					material="/shared/effects/materials/arrow_trail.material"
+				>
+					<particle
+						startcolor=".25 0 0"
+						endcolor="0 0 0"
+						startsize="200"
+						midsize="100"
+						endsize="5"
+						midsizepos="0.2"
+				 />
+				</trailemitter>	
+			</template>
+			
+			<instance name="trail" tpostime="750" plife="750" position="0 75 140"/>
+			<instance name="trail" tpostime="500" plife="500" position="-50 75 140"/>
+			<instance name="trail" tpostime="500" plife="500" position="50 75 140"/>
+
+		</particlesystem>
+	
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+	
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+

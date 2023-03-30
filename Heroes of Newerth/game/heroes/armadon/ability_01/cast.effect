@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale=".75">
+
+			<simpleemitter
+				count="10"
+				bone="_bone_head"
+				spawnrate="1000"
+				minparticlelife="250"
+				maxparticlelife="500"
+				gravity="10"
+				drag=".25"
+				position="0 0 0"
+				offsetsphere="25 25 0"
+				material="/shared/effects/materials/spore_01.material"
+			>
+				<particle
+					maxangle="360"
+					minanglespeed="-6"
+					maxanglespeed="6"
+					startcolor=".8 .8 .3"
+					midcolor=".8 .8 .3"
+					endcolor=".8 .8 .3"
+					startalpha="0"
+					midalpha=".7"
+					endalpha="0"
+					minstartsize="0"
+					maxstartsize="10"
+					minendsize="45"
+					maxendsize="70"
+					startanchor="1"
+					endanchor="0"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				bone="_bone_head"
+				spawnrate="160"
+				count="50"
+				particlelife="550"
+				gravity="5"
+				speed="40"
+				acceleration="0"
+				position="0 0 0"
+				material="/shared/effects/materials/poison_05.material"
+				offsetsphere="1 1 1"
+				minangle="0"
+				maxangle="180"
+				direction="0 0 1"
+				offsetdirection="0 0 0"
+				offsetradial="0 0 0"
+				inheritvelocity="0.1"
+			>
+				<particle 
+					minangle="0"
+					maxangle="0"
+					minanglespeed="0"
+					maxanglespeed="0"
+					startcolor=".8 .8 .05"
+					midcolor=".8 .6 .05"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					startframe="0"
+					endframe="1"
+					startsize="20"
+					midsize="20"
+					endsize="20"
+					midsizepos=".8"
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".3"
+					turn="true"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				count="5"
+				bone="_bone_head"
+				spawnrate="380"
+				particlelife="250"
+				gravity="2"
+				speed="120"
+				drag=".02"
+				direction="0 0 1"
+				minangle="0"
+				maxangle="30"
+				acceleration="0.0"
+				position="0 0 0"
+				offsetsphere="20 20 0"
+				material="/shared/effects/materials/splatter_blend.material"
+				inheritvelocity=".05"
+			>
+				<particle
+					minangle="-360"
+					maxangle="360"
+					angle="180"
+					color=".8 .6  .0 "
+					anglespeed="20"
+					frame=".5"
+					startsize="75"
+					endsize="0"
+					startalpha="0"
+					midalpha=".5"
+					endalpha="0"
+					
+				/>
+			</simpleemitter>
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

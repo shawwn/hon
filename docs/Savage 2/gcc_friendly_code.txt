@@ -1,0 +1,139 @@
+HOWTO: Write gcc (and linux) friendly code
+
+
+This will list the things which I have seen in the Savage 2 source which gcc has a problem with.  Do not worry about making changes to existing code.  I have already made all the changes to my local copy and will apply them with my first commit.  This is mainly so that future code you write will (hopefully) not have these issues.
+
+I'll be adding to this list if I notice anymore things.  If clarification is required for any of these points, just ask and I'll do my best to better explain it.
+
+	- Michael (aka WhiteDwarf)
+
+
+1.  Scope of for loops
+
+Under gcc, variables declared inside the first part of a for loop are inside the scope of the for loop.  For example, from c_material.cpp:
+
+[code]
+	for (vector<CMaterialSampler>::iterator itSampler = m_vSamplers.begin(); itSampler != m_vSamplers.end(); ++itSampler)
+	{
+		if (itSampler->GetName() == sName)
+			return *itSampler;
+	}
+	
+	return *itSampler;
+[/code]
+
+itSampler belongs to the scope of the for loop, making the compilier produce an unknown identifier error when it reaches the return statement.  The solution is, of course, to move the variable declaration outside the loop.
+
+
+2. Inline assembly
+
+gcc uses AT&T assembly syntax and has it's own method of including the assembly in the code.  Here is an example from c_console.cpp which demonstrates it's usage.
+
+[code]
+#ifdef __GNUC__
+	asm("int $0x03");
+#else
+ 	__asm int 0x03;
+[/code]
+#endif
+
+__GNUC__ is defined when gcc is being used to compile the file so it is an ideal define to test for when dealing with gcc specific code
+
+
+3. Forward declaration of enums
+
+This is not premitted using gcc (the compilier doesn't know how many bytes to set aside for the enum).  The enums which need to be forward declared can be moved to common_types.h.  This is what I have done in my codebase.
+
+
+4. Inline functions
+
+All functions which are defined in headers must be inline functions to avoid problems with the linking step.  As well, it is necessary to use the inline keyword in the function's definition in addition to the function's prototype in the class definition.  Any functions which are defined in the class definition do not require the inline keyword.
+
+
+5.  Friend functions
+
+Friend functions in classes which have parameters which are templates require special attention.  For example the following section of code in c_matrix3x3.h causes multiple errors in gcc:
+
+[code]
+template <class T>
+class CMatrix3x3
+{
+ 	template <class T> friend CVec3<T>	Multiply(const CVec3<T> &a, const CMatrix3x3<T> &b);
+	template <class T> friend CMatrix3x3<T> Multiply(const CMatrix3x3<T> &a, const CMatrix3x3<T> &b);
+[/code]
+
+The solution is to place the friend function prototypes before the class definition, for example:
+
+[code]
+template <class T> class CMatrix3x3;
+template <class T> CVec3<T>	Multiply(const CVec3<T> &a, const CMatrix3x3<T> &b);
+template <class T> CMatrix3x3<T> Multiply(const CMatrix3x3<T> &a, const CMatrix3x3<T> &b);
+template <class T>
+class CMatrix3x3
+{
+	friend CVec3<T>	Multiply <> (const CVec3<T> &a, const CMatrix3x3<T> &b);
+	friend CMatrix3x3<T> Multiply <> (const CMatrix3x3<T> &a, const CMatrix3x3<T> &b);
+[/code]
+
+
+6.  Filesystems
+
+Linux filesystems are case sensitive, so be careful when using #include to include headers.
+
+
+7.  Enums inside classes
+
+The enum values are right in the class namespace.  There is no need to go through the enum type. For exmpla, in c_treemodel.cpp:
+
+[code]
+#ifdef __GNUC__
+			case CSpeedTreeRT::CO_BOX:
+#else
+			case CSpeedTreeRT::ECollisionObjectType::CO_BOX:
+#endif
+[/code]
+
+
+8.  Goto past variable initialization
+
+gcc throws an error when it encounters a goto that skips over one or more variable's initialization, such as in c_worldtree.cpp.
+
+
+9.  STLPort and hash_map
+
+In STLPort (and SGI STL), hash_map is located in the std namespace (not the stdex).  You can test for STLPort using #ifdef _STLPORT_VERSION
+
+
+10.  Redeclaration of template classes as non-template
+
+In files such as c_slider_handle.h, which declare class CVec2 (or any other template class as a non-template), this declaration causes a compilier error under gcc (redeclaration of 'CVec2<T>' as non-template).  In all instances I have come across, these forward declarations are unnecessary as the relevant header has already been included.
+
+
+11.  STLPort:  map iterator's erase
+
+The return type for associative containers (such as a map) erase is void using STLPort.  In this implementation, an iterator is still valid after the remove() for associative containers, so it is safe to just increment the iterator:
+
+MSVC STL usage:
+[code]
+			it = m_mapInstances.erase(it);
+[/code]
+
+STLPort usage:
+[code]
+			m_mapInstances.erase(it);
+[/code]
+
+
+12.  Required use of typename
+
+In function implementations in a class definition (such as in c_boundingbox.h:44), gcc will not see the template parameter as a template param (is that the correct terminology?  I've spent most of the last while with c, so I'm a little rusty when it comes to c++).  Instead it will assume it is a type.  It is required to use typename before the type.  For example
+
+[code]
+		for (vector< CVec3<T> >::iterator it(vPoints.begin()); it != vPoints.end(); ++it)
+[/code]
+
+becomes
+
+[code]
+		for (typename vector< CVec3<T> >::iterator it(vPoints.begin()); it != vPoints.end(); ++it)
+[/code]

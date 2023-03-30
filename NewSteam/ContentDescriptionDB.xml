@@ -1,0 +1,477 @@
+<?xml version="1.0" ?>
+<ContentDescriptionRecord>
+	<VersionNum>10</VersionNum>
+	<AllAppsRecord>
+		<AppRecord AppId="13700" >
+			<AppId>13700</AppId>
+			<Name>Savage 2</Name>
+			<InstallDirName>Savage 2</InstallDirName>
+			<MinCacheFileSizeMB>0</MinCacheFileSizeMB>
+			<MaxCacheFileSizeMB>0</MaxCacheFileSizeMB>
+			<AppLaunchOptionsRecord>
+				<AppLaunchOptionRecord LaunchOptionIdx="0" >
+					<Description>Savage 2</Description>
+					<CommandLine>"savage2.exe" Set sys_useSteam true</CommandLine>
+					<AppIconIdx>0</AppIconIdx>
+					<bNoDesktopShortcut>0</bNoDesktopShortcut>
+					<bNoStartMenuShortcut>0</bNoStartMenuShortcut>
+					<bLongRunningUnattended>0</bLongRunningUnattended>
+				</AppLaunchOptionRecord>
+			</AppLaunchOptionsRecord>
+			<AppIconsRecord>
+			</AppIconsRecord>
+			<OnFirstLaunch>4294967295</OnFirstLaunch>
+			<IsBandwidthGreedy>1</IsBandwidthGreedy>
+			<AppVersionsRecord>
+				<AppVersionRecord VersionId="0" >
+					<Description>0.0.0.1</Description>
+					<VersionId>0</VersionId>
+					<bIsNotAvailable>0</bIsNotAvailable>
+					<LaunchOptionIdsRecord>
+						<LaunchOptionId>0</LaunchOptionId>
+					</LaunchOptionIdsRecord>
+					<DepotEncryptionKey></DepotEncryptionKey>
+					<bIsEncryptionKeyAvailable>0</bIsEncryptionKeyAvailable>
+					<bIsRebased>0</bIsRebased>
+				</AppVersionRecord>
+			</AppVersionsRecord>
+			<CurrentVersionId>0</CurrentVersionId>
+			<FilesystemsRecord>
+				<FilesystemRecord FilesystemIdx="0" >
+					<AppId>13701</AppId>
+					<MountName></MountName>
+					<IsOptional>0</IsOptional>
+				</FilesystemRecord>
+			</FilesystemsRecord>
+			<TrickleVersionId>4294967295</TrickleVersionId>
+			<AppUserDefinedRecord>
+				<icon>s2icon.ico</icon>
+				<order>1</order>
+				<state>eStateAvailable</state>
+				<gamedir>Savage 2</gamedir>
+				<homepage></homepage>
+				<NoServers>1</NoServers>
+				<developer></developer>
+				<primarycache>13701</primarycache>
+				<installscript>installscript.vdf</installscript>
+				<serverbrowsername></serverbrowsername>
+			</AppUserDefinedRecord>
+			<BetaVersionPassword>foo</BetaVersionPassword>
+			<BetaVersionId>4294967295</BetaVersionId>
+			<ManifestOnlyApp>1</ManifestOnlyApp>
+		</AppRecord>
+		<AppRecord AppId="13701" >
+			<AppId>13701</AppId>
+			<Name>Savage 2 Depot</Name>
+			<InstallDirName>Savage 2 Depot</InstallDirName>
+			<MinCacheFileSizeMB>1540</MinCacheFileSizeMB>
+			<MaxCacheFileSizeMB>1540</MaxCacheFileSizeMB>
+			<AppLaunchOptionsRecord>
+				<AppLaunchOptionRecord LaunchOptionIdx="0" >
+					<Description>Default</Description>
+					<CommandLine>Savage 2 Depot</CommandLine>
+					<AppIconIdx>0</AppIconIdx>
+					<bNoDesktopShortcut>0</bNoDesktopShortcut>
+					<bNoStartMenuShortcut>0</bNoStartMenuShortcut>
+					<bLongRunningUnattended>0</bLongRunningUnattended>
+				</AppLaunchOptionRecord>
+			</AppLaunchOptionsRecord>
+			<AppIconsRecord>
+			</AppIconsRecord>
+			<OnFirstLaunch>4294967295</OnFirstLaunch>
+			<IsBandwidthGreedy>1</IsBandwidthGreedy>
+			<AppVersionsRecord>
+				<AppVersionRecord VersionId="0" >
+					<Description>1.4.7.0</Description>
+					<VersionId>0</VersionId>
+					<bIsNotAvailable>0</bIsNotAvailable>
+					<LaunchOptionIdsRecord>
+						<LaunchOptionId>0</LaunchOptionId>
+					</LaunchOptionIdsRecord>
+					<DepotEncryptionKey>3FF3F2052BE32EBC6697735078271AAC</DepotEncryptionKey>
+					<bIsEncryptionKeyAvailable>1</bIsEncryptionKeyAvailable>
+					<bIsRebased>0</bIsRebased>
+				</AppVersionRecord>
+				<AppVersionRecord VersionId="1" >
+					<Description>1.4.7.1</Description>
+					<VersionId>1</VersionId>
+					<bIsNotAvailable>0</bIsNotAvailable>
+					<LaunchOptionIdsRecord>
+						<LaunchOptionId>0</LaunchOptionId>
+					</LaunchOptionIdsRecord>
+					<DepotEncryptionKey>3FF3F2052BE32EBC6697735078271AAC</DepotEncryptionKey>
+					<bIsEncryptionKeyAvailable>0</bIsEncryptionKeyAvailable>
+					<bIsRebased>0</bIsRebased>
+				</AppVersionRecord>
+				<AppVersionRecord VersionId="2" >
+					<Description>1.4.7.2</Description>
+					<VersionId>2</VersionId>
+					<bIsNotAvailable>0</bIsNotAvailable>
+					<LaunchOptionIdsRecord>
+						<LaunchOptionId>0</LaunchOptionId>
+					</LaunchOptionIdsRecord>
+					<DepotEncryptionKey>3FF3F2052BE32EBC6697735078271AAC</DepotEncryptionKey>
+					<bIsEncryptionKeyAvailable>0</bIsEncryptionKeyAvailable>
+					<bIsRebased>0</bIsRebased>
+				</AppVersionRecord>
+				<AppVersionRecord VersionId="3" >
+					<Description>1.4.8.0</Description>
+					<VersionId>3</VersionId>
+					<bIsNotAvailable>0</bIsNotAvailable>
+					<LaunchOptionIdsRecord>
+						<LaunchOptionId>0</LaunchOptionId>
+					</LaunchOptionIdsRecord>
+					<DepotEncryptionKey>3FF3F2052BE32EBC6697735078271AAC</DepotEncryptionKey>
+					<bIsEncryptionKeyAvailable>0</bIsEncryptionKeyAvailable>
+					<bIsRebased>0</bIsRebased>
+				</AppVersionRecord>
+				<AppVersionRecord VersionId="4" >
+					<Description>1.4.8.1</Description>
+					<VersionId>4</VersionId>
+					<bIsNotAvailable>0</bIsNotAvailable>
+					<LaunchOptionIdsRecord>
+						<LaunchOptionId>0</LaunchOptionId>
+					</LaunchOptionIdsRecord>
+					<DepotEncryptionKey>3FF3F2052BE32EBC6697735078271AAC</DepotEncryptionKey>
+					<bIsEncryptionKeyAvailable>0</bIsEncryptionKeyAvailable>
+					<bIsRebased>0</bIsRebased>
+				</AppVersionRecord>
+				<AppVersionRecord VersionId="5" >
+					<Description>1.5.0.0</Description>
+					<VersionId>5</VersionId>
+					<bIsNotAvailable>0</bIsNotAvailable>
+					<LaunchOptionIdsRecord>
+						<LaunchOptionId>0</LaunchOptionId>
+					</LaunchOptionIdsRecord>
+					<DepotEncryptionKey>3FF3F2052BE32EBC6697735078271AAC</DepotEncryptionKey>
+					<bIsEncryptionKeyAvailable>0</bIsEncryptionKeyAvailable>
+					<bIsRebased>0</bIsRebased>
+				</AppVersionRecord>
+				<AppVersionRecord VersionId="6" >
+					<Description>1.5.0.1</Description>
+					<VersionId>6</VersionId>
+					<bIsNotAvailable>0</bIsNotAvailable>
+					<LaunchOptionIdsRecord>
+						<LaunchOptionId>0</LaunchOptionId>
+					</LaunchOptionIdsRecord>
+					<DepotEncryptionKey>3FF3F2052BE32EBC6697735078271AAC</DepotEncryptionKey>
+					<bIsEncryptionKeyAvailable>0</bIsEncryptionKeyAvailable>
+					<bIsRebased>0</bIsRebased>
+				</AppVersionRecord>
+				<AppVersionRecord VersionId="7" >
+					<Description>1.5.1.0</Description>
+					<VersionId>7</VersionId>
+					<bIsNotAvailable>0</bIsNotAvailable>
+					<LaunchOptionIdsRecord>
+						<LaunchOptionId>0</LaunchOptionId>
+					</LaunchOptionIdsRecord>
+					<DepotEncryptionKey>3FF3F2052BE32EBC6697735078271AAC</DepotEncryptionKey>
+					<bIsEncryptionKeyAvailable>0</bIsEncryptionKeyAvailable>
+					<bIsRebased>0</bIsRebased>
+				</AppVersionRecord>
+				<AppVersionRecord VersionId="8" >
+					<Description>1.5.4.0</Description>
+					<VersionId>8</VersionId>
+					<bIsNotAvailable>0</bIsNotAvailable>
+					<LaunchOptionIdsRecord>
+						<LaunchOptionId>0</LaunchOptionId>
+					</LaunchOptionIdsRecord>
+					<DepotEncryptionKey>3FF3F2052BE32EBC6697735078271AAC</DepotEncryptionKey>
+					<bIsEncryptionKeyAvailable>0</bIsEncryptionKeyAvailable>
+					<bIsRebased>0</bIsRebased>
+				</AppVersionRecord>
+				<AppVersionRecord VersionId="9" >
+					<Description>1.5.5.0</Description>
+					<VersionId>9</VersionId>
+					<bIsNotAvailable>0</bIsNotAvailable>
+					<LaunchOptionIdsRecord>
+						<LaunchOptionId>0</LaunchOptionId>
+					</LaunchOptionIdsRecord>
+					<DepotEncryptionKey>3FF3F2052BE32EBC6697735078271AAC</DepotEncryptionKey>
+					<bIsEncryptionKeyAvailable>0</bIsEncryptionKeyAvailable>
+					<bIsRebased>0</bIsRebased>
+				</AppVersionRecord>
+				<AppVersionRecord VersionId="10" >
+					<Description>1.6.0.0</Description>
+					<VersionId>10</VersionId>
+					<bIsNotAvailable>0</bIsNotAvailable>
+					<LaunchOptionIdsRecord>
+						<LaunchOptionId>0</LaunchOptionId>
+					</LaunchOptionIdsRecord>
+					<DepotEncryptionKey>3FF3F2052BE32EBC6697735078271AAC</DepotEncryptionKey>
+					<bIsEncryptionKeyAvailable>0</bIsEncryptionKeyAvailable>
+					<bIsRebased>0</bIsRebased>
+				</AppVersionRecord>
+				<AppVersionRecord VersionId="11" >
+					<Description>1.6.1.0</Description>
+					<VersionId>11</VersionId>
+					<bIsNotAvailable>0</bIsNotAvailable>
+					<LaunchOptionIdsRecord>
+						<LaunchOptionId>0</LaunchOptionId>
+					</LaunchOptionIdsRecord>
+					<DepotEncryptionKey>3FF3F2052BE32EBC6697735078271AAC</DepotEncryptionKey>
+					<bIsEncryptionKeyAvailable>0</bIsEncryptionKeyAvailable>
+					<bIsRebased>0</bIsRebased>
+				</AppVersionRecord>
+				<AppVersionRecord VersionId="12" >
+					<Description>1.6.2.0</Description>
+					<VersionId>12</VersionId>
+					<bIsNotAvailable>0</bIsNotAvailable>
+					<LaunchOptionIdsRecord>
+						<LaunchOptionId>0</LaunchOptionId>
+					</LaunchOptionIdsRecord>
+					<DepotEncryptionKey>3FF3F2052BE32EBC6697735078271AAC</DepotEncryptionKey>
+					<bIsEncryptionKeyAvailable>0</bIsEncryptionKeyAvailable>
+					<bIsRebased>0</bIsRebased>
+				</AppVersionRecord>
+				<AppVersionRecord VersionId="13" >
+					<Description>1.6.3.0</Description>
+					<VersionId>13</VersionId>
+					<bIsNotAvailable>0</bIsNotAvailable>
+					<LaunchOptionIdsRecord>
+						<LaunchOptionId>0</LaunchOptionId>
+					</LaunchOptionIdsRecord>
+					<DepotEncryptionKey>3FF3F2052BE32EBC6697735078271AAC</DepotEncryptionKey>
+					<bIsEncryptionKeyAvailable>0</bIsEncryptionKeyAvailable>
+					<bIsRebased>0</bIsRebased>
+				</AppVersionRecord>
+				<AppVersionRecord VersionId="14" >
+					<Description>1.6.4.0</Description>
+					<VersionId>14</VersionId>
+					<bIsNotAvailable>0</bIsNotAvailable>
+					<LaunchOptionIdsRecord>
+						<LaunchOptionId>0</LaunchOptionId>
+					</LaunchOptionIdsRecord>
+					<DepotEncryptionKey>3FF3F2052BE32EBC6697735078271AAC</DepotEncryptionKey>
+					<bIsEncryptionKeyAvailable>0</bIsEncryptionKeyAvailable>
+					<bIsRebased>0</bIsRebased>
+				</AppVersionRecord>
+				<AppVersionRecord VersionId="15" >
+					<Description>1.6.5.0</Description>
+					<VersionId>15</VersionId>
+					<bIsNotAvailable>0</bIsNotAvailable>
+					<LaunchOptionIdsRecord>
+						<LaunchOptionId>0</LaunchOptionId>
+					</LaunchOptionIdsRecord>
+					<DepotEncryptionKey>3FF3F2052BE32EBC6697735078271AAC</DepotEncryptionKey>
+					<bIsEncryptionKeyAvailable>0</bIsEncryptionKeyAvailable>
+					<bIsRebased>0</bIsRebased>
+				</AppVersionRecord>
+				<AppVersionRecord VersionId="16" >
+					<Description>1.7.0.0</Description>
+					<VersionId>16</VersionId>
+					<bIsNotAvailable>0</bIsNotAvailable>
+					<LaunchOptionIdsRecord>
+						<LaunchOptionId>0</LaunchOptionId>
+					</LaunchOptionIdsRecord>
+					<DepotEncryptionKey>3FF3F2052BE32EBC6697735078271AAC</DepotEncryptionKey>
+					<bIsEncryptionKeyAvailable>0</bIsEncryptionKeyAvailable>
+					<bIsRebased>0</bIsRebased>
+				</AppVersionRecord>
+				<AppVersionRecord VersionId="17" >
+					<Description>1.7.1.0</Description>
+					<VersionId>17</VersionId>
+					<bIsNotAvailable>0</bIsNotAvailable>
+					<LaunchOptionIdsRecord>
+						<LaunchOptionId>0</LaunchOptionId>
+					</LaunchOptionIdsRecord>
+					<DepotEncryptionKey>3FF3F2052BE32EBC6697735078271AAC</DepotEncryptionKey>
+					<bIsEncryptionKeyAvailable>0</bIsEncryptionKeyAvailable>
+					<bIsRebased>0</bIsRebased>
+				</AppVersionRecord>
+				<AppVersionRecord VersionId="18" >
+					<Description>1.7.2.0</Description>
+					<VersionId>18</VersionId>
+					<bIsNotAvailable>0</bIsNotAvailable>
+					<LaunchOptionIdsRecord>
+						<LaunchOptionId>0</LaunchOptionId>
+					</LaunchOptionIdsRecord>
+					<DepotEncryptionKey>3FF3F2052BE32EBC6697735078271AAC</DepotEncryptionKey>
+					<bIsEncryptionKeyAvailable>0</bIsEncryptionKeyAvailable>
+					<bIsRebased>0</bIsRebased>
+				</AppVersionRecord>
+				<AppVersionRecord VersionId="19" >
+					<Description>1.7.3.0</Description>
+					<VersionId>19</VersionId>
+					<bIsNotAvailable>0</bIsNotAvailable>
+					<LaunchOptionIdsRecord>
+						<LaunchOptionId>0</LaunchOptionId>
+					</LaunchOptionIdsRecord>
+					<DepotEncryptionKey>3FF3F2052BE32EBC6697735078271AAC</DepotEncryptionKey>
+					<bIsEncryptionKeyAvailable>0</bIsEncryptionKeyAvailable>
+					<bIsRebased>0</bIsRebased>
+				</AppVersionRecord>
+				<AppVersionRecord VersionId="20" >
+					<Description>1.7.4.0</Description>
+					<VersionId>20</VersionId>
+					<bIsNotAvailable>0</bIsNotAvailable>
+					<LaunchOptionIdsRecord>
+						<LaunchOptionId>0</LaunchOptionId>
+					</LaunchOptionIdsRecord>
+					<DepotEncryptionKey>3FF3F2052BE32EBC6697735078271AAC</DepotEncryptionKey>
+					<bIsEncryptionKeyAvailable>0</bIsEncryptionKeyAvailable>
+					<bIsRebased>0</bIsRebased>
+				</AppVersionRecord>
+				<AppVersionRecord VersionId="21" >
+					<Description>1.7.5.0</Description>
+					<VersionId>21</VersionId>
+					<bIsNotAvailable>0</bIsNotAvailable>
+					<LaunchOptionIdsRecord>
+						<LaunchOptionId>0</LaunchOptionId>
+					</LaunchOptionIdsRecord>
+					<DepotEncryptionKey>3FF3F2052BE32EBC6697735078271AAC</DepotEncryptionKey>
+					<bIsEncryptionKeyAvailable>0</bIsEncryptionKeyAvailable>
+					<bIsRebased>0</bIsRebased>
+				</AppVersionRecord>
+				<AppVersionRecord VersionId="22" >
+					<Description>1.7.6.0</Description>
+					<VersionId>22</VersionId>
+					<bIsNotAvailable>0</bIsNotAvailable>
+					<LaunchOptionIdsRecord>
+						<LaunchOptionId>0</LaunchOptionId>
+					</LaunchOptionIdsRecord>
+					<DepotEncryptionKey>3FF3F2052BE32EBC6697735078271AAC</DepotEncryptionKey>
+					<bIsEncryptionKeyAvailable>0</bIsEncryptionKeyAvailable>
+					<bIsRebased>0</bIsRebased>
+				</AppVersionRecord>
+				<AppVersionRecord VersionId="23" >
+					<Description>1.7.7.0</Description>
+					<VersionId>23</VersionId>
+					<bIsNotAvailable>0</bIsNotAvailable>
+					<LaunchOptionIdsRecord>
+						<LaunchOptionId>0</LaunchOptionId>
+					</LaunchOptionIdsRecord>
+					<DepotEncryptionKey>3FF3F2052BE32EBC6697735078271AAC</DepotEncryptionKey>
+					<bIsEncryptionKeyAvailable>0</bIsEncryptionKeyAvailable>
+					<bIsRebased>0</bIsRebased>
+				</AppVersionRecord>
+				<AppVersionRecord VersionId="24" >
+					<Description>1.7.8.0</Description>
+					<VersionId>24</VersionId>
+					<bIsNotAvailable>0</bIsNotAvailable>
+					<LaunchOptionIdsRecord>
+						<LaunchOptionId>0</LaunchOptionId>
+					</LaunchOptionIdsRecord>
+					<DepotEncryptionKey>3FF3F2052BE32EBC6697735078271AAC</DepotEncryptionKey>
+					<bIsEncryptionKeyAvailable>0</bIsEncryptionKeyAvailable>
+					<bIsRebased>0</bIsRebased>
+				</AppVersionRecord>
+				<AppVersionRecord VersionId="25" >
+					<Description>1.7.9.0</Description>
+					<VersionId>25</VersionId>
+					<bIsNotAvailable>0</bIsNotAvailable>
+					<LaunchOptionIdsRecord>
+						<LaunchOptionId>0</LaunchOptionId>
+					</LaunchOptionIdsRecord>
+					<DepotEncryptionKey>3FF3F2052BE32EBC6697735078271AAC</DepotEncryptionKey>
+					<bIsEncryptionKeyAvailable>0</bIsEncryptionKeyAvailable>
+					<bIsRebased>0</bIsRebased>
+				</AppVersionRecord>
+				<AppVersionRecord VersionId="26" >
+					<Description>1.8.0.0</Description>
+					<VersionId>26</VersionId>
+					<bIsNotAvailable>0</bIsNotAvailable>
+					<LaunchOptionIdsRecord>
+						<LaunchOptionId>0</LaunchOptionId>
+					</LaunchOptionIdsRecord>
+					<DepotEncryptionKey>3FF3F2052BE32EBC6697735078271AAC</DepotEncryptionKey>
+					<bIsEncryptionKeyAvailable>0</bIsEncryptionKeyAvailable>
+					<bIsRebased>0</bIsRebased>
+				</AppVersionRecord>
+				<AppVersionRecord VersionId="27" >
+					<Description>2.0.0.0</Description>
+					<VersionId>27</VersionId>
+					<bIsNotAvailable>0</bIsNotAvailable>
+					<LaunchOptionIdsRecord>
+						<LaunchOptionId>0</LaunchOptionId>
+					</LaunchOptionIdsRecord>
+					<DepotEncryptionKey>3FF3F2052BE32EBC6697735078271AAC</DepotEncryptionKey>
+					<bIsEncryptionKeyAvailable>0</bIsEncryptionKeyAvailable>
+					<bIsRebased>0</bIsRebased>
+				</AppVersionRecord>
+				<AppVersionRecord VersionId="28" >
+					<Description>2.0.0.1</Description>
+					<VersionId>28</VersionId>
+					<bIsNotAvailable>0</bIsNotAvailable>
+					<LaunchOptionIdsRecord>
+						<LaunchOptionId>0</LaunchOptionId>
+					</LaunchOptionIdsRecord>
+					<DepotEncryptionKey>3FF3F2052BE32EBC6697735078271AAC</DepotEncryptionKey>
+					<bIsEncryptionKeyAvailable>0</bIsEncryptionKeyAvailable>
+					<bIsRebased>0</bIsRebased>
+				</AppVersionRecord>
+				<AppVersionRecord VersionId="29" >
+					<Description>2.0.1.0</Description>
+					<VersionId>29</VersionId>
+					<bIsNotAvailable>0</bIsNotAvailable>
+					<LaunchOptionIdsRecord>
+						<LaunchOptionId>0</LaunchOptionId>
+					</LaunchOptionIdsRecord>
+					<DepotEncryptionKey>3FF3F2052BE32EBC6697735078271AAC</DepotEncryptionKey>
+					<bIsEncryptionKeyAvailable>0</bIsEncryptionKeyAvailable>
+					<bIsRebased>0</bIsRebased>
+				</AppVersionRecord>
+				<AppVersionRecord VersionId="30" >
+					<Description>2.0.2.0</Description>
+					<VersionId>30</VersionId>
+					<bIsNotAvailable>0</bIsNotAvailable>
+					<LaunchOptionIdsRecord>
+						<LaunchOptionId>0</LaunchOptionId>
+					</LaunchOptionIdsRecord>
+					<DepotEncryptionKey>3FF3F2052BE32EBC6697735078271AAC</DepotEncryptionKey>
+					<bIsEncryptionKeyAvailable>0</bIsEncryptionKeyAvailable>
+					<bIsRebased>0</bIsRebased>
+				</AppVersionRecord>
+				<AppVersionRecord VersionId="31" >
+					<Description>2.1.0.0</Description>
+					<VersionId>31</VersionId>
+					<bIsNotAvailable>0</bIsNotAvailable>
+					<LaunchOptionIdsRecord>
+						<LaunchOptionId>0</LaunchOptionId>
+					</LaunchOptionIdsRecord>
+					<DepotEncryptionKey>3FF3F2052BE32EBC6697735078271AAC</DepotEncryptionKey>
+					<bIsEncryptionKeyAvailable>0</bIsEncryptionKeyAvailable>
+					<bIsRebased>0</bIsRebased>
+				</AppVersionRecord>
+			</AppVersionsRecord>
+			<CurrentVersionId>0</CurrentVersionId>
+			<FilesystemsRecord>
+			</FilesystemsRecord>
+			<TrickleVersionId>4294967295</TrickleVersionId>
+			<BetaVersionPassword>foo</BetaVersionPassword>
+			<BetaVersionId>4294967295</BetaVersionId>
+			<AppOfManifestOnlyCache>13700</AppOfManifestOnlyCache>
+		</AppRecord>
+	</AllAppsRecord>
+	<AllSubscriptionsRecord>
+		<SubscriptionRecord SubscriptionId="0" >
+			<SubscriptionId>0</SubscriptionId>
+			<Name>Savage 2</Name>
+			<BillingType>NoCost</BillingType>
+			<CostInCents>0</CostInCents>
+			<SubscriptionAppIdsRecord>
+				<AppId>13700</AppId>
+			</SubscriptionAppIdsRecord>
+			<OnSubscribeRunAppId>4294967295</OnSubscribeRunAppId>
+			<OnSubscribeRunLaunchOptionIdx>4294967295</OnSubscribeRunLaunchOptionIdx>
+		</SubscriptionRecord>
+		<SubscriptionRecord SubscriptionId="1" >
+			<SubscriptionId>1</SubscriptionId>
+			<Name>Savage 2 Depot</Name>
+			<BillingType>NoCost</BillingType>
+			<CostInCents>0</CostInCents>
+			<SubscriptionAppIdsRecord>
+				<AppId>13701</AppId>
+			</SubscriptionAppIdsRecord>
+			<OnSubscribeRunAppId>4294967295</OnSubscribeRunAppId>
+			<OnSubscribeRunLaunchOptionIdx>4294967295</OnSubscribeRunLaunchOptionIdx>
+		</SubscriptionRecord>
+	</AllSubscriptionsRecord>
+	<LastChangedExistingAppOrSubscriptionTime>2008-04-16T02:42:57.718000Z</LastChangedExistingAppOrSubscriptionTime>
+	<AllAppsPublicKeysRecord>
+		<AppPublicKeyData KeyIdx="13701" >0x30819d300d06092a864886f70d010101050003818b0030818702818100a564d4a9cbfdc0337a4641af319a716383c1f0dbc56f2eb82b7b082cfd486c4365dba76d8b4f5b8e8844c3b0525b4058137402ccfbc80f95dbee72277c740b9349a4eba32a9a93b2280b1e7eb1f5c9515fe8faf2cb5825524015d11a2370720e16fba1851bb52b7b5951cfcf742b159945eb5e956d8e9bd2c28c3033b1f6f229020117</AppPublicKeyData>
+	</AllAppsPublicKeysRecord>
+	<AllAppsEncryptedPrivateKeysRecord>
+		<AppPrivateKeyData KeyIdx="13701" >0xc547f4720ebf8d33b18d09d906d833a7a0ebb37636c95ab3238aa0761c7837835bf24a6e8985738f8891a4132e51f9f614561a6ce93232dc152f08921af2fba977d37df474d8476fa464312774831bd55751a5f96859fd7e307587c200cbe7cc888c88b0b14265c7d3648b15834ac308bc0ba0ed75cef1da7a19e460f515380665755b9e96bb1092e5e9dd7f9b824a40c20ddf8aeefb08aebe978669d369629caaba6f6064614a2456daee45c6930e65f22451582fdb2b9cafcb5c2f90e8b6234269925f3709daae417ed62e8f392f8dc0601aada14ec066bcb2156304e0d763558f1ceb4c16e8681ff65f876c4af7786a8a993c579a5c561d9a4c006c68fce193b782cde2329ccc4b328f0ada923f4d417b978dacc30074d7d90b0703ca654f375c97b4c3af8d23a2253651862b9ed9575eaf4fb28400ab1f5dc5d9d97d3dfcaeb7900a1313ac140a91068008f66855999ec42e9a86ff68f3e8ca14ddb99fd7d695d2547ccf42d9bc38927f5f004cc593b792cc923eeae9e8914a5cd43ec79b8d99dc90a76b826db0a8c3a7434bf71f9059d8e5a64a9cb755214b1a1b4bffd8c087eb65e2fa20ad3e5f3d4d021f54ff70f8fb23b8cc6e00a5bd48d3d2c7db67a7635906fc41f43fcf4c1f4048977f016ac00cfbdc914e1628b01ee506d24eafd6ccb5394062ef98c81c785e35f2015102d49156e7ab95d9c0155a50eba038281307b4d971811a647b9d85fb43c48714b8a8755aa8e791e464c7fee1504c8fd5a80580bbae7f31ea405b6c9bc4c4ab113c8b6bd5a51f46d4604920afea522404f559a8e9653fd5c50c43a9f72d30d4b7385c431d5f289c092479b13cf6c132465fa7589e28b9b950f2f70436b3b44ae03023f433e775f56379dfeccc8033b0380afc44a23f17b01cd6452ac01eaf0e84a57704d1cd03ee1aa39cb12b4d1cc8ab39875e11</AppPrivateKeyData>
+	</AllAppsEncryptedPrivateKeysRecord>
+</ContentDescriptionRecord>

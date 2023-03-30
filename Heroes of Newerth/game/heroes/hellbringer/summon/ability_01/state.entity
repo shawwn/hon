@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Malphas_Ability1"
+
+	
+	
+	icon="icon.tga"
+	passiveeffect="state.effect"
+>
+	<onframe >
+		<damage effecttype="Magic Splash DOT" amount="20,30,40" b="frametime" op="mult"/>
+	</onframe>
+</state>

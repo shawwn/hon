@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="rig_death.max" file="nade_bones.model" type="K2" >
+<anim name="idle" clip="nade_bones.clip" loop="1"/>
+<anim name="idle3" clip="nade_bones3.clip" loop="1"/>
+</model>
+

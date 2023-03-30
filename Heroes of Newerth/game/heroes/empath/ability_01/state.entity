@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Empath_Ability1_Boobme"
+
+	
+	
+	icon="icon.tga"
+	passiveeffect=""
+	
+	healthregen="20,35,50,65"
+
+	effecttype="StatusBuff"
+	
+>
+	<ondeath>
+		<printdebuginfo />
+		<expirestate name="State_Empath_Ability1_Boobed" target="this_owner_target_entity" />
+		<expirestate name="State_Empath_Boobable" target="this_owner_target_entity" />
+	</ondeath>
+</state>

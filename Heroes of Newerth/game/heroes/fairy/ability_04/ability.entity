@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Fairy4"
+
+	statuseffecttooltip=""
+	
+	icon="icon.tga"
+	
+	anim="ability_4"
+	casttime="0"
+	castactiontime="0"
+	channeltime="4000"
+	ischanneling="true"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_position"
+	targetradius="250"
+	casteffecttype="SuperiorMagic"
+	targetscheme="ally_heroes"
+	casteffect="channel.effect"
+
+	manacost="90,150,210"
+	cooldowntime="60000"
+	
+	notargetradius="2500"
+	notargetmaterial="/shared/materials/area_cast_indicator_simple_red.material"
+	notargetscheme="Nymphora_NoPortGadget"
+	notargetignoreinvulnerable="true"
+	
+	range="999999"
+>
+	<onimpact />
+	<onchannelstart>
+		<spawnunit name="Gadget_Fairy_Ability4" target="target_position" pushentity="true" ischannel="true" />
+		<spawnunit name="Gadget_Fairy_Ability4_Aura" target="source_entity" ischannel="true" />
+		<spawnaffector name="Affector_Fairy_Ability4" target="source_entity" proxy="stack_entity" ischannel="true" />
+	</onchannelstart>
+	
+	<modifier key="ult_boost" modpriority="100"
+		displayname="true"
+		interface="single_plus_one"
+	>
+		<aura state="State_Fairy_Ability4_UltBoost" radius="0" targetscheme="self" />
+	</modifier>
+</ability>

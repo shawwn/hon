@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="model_high.max" file="tar.model" type="K2" >
+
+	
+	<anim name="idle" clip="tar.clip" loop="1"/>
+</model>

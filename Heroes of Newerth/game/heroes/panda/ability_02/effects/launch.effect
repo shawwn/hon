@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" useentityeffectscale="true">
+	<definitions>
+		<particlesystem name="system0" space="world">
+		
+			
+
+		<template name="trail">	
+			<twopointtrailemitter
+			 	bone_a="{bone_a}"
+				bone_b="{bone_b}"
+				spawnrate="44"
+				particlelife="300"
+				texpostime="300"
+				texposscale="0.0"
+				texstretchscale="1.0"
+				material="/shared/effects/materials/swoosh_add.material"
+				subframepos="true"
+			>
+	         	<particle
+					startcolor=".1 .5 1"
+					endcolor="0 0 0" 
+				/>
+			</twopointtrailemitter>
+		</template>
+		
+			<instance name="trail"
+			 	bone_a="Bip01 L Clavicle"
+				bone_b="Bip01 L Hand"
+			/>
+				
+			<instance name="trail"
+				bone_a="Bip01 R Clavicle"
+				bone_b="Bip01 R Hand"
+				/>
+					
+			<instance name="trail"
+				bone_a="Bip01 R Foot"
+				bone_b="Bip01 R Thigh"
+				/>
+
+			<instance name="trail"
+				bone_a="Bip01 L Foot"
+				bone_b="Bip01 L Thigh"
+			/>
+						
+			<instance name="trail"
+				bone_a="Bip01 Pelvis"
+				bone_b="Bip01 Head"
+			/>
+			
+			<instance name="trail"
+				bone_a="Box15"
+				bone_b="Box12"
+			/>			
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+

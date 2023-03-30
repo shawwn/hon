@@ -1,0 +1,29 @@
+-update changelog, commit
+-edit shell_common.h to increment version #, commit it
+-full rebuild. commit new build:
+
+k2.dll
+savage2.exe 
+vid_d3d9.dll
+/game/cgame.dll  
+/game/game.dll 
+/game/game_shared.dll
+/editor/cgame.dll
+/modelviewer/cgame.dll
+
+
+- run /src/archive.bat to archive the pdb's
+
+-if someone else has made the latest patch, copy over texture-high/med/low.s2z from beta directory to cvs
+-launch CVS's savage2
+-turn off host_dynamicresreload if it's on
+-go to the different interfaces incase they have something new, load up the game
+-run command "textureloadtime" it'll report any textures missing from the archives
+-if missing, do "addtexturetoarchive <file name>" (by default this uses arguments '0 1 2' for different levels of quality) UNLESS it's an interface texture, then use "0 0 0" to not downsize
+- do addvolumetexturetoarchive if it is an animated/multi pictured texture
+-run command "generateupdate s2gpatch Pajerada" (this is username/password). will take a while.
+
+
+
+
+

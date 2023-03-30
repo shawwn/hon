@@ -1,0 +1,20 @@
+36 undev'd atm as of 4/16. Adding 10:
+this week: Electrician + Xalynx
+4/20-4/24: Jereziah + Puppet Master
+4/27-5/1: Ophelia + Nomad + fairy
+5/4-5/8: Revenant + Maliken + Drow
+
+Hero details:
+Name			Side			Attribute
+
+Electrician 		hellbourne		strength
+Xalynx			hellbourne		int
+Jereziah		Legion			Strength
+Puppet Master		hellbourne		int
+Ophelia			Legion			int
+Nomad			Legion			agi
+fairy			Legion			int
+Revenant		hellbourne		int
+Maliken			hellbourne		strength
+Drow			hellbourne		agi
+

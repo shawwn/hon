@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pet
+	name="Pet_Rampage_Ability4"
+
+	icon="icon.tga"
+	portrait="icon.tga"
+	model="/shared/models/invis.mdf"
+	skin=""
+	
+	isunit="false"
+	
+	passiveeffect=""
+	spawneffect=""
+	respawneffect=""
+	selectsound=""
+	orderconfirmedsound=""
+	
+	canturn="1"
+	
+	preglobalscale="1.0"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="64"
+	boundsradius="16"
+	isselectable="false"
+	iscontrollable="false"
+	selectionradius="40"
+	targetoffset="0 0 0"
+	
+	maxhealth="1"
+	armor="0"
+	healthregen="0"
+	invulnerable="true"
+	nothreat="true"
+
+	movespeed="522"
+	turnrate="900"
+	turnsmoothing="0.05"
+
+	cancarryitems="false"
+	unitwalking="true"
+	
+	deathtime="0"
+	corpsetime="0"
+
+	immunity="GadgetImmunity"
+	
+	canattack="false"
+	ismobile="true"
+	
+	attacktype="melee"
+	combattype="Hero"
+	
+	drawonmap="false"
+	sightrangeday="600"
+	sightrangenight="600"
+	clearvision="true"
+	
+	treewalking="true"
+	
+	lifetime="5000"
+	
+	unittype="PseudoPet"
+>
+	<onspawn>
+		<unbind target="this_proxy_entity" />
+		<bind target="this_proxy_entity" unbindondeath="true" />
+		<order command="follow" force="true" source="target_entity" target="source_entity" />
+	</onspawn>
+</pet>

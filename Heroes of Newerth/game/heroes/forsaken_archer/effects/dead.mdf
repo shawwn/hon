@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="deadpieces.max" file="dead.model" type="K2">
+
+	<anim name="idle" clip="dead.clip" loop="true" fps="65" loopbackframe="-1"/>
+	
+</model>   
+

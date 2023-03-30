@@ -1,0 +1,8 @@
+*.ncb
+*.suo
+*.user
+.settings
+.cproject
+.project
+.sconsign.dblite
+CodeAnalyst

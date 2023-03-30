@@ -1,0 +1,204 @@
+// (C)2009 S2 Games
+// simple_color_flat.psh
+// 
+// ...
+//=============================================================================
+
+//=============================================================================
+// Headers
+//=============================================================================
+#include "../common/common.h"
+#include "../common/fog.h"
+#if (SHADOWS == 1)
+#include "shadowed.h"
+#endif
+
+//=============================================================================
+// Global variables
+//=============================================================================
+float3		vSunPositionWorld;
+
+float3		vAmbient;
+float3		vSunColor;
+
+#if (NUM_POINT_LIGHTS > 0)
+float3		vPointLightPositionOffset[NUM_POINT_LIGHTS];
+float3		vPointLightColor[NUM_POINT_LIGHTS];
+float2		vPointLightFalloff[NUM_POINT_LIGHTS];
+#endif
+
+//=============================================================================
+// Vertex shader output structure
+//=============================================================================
+struct VS_OUTPUT
+{
+	float4 Color0 : COLOR0;
+#if (LIGHTING_QUALITY == 0 || FALLOFF_QUALITY == 0)
+	float3 PositionOffset : TEXCOORDX;
+		#include "../common/inc_texcoord.h"
+#endif
+#if (LIGHTING_QUALITY == 0 || LIGHTING_QUALITY == 1)
+	float3 Normal : TEXCOORDX;
+		#include "../common/inc_texcoord.h"
+#elif (LIGHTING_QUALITY == 2)
+	#ifdef GROUND_AMBIENT
+	float4 DiffLight : TEXCOORDX;
+		#include "../common/inc_texcoord.h"
+	#else
+	float3 DiffLight : TEXCOORDX;
+		#include "../common/inc_texcoord.h"
+	#endif
+#endif
+#if (SHADOWS == 1)
+	float4 TexcoordLight : TEXCOORDX; // Texcoord in light texture space
+		#include "../common/inc_texcoord.h"
+#endif
+#ifdef CLOUDS
+	float2 TexcoordClouds : TEXCOORDX;
+		#include "../common/inc_texcoord.h"
+#endif
+#if ((FOG_QUALITY == 1 && FOG_TYPE != 0) || (FALLOFF_QUALITY == 1 && (FOG_TYPE != 0 || SHADOWS == 1)) || FOG_OF_WAR == 1)
+	float4 Last : TEXCOORDX;
+		#include "../common/inc_texcoord.h"
+#endif
+};
+
+//=============================================================================
+// Pixel shader input structure
+//=============================================================================
+struct PS_OUTPUT
+{
+	float4 Color : COLOR;
+};
+
+#ifdef CLOUDS
+sampler clouds;
+#endif
+
+#if (FOG_OF_WAR == 1)
+sampler fogofwar;
+#endif
+
+//=============================================================================
+// Pixel Shader
+//=============================================================================
+PS_OUTPUT PS( VS_OUTPUT In )
+{
+	PS_OUTPUT Out;
+	
+	float4 cDiffuseColor = In.Color0;
+	
+#if (LIGHTING_QUALITY == 0)
+	float3 vCamDirection = -normalize(In.PositionOffset);
+#endif
+
+#if (FOG_TYPE != 0 || SHADOWS == 1)
+	#if (FALLOFF_QUALITY == 1)
+	float fCamDistance = In.Last.z;
+	#else
+	float fCamDistance = length(In.PositionOffset);
+	#endif
+#endif
+		
+	//
+	// Shadowing
+	//
+	
+#if (SHADOWS == 1)
+	float fShadow = ShadowedD(In.TexcoordLight, fCamDistance);
+#else // SHADOWS == 0
+	float fShadow = 1.0f;
+#endif
+		
+	//
+	// Lighting
+	//	
+	
+#if (LIGHTING != 0)
+	
+	float3 vDiffuse = vAmbient;
+
+	#if (LIGHTING_QUALITY == 2)
+		#ifdef GROUND_AMBIENT
+	vDiffuse *= In.DiffLight.w;
+		#endif
+	#elif (LIGHTING_QUALITY == 0 || LIGHTING_QUALITY == 1)
+	float3 vNormal = normalize(In.Normal);
+	
+		#ifdef GROUND_AMBIENT
+	vDiffuse *= (dot(vNormal, float3(0.0f, 0.0f, 1.0f)) * 0.375f + 0.625f);
+		#endif
+	#endif
+	
+	// Sun
+	#if (LIGHTING_QUALITY == 2)
+
+	vDiffuse += In.DiffLight.xyz * fShadow;
+
+	#else // 0 or 1
+		
+		float3 vLight = vSunPositionWorld;
+		
+	float fLit = saturate(dot(vNormal, vLight)) * fShadow;
+
+		#ifdef CLOUDS
+	float4 cCloudColor = tex2D(clouds, In.TexcoordClouds);
+
+	vDiffuse += vSunColor * fLit * cCloudColor;
+		#else
+	vDiffuse += vSunColor * fLit;
+		#endif
+	
+		#if (NUM_POINT_LIGHTS > 0 && LIGHTING_QUALITY == 0)
+	// Point Lights
+	[unroll(NUM_POINT_LIGHTS)] for (int i = 0; i < NUM_POINT_LIGHTS; ++i)
+	{
+		float3 vDeltaPosition = vPointLightPositionOffset[i] - In.PositionOffset;
+		float fDistance = length(vDeltaPosition);
+	
+		float3 vLight = normalize(vDeltaPosition);
+		float3 vHalfAngle = normalize(vLight + vCamDirection);
+
+		float fAttenuation = 1.0f - saturate(fDistance * vPointLightFalloff[i].x + vPointLightFalloff[i].y);
+		
+		float fLit = saturate(dot(vNormal, vLight)) * fAttenuation;
+		
+		vDiffuse += vPointLightColor[i] * fLit;
+	}
+		#endif
+
+	#endif // LIGHTING_QUALITY
+
+#else // LIGHTING == 0
+	float3 vDiffuse = float3(1.0f, 1.0f, 1.0f);
+#endif
+	
+	//
+	// Fog
+	//
+
+#if (FOG_TYPE != 0) // FOG_NONE
+	#if (FOG_QUALITY == 1)
+	float fFog = In.Last.w;
+	#else
+	float fFog = FogD(fCamDistance);
+	#endif
+#else
+	float fFog = 0.0f;
+#endif
+
+	//
+	// Final
+	//
+	
+	float3 vFinalColor = cDiffuseColor.rgb * vDiffuse;
+		
+#if (FOG_OF_WAR == 1)
+	vFinalColor *= tex2D(fogofwar, In.Last.xy).a;
+#endif
+
+	Out.Color.rgb = lerp(vFinalColor, vFogColor, fFog);
+	Out.Color.a = cDiffuseColor.a;
+
+	return Out;
+}

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+			
+			<billboard
+				bone="_bone_overhead"
+				startcolor=".9 .7 0"
+				midcolor=".8 .5 0"
+				endcolor=".9 .7 0"
+				position="0 0 50"
+				material="/shared/effects/materials/sol.material"
+				startsize="20"
+				endsize="80"
+				depthbias="-60"
+				life="500"
+			/>
+
+			<billboard
+				bone="_bone_overhead"
+				startcolor=".9 .7 0"
+				midcolor="1.8 1.2 0"
+				endcolor=".9 .7 0"
+				position="0 0 35"
+				material="/shared/effects/materials/corona_06.material"
+				startsize="15"
+				midsize="20"
+				endsize="15"
+				pitch="100"
+				depthbias="-160"
+				lockup="1"
+				lockright="1"
+				loop="true"
+				life="900"
+				expirelife="300"
+			/>
+
+			<billboard
+				bone="_bone_overhead"
+				startcolor="1.8 0.4 0"
+				midcolor="1.8 0.4 0"
+				endcolor="1.8 0.4 0"
+				position="0 0 35"
+				material="/shared/effects/materials/sol.material"
+				startsize="15"
+				midsize="50"
+				endsize="15"
+				pitch="100"
+				depthbias="-160"
+				lockup="1"
+				lockright="1"
+				loop="true"
+				life="900"
+				yawspeed="360"
+				expirelife="300"
+			/>
+	
+			<billboard
+				bone="_bone_centerofchest"
+				startcolor="1.8 0.4 0"
+				midcolor="1.8 0.4 0"
+				endcolor="1.8 0.4 0"
+				position="0 0 -10"
+				material="/shared/effects/materials/whitedot.material"
+				startsize="40"
+				midsize="60"
+				endsize="40"
+				directionalspace="world"
+				depthbias="-60"
+				lockup="0"
+				lockright="0"
+				loop="true"
+				life="900"
+				yawspeed="0"
+				expirelife="300"
+			/>			
+		
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

@@ -1,0 +1,51 @@
+// Game Mechanics
+
+// Ability_Devourer1
+Ability_Devourer1_name											Guttling Hook
+Ability_Devourer1_description									The Devourer launches his Guttling Hook at a target unit or location. The first targetable unit that touches the hook will be dragged back to the Devourer.
+Ability_Devourer1_effect_header									Status Effect
+Ability_Devourer1_IMPACT_effect									Deals {4000} Physical damage to target and interrupts channeling abilities.  Drags the target to self.
+Ability_Devourer1_tooltip_flavor								Get over here!
+
+// State_Devourer_Ability1
+State_Devourer_Ability1_name									Hooked
+
+// Ability_Devourer2
+Ability_Devourer2_name											Range
+Ability_Devourer2_description									Increases the range of the hook
+Ability_Devourer2_effect_header									
+Ability_Devourer2_IMPACT_effect									Increases the range of the hook by 100 per level. 8 levels total.
+Ability_Devourer2_tooltip_flavor								Stretch Armstrong!
+
+// State_Devourer_Ability2_Other
+State_Devourer_Ability2_Other_name								
+State_Devourer_Ability2_Other_FRAME_effect						
+
+// State_Devourer_Ability2_Self
+State_Devourer_Ability2_Self_name								
+State_Devourer_Ability2_Self_FRAME_effect						
+
+// Ability_Devourer3
+Ability_Devourer3_name											Speed
+Ability_Devourer3_description									Increases the speed of the hook significantly
+Ability_Devourer3_effect_header									
+Ability_Devourer3_IMPACT_effect									Increases the speed of the hook by 100 per level. 8 levels total.
+Ability_Devourer3_tooltip_flavor								I'm speedy for a fat guy!
+
+// Ability_Devourer4
+Ability_Devourer4_name											Radius
+Ability_Devourer4_description									Increases the hook's touch radius
+Ability_Devourer4_effect_header									
+Ability_Devourer4_IMPACT_effect									Increases the touch radius of the hook by 10 units per level. 8 levels total.
+Ability_Devourer4_tooltip_flavor								BIGGER HOOKS ARE BETTER.
+
+// State_Devourer_Ability4
+State_Devourer_Ability4_name									
+State_Devourer_Ability4_FRAME_effect							
+State_Devourer_Ability4_FRAME_effect:ult_boost					
+
+// Hero_Devourer
+Hero_Devourer_name												Devourer
+Hero_Devourer_description										Consuming and destroying all in its path, the corpulent, putrid Devourer exists only to feed.  No pain can match the agony of its hunger, and so it shrugs off all attacks, spreading its rot and disease across the battlefield like doom itself.
+
+// End - do not delete this line

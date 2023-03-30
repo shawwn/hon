@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Kunas_Ability3"
+
+	radius="800"
+	
+	targetscheme="enemy_heroes"
+	targetselection="all"
+	persist="false"
+	effecttype="Magic"
+	
+	impacteffect="effects/ability_03/static.effect"
+>
+	<onimpact>
+		<damage effecttype="Magic Splash" amount="0.05,0.07,0.09,0.11" b="target_health" op="mult"/>
+		<popup name="bonus_damage" a="result" source="target_entity" target="source_entity" />
+	</onimpact>
+</affector>

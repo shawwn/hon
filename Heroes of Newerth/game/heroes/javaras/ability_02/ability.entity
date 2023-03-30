@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Javaras2"
+	
+	icon="icon.tga"
+	
+	anim="ability_2"
+	casttime="650"
+	castactiontime="250"
+	casteffect="cast.effect"
+	statuseffecttooltip2="State_Javaras_Ability2"
+	statuseffecttooltip="State_Javaras_Ability2_Self"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_position"
+	activatescheme="movement"
+	
+	manacost="60"
+	cooldowntime="12000,10000,8000,6000"
+	
+	allowoutofrangecast="true"
+	range="1000,1075,1150"
+>
+	<onimpact>
+		<teleport interpolate="false" target="target_position" />
+		<areaofeffect
+			radius="500"
+			targetselection="all"
+			targetscheme="ally_heroes"
+			effecttype=""
+			center="target_position"
+			ignore="source_entity"
+		>
+			<applystate name="State_Javaras_Ability2" duration="7000" target="target_entity" />
+		</areaofeffect>
+		<applystate name="State_Javaras_Ability2_Self" duration="10000" target="source_entity" />
+		<disjoint target="source_entity" />
+	</onimpact>
+</ability>

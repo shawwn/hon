@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="rig.max" file="high.model" type="K2" high="high.model" med="med.model" low="low.model" >
+
+	<anim name="idle" clip="clips/default_1.clip" fps="30" loop="true">
+	</anim>
+
+	<anim name="portrait" clip="clips/portrait.clip" loop="true"/>
+	
+	<anim name="attack_1" clip="clips/attack_1.clip" fps="30" loop="false">
+		<frameevent frame="12" cmd="PlaySoundLinear /heroes/hellbringer/summon/sounds/attack_%.wav 400 1800 .65"/>
+	</anim>
+
+	<anim name="attack_2" clip="clips/attack_2.clip" fps="30" loop="false">
+		<frameevent frame="12" cmd="PlaySoundLinear /heroes/hellbringer/summon/sounds/attack_%.wav 400 1800 .65"/>
+		<frameevent frame="10" cmd="PlaySoundLinear /heroes/hellbringer/summon/sounds/attack_grunt_%.wav 1500 2500 .65"/>
+	</anim>
+
+	<anim name="spawn_1" clip="clips/birth_1.clip" fps="30" loop="false">
+		<startevent cmd="StartEffect effects/spawn.effect"/>
+	</anim>
+
+	<anim name="ability_2" clip="clips/fire_1.clip">
+		<frameevent frame="1" cmd="PlaySoundLinear /heroes/hellbringer/summon/ability_02/sounds/ability_02_grunt.wav 1500 2500 .65"/>
+	</anim>
+	
+	<anim name="walk_1" clip="clips/walk_1.clip" fps="36" loop="true">
+		<frameevent frame="18" cmd="StartEffect effects/footstep_right.effect"/>
+		<frameevent frame="6" cmd="StartEffect effects/footstep_left.effect"/>
+	
+		<frameevent frame="1" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="6" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="12" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="18" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="24" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		
+		<frameevent frame="6" cmd="PlaySoundLinear /shared/sounds/footsteps/heavy_%.mp3 0 2400 .22"/>
+		<frameevent frame="6" cmd="StartEffect /shared/effects/footstep_l_#GetTerrainType()#.effect"/>
+
+		<frameevent frame="18" cmd="PlaySoundLinear /shared/sounds/footsteps/heavy_%.mp3 0 2400 .22"/>	
+		<frameevent frame="18" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+	</anim>
+	
+	<anim name="death_1" clip="clips/death_1.clip" fps="30" loop="true" loopbackframe="-1">
+		<frameevent frame="1" cmd="PlaySoundLinear /heroes/hellbringer/summon/sounds/death.wav 1500 2500 .65"/>
+		<frameevent frame="30" cmd="StartEffect effects/death.effect"/>
+	</anim>
+
+	<anim name="knock_1" clip="clips/knock_1.clip" loop="true" loopbackframe="-1"/>
+	
+	<anim name="getup_1" clip="clips/getup_1.clip"/>			
+</model>

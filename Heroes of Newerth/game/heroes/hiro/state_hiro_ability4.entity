@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Hiro_Ability4"
+
+	
+	
+	icon="icons/ability_4.tga"
+	passiveeffect="effects/ability_04/slash.effect"
+	
+	invulnerable="true"
+	silenced="true"
+	immobilized="true"
+	unitwalking="true"
+	
+	effecttype=""
+	modifierkey="Hiro_Ability4"
+>
+
+</state>

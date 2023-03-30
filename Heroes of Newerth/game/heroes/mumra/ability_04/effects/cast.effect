@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="1.5">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2200"
+				volume=".75"
+				sample="../sounds/cast.wav"
+			/>
+		
+			<billboard
+				life="1000"
+				material="/shared/effects/materials/star_03.material"
+				bone="_bone_righteye"
+				color="1 .8 .8"
+				startsize="5"
+				endsize="0"
+				position=" 0 1  0"
+			/>			
+
+			<billboard
+				life="1000"
+				material="/shared/effects/materials/star_03.material"
+				bone="_bone_righteye"
+				color="1 .8 0"
+				startsize="23"
+				endsize="0"
+				position=" 0 1  0"
+			/>
+			
+			<billboard
+				life="222"
+				material="/shared/effects/materials/star_03.material"
+				bone="_bone_righteye"
+				startcolor=".4 .4 .2"
+				endcolor="0 0 0"
+				startsize="23"
+				endsize="100"
+				position=" 0 1  0"
+			/>			
+			
+			<billboard
+				life="1000"
+				material="/shared/effects/materials/star_03.material"
+				bone="_bone_lefteye"
+				color="1 .8 .8"
+				startsize="25"
+				endsize="0"
+				position=" 0 1 0"
+			/>
+			
+			
+			<billboard
+				life="1000"
+				material="/shared/effects/materials/star_03.material"
+				bone="_bone_lefteye"
+				color="1 .8 0"
+				startsize="23"
+				endsize="0"
+				position=" 0 1 0"
+			/>
+			<billboard
+				life="222"
+				material="/shared/effects/materials/star_03.material"
+				bone="_bone_lefteye"
+				startcolor=".4 .4 .2"
+				endcolor="0 0 0"
+				startsize="23"
+				endsize="100"
+				position=" 0 1  0"
+			/>			
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+</effect>
+

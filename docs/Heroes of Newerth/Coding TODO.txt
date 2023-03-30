@@ -1,0 +1,46 @@
+Game code:
+-condition modifiers should use STestRecord
+-combat action based ability activation validation
+-new channeling system
+-new passive ability system based on new the channeling system
+-polish creep/unit blocking
+-regional and ability modified environment settings
+-fix some effects showing up in the fog of war when they shouldn't
+-pet icons next to hero icon at top of screen
+-generic named counters
+-storable entity id per entity and global
+-storable param per entity and global
+-entity lists in combat actions
+-onenter and onleave events for affectors
+
+Renderer:
+-mesh seem stitching
+-tree instancing
+-local lights
+
+Interface:
+-keybinder should read properties by name from game binds (table, action, param)
+
+Other stuff:
+-quick match making (PSR + game options)
+-ladder games (ELO rating per ladder)
+
+Netcode:
+-dead-reckoning based delta compression for unit positions, health, mana, and angles
+
+Low-end renderer:
+-potential map LOD
+-potential effects LODs
+
+Misc engine:
+-auto-configuration
+-multi-threaded resource loading
+-separate thread for renderer
+
+Effects:
+-spawnrate variance
+-embedding support for all particle emitters
+
+Other stuff:
+-ref commands and interface
+-OMG MOTION BLUR

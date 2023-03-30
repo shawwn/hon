@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<linearaffector
+	name="Affector_Hydromancer_Ability1"
+
+	radius="150"
+	minlength="1000"
+	maxlength="1000"
+	
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Magic"
+	
+	effect=""
+	impacteffect=""
+	impactdelay="1000"
+	lifetime="1001"
+>
+	<onimpact>
+		<applystate name="State_Hydromancer_Ability1" duration="1000,1333,1666,2000" />
+	</onimpact>
+</linearaffector>

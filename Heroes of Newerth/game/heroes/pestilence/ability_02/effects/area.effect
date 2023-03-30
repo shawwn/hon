@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1">
+	<definitions>
+
+		
+		
+	<particlesystem name="system0" space="world" scale="1">
+
+		<sound
+			linearfalloff="true" 
+			falloffstart="0"
+			falloffend="2000"
+			volume=".35" 
+			sample="/heroes/rocky/ability_01/sounds/ability_01_impact_%.wav"
+		/>
+		
+	
+		<sound
+			linearfalloff="true" 
+			falloffstart="0"
+			falloffend="2000"
+			volume=".55" 
+			sample="../sounds/impact.wav"
+		/>		
+		<model
+			delay="0"
+			life="700"
+			name="roots"
+			model="sstarm.mdf"
+			anim="idle"
+			expirelife="3000"			
+			directionalspace="local"
+			minyaw="-360"
+			maxyaw="360"
+			startalpha="1.0"
+			midalpha="1"
+			endalpha="1"
+			color="1 1 1"
+			startscale=".9"
+			midscale=".9"
+			endscale="0"
+			midscalepos=".8"
+			
+		>
+		</model>	
+		
+			
+		<terrainemitter
+				position="0 0 10"
+				spawnrate="2200"
+				count="80"
+				particlelife="1500"
+				range="300"
+				direction="0 0 1"
+				minangle="-30"
+				maxangle="30"
+			>
+				<particle
+					
+				>
+					
+					
+					<simpleemitter
+						
+						spawnrate="1000"
+						particlelife="2000"
+						
+						speed="10"
+						count="1"
+						drag="0.18"
+							
+						
+						position="-2 -16 40"
+						
+						
+						material="/shared/effects/materials/smoke_particle.material"
+						offsetsphere="0 0 0"
+					
+					>
+						<particle 
+							minangle="0"
+							maxangle="360"
+							minanglespeed="-30"
+							color=".5 .5 .4"
+							maxanglespeed="30"
+							startsize="53"
+							endsize="191"
+							startalpha=".5"
+							midalpha=".8"
+							endalpha="0"
+							midalphapos=".2"
+							startanchor="0"
+							endanchor="0"					
+						 />			
+
+					</simpleemitter>				
+				
+				</particle>
+					
+		</terrainemitter>
+		
+		<terrainemitter
+				position="0 0 10"
+				spawnrate="2200"
+				count="10"
+				particlelife="1500"
+				range="300"
+				direction="0 0 1"
+				minangle="-30"
+				maxangle="30"
+			>
+				<particle
+					
+				>
+					
+				
+					<debris
+						
+						position="0 0 10"
+						minscale=".35"
+						maxscale=".65"
+						life="4000"
+						model="/shared/effects/models/debris/debris.mdf"
+						anim="idle"	
+						minspeed="100.0"
+						maxspeed="700.0"
+						minrotationspeed="300.0"
+						maxrotationspeed="800.0"
+						gravity="20.0"
+						drag="0.01"
+						color=".4 .4 .5"
+						minangle="0"
+						maxangle="40"
+						collide="true"
+						startalpha="1.0"
+						midalpha="1.0"
+						endalpha="0.0"
+						midalphapos="0.95"
+						bounce="0.5"
+						reflect="0.6"
+						animpose="false"
+					/>				
+				</particle>		
+		</terrainemitter>
+		
+		<terrainemitter
+				position="0 0 10"
+				spawnrate="60"
+				count="10"
+				particlelife="200"
+				range="250"
+				direction="0 0 1"
+				minangle="-30"
+				maxangle="30"
+			>
+				<particle
+					
+				>
+				
+					<billboard
+						material="/shared/effects/materials/light_rays.material"
+						bone="_bone_center"
+						scale="1"
+						width="70"
+						height="330"
+						startcolor="0 .2 0"
+						endcolor="0 0 0"
+						position="0 0 156"						
+						lockup="1"
+						expirelife="1000"
+					/>	
+				
+					
+				</particle>		
+		</terrainemitter>	
+
+		
+      </particlesystem>
+   </definitions>
+   <thread>
+     <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Accursed3"
+
+	icon="icon.tga"
+	statuseffecttooltip="State_Accursed_Ability3_Debuff"
+	statuseffecttooltip2="State_Accursed_Ability3_Buff"
+	
+	anim="ability_1"
+	casttime="1000"
+	castactiontime="500"
+	passiveeffect="ability.effect"
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+	modifierkey="ability3"
+	actiontype="passive"
+>
+	<onattackimpact />
+	<modifier key="attack" modpriority="60" exclusive="true"
+		statuseffecttooltip="State_Accursed_Ability3_Debuff"
+	>
+		<onattackimpact>
+			<compare a="combat_attackability" b="0" op="eq">
+				<cantarget targetscheme="enemy_units" effecttype="Magic">
+					<applystate name="State_Accursed_Ability3_Debuff" duration="2000" />
+					<applystate name="State_Accursed_Ability3_Buff" target="source_entity" duration="4500" />
+					<playeffect effect="../effects/impact.effect" source="target_entity" target="" />
+				</cantarget>
+			</compare>
+		</onattackimpact>
+	</modifier>
+	
+	<modifier key="blue_sword" modpriority="100"
+		passiveeffect="blue_sword.effect"		
+	>
+		<onattackimpact>
+			<compare a="combat_attackability" b="0" op="eq">
+				<cantarget targetscheme="enemy_units" effecttype="Magic">
+					<applystate name="State_Accursed_Ability3_Debuff" duration="2000" />
+					<applystate name="State_Accursed_Ability3_Buff" target="source_entity" duration="4500" />
+					<playeffect effect="../effects/impact.effect" source="target_entity" target="" />
+				</cantarget>
+			</compare>
+		</onattackimpact>
+	</modifier>
+</ability>

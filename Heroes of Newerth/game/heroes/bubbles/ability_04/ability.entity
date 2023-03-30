@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Bubbles4"
+
+	icon="icon.tga"
+	statuseffecttooltip="State_Bubbles_Ability4"
+	
+	anim="ability_4"
+	casttime="600"
+	castactiontime="100"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_position"
+	casteffecttype="SuperiorMagic"
+	targetscheme="enemy_heroes"
+	targetradius="400"
+	targetmaterial="/shared/materials/area_cast_indicator_simple.material"
+	
+	manacost="100,150,200"
+	cooldowntime="85000"
+
+	range="750"
+>
+	<onimpact>
+		<spawnunit name="Gadget_Bubbles_Ability4" target="target_position" pushentity="true" />
+		<playeffect effect="effects/seaweed.effect" source="target_position"/>
+		<areaofeffect
+			radius="400"
+			targetselection="all"
+			targetscheme="enemy_heroes"
+			effecttype="SuperiorMagic"
+		>
+			<cantarget effecttype="Magic">
+				<applystate name="State_Stunned" duration="500" />
+				<damage effecttype="Magic" amount="100,150,200" />
+			</cantarget>
+			<applystate name="State_Bubbles_Ability4" duration="5000" inflictor="stack_entity" proxy="stack_entity" />
+		</areaofeffect>
+	</onimpact>
+</ability>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="Gib_final_reactor09.max" file="gib.model" type="K2" loop="true" loopbackframe="100">
+<anim name="gib" clip="gib.clip" fps="24"/>
+<anim name="death" clip="gib.clip" fps="24"/>
+
+</model>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Electrician_Ability3"
+
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+	effecttype="StatusBuff"
+
+	movespeed="50"
+>
+	<oninflict>
+		<addcharges count="3" />
+		<givemana amount="36,48,60,72" />
+	</oninflict>
+	
+	<onrefresh>
+		<addcharges count="1" />
+		<givemana amount="12,16,20,24" />
+	</onrefresh>
+</state>

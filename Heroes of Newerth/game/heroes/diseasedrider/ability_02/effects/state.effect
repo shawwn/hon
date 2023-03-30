@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1" useentityeffectscale="1">
+	<definitions>
+
+		
+		
+		<particlesystem name="system0" space="world" scale="1.0" >
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2200"
+				volume=".7" 
+				sample="../sounds/cast.wav"
+			/>
+
+
+		<billboard
+			delay="00"		
+			life="200"
+			bone="_bone_centerofchest"		
+			
+			material="/shared/effects/materials/whitedot.material"
+			position="0 0 0"
+			color=".3 0 .6"							
+			
+
+			size="380"
+			endsize="0"
+			midsizepos=".3"
+			depthbias="-100"
+		/>	
+
+		<template name="trail">
+		
+		
+			<twopointtrailemitter				
+				
+				bone_a="{bone_a}"
+				bone_b="{bone_b}"
+				spawnrate="50"
+				
+				position="0 0 0"
+				
+				startminparticlelife="500"
+				startmaxparticlelife="500"		
+				
+				endminparticlelife="1"
+				endmaxparticlelife="1" 
+				directionalspace="local"
+				texpostime="500"
+				texposscale="0"
+				texstretchscale="1"				
+				material="/shared/effects/materials/goo_trail_blend.material"
+			>
+				<particle
+					color=".5 .5 .2"					
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".2"
+					startsize="86"
+					midsize="60"				
+					endsize="62"	
+					
+				/>
+			</twopointtrailemitter>		
+		</template>
+		
+		
+		<model
+			bone="_bone_centerofchest"
+			name="emitter0" 
+			
+			position="0 0 -60"
+			model="model.mdf"
+			yawspeed="0"
+			startyaw="90"
+			endyaw="0"
+			startscale="2"
+			endscale="1.2"
+			color="1 1 1"
+			directionalspace="world"
+			anim="idle"
+			
+			life="400"
+			loop="0"
+			startalpha="0"
+			midalpha="1"
+			endalpha="1"
+		>	
+			<instance name="trail" bone_a="_bone_1_top" bone_b="_bone_1_mid"/>
+			<instance name="trail" bone_a="_bone_2_top" bone_b="_bone_2_mid"/>
+			<instance name="trail" bone_a="_bone_3_top" bone_b="_bone_3_mid"/>
+			<instance name="trail" bone_a="_bone_4_top" bone_b="_bone_4_mid"/>
+		
+		</model>
+	
+		<model
+			bone="_bone_centerofchest"
+			delay="400"
+			name="emitter0" 
+			expirelife="1000"
+			position="0 0 -60"
+			model="model.mdf"
+			yawspeed="-89"
+			yaw="0"
+			startscale="1.20"
+			midscale="1.2"
+			endscale="1"
+			color="1 1 1"
+			directionalspace="world"
+			anim="idle"			
+			
+			loop="1"
+			startalpha="1"		
+			endalpha="0"
+		>
+
+		</model>
+		
+
+
+		
+
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

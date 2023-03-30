@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" useentityeffectscale="1">
+
+	<definitions>
+
+		<particlesystem name="system0" space="entity" scale="0.65">
+
+			<billboard
+				life="1000"
+				bone="_bone_head"
+				material="/shared/effects/materials/whitedot.material"	
+				startscale="1"
+				endscale="3"
+				startcolor="0 0 0 "
+				midcolor=".2 .3 1"
+				endcolor="0 0 0 "
+				depthbias="00"
+				position="0 22  0"
+			/>
+			<billboard
+				life="1000"
+				bone="_bone_head"
+				material="/shared/effects/materials/whitedot.material"	
+				startscale="1"
+				endscale="2"
+				startcolor="0 0 0 "
+				midcolor=".2 .3 1"
+				endcolor="0 0 0 "
+				depthbias="-300"
+				position="0 22  0h"
+			/>
+
+			
+			<simpleemitter
+				life="300"
+				spawnrate="183"
+				bone="_bone_head"
+				particlelife="500"			
+				gravity="-1.5"
+				speed="4"
+				offsetsphere="64 250 0"
+				position="0 33 7"
+				direction="0 0 1"
+				material="/shared/effects/materials/whitedot.material"
+			>						
+				<particle 
+					startcolor="0 0 0"
+					midcolor=".2 .5 1"
+					endcolor="1 1  1"
+					size="3"
+					endsize="4"
+					startstickiness="0"
+					endstickiness="1"			
+				/>	
+				
+			
+				<particle 
+					size="25"
+					color="0 0 .4"
+					startstickiness="0"
+					endstickiness="1"			
+				/>	
+				
+			</simpleemitter>
+			
+			
+			<simpleemitter
+				life="2200"
+				spawnrate="13"
+				bone="_bone_centerofchest"
+				particlelife="1000"			
+				gravity="-1.5"
+				speed="4"
+				offsetsphere="62 62 0"
+				position="0 0 10"
+				direction="0 0 1"
+			>
+				<particle>
+					
+					<simpleemitter					
+						count="1"
+						particlelife="1000"			
+						speed="0"
+						drag="0"
+						position="0 0 -25"					
+						acceleration="0"
+						material="/shared/effects/materials/whitedot.material"
+					>
+						<particle
+							startcolor="0 0 0"
+							midcolor=".2 .4 .8"
+							endcolor="0 0 0"
+							midalphapos="0.9"
+							startsize="0"
+							endsize="64"
+							lockup="true"
+							pitch="90"
+							anchor="1"
+						/>
+					</simpleemitter>	
+
+					<simpleemitter					
+						count="1"
+						particlelife="800"			
+						speed="0"
+						drag="0"
+						position="0 0 12"					
+						acceleration="0"
+						material="/shared/effects/materials/whitedot.material"
+					>
+						<particle
+							startcolor="0 0 0"
+							midcolor=".2 .4 .7"
+							endcolor="0 0 0"
+							midalphapos="0.9"
+							startheight="30"
+							endheight="400"
+							width="10"
+							position="0 0 4"
+							lockup="true"
+							pitch="0"
+							anchor="1"
+						/>
+					</simpleemitter>
+				</particle>
+			</simpleemitter>
+
+		</particlesystem>
+	
+		<particlesystem name="system1" space="world" scale="1.5">
+
+			<trackeremitter
+				life="2200"
+				targetbone="_bone_centerofchest"
+				tracktype="angular"
+				trackspeed="18.0" 				
+				spawnrate="10"
+				particlelife="1300"
+				gravity="-50"
+				offsetsphere="30 30 30"
+				minspeed="10.0"
+				maxspeed="120.0"
+				position="0 0 30"
+				targetposition="0 0 0"
+				acceleration="30.0"
+				direction="0.0 0.0 1.0"
+				distancelife="true"
+			>
+				<particle>	
+					
+					<trailemitter
+						name="trail_01"
+						life="333"
+						bone="Box03"
+						spawnrate="30"
+						startminparticlelife="1000"
+						startmaxparticlelife="1000"		
+						inheritvelocity="0.15"
+						endminparticlelife="1"
+						endmaxparticlelife="1" 
+						texpostime="2000"
+					 	texposscale="1.8"
+					 	texstretchscale="0"
+						material="/shared/effects/materials/arrow_trail.material"
+					>
+						<particle
+							startcolor="0 1 1"
+							midcolor=".3 .12 .5"
+							endcolor=".0 0 .0"
+							startsize="0"
+							midsize="3"
+							endsize="0"
+							midcolorpos=".3"
+							midsizepos=".1"
+							
+						/>
+					</trailemitter>	
+										
+					<simpleemitter					
+						count="1"
+						particlelife="600"	
+						delay="700"
+						material="/shared/effects/materials/whitedot.material"
+					>
+						<particle
+							startcolor="0 0 0"
+							midcolor=".1 .6 .6"
+							endcolor="0 0 0"
+							midalphapos="0.9"
+							startheight="30"
+							endheight="30"
+							width="10"
+							position="0 0 24"
+							lockup="true"
+							pitch="0"
+							anchor="1"
+						/>
+					</simpleemitter>						
+				</particle>	
+				
+			</trackeremitter>
+
+			<simpleemitter
+				life="3000"
+				
+				spawnrate="5"
+				bone="_bone_centerofchest"
+				particlelife="1860"			
+				gravity="-5"
+				acceleration="0"
+				material="/shared/effects/materials/flare2.material"
+				offsetsphere="11"
+				angle="0"
+				position="0 0 -50"
+			>
+				<particle 
+					startcolor="0"
+					midcolor=".1 .1 .2"
+					endcolor="0"
+					startsize="5"
+					midsize="100"
+					endsize="25"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					pitch="0"
+					lockup="1"
+					startheight="110"
+					endheight="600"
+					anchor="1"
+				/>
+			</simpleemitter> 
+
+			<billboard
+				life="2500"
+				startsize="300"
+				endsize="700"
+				position="0 0 70"
+				material="/shared/effects/materials/flare_01.material"
+				startcolor=".1 .1 .5"
+				midcolor=".1 .1 .5"
+				endcolor="0 0 0"
+			/>
+
+	
+			
+		</particlesystem>
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnparticlesystem instance="instance1" particlesystem="system1" />
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+	</thread>
+
+</effect>

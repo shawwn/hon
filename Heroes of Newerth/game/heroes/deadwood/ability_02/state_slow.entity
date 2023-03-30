@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Deadwood_Ability2_Slow"
+
+	icon="icon.tga"
+	passiveeffect=""
+
+	movespeedslowstart="0.75"
+	movespeedslowend="0.0"
+	
+	effecttype="StatusDebuff"
+>
+	<onframe />
+</state>

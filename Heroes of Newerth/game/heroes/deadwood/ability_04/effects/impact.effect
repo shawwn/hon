@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="ability_04_impact" useentityeffectsscale="true">
+	<definitions>
+		<modifier
+			name="modifier0"
+			life="1000"
+			startcolor="1 1 1"
+			endcolor="1 1 1"
+		/>
+
+		<particlesystem name="system0" space="world" scale="1.35">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2500"
+				volume=".65"
+				sample="../sounds/impact.wav"
+			/>
+
+			<billboard
+				life="500"
+				color="1 1 1"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos="0.75"
+				startparam=".05"
+				endparam="0"
+				startsize="128"
+				endsize="348"
+				depthbias="0"
+				position="0 0 20"
+				material="/shared/effects/materials/refract_ring.material"
+				lockup="true"
+				pitch="90"
+			/>	
+			
+			<billboard
+				delay="0"
+				bone="_bone_centerofchest"
+				life="250"
+				param="0.05"	
+				startsize="175"
+				endsize="75"
+				startalpha="0"
+				midalpha=".75"
+				endalpha="0"				
+				depthbias="0"
+				material="/shared/effects/materials/refract_swell.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+			/>
+			
+			<billboard
+				delay="250"
+				bone="_bone_centerofchest"
+				life="250"
+				param="0.05"	
+				startsize="175"
+				endsize="75"
+				startalpha="0"
+				midalpha=".75"
+				endalpha="0"				
+				depthbias="0"
+				material="/shared/effects/materials/refract_swell.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+			/>
+
+			
+			<simpleemitter
+				life="600"
+				count="10"
+				position="0 0 50"
+				spawnrate="500"				
+				particlelife="1000"
+				gravity="-3.0"
+				offsetsphere="50 50 0"
+				direction="0 0 1"	
+          		material="/shared/effects/materials/dust.material"
+				depthbias="-40"
+         	>
+				<particle
+					startcolor="0 0 0"
+					endcolor="0"
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="0"
+					midcolorpos=".1"
+					maxanglespeed="0"
+					startsize="50"			
+					endsize="100"			
+					startalpha=".5"
+					endalpha="0"
+					
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				minangle="-90"
+				maxangle="-90"
+				bone="_bone_centerofchest"
+				life="400"
+				spawnrate="650"
+				count="20"
+				minparticlelife="500"
+				maxparticlelife="1000"
+				speed="1000"
+				drag="0.1"
+				gravity="-10"
+				offsetsphere="50 50 0"
+				material="/shared/effects/materials/dust_smoke_02.material"
+			>
+				<particle
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="-150"
+					maxanglespeed="150"
+					turn="1"
+					color="0 0 0"
+					startsize="30"
+					minendscale="6"
+					maxendscale="10"
+					startalpha=".125"
+					midalpha=".125"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				minangle="-90"
+				maxangle="-90"
+				bone="_bone_centerofchest"
+				life="400"
+				spawnrate="650"
+				count="20"
+				minparticlelife="500"
+				maxparticlelife="1000"
+				speed="1000"
+				drag="0.1"
+				gravity="-10"
+				offsetsphere="50 50 0"
+				material="/shared/effects/materials/dust_smoke_02.material"
+			>
+				<particle
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="-150"
+					maxanglespeed="150"
+					turn="1"
+					color="0 0 0"
+					startsize="30"
+					minendscale="6"
+					maxendscale="10"
+					startalpha=".125"
+					midalpha=".125"
+					endalpha="0"
+				/>
+			</simpleemitter>
+			
+			
+			<billboard
+				bone="_bone_centerofchest"
+				life="650"
+				color=".25 .125 .05"
+				midcolor=".25 .125 .05"
+				endcolor="0 0 0"
+				startsize="175"
+				endsize="75"
+				startalpha="0"
+				midalpha=".75"
+				endalpha="0"				
+				depthbias="0"
+				material="/shared/effects/materials/whitedot.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+			/>
+
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0"  particlesystem="system0" />	
+	  <spawnmodifier instance="instance1" modifier="modifier0"/>  
+	   <camerashake2 scale="15.0" radius="1500" duration="400" frequency="22" />
+	  <waitfordeath instance="instance0" />
+	  <waitfordeath instance="instance1" />	  
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

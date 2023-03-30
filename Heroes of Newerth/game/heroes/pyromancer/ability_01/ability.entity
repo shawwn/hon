@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Pyromancer1"
+
+	icon="icon.tga"
+	
+	anim="ability_1"
+	casttime="1400"
+	castactiontime="500"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_dual_position"
+	casteffecttype="Magic"
+	targetscheme="all_other_organic_units"
+	
+	manacost="90,105,125,140"
+	cooldowntime="9000"
+	
+	range="700"
+>
+	<onimpact>
+		<spawnaffector name="Affector_Pyromancer_Ability1" proxy="source_entity" target="source_position" />
+		<spawnaffector name="Affector_Pyromancer_Ability1_Damage" target="source_position" distance="80" param="owner_counter" />
+	</onimpact>
+</ability>

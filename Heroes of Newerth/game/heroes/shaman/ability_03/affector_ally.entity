@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Shaman_Ability3"
+
+	radius="500"
+
+	maximpactsperinterval="1"
+	maximpactspertarget="1"
+	targetscheme="ally_units"
+	targetselection="closest"
+	effecttype="Magic"
+	persist="true"
+	
+	impacteffect="effects/impact.effect"
+	linkeffect="effects/link.effect"
+>
+	<onimpact>
+		<heal a="80,100,120,140" />
+		<chain count="2,2,3,4"/>
+		<spawnaffector name="Affector_Shaman_Ability3_Damage" target="target_entity"/>
+	</onimpact>
+</affector>

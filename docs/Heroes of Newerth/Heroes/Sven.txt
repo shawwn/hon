@@ -1,0 +1,22 @@
+Ability 1:
+----------
+Targets an enemy unit. Stuns the target and deals magical damage. 
+
+
+Ability 2:
+----------
+Deals your attack damage to nearby enemy units. See cleave mechanics for more details.
+
+
+Ability 3:
+----------
+Aura. Gives bonus armor to nearby allies.
+
+
+Ultimate:
+----------
+Gives you a percentage bonus damage off of your base damage
+
+
+
+Strength/Melee

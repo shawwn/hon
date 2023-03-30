@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" useentityeffectscale="1" deferred="true">
+
+	<definitions>
+
+		<modifier
+			name="modifier0"
+			
+			
+			color="10 5 1"
+			
+			midcolorpos=".8"
+			endcolor="1.0 1.0 1.0"
+		/>	
+	
+		<particlesystem name="system0" space="world" scale="1">
+
+			
+			<light						
+				life="200"
+				startcolor="0 0 0"
+				endcolor="3 1 0"			
+				
+				falloffstart="220"
+				falloffend="400"
+				position="0 0 55"					
+			/>			
+			<light						
+				delay="200"
+				expirelife="1200"
+				startcolor="3 1 0"			
+				endcolor="0 0 0"
+				falloffstart="220"
+				falloffend="400"
+				position="0 0 55"					
+			/>
+			
+			<model
+				expirelife="1000"
+				parentmodel="true"
+				parentskeleton="true"
+				startcolor="5 1 0"
+				endcolor=" 0 0 0"
+				startscale="1"
+				midscale="1"
+				endscale="1"
+				midscalepos=".4"
+				material="/shared/effects/materials/shell2.material"
+				startalpha="1"
+				endalpha="2"
+			/>
+			
+		
+		
+		</particlesystem>
+	</definitions>
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<spawnmodifier instance="instance1" modifier="modifier0"/>  
+
+	<waitfordeath instance="instance1" />
+</thread>
+
+</effect>

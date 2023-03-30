@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect persistent="1" name="ability_01_impact">
+	<definitions>
+	
+		
+		<particlesystem name="system0" space="entity"  scale="0.5">
+		
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".8"
+				sample="../sounds/impact.wav"
+			/>
+
+			<simpleemitter			
+				count="1"
+				particlelife="5000"
+				spawnrate="10000"
+				gravity="-0"
+				speed="0.0"
+				acceleration="0.0"		
+				position="0 0 10"			
+				
+				
+			>
+				<particle>	
+
+
+
+					<template name="pulse">
+						<billboard
+							delay="{delay}"
+							life="600"
+							startcolor=".4 .1 0"
+							endcolor="0 0 0"
+							
+							startalpha="1.0"
+							midalpha="1.0"
+							endalpha="0.0"
+							midalphapos="0.75"
+							startparam="0.05"
+							endparam="0.0"				
+							
+							startsize="50"
+							
+							endsize="250"
+							midsizepos=".4"				
+							
+							depthbias="0"
+							position="0 0 20"
+							material="/shared/effects/materials/corona_06.material"
+							lockup="true"
+							pitch="90"
+						/>
+					
+					</template>		
+					<instance name="pulse" delay="133"/>
+					<instance name="pulse" delay="280"/>
+					
+
+									
+				
+					
+					<simpleemitter		
+						life="200"
+						position="0 0 0"
+						spawnrate="200"			
+						particlelife="1800"
+						gravity="0"
+						material="/shared/effects/materials/cartoon_dust.material"
+						offsetsphere="10 10 10"
+						direction="0 0 1"
+						minangle="50"
+						maxangle="90"
+						drag="0.04"
+
+						minspeed="222"
+						maxspeed="400"
+						directionalspace="local"
+						inheritvelocity="0.2"			
+					>
+						<particle
+							minangle="-360"
+							maxangle="360"
+							minanglespeed="-270"
+							maxanglespeed="270"
+							startsize="30"				
+							endsize="90"
+							depthbias="-100"
+							startcolor=".40.4 .2"
+							endcolor="0 0 0"	
+							
+							startalpha="1"
+							midalpha="1"
+							endalpha="0"
+							midalphapos=".25"
+						/>
+					</simpleemitter>
+							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				
+					<simpleemitter			
+						count="8"
+						spawnrate="1055"
+						particlelife="220"
+						gravity="0"
+						minspeed="22.0"
+						maxspeed="22"
+						acceleration="0.0"
+						timenudge="0"
+						position="0 0 0"
+						offsetsphere="0 0 0"						
+						material="/shared/effects/materials/cartoon_pop1.material"
+						
+					>
+						<particle
+							startcolor="1 1 1"
+							endcolor="1 .4 0"
+							
+							startalpha="1"							
+							endalpha="0"
+						    startscale="35"
+							endscale="190"
+							turn="true"
+						/>
+					</simpleemitter>			
+				</particle>
+			</simpleemitter>			
+
+		
+      </particlesystem>
+   </definitions>
+   <thread>
+   
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+		
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

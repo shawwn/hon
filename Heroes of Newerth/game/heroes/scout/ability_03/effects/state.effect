@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1" useentityeffectscale="1">
+
+	<definitions>
+
+		<particlesystem deferred="true" name="system0" space="world" scale="1">
+		
+			<billboard
+				life="700"
+				startalpha="1"			
+				midalpha=".4"
+				endalpha="1"
+				loop="1"
+				position="0 0 140"
+				size="60"
+				bone="_bone_overhead"
+				material="/shared/effects/materials/disarm.material"
+				roll="120"
+			/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

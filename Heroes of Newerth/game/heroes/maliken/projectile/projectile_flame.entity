@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_MalikenAttack_Flame"
+
+	speed="1200"
+	gravity="0"
+	modelscale="1.25"
+	model="effects/skull.mdf"
+
+	traileffect="effects/trail_flame.effect"
+	impacteffect="effects/impact_flame.effect"
+>
+
+</projectile>

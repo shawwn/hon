@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect>
+	<definitions>
+		<particlesystem name="system0" space="entity">
+
+			<template name="glow">
+				<billboard
+					bone="{bone}"
+					size="70"
+					color="1 .5 0"
+					alpha="1"
+					material="/shared/effects/materials/flare_01.material"
+					position="0 0 3"
+					lockup="true"
+					pitch="270"
+				/>
+			</template>
+
+			<instance name="glow" bone="_bone_fx_01"/>
+			<instance name="glow" bone="_bone_fx_02"/>
+			<instance name="glow" bone="_bone_fx_03"/>
+			<instance name="glow" bone="_bone_fx_04"/>
+			<instance name="glow" bone="_bone_fx_05"/>
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+</effect>

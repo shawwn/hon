@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" useentityeffectscale="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale=".32" useentityscale="true">
+
+			<sound
+				volume=".8" 
+				sample="/heroes/dwarf_magi/ability_03/sounds/ability_03.wav"
+				linearfalloff="true"
+				falloffstart="200"
+				falloffend="1400"
+			/>	
+
+			<simpleemitter
+				bone="_bone_righthand"
+				spawnrate="20"
+				minparticlelife="350"
+				maxparticlelife="1600"
+				minspeed="0"
+				maxspeed="700"
+				drag="0.08"
+				depthbias="-20"
+				offsetsphere="30"
+				angle="30"
+				material="/shared/effects/materials/phantom_smoke_04.material"
+			>
+				<particle
+					maxangle="360"
+					minanglespeed="-150"
+					maxanglespeed="150"
+					startcolor="1 0.3 0"
+					endcolor="0 0 0"
+					minstartsize="30"
+					maxstartsize="45"
+					endsize="60"
+					anchor="0.4"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_righthand"
+				spawnrate="35"
+				minparticlelife="150"
+				maxparticlelife="1400"
+				minspeed="0"
+				maxspeed="700"
+				drag="0.07"
+				angle="70"
+				offsetsphere="25 25 40"
+				material="/shared/effects/materials/femme_fire_01.material"
+			>
+				<particle
+					minangle="-40"
+					maxangle="60"
+					minanglespeed="-110"
+					maxanglespeed="110"
+					startcolor="1 .5 0"
+					endcolor="0"
+					size="15"
+					minendscale="5"
+					maxendscale="6"
+					endstickiness=".3"
+					anchor="0.6"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_righthand"
+				spawnrate="35"
+				minparticlelife="100"
+				maxparticlelife="500"
+				minspeed="0"
+				maxspeed="500"
+				drag="0.05"
+				angle="20"
+				offsetsphere="45"
+				depthbias="-70"
+				material="/shared/effects/materials/femme_lightning_01.material"
+			>
+				<particle
+					minangle="-70"
+					maxangle="70"
+					minanglespeed="-110"
+					maxanglespeed="110"
+					startcolor="1 .4 .1"
+					endcolor="0"
+					size="17"
+					minendscale="5"
+					maxendscale="6"
+					endstickiness=".6"
+					anchor="0.6"
+				/>
+			</simpleemitter>
+
+			<billboard
+				expirelife="300"
+				startcolor=".15 .05 0"
+				endcolor="0"
+				startsize="265"
+				endsize="0"
+				bone="Bip01 R Hand"
+				depthbias="-30"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+
+			<simpleemitter
+				bone="_bone_lefthand"
+				spawnrate="20"
+				minparticlelife="350"
+				maxparticlelife="1600"
+				minspeed="0"
+				maxspeed="700"
+				drag="0.08"
+				depthbias="-20"
+				offsetsphere="30"
+				angle="30"
+				material="/shared/effects/materials/phantom_smoke_04.material"
+			>
+				<particle
+					maxangle="360"
+					minanglespeed="-150"
+					maxanglespeed="150"
+					startcolor="1 0.3 0"
+					endcolor="0 0 0"
+					minstartsize="30"
+					maxstartsize="45"
+					endsize="60"
+					anchor="0.4"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_lefthand"
+				spawnrate="35"
+				minparticlelife="150"
+				maxparticlelife="1400"
+				minspeed="0"
+				maxspeed="700"
+				drag="0.07"
+				angle="70"
+				offsetsphere="25 25 40"
+				material="/shared/effects/materials/femme_fire_01.material"
+			>
+				<particle
+					minangle="-40"
+					maxangle="60"
+					minanglespeed="-110"
+					maxanglespeed="110"
+					startcolor="1 .5 0"
+					endcolor="0"
+					size="15"
+					minendscale="5"
+					maxendscale="6"
+					endstickiness=".3"
+					anchor="0.6"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_lefthand"
+				spawnrate="35"
+				minparticlelife="100"
+				maxparticlelife="500"
+				minspeed="0"
+				maxspeed="500"
+				drag="0.05"
+				angle="20"
+				offsetsphere="45"
+				depthbias="-70"
+				material="/shared/effects/materials/femme_lightning_01.material"
+			>
+				<particle
+					minangle="-70"
+					maxangle="70"
+					minanglespeed="-110"
+					maxanglespeed="110"
+					startcolor="1 .4 .1"
+					endcolor="0"
+					size="17"
+					minendscale="5"
+					maxendscale="6"
+					endstickiness=".6"
+					anchor="0.6"
+				/>
+			</simpleemitter>
+
+			<billboard
+				expirelife="300"
+				startcolor=".35 .1 0"
+				endcolor="0"
+				startsize="265"
+				endsize="0"
+				bone="Bip01 L Hand"
+				depthbias="-30"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+		<waitfordeath instance="instance0"/>
+	</thread>
+
+</effect>

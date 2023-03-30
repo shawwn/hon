@@ -1,0 +1,9 @@
+/.cvsignore///1210979333////
+/cp.cmake///1210979333////
+/find_localizable_strings.sh///1210979333////
+/localization2pot.pl///1210979333////
+/mkdir.cmake///1210979333////
+/po2localization.pl///1210979333////
+/poize.lua///1210979333////
+/rm_recurse.cmake///1210979333////
+/shrinksh.pl///1210979333////

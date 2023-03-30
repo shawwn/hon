@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="bloodimpact_small">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="0.8">
+
+			<sound
+				linearfalloff="true"
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".65"
+				sample="../sounds/impact.wav"
+			/>
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".35"
+				sample="/heroes/xalynx/sounds/impact_%.wav"
+			/>
+
+			<billboard
+				bone="_bone_overhead"
+				life="130"
+				position="0 0 20"
+				startframe="0"
+				scale="1.4"
+				endframe="1"
+				material="/shared/effects/materials/3d_claw.material"
+				startcolor="0 0 1"
+				endcolor="0 0 1"
+			/>
+
+			<billboard
+				life="500"
+				bone="_bone_centerofchest"
+				material="/shared/effects/materials/whitedot.material"
+				startcolor="0 0 0"
+				midcolor="0 .25 .5"
+				endcolor="0 0 0"
+				startsize="125"
+				depthbias="-30"
+			/>
+
+			<billboard
+				bone="_bone_centerofchest"
+				life="200"
+				color="1 1 1"
+				startalpha="1.0"
+				endalpha="1"
+				startparam="0.05"
+				endparam="0.0"
+				startsize="50"
+				endsize="100"
+				material="/shared/effects/materials/refract_pinch.material"
+				lockup="1"
+				pitch="90"
+			/>
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<!--overlay startalpha="1" endalpha="0" duration="1000" material="/shared/effects/textures/blood1.tga"/-->
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+
+

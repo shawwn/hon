@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect>
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+
+			<sound
+				volume=".3"
+				sample="../sounds/impact_%.wav"
+				linearfalloff="true"
+				falloffstart="0" 
+				falloffend="2500" 
+			/>
+
+			<light
+				life="1150"			
+				startcolor="0 0 0"
+				midcolor=".4 1 0"			
+				endcolor="0 0 0"
+				midcolorpos=".2"
+				falloffstart="100"
+				falloffend="200"
+				position="0 0 50"	
+			/>
+
+			<terrainemitter
+				position="0 0 10"
+				spawnrate="300"
+				count="20"
+				particlelife="1500"
+				range="200"
+				direction="0 0 1"
+				minangle="-30"
+				maxangle="30"
+			>
+				<particle
+				>
+					<simpleemitter
+						delay="100"					
+						spawnrate="1000"
+						minparticlelife="300"
+						maxparticlelife="1500"						
+						speed="10"
+						count="2"
+						drag="0.18"					
+						position="-2 -16 40"					
+						material="/shared/effects/materials/dust.material"
+						offsetsphere="25"					
+					>
+						<particle 
+							minangle="0"
+							maxangle="360"
+							minanglespeed="-30"
+							color=".5 .5 .4"
+							maxanglespeed="30"
+							startsize="20"
+							endsize="40"
+							minscale="2"
+							maxscale="5"
+							startalpha="0"
+							midalpha=".6"
+							endalpha="0"
+							midalphapos=".2"
+						 />
+						<particle 
+							minangle="0"
+							maxangle="360"
+							minanglespeed="-10"
+							color=".6"
+							maxanglespeed="10"
+							startsize="20"
+							endsize="40"
+							minscale="2"
+							maxscale="5"
+							startalpha="0"
+							midalpha=".3"
+							endalpha="0"
+							midalphapos=".1"
+						 />			
+
+					</simpleemitter>
+
+					<simpleemitter
+						delay="100"					
+						spawnrate="1000"
+						minparticlelife="300"
+						maxparticlelife="700"						
+						speed="10"
+						count="1"
+						position="-2 -16 40"					
+						material="/shared/effects/materials/sand_blend.material"
+						offsetsphere="45"					
+					>
+						<particle 
+							minangle="0"
+							maxangle="360"
+							minanglespeed="-10"
+							color=".3 .3 .15"
+							maxanglespeed="10"
+							startsize="10"
+							endsize="20"
+							minscale="2"
+							maxscale="5"
+							startalpha="0"
+							midalpha="1"
+							endalpha="0"
+							midalphapos=".3"
+						 />
+
+					</simpleemitter>				
+				
+				</particle>
+					
+			</terrainemitter>
+
+			<terrainemitter
+				delay="100"
+				life="1000"
+				spawnrate="110"
+				count="22"
+				minparticlelife="3110"
+				maxparticlelife="3200"	
+				position="0 0 0"
+				offsetsphere="230 230 0"
+			>	
+				<particle				
+				>
+					<billboard
+						material="/shared/effects/materials/light_rays.material"
+						bone="_bone_center"
+						scale="1"
+						width="21"
+						height="330"
+						startcolor=".1 .2 0"
+						endcolor="0 0 0"
+						position="0 0 156"						
+						lockup="1"
+						life="700"
+					/>		
+					
+					<model
+						minpitch="-10"
+						maxpitch="10"
+						minyaw="-10"
+						maxyaw="10"
+						minroll="-10"
+						maxroll="10"
+						life="800"
+						startcolor="1"
+						midcolor="1"
+						endcolor="0"
+						directionalspace="local"														
+						model="arrow.mdf"
+						anim="idle"
+						scale="0.5"	
+						position="0 0 20"
+					/>
+					
+					<simpleemitter
+						life="1000"
+						spawnrate="3310"
+						count="1"
+						minparticlelife="3110"
+						maxparticlelife="3200"			
+						gravity="0"	
+					>
+						<particle				
+							turn="1"					
+						>
+							<groundsprite
+								life="1000"							
+								material="/shared/effects/materials/earth_cracks_02.material"				
+								size="10"
+								minsize="2"					
+								maxscale="5"					
+								minyaw="-360"
+								maxyaw="360"
+								color="1"
+								startalpha="1"
+								midalpha="1"
+								endalpha="0"
+							/>		
+						</particle>
+
+					</simpleemitter>
+
+				</particle>
+			
+			</terrainemitter>
+		 
+			<simpleemitter
+				life="1000"
+				spawnrate="110"
+				count="12"
+				minparticlelife="3110"
+				maxparticlelife="3200"			
+				minspeed="3000"
+				maxspeed="4000"
+				position="0 0 500"
+				offsetsphere="200 200 0"
+				minangle="0"
+				maxangle="10"
+				direction="0 0 -1"
+			>
+				<particle				
+					turn="1"					
+				>
+					<model	
+						life="800"
+						startcolor="1 1 1"
+						endcolor="0 0 0"
+						directionalspace="local"
+						pitch="90"
+						model="arrow.mdf"
+						anim="idle"
+						scale="0.5"				
+					>
+						<trailemitter
+							bone="_bone_tip"
+							spawnrate="60"
+							particlelife="350"
+							texpostime="350"
+							texposscale="1.8"
+							texstretchscale="0"
+							material="/shared/effects/materials/arrow_trail.material"
+						>
+							<particle
+								startcolor=".3 .5 .0"								
+								endcolor="0"
+								startsize="5"
+								midsize="15"
+								endsize=".5"
+								midsizepos=".3"
+							/>
+						</trailemitter>
+
+						<billboard
+							bone="_bone_tip"
+							material="/shared/effects/materials/arrow_head.material"
+							directionalspace="local"
+							color=".3 1 .0"
+							height="44"
+							width="11"
+							lockright="true"
+							lockup="true"
+							pitch="-90"
+						/>
+						
+					</model>
+
+				</particle>
+
+			</simpleemitter>
+			
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="default_1.max" file="high.model" type="K2">
+
+	<anim name="idle" clip="clips/default_1.clip" loop="true" blendtime="220" />
+
+</model>

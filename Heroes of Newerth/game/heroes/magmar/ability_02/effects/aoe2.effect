@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+		
+		<particlesystem name="system0" space="world" scale="1.2">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2200"
+				volume=".75"
+				sample="../sounds/cast.wav"
+			/>
+
+			<sound
+				soundloop="true"
+				fadein="300"
+				fadeout="700"
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2200"
+				volume=".5"
+				sample="../sounds/state.wav"
+			/>
+
+			<groundsprite				
+				life="500"					
+				material="/shared/effects/materials/ground_smash_overlay.material"
+				size="450"			
+				startalpha="0"					
+				endalpha=".3"
+			/>
+			
+			<groundsprite	
+				delay="500"					
+				material="/shared/effects/materials/ground_smash_overlay.material"
+				size="450"			
+				startalpha=".3"					
+				endalpha="0"
+				expirelife="1500"
+			/>				
+
+			<template name="lava">
+
+				<groundsprite
+					delay="100"
+					position="{position}"
+					material="/shared/effects/materials/earth_cracks_overlay.material"				
+					minsize="100"
+					maxsize="135"				
+					minyaw="0"
+					maxyaw="360"
+					startalpha=".7"
+					midalphapos=".2"
+					midalpha=".7"
+					endalpha="0"
+					expirelife="1500"
+				/>
+
+				<groundsprite
+					position="{position}"
+					material="/shared/effects/materials/ground_smash_overlay.material"
+					size="{size1}"
+					color=".9"				
+					yaw="{yaw1}"
+					startalpha="0"
+					midalphapos=".25"
+					midalpha=".8"
+					endalpha=".8"
+					width="{width}"
+					life="500"
+				/>
+
+				<groundsprite
+					delay="500"
+					position="{position}"
+					material="/shared/effects/materials/ground_smash_overlay.material"				
+					size="{size1}"
+					color=".9"				
+					yaw="{yaw1}"
+					startalpha=".8"
+					midalphapos=".7"
+					midalpha=".8"
+					endalpha="0"
+					width="{width}"
+					expirelife="1200"
+				/>
+
+				<groundsprite
+					position="{position}"
+					material="/shared/effects/materials/crack_1_ground.material"
+					size="{size2}"
+					scale="1.5"
+					yaw="{yaw2}"
+					startcolor="0"
+					midcolorpos=".65"
+					endcolor=".4 .3 .2"		
+					life="500"
+				/>
+
+				<groundsprite
+					delay="500"
+					position="{position}"
+					material="/shared/effects/materials/crack_1_ground.material"				
+					size="{size2}"
+					scale="1.5"
+					yaw="{yaw2}"
+					startcolor=".4 .3 .2"
+					midcolorpos=".75"
+					endcolor="0"		
+					expirelife="500"
+				/>
+
+				<!-- steam explosion  -->
+
+				<simpleemitter
+					position="{position2}"
+					life="400"
+					spawnrate="500"
+					speed="20"
+					drag="0.15"
+					minparticlelife="1000"
+					maxparticlelife="2500"
+					offsetsphere="45"
+					count="20"
+					depthbias="-110"
+					gravity="-2"	
+					minangle="0"
+					maxangle="60"
+          				material="/shared/effects/materials/smoke_particle.material"
+         			>
+					<particle 
+						minangle="0"
+						maxangle="360"
+						minanglespeed="-20"
+						maxanglespeed="20"
+						startcolor=".85"
+						endcolor=".7 .2 0"
+						startalpha=".35"
+						endalpha="0"
+						startsize="70"
+						endsize="125"
+						flare="1"
+					/>
+					<particle 
+						minangle="0"
+						maxangle="360"
+						minanglespeed="-40"
+						maxanglespeed="40"
+						startcolor=".85 .8 .8"
+						endcolor=".7 .2 0"
+						startalpha=".25"
+						endalpha="0"
+						startsize="50"
+						endsize="145"
+						flare="0"
+					/>
+				</simpleemitter>
+
+				<!-- lava flow -->	
+
+				<simpleemitter
+					delay="500"
+					position="{position}"
+					spawnrate="5"
+					particlelife="4000"
+					depthbias="-40"
+					material="/shared/effects/materials/blob_overlay.material"
+					offsetsphere="25 15 0"
+					speed="7"
+					minangle="-90"
+					maxangle="-90"
+					expirelife="200"
+					startparticlealpha="1"
+					endparticlealpha="0"
+				>
+					<particle 
+						minangle="0"
+						maxangle="360"
+						startcolor=".65 .45 .35"
+						midcolorpos=".15"
+						endcolor="0"
+						minsize="20"
+						maxsize="30"
+						lockup="1"
+						lockright="1"
+						pitch="90"
+						startalpha="0"
+						midalphapos=".2"
+						midalpha="1"
+						endalpha="0"
+					/>
+				</simpleemitter>
+
+				<billboard
+					life="500"
+					position="{position2}"
+					material="/shared/effects/materials/whitedot.material"
+					startcolor="0"
+					endcolor=".3 .05 0"
+					size="{size3}"
+					depthbias="-100"
+					lockup="1"
+					pitch="90"
+				/>
+
+				<billboard
+					delay="500"
+					expirelife="1000"
+					position="{position2}"
+					material="/shared/effects/materials/whitedot.material"
+					startcolor=".3 .05 0"
+					endcolor="0"
+					size="{size3}"
+					depthbias="-100"
+					lockup="1"
+					pitch="90"
+				/>
+					
+				<!-- lava bubbles -->
+
+				<simpleemitter
+					position="{position}"
+					spawnrate="8"
+					particlelife="1700"
+					gravity="-1"
+					maxspeed="5"
+					drag=".004"
+					depthbias="-30"
+					material="/shared/effects/materials/blob_add.material"
+					offsetsphere="15 15 5"
+					angle="40"
+					expirelife="200"
+					startparticlecolor="1"
+					endparticlecolor="0"
+				>
+					<particle 
+						minangle="0"
+						maxangle="360"
+						startcolor="0"
+						midcolor=".35 .24 0"
+						endcolor="0"
+						startsize="2"
+						midsize="22"
+						endsize="2"
+						endstickiness=".25"
+					/>
+				</simpleemitter>
+
+				<simpleemitter
+					position="{position}"
+					spawnrate="6"
+					particlelife="1000"
+					gravity="-2"
+					maxspeed="5"
+					drag=".01"
+					depthbias="-40"
+					material="/shared/effects/materials/fire_add.material"
+					offsetsphere="25 25 5"
+				>
+					<particle 
+						minangle="-60"
+						maxangle="60"
+						minanglespeed="-30"
+						maxanglespeed="30"
+						startcolor="0"
+						midcolor=".5 .1 0"
+						endcolor="0"
+						startsize="20"
+						endsize="50"
+						endanchor=".5"
+					/>
+				</simpleemitter>
+
+				<!-- steam from lava pits -->
+
+				<simpleemitter
+					delay="500"
+					expirelife="500"
+					startparticlealpha="1"
+					endparticlealpha="0"
+					spawnrate="20"
+					particlelife="3000"
+					maxspeed="200"
+					drag="0.02"						
+					position="{position}"
+					minangle="0"
+					maxangle="1"
+					direction="0 0 1"
+					material="/shared/effects/materials/smoke_particle.material"
+					offsetsphere="10 10 0"
+				>
+					<particle 
+						minangle="0"
+						maxangle="360"
+						minanglespeed="-30"		
+						maxanglespeed="30"
+						startcolor="1 1 .3"
+						midcolor=".8 .5 .3"
+						midcolorpos=".05"
+						endcolor=".7"
+						startsize="24"
+						midsize="55"
+						endsize="345"
+						midsizepos=".65"
+						startalpha="0"
+						midalpha=".2"
+						endalpha="0"
+						midalphapos=".2"
+					 />			
+
+				</simpleemitter>
+
+			</template>
+
+			<instance name="lava" width="80" size1="135" size2="45" size3="400" yaw1="15" yaw2="-15" position="-170 20 0" position2="-170 20 10" />
+			<instance name="lava" width="30" size1="105" size2="30" size3="200" yaw1="65" yaw2="30" position="280 20 0" position2="280 20 10" />
+			<instance name="lava" width="45" size1="115" size2="55" size3="300" yaw1="125" yaw2="90" position="50 250 0" position2="50 250 10" />
+			<instance name="lava" width="30" size1="55" size2="35" size3="200" yaw1="-45" yaw2="-70" position="150 -350 0" position2="150 -350 10" />
+			<instance name="lava" width="30" size1="172" size2="85" size3="400" yaw1="185" yaw2="150" position="-250 -200 0" position2="-250 -200 10" />
+
+			<!-- cloud  -->
+
+			<simpleemitter	
+				spawnrate="25"			
+				particlelife="1900"			
+				gravity="-.1"
+				speed="60"
+				drag=".01"
+				position="0 0 205"
+				depthbias="-30"
+				material="/shared/effects/materials/smoke_particle.material"
+				offsetsphere="400 400 20"
+				minangle="-265"
+				maxangle="265"
+				direction="0 0 -1"
+			>
+				<particle 
+					startcolor="1 .8 .6"
+					endcolor="1"
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-30"
+					maxanglespeed="30"
+					startsize="235"
+					endsize="455"
+					startalpha="0"
+					midalpha=".25"
+					endalpha="0"
+					lockup="true"
+					pitch="90"
+				/>
+			</simpleemitter>
+
+			<!-- distortion -->
+
+			<simpleemitter	
+				delay="300"	
+				spawnrate="170"			
+				particlelife="500"			
+				gravity="-.1"
+				speed="60"
+				drag=".01"
+				position="0 0 65"
+				depthbias="-200"
+				material="/shared/effects/materials/refract_wellwave.material"
+				offsetsphere="430 420 60"
+				minangle="-265"
+				maxangle="265"
+				direction="0 0 -1"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-10"
+					maxanglespeed="10"
+					startsize="85"
+					endsize="85"
+					param=".0160"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+				/>
+			</simpleemitter>
+			
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<camerashake2 scale="8.0" radius="1200" duration="400" frequency="22" />	
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

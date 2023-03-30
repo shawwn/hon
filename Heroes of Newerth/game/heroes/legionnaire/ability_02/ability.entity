@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Legionnaire2"
+ 
+	icon="icon.tga"
+	statuseffecttooltip="State_Legionnaire_Ability2_Terrify"
+	
+	anim="ability_2_start"
+	casttime="0"
+	castactiontime="0"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_entity"
+	targetscheme="enemy_units"
+	casteffecttype=""
+	
+	frontqueue="true"
+	inheritmovement="true"
+	
+	manacost="40,50,60,70"
+	cooldowntime="30000,26000,22000,18000"
+	novoiceresponse="true"
+	
+	range="1000"
+>
+	<onimpact>
+		<order command="attack" source="source_entity" target="target_entity" queue="front" />
+		<order command="event" source="source_entity" target="target_entity" queue="front" restrict="true" ordername="Order_Legionnaire_Ability2" />
+	</onimpact>
+</ability>

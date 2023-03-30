@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Malphas3"
+
+	
+	
+	statuseffecttooltip="State_Malphas_Ability3"
+	icon="icon.tga"
+	
+	maxlevel="3"
+
+	actiontype="passive"
+>
+	<onattackimpact >
+		<applystate name="State_Malphas_Ability3" duration="3000" />
+	</onattackimpact>
+</ability>

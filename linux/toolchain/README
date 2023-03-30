@@ -1,0 +1,43 @@
+Installation Instructions:
+
+Run the install script either on a linux system or from within cygwin. Everything gets installed under /opt/toolchain. Note that it won't work elsewhere without changing a number of paths in the toolchain binaries/scripts (by using a tool such as the one from crosstool)
+	sh install.sh
+
+Uninstallation Instructions:
+
+Delete /opt/toolchain
+	rm -rf /opt/toolchain
+
+Directory contents:
+
+linux:
+	- Linux build of the toolchain:
+		gcc-4.3.2-glibc-2.3.4.tar.bz2
+		gcc-4.2.2-glibc-2.3.4.tar.bz2 (outdated)
+
+cygwin:
+	- cygwin build of the toolchain:
+		gcc-4.2.2-glibc-2.3.4.tar.bz2 (outdated)
+
+common:
+	- Stub libraries and headers from lsb sdk.  These are the libraries that we don't need to distribute.  They are here merely for linking purposes:
+		lsb-libs-3.1.1.tar.bz2
+	- SpeedTree static library and header:
+		SpeedTreeRT.tar.bz2
+	- FMOD library and headers:
+		fmod-41005.tar.bz2
+	- libpng library and headers:
+		png-1.2.24.tar.bz2
+	- SOIL static library and headers:
+		soil.tar.bz2
+	- FreeType2 library and headers:
+		freetype-2.3.5.tar.bz2
+	- Speex library and headers:
+		speex-1.2beta3.tar.bz2
+	- OpenSSL static library used for cURL:
+		openssl-0.9.8g.tar.bz2
+	- cURL library and headers:
+		curl-7.17.1.tar.bz2
+
+scons:
+	- slightly tweaked (precompiled header support, two-part binary generation) version of scons I am using

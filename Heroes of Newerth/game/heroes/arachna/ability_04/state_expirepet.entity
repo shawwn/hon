@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Arachna_Ability4_ExpirePet"
+
+	
+	ishidden="false"
+	icon="icon.tga"
+	passiveeffect="effects/ability_01_state.effect"
+	revealed="true"
+	
+	effecttype=""
+>
+
+
+	<onexpired>
+		<kill target="proxy_entity" source="" />
+	</onexpired>
+	<ondeath>
+		<kill target="proxy_entity" source="" />
+	</ondeath>
+	
+	<aura
+		gadget="Gadget_Arachna_Ability4"
+		radius="0"
+		targetscheme="self"
+	/> 
+</state>

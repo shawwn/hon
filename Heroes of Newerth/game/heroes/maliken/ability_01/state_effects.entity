@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Maliken_Ability1_Effects"
+
+	
+	
+	ishidden="true"
+>
+	<oninflict>
+			<playeffect effect="effects/blink.effect" source="source_entity"/>
+		</oninflict>
+	
+	<modifier key="swordflame1" modpriority="90"
+	>
+		<oninflict>
+			<playeffect effect="effects/blink_flame.effect" source="source_entity"/>
+		</oninflict>
+	</modifier>
+	
+	<modifier key="swordflame2" modpriority="90"
+	>
+		<oninflict>
+			<playeffect effect="effects/blink_flame.effect" source="source_entity"/>
+		</oninflict>
+	</modifier>
+	
+	<modifier key="swordflame3" modpriority="90"
+	>
+		<oninflict>
+			<playeffect effect="effects/blink_flame.effect" source="source_entity"/>
+		</oninflict>
+	</modifier>
+	
+	<modifier key="swordflame4" modpriority="90"
+	>
+		<oninflict>
+			<playeffect effect="effects/blink_flame.effect" source="source_entity"/>
+		</oninflict>
+	</modifier>
+		
+	<modifier key="swordhealing1" modpriority="90" >
+		<oninflict>
+			<playeffect effect="effects/blink_heal.effect" source="source_entity"/>
+		</oninflict>
+	</modifier>
+		
+	<modifier key="swordhealing2" modpriority="90" >
+		<oninflict>
+			<playeffect effect="effects/blink_heal.effect" source="source_entity"/>
+		</oninflict>
+	</modifier>
+			
+	<modifier key="swordhealing3" modpriority="90" >
+		<oninflict>
+			<playeffect effect="effects/blink_heal.effect" source="source_entity"/>
+		</oninflict>
+	</modifier>
+			
+	<modifier key="swordhealing4" modpriority="90" >
+		<oninflict>
+			<playeffect effect="effects/blink_heal.effect" source="source_entity"/>
+		</oninflict>
+	</modifier>
+	
+</state>

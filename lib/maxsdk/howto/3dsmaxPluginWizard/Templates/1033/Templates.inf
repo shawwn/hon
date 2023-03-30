@@ -1,0 +1,7 @@
+dllentry.cpp
+[!output PLUGINTYPE_TEMPLATE].cpp
+root.h
+root.def
+resource.h
+root.rc
+root.vcproj

@@ -1,0 +1,22 @@
+Ability 1:
+----------
+Ranged Spell, single enemy target. Deals magic damage and interrupts channeling spells.
+
+
+Ability 2:
+----------
+Passive. Makes your attack bounce from target to target, dealing reduced damage with each successive bounce.
+
+
+Ability 3:
+----------
+Aura. Increases base damage of ranged allies.
+
+
+Ultimate:
+----------
+At short intervals, releases nukes (same as first ability) targetting enemy units at random
+
+
+
+Agility/Ranged

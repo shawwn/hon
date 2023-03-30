@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="purgeEffect" deferred="true" useentityeffectsscale="true">
+	<definitions>
+		<particlesystem name="system1" space="world" scale="1.2">
+			
+			<beam
+				life="200"
+				delay="000"
+				owner_b="target"
+				owner_a="source"
+				bone_b="_bone_centerofchest"
+				
+				size="15"
+				color="0 1  1"
+				
+				alpha="1.0"
+				material="/shared/effects/materials/femme_lightning_10.material"
+				startframe=".6"
+				framespeed="5"
+			/>
+			<beam
+				life="200"
+				delay="000"
+				owner_b="target"
+				owner_a="source"
+				bone_b="_bone_centerofchest"
+				
+				size="15"
+				color="0 1  1"
+				
+				alpha="1.0"
+				material="/shared/effects/materials/femme_lightning_10.material"
+				startframe=".2"
+				framespeed="5"
+			/>			
+			
+		
+		</particlesystem>
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnparticlesystem instance="instance1" particlesystem="system1" />	
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+	</thread>
+</effect>
+
+
+
+
+
+
+

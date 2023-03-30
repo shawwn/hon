@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="" file="gunk.model" type="K2">
+	<spawnevent cmd="StartEffect magma_trail.effect" /> 
+ 
+	<anim name="idle" clip="gunk.clip" loop="1" loopbackframe="-1"/>
+</model>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" name="orb" useentityeffectscale="0">
+	<definitions>
+	
+
+
+		<particlesystem name="system0" space="world" scale="3.5">
+
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".8"
+				sample="../sounds/cast.wav"
+			/>
+
+			<simpleemitter
+				
+				count="1"
+				spawnrate="1333"				
+				particlelife="800"								
+												
+				direction="0 0 1"
+				minangle="0"
+				maxangle="0"
+				speed="400"
+				position="0 0 40"
+			>
+				<particle 					
+			
+				>				
+				
+					<model		
+						life="800"
+						color="1 1 1"						
+						position="0 0 0"
+						pitch="90"
+						model="../../projectile/effects/spear.mdf"											
+						scale=".2"
+					>		
+						<trailemitter
+							bone="_bone_weapon3"
+							spawnrate="50"
+							particlelife="800"
+							texpostime="800"
+							texposscale="0.0"
+							texstretchscale=".4"
+							position="0 60 0"
+							material="/shared/effects/materials/arrow_trail.material"
+						>
+							<particle
+								 startcolor=".5 .5 0"
+								 midcolor="0.051 0.2 0.4"
+								 endcolor="0 0 0"
+								 startsize="10"
+								 midsize="60"
+								 endsize="24"
+								 midsizepos="0.2"
+						 />
+						</trailemitter>	
+
+						<trailemitter
+							bone="_bone_weapon2"
+							spawnrate="50"
+							particlelife="800"
+							texpostime="800"
+							texposscale="0.0"
+							texstretchscale=".4"
+							position="0 60 0"
+							material="/shared/effects/materials/arrow_trail.material"
+						>
+							<particle
+								 startcolor=".5 .5 0"
+								 midcolor="0.051 0.2 0.4"
+								 endcolor="0 0 0"
+								 startsize="10"
+								 midsize="60"
+								 endsize="25"
+								 midsizepos="0.2"
+						 />
+						</trailemitter>	
+					</model>	
+
+				</particle>
+			</simpleemitter>
+
+		
+	
+		<billboard
+			delay="0"
+			life="300"
+			position="0 0 250"
+			material="/shared/effects/materials/flare2.material"
+			startheight="1500"
+			midheight="1500"
+			endheight="500"
+			midheightpos=".75"
+			width="5"
+			lockup="1"
+			startcolor=".3 .2 .1"
+			endcolor=".3 .2 .0"			
+			midcolorpos=".9"
+		/>
+		<billboard
+			delay="0"
+			life="300"
+			position="0 0 250"
+			material="/shared/effects/materials/flare2.material"
+			startheight="1500"
+			midheight="1500"
+			endheight="500"
+			midheightpos=".75"
+			width="20"
+			lockup="1"
+			startcolor="0 .3 .4"
+			endcolor="0 0 0"			
+			midcolorpos=".5"
+		/>				
+			
+			<!--
+			<billboard
+				delay="000"
+				life="500"
+				startcolor=".4 .31 0"	
+				endcolor="0 0 0"
+				midalphapos="0.75"
+				startparam="0.05"
+				endparam="0.0"	
+				
+				startsize="000"
+				
+				endsize="240"
+				midsizepos=".4"
+					
+				depthbias="-40"
+				position="0 0 20"
+				material="/shared/effects/materials/corona_07.material"
+				lockup="true"
+				pitch="90"
+			/>				
+
+			<billboard
+				delay="100"
+				life="500"
+				startcolor=".0 .3 .5"	
+				endcolor="0 0 0"
+				midalphapos="0.75"
+				startparam="0.05"
+				endparam="0.0"	
+				
+				startsize="000"
+				
+				endsize="250"
+				midsizepos=".4"
+					
+				depthbias="-40"
+				position="0 0 20"
+				material="/shared/effects/materials/corona_06.material"
+				lockup="true"
+				pitch="90"
+			/>
+			-->
+
+			<billboard
+				delay="000"
+				life="400"
+				color="1.0 1.0 1.0"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="0.0"
+				midalphapos="0.75"
+				startparam=".1"
+				endparam="0.0"
+				startsize="20"
+				endsize="150"
+				depthbias="-60"
+				position="0 0 20"
+				material="/shared/effects/materials/refract_ring.material"
+				lockup="true"
+				pitch="90"
+			/>		
+			
+		
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	<!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

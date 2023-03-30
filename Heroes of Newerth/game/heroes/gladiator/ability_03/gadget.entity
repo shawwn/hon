@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Gladiator_Ability3"
+
+	icon=""
+	portrait=""
+	modelscale="1.75"
+	model="effects/pillars/model.mdf"
+	idleanim="spawn"
+	passiveeffect="effects/state_pillars.effect"
+	
+	boundsheight="0"
+	boundsradius="0"
+	isselectable="false"
+	selectionradius="0"
+	targetoffset="0 0 0"
+
+	canrotate="false"
+	ismobile="false"
+
+	attacktype="none"
+	combattype="Ranged"
+
+	sightrangeday="0"
+	sightrangenight="0"
+	unitwalking="true"
+	canattack="false"
+	deathtime="0"
+	corpsetime="0"
+	invulnerable="true"
+	flying="false"
+	drawonmap="false"
+	
+	lifetime="5000"
+>
+	<ondeath>
+		<playeffect effect="effects/impact.effect" target="" source="target_position" />	
+	</ondeath>
+</gadget>

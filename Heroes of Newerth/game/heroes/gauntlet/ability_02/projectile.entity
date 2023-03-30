@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Gauntlet_Ability2"
+
+	speed="1600"
+	gravity="0"
+
+	canturn="true"
+	flying="true"
+	flyheight="80"
+	
+	touchradius="75"
+	touchradiusdiradjust="true"
+	touchtargetscheme="all_other_heroes"
+	toucheffecttype="Physical"
+>
+	<onspawn>
+		<spawnunit name="Gadget_Gauntlet_Ability2_Hand" target="source_entity" facing="source_entity" angle="180" offset="0 800" offsetspace="this_entity" pushentity="true" duration="-1" />
+		<retarget target="stack_position" />
+		<applystate name="State_Gauntlet_Ability2_Link" inflictor="source_entity" target="stack_entity" duration="-1"/>
+		<bind target="stack_entity" vertical="true" turn="true" />
+		<setparam a="0" />
+	</onspawn>
+	
+	<ontouch>
+		<condition test="param lt 1" >
+			<condition target="target_entity" test="not_hasstate State_Gauntlet_Ability4_Statis">
+				<cantarget targetscheme="all_other_heroes">
+					<combatevent effecttype="AbilityBasedProjectile">
+						<onimpact>
+							<cantarget targetscheme="enemy_heroes">
+								<applystate name="State_Stunned" target="target_entity" duration="1000,1200,1400,1600"/>
+								<damage effecttype="Magic" amount="100,140,180,220" target="target_entity" />
+							</cantarget>
+						</onimpact>
+					</combatevent>	
+					<condition test="result eq 1">
+						<spawnprojectile name="Projectile_Gauntlet_Ability2_Grabbed_Hand" source="target_entity" proxy="target_entity" target="proxy_entity" pushentity="true"/>
+					</condition>
+					<else>
+						<areaofeffect
+							radius="999999"
+							center="target_position"
+							targetselection="all"
+							targetscheme="Gauntlet_Gadget"
+							ignoreinvulnerable="true"
+						>
+							<bind target="target_entity" vertical="true" turn="true" />
+						</areaofeffect>
+						<spawnprojectile name="Projectile_Gauntlet_Ability2_Grabbed" source="source_entity" bind="source_entity" proxy="proxy_entity" bindstate="State_Gauntlet_Ability2" target="proxy_entity" />
+					</else>
+					<delete target="this_entity"/>
+					<setparam a="2" />
+				</cantarget>
+			</condition>
+		</condition>
+	</ontouch>
+	
+	<onimpact>
+		<areaofeffect
+			radius="1"
+			center="target_position"
+			targetselection="all"
+			targetscheme="Gauntlet_Gadget"
+			ignoreinvulnerable="true"
+		>
+			<bind target="target_entity" vertical="true"/>
+			<condition test="param eq 0">
+				<retarget target="this_owner_entity" />
+				<setparam a="1" />
+			</condition>
+			<else>				
+				<kill target="target_entity" source="" />
+				<kill target="proxy_entity" source="" />
+				<expirestate name="State_Gauntlet_NoHand" target="this_owner_entity"/>
+				<expirestate name="State_Gauntlet_Ability2_HeroMod" target="this_owner_entity"/>
+				<order command="attack" force="true" forceduration="150" source="source_entity" target="target_entity" queue="front" />
+			</else>
+		</areaofeffect>
+	</onimpact>
+</projectile>

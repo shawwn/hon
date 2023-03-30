@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1">
+	<definitions>
+
+			<template name="beam">
+				<beam
+					delay="0"
+					life="200"
+					bone_a="_bone_fx_{a}"
+					bone_b="_bone_fx_{b}"
+					size="{size}"
+					color="0 .4 .5"	
+					material="/shared/effects/materials/femme_lightning_10.material"
+					startframe="{frame}"
+					framespeed="5"
+				/>
+				
+				<billboard
+					bone="_bone_fx_{a}"
+					material="/shared/effects/materials/whitedot.material"
+					size="{size}"
+					color="0 .5 .4"	
+					life="100"				 
+				/>
+				
+				<billboard
+					bone="_bone_fx_{b}"
+					material="/shared/effects/materials/whitedot.material"
+					size="{size}"
+					color="0 .5 .4"	
+					life="100"				 
+				/>
+				
+			</template>
+
+		<particlesystem name="system0" space="world">
+		
+			<beam
+				life="550"
+				owner_a="source"
+				owner_b="target"
+				bone_a="_bone_centerofchest"
+				bone_b="_bone_centerofchest"
+				size="40"
+				color="0 .3 .4"
+				alpha="1.0"
+				material="/shared/effects/materials/femme_lightning_10.material"
+				framespeed="1.75"
+			/>
+
+			<beam
+				life="550"
+				owner_a="source"
+				owner_b="target"
+				bone_a="_bone_centerofchest"
+				bone_b="_bone_centerofchest"
+				size="60"
+				color="0 .3 .4"
+				alpha="1.0"
+				material="/shared/effects/materials/femme_lightning_10.material"
+				framespeed="1.75"
+			/>
+
+			<beam
+				life="550"
+				owner_a="source"
+				owner_b="target"
+				bone_a="_bone_centerofchest"
+				bone_b="_bone_centerofchest"
+				size="80"
+				color="0 .3 .4"
+				alpha="1.0"
+				material="/shared/effects/materials/femme_lightning_06.material"
+				framespeed="1.75"
+			/>
+
+			<sound
+				linearfalloff="true"
+				falloffstart="1800"
+				falloffend="2200"
+				volume=".6"
+				sample="../sounds/cast.wav"
+			/>
+
+			<instance name="beam" a="28" b="12" size="26" frame=".8"/>
+			<instance name="beam" a="08" b="26"  size="26" frame=".3"/>
+			<instance name="beam" a="06" b="29" size="26" frame=".2"/>
+			<instance name="beam" a="24" b="62" size="26" frame=".6"/>
+			<instance name="beam" a="05" b="21" size="26" frame=".1"/>	
+			<instance name="beam" a="09" b="32" size="26" frame=".2"/>		
+			
+			<simpleemitter
+				delay="0"
+				count="52"
+				spawnrate="1500"
+				bone="_bone_fx_46"
+				particlelife="800"
+				gravity="5"
+				minspeed="1"
+				maxspeed="150"
+				drag=".04"
+				pitchspeed="79"
+				material="/shared/effects/materials/whitedot.material"
+				offsetsphere="5 5 5"
+				inheritvelocity="0.35"
+				direction="0 0 1"
+			>
+				<particle 
+					startcolor="1 1 .2"
+					midcolor="1 .3 0"
+					endcolor="0 0 0"
+					startheightdistort=".06"
+					endframe="15"
+					startsize="2"
+					midsize="3"
+					endsize="3"
+					startalpha="0"
+					midalpha="0"
+					endalpha="0"
+					midalphapos="0"
+					startstickiness="0"
+					endstickiness="0"
+					turn="1"
+				/>
+			</simpleemitter>
+			
+			<billboard
+				bone="_bone_fx_46"
+				name="refract"
+				life="200"
+				color="1.0 1.0 1.0"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="0.0"
+				midalphapos="0.75"
+				startparam=".05"
+				endparam="0.0"
+				startsize="88"
+				endsize="168"
+				depthbias="-100"
+				position="0 0 0"
+				material="/shared/effects/materials/refract_ring.material"
+				lockup="true"
+				pitch="90"
+			/>
+			
+			<beam
+				delay="100"
+				owner_a="source"
+				owner_b="target"
+				bone_a="_bone_fx_46"
+				bone_b="_bone_centerofchest"
+				size="75"
+				startcolor="0 1 1"
+				midcolor="0 1 1"
+				endcolor=" 0 0 0"
+				midcolorpos="0.8"
+				life="100"
+				alpha="1.0"
+				material="/shared/effects/materials/femme_lightning_10.material"
+				startframe=".6"
+				framespeed="5"
+			/>
+			
+			<trackeremitter
+				count="8"
+				bone="_bone_fx_46"
+				owner="source"
+				sourcebone="_bone_centerofchest"
+				targetbone="_bone_centerofchest"
+				targetowner="target"
+				targetposition="0 0 0"
+				tracktype="distance"
+				trackspeed="1.8"
+				spawnrate="80"
+				particlelife="2000"
+				speed="2000.0"
+				acceleration="0.0"
+				direction="0.0 0.0 1.0"
+				inheritvelocity="0.0"
+				distancelife="1"
+			>
+				<particle>
+					<trailemitter
+						life="1000"
+						spawnrate="150"
+						startminparticlelife="1000"
+						startmaxparticlelife="1000"
+						offsetsphere="15 15 15"
+						endminparticlelife="1"
+						endmaxparticlelife="1" 
+						texpostime="1000"
+					 	texposscale="0"
+					 	texstretchscale="1"
+						position="0 0 0"
+						material="/shared/effects/materials/arrow_trail.material"
+					>
+						<particle
+							startcolor="0 1 1"
+							midcolor="0 1 1"
+							endcolor=".0 0 .4"
+							startsize="2"
+							midsize="3"
+							endsize="2"
+							midcolorpos=".1"
+							midsizepos=".1"
+						/>
+					</trailemitter>
+				</particle>
+			</trackeremitter>
+			
+			<sound
+				falloff="100.0" 
+				volume="1.0" 
+				sample="sounds/zap1.wav"
+			/>
+			
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+</effect>
+
+

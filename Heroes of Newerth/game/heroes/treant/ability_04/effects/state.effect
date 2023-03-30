@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="1" deferred="1">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1.5">
+			
+			<!--in to keep state going-->
+			<billboard
+				position="0 0 50"			
+				size="150"
+				expirelife="250"
+				startcolor="0 .125 0"
+				endcolor="0 0 0"
+				material="/shared/effects/materials/whitedot.material"
+				depthbias="-100"				
+			/>
+	
+			<simpleemitter
+				particlelife="5000"
+				count="1"
+				spawnrate="500"
+			>
+				<particle>
+				
+					<model				
+						model="impact/model.mdf"
+						anim="idle"
+						startscale="1.25"
+						endscale="1.25"
+						color="1 1 1"
+						position="0 0 0"
+						minyaw="-360"
+						maxyaw="260"
+						startyawspeed="0"
+						endyawspeed="-100"
+						directionalspace="global"		
+						expirelife="250"
+						startalpha=".65"	
+						endalpha="0"			
+					/>
+			
+					<groundsprite
+						material="/shared/effects/materials/earth_cracks_reveal.material"
+						size="140"
+						startframe="1"
+						endframe="0.1"
+						life="500"
+						alpha=".7"
+					/>
+
+					<groundsprite
+						delay="500"
+						expirelife="300"
+						material="/shared/effects/materials/earth_cracks_reveal.material"
+						size="140"
+						frame="0.1"
+						startalpha=".7"
+						endalpha="0"
+					/>
+
+					<simpleemitter
+						minparticlelife="300"			
+						maxparticlelife="1500"
+						count="10"
+						spawnrate="400"
+						speed="100"
+						material="/shared/effects/materials/pyroclast_03.material"
+						offsetsphere="65"
+						direction="0 0 1"
+						position="0 0 20"
+						depthbias="-20"
+						angle="45"
+						gravity="1"
+					>
+						<particle 
+							startcolor=".3"	
+							endcolor="0"			
+							startsize="130"
+							endsize="260"
+							startalpha="1"
+							endalpha="0"
+							minangle="0"
+							maxangle="360"
+						/>
+						<particle 
+							startcolor=".5"	
+							endcolor="0"			
+							startsize="60"
+							endsize="210"
+							startalpha="1"
+							endalpha="0"
+							minangle="0"
+							maxangle="360"
+						/>
+					</simpleemitter>
+
+					<simpleemitter
+						minparticlelife="300"			
+						maxparticlelife="1000"
+						count="10"
+						spawnrate="400"
+						speed="200"
+						material="/shared/effects/materials/dust_puff.material"
+						offsetsphere="45"
+						direction="0 0 1"
+						position="0 0 20"
+						depthbias="-20"
+						angle="65"
+						gravity="15"
+					>
+						<particle 
+							startcolor=".5"	
+							endcolor="0"			
+							startsize="50"
+							endsize="160"
+							startalpha="1"
+							endalpha="0"
+							minangle="0"
+							maxangle="360"
+						/>
+
+					</simpleemitter>
+
+					<template name="beam">
+						<beam
+							depthbias="-30"
+							expirelife="1000"					
+							bone_a="{a}"
+							bone_b="{b}"
+							size="{size}"
+							startcolor="1 .5 .5"
+							endcolor="0 0 0"
+							startalpha="1"
+							endalpha="0"
+							position="0 0 0"				
+							position_b="0 0 0"
+							material="/shared/effects/materials/vine.material"
+						/>	
+					</template>		
+					
+					<template name="beam2">
+						<beam
+							expirelife="1000"					
+							bone_a="{a}"
+							bone_b="{b}"
+							size="{size}"
+							startcolor=".7 .5 .5"
+							endcolor="0 0 0"
+							startalpha="1"
+							endalpha="0"
+							position="0 0 0"				
+							position_b="0 0 0"
+							material="/shared/effects/materials/leaves.material"
+						/>	
+					</template>
+
+					<template name="beam3">
+						<beam
+							expirelife="1000"					
+							bone_a="{a}"
+							bone_b="{b}"
+							size="{size}"
+							startcolor=".3 .3 .1"
+							endcolor="0 0 0"
+							startalpha="1"
+							endalpha="0"
+							position="0 0 0"				
+							position_b="0 0 0"
+							material="/shared/effects/materials/goo.material"
+						/>	
+					</template>
+					
+					<instance name="beam" a="_bone_righthand" b="_bone_lefthand" size="5" frame=".6"/>
+					<instance name="beam" a="_bone_righthand" b="_bone_rightfoot" size="5" frame="5"/>
+					<instance name="beam" a="_bone_lefthand" b="_bone_leftfoot" size="5" frame="5"/>
+					<instance name="beam" a="_bone_centerofchest" b="_bone_origin" position_b="20 22 0" size="5" frame="1"/>
+					<instance name="beam2" a="_bone_head" b="_bone_origin" position_b="20 34 0" size="15" frame="1"/>
+					<instance name="beam2" a="_bone_head" b="_bone_origin" position_a="12 44 0" size="5" frame="1"/>
+					<instance name="beam" a="_bone_lefthand" b="_bone_origin" position_b="-30 20 0" size="5" frame="5"/>
+						
+					<instance name="beam" a="_bone_leftfoot" b="_bone_rightfoot" size="12" frame="5"/>
+					<instance name="beam" a="_bone_lefthand" b="Bip01 Spine" size="5" frame="5"/>
+
+					<instance name="beam" a="Bip01 L Calf" b="Bip01 R Calf" size="5" frame="5"/>
+					
+					<instance name="beam" a="_bone_righthand" b="_bone_head" size="5" frame="5"/>			
+					<instance name="beam2" a="_bone_lefthand" b="_bone_head"  size="2" frame="5"/>
+					
+					<instance bame="beam" a="_bone_leftfoot" b="_bone_origin" size="5" position_b="20 20 500"/>			
+					
+					<instance name="beam3" a="_bone_lefthand" b="Bip01 R Calf" size="6" frame=".8"/>
+					<instance name="beam3" a="_bone_righthand" b="Bip01 L Calf" size="6" frame=".8"/>
+				
+				</particle>
+			</simpleemitter>
+			
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+		<camerashake scale="1" radius="300" duration="800" frequency="0"/>
+		<waitfordeath instance="instance0"/>
+		<!-- <die /> -->
+	</thread>
+
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->

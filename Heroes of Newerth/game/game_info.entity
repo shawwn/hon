@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<game
+	name="Game_Rules"
+	
+	startinggold="603"
+	repickcost="350"
+	randombonus="250"
+	
+	goldpertick="1"
+	incomeinterval="875"
+	
+	experiencemultiplier="1.0"
+	towerdenygoldmultiplier="0.5"
+	
+	norepick="false"
+	noswap="false"
+	forcerandom="false"
+	
+	allowallheroes="true"
+	allowagility="true"
+	allowintelligence="true"
+	allowstrength="true"
+	heropoolsize="0"
+	bancount="0"
+	usecaptains="false"
+	
+	spawnpowerups="true"
+	alternatepicks="false"
+	
+	respawntimeperlevel="4000"
+	repickonrespawn="false"
+>
+	<modifier key="randomdraft" modpriority="100" group="game_mode"
+		norepick="true"
+		alternatepicks="true"
+		allowallheroes="true"
+		startinggold="603"
+		randombonus="0"
+		heropoolsize="20"
+		repickcost="175"
+	/>
+	
+	<modifier key="singledraft" modpriority="100" group="game_mode"
+		norepick="true"
+		startinggold="603"
+		randombonus="0"
+
+		allowallheroes="true"
+		allowagility="true"
+		allowintelligence="true"
+		allowstrength="true"
+		
+		repickcost="175"
+	/>
+	
+	<modifier key="deathmatch" modpriority="100" group="game_mode"
+		repickonrespawn="true"
+		startinggold="778"
+		repickcost="175"
+		randombonus="75"
+	/>
+	
+	<!--modifier key="captainsmode" modpriority="100" group="game_mode"
+		norepick="true"
+		alternatepicks="true"
+		allowallheroes="true"
+		startinggold="603"
+		randombonus="0"
+		heropoolsize="24"
+		bancount="2"
+		usecaptains="true"
+	/-->
+	
+	<!--modifier key="captainsdraft" modpriority="100" group="game_mode"
+		norepick="true"
+		alternatepicks="true"
+		allowallheroes="true"
+		startinggold="603"
+		randombonus="0"
+		heropoolsize="24"
+		bancount="2"
+		usecaptains="true"
+	/-->
+	
+	<modifier key="banningdraft" modpriority="100" group="game_mode"
+		norepick="true"
+		alternatepicks="true"
+		allowallheroes="true"
+		startinggold="603"
+		randombonus="0"
+		heropoolsize="24"
+		bancount="2"
+		usecaptains="true"
+		repickcost="175"
+	/>
+	
+	<modifier key="banningpick" modpriority="100" group="game_mode"
+		norepick="true"
+		alternatepicks="true"
+		allowallheroes="true"
+		startinggold="603"
+		randombonus="0"
+		bancount="4"
+		usecaptains="true"
+		repickcost="175"
+	/>
+	
+	<modifier key="forcerandom" modpriority="60"
+		forcerandom="true"
+		randombonus="0"
+		startinggold="853"
+		repickcost="400"
+	/>
+	
+	<modifier key="alternatepicks" modpriority="90"
+		alternatepicks="true"
+	/>
+
+	<modifier key="norepick" modpriority="90"
+		norepick="true"
+	/>
+	
+	<modifier key="noswap" modpriority="90"
+		noswap="true"
+	/>
+
+	<!--modifier key="noagility" modpriority="90"
+		allowagility="false"
+	/>
+	
+	<modifier key="nointelligence" modpriority="90"
+		allowintelligence="false"
+	/>
+	
+	<modifier key="nostrength" modpriority="90"
+		allowstrength="false"
+	/>
+	
+	<modifier key="norespawntimer" modpriority="90"
+		respawntimeperlevel="0"
+	/-->
+	
+	<modifier key="dropitems" modpriority="90"
+	/>
+	
+	<modifier key="nopowerups" modpriority="90"
+		spawnpowerups="false"
+	/>
+	
+	<modifier key="easymode" modpriority="90"
+		goldpertick="2"
+		experiencemultiplier="1.5"
+	/>
+	
+	<modifier key="hardcore" modpriority="100"
+		goldpertick="0"
+		towerdenygoldmultiplier="0.0"
+	/>
+
+	<modifier key="allowduplicate" modpriority="90"
+	/>
+
+	<!--modifier key="reverseselect" modpriority="90"
+	/-->
+
+	<!--modifier key="allowveto" modpriority="90"
+	/-->
+
+	<!--modifier key="shuffleteams" modpriority="90"
+	/-->
+</game>

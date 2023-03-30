@@ -1,0 +1,84 @@
+Geomancer
+
+Agility: 15(1.5)
+Intelligence: 22(2.2)
+Strength: 18(2)
+Range: 500
+Base damage: 45 - 55
+
+
+Dig
+---
+
+Geomancer burrows underground and resurfaces with great force.
+Skill Mechanics: Geomancer charges to target location underground then explodes back to the surface, 
+damaging and stunning enemies around him.
+
+Activation of Dig while underground causes Geomancer to prematurely surface.
+Unitwalking, treewalking, cliffwalking, buildingwalking.
+
+(1) Deals 50 damage in a 300 aoe and stuns for 1 second.
+(2) Deals 75 damage in a 300 aoe and stuns for 1 second.
+(3) Deals 100 damage in a 300 aoe and stuns for 1.5 seconds.
+(4) Deals 125 damage in a 300 aoe and stuns for 1.5 seconds.
+
+Range: 1000/1250/1500/1750
+Mana: 140/150/160/170
+Cooldown: 25/20/20/15
+
+Quicksand
+---------
+
+Geomancer turns the ground to quicksand, slowing those who struggle in it.
+Skill Mechanics: Creates a pit of quicksand at a target location.
+
+Moving 75 units when in Quicksand adds 1 charge.
+-20% movement speed per charge.
+Affects both allies and enemies, but not Geomancer.
+
+(1) Lasts 5 seconds.
+(2) Lasts 6 seconds.
+(3) Lasts 7 seconds.
+(4) Lasts 8 seconds.
+
+Range: 600
+Radius: 200
+Mana: 120
+Cooldown: 20
+
+Earth's Grasp
+-------------
+
+Geomancer summons hands from the ground.
+Skill Mechanics: Rock hands erupt from the ground in a targeted direction and pull any units they catch back to the target location.
+
+Vector targeting.
+Damage applies to enemy units only.
+Hands travel at 400 speed.
+
+(1) Hands move 200 units. Deals 75 magic damage.
+(2) Hands move 400 units. Deals 125 magic damage.
+(3) Hands move 600 units. Deals 150 magic damage.
+(4) Hands move 800 units. Deals 200 magic damage.
+
+Range: 200
+Mana: 140
+Cooldown: 15 
+
+Fossilization
+-------------
+
+Turns the enemy to stone by slowly fossilizing them.
+Skill Mechanics: Applies Fossilization to the target. The target takes damage if not moving or moving slowly. Applies Fossilized after the duration runs out.
+
+Fossilization dispels after target runs (not blinks) 1000 units.
+If Fossilization's duration runs out, applies Fossilized for 4/6/8 seconds.
+Fossilized - Immobilized, Disarmed, Silenced, Magic Immunity, -5 armor, next attack received deals x2 damage and dispels Fossilized.
+
+(1) Lasts for 8 seconds. Deals 75 initial damage, and 75 damage per second while the target is not moving, 50 damage per second while the target is moving below their base movement speed.
+(2) Lasts for 7 seconds. Deals 125 initial damage, and 100 damage per second while the target is not moving, 75 damage per second while the target is moving below their base movement speed.
+(3) Lasts for 6 seconds. Deals 175 initial damage, and 125 damage per second while the target is not moving, 100 damage per second while the target is moving below their base movement speed.
+
+Range: 600/700/800
+Mana: 150/200/250
+Cooldown: 120

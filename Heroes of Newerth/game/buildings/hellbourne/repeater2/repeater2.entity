@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<building
+	name="Building_HellbourneRepeater2"
+	
+	
+	
+	icon="icon.tga"
+	portrait="icon.tga"
+	model="model.mdf"
+	skin=""
+	
+	passiveeffect=""
+	destroyedsound=""
+	lowhealtheffect=""
+	lowhealthsound=""
+	selectsound=""
+	
+	preglobalscale="1.8"
+	modelscale="1.0"	
+    effectscale="1.62"
+	boundsheight="256"
+	boundsradius="86"
+	selectionradius="130"
+	targetoffset="0 0 0"
+
+	maxhealth="800"
+	healthregen="0"
+
+	armor="15"
+	magicarmor="0"
+
+	attacktype="none"
+	combattype="Structure"
+	immunity="DisableImmunity"
+
+	sightrangeday="900"
+	sightrangenight="600"
+	
+	goldbountymin="102"
+	goldbountymax="120"
+	drawonmap="false"
+	corpsetime="0"
+	corpsefadetime="8000"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"	
+>
+	<modifier key="casual" modpriority="100"
+	goldbountymin="167"
+	goldbountymax="167"
+	/>
+</building>

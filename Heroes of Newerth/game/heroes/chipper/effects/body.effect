@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" name="">
+	<definitions>
+	
+		<particlesystem name="system0" space="world">
+
+			<simpleemitter
+				bone="_bone_fx_01"
+				position="0 0 5"
+				spawnrate="25"
+				particlelife="850"
+				gravity="-5"
+				speed="20"
+				drag="0"
+				acceleration="0"
+				material="/shared/effects/materials/dust.material"
+				offsetsphere="0 0 0"
+				direction="1 0 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="0"
+					minanglespeed="-40"
+					maxanglespeed="-140"
+					startcolor=".7 .8 .9"
+					endcolor=".2 .2 .2"
+					midcolorpos=".2"
+					startframe="0"
+					endframe="1"
+					startsize="3"
+					endsize="75"
+					startalpha="0"
+					midalpha=".35"
+					endalpha="0"
+					midalphapos=".3"
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+		
+		<particlesystem name="system1" space="entity">
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+		<spawnparticlesystem instance="instance1" particlesystem="system1"/>
+		<waitfordeath instance="instance1"/>
+		<waitfordeath instance="instance0"/>
+	</thread>
+</effect>

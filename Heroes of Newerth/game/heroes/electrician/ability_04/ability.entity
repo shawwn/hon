@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Electrician4"
+	
+	icon="icon.tga"
+	statuseffecttooltip="State_Electrician_Ability4_Allies"
+	statuseffectheader="true"
+	statuseffecttooltip2="State_Electrician_Ability4_Enemies"
+	statuseffectheader2="true"
+	
+	anim="ability_1"
+	casttime="800"
+	castactiontime="100"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_entity"
+	targetscheme="all_units"
+	casteffecttype="SuperiorMagic"
+	
+	manacost="50"
+	cooldowntime="14000,12000,10000"
+	
+	range="600"
+	
+	doubleactivate="true"
+>
+	<onimpact>
+		<cantarget targetscheme="summoned_enemy_units">
+			<damage effecttype="" amount="600,800,1000" />
+		</cantarget>
+		<playeffect effect="effects/shock.effect" source="source_entity" target="target_entity"/>
+		<playeffect effect="effects/impact.effect" source="target_entity" target="target_entity"/>
+		<cantarget targetscheme="enemy_units">
+			<applystate name="State_Electrician_Ability4_Enemies" duration="5000" />
+			<dispel type="StatusBuff" />
+		</cantarget>
+		<cantarget targetscheme="ally_units">
+			<applystate name="State_Electrician_Ability4_Allies" duration="5000" />
+			<dispel type="StatusDebuff" />
+		</cantarget>
+	</onimpact>
+	
+	<modifier key="ult_boost" modpriority="100"
+	>
+		<onimpact>
+			<cantarget targetscheme="summoned_enemy_units">
+				<damage effecttype="" amount="600,800,1000" />
+			</cantarget>
+			<playeffect effect="effects/shock.effect" source="source_entity" target="target_entity"/>
+			<playeffect effect="effects/impact.effect" source="target_entity" target="target_entity"/>
+			<cantarget targetscheme="enemy_units">
+				<applystate name="State_Electrician_Ability4_Enemies" duration="5000" />
+				<dispel type="StatusBuff" />
+				<applystate target="source_entity" name="State_Electrician_Ability4_Allies" duration="5000" />
+				<dispel target="source_entity" type="StatusDebuff" />
+			</cantarget>
+			<cantarget targetscheme="ally_units">
+				<applystate name="State_Electrician_Ability4_Allies" duration="5000" />
+				<dispel type="StatusDebuff" />
+				<applystate target="source_entity" name="State_Electrician_Ability4_Allies" duration="5000" />
+				<dispel target="source_entity" type="StatusDebuff" />
+			</cantarget>
+		</onimpact>
+	</modifier>
+</ability>

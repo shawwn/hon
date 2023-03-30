@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Fairy_Ability4_Aura"
+	
+	
+	
+	icon=""
+	portrait=""
+	model=""
+	skin=""
+	
+	passiveeffect=""
+	spawneffect=""
+	respawneffect=""
+	isselectable="true"
+	invulnerable="true"
+	selectsound=""
+	orderconfirmedsound=""
+	
+	deathtime="0"
+	corpsetime="0"
+	
+	preglobalscale="1.35"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="64"
+	boundsradius="16"
+	selectionradius="20"
+	targetoffset="0 0 0"
+
+	canrotate="false"
+	ismobile="false"
+	isflying="false"
+	clearvision="false"
+	
+	immunity="MagicImmunity1"
+
+	attacktype="none"
+	
+
+>
+	<aura state="State_Fairy_Ability4" targetscheme="ally_heroes" radius="250" />
+	
+</gadget>

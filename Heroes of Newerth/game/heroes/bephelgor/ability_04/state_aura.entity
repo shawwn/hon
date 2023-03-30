@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Bephelgor_Ability4_Aura"
+
+	icon="icon.tga"
+	ishidden="true"
+>
+	<onactivatepreimpact>
+		<condition target="this_inflictor_entity" test="not_hasstate State_Bephelgor_Ability4_NotReady">
+			<setvar0 a="combat_manacost" b="source_maxmana" op="div" />
+			<setvar0 a="var0" b="0.6" op="mult" />
+			<setvar0 a="var0" b="100" op="mult" />
+			<condition test="result gt 1">
+				<spawnprojectile name="Projectile_Bephelgor_Ability4_Manaleech" target="this_inflictor_entity" noresponse="true" />
+			</condition>
+			<addcharges count="var0" entity="this_spawner_entity" />
+			<applystate name="State_Bephelgor_Ability4_Recentcharge" target="this_inflictor_entity" duration="30000" />
+		</condition>
+	</onactivatepreimpact>
+	
+	<onabilityimpact>
+		<casteffecttype entity="inflictor_entity" effecttype="Attack" />
+		<else>
+			<condition target="this_inflictor_entity" test="hasstate State_Bephelgor_Ability4_NotReady">
+				<reducecooldown entity="this_spawner_entity" duration="1000" />			
+			</condition>
+		</else>
+	</onabilityimpact>
+	<onframe />
+</state>

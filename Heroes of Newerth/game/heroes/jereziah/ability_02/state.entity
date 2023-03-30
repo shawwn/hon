@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Jereziah_Ability2"
+
+	
+	
+	icon="icon.tga"
+
+	passiveeffect="effects/state.effect"
+	
+	immunitytype="MagicImmunity1"
+
+	
+	effecttype="StatusBuff"
+>
+	<onexpired>
+		<playeffect effect="effects/state_expire.effect" source="source_entity"/>
+	</onexpired>
+	
+</state>

@@ -1,0 +1,12 @@
+ModelExporterR4.aps
+ModelExporterR4.ncb
+ModelExporterR4.suo
+Debug
+Release
+Exporter\ -\ Debug
+Exporter\ -\ Release
+s2exporter.aps
+*.user
+s2exporter.ncb
+s2exporter.suo
+VTune

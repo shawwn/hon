@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="true">
+
+	<definitions>
+
+		<modifier
+			name="modifier0"
+			startcolor="1 5 1.2"
+			endcolor="1"
+			life="600"
+		/>
+
+		<particlesystem name="system0" space="world" scale=".8">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2000"
+				volume=".4"
+				sample="../sounds/cast.wav"
+			/>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				spawnrate="445"
+				life="100"
+				count="6"
+				particlelife="1200"
+				speed="60"
+				material="/shared/effects/materials/electric_impact_add.material"
+				offsetsphere="35"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-60"
+					maxanglespeed="60"
+					startcolor="0"
+					midcolor="0 .1 0"
+					endcolor="0 0 0"
+					size="8"
+					startscale="25"
+					minendscale="30"
+					maxendscale="40"
+					startalpha=".2"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				depthbias="-20"
+				bone="_bone_centerofchest"
+				spawnrate="445"
+				life="100"
+				count="5"
+				particlelife="800"
+				speed="160"
+				drag="0.01"
+				material="/shared/effects/materials/bad_healing_smoke_07.material"
+				offsetsphere="55"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-40"
+					maxanglespeed="40"
+					color="0 .2 0"
+					midcolorpos="0.5"
+					size="10"
+					startscale="15"
+					minendscale="30"
+					maxendscale="40"
+					startalpha="1"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<billboard
+				material="/shared/effects/materials/shieldstarfish.material"
+				position="0 0 50"
+				startcolor="0 0 0"
+				midcolor="0 .5 .1"
+				endcolor="0 0 0"
+				midcolorpos="0.3"					
+				endsize="350"
+				depthbias="-40"
+				life="300"
+			/>
+	
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+		<spawnmodifier instance="instance1" modifier="modifier0"/> 
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

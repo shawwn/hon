@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Pyromancer_Ability1_Damage"
+
+
+	radiusstart="70"
+	radiusend="275"
+	speed="1200"
+	
+	lifetime="500"
+	maximpactspertarget="1"
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Magic"
+	persist="true"
+	
+	impacteffect="effects/ability_01_impact.effect"
+>
+	<onimpact>
+		<damage effecttype="Magic" amount="100,170,230,280"/>
+		<condition target="source_entity" test="param != 0">
+			<applystate name="State_Pyromancer_Ability3_Burning" duration="3000" level="param" />
+		</condition>
+	</onimpact>
+</affector>

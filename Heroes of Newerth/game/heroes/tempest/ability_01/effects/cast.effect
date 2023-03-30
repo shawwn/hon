@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+	
+		<particlesystem name="system0" space="world" scale=".120">
+		
+			<billboard
+				bone="_bone_centerofchest"
+				position="0 0 0"
+				life="200"
+				material="/shared/effects/materials/whitedot.material"
+				startcolor="0 .25 .5"
+				endcolor="0"
+				size="200"
+			/>
+
+			<simpleemitter
+				position="0 300 0"
+				bone="_bone_center"
+				depthbias="-40"
+				delay="250"
+				life="500"
+				speed="210"
+				count="8"
+				spawnrate="220"			
+				minparticlelife="1000"
+				maxparticlelife="1100"
+				material="/shared/effects/materials/pyroclast_01.material"
+				offsetsphere="150 150 25"
+				angle="90"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-60"
+					startcolor="0 .5 .75"
+					midcolor="0 0 0"
+					endcolor="0 0 0"
+					midcolorpos=".4"
+					maxanglespeed="60"
+					startsize="300"
+					endsize="60"
+					startalpha="1"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+			position="0 300 0"
+			bone="_bone_center"
+				depthbias="-30"
+				delay="250"
+				life="300"
+				speed="210"
+				count="9"
+				spawnrate="220"			
+				minparticlelife="1700"
+				maxparticlelife="2200"
+				material="/shared/effects/materials/pyroclast_03.material"
+				offsetsphere="155 155 25"
+				angle="90"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-60"
+					startcolor=".4"
+					endcolor="0 0 0"
+					midcolorpos="0 .5 .75"
+					maxanglespeed="60"
+					startsize="400"
+					endsize="460"
+					startalpha=".2"
+					endalpha="0"
+				/>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-60"
+					color="1 1 1"
+					maxanglespeed="60"
+					startsize="300"
+					endsize="460"
+					startalpha=".3"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+			position="0 300 0"
+			bone="_bone_center"
+				delay="250"	
+				count="14"
+				gravity="-5"
+				life="300"
+				speed="350"
+				drag="0.01"
+				depthbias="-40"
+				spawnrate="1800"			
+				particlelife="1250"
+				material="/shared/effects/materials/phantom_smoke_04.material"
+				offsetsphere="165 165 165"
+				angle="40"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-50"
+					startcolor="0 .5 .75"
+					midcolor="0 .5 .75"
+					endcolor="0"
+					midcolorpos=".25"
+					maxanglespeed="50"
+					startsize="100"
+					minendsize="200"
+					maxendsize="400"
+					startalpha="1"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<billboard
+			position="0 300 0"
+			bone="_bone_center"
+				delay="250"
+				life="300"
+				startcolor="0 .5 .75"
+				endcolor="0"
+				startsize="700"
+				endsize="800"
+				startalpha="1"
+				maxroll="360"
+				endalpha="0"				
+				depthbias="-95"
+				lockup="true"
+				pitch="90"
+				material="/shared/effects/materials/starlight.material"
+			/>	
+			
+			<billboard
+			position="0 300 0"
+			bone="_bone_center"
+				delay="250"
+				life="300"
+				startcolor="1 .5 0"
+				endcolor="0"
+				startsize="500"
+				endsize="600"
+				startalpha="1"
+				maxroll="360"
+				endalpha="0"				
+				depthbias="-95"
+				lockup="true"
+				pitch="90"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />		
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

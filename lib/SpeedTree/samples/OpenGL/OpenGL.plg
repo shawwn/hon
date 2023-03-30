@@ -1,0 +1,85 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: OpenGL - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP15E.tmp" with contents
+[
+/nologo /MDd /W3 /GX /Zi /Od /I "..\Common Source\\" /I "..\Common Source\SpeedWind\\" /I "." /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /FAs /Fa"Debug VC 6.0/" /FR"Debug VC 6.0/" /Fp"Debug VC 6.0/OpenGL.pch" /YX /Fo"Debug VC 6.0/" /Fd"Debug VC 6.0/" /FD /c 
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\extgl.c"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\IdvVertexBuffer.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\OpenGL\main.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\Navigation.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\nv_dds.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\OpenGL\SpeedTreeForestOpenGL.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\OpenGL\SpeedTreeWrapper.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\Transform.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\VertexProgram.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\SpeedTreeForest.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\SpeedWind\SpeedWind.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.7.0\samples\Common Source\SpeedWind\SpeedWindParser.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP15E.tmp" 
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP15F.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib SpeedTreeRT.lib /nologo /subsystem:console /incremental:no /pdb:"Debug VC 6.0/SpeedTreeRT OpenGL.pdb" /map:"Debug VC 6.0/SpeedTreeRT OpenGL.map" /debug /machine:I386 /out:"..\..\bin\VC 6.0\Debug\SpeedTreeRT OpenGL.exe" /libpath:"..\..\lib\VC 6.0\Release" 
+".\Debug VC 6.0\extgl.obj"
+".\Debug VC 6.0\IdvVertexBuffer.obj"
+".\Debug VC 6.0\main.obj"
+".\Debug VC 6.0\Navigation.obj"
+".\Debug VC 6.0\nv_dds.obj"
+".\Debug VC 6.0\SpeedTreeForestOpenGL.obj"
+".\Debug VC 6.0\SpeedTreeWrapper.obj"
+".\Debug VC 6.0\Transform.obj"
+".\Debug VC 6.0\VertexProgram.obj"
+".\Debug VC 6.0\SpeedTreeForest.obj"
+".\Debug VC 6.0\SpeedWind.obj"
+".\Debug VC 6.0\SpeedWindParser.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP15F.tmp"
+<h3>Output Window</h3>
+Compiling...
+extgl.c
+IdvVertexBuffer.cpp
+main.cpp
+Navigation.cpp
+nv_dds.cpp
+SpeedTreeForestOpenGL.cpp
+SpeedTreeWrapper.cpp
+Transform.cpp
+VertexProgram.cpp
+SpeedTreeForest.cpp
+SpeedWind.cpp
+Add up vector stuff here
+
+SpeedWindParser.cpp
+Linking...
+Creating temporary file "C:\DOCUME~1\croft\LOCALS~1\Temp\RSP161.tmp" with contents
+[
+/nologo /o"Debug VC 6.0/OpenGL.bsc" 
+".\Debug VC 6.0\extgl.sbr"
+".\Debug VC 6.0\IdvVertexBuffer.sbr"
+".\Debug VC 6.0\main.sbr"
+".\Debug VC 6.0\Navigation.sbr"
+".\Debug VC 6.0\nv_dds.sbr"
+".\Debug VC 6.0\SpeedTreeForestOpenGL.sbr"
+".\Debug VC 6.0\SpeedTreeWrapper.sbr"
+".\Debug VC 6.0\Transform.sbr"
+".\Debug VC 6.0\VertexProgram.sbr"
+".\Debug VC 6.0\SpeedTreeForest.sbr"
+".\Debug VC 6.0\SpeedWind.sbr"
+".\Debug VC 6.0\SpeedWindParser.sbr"]
+Creating command line "bscmake.exe @C:\DOCUME~1\croft\LOCALS~1\Temp\RSP161.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+SpeedTreeRT OpenGL.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

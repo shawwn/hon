@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_ForsakenArcher_Ability1"
+	
+	immobilized2="true"
+	effecttype="StatusDebuff"
+	icon="icon.tga"
+	passiveeffect="effects/cage.effect"
+>
+</state>

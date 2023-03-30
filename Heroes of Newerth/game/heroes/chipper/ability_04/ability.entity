@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Chipper4"
+	statuseffecttooltip="State_Chipper_Ability4_DOT"
+	
+	icon="icon.tga"
+
+	anim="ability_4"
+	casttime="500"
+	castactiontime="0"
+	casteffect="effects/leap.effect"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_vector"
+	targetmaterial="/shared/materials/vector_cast_indicator_saw.material"
+	targetradius="400"
+	casteffecttype="Magic"
+	targetscheme="enemy_units"
+
+	manacost="140,180,220"
+	cooldowntime="50000"
+
+	range="700"
+>
+	<onimpact>
+		<spawnlinearaffector
+		name="Affector_Chipper_Ability4"
+		target="target_position"
+		direction="target_position"		
+		targetorigin="delta_position"
+		directionorigin="delta_position"
+		targetmodifier="pointpastline"
+		directionmodifier="pointpastline"
+		directionvalue="400"
+		targetvalue="-400"
+		firsttarget=""  
+		/>
+
+	</onimpact>
+	
+	<modifier key="ult_boost" modpriority="100"
+		displayname="true"
+		range="1000"
+		casteffecttype="SuperiorMagic"
+	/>
+</ability>

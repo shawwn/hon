@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="totem_rig.max" file="top.model" type="K2">
+
+	<anim name="idle" clip="clips/top.clip" loop="true" minstartframe="0" maxstartframe="-1"/>
+
+	<anim name="death_1" clip="clips/death_1.clip" fps="30" loop="true" loopbackframe="-1">
+		<frameevent frame="1" cmd="starteffect effects/death.effect 0"/>
+	</anim>
+	
+	<anim name="spawn_1" clip="clips/spawn.clip"/>
+	
+</model>

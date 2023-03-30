@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale=".85">
+
+			<sound
+				life="7200"
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="1800"
+				volume="0.75" 
+				sample="../sounds/state.wav"
+			/>
+
+			<simpleemitter
+				position="0 0 150"
+				spawnrate="4"
+				particlelife="1500"
+				gravity="2"
+				speed="5"
+				direction="0 0 1"
+				material="/shared/effects/materials/twirl_blend.material"
+			>
+				<particle
+					color=".4 .3 .2"
+					startalpha="0"
+					midalpha=".3"
+					endalpha="0"
+					maxangle="360"
+					anglespeed="-30"
+					startsize="1200"
+					endsize="0"
+					lockup="1"
+					lockright="1"
+					pitch="-90"
+					anchor=".8"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				position="0 0 150"
+				spawnrate="3"
+				particlelife="850"
+				gravity="5"
+				speed="15"
+				offsetsphere="25"
+				direction="0 0 1"
+				material="/shared/effects/materials/twirl_blend.material"
+			>
+				<particle
+					
+					color=".3 .2 .1"
+					startalpha="0"
+					midalpha=".3"
+					endalpha="0"
+					maxangle="-190"
+					anglespeed="-30"
+					startsize="600"
+					endsize="0"
+					lockup="1"
+					lockright="1"
+					pitch="-90"
+					anchor=".8"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				position="0 0 150"
+				spawnrate="3"
+				particlelife="1250"
+				gravity="5"
+				speed="3"
+				offsetsphere="15"
+				direction="0 0 1"
+				material="/shared/effects/materials/twirl_blend.material"
+			>
+				<particle
+					color=".5 .5 .4"
+					startalpha="0"
+					midalpha=".3"
+					endalpha="0"
+					maxangle="360"
+					anglespeed="-160"
+					startsize="500"
+					endsize="0"
+					lockup="1"
+					lockright="1"
+					pitch="-90"
+					anchor=".8"
+				/>
+			</simpleemitter>
+
+			<orbiteremitter
+				spawnrate="33"
+				particlelife="1250"
+				origin="0 0 -310" 
+				orbit="-3 70 60" 
+				direction="0 0 1" 
+				offset="70 70 70"
+				cylindrical="true" 
+				material="/shared/effects/materials/leaf.material"
+			>
+				<particle 
+					minangle="0"
+					maxangle="0"
+					minanglespeed="-1030"
+					maxanglespeed="1710"
+					startcolor="0 .8 .8"
+					midcolor="1 .5 0"
+					endcolor=".5 1 1"
+					midcolorpos=".5"
+					startframe="0"
+					endframe="1"
+					minsize="22"
+					maxsize="32"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".5"
+				/>
+			</orbiteremitter>
+
+			<orbiteremitter
+				position="0 0 20"
+				minspawnrate="10"
+				maxspawnrate="15"
+				particlelife="1000"
+				origin="0 0 -100"
+				orbit="-5 0 0 "
+				direction="0 0 1"
+				offset="0 0 0"
+				cylindrical="true"
+				material="/shared/effects/materials/pyroclast_01.material"
+			>
+				<particle
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-200"
+					maxanglespeed="200"
+					color=".5 .5 .3"
+					startalpha="0"
+					midalpha=".5"
+					endalpha="0"
+					endalphapos=".998"
+					startsize="00"
+					endsize="144"
+				/>
+			</orbiteremitter>
+
+			<orbiteremitter
+				position="0 0 50"
+				minspawnrate="10"
+				maxspawnrate="10"
+				particlelife="950"
+				origin="0 0 -200"
+				orbit="-2 0 0 "
+				direction="0 0 1"
+				offset="10 10 10"
+				cylindrical="true"
+				material="/shared/effects/materials/pyroclast_01.material"
+			>
+				<particle
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-200"
+					maxanglespeed="200"
+					color=".5 .5 .3"
+					startalpha="0"
+					midalpha=".5"
+					endalpha="0"
+					endalphapos=".998"
+					startsize="00"
+					endsize="204"
+				/>
+			</orbiteremitter>
+
+			<orbiteremitter
+				position="0 0 90"
+				minspawnrate="15"
+				maxspawnrate="15"
+				particlelife="1000"
+				origin="0 0 -300"
+				orbit="-2 0 0 "
+				direction="0 0 1"
+				offset="0 0 0"
+				cylindrical="true"
+				material="/shared/effects/materials/pyroclast_01.material"
+			>
+				<particle
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-200"
+					maxanglespeed="200"
+					color=".5 .5 .3"
+					startalpha="0"
+					midalpha=".5"
+					endalpha="0"
+					endalphapos=".998"
+					startsize="00"
+					endsize="244"
+				/>
+			</orbiteremitter>
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

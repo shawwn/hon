@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Shaman_Attack"
+
+	speed="1200"
+	gravity="0"
+
+	modelscale=".7"
+	model="/shared/models/invis.mdf"
+
+	impacteffect="effects/impact.effect"
+	traileffect="effects/trail.effect"
+>
+</projectile>

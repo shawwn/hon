@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Legionnaire_Ability2_Sight"
+	
+	icon=""
+	ishidden="true"
+	
+	sighted="true"
+	revealed="true"
+>
+	<aura
+		gadget="Gadget_Legionnaire_Ability2"
+		radius="0"
+		targetscheme="self"
+	/>
+</state>

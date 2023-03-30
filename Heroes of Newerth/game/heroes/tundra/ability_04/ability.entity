@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Tundra4"
+	
+	icon="icon.tga"
+	statuseffecttooltip="State_Tundra_Ability4_Slow"
+	
+	anim="ability_4"
+	casttime="1190"
+	castactiontime="500"
+	casteffect="effects/cast.effect"
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_entity"
+	casteffecttype="SuperiorMagic"
+	targetscheme="organic_enemy_units"
+	novoiceresponse="true"
+	
+	manacost="150,175,200"
+	cooldowntime="80000,75000,70000"
+	
+	range="600"
+>
+	<onimpact>
+		<playeffect effect="effects/impact.effect" target="" source="target_entity" />
+		<applystate name="State_Stunned" duration="3000,3500,4000" target="target_entity" />
+		<applystate name="State_Tundra_Ability4" duration="3000,3500,4000" target="target_entity" />
+		<damage effecttype="Magic" amount="200,250,300" />
+		<spawnunit name="Gadget_Tundra_Ability4" count="1" target="source_position" offset="0 450 0" offsetspace="source_entity" pushentity="true" facing="true" />
+		<spawnprojectile name="Projectile_Tundra_Ability4" source="source_entity" target="stack_entity" noresponse="true" proxy="target_entity" offsetspace="source_entity" offset="0 230 0" />
+		<spawnprojectile name="Projectile_Tundra_Ability4_Effects" source="source_entity" target="target_entity" noresponse="true" proxy="target_entity" />
+	</onimpact>
+</ability>

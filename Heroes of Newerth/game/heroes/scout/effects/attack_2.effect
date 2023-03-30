@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="">
+
+<definitions>
+	<particlesystem name="system0" space="entity">
+
+		<twopointtrailemitter
+			life="300"
+			bone_a="_bone_altweapon1"
+			bone_b="_bone_altweapon3"
+			spawnrate="500"
+			particlelife="150"
+			texpostime="165"
+			texposscale=".5"
+			texstretchscale="0.0"
+			material="/shared/effects/materials/swoosh2.material"
+			subframepose="true"
+		>
+			<particle 
+				startcolor=".5 .5 .5"
+				endcolor="0 0 0"
+			/>
+		</twopointtrailemitter>
+		
+	</particlesystem>
+</definitions>
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<waitfordeath instance="instance0" />
+</thread>
+</effect>
+

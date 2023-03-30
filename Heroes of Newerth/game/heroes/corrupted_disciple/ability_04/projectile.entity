@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_CorruptedDisciple_Ability4"
+
+	speed="2200"
+	gravity="14000"
+
+	modelscale="0.4"
+	model="effects/projectile.mdf"
+
+	impacteffect="effects/impact.effect"
+	invalideffect=""
+	traileffect="effects/trail.effect"
+>
+	<onimpact>
+		<applystate name="State_CorruptedDisciple_Ability4_Enemy" duration="3000" />
+		<damage effecttype="Physical" amount="37.5,50,62.5" />
+	</onimpact>
+</projectile>

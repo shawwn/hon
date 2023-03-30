@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Rocky_Ability1"
+
+	
+	
+	icon="icon.tga"
+	passiveeffect=""
+	ishidden="true"
+>
+	<onframe>
+		<condition test="hasstate State_Rocky_Ability2">
+			<damage effecttype="Magic" amount="25,45,65,75" />
+			<expire />
+		</condition>
+	</onframe>
+
+</state>

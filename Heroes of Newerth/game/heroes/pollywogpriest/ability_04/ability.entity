@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_PollywogPriest4"
+
+	
+	
+	icon="../icons/ability_4.tga"
+	
+	anim="ability_4"
+	casttime="1000"
+	castactiontime="300"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_position"
+	casteffecttype="SuperiorMagic"
+	
+	manacost="200,350,600"
+	cooldowntime="100000"
+
+	range="550"
+>
+	<onimpact>
+		<spawnunit name="Gadget_PollywogPriestWard" count="1" offset="40 0" target="target_position"/>
+		<spawnunit name="Gadget_PollywogPriestWard" count="1" offset="-40 0" target="target_position"/>
+		<spawnunit name="Gadget_PollywogPriestWard" count="1" offset="-40 40" target="target_position"/>
+		<spawnunit name="Gadget_PollywogPriestWard" count="1" offset="0 40" target="target_position"/>
+		<spawnunit name="Gadget_PollywogPriestWard" count="1" offset="40 40" target="target_position"/>
+		<spawnunit name="Gadget_PollywogPriestWard" count="1" offset="-40 -40" target="target_position"/>
+		<spawnunit name="Gadget_PollywogPriestWard" count="1" offset="0 -40" target="target_position"/>
+		<spawnunit name="Gadget_PollywogPriestWard" count="1" offset="40 -40" target="target_position"/>
+	</onimpact>
+
+	<modifier key="ult_boost" modpriority="100"
+		displayname="true"
+		description="true"
+		range="600"
+	>
+		<onimpact>
+			<spawnunit name="Gadget_PollywogPriestWard" count="1" offset="40 0" target="target_position"/>
+			<spawnunit name="Gadget_PollywogPriestWard" count="1" offset="-40 0" target="target_position"/>
+			<spawnunit name="Gadget_PollywogPriestWard" count="1" offset="-40 40" target="target_position"/>
+			<spawnunit name="Gadget_PollywogPriestWard" count="1" offset="0 40" target="target_position"/>
+			<spawnunit name="Gadget_PollywogPriestWard" count="1" offset="40 40" target="target_position"/>
+			<spawnunit name="Gadget_PollywogPriestWard" count="1" offset="-40 -40" target="target_position"/>
+			<spawnunit name="Gadget_PollywogPriestWard" count="1" offset="0 -40" target="target_position"/>
+			<spawnunit name="Gadget_PollywogPriestWard" count="1" offset="40 -40" target="target_position"/>
+			<spawnunit name="Gadget_PollywogPriestWard" count="1" offset="-40 80" target="target_position"/>
+			<spawnunit name="Gadget_PollywogPriestWard" count="1" offset="0 80" target="target_position"/>
+			<spawnunit name="Gadget_PollywogPriestWard" count="1" offset="40 80" target="target_position"/>
+		</onimpact>
+	</modifier>
+</ability>

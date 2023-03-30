@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useenityeffectscale="1" deferred="1">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1.5">
+
+			<sound
+				soundloop="true"
+				linearfalloff="true"
+				falloffstart="0"
+				falloffend="1000"
+				fadein="100"
+				fadeout="500" 
+				volume="0.3" 
+				sample="../sounds/state.wav"
+			/>		
+				
+			<simpleemitter			
+				spawnrate="211"
+				particlelife="1000"
+				count="40"		
+
+				acceleration="50"
+				position="0 0 50"
+				timenudge="000"
+				minspeed="20"
+				maxspeed="100"
+				material="/shared/effects/materials/beetle.material"
+				offsetsphere="30 30 30"
+				minangle="0"
+				maxangle="360"
+				direction="0 0 0"
+				particledirectionalspace="local"
+			>
+
+				<particle 
+					framespeed="8"
+					size="7"
+					turn="1"
+					startalpha="1"
+					endalpha="0"
+				/>
+			</simpleemitter> 			
+			
+			<billboard	
+				
+				bone="_bone_centerofchest"
+				
+				color="0.05 .1 .3"
+				alpha=".4	"
+				size="100"
+				material="/shared/effects/materials/smoke_01.material"
+				
+				depthbias="-50"
+				position="0 -5 0"
+			/>		
+			
+			
+			
+			
+			<trackeremitter				
+				bone="_bone_centerofchest"
+				targetbone="_bone_centerofchest"
+				tracktype="distance"
+				position="0 0 20"
+				trackspeed="1.4" 
+				spawnrate="100"
+				particlelife="3000"
+				offsetsphere="33 33 33"
+				minspeed="0.0"
+				maxspeed="260"
+				direction="0 0 1"
+				material="/shared/effects/materials/beetle.material"
+			>
+				<particle 
+					framespeed="8"
+					startalpha="1"
+					endalpha="0"
+					midalphapos=".7"
+					maxangle="359"
+					maxanglespeed="30"
+					minanglespeed="-30"
+					minscale="3"
+					maxscale="4.5"	
+					color="1 1 1"
+				/>
+			</trackeremitter>
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

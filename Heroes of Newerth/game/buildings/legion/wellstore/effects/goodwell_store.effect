@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" pausable="true"  >
+	<definitions>
+		<particlesystem name="system0" space="entity" >
+			
+			<light
+				position="0 30 40"
+				color="0 1 2"
+				falloffstart="100"
+				falloffend="180"
+			/>
+		
+			<simpleemitter
+				bone="_bone_fx_01"
+				spawnrate="20"
+				particlelife="400"
+				gravity="0"
+				speed="1"
+				position="0 5 10"
+				direction="0 0 0"
+				material="/shared/effects/materials/whitedot.material"
+				offsetsphere="0 0 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="0"
+					minanglespeed="-40"
+					startcolor="0 1 0"
+					midcolor="0 1 0"
+					endcolor="0 0 0"
+					midcolorpos=".3"
+					width="2"
+					maxheight="30"
+					minheight="10"
+					maxanglespeed="0"
+					startsize="4"
+					midsize="14"
+					endsize="0"
+					turn="1"
+					startanchor="1"
+					midanchor=".8"
+					endachor=".4"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				bone="_bone_fx_06"
+				spawnrate="7"
+				particlelife="900"
+				gravity="-5"
+				speed="00"
+				position="0 0 3"
+				direction="0 1 0"
+				material="/shared/effects/materials/flame.material"
+				offsetsphere="2 2 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="90"
+					minanglespeed="-40"
+					startcolor=".7 .2 .5"
+					midcolor=".7 .2 .3"
+					endcolor="0 0 0"
+					midcolorpos=".3"
+					maxanglespeed="0"
+					startsize="4"
+					midsize="20"
+					endsize="0"
+					startanchor="1"
+					midanchor=".8"
+					endachor=".4"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				bone="_bone_fx_07"
+				spawnrate="10"
+				particlelife="900"
+				gravity="-5"
+				speed="00"
+				position="0 0 3"
+				direction="0 1 0"
+				material="/shared/effects/materials/flame.material"
+				offsetsphere="1 1 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="90"
+					minanglespeed="-80"
+					startcolor=".7 .2 .5"
+					midcolor=".7 .2 .3"
+					endcolor="0 0 0"
+					midcolorpos=".3"
+					maxanglespeed="0"
+					startsize="4"
+					midsize="25"
+					endsize="0"
+					startanchor="1"
+					midanchor=".8"
+					endachor=".4"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				bone="_bone_fx_03"
+				spawnrate="10"
+				particlelife="2000"
+				gravity="-1"
+				speed="00"
+				position="0 0 0"
+				direction="0 1 0"
+				material="/shared/effects/materials/neb_add.material"
+				offsetsphere="2 2 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="0"
+					minanglespeed="-40"
+					startcolor="1 1 1"
+					midcolor="1 1 1"
+					endcolor="0 0 0"
+					midcolorpos=".3"
+					maxanglespeed="0"
+					startsize="0"
+					midsize="20"
+					endsize="0"
+					startanchor="1"
+					midanchor=".8"
+					endachor=".4"
+				/>
+			</simpleemitter>
+			
+			<billboard
+				bone="_bone_fx_01"
+				color="0 .5 0"
+				size="45"
+				depthbias="-50"
+				position="0 0 0"
+				material="/shared/effects/materials/whitedot.material"
+			/>	
+				
+			<billboard
+				bone="_bone_fx_02"
+				color="0 .1 .2"
+				size="70"
+				depthbias="50"
+				position="0 0 0"
+				material="/shared/effects/materials/whitedot.material"
+			/>	
+			
+			<billboard
+				bone="_bone_fx_03"
+				color="0 .1 .2"
+				size="70"
+				depthbias="-60"
+				position="0 0 0"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+
+			<billboard
+				bone="_bone_fx_02"
+				color="0 .1 .2"
+				size="70"
+				depthbias="-20"
+				position="0 0 0"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+			
+			<billboard
+				bone="_bone_fx_02"
+				color="0 .1 .2"
+				size="35"
+				depthbias="-20"
+				position="0 0 0"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+			
+			<billboard
+				bone="_bone_effect03"
+				color="0 .1 .2"
+				size="70"
+				depthbias="-20"
+				position="0 0 0"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+			
+			<billboard
+				bone="_bone_fx_06"
+				color=".5 .2 0"
+				size="28"
+				depthbias="-20"
+				position="0 0 0"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+			
+			<billboard
+				bone="_bone_fx_07"
+				color=".5 .2 0"
+				size="28"
+				depthbias="-20"
+				position="0 0 0"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+			
+			<billboard
+				bone="_bone_fx_05"
+				color=".1 .2 .4"
+				size="90"
+				depthbias="-20"
+				position="0 0 0"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+			
+			<billboard
+				bone="_bone_fx_04"
+				color=".1 .2 .4"
+				size="90"
+				depthbias="-20"
+				position="0 0 0"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+
+		</particlesystem>
+	</definitions>
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<waitfordeath instance="instance0" />
+</thread>
+</effect>

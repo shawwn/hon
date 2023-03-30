@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="ability_02">
+
+	<definitions>
+		<particlesystem name="system0" space="world" scale="1.5">
+		
+		
+		
+		<light
+			bone="_bone_righthand"
+			delay="320"
+			life="350"			
+			startcolor="4 .9 0"			
+			endcolor="0 0 0"
+			midcolorpos=".2"
+			falloffstart="00"
+			falloffend="255"
+			position="0 0 20"	
+		/>		
+		
+			<billboard
+				bone="_bone_righthand"
+				life="900"
+				startcolor="3.0 .4 0"
+				endcolor="0 0 0"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="0.0"
+				midalphapos="0.75"
+				startparam="0.05"
+				endparam="0.0"
+				
+				
+				startsize="0"
+				midsize="120"
+				endsize="0"
+				midsizepos=".4"
+				
+				
+				depthbias="0"
+				position="0 0 0"
+				material="/shared/effects/materials/blink.material"
+				lockup="true"
+				pitch="90"
+			/>		
+
+
+		<simpleemitter
+			life="80"
+			delay="300"
+			spawnrate="1500"
+			bone="_bone_righthand"
+			count="20"
+			particlelife="1600"			
+			gravity="24"
+			minspeed="80"
+			maxspeed="110"
+			drag=".02"
+			acceleration="0"
+			position="0 0 0"
+
+			material="/shared/effects/materials/fire_11.material"
+			offsetsphere="1 1 1"
+		
+		inheritvelocity=".3"
+
+			directionalspace="global"
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+				maxanglespeed="0"
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="0 0 0"
+				midcolorpos=".4"
+				
+				startframe="0"
+				endframe="1"
+				
+				startsize="2"
+				midsize="11"
+				endsize="2"
+				
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".5"
+				turn="true"
+			/>
+			
+
+
+		</simpleemitter>
+			
+			
+			
+			
+	</particlesystem>
+</definitions>
+
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<waitfordeath instance="instance0" />
+	<!-- <die /> -->
+</thread>
+
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+
+
+
+
+
+
+

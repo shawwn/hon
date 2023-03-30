@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Rampage_Ability4"
+
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+
+	stunned="true"
+	
+	unitwalking="true"
+	treewalking="true"
+	
+	sighted="true"
+	revealed="true"
+	
+	effecttype=""
+>
+	<oninflict>
+		<spawnunit name="Pet_Rampage_Ability4" target="target_position" proxy="target_entity" facing="source_entity" pushentity="true" />
+		<setproxy entity="this_entity" target="stack_entity" />
+		<applystate name="State_Rampage_Ability4_Damage" target="stack_entity" continuous="true" proxy="this_owner_entity" />
+	</oninflict>
+	
+	<onframe>
+		<distance source="source_entity" target="this_owner_entity" />
+		<setvar0 a="result" />
+		<condition test="var0 ge 500" >	
+			<unbind target="this_owner_entity" />
+			<kill target="this_proxy_entity" source="" />
+			<expirestate name="State_Rampage_Ability4_Disarm" target="source_entity" />
+			<expire />
+		</condition>
+		<condition target="source_entity" test="target_type dead">
+			<expire />
+		</condition>
+	</onframe>
+	
+	<onexpired>
+		<unbind target="this_owner_entity" />
+		<kill target="this_proxy_entity" source="" />
+		<expirestate name="State_Rampage_Ability4_Disarm" target="source_entity" />
+	</onexpired>
+</state>

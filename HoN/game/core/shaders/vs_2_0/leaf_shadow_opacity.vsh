@@ -1,0 +1,55 @@
+// (C)2006 S2 Games
+// leaf_shadow_opacity.vsh
+// 
+// Renders a alpha-tested leaves into a shadowmap
+//=============================================================================
+
+
+//=============================================================================
+// Global variables
+//=============================================================================
+float4x4	mWorldViewProj;		// World * View * Projection transformation
+
+float4		vLeafClusters[48];
+//=============================================================================
+// Vertex shader output structure
+//=============================================================================
+struct VS_OUTPUT
+{
+	float4 Position   : POSITION;
+	float2 Texcoord0  : TEXCOORD0;
+#if (SHADOWMAP_TYPE == 0) // SHADOWMAP_R32F
+	float2 Depth      : TEXCOORD1;
+#endif
+};
+
+
+//=============================================================================
+// Vertex shader input structure
+//=============================================================================
+struct VS_INPUT
+{
+	float3 Position  : POSITION;
+	float2 Texcoord0 : TEXCOORD0;
+	float2 Wind      : TEXCOORD1;
+	float3 Leaf      : TEXCOORD2;
+};
+
+
+//=============================================================================
+// Vertex Shader
+//=============================================================================
+VS_OUTPUT VS( VS_INPUT In )
+{
+	VS_OUTPUT Out;
+	
+	float4 vPos = float4(In.Position, 1.0f) + (vLeafClusters[In.Leaf.x] * In.Leaf.y);
+	Out.Position = mul(vPos, mWorldViewProj);
+	Out.Texcoord0 = In.Texcoord0;
+#if (SHADOWMAP_TYPE == 0) // SHADOWMAP_R32F
+	Out.Depth = Out.Position.zw;
+#endif
+
+	return Out;
+}
+

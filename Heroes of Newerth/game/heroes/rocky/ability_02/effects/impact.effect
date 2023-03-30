@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="">
+
+	<definitions>
+		<particlesystem name="system0" space="world" scale="1.2">
+
+		<sound
+			linearfalloff="true" 
+			falloffstart="0"
+			falloffend="2200"
+			volume=".8" 
+			sample="/heroes/rocky/ability_02/sounds/ability_02_impact.wav"
+		/>
+
+			<simpleemitter
+				count="1"
+				
+				spawnrate="222"			
+				
+				particlelife="5000"			
+				
+			>
+				<particle>	
+					
+					
+					<groundsprite
+						delay="100"
+						life="3000"
+						material="/shared/effects/materials/ground_smash_overlay.material"
+						size="130"			
+						color="1.0 1.0 1.0"
+						startalpha="1"
+						endalpha="0"
+					/>		
+									
+					
+					<simpleemitter
+						
+						offsetsphere="50 50 50"
+						spawnrate="222"			
+						count="21"
+						particlelife="1300"			
+						gravity="3"					
+						acceleration="0"
+						speed="80"
+						position="0 0 10"					
+						material="/shared/effects/materials/pyroclast_01.material"	
+					>
+						<particle
+								minangle="-360"
+								maxangle="360"
+								color=".36 .33 .2"
+								startsize="40"
+								endsize="150"
+								minanglespeed="-30"
+								maxanglespeed="73"
+								
+								startalpha="0"
+								midalpha="1"
+								endalpha="0"
+					
+								frame="1"
+								framespeed="1"
+
+							
+								anchor="1"
+				
+								lockup="0"
+								lockright="false"
+
+								
+								turn="false"
+						/>
+					</simpleemitter>	
+										
+					<billboard
+						life="1500"
+						startcolor="0.4 0.4 0.2"
+						endcolor="0 0 0"
+						startalpha="1.0"
+						midalpha="1.0"
+						endalpha="0.0"
+						midalphapos="0.75"
+						startparam="0.05"
+						endparam="0.0"
+						
+						
+						startsize="200"
+						midsize="400"
+						endsize="500"
+						midsizepos=".4"
+						
+						
+						depthbias="0"
+						position="0 0 20"
+						material="/shared/effects/materials/stomp_02.material"
+						lockup="true"
+						pitch="90"
+					/>
+				
+				
+						
+					<billboard
+						life="500"
+						color="1.0 1.0 1.0"
+						startalpha="1.0"
+						midalpha="1.0"
+						endalpha="0.0"
+						midalphapos="0.75"
+						startparam=".5"
+						endparam="0.0"
+						startsize="128"
+						endsize="768"
+						depthbias="0"
+						position="0 0 10"
+						material="/shared/effects/materials/refract_ring.material"
+						lockup="true"
+						pitch="90"
+					/>	
+						
+					<debris
+						position="0 0 10"
+						delay="0"
+						scale=".6"
+						life="3000"
+						model="/shared/effects/models/debris/debris.mdf"
+						anim="idle"	
+						minspeed="100.0"
+						maxspeed="400.0"
+						minrotationspeed="500.0"
+						maxrotationspeed="600.0"
+						gravity="20.0"
+						minangle="0"
+						color=".6 .6 .3"
+						maxangle="50"
+						collide="true"
+						startalpha="1.0"
+						midalpha="1.0"
+						endalpha="0.0"
+						midalphapos="0.9"
+						bounce="0.7"
+						reflect="0.6"
+						animpose="false"
+					/>	
+					
+					<debris
+						position="0 0 10"
+						delay="122"
+						scale=".6"
+						life="3000"
+						model="/shared/effects/models/debris/debris.mdf"
+						anim="idle"	
+						minspeed="100.0"
+						maxspeed="400.0"
+						minrotationspeed="500.0"
+						maxrotationspeed="600.0"
+						gravity="20.0"
+						minangle="0"
+						color=".6 .6 .3"
+						maxangle="40"
+						collide="true"
+						startalpha="1.0"
+						midalpha="1.0"
+						endalpha="0.0"
+						midalphapos="0.9"
+						bounce="0.7"
+						reflect="0.6"
+						animpose="false"
+					/>						
+				
+				</particle>
+
+			</simpleemitter>	
+			
+		
+			
+			
+			
+	</particlesystem>
+</definitions>
+
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	 <camerashake2 scale="11.0" radius="1200" duration="400" frequency="22" />
+	<waitfordeath instance="instance0" />
+	<!-- <die /> -->
+</thread>
+
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+
+
+
+
+
+
+

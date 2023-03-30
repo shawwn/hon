@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="fissure.max" file="spike.model" type="K2" >
+<anim name="idle" clip="spike.clip" loop="false" fps="42"/>
+</model>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="attack_projectile" deferred="true">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="2.0">
+	
+			<billboard
+				material="/shared/effects/materials/venom_sack_02.material"
+				color="1 1 1"
+				alpha="1"
+				size="64"
+				lockup="true"
+				lockright="true"
+				pitch="-90"
+				yaw="0"
+				directionalspace="local"
+			/>
+			
+			<billboard
+				material="/shared/effects/materials/venom_sack_02.material"
+				color="1 1 1"
+				alpha="1"
+				size="64"
+				lockup="true"
+				lockright="true"
+				pitch="-90"
+				yaw="-90"
+				directionalspace="local"
+			/>
+
+			<simpleemitter
+				spawnrate="50"
+				
+				particlelife="1000"			
+				gravity="2"
+				speed="15"
+				drag=".02"
+				acceleration="0"
+				position="0 -20 0"
+
+				material="/shared/effects/materials/poison_04.material"
+				offsetsphere="1 1 1"
+				minangle="10"
+				maxangle="10"
+				direction="0 0 1"
+				offsetdirection="0 0 0"
+				offsetradial="10 10 10"
+				particledirectionalspace="local"
+				inheritvelocity="0.25"
+			>
+				<particle 
+					minangle="180"
+					maxangle="180"
+					minanglespeed="0"
+					maxanglespeed="0"
+					startcolor=".7 .7 .3"
+					midcolor=".7 .7 .3"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+
+					startframe="0"
+					endframe="1"
+					width="15"
+					height="60"
+					startscale="1.0"
+					midsscale="0.5"
+					endscale="0.1"
+					midscalepos=".3"
+
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".3"
+
+					lockup="true"
+					lockright="true"
+					pitch="90"
+					yaw="0"
+				/>
+				<particle 
+					minangle="180"
+					maxangle="180"
+					minanglespeed="0"
+					maxanglespeed="0"
+					startcolor=".25 .35 .15"
+					midcolor=".25 .35 .15"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+
+					startframe="0"
+					endframe="1"
+
+					width="15"
+					height="60"
+					startscale="1.0"
+					midsscale="0.5"
+					endscale="0.1"
+					midscalepos=".3"
+
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".3"
+
+					lockup="true"
+					lockright="true"
+					pitch="90"
+					yaw="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				spawnrate="50"
+						
+				particlelife="1000"			
+				gravity="2"
+				speed="15"
+				drag="0.0"
+				acceleration="0"
+				position="0 0 0"
+
+
+				material="/shared/effects/materials/poison_05.material"
+				offsetsphere="1 1 1"
+				minangle="0"
+				maxangle="360"
+				direction="0 0 1"
+				offsetdirection="0 0 0"
+				offsetradial="10 10 10"
+				inheritvelocity="0.25"
+			>
+				<particle 
+					minangle="0"
+					maxangle="0"
+					minanglespeed="0"
+					maxanglespeed="0"
+					startcolor=".25 .8 .15"
+					midcolor=".25 .8 .15"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+
+					startframe="0"
+					endframe="1"
+
+					startsize="30"
+					midsize="15"
+					endsize="1"
+					midsizepos=".3"
+
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".3"
+
+					lockup="true"
+					lockright="true"
+					pitch="90"
+					yaw="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				spawnrate="160"
+				count="80"		
+				particlelife="550"			
+				gravity="5"
+				speed="100"
+				acceleration="0"
+				position="0 0 0"
+
+				material="/shared/effects/materials/poison_05.material"
+				offsetsphere="1 1 1"
+				minangle="0"
+				maxangle="180"
+				direction="0 0 1"
+				offsetdirection="0 0 0"
+				offsetradial="0 0 0"
+				inheritvelocity="0.25"
+			>
+				<particle 
+					minangle="0"
+					maxangle="0"
+					minanglespeed="0"
+					maxanglespeed="0"
+					startcolor=".5 .8 .05"
+					midcolor=".5 .8 .05"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+
+					startframe="0"
+					endframe="1"
+
+					startsize="25"
+					midsize="25"
+					endsize="25"
+					midsizepos=".8"
+
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".3"
+					turn="true"
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

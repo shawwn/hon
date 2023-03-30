@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="ability_04_cast">
+	<definitions>
+		<particlesystem name="system0" space="entity" >
+
+	
+			<model	
+				delay="100"
+				life="300"
+				parentmodel="true"
+				parentskeleton="true"
+				startcolor="0 0.5 1"
+				endcolor="0 0 0"
+				material="/shared/effects/materials/shell2.material"
+				startalpha="0"
+				endalpha="35"
+				
+			/>
+			
+			
+	
+
+
+			<billboard
+				delay="120"
+				life="800"				
+				bone="_bone_weapon3"
+				material="/shared/effects/materials/femme_lightning_06.material"				
+				height="80"
+				width="300"
+				startcolor=".1 .4 .7"
+				endcolor="0 0 0"
+				lockup="1"
+				position="0 0 150"
+				roll="90"
+				size="150"
+				depthbias="-30"
+				frame="0.5"
+				framespeed="1.95"				
+			/>	
+		
+			<billboard
+				delay="120"
+				life="800"				
+				bone="_bone_weapon3"
+				material="/shared/effects/materials/femme_lightning_06.material"
+				
+				height="80"
+				width="400"
+				startcolor=".5 .7 1"
+				endcolor="0 0 0"
+				lockup="1"
+				position="0 0 150"
+				roll="90"
+				size="150"
+				depthbias="-30"
+				frame="0.0"
+				framespeed="1.95"				
+			/>	
+			
+			
+			<billboard
+				delay="120"
+				life="800"				
+				bone="_bone_weapon3"
+				material="/shared/effects/materials/femme_lightning_06.material"
+				
+				height="80"
+				width="400"
+				startcolor=".1 .4 0.7"
+				endcolor="0 0 0"
+				lockup="1"
+				position="0 0 300"
+				roll="90"
+				size="150"
+				depthbias="-30"
+				frame="0.3"
+				framespeed="1.95"				
+			/>				
+			
+				
+			
+			<billboard
+				delay="100"
+				life="1000"				
+				bone="_bone_weapon3"	
+				material="/shared/effects/materials/whitedot.material"
+				
+				startcolor=".7 .2 0.0"
+				endcolor="0 0 0"
+				
+				size="150"
+				depthbias="-30"
+			/>				
+		
+
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+

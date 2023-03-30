@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="bloodimpact_small">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="0.8">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".65"
+				sample="../sounds/impact.wav"
+			/>
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".35"
+				sample="/heroes/xalynx/sounds/impact_%.wav"
+			/>
+	
+			<billboard
+				bone="_bone_overhead"
+				life="130"
+				position="0 0 20"
+				startframe="0"
+				scale="1.4"
+				endframe="1"
+				material="/shared/effects/materials/3d_claw.material"
+				startcolor="1 0 0"
+				endcolor="1 0 0"		
+			/>	
+			
+			<simpleemitter
+				bone="_bone_overhead"
+				spawnrate="2000"
+				count="15"
+				minparticlelife="500"
+				maxparticlelife="1000"
+				gravity="10"
+				minspeed="250"
+				maxspeed="550"
+				drag=".13"
+				offsetsphere="30"
+				depthbias="-10"
+				material="/shared/effects/materials/blood1.material"
+					>
+				<particle 
+					minangle="0"
+					maxangle="360"			
+					color=".7"
+					maxanglespeed="20"
+					minanglespeed="-20"
+					startsize="10"
+					minendsize="55"
+					maxendsize="65"			
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+				/>
+				<particle 
+					minangle="0"
+					maxangle="360"			
+					color=".3"
+					maxanglespeed="55"
+					minanglespeed="-55"
+					startsize="10"
+					minendsize="95"
+					maxendsize="115"			
+					startalpha="1"
+					midalpha=".8"
+					endalpha="0"
+				/>
+				<particle 
+					minangle="0"
+					maxangle="360"			
+					color=".4"
+					maxanglespeed="10"
+					minanglespeed="-10"
+					startsize="30"
+					minendsize="5"
+					maxendsize="10"			
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+				/>
+			</simpleemitter>	
+
+		</particlesystem>
+	</definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <!--overlay startalpha="1" endalpha="0" duration="1000" material="/shared/effects/textures/blood1.tga"/-->
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+
+

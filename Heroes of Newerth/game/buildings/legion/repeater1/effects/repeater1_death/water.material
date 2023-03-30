@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<material>
+	<parameters vDiffuseColor="1.0000 1.0000 1.0000" fSpecularLevel="1" fGlossiness="100" fBumpLevel="8.0000" fOpacity="0.5">
+		<float name="fSpeed" value="0.02"/>
+		<float name="fDiffuseOpacity" value="1.0"/>
+	</parameters>
+	<phase name="color" vs="mesh_color_water6" ps="mesh_color_water6" srcblend="BLEND_SRC_ALPHA" dstblend="BLEND_ONE_MINUS_SRC_ALPHA" translucent="true" cull="CULL_BACK">
+		<sampler name="diffuse" texture="/shared/textures/water_color.tga" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="120.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false" filtering="true" border="false" />
+		<sampler name="normalmap1" texture="/shared/textures/water_normal.tga" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="1.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false" filtering="true" border="false" />
+		<sampler name="normalmap2" texture="/shared/textures/water_normal.tga" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="1.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false" filtering="true" border="false" />
+		<samplercube name="cube" texture="/world/sky/deadlock/1.tga" fps="15" mipmaps="true" fullquality="false" nocompress="false" />
+	</phase>
+	<phase name="fade" vs="mesh_color_water6" ps="mesh_color_water6" srcblend="BLEND_SRC_ALPHA" dstblend="BLEND_ONE_MINUS_SRC_ALPHA" translucent="true" cull="CULL_BACK">
+		<sampler name="diffuse" texture="/shared/textures/water_color.tga" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="120.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false" filtering="true" border="false" />
+		<sampler name="normalmap1" texture="/shared/textures/water_normal.tga" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="1.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false" filtering="true" border="false" />
+		<sampler name="normalmap2" texture="/shared/textures/water_normal.tga" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="1.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false" filtering="true" border="false" />
+		<samplercube name="cube" texture="/world/sky/deadlock/1.tga" fps="15" mipmaps="true" fullquality="false" nocompress="false" />
+	</phase>
+</material>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+	
+		<particlesystem name="system0" space="world" scale=".7">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".6"
+				sample="../sounds/return.wav"
+			/>
+
+			<billboard			
+				life="400"
+				bone="_bone_weapon3"
+				startsize="45"
+				minendsize="180"
+				maxendsize="230"
+				material="/shared/effects/materials/blink.material"
+				startcolor="1"
+				endcolor="0"
+				depthbias="-20"
+				maxroll="360"
+			/>
+
+			<billboard			
+				life="400"
+				bone="_bone_weapon3"
+				startsize="35"
+				endsize="120"
+				material="/shared/effects/materials/blink.material"
+				startcolor="1"
+				endcolor="0"
+				depthbias="-20"
+				maxroll="360"
+			/>
+
+			<twopointemitter
+				life="400"
+				bone_a="_bone_weapon1"
+				bone_b="_bone_weapon3"
+				spawnrate="355"
+				minparticlelife="100"
+				maxparticlelife="300"
+				angle="0"
+				offsetsphere="10"
+				material="/shared/effects/materials/blink.material"
+			>
+				<particle
+					startcolor="0"
+					midcolor="1"
+					endcolor="0"
+					midcolorpos="0.5"
+					minangle="0"
+					maxangle="350"
+					minanglespeed="-45"
+					maxanglespeed="45"
+					startsize="10"
+					maxendsize="30"
+					flare="1"
+					anchor="1"
+					height="6"
+				/>
+			</twopointemitter>
+			
+			<beam
+				bone_a="_bone_weapon1"
+				bone_b="_bone_weapon3"
+				size="50"
+				width="300"
+				startcolor=".7 .85 1"
+				endcolor="0"
+				life="400"
+				material="/shared/effects/materials/flare2.material"
+				anchor="1"
+			/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

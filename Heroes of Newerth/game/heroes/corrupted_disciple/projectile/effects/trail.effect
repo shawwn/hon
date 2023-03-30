@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1">
+	<definitions>
+		
+		
+
+	
+
+					
+		
+		<particlesystem name="system0" space="world" >
+
+
+			<sound
+				linearfalloff="true"
+				falloffstart="1800"
+				falloffend="2200"
+				volume=".6"
+				sample="../sounds/cast.wav"
+			/>
+				<trailemitter
+					
+					life="1"						
+					spawnrate="150"
+					startminparticlelife="1000"
+					startmaxparticlelife="1000"		
+					
+					endminparticlelife="1"
+					endmaxparticlelife="1" 
+					texpostime="1000"
+					texposscale="0"
+					texstretchscale="1"
+					position="0 0 0"
+					material="/shared/effects/materials/arrow_trail.material"
+				>
+					<particle
+						startcolor="1 .5 .7"
+						endcolor=".0 0 0"
+						startsize="22"		
+						endsize="22"
+						midcolorpos=".1"
+						midsizepos=".1"
+					/>
+				</trailemitter>		
+			<template name="beam">	
+				<trailemitter
+					
+					life="1000"						
+					spawnrate="150"
+					startminparticlelife="1000"
+					startmaxparticlelife="1000"		
+					offsetsphere="15 15 15"
+					endminparticlelife="1"
+					endmaxparticlelife="1" 
+					texpostime="1000"
+					texposscale="0"
+					texstretchscale="1"
+					position="0 0 0"
+					material="/shared/effects/materials/arrow_trail.material"
+				>
+					<particle
+						startcolor="1 0 0 "
+						endcolor=".0 0 0"
+						startsize="7"	
+						endsize="7"
+						midcolorpos=".1"
+						midsizepos=".1"
+					/>
+				</trailemitter>	
+				
+				<trailemitter
+					
+					life="1000"						
+					spawnrate="150"
+					startminparticlelife="1000"
+					startmaxparticlelife="1000"		
+					offsetsphere="25 25 25"
+					endminparticlelife="1"
+					endmaxparticlelife="1" 
+					texpostime="1000"
+					texposscale="0"
+					texstretchscale="1"
+					position="0 0 0"
+					material="/shared/effects/materials/arrow_trail.material"
+				>
+					<particle
+						startcolor="1 .5 .7"
+						endcolor=".0 0 0"
+						startsize="1"		
+						endsize="12"
+						midcolorpos=".1"
+						midsizepos=".1"
+					/>
+				</trailemitter>				
+			
+
+			</template>
+		
+			<billboard
+				size="150"
+				life="300"
+				startcolor="1 .1 .3"
+				endcolor="0 0 0"
+				material="/shared/effects/materials/whitedot.material"
+			/>			
+			<billboard
+				size="50"
+				life="300"
+				startcolor="1 .1 .2"
+				endcolor="0 0 0"
+				material="/shared/effects/materials/whitedot.material"
+			/>				
+			<instance name="beam" bone="_bone_main"/>
+			<instance name="beam" bone="_bone_2"/>
+			
+			
+
+			<simpleemitter
+				spawnrate="100"
+				particlelife="1000"
+				speed="1120"
+				inheritvelocity="0.2"
+			>
+				<particle
+								
+				>
+				
+					<trailemitter				
+						life="2000"						
+						spawnrate="144"
+						startminparticlelife="1000"
+						startmaxparticlelife="1000"		
+						offsetsphere="15 15 15"
+						endminparticlelife="1"
+						endmaxparticlelife="1" 
+						texpostime="2000"
+						texposscale="0"
+						texstretchscale="1"
+						position="0 0 0"
+						material="/shared/effects/materials/arrow_trail.material"
+					>
+						<particle
+							startcolor="1 1 1"
+							midcolor="1 0 .2"
+							endcolor="0 0 0"
+							startsize="5"		
+							endsize="0"
+							midcolorpos=".1"
+							midsizepos=".1"
+						/>
+					</trailemitter>				
+				
+				</particle>
+				
+			</simpleemitter>
+				
+			<trailemitter				
+				life="400"						
+				spawnrate="144"
+				startminparticlelife="400"
+				startmaxparticlelife="400"		
+				
+				endminparticlelife="1"
+				endmaxparticlelife="1" 
+				texpostime="400"
+				texposscale="0"
+				texstretchscale="1"
+				position="0 0 0"
+				material="/shared/effects/materials/femme_lightning_10.material"
+			>
+				<particle
+					startcolor="1 1 1"
+					midcolor="2 .2 .8"
+					endcolor="0 0 0"
+					startsize="0"		
+					midsize="100"
+					endsize="88"
+					midcolorpos=".1"
+					midsizepos=".1"
+					framespeed="2"
+				/>
+			</trailemitter>			
+			<groundsprite
+				size="250"
+				life="300"
+				startcolor=".5 .1 .1"
+				endcolor="0 0 0"
+				material="/shared/effects/materials/whitedot_ground.material"
+			/>		
+		
+		</particlesystem>
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+
+

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1" useentityeffectscale="1">
+	<definitions>
+	
+		<particlesystem name="system0" space="entity" scale="1.5">
+
+			<sound
+				soundloop="true"
+				fadein="200"
+				fadeout="500"
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".45"
+				sample="../sounds/state.wav"
+			/>
+		
+			<model 
+				bone="_bone_centerofchest"
+				anim="idle"
+				model="shield.mdf"
+				color="1 1 1"
+				startalpha="1"
+				endalpha="0"
+				startscale="1"
+				endscale="0"
+				expirelife="600"
+				pitchspeed="180"
+				yawspeed="180"
+			>	
+				<template name="trails">
+					<twopointtrailemitter
+						bone_a="{bone_a}"
+						bone_b="{bone_b}"
+						spawnrate="50"
+						particlelife="1000"
+						texpostime="1000"
+						texposscale="0"
+						texstretchscale="1"
+						material="/shared/effects/materials/swoosh_add.material"
+						subframepose="true"
+					>
+						<particle
+							startcolor="0 0 0"
+							midcolor=".5 .3 .1"
+							endcolor="0 0 0"
+							midcolorpos=".1"
+						/>
+					</twopointtrailemitter>
+				</template>
+				
+				<instance name="trails" bone_a="_bone_fx_01" bone_b="_bone_fx_02"/>
+				<instance name="trails" bone_a="_bone_fx_03" bone_b="_bone_fx_04"/>
+				<instance name="trails" bone_a="_bone_fx_05" bone_b="_bone_fx_06"/>
+
+				<template name="magicTrails">
+					<simpleemitter
+						bone="{bone}"
+						spawnrate="50"
+						particlelife="1000"
+						offsetsphere="10 10 10"
+						material="/shared/effects/materials/phantom_smoke_04.material"
+						subframepose="true"
+					>
+						<particle
+							minangle="0"
+							maxangle="360"
+							startcolor="0 0 0"
+							midcolor=".5 .35 .1"
+							endcolor="0 0 0"
+							midcolorpos=".1"
+							startsize="50"
+							endsize="5"
+						/>
+					</simpleemitter>
+				</template>
+				
+				<instance name="magicTrails" bone="Box01"/>
+				<instance name="magicTrails" bone="_bone_fx_03" bone_b="_bone_fx_04"/>
+				<instance name="magicTrails" bone="_bone_fx_05" bone_b="_bone_fx_06"/>
+				
+				<billboard
+					material="/shared/effects/materials/fresnel_blend.material"
+					bone="origin"
+					color=".5 .3 0"
+					loop="1"
+					life="1000"
+					startalpha=".2"
+					midalpha=".7"
+					endalpha=".2"
+					size="80"
+					depthbias="-150"
+				/>
+				
+				<billboard
+					material="/shared/effects/materials/corona_07.material"
+					bone="origin"
+					startcolor=".5 .3 0"
+					endcolor="0"
+					size="80"
+					depthbias="-150"
+					expirelife="600"
+				/>
+				
+				<billboard
+					material="/shared/effects/materials/fresnel.material"
+					bone="origin"
+					startcolor=".5 .3 0"
+					endcolor="0 0 0"
+					life="300"
+					size="80"
+					depthbias="-150"
+				/>
+				
+				<billboard
+					material="/shared/effects/materials/fresnel_blend.material"
+					bone="origin"
+					color=".25 .15 0"
+					loop="1"
+					life="1000"
+					startalpha=".2"
+					midalpha=".7"
+					endalpha=".2"
+					position="0 10 0"
+					size="80"
+					depthbias="-150"
+				/>
+				
+				<billboard
+					material="/shared/effects/materials/corona_07.material"
+					bone="origin"
+					startcolor=".25 .15 0"
+					endcolor="0"
+					position="0 10 0"
+					size="80"
+					depthbias="-150"
+					expirelife="600"
+				/>
+				
+				<billboard
+					material="/shared/effects/materials/fresnel.material"
+					bone="origin"
+					startcolor=".25 .15 0"
+					endcolor="0 0 0"
+					life="300"
+					position="0 10 0"
+					size="80"
+					depthbias="-150"
+				/>
+
+			</model>
+
+	</particlesystem>
+</definitions>
+
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<spawnmodifier instance="instance1" modifier="modifier0"/>  
+	<waitfordeath instance="instance0" />
+</thread>
+
+</effect>
+
+
+
+
+
+
+

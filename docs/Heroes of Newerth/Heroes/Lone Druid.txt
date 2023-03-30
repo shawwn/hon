@@ -1,0 +1,22 @@
+Ability 1:
+----------
+Summons a companion bear. It has various abilities as it levels. Entangle, prevents movement and interrupts channeling upon triggering. Return, returns the bear to its owner. Demolish, deals bonus damage to structures. Magical armor. Can arry items. This unit can only attack units within a certain range of the owner. 
+
+
+Ability 2:
+----------
+Can be cast or autocast on you or your bear. Gives you bonus movement and attack speed.
+
+
+Ability 3:
+----------
+Each level gives your other abilities various bonuses. Gives bonus damage and movement to your bear. Increases duration of Rabid and adds extra hitpoints to your true form.
+
+
+Ultimate:
+----------
+Morphs into a melee bear. Gives bonus hitpoints and a percentage bonus to your attack speed.
+
+
+
+Agility/Ranged

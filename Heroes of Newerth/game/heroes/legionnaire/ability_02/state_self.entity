@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Legionnaire_Ability2_Self"
+	
+	icon="icon.tga"
+	passiveeffect="effects/state_self.effect"
+	ishidden="true"
+	
+	movespeed="60,100,140,522"
+	basedamagemultiplier="0.5,1,1.5,2"
+	
+	unitwalking="true"
+	
+	modifierkey="legionnairecharging"	
+>
+</state>

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect  >
+	<definitions>
+
+
+		<particlesystem name="system0" space="world" scale="1">
+
+			<simpleemitter
+				count="1"
+				spawnrate="5000"
+				particlelife="2600"
+				acceleration="0.0"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+			>
+				<particle
+					turn="1"
+				>
+				
+					<model
+						position="0 0 30"
+						life="1700"
+						anim="idle"
+						model="splinters/explode.mdf"
+						scale="1.2"
+						color="1.75 1.5 1.25"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".6"
+						midcolorpos=".75"
+					>
+						
+
+						<template name="lights">
+							<billboard
+								bone="{bone}"
+								life="1000"
+								startcolor=".15 .075 .025"
+								midcolor=".15 .075 .025"
+								endcolor="0 0 0"
+								midcolorpos=".25"
+								position="0 0 0"
+								size="75"
+								material="/shared/effects/materials/whitedot.material"
+								directionalspace="world"
+							/>
+						</template>
+			
+						<instance name="lights" bone="Box01"/>	
+						<instance name="lights" bone="Box02"/>
+						<instance name="lights" bone="Box03"/>
+						<instance name="lights" bone="Box04"/>
+						<instance name="lights" bone="Box05"/>
+						<instance name="lights" bone="Box06"/>
+						<instance name="lights" bone="Box07"/>
+						<instance name="lights" bone="Box08"/>
+						<instance name="lights" bone="Box09"/>
+
+						<template name="dustTrails">
+							<simpleemitter
+								bone="{bone}"
+								position="0 0 0"
+								spawnrate="25"
+								particlelife="1000"
+								gravity="0"
+								offsetsphere="15 15 0"
+								drag="0"
+								acceleration="0"
+								direction="0 0 0"
+								material="/shared/effects/materials/dust_smoke_02.material"
+							>
+								<particle 
+									color="0.35 0.325 .275"
+									minangle="0"
+									maxangle="360"
+									startsize="45"
+									midsize="35"
+									endsize="15"
+									midsizepos=".5"
+									startalpha="0"
+									midalpha=".25"
+									endalpha="0"
+									startanchor="1"
+									endanchor=".5"
+								/>
+							</simpleemitter>
+						</template>
+			
+						<instance name="dustTrails" bone="Box01"/>	
+						<instance name="dustTrails" bone="Box02"/>
+						<instance name="dustTrails" bone="Box03"/>
+						<instance name="dustTrails" bone="Box04"/>
+						<instance name="dustTrails" bone="Box05"/>
+						<instance name="dustTrails" bone="Box06"/>
+						<instance name="dustTrails" bone="Box07"/>
+						<instance name="dustTrails" bone="Box08"/>
+						<instance name="dustTrails" bone="Box09"/>
+
+					
+
+						<simpleemitter
+							bone="_bone_root"
+							count="25"
+							spawnrate="100"
+							minparticlelife="250"
+							maxparticlelife="750"
+							acceleration="0.0"
+							drag="0.02"
+							minangle="0"
+							maxangle="44"
+							direction="-1 0 0"
+							speed="1202"
+							material="/shared/effects/materials/whitedot.material"
+						>
+							<particle
+								startsize="20"
+								endsize="0"
+								startcolor=".5 .25 0"
+								midcolor=".5 .25 0"
+								endcolor="0 0 0"
+							>
+							</particle>
+						</simpleemitter>
+						
+						<simpleemitter
+							bone="_bone_root"
+							count="10"
+							spawnrate="100"
+							minparticlelife="250"
+							maxparticlelife="750"
+							acceleration="0.0"
+							drag="0.02"
+							minangle="0"
+							maxangle="50"
+							direction="-1 0 0"
+							speed="1202"
+							material="/shared/effects/materials/refract_wave.material"
+
+						>
+							<particle
+							minangle="0"
+							maxangle="360"
+								startparam="0"
+								midparam="0.2"
+								endparam="0"
+								midparampos=".3"
+								startsize="100"
+								endsize="0"
+								color="1 1 1"
+								alpha="1"
+							>
+							</particle>
+						</simpleemitter>
+						
+						<simpleemitter
+							bone="_bone_root"
+							count="15"
+							spawnrate="100"
+							minparticlelife="500"
+							maxparticlelife="1000"
+							acceleration="0.0"
+							drag="0.02"
+							minangle="0"
+							maxangle="44"
+							direction="-1 0 0"
+							speed="1202"
+							material="/shared/effects/materials/leaf_01.material"
+						>
+							<particle
+								startsize="30"
+								endsize="0"
+								startcolor="1 .5 0"
+								midcolor="1 .5 0"
+								endcolor="1 .5 0"
+								startalpha="1"
+								midalpha="1"
+								endalpha="0"
+							>
+							</particle>
+						</simpleemitter>
+						
+						<simpleemitter
+							bone="_bone_root"
+							count="15"
+							spawnrate="100"
+							minparticlelife="700"
+							maxparticlelife="1100"
+							acceleration="0.0"
+							drag="0.02"
+							minangle="0"
+							maxangle="20"
+							direction="-1 0 0"
+							speed="1202"
+							material="/shared/effects/materials/dust_smoke_02.material"
+						>
+							<particle
+								startsize="150"
+								endsize="50"
+								color="0.35 0.325 .275"
+								startalpha=".25"
+								midalpha=".25"
+								endalpha="0"
+							>
+							</particle>
+						</simpleemitter>
+
+					</model>
+					
+					<billboard
+						bone="Box03"
+						life="650"
+						color=".25 .125 .05"
+						midcolor=".25 .125 .05"
+						endcolor="0 0 0"
+						startsize="175"
+						endsize="75"
+						startalpha="0"
+						midalpha=".75"
+						endalpha="0"				
+						depthbias="0"
+						material="/shared/effects/materials/whitedot.material"
+						lockup="1"
+						lockright="1"
+						pitch="90"
+					/>
+					
+					<model
+						position="0 0 50"
+						life="1000"
+						anim="idle"
+						model="sharp_splinters/explode.mdf"
+						scale="1"
+						color="1 1 1"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".6"
+						midcolorpos=".75"
+					/>
+					
+				</particle>
+			</simpleemitter>
+
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

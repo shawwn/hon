@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Valkyrie_Ability1_Normal"
+
+	radius="650"
+
+	maximpactspertarget="1"
+	targetselection="all"
+	targetscheme="visible_enemy_units"
+	effecttype="Magic"
+
+	impacteffect="effects/impact.effect"
+	effect=""
+>
+	<onimpact>
+		<applystate name="State_Valkyrie_Ability1" duration="500" />
+	</onimpact>
+</affector>

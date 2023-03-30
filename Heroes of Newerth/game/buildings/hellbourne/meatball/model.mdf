@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="model_high.max" file="high.model" type="K2">
+
+	<anim name="idle" clip="clips/idle.clip" fps="30" loop="true"/>
+	
+	<anim name="death_1" clip="clips/idle.clip" loop="true" loopbackframe="-1">
+		<frameevent frame="1" cmd="starteffect effects/explosion.effect 0"/>
+		<frameevent frame="1" cmd="starteffect effects/death.effect 1"/>
+	</anim>
+
+</model>

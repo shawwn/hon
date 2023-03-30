@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect  >
+	<definitions>
+
+
+		<particlesystem name="system0" space="world" scale=".5">
+
+			<simpleemitter
+				position="0 140 0"
+				count="1"
+				spawnrate="5000"
+				particlelife="2600"
+				acceleration="0.0"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+			>
+				<particle
+					turn="1"
+				>
+					<model
+						position="0 0 40"
+						life="1700"
+						anim="idle"
+						model="../../ability_04/effects/splinters/explode.mdf"
+						startscale="1.1"
+						endscale="1"
+						color="2 1.7 1"
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".35"
+						midcolorpos=".75"
+						minyaw="-25"
+						maxyaw="10"
+					>
+
+						<template name="dustTrails">
+							<simpleemitter
+								bone="{bone}"
+								position="0 0 0"
+								spawnrate="25"
+								particlelife="1000"
+								gravity="0"
+								offsetsphere="10 10 0"
+								drag="0"
+								acceleration="0"
+								direction="0 0 0"
+								material="/shared/effects/materials/dust_smoke_02.material"
+							>
+								<particle 
+									color="0.35 0.325 .275"
+									minangle="0"
+									maxangle="360"
+									startsize="45"
+									midsize="35"
+									endsize="15"
+									midsizepos=".5"
+									startalpha="0"
+									midalpha=".25"
+									endalpha="0"
+									startanchor="1"
+									endanchor=".5"
+								/>
+							</simpleemitter>
+						</template>
+			
+						<instance name="dustTrails" bone="Box01"/>	
+						<instance name="dustTrails" bone="Box02"/>
+						<instance name="dustTrails" bone="Box03"/>
+						<instance name="dustTrails" bone="Box04"/>
+						<instance name="dustTrails" bone="Box05"/>
+						<instance name="dustTrails" bone="Box06"/>
+						<instance name="dustTrails" bone="Box07"/>
+						<instance name="dustTrails" bone="Box08"/>
+						<instance name="dustTrails" bone="Box09"/>
+
+						<simpleemitter
+							bone="_bone_root"
+							count="15"
+							spawnrate="100"
+							minparticlelife="700"
+							maxparticlelife="1100"
+							acceleration="0.0"
+							drag="0.02"
+							minangle="0"
+							maxangle="20"
+							direction="-1 0 0"
+							speed="750"
+							material="/shared/effects/materials/dust_smoke_02.material"
+						>
+							<particle
+								startsize="150"
+								endsize="75"
+								color="0.35 0.325 .275"
+								startalpha="0"
+								midalpha=".25"
+								endalpha="0"
+							>
+							</particle>
+						</simpleemitter>
+
+					</model>
+				</particle>
+			</simpleemitter>
+
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

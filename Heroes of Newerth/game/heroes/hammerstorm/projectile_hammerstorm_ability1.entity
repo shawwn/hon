@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Hammerstorm_Ability1"
+
+	speed="1300"
+	gravity="4000"
+
+	modelscale="2.5"
+	model="effects/ability_01/projectile/model.mdf"
+
+	effectscale="2.0"
+	impacteffect="effects/ability_01/projectile/effects/ability_01_impact.effect"
+>
+</projectile>

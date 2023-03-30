@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="bolt_lightning_02" useentityeffectscale="true">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="1.3">
+		
+			<billboard
+				delay="100"
+				life="1000"	
+				bone="_bone_weapon3"
+				material="/shared/effects/materials/whitedot.material"
+				startcolor="1 .5 0"
+				midcolor=".1 .5 .5"
+				endcolor="0 0 0"
+				midcolorpos=".75"
+				size="40"
+				depthbias="-30"
+			/>	
+
+			<simpleemitter
+				bone="_bone_weapon3"
+				delay="200"
+				life="250"
+				spawnrate="25"
+				particlelife="500"
+				gravity="0"
+				speed="2.0"
+				drag="0.0"
+				acceleration="0.0"
+				material="/shared/effects/materials/femme_lightning_06.material"
+				offsetsphere="5 5 5"
+				position="0 0 0"
+			>
+				<particle
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-22"
+					maxanglespeed="22"
+					startcolor="1 .4 0"
+					endcolor=".2 1 1"
+					width="60"
+					height="30"
+					anchor="1"
+					turn="true"
+					framespeed="1.75"
+				/>
+			</simpleemitter>
+
+			<skeletonemitter
+				life="1750"
+				delay="450"
+				spawnrate="380"
+				count="400"
+				particlelife="70"
+				gravity="0"
+				speed="40"
+				drag="0"
+				acceleration="0"
+				position="0 0 0"
+				material="/shared/effects/materials/lightning_01.material"
+				offsetsphere="5 16 10"
+				minangle="360"
+				maxangle="180"
+				direction="1 0 0"
+				offsetdirection="0 0 0"
+				offsetradial="0 0 0"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					minanglespeed="50"
+					maxanglespeed="190"
+					startcolor=".2 .5 1"
+					midcolor=".2 .5 1"
+					endcolor=".1 .5 .5"
+					midcolorpos=".75"
+					startframe="0"
+					endframe="1"
+					startsize="20"
+					midsize="30"
+					endsize="30"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".5"
+					startstickiness=".2"
+					endstickiness=".2"
+				/>
+			</skeletonemitter>
+			
+			<model
+				delay="350"
+				life="400"
+				parentmodel="true"
+				parentskeleton="true"
+				startcolor="1 .5 .125"
+				midcolor="1 .5 .125"
+				endcolor=".125 .5 .5"
+				startscale="1"
+				midscale="1"
+				endscale="1"
+				midscalepos=".4"
+				material="/shared/effects/materials/shell4.material"
+				startalpha="0"
+				endalpha="10"
+			/>
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		
+		<waitfordeath instance="instance0" /> 
+		
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

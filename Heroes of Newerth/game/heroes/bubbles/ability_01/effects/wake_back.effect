@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect entityeffectscale="true" deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1.2" >
+			
+			<template name="streak">
+				<trailemitter							
+					spawnrate="10"
+					startminparticlelife="{life}"
+					startmaxparticlelife="{life}"	
+					
+					endminparticlelife="1"
+					endmaxparticlelife="1" 
+					texpostime="{life}"
+					texposscale="0"
+					texstretchscale="1"
+					position="{position}"
+					material="/shared/effects/materials/arrow_trail.material"
+				>
+					<particle
+						startcolor=".3 . 3 .3"						
+						endcolor="0 .6 .6"
+						startsize="5"
+						midcolorpos=".2"
+						midsize="3"
+						endsize=".5"					
+					/>
+				</trailemitter>	
+			</template>
+		
+			<template name="wake">
+				<billboard
+					height="20"
+					width="80"
+					color="1"
+					position="0 -20 0"	
+					material="/shared/effects/materials/wave.material"
+					pitch="90"
+					roll="90"
+					lockup="1"
+					lockright="1"
+					directionalspace="local"
+				/>
+				
+
+	
+	
+	
+				
+				<simpleemitter
+					startspawnrate="25"
+					endspawnrate="0"
+					particlelife="800"
+					offsetsphere="25 5 0"
+					material="/shared/effects/materials/dust_smoke_03.material"
+					direction="0 -1 0"
+					speed="0"
+					angle="0"
+					inheritvelocity="0.15"
+				>
+					<particle
+						startcolor=".3 .5 .6"
+						endcolor=".3 .5 .7"
+						startalpha="0"
+						midalpha=".8"
+						endalpha="0"
+						startsize="50"
+						endsize="20"
+						maxangle="360"
+						depthbias="-30"
+						minanglespeed="-35"
+						maxanglespeed="35"
+						pitch="90"
+						roll="90"
+						lockup="1"
+						lockright="1"
+					/>
+				</simpleemitter>
+
+
+
+				<simpleemitter
+					spawnrate="11"
+					particlelife="500"
+					offsetsphere="10 5 15"
+					material="/shared/effects/materials/water_spray_blend.material"
+					direction="0 -1 0"
+					speed="0"
+					angle="20"
+					inheritvelocity="0.25"
+				>
+					<particle
+						startcolor=".2"
+						endcolor=".2"
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"
+						startsize="50"
+						endsize="45"
+						maxangle="360"
+						depthbias="-10"
+						minanglespeed="-65"
+						maxanglespeed="65"
+					 />
+				</simpleemitter>
+				
+				
+
+				<instance name="streak" life="250" position="-25 0 0"/>
+				<instance name="streak" life="350" position="-10 0 0"/>
+				<instance name="streak" life="450" position="0 0 0"/>
+				<instance name="streak" life="350" position="10 0 0"/>
+				<instance name="streak" life="250" position="25 0 0"/>
+				
+			
+				<simpleemitter
+					spawnrate="11"
+					minparticlelife="200"
+					maxparticlelife="500"
+					offsetsphere="20 5 15"
+					position="0 10 0"
+					angle="10"
+					material="/shared/effects/materials/whitewater_02.material"
+					inheritvelocity="0.25"
+				>
+					<particle
+						startcolor=".2 .2 .2"
+						midcolor=".2"
+						endcolor="0"
+						size="25"
+						maxangle="360"
+						depthbias="-130"
+						minendscale="1"
+						maxendscale="3"
+					/>
+				</simpleemitter>	
+
+
+			
+			</template>
+		
+		
+			<simpleemitter								
+				startspawnrate="20"
+				endspawnrate="0"
+				particlelife="1500"
+				offsetsphere="0 0 0"
+				position="-15 35 0"
+				direction="-.4 0 1"
+				gravity="41"
+				minspeed="285"
+				maxspeed="300"
+				angle="0"
+				inheritvelocity="0.0"
+			>
+				<particle
+					turn="1"				
+			 	>
+								
+					<instance name="wake"/>
+					<instance name="streak" life="150" position="-15 0 0"/>
+					<instance name="streak" life="250" position="-15 0 0"/>
+					<instance name="streak" life="350" position="0 0 0"/>
+					<instance name="streak" life="250" position="5 0 0"/>
+					<instance name="streak" life="150" position="10 0 0"/>			
+				</particle>
+			</simpleemitter>
+			
+			<simpleemitter
+				
+				startspawnrate="18"
+				endspawnrate="0"
+				particlelife="1500"
+				offsetsphere="0 0 0"
+				position="15 35 0"
+				direction="0.4 0 1"
+				gravity="41"
+				minspeed="285"
+				maxspeed="300"
+				angle="0"
+				inheritvelocity="0.0"
+			>
+				<particle
+					turn="1"				
+			 	>
+								
+					<instance name="wake"/>
+					<instance name="streak" life="150" position="-15 0 0"/>
+					<instance name="streak" life="250" position="-15 0 0"/>
+					<instance name="streak" life="350" position="0 0 0"/>
+					<instance name="streak" life="250" position="5 0 0"/>
+					<instance name="streak" life="150" position="10 0 0"/>	
+				</particle>
+			</simpleemitter>
+			
+			<simpleemitter	
+				
+				startspawnrate="22"
+				
+				particlelife="1500"
+				offsetsphere="0 0 0"
+				position="0 0 0"
+				direction="0 1 0"
+				gravity="51"
+			
+				speed="260"
+				minangle="-5"
+				maxangle="5"
+				inheritvelocity="0.25"
+			>
+				<particle
+		
+			 	>
+					<billboard				
+						life="400"
+						material="/shared/effects/materials/outsplash_blend.material"
+						position="0 0 40"						
+						startcolor="1 1 1"
+						endcolor="1 1 1"
+						startsize="10"
+						endsize="110"
+						startalpha=".3"
+						midalpha=".3"
+						endalpha="0"				
+						lockup="1"
+						lockright="1"
+						pitch="-90"
+						anchor=".8"
+					/>
+				</particle>
+			</simpleemitter>
+<!--
+			<simpleemitter
+				life="1000"
+				spawnrate="5"
+				particlelife="1000"					
+				minspeed="5.0"
+				maxspeed="10"
+				inheritvelocity=".25"
+				material="/shared/effects/materials/refract_ripples.material"
+			>
+				<particle
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-80"
+					maxanglespeed="80"
+					startsize="50"
+					endsize="110"
+					param=".009"
+					depthbias="-160"
+				/>
+			</simpleemitter>	
+-->
+			<simpleemitter		
+				position="35 0 0"
+				spawnrate="225"
+				particlelife="1000"					
+				minspeed="30.0"
+				maxspeed="50"
+				inheritvelocity=".25"
+				offsetsphere="10 10 10"
+				material="/shared/effects/materials/bub.material"
+			>
+				<particle	
+					color=".6 1 1"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-80"
+					maxanglespeed="80"
+					startsize="10"
+					endsize="0"					
+					depthbias="-160"
+				/>
+			</simpleemitter>	
+			<simpleemitter		
+				position="-35 0 0"
+				spawnrate="225"
+				particlelife="1000"					
+				minspeed="30.0"
+				maxspeed="50"
+				inheritvelocity=".25"
+				offsetsphere="10 10 10"
+				material="/shared/effects/materials/bub.material"
+			>
+				<particle	
+					color=".6 1 1"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-80"
+					maxanglespeed="80"
+					startsize="10"
+					endsize="0"					
+					depthbias="-160"
+				/>
+			</simpleemitter>
+			
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

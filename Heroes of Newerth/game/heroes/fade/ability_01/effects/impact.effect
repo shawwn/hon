@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1" useentityeffectscale="1">
+
+	<definitions>
+	
+		<template name="trail">
+			<trailemitter				
+				bone="{bone}"
+				spawnrate="20"
+				startminparticlelife="800"
+				startmaxparticlelife="800"		
+				endminparticlelife="1"
+				endmaxparticlelife="1" 
+				texpostime="800"
+			 	texposscale="1"
+			 	texstretchscale="0"
+				position="10 0 0"
+				material="/shared/effects/materials/arrow_trail.material"
+				inheritvelocity=".1"	
+			>
+				<particle
+					startcolor=".3 .0 .3"
+					midcolor=".65 .5 .0"
+					endcolor="0"
+					startsize="50"
+					midsize="55"
+					endsize=".5"					
+				/>
+			</trailemitter>	
+		</template>
+
+		<particlesystem name="system0" space="world" scale=".7">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2000"
+				volume=".2"
+				sample="../sounds/impact.wav"
+			/>
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2500"
+				volume=".1"
+				sample="/heroes/hunter/sounds/impact_%.wav"
+			/>
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2500"
+				volume=".3"
+				sample="/shared/sounds/impacts/flesh_%.wav"
+			/>
+			
+			<billboard				
+				width="200"				
+				height="25"				
+				position="0 0 -33"
+				bone="_bone_head"
+				life="250"
+				material="/shared/effects/materials/whitedot.material"
+				startcolor=".5 .2 .9"
+				endcolor="0"
+			>		
+			</billboard>
+			
+			<billboard				
+				width="200"				
+				height="25"				
+				position="0 0 -33"
+				bone="_bone_head"
+				life="250"
+				material="/shared/effects/materials/whitedot.material"				
+				startcolor=".5 .2 .9"
+				endcolor="0"
+			>		
+			</billboard>
+			
+			<billboard
+				delay="200"
+				bone="_bone_centerofchest"
+				life="75"
+				color=".25 .1 .45"
+				startsize="250"
+				endsize="250"
+				rollspeed="-1250"
+				depthbias="-50"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+			
+			<billboard
+				bone="_bone_centerofchest"
+				position="0 0 0"
+				life="75"
+				color=".5 .2 .9"
+				startsize="115"
+				endsize="115"
+				rollspeed="-1250"
+				depthbias="-50"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+			
+			<billboard
+				position="0 0 10"
+				delay="0"
+				life="350"
+				param="0.1"	
+				startsize="175"
+				endsize="375"
+				startalpha="0"
+				midalpha=".4"
+				endalpha="0"				
+				depthbias="0"
+				material="/shared/effects/materials/refract_swell.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+			/>
+			
+			<billboard
+				position="0 0 10"
+				delay="175"
+				life="350"
+				param="0.1"	
+				startsize="175"
+				endsize="375"
+				startalpha="0"
+				midalpha=".4"
+				endalpha="0"				
+				depthbias="0"
+				material="/shared/effects/materials/refract_swell.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+			/>
+			
+			
+				
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnparticlesystem instance="instance1" particlesystem="system1" />
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+	</thread>
+
+</effect>

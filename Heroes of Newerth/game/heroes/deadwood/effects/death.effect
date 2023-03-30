@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		
+		<modifier
+			name="modifier0"
+			color="1 1 1"
+			alpha="0"
+			
+		/>		
+		<particlesystem name="system0" space="world" scale="1">
+		
+	<!--		<model
+				life="4000"
+				model="death/model.mdf"
+				anim="death_1"
+				startcolor="1 1 1"
+				midcolor=".5 .5 .5"
+				endcolor=".5 .5 .5"
+				midcolorpos=".5"
+				expirelife="500"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".5"
+			/>			 -->
+			
+			<model
+				life="4000"
+				model="death/boards.mdf"
+				anim="idle"
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="1 1 1"
+				midcolorpos=".5"
+				expirelife="500"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".5"
+			/>
+
+			<template name="dust">
+				<simpleemitter
+				life="1000"
+					bone="{bone}"
+					gravity="-1"
+					spawnrate="15"
+					minparticlelife="800"
+					maxparticlelife="1650"
+					offsetsphere="65 65 0"
+					material="/shared/effects/materials/dust_smoke_10.material"
+					depthbias="-55"
+					inheritvelocity="-0.1"
+				>
+					<particle 
+						minangle="-180"
+						maxangle="180"		
+						color="0.5 0.5 .4"
+						size="10"
+						minstartscale="5"
+						maxstartscale="10"
+						minendscale="15"
+						maxendscale="20"
+						startalpha="0"
+						midalpha=".25"
+						midalphapos="0.2"
+						endalpha="0"
+					/>
+				</simpleemitter>
+			</template>
+
+			<instance name="dust" bone="_bone_leftfoot"/>
+			<instance name="dust" bone="_bone_rightfoot"/>
+
+
+			<simpleemitter
+			life="1000"
+				count="1"
+				particlelife="1000"
+				spawnrate="50"
+			>
+				<particle>
+					<model
+						position="0 0 50"
+						life="500"
+						model="../ability_04/effects/sharp_splinters/explode.mdf"
+						anim="explode_01"
+						color=".85 .75 .8"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".5"
+						startscale="1"
+						endscale="1"
+						minyaw="0"
+						maxyaw="180"
+					/>
+				</particle>
+			</simpleemitter>
+			
+			<simpleemitter
+			life="1000"
+				count="1"
+				particlelife="1000"
+				spawnrate="50"
+			>
+				<particle>
+					<model
+						position="0 0 50"
+						life="500"
+						model="../ability_04/effects/sharp_splinters/explode.mdf"
+						anim="explode_01"
+						color=".65 .65 .65"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".5"
+						startscale="1.5"
+						endscale="1.5"
+						minyaw="0"
+						maxyaw="180"
+					/>
+				</particle>
+			</simpleemitter>
+
+		</particlesystem>
+		
+		<modifier
+			color="1 1 1"
+			alpha="0"
+		/>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance1" particlesystem="system0" />
+		<spawnmodifier instance="instance0"/>
+		<waitfordeath  instance="instance0"/>
+		<waitfordeath  instance="instance1"/>
+	</thread>
+
+</effect>

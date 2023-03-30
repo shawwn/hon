@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Panda_Ability2"
+
+	gravity="4500"
+	lifetime="1000"
+	useexactlifetime="true"
+
+	modelscale="1.0"
+	model=""
+	deatheffect=""
+	canturn="false"
+	flying="false"
+	flyheight="0"
+>
+	<onimpact>
+		<applystate name="State_Panda_Ability2_Slow" target="proxy_entity" duration="6000" />
+		<kill target="target_entity" source="" />
+	</onimpact>
+</projectile>

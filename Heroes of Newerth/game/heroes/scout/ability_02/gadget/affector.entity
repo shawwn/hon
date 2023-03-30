@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Scout_Ability2"
+
+	radius="450"
+	
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype=""
+	persist="true"
+	
+	effect=""
+	impacteffect="impact.effect"
+>
+	<onimpact>
+		<applystate name="State_Scout_Ability2" duration="3000,4000,5000,6000"/>
+	</onimpact>
+</affector>

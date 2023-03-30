@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Bephelgor_Ability1_Secondary"
+	
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+
+	silenced="true"
+
+	effecttype="StatusDebuff"
+>
+	<oninflict>
+		<playeffect effect="effects/cast.effect" source="target_entity" target="proxy_entity"/>
+	</oninflict>
+	<onframe>
+		<damage effecttype="Magic DOT" amount="60" b="frametime" op="mult"/>
+	</onframe>
+</state>

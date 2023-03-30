@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="ability_04_impact">
+	<definitions>
+		<modifier
+			name="modifier0"
+			life="1000"
+			startcolor="11 12 2"
+			endcolor="1.0 1.0 1.0"
+		/>
+	
+	
+	
+		<trailemitter
+		name="emitter0"
+			spawnrate="30"
+			particlelife="900"
+			texpostime="900"
+			texposscale="0"
+			texstretchscale="1"	
+			material="/shared/effects/materials/arrow_trail.material"
+		>
+			<particle
+				 startcolor="1 0.7 .2"
+				 midcolor=".9 0.4 0"
+				 endcolor="0 0 0"
+				 startsize="00"
+				 midsize="10"
+				 endsize="5"
+				 midsizepos="0.2"
+		 />
+		</trailemitter>	
+		
+		
+
+
+	
+	
+	
+		<particlesystem name="system0" space="world" useentityeffectscale="true" scale="1.35">
+
+		
+		<light
+			life="1150"			
+			startcolor="6 1.8 0"			
+			endcolor="0 0 0"
+			midcolorpos=".2"
+			falloffstart="100"
+			falloffend="155"
+			position="0 0 50"	
+		/>	
+		
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2200"
+				volume="1.0" 
+				sample="/heroes/pyromancer/ability_04/sounds/ability_04_impact.wav"
+			/>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				spawnrate="233"
+				particlelife="1000"
+				count="20"
+				particlelifealloc="6000"
+				gravity="9.0"
+				minspeed="120"
+				maxspeed="182.0"
+				drag="0.0"
+				acceleration="0.0"
+				inheritvelocity="0.5"
+			>
+				<particle
+					emitter="emitter0"
+				/>			
+			</simpleemitter>
+			
+	
+	
+	
+	
+	
+
+			<billboard
+				life="1500"
+				startcolor="1.0 .5 0"
+				endcolor="0 0 0"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="0.0"
+				midalphapos="0.75"
+				startparam="0.05"
+				endparam="0.0"				
+				
+				startsize="000"
+				endsize="200"
+				
+				midsizepos=".4"				
+				
+				depthbias="0"
+				position="0 0 20"
+				material="/shared/effects/materials/stomp_02.material"
+				lockup="true"
+				pitch="90"
+			/>
+			<billboard
+				delay="100"
+				life="1500"
+				startcolor="1.0 .5 0"
+				endcolor="0 0 0"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="0.0"
+				midalphapos="0.75"
+				startparam="0.05"
+				endparam="0.0"				
+				
+				startsize="000"
+				endsize="110"
+				
+				midsizepos=".4"				
+				
+				depthbias="0"
+				position="0 0 20"
+				material="/shared/effects/materials/stomp_02.material"
+				lockup="true"
+				pitch="90"
+			/>			
+
+
+			
+			
+			
+
+
+
+			<billboard
+			delay="100"
+				life="500"
+				color="1.0 1.0 1.0"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="0.0"
+				midalphapos="0.75"
+				startparam=".25"
+				endparam="0.0"
+				startsize="128"
+				endsize="348"
+				depthbias="0"
+				position="0 0 20"
+				material="/shared/effects/materials/refract_ring.material"
+				lockup="true"
+				pitch="90"
+			/>	
+
+
+
+
+
+
+
+
+
+
+        
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0"  particlesystem="system0" />	
+	  <spawnmodifier instance="instance1" modifier="modifier0"/>  
+	   <camerashake2 scale="15.0" radius="1500" duration="400" frequency="22" />
+	  <waitfordeath instance="instance0" />
+	  <waitfordeath instance="instance1" />	  
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

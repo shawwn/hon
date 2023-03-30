@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_SandWraith_Ability4_Illusion"
+
+	ishidden="true"
+	
+	unitwalking="true"
+	movespeed="105"
+>
+	<onkill>
+		<kill target="source_entity" />
+	</onkill>
+</state>

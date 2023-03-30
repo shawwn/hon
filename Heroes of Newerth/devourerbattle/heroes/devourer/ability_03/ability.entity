@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Devourer3"
+
+	icon="icon.tga"
+	
+	maxlevel="8"
+	requiredlevel="1,3,5,7,9,11,13,15"
+
+	actiontype="passive"
+	
+	modifierkey="Devourer_Speed1,Devourer_Speed2,Devourer_Speed3,Devourer_Speed4,Devourer_Speed5,Devourer_Speed6,Devourer_Speed7,Devourer_Speed8"
+>
+</ability>

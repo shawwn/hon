@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale=".35">
+
+
+	
+			<simpleemitter	
+				position="0 0 150"
+				spawnrate="5"
+				particlelife="3000"
+				gravity="2"
+				speed="5"
+				direction="0 0 1"
+				material="/shared/effects/materials/twirl_blend.material"
+			>
+				<particle
+					startcolor="1"
+					endcolor=".3 .7 1"
+					startalpha="0"
+					midalpha=".7"
+					endalpha="0"
+					midcolor="0.1"
+					maxangle="360"
+					anglespeed="-30"
+					startsize="800"
+					endsize="0"
+					lockup="1"
+					lockright="1"
+					pitch="-90"
+					anchor=".8"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				position="0 0 150"
+				spawnrate="15"
+				particlelife="1500"
+				gravity="5"
+				speed="15"
+				offsetsphere="15"
+				direction="0 0 1"
+				material="/shared/effects/materials/blob.material"
+			>
+				<particle
+					startcolor=".5 1 1"
+					midcolor=".2 .7 1"
+					endcolor="0"
+					midcolorpos=".5"
+					startalpha="0"
+					midalpha=".4"
+					endalpha="0"					
+					maxangle="360"
+					anglespeed="-30"
+					startsize="500"
+					endsize="0"
+					lockup="1"
+					lockright="1"
+					pitch="-90"
+					anchor=".8"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				position="0 0 150"
+				spawnrate="3"
+				particlelife="1500"
+				gravity="5"
+				speed="15"
+				offsetsphere="25"
+				direction="0 0 1"
+				material="/shared/effects/materials/twirl_blend.material"
+			>
+				<particle
+					startcolor="0"
+					midcolor="0 .65 1"
+					endcolor="0"
+					midcolorpos="0.2"
+					startalpha="0"
+					midalpha=".3"
+					endalpha="0"					
+					maxangle="-190"
+					anglespeed="-30"
+					startsize="600"
+					endsize="0"
+					lockup="1"
+					lockright="1"
+					pitch="-90"
+					anchor=".8"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				position="0 0 150"
+				spawnrate="3"
+				particlelife="2500"
+				gravity="5"
+				speed="3"
+				offsetsphere="15"
+				direction="0 0 1"
+				material="/shared/effects/materials/twirl_blend.material"
+			>
+				<particle
+					startcolor="0"
+					midcolor="1"
+					endcolor="0"
+					midcolorpos=".5"
+					startalpha="0"
+					midalpha=".3"
+					endalpha="0"					
+					maxangle="360"
+					anglespeed="-160"
+					startsize="500"
+					endsize="0"
+					lockup="1"
+					lockright="1"
+					pitch="-90"
+					anchor=".8"
+				/>
+			</simpleemitter>
+<!--
+			<simpleemitter
+				spawnrate="50"			
+				particlelife="2200"	
+				material="/shared/effects/materials/whitewater_02.material"
+				offsetsphere="10"
+				minangle="-90"
+				maxangle="-90"
+				direction="0 0 -1"
+				offsetradial="320"
+				position="0 0 130"
+				depthbias="-330"
+			>
+				<particle
+					startcolor="1"
+					endcolor="0"
+					midcolorpos="0"
+					startsize="0"
+					maxangle="360"
+					minendsize="120"
+					maxendsize="255"
+					depthbias="-20"
+					endstickiness=".3"
+					anchor=".5"
+				/>
+			</simpleemitter>
+-->
+			<billboard
+				delay="300"
+				expirelife="300"
+				material="/shared/effects/materials/corona_06.material"
+				position="0 0 150"
+				depthbias="-230"
+				startcolor="0.2"
+				endcolor="0"
+				size="400"
+				anglespeed="-30"
+				lockup="1"
+				lockright="1"
+				pitch="-90"
+				anchor=".8"
+			/>
+
+			<simpleemitter
+				spawnrate="20"			
+				particlelife="2200"	
+				material="/shared/effects/materials/refract_outsplash.material"
+				offsetsphere="10"
+				minangle="-90"
+				maxangle="-90"
+				direction="0 0 -1"
+				offsetradial="320"
+				position="0 0 130"
+				depthbias="-230"
+			>
+				<particle
+					startalpha=".8"
+					endalpha="0"
+					startsize="0"
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-60"
+					maxanglespeed="60"
+					endsize="250"
+					endstickiness=".2"
+					param="0.3"
+					anchor=".5"
+				/>
+
+			</simpleemitter>
+
+
+			
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

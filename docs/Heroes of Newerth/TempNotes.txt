@@ -1,0 +1,13 @@
+The item system is largely undecided. We experimented with a bunch of layout options and mechanisms to make the process of buying items less overwhelming while at the same time not making it take a long time to buy for an experienced player. There have been various tradeoffs and shortcommings of each method.
+
+This will certainly need to be changed around and experimented with the most as far as interface is concerned, so i'm not terribly concerned with trying to get it right the first time.
+
+
+We will start off with a symbolic merchant model wherever there is a store. Two things will trigger a small button to appear on the right of your screen (a little bit above the interface). First will be having a buying units within range. Second will be selecting the unit itself (this will not take control away from you, but mearly bring up the button). This second method is primarily to allow item reference looks ups without being in proximity. Hotkeys can always be used if you do not want to click on the model itself when you are in a remote area.
+
+If you are not capable of buying something (if you are far away), then the icons for the items will be grayed out with a tooltip saying why you can't)
+
+When the merchan button is clicked, a medium size interface will extend from it, presenting items that are purchasable. They are sorted buy basic/recipe via a tab and then by a small number of categories (weapon/accessories/misc). This is very experimental and will likely change through the development process. 
+
+
+I was previously planning to explain a new plan for how recipe fusing and buying-when-full issues are dealt with here, but i think this will just make the issue more complicated right now and it should be dealt with after. Since anything else would be purely an extension off of this, it makes sense to do it this way. Right now we should keep the same behavior (you have to have the items in your inventory to fuse them. you drop and shuffle around when full). This is to get us rolling with the main functionality first to allow us to expand on it after. I will explain the new mechanism for dealing with full inventories and fusing in another file.

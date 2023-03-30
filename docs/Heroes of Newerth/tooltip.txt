@@ -1,0 +1,175 @@
+Name
+Level
+Description
+Resale value
+
+Passive:
+
+Activation:
+Hotkey
+Activation Type
+Mana cost
+Cooldown
+Casting Range
+Area of Effect
+Target Scheme
+Effects
+Effect Type (controls if it's blocked by linken sphere, bkb, etc)
+
+
+
+---------------------------------
+
+Dagon                 Value: 1425
+Level 1              Max Level: 5
+
+Purchase Dagon Recipe to upgrade
+this item.
+
+Passive
+-------------
++9 Damage
++3 Strength
++3 Agility
++12 Intelligence
+
+Activation [Numpad 7, ALT-Q]
+-------------
+Target Unit           Enemy Units
+Casting Range: 600
+Cast Effect Type: Magic
+
+Mana cost: 245
+Cooldown: 40 seconds
+
+Deals 300 Magic damage to target.
+
+A lesser scepter that has been
+duplicated time and time again.
+
+Click to activate
+
+---------------------------------
+
+
+
+
+
+---------------------------------
+
+Orchid Malevolence    Value: 2512
+
+Passive
+-------------
++40 Damage
++20 Intelligence
++30 Attack Speed
++225% Mana Regeneration
+
+Activation [NUMPAD 8, ALT-W]
+-------------
+Target Unit           Enemy Units
+Casting Range: 600
+Cast Effect Type: Magic
+Mana cost: 245
+Cooldown: 40 seconds
+
+Applies Soul Burn to target for
+5 seconds.
+
+[Icon] Soul Burn
+-------------
+Effect Type: Debuff
+Silence
+Increase damage taken by 20%.
+
+A garnet rod constructed from the
+essence of a fire demon, Orchid
+Malevolence can burn away an
+enemy's spellcasting abilities.
+
+Click to activate
+
+---------------------------------
+
+
+
+
+---------------------------------
+
+Rabid
+Level 2              Max Level: 4
+
+Activation [W]
+-------------
+Target Unit           Owned Units
+Casting Range: 300
+Cast Effect Type: Magic
+Mana cost: 50
+Cooldown: 30 seconds
+
+Applies Buff to target for 10
+seconds.
+
+[Icon] Buff
+-------------
+Effect Type: Buff
++20 Attack Speed
++10% Movement Speed
+
+Yogi can create an intense
+combative fury in either himself
+or his Spirit Bear Companion.
+
+Click to activate
+
+---------------------------------
+
+
+
+---------------------------------
+
+Rabid
+Level 2              Max Level: 4
+
+Activation [W]
+-------------
+Target Unit           Owned Units
+Casting Range: 300
+Cast Effect Type: Magic
+Mana cost: 50
+Cooldown: 30 seconds
+
+Applies Buff to target for 10
+seconds.
+
+[Icon] Buff
+-------------
+Effect Type: Buff
++20 Attack Speed
++10% Movement Speed
+
+Yogi can create an intense
+combative fury in either himself
+or his Spirit Bear Companion.
+
+
+Next Level:
+Level 3
+
+Activation
+-------------
+Mana cost: 40
+Cooldown: 20 seconds
+
+Applies Buff to target for 20
+seconds.
+
+[Icon] Buff
+-------------
++30 Attack Speed
++15% Movement Speed
+
+Click to level up this ability
+
+---------------------------------

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Fade_Ability2_CountAttacks"
+	
+	ishidden="true"
+	icon="icon.tga"
+	passiveeffect="effects/state_stun.effect"
+	
+	effecttype=""
+	nothreat="true"
+	invulnerable="true"
+	unitwalking="true"
+	movespeed="522"
+	attackspeedslow="-.55"
+	morphisselectable="false"
+	morphpriority="100"
+>
+	<onframe>
+		<condition test="not_hasorder" target="this_entity" source="this_entity">
+			<order command="attack" force="true" forceduration="8000" source="this_owner_entity" target="proxy_entity" />
+		</condition>
+	</onframe>
+	
+	<oninflict>
+		<setcharges a="1,2,3,4" />
+	</oninflict>
+	
+	<onattackimpact>
+		<damage effecttype="Magic" amount="70" />
+		<removecharge />
+		<condition test="charges == 0">
+			<expire />
+			<expirestate name="State_Fade_Ability2_ExpirePet" target="proxy_entity" />
+		</condition>
+	</onattackimpact>
+	
+	<onexpired>
+		<kill target="this_owner_entity" source="" />
+	</onexpired>
+	
+	<modifier key="fadeshadowmode" modpriority="100"
+		morphisselectable="false"
+		morphpriority="100"
+		passiveeffect="effects/state.effect"
+	/>
+</state>

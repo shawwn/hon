@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect>
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale=".9">
+		
+			<model
+				startscale="0.5"
+				endscale="1.5"
+				life="750"
+				model="death_model/model.mdf"
+				anim="idle"
+				startcolor="1"
+				midcolor="1"
+				endcolor="1"
+				midcolorpos=".2"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".5"
+			>
+			<simpleemitter
+				count="50"
+				bone="Bip01 Spine2"
+				spawnrate="100"
+				minparticlelife="0"
+				maxparticlelife="2000"
+				offsetsphere="50 50 30"
+				gravity="-1"
+				minspeed="70"
+				maxspeed="140"							
+				direction="0 0 1"
+				minangle="-40"
+				maxangle="40"
+				material="/shared/effects/materials/spark_10.material"
+			>			
+				<particle
+					startcolor="1 .4 0"
+					endcolor="0 0 0"
+					minsize="7"
+					maxsize="25"
+					minangle="-360"
+					maxangle="1"
+					minanglespeed="110"
+					maxanglespeed="-110"
+				/>
+				<particle
+					startcolor=".7 .2 0"
+					endcolor="0 0 0"
+					minsize="8"
+					maxsize="15"
+					minangle="-360"
+					maxangle="1"
+					minanglespeed="110"
+					maxanglespeed="-110"
+				/>
+			</simpleemitter>
+			
+			<twopointemitter
+				count="50"
+				depthbias="-30"
+				bone_a="Bip01 Head"
+				bone_b="Bip01 Spine2"
+				spawnrate="50"
+				minparticlelife="900"
+				maxparticlelife="1100"
+				offsetsphere="15"
+				speed="25.0"
+				material="/shared/effects/materials/dust.material"
+			>
+				<particle
+					startcolor=".4 0 0"
+					endcolor="-1"
+					midcolorpos="0.3"
+					startalpha=".75"
+					endalpha="0"
+					maxangle="360"
+					startsize="20"
+					endsize="100"
+					startanchor="1"
+					endanchor="0"
+			/>
+			</twopointemitter>
+
+			<twopointemitter
+				count="50"
+				depthbias="-30"
+				bone_a="Bip01 Head"
+				bone_b="Bip01 Spine2"
+				spawnrate="50"
+				minparticlelife="200"
+				maxparticlelife="1000"
+				offsetsphere="15"
+				speed="25.0"
+				material="/shared/effects/materials/phantom_smoke_03.material"
+			>
+				<particle
+					startcolor="0 .4 0.0"
+					midcolor="1 .3 0"
+					endcolor="0"
+					midcolorpos="0.3"
+					startalpha="1.0"
+					endalpha="1.0"
+					maxangle="360"
+					startsize="20"
+					endsize="100"
+					startanchor="1"
+					endanchor="0"
+				/>
+				<particle
+					startcolor="0"
+					midcolor=".7 .6 0"
+					endcolor="00"
+					midcolorpos="0.5"
+					startalpha="1.0"
+					endalpha="1.0"
+					maxangle="360"
+					startsize="20"
+					endsize="120"
+					startanchor="1"
+					endanchor="0"
+				/>
+			</twopointemitter>
+			
+			<twopointemitter
+				count="50"
+				depthbias="-30"
+				bone_a="Bip01 R Forearm"
+				bone_b="Bip01 R Hand"
+				spawnrate="100"
+				minparticlelife="200"
+				maxparticlelife="900"
+				offsetsphere="0"
+				speed="25.0"
+				gravity="-20"
+				material="/shared/effects/materials/phantom_smoke_03.material"
+			>
+				<particle
+					startcolor="0 .4 0.0"
+					midcolor="1 .3 0"
+					endcolor="0"
+					midcolorpos="0.3"
+					startalpha="1.0"
+					endalpha="1.0"
+					maxangle="360"
+					startsize="20"
+					endsize="75"
+					startanchor="1"
+					endanchor="0"
+				/>
+				<particle
+					startcolor="0"
+					midcolor=".7 .6 0"
+					endcolor="00"
+					midcolorpos="0.5"
+					startalpha="1.0"
+					endalpha="1.0"
+					maxangle="360"
+					startsize="20"
+					endsize="75"
+					startanchor="1"
+					endanchor="0"
+				/>
+			</twopointemitter>
+			
+			<twopointemitter
+				count="50"
+				depthbias="-30"
+				bone_a="Bip01 L Forearm"
+				bone_b="Bip01 L Hand"
+				spawnrate="100"
+				minparticlelife="200"
+				maxparticlelife="900"
+				offsetsphere="0"
+				speed="25.0"
+				gravity="-20"
+				material="/shared/effects/materials/phantom_smoke_03.material"
+			>
+				<particle
+					startcolor="0 .4 0.0"
+					midcolor="1 .3 0"
+					endcolor="0"
+					midcolorpos="0.3"
+					startalpha="1.0"
+					endalpha="1.0"
+					maxangle="360"
+					startsize="20"
+					endsize="75"
+					startanchor="1"
+					endanchor="0"
+				/>
+				<particle
+					startcolor="0"
+					midcolor=".7 .6 0"
+					endcolor="00"
+					midcolorpos="0.5"
+					startalpha="1.0"
+					endalpha="1.0"
+					maxangle="360"
+					startsize="20"
+					endsize="75"
+					startanchor="1"
+					endanchor="0"
+				/>
+			</twopointemitter>
+			
+			<twopointemitter
+				count="50"
+				depthbias="-30"
+				bone_a="Bip01 Spine2"
+				bone_b="Bip01 Spine"
+				spawnrate="100"
+				minparticlelife="200"
+				maxparticlelife="900"
+				offsetsphere="0"
+				speed="25.0"
+				gravity="-20"
+				material="/shared/effects/materials/phantom_smoke_03.material"
+			>
+				<particle
+					startcolor="0 .4 0.0"
+					midcolor="1 .3 0"
+					endcolor="0"
+					midcolorpos="0.3"
+					startalpha="1.0"
+					endalpha="1.0"
+					maxangle="360"
+					startsize="20"
+					endsize="75"
+					startanchor="1"
+					endanchor="0"
+				/>
+				<particle
+					startcolor="0"
+					midcolor=".7 .6 0"
+					endcolor="00"
+					midcolorpos="0.5"
+					startalpha="1.0"
+					endalpha="1.0"
+					maxangle="360"
+					startsize="20"
+					endsize="75"
+					startanchor="1"
+					endanchor="0"
+				/>
+			</twopointemitter>
+
+			
+			</model>
+
+			<simpleemitter
+			timenudge="2000"
+				life="750"
+				spawnrate="50"
+				minparticlelife="750"
+				maxparticlelife="1000"
+				offsetsphere="0 0 25"
+				minspeed="0"
+				maxspeed="30"
+				gravity="-50"
+				position="0 0 25"
+				material="/shared/effects/materials/phantom_smoke_03.material"
+			>
+				<particle
+					startcolor="0 .4 0.0"
+					midcolor="1 .3 0"
+					endcolor="0"
+					midcolorpos="0.3"
+					startalpha="1.0"
+					endalpha="1.0"
+					maxangle="360"
+					startsize="50"
+					endsize="100"
+					startanchor="1"
+					endanchor="0"
+				/>
+				<particle
+					startcolor="0"
+					midcolor=".7 .6 0"
+					endcolor="00"
+					midcolorpos="0.5"
+					startalpha="1.0"
+					endalpha="1.0"
+					maxangle="360"
+					startsize="50"
+					endsize="100"
+					startanchor="1"
+					endanchor="0"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+			timenudge="2000"
+				life="750"
+				spawnrate="100"
+				minparticlelife="750"
+				maxparticlelife="1000"
+				offsetsphere="25 25 25"
+				minspeed="0"
+				maxspeed="30"
+				gravity="-25"
+				position="0 0 75"
+				material="/shared/effects/materials/phantom_smoke_03.material"
+			>
+				<particle
+					startcolor="0 .4 0.0"
+					midcolor="1 .3 0"
+					endcolor="0"
+					midcolorpos="0.3"
+					startalpha="1.0"
+					endalpha="1.0"
+					maxangle="360"
+					startsize="50"
+					endsize="100"
+					startanchor="1"
+					endanchor="0"
+				/>
+				<particle
+					startcolor="0"
+					midcolor=".7 .6 0"
+					endcolor="00"
+					midcolorpos="0.5"
+					startalpha="1.0"
+					endalpha="1.0"
+					maxangle="360"
+					startsize="50"
+					endsize="100"
+					startanchor="1"
+					endanchor="0"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				position="0 0 80"
+				minangle="-90"
+				maxangle="-90"
+				life="400"
+				spawnrate="650"
+				count="40"
+				minparticlelife="230"
+				maxparticlelife="2000"
+				speed="2000"
+				drag=".15"
+				gravity="-1"
+				offsetsphere="15"
+				material="/shared/effects/materials/bad_healing_smoke_12.material"
+			>
+				<particle
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="-150"
+					maxanglespeed="150"
+					turn="1"
+					startcolor="1 1 1"
+					midcolorpos="0.2"
+					midcolor=".6 .3 .1"
+					endcolor="-1"
+					startsize="50"
+					minendscale="6"
+					maxendscale="10"
+					startalpha=".3"
+					midalpha="1"
+					midalphapos="0.1"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				life="600"
+				count="10"
+				position="0 0 55"
+				spawnrate="500"				
+				particlelife="600"
+				gravity="-3.0"
+				offsetsphere="100"
+				direction="0 0 1"	
+          		material="/shared/effects/materials/dust.material"
+				depthbias="-40"
+         	>
+				<particle
+					startcolor=".3"
+					endcolor="0"
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="0"
+					midcolorpos=".1"
+					maxanglespeed="0"
+					startsize="89"			
+					endsize="222"			
+					startalpha="1"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				position="0 0 80"
+				minangle="-90"
+				maxangle="-90"
+				life="400"
+				spawnrate="650"
+				count="20"
+				minparticlelife="230"
+				maxparticlelife="750"
+				speed="2000"
+				drag="0.1"
+				offsetsphere="15"
+				depthbias="-40"
+				material="/shared/effects/materials/phantom_smoke_04.material"
+			>
+				<particle
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="-150"
+					maxanglespeed="150"
+					turn="1"
+					startcolor="1 1 1"
+					midcolorpos="0.2"
+					midcolor=".6 .3 .1"
+					endcolor="0"
+					startsize="50"
+					startstickiness="0"
+					maxendstickiness="1"
+					minendscale="6"
+					maxendscale="10"
+					startalpha=".3"
+					midalpha="1"
+					midalphapos="0.1"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				position="0 0 80"
+				life="1800"
+				spawnrate="400"
+				count="25"
+				minparticlelife="0"
+				maxparticlelife="1500"			
+				gravity="24"
+				minspeed="350"
+				maxspeed="1600"
+				drag=".01"
+				material="/shared/effects/materials/spark_10.material"
+				offsetsphere="2"
+				minangle="-10"
+				maxangle="40"
+				direction="0 0 1"
+				directionalspace="global"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="1"
+					midcolor="1 .6 0"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					minstartsize="18"
+					maxstartsize="26"
+					midsize="12"
+					endsize="6"
+					startalpha="0"
+					midalpha=".7"
+					endalpha="0"
+					midalphapos=".5"
+					turn="true"
+					scale="1.5"
+				/>
+			</simpleemitter>
+
+			<billboard
+				position="0 0 80"
+				life="400"
+				startcolor=".75 .3 0"
+				endcolor="0"
+				size="275"
+				depthbias="-120"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+
+			<billboard
+				position="0 0 80"
+				life="500"
+				startsize="150"
+				endsize="680"
+				startparam=".02"
+				endparam="0"
+				material="/shared/effects/materials/refract_ring.material"
+			/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

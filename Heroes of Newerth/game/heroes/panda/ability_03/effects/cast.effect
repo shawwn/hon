@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityscale="false" deferred="true">
+	<definitions>
+			<modifier 
+				name="modifier0"
+				startcolor="1 1 1"
+				endcolor="2 1 1"
+				
+				life="450"
+				delay="1300"
+			/>
+		<particlesystem name="system0" space="world" scale="1.5">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".7"
+				sample="../sounds/impact_stuck.wav"
+			/>
+		
+		<billboard	
+			life="400"
+				bone="_bone_weaponattach"
+				material="/shared/effects/materials/whitedot.material"
+				position="0 0 0"
+				size="40"	
+				depthbias="-50"		
+				rollspeed="-100"	
+				color=".5 .2 .0"					
+				alpha="1"					
+				midalphapos=".2"
+				
+
+		/>
+		<billboard	
+			life="600"		
+			bone="_bone_weapon1"
+			material="/shared/effects/materials/whitedot.material"
+			position="0 0 0"
+			size="40"	
+			depthbias="-50"		
+			rollspeed="-100"	
+			color=".5 .2 .0"					
+			alpha="1"	
+		/>		
+		
+		<model
+			life="600"
+			bone="_bone_weaponattach"
+			model="../../ability_02/effects/ring.mdf"
+			startscale=".1"
+			endscale=".3"
+			color="1 .3 0"
+			yawspeed="149"
+		>
+		</model>
+				
+		<model
+			life="600"
+			bone="_bone_weapon1"
+			model="../../ability_02/effects/ring.mdf"
+			startscale=".1"
+			endscale=".3"
+			color="1 .3 0"
+			yawspeed="149"
+		>
+		</model>
+		
+	
+	
+	
+			
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<spawnmodifier instance="instance1" modifier="modifier0"/>
+
+      <waitfordeath instance="instance0" />
+	<waitfordeath instance="instance1" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->

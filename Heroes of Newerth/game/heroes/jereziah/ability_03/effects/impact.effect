@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="fiends_grip_target">
+	<definitions>
+		<particlesystem name="system0" space="entity">
+
+			<billboard
+			
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				midcolorpos=".6"
+				endcolor="0"
+				bone="_bone_centerofchest"
+				material="/shared/effects/materials/flare_02.material"
+				startsize="10"
+				endsize="120"
+				depthbias="-30"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+				life="250"
+			/>
+			<billboard
+				
+				startcolor="1 .5 0"
+				midcolor="1 .5 0"
+				midcolorpos=".6"
+				endcolor="0"
+				bone="_bone_centerofchest"
+				material="/shared/effects/materials/frost_flash_02.material"
+				startsize="10"
+				endsize="120"
+				depthbias="-30"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+				life="300"
+			/>
+			
+			<billboard
+				bone="_bone_centerofchest"
+				life="200"
+				color="1 1 1"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="1.0"
+				startparam="0.05"
+				endparam="0.0"
+				midalphapos="0.25"
+				startsize="128"
+				endsize="512"
+				material="/shared/effects/materials/refract_ring.material"
+			/>
+		<simpleemitter
+		
+			spawnrate="500"
+			count="20"
+			bone="Bip01 Spine2"
+			particlelife="1350"			
+			gravity="4"
+			speed="95"
+			drag=".02"
+			acceleration="0"
+			position="0 0 0"
+			material="/shared/effects/materials/flare_02.material"
+			offsetsphere="1 1 1"
+			minangle="0"
+			maxangle="360"
+			direction="0 0 1"
+			offsetdirection="0 0 0"
+			offsetradial="10 10 10"
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="-50"
+				maxanglespeed="-150"
+				startcolor=".3 .3 .3"
+				midcolor=".7 .7 .7"
+				endcolor=".7 .7 .7"
+				midcolorpos=".4"
+				startframe="0"
+				endframe="1"
+				startsize="1"
+				midsize="15"
+				endsize=".1"
+				startalpha="0"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".3"
+				startstickiness=".4"
+				endstickiness="0"
+			/>
+			
+
+
+		</simpleemitter>
+
+
+		
+
+			
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+

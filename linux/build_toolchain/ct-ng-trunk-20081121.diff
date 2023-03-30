@@ -1,0 +1,2298 @@
+diff -urN ct-ng-trunk-20081121-orig/config/binutils.in ct-ng-trunk-20081121/config/binutils.in
+--- ct-ng-trunk-20081121-orig/config/binutils.in	2008-11-23 10:01:32.000000000 -0700
++++ ct-ng-trunk-20081121/config/binutils.in	2008-11-23 10:07:06.000000000 -0700
+@@ -76,6 +76,10 @@
+     prompt "2.18.93 (EXPERIMENTAL)"
+     depends on EXPERIMENTAL
+ 
++config BINUTILS_V_2_19
++    bool
++    prompt "2.19"
++
+ config BINUTILS_V_2_19_50_0_1
+     bool
+     prompt "2.19.50.0.1 (EXPERIMENTAL)"
+@@ -101,6 +105,7 @@
+     default "2.18.91" if BINUTILS_V_2_18_91
+     default "2.18.92" if BINUTILS_V_2_18_92
+     default "2.18.93" if BINUTILS_V_2_18_93
++    default "2.19" if BINUTILS_V_2_19
+     default "2.19.50.0.1" if BINUTILS_V_2_19_50_0_1
+ # CT_INSERT_VERSION_STRING_ABOVE
+ # Don't remove above line!
+diff -urN ct-ng-trunk-20081121-orig/config/libc/glibc.in ct-ng-trunk-20081121/config/libc/glibc.in
+--- ct-ng-trunk-20081121-orig/config/libc/glibc.in	2008-11-23 10:01:32.000000000 -0700
++++ ct-ng-trunk-20081121/config/libc/glibc.in	2008-11-23 10:07:06.000000000 -0700
+@@ -11,6 +11,11 @@
+     bool
+     prompt "glibc version"
+ 
++config LIBC_V_2_3_4
++    bool
++    prompt "2.3.4 (OBSOLETE)"
++    depends on OBSOLETE
++
+ config LIBC_V_2_3_6
+     bool
+     prompt "2.3.6 (OBSOLETE)"
+@@ -55,6 +60,7 @@
+     string
+     prompt "Enter date (YYYYMMDD)" if LIBC_V_date
+     default "latest" if LIBC_V_LATEST
++    default "2.3.4" if LIBC_V_2_3_4
+     default "2.3.6" if LIBC_V_2_3_6
+     default "2.4" if LIBC_V_2_4
+     default "2.5" if LIBC_V_2_5
+diff -urN ct-ng-trunk-20081121-orig/config/target.in ct-ng-trunk-20081121/config/target.in
+--- ct-ng-trunk-20081121-orig/config/target.in	2008-11-23 10:01:32.000000000 -0700
++++ ct-ng-trunk-20081121/config/target.in	2008-11-23 10:07:06.000000000 -0700
+@@ -34,6 +34,12 @@
+ 
+ source config.gen/arch.in
+ 
++config ARCH_64_MULTILIB
++    bool
++    prompt "Build a 64/32 bit multilib compiler"
++    depends on ARCH_x86_64
++    default n
++
+ config ARCH_SUPPORTS_BOTH_ENDIAN
+     bool
+     default n
+diff -urN ct-ng-trunk-20081121-orig/glibc/2.3.4/100-arm-ctl_bus_isa.patch ct-ng-trunk-20081121/glibc/2.3.4/100-arm-ctl_bus_isa.patch
+--- ct-ng-trunk-20081121-orig/glibc/2.3.4/100-arm-ctl_bus_isa.patch	1969-12-31 17:00:00.000000000 -0700
++++ ct-ng-trunk-20081121/glibc/2.3.4/100-arm-ctl_bus_isa.patch	2008-11-23 10:03:38.000000000 -0700
+@@ -0,0 +1,53 @@
++Applies to both glibc-2.2.5 and glibc-2.3.2, and probably glibc cvs as of Aug 2004.
++Needed to build glibc with linux kernels 2.4.23 or higher on ARM, 
++Fixes following error:
++
++../sysdeps/unix/sysv/linux/arm/ioperm.c: In function `init_iosys':
++../sysdeps/unix/sysv/linux/arm/ioperm.c:103: error: `BUS_ISA' undeclared (first use in this function)
++../sysdeps/unix/sysv/linux/arm/ioperm.c:103: error: (Each undeclared identifier is reported only once
++../sysdeps/unix/sysv/linux/arm/ioperm.c:103: error: for each function it appears in.)
++../sysdeps/unix/sysv/linux/arm/ioperm.c:103: error: initializer element is not constant
++../sysdeps/unix/sysv/linux/arm/ioperm.c:103: error: (near initialization for `iobase_name[1]')
++../sysdeps/unix/sysv/linux/arm/ioperm.c:104: error: initializer element is not constant
++../sysdeps/unix/sysv/linux/arm/ioperm.c:104: error: (near initialization for `ioshift_name[1]')
++make[2]: *** [/home/dank/crosstool-0.28/build/arm-softfloat-linux-gnu/gcc-3.3.4-glibc-2.2.5/build-glibc/misc/ioperm.o] Error 1
++
++cf. "[SYSCTL] BUS_ISA -> CTL_BUS_ISA",  http://www.ussg.iu.edu/hypermail/linux/kernel/0311.0/0529.html
++
++--- glibc-2.3.2/sysdeps/unix/sysv/linux/arm/ioperm.c.old	2003-02-20 14:22:24.000000000 -0800
+++++ glibc-2.3.2/sysdeps/unix/sysv/linux/arm/ioperm.c	2004-01-31 16:01:50.000000000 -0800
++@@ -47,6 +47,12 @@
++ #include <asm/page.h>
++ #include <sys/sysctl.h>
++ 
+++/* see http://www.ussg.iu.edu/hypermail/linux/kernel/0311.0/0529.html */
+++#include <linux/version.h>
+++#if (LINUX_VERSION_CODE < KERNEL_VERSION(2,4,23))
+++#define CTL_BUS_ISA BUS_ISA	/* and hope it's not the one from linux/input.h */
+++#endif
+++
++ #define PATH_ARM_SYSTYPE	"/etc/arm_systype"
++ #define PATH_CPUINFO		"/proc/cpuinfo"
++ 
++@@ -80,7 +86,7 @@
++  * Initialize I/O system.  There are several ways to get the information
++  * we need.  Each is tried in turn until one succeeds.
++  *
++- * 1. Sysctl (CTL_BUS, BUS_ISA, ISA_*).  This is the preferred method
+++ * 1. Sysctl (CTL_BUS, CTL_BUS_ISA, ISA_*).  This is the preferred method
++  *    but not all kernels support it.
++  *
++  * 2. Read the value (not the contents) of symlink PATH_ARM_SYSTYPE.
++@@ -100,8 +106,8 @@
++ {
++   char systype[256];
++   int i, n;
++-  static int iobase_name[] = { CTL_BUS, BUS_ISA, BUS_ISA_PORT_BASE };
++-  static int ioshift_name[] = { CTL_BUS, BUS_ISA, BUS_ISA_PORT_SHIFT };
+++  static int iobase_name[] = { CTL_BUS, CTL_BUS_ISA, BUS_ISA_PORT_BASE };
+++  static int ioshift_name[] = { CTL_BUS, CTL_BUS_ISA, BUS_ISA_PORT_SHIFT };
++   size_t len = sizeof(io.base);
++ 
++   if (! sysctl (iobase_name, 3, &io.io_base, &len, NULL, 0)
++
++Signed-off-by: Robert P. J. Day <rpjday@mindspring.com>
+diff -urN ct-ng-trunk-20081121-orig/glibc/2.3.4/110-fix-pr398.patch ct-ng-trunk-20081121/glibc/2.3.4/110-fix-pr398.patch
+--- ct-ng-trunk-20081121-orig/glibc/2.3.4/110-fix-pr398.patch	1969-12-31 17:00:00.000000000 -0700
++++ ct-ng-trunk-20081121/glibc/2.3.4/110-fix-pr398.patch	2008-11-23 10:03:38.000000000 -0700
+@@ -0,0 +1,70 @@
++Fixes error
++
++dl-runtime.c:222: error: parse error before "CFI_STARTPROC"
++make[2]: *** [crosstool-0.28-rc35/build/s390-unknown-linux-gnu/gcc-3.4.1-glibc-20040822/build-glibc/elf/dl-runtim
++e.o] Error 1
++make[2]: Leaving directory `crosstool-0.28-rc35/build/s390-unknown-linux-gnu/gcc-3.4.1-glibc-20040822/glibc-20040
++822/elf'
++make[1]: *** [elf/subdir_lib] Error 2
++make[1]: Leaving directory `crosstool-0.28-rc35/build/s390-unknown-linux-gnu/gcc-3.4.1-glibc-20040822/glibc-20040
++822'
++make: *** [all] Error 2
++
++-----------------
++
++See http://sources.redhat.com/bugzilla/show_bug.cgi?id=398
++http://sources.redhat.com/ml/libc-alpha/2004-07/msg00023.html
++
++-----------------
++
++CVSROOT:	/cvs/glibc
++Module name:	libc
++Branch: 	glibc-2_3-branch
++Changes by:	roland@sources.redhat.com	2006-02-23 22:36:51
++
++Modified files:
++	sysdeps/s390/s390-64: dl-machine.h 
++	sysdeps/s390/s390-32: dl-machine.h 
++
++Log message:
++	2004-07-10  GOTO Masanori  <gotom@debian.or.jp>
++	
++	[BZ #398]
++	* sysdeps/s390/s390-32/dl-machine.h: Include <sysdep.h> for CFI
++	directive.
++	* sysdeps/s390/s390-64/dl-machine.h: Likewise.
++
++Patches:
++http://sources.redhat.com/cgi-bin/cvsweb.cgi/libc/sysdeps/s390/s390-64/dl-machine.h.diff?cvsroot=glibc&only_with_tag=glibc-2_3-branch&r1=1.19.4.1&r2=1.19.4.2
++http://sources.redhat.com/cgi-bin/cvsweb.cgi/libc/sysdeps/s390/s390-32/dl-machine.h.diff?cvsroot=glibc&only_with_tag=glibc-2_3-branch&r1=1.20.4.1&r2=1.20.4.2
++
++===================================================================
++RCS file: /cvs/glibc/libc/sysdeps/s390/s390-64/dl-machine.h,v
++retrieving revision 1.19.4.1
++retrieving revision 1.19.4.2
++diff -u -r1.19.4.1 -r1.19.4.2
++--- libc/sysdeps/s390/s390-64/dl-machine.h	2005/10/17 04:57:27	1.19.4.1
+++++ libc/sysdeps/s390/s390-64/dl-machine.h	2006/02/23 22:36:51	1.19.4.2
++@@ -27,6 +27,7 @@
++ #include <sys/param.h>
++ #include <string.h>
++ #include <link.h>
+++#include <sysdep.h>
++ 
++ /* This is an older, now obsolete value.  */
++ #define EM_S390_OLD	0xA390
++===================================================================
++RCS file: /cvs/glibc/libc/sysdeps/s390/s390-32/dl-machine.h,v
++retrieving revision 1.20.4.1
++retrieving revision 1.20.4.2
++diff -u -r1.20.4.1 -r1.20.4.2
++--- libc/sysdeps/s390/s390-32/dl-machine.h	2005/10/17 04:57:27	1.20.4.1
+++++ libc/sysdeps/s390/s390-32/dl-machine.h	2006/02/23 22:36:51	1.20.4.2
++@@ -27,6 +27,7 @@
++ #include <sys/param.h>
++ #include <string.h>
++ #include <link.h>
+++#include <sysdep.h>
++ 
++ /* This is an older, now obsolete value.  */
++ #define EM_S390_OLD	0xA390
+diff -urN ct-ng-trunk-20081121-orig/glibc/2.3.4/120-allow-gcc-4.0-wordexp.patch ct-ng-trunk-20081121/glibc/2.3.4/120-allow-gcc-4.0-wordexp.patch
+--- ct-ng-trunk-20081121-orig/glibc/2.3.4/120-allow-gcc-4.0-wordexp.patch	1969-12-31 17:00:00.000000000 -0700
++++ ct-ng-trunk-20081121/glibc/2.3.4/120-allow-gcc-4.0-wordexp.patch	2008-11-23 10:03:38.000000000 -0700
+@@ -0,0 +1,21 @@
++../sysdeps/generic/wordexp.c: In function 'exec_comm':
++../sysdeps/generic/wordexp.c:815: sorry, unimplemented: inlining failed in call to 'exec_comm_child': function body not available
++../sysdeps/generic/wordexp.c:900: sorry, unimplemented: called from here
++make[2]: *** [/home/dank/queue/jobdir.fast2/crosstool-dev/build/i686-unknown-linux-gnu/gcc-4.0-20050305-glibc-2.3-20050307/build-glibc/posix/wordexp.o] Error
++
++I had to add the keyword 'inline' to get it to compile:
++
++--- glibc-2.3-20050307/sysdeps/generic/wordexp.c.old	2005-03-12 08:54:15.709253928 -0800
+++++ glibc-2.3-20050307/sysdeps/generic/wordexp.c	2005-03-12 08:54:51.242852000 -0800
++@@ -809,7 +809,7 @@
++ }
++
++ /* Function called by child process in exec_comm() */
++-static void
+++static inline void
++ internal_function
++ exec_comm_child (char *comm, int *fildes, int showerr, int noexec)
++ {
++
++
++Signed-off-by: Robert P. J. Day <rpjday@mindspring.com>
+diff -urN ct-ng-trunk-20081121-orig/glibc/2.3.4/130-allow-gcc4-wcstol_l.patch ct-ng-trunk-20081121/glibc/2.3.4/130-allow-gcc4-wcstol_l.patch
+--- ct-ng-trunk-20081121-orig/glibc/2.3.4/130-allow-gcc4-wcstol_l.patch	1969-12-31 17:00:00.000000000 -0700
++++ ct-ng-trunk-20081121/glibc/2.3.4/130-allow-gcc4-wcstol_l.patch	2008-11-23 10:03:38.000000000 -0700
+@@ -0,0 +1,59 @@
++Fixes
++../sysdeps/wordsize-64/wcstol_l.c:11: error: '____wcstoll_l_internal' aliased to undefined symbol '____wcstol_l_internal'
++../sysdeps/wordsize-64/wcstol_l.c:12: error: '__wcstoll_l' aliased to undefined symbol '__wcstol_l'
++../sysdeps/wordsize-64/wcstol_l.c:13: error: 'wcstoll_l' aliased to undefined symbol '__wcstol_l'
++make[2]: *** [/home/dkegel/queue/jobdir.produser_cpsm10/crosstool-0.32/build/x86_64-unknown-linux-gnu/gcc-4.0.0-20050410-glibc-2.3.4/build-glibc/wcsmbs/wcstoul_l.o] Error 1
++
++https://www.redhat.com/archives/fedora-cvs-commits/2005-March/msg00408.html
++%changelog
+++* Fri Mar 25 2005 Jakub Jelinek <jakub redhat com> 2.3.4-18
+++- fix build on 64-bit arches with new GCC
++
++Revision 1.4.2.1, Fri Mar 25 11:59:01 2005 UTC (3 weeks, 4 days ago) by jakub
++Branch: fedora-branch
++CVS Tags: fedora-glibc-2_3_4-18
++Changes since 1.4: +2 -0 lines
++Diff to previous 1.4 (colored)
++
++	* sysdeps/wordsize-64/strtol_l.c: Don't add aliases if UNSIGNED.
++	* sysdeps/wordsize-64/wcstol_l.c: Likewise.
++
++
++http://sourceware.org/cgi-bin/cvsweb.cgi/libc/sysdeps/wordsize-64/strtol_l.c.diff?r1=1.4&r2=1.4.2.1&cvsroot=glibc
++http://sourceware.org/cgi-bin/cvsweb.cgi/libc/sysdeps/wordsize-64/wcstol_l.c.diff?r1=1.4&r2=1.4.2.1&cvsroot=glibc
++
++===================================================================
++RCS file: /cvs/glibc/libc/sysdeps/wordsize-64/strtol_l.c,v
++retrieving revision 1.4
++retrieving revision 1.4.2.1
++diff -u -r1.4 -r1.4.2.1
++--- libc/sysdeps/wordsize-64/strtol_l.c	2003/03/03 09:45:12	1.4
+++++ libc/sysdeps/wordsize-64/strtol_l.c	2005/03/25 11:59:01	1.4.2.1
++@@ -8,7 +8,9 @@
++ #undef ____strtoll_l_internal
++ #undef __strtoll_l
++ #undef strtoll_l
+++#if !UNSIGNED
++ strong_alias (____strtol_l_internal, ____strtoll_l_internal)
++ libc_hidden_ver (____strtol_l_internal, ____strtoll_l_internal)
++ weak_alias (__strtol_l, __strtoll_l)
++ weak_alias (__strtol_l, strtoll_l)
+++#endif
++===================================================================
++RCS file: /cvs/glibc/libc/sysdeps/wordsize-64/wcstol_l.c,v
++retrieving revision 1.4
++retrieving revision 1.4.2.1
++diff -u -r1.4 -r1.4.2.1
++--- libc/sysdeps/wordsize-64/wcstol_l.c	2002/08/08 11:44:51	1.4
+++++ libc/sysdeps/wordsize-64/wcstol_l.c	2005/03/25 11:59:01	1.4.2.1
++@@ -8,6 +8,8 @@
++ #undef ____wcstoll_l_internal
++ #undef __wcstoll_l
++ #undef wcstoll_l
+++#if !UNSIGNED
++ strong_alias (____wcstol_l_internal, ____wcstoll_l_internal)
++ weak_alias (__wcstol_l, __wcstoll_l)
++ weak_alias (__wcstol_l, wcstoll_l)
+++#endif
++
++Signed-off-by: Robert P. J. Day <rpjday@mindspring.com>
+diff -urN ct-ng-trunk-20081121-orig/glibc/2.3.4/140-cygwin.patch ct-ng-trunk-20081121/glibc/2.3.4/140-cygwin.patch
+--- ct-ng-trunk-20081121-orig/glibc/2.3.4/140-cygwin.patch	1969-12-31 17:00:00.000000000 -0700
++++ ct-ng-trunk-20081121/glibc/2.3.4/140-cygwin.patch	2008-11-23 10:03:38.000000000 -0700
+@@ -0,0 +1,187 @@
++Fixes
++elf/librtld.os: In function `process_envvars': : undefined reference to `__access'
++...
++when building glibc-2.3.x on cygwin
++
++Idea from
++http://sources.redhat.com/ml/bug-glibc/2002-01/msg00071/glibc-2.2-cygin-shared.patch
++Basically, make glibc use .oST as suffix for 'object static'
++instead of .oS, since cygwin has trouble distinguishing .os from .oS
++(Original patch had .on, but .oST is more mnemonic for 'object static')
++
++glibc-linuxthreads-2.3.5 also requires a patch, see 
++../glibc-linuxthreads-2.3.5/glibc-linuxthreads-2.3.5-cygwin.patch
++
++[ forward ported to glibc-2.3.5 by Petr Cvachoucek:
++
++Message-ID: <4282FCBA.3040000@unicontrols.cz>
++Date: Thu, 12 May 2005 08:50:34 +0200
++From: Petr Cvachoucek <cvachoucek@unicontrols.cz>
++To: Dan Kegel <dank@kegel.com>
++CC:  crossgcc@sources.redhat.com
++Subject: Patches to build gcc 3.4.3 / glibc 2.3.5 on cygwin
++
++Hi Dan,
++following patches are needed to build gcc-3.4.3/glibc-2.3.5 toolchain
++on cygwin. Tested to build toolchains for powerpc 604 and 750 targets.
++
++-- 
++                     Petr Cvachoucek
++                     Unicontrols a.s.
++                     http://www.unicontrols.cz
++]
++
++diff -aur glibc-2.3.5/Makeconfig glibc-2.3.5-cygwin/Makeconfig
++--- glibc-2.3.5/Makeconfig	2005-02-16 11:50:19.000000000 +0100
+++++ glibc-2.3.5-cygwin/Makeconfig	2005-05-11 08:24:51.046875000 +0200
++@@ -449,7 +449,7 @@
++ # run the linked programs.
++ link-libc = -Wl,-rpath-link=$(rpath-link) \
++ 	    $(common-objpfx)libc.so$(libc.so-version) \
++-	    $(common-objpfx)$(patsubst %,$(libtype.oS),c) $(gnulib)
+++	    $(common-objpfx)$(patsubst %,$(libtype.oST),c) $(gnulib)
++ # This is how to find at build-time things that will be installed there.
++ rpath-dirs = math elf dlfcn nss nis rt resolv crypt
++ endif
++@@ -667,7 +667,7 @@
++ # The compilation rules use $(CPPFLAGS-${SUFFIX}) and $(CFLAGS-${SUFFIX})
++ # to pass different flags for each flavor.
++ libtypes = $(foreach o,$(object-suffixes-for-libc),$(libtype$o))
++-all-object-suffixes := .o .os .op .og .ob .oS
+++all-object-suffixes := .o .os .op .og .ob .oST
++ object-suffixes :=
++ CPPFLAGS-.o = $(pic-default)
++ CFLAGS-.o = $(filter %frame-pointer,$(+cflags))
++@@ -723,14 +723,14 @@
++ 
++ ifeq (yes,$(build-shared))
++ # Build special library that contains the static-only routines for libc.
++-object-suffixes-for-libc += .oS
+++object-suffixes-for-libc += .oST
++ 
++ # Must build the routines as PIC, though, because they can end up in (users')
++ # shared objects.  We don't want to use CFLAGS-os because users may, for
++ # example, make that processor-specific.
++-CFLAGS-.oS = $(CFLAGS-.o) $(PIC-ccflag)
++-CPPFLAGS-.oS = $(CPPFLAGS-.o) -DPIC -DLIBC_NONSHARED=1
++-libtype.oS = lib%_nonshared.a
+++CFLAGS-.oST = $(CFLAGS-.o) $(PIC-ccflag)
+++CPPFLAGS-.oST = $(CPPFLAGS-.o) -DPIC -DLIBC_NONSHARED=1
+++libtype.oST = lib%_nonshared.a
++ endif
++ 
++ # The assembler can generate debug information too.
++diff -aur glibc-2.3.5/Makerules glibc-2.3.5-cygwin/Makerules
++--- glibc-2.3.5/Makerules	2004-12-15 19:52:39.000000000 +0100
+++++ glibc-2.3.5-cygwin/Makerules	2005-05-11 08:25:33.578125000 +0200
++@@ -416,7 +416,7 @@
++ # Bounded pointer thunks are only built for *.ob
++ elide-bp-thunks = $(addprefix $(bppfx),$(bp-thunks))
++ 
++-elide-routines.oS += $(filter-out $(static-only-routines),\
+++elide-routines.oST += $(filter-out $(static-only-routines),\
++ 				  $(routines) $(aux) $(sysdep_routines)) \
++ 		     $(elide-bp-thunks)
++ elide-routines.os += $(static-only-routines) $(elide-bp-thunks)
++@@ -961,7 +961,7 @@
++ install: $(inst_libdir)/libc.so
++ $(inst_libdir)/libc.so: $(common-objpfx)format.lds \
++ 			$(common-objpfx)libc.so$(libc.so-version) \
++-			$(inst_libdir)/$(patsubst %,$(libtype.oS),\
+++			$(inst_libdir)/$(patsubst %,$(libtype.oST),\
++ 						  $(libprefix)$(libc-name)) \
++ 			$(+force)
++ 	(echo '/* GNU ld script';\
++@@ -969,7 +969,7 @@
++ 	 echo '   the static library, so try that secondarily.  */';\
++ 	 cat $<; \
++ 	 echo 'GROUP ( $(slibdir)/libc.so$(libc.so-version)' \
++-	      '$(libdir)/$(patsubst %,$(libtype.oS),$(libprefix)$(libc-name))'\
+++	      '$(libdir)/$(patsubst %,$(libtype.oST),$(libprefix)$(libc-name))'\
++ 	      ')' \
++ 	) > $@.new
++ 	mv -f $@.new $@
++diff -aur glibc-2.3.5/extra-lib.mk glibc-2.3.5-cygwin/extra-lib.mk
++--- glibc-2.3.5/extra-lib.mk	2004-12-02 23:54:47.000000000 +0100
+++++ glibc-2.3.5-cygwin/extra-lib.mk	2005-05-11 08:27:28.156250000 +0200
++@@ -13,7 +13,7 @@
++ 
++ ifneq (,$($(lib)-static-only-routines))
++ ifneq (,$(filter yesyes%,$(build-shared)$(elf)$($(lib).so-version)))
++-object-suffixes-$(lib) += $(filter-out $($(lib)-inhibit-o),.oS)
+++object-suffixes-$(lib) += $(filter-out $($(lib)-inhibit-o),.oST)
++ endif
++ endif
++ 
++@@ -29,7 +29,7 @@
++ 
++ # Add each flavor of library to the lists of things to build and install.
++ install-lib += $(foreach o,$(object-suffixes-$(lib)),$(lib:lib%=$(libtype$o)))
++-extra-objs += $(foreach o,$(filter-out .os .oS,$(object-suffixes-$(lib))),\
+++extra-objs += $(foreach o,$(filter-out .os .oST,$(object-suffixes-$(lib))),\
++ 			$(patsubst %,%$o,$(filter-out \
++ 					   $($(lib)-shared-only-routines),\
++ 					   $(all-$(lib)-routines))))
++@@ -57,7 +57,7 @@
++ 
++ 
++ # Use o-iterator.mk to generate a rule for each flavor of library.
++-ifneq (,$(filter-out .os .oS,$(object-suffixes-$(lib))))
+++ifneq (,$(filter-out .os .oST,$(object-suffixes-$(lib))))
++ define o-iterator-doit
++ $(objpfx)$(patsubst %,$(libtype$o),$(lib:lib%=%)): \
++   $(patsubst %,$(objpfx)%$o,\
++@@ -65,7 +65,7 @@
++ 			  $(all-$(lib)-routines))); \
++ 	$$(build-extra-lib)
++ endef
++-object-suffixes-left = $(filter-out .os .oS,$(object-suffixes-$(lib)))
+++object-suffixes-left = $(filter-out .os .oST,$(object-suffixes-$(lib)))
++ include $(patsubst %,$(..)o-iterator.mk,$(object-suffixes-left))
++ endif
++ 
++@@ -77,9 +77,9 @@
++ 	$(build-extra-lib)
++ endif
++ 
++-ifneq (,$(filter .oS,$(object-suffixes-$(lib))))
++-$(objpfx)$(patsubst %,$(libtype.oS),$(lib:lib%=%)): \
++-  $(patsubst %,$(objpfx)%.oS,\
+++ifneq (,$(filter .oST,$(object-suffixes-$(lib))))
+++$(objpfx)$(patsubst %,$(libtype.oST),$(lib:lib%=%)): \
+++  $(patsubst %,$(objpfx)%.oST,\
++ 	     $(filter $($(lib)-static-only-routines),\
++ 		      $(all-$(lib)-routines)))
++ 	$(build-extra-lib)
++diff -aur glibc-2.3.5/nptl/Makefile glibc-2.3.5-cygwin/nptl/Makefile
++--- glibc-2.3.5/nptl/Makefile	2005-02-16 09:45:56.000000000 +0100
+++++ glibc-2.3.5-cygwin/nptl/Makefile	2005-05-11 08:26:01.812500000 +0200
++@@ -360,7 +360,7 @@
++ 
++ $(inst_libdir)/libpthread.so: $(common-objpfx)format.lds \
++ 			      $(objpfx)libpthread.so$(libpthread.so-version) \
++-			      $(inst_libdir)/$(patsubst %,$(libtype.oS),\
+++			      $(inst_libdir)/$(patsubst %,$(libtype.oST),\
++ 							$(libprefix)pthread) \
++ 			      $(+force)
++ 	(echo '/* GNU ld script';\
++@@ -368,7 +368,7 @@
++ 	 echo '   the static library, so try that secondarily.  */';\
++ 	 cat $<; \
++ 	 echo 'GROUP ( $(slibdir)/libpthread.so$(libpthread.so-version)' \
++-	      '$(libdir)/$(patsubst %,$(libtype.oS),$(libprefix)pthread)'\
+++	      '$(libdir)/$(patsubst %,$(libtype.oST),$(libprefix)pthread)'\
++ 	      ')' \
++ 	) > $@.new
++ 	mv -f $@.new $@
++diff -aur glibc-2.3.5/sysdeps/sparc/sparc32/sparcv9/Makefile glibc-2.3.5-cygwin/sysdeps/sparc/sparc32/sparcv9/Makefile
++--- glibc-2.3.5/sysdeps/sparc/sparc32/sparcv9/Makefile	2004-08-16 08:46:14.000000000 +0200
+++++ glibc-2.3.5-cygwin/sysdeps/sparc/sparc32/sparcv9/Makefile	2005-05-11 08:26:25.937500000 +0200
++@@ -10,4 +10,4 @@
++ ASFLAGS-.op += -Wa,-Av9a
++ ASFLAGS-.og += -Wa,-Av9a
++ ASFLAGS-.ob += -Wa,-Av9a
++-ASFLAGS-.oS += -Wa,-Av9a
+++ASFLAGS-.oST += -Wa,-Av9a
++
++Signed-off-by: Robert P. J. Day <rpjday@mindspring.com>
+diff -urN ct-ng-trunk-20081121-orig/glibc/2.3.4/150-sh-lowlevellock.patch ct-ng-trunk-20081121/glibc/2.3.4/150-sh-lowlevellock.patch
+--- ct-ng-trunk-20081121-orig/glibc/2.3.4/150-sh-lowlevellock.patch	1969-12-31 17:00:00.000000000 -0700
++++ ct-ng-trunk-20081121/glibc/2.3.4/150-sh-lowlevellock.patch	2008-11-23 10:03:38.000000000 -0700
+@@ -0,0 +1,43 @@
++ML:	http://sources.redhat.com/ml/libc-hacker/2005-09/msg00002.html
++
++Date: Mon, 05 Sep 2005 21:07:15 +0900 (JST)
++Message-Id: <20050905.210715.15267870.kkojima@rr.iij4u.or.jp>
++To: libc-hacker at sources dot redhat dot com
++Subject: SH: A typo in lowlevellock.S
++From: Kaz Kojima <kkojima at rr dot iij4u dot or dot jp>
++
++Hi,
++
++The appended patch fixes a typo in a low-level lock function.  It
++set the correct 3rd argument for the futex syscall in loop.  Sorry
++for missing such an embarrassing bug.
++
++Regards,
++	kaz
++
++nptl/ChangeLog:
++2005-09-05  Kaz Kojima  <kkojima@rr.iij4u.or.jp>
++
++	* sysdeps/unix/sysv/linux/sh/lowlevellock.S (__lll_mutex_lock_wait):
++	Fix typo in register name.
++
++--- glibc.old/nptl/sysdeps/unix/sysv/linux/sh/lowlevellock.S	2004-10-26 04:06:44.000000000 +0900
+++++ glibc/nptl/sysdeps/unix/sysv/linux/sh/lowlevellock.S	2005-09-05 19:18:25.000000000 +0900
++@@ -1,4 +1,4 @@
++-/* Copyright (C) 2003, 2004 Free Software Foundation, Inc.
+++/* Copyright (C) 2003, 2004, 2005 Free Software Foundation, Inc.
++    This file is part of the GNU C Library.
++ 
++    The GNU C Library is free software; you can redistribute it and/or
++@@ -51,8 +51,8 @@ __lll_mutex_lock_wait:
++ 	SYSCALL_INST_PAD
++ 
++ 2:
++-	mov	#2, r4
++-	XCHG (r4, @r8, r2)
+++	mov	#2, r6
+++	XCHG (r6, @r8, r2)
++ 	tst	r2, r2
++ 	bf	1b
++ 
++Signed-off-by: Robert P. J. Day <rpjday@mindspring.com>
+diff -urN ct-ng-trunk-20081121-orig/glibc/2.3.4/160-sh-memset.patch ct-ng-trunk-20081121/glibc/2.3.4/160-sh-memset.patch
+--- ct-ng-trunk-20081121-orig/glibc/2.3.4/160-sh-memset.patch	1969-12-31 17:00:00.000000000 -0700
++++ ct-ng-trunk-20081121/glibc/2.3.4/160-sh-memset.patch	2008-11-23 10:03:38.000000000 -0700
+@@ -0,0 +1,30 @@
++From:
++	http://sources.redhat.com/ml/libc-alpha/2005-07/msg00051.html
++	http://sources.redhat.com/ml/crossgcc/2005-10/msg00035.html
++
++Message-ID: <434576E1.6020305@sscd.de>
++Date: Thu, 06 Oct 2005 21:11:29 +0200
++From: Alexander Sieb <sieb at sscd dot de>
++To: crossgcc at sourceware dot org
++Subject: Crosstool sh4-linux-gcc-4.0.2-glibc-2.3.5 patches
++
++On sh[34]-linux, memset function does not work if 2nd argument is negative
++and 3rd argument is greater than 12.
++for example, memset(ptr, "\xda", 20) sets 0xff instead of 0xda.
++ 
++Attached patch fixes this problem.
++ 
++	* sysdeps/sh/memset.S (memset): Correct 2nd argument handling.
++ 
++--- glibc-2.3.5.old/sysdeps/sh/memset.S	29 Apr 2003 22:47:18 -0000	1.4
+++++ glibc-2.3.5/sysdeps/sh/memset.S	23 Jul 2005 08:37:21 -0000
++@@ -28,6 +28,7 @@ ENTRY(memset)
++ 	bt.s	L_byte_loop_init
++ 	mov	r4,r7
++ 
+++	extu.b	r5,r5
++ 	swap.b	r5,r1
++ 	or	r1,r5
++	swap.w	r5,r1
++
++Signed-off-by: Robert P. J. Day <rpjday@mindspring.com>
+diff -urN ct-ng-trunk-20081121-orig/glibc/2.3.4/170-allow-gcc-4.0-arm.patch ct-ng-trunk-20081121/glibc/2.3.4/170-allow-gcc-4.0-arm.patch
+--- ct-ng-trunk-20081121-orig/glibc/2.3.4/170-allow-gcc-4.0-arm.patch	1969-12-31 17:00:00.000000000 -0700
++++ ct-ng-trunk-20081121/glibc/2.3.4/170-allow-gcc-4.0-arm.patch	2008-11-23 10:03:38.000000000 -0700
+@@ -0,0 +1,35 @@
++Fixes
++In file included from dynamic-link.h:22,
++                 from dl-reloc.c:265:
++../sysdeps/arm/dl-machine.h: In function '_dl_relocate_object':
++../sysdeps/arm/dl-machine.h:371: error: invalid storage class for function 'fix_bad_pc24'
++make[2]: Leaving directory `/home/dank/queue/jobdir.k8/crosstool-dev/build/arm-unknown-linux-gnu/gcc-4.0-20050305-glibc-2.3.6/glibc-2.3.6/elf'
++
++when building glibc-2.3.6 with gcc-4.0
++
++Like
++http://sources.redhat.com/cgi-bin/cvsweb.cgi/libc/sysdeps/arm/dl-machine.h.diff?r1=1.51&r2=1.52&cvsroot=glibc
++but fixes fix_bad_pc24.
++
++
++--- glibc-2.3.6-orig/sysdeps/arm/dl-machine.h	Sun Mar 20 17:54:37 2005
+++++ glibc-2.3.6/sysdeps/arm/dl-machine.h	Sun Mar 20 17:57:32 2005
++@@ -359,7 +359,14 @@
++ #ifdef RESOLVE
++ 
++ /* Deal with an out-of-range PC24 reloc.  */
++-static Elf32_Addr
+++#if __GNUC__ >= 4
+++  auto inline Elf32_Addr
+++#else
+++  static inline Elf32_Addr
+++#endif
+++#if __GNUC__ >= 4 || (__GNUC__ == 3 && __GNUC_MINOR__ >= 2)
+++  __attribute ((always_inline))
+++#endif
++ fix_bad_pc24 (Elf32_Addr *const reloc_addr, Elf32_Addr value)
++ {
++   static void *fix_page;
++
++Signed-off-by: Robert P. J. Day <rpjday@mindspring.com>
++with a little editing by dank@kegel.com
+diff -urN ct-ng-trunk-20081121-orig/glibc/2.3.4/180-allow-gcc-4.0-elf.patch ct-ng-trunk-20081121/glibc/2.3.4/180-allow-gcc-4.0-elf.patch
+--- ct-ng-trunk-20081121-orig/glibc/2.3.4/180-allow-gcc-4.0-elf.patch	1969-12-31 17:00:00.000000000 -0700
++++ ct-ng-trunk-20081121/glibc/2.3.4/180-allow-gcc-4.0-elf.patch	2008-11-23 10:03:38.000000000 -0700
+@@ -0,0 +1,63 @@
++From http://www.mail-archive.com/pld-cvs-commit@pld-linux.org/msg00229.html
++Fixes
++  rtld.c: In function '_dl_start':
++  dynamic-link.h:47: error: nested function 'elf_machine_rela_relative' declared but never defined
++  dynamic-link.h:41: error: nested function 'elf_machine_rela' declared but never defined
++when compiling glibc-2.3.4 with gcc-4.0
++
++But see also
++http://sources.redhat.com/ml/libc-hacker/2005-02/msg00000.html
++and
++http://sources.redhat.com/ml/libc-hacker/2005-03/msg00008.html
++which seem to propose less radical fixes?
++
++Aha.  See also http://sources.redhat.com/bugzilla/show_bug.cgi?id=721
++
++--- glibc-2.3.6.orig/elf/dynamic-link.h	2005-03-12 18:12:37.000000000 -0800
+++++ glibc-2.3.6/elf/dynamic-link.h	2005-03-12 18:12:59.777820848 -0800
++@@ -19,43 +19,6 @@
++ 
++ #include <elf.h>
++ #include <assert.h>
++-
++-#ifdef RESOLVE
++-/* We pass reloc_addr as a pointer to void, as opposed to a pointer to
++-   ElfW(Addr), because not all architectures can assume that the
++-   relocated address is properly aligned, whereas the compiler is
++-   entitled to assume that a pointer to a type is properly aligned for
++-   the type.  Even if we cast the pointer back to some other type with
++-   less strict alignment requirements, the compiler might still
++-   remember that the pointer was originally more aligned, thereby
++-   optimizing away alignment tests or using word instructions for
++-   copying memory, breaking the very code written to handle the
++-   unaligned cases.  */
++-auto void __attribute__((always_inline))
++-elf_machine_rel (struct link_map *map, const ElfW(Rel) *reloc,
++-		 const ElfW(Sym) *sym, const struct r_found_version *version,
++-		 void *const reloc_addr);
++-auto void __attribute__((always_inline))
++-elf_machine_rela (struct link_map *map, const ElfW(Rela) *reloc,
++-		  const ElfW(Sym) *sym, const struct r_found_version *version,
++-		  void *const reloc_addr);
++-auto void __attribute__((always_inline))
++-elf_machine_rel_relative (ElfW(Addr) l_addr, const ElfW(Rel) *reloc,
++-			  void *const reloc_addr);
++-auto void __attribute__((always_inline))
++-elf_machine_rela_relative (ElfW(Addr) l_addr, const ElfW(Rela) *reloc,
++-			   void *const reloc_addr);
++-# if ELF_MACHINE_NO_RELA || defined ELF_MACHINE_PLT_REL
++-auto void __attribute__((always_inline))
++-elf_machine_lazy_rel (struct link_map *map,
++-		      ElfW(Addr) l_addr, const ElfW(Rel) *reloc);
++-# else
++-auto void __attribute__((always_inline))
++-elf_machine_lazy_rel (struct link_map *map,
++-		      ElfW(Addr) l_addr, const ElfW(Rela) *reloc);
++-# endif
++-#endif
++-
++ #include <dl-machine.h>
++ 
++ #ifndef VERSYMIDX
++
++Signed-off-by: Robert P. J. Day <rpjday@mindspring.com>
+diff -urN ct-ng-trunk-20081121-orig/glibc/2.3.4/190-configure-apple-as.patch ct-ng-trunk-20081121/glibc/2.3.4/190-configure-apple-as.patch
+--- ct-ng-trunk-20081121-orig/glibc/2.3.4/190-configure-apple-as.patch	1969-12-31 17:00:00.000000000 -0700
++++ ct-ng-trunk-20081121/glibc/2.3.4/190-configure-apple-as.patch	2008-11-23 10:03:38.000000000 -0700
+@@ -0,0 +1,25 @@
++http://in3www.epfl.ch/~schaffne/glibc-configure-apple-as.patch
++http://sources.redhat.com/ml/crossgcc/2004-02/msg00151.html
++
++The following makes it possible to configure glibc-2.3.2 on Mac OS X,
++where the assembler but doesn't understand the --version flag.
++
++Fixes the symptom
++checking whether ld is GNU ld... no
++checking for /usr/libexec/gcc/darwin/ppc/as... /usr/libexec/gcc/darwin/ppc/as
++checking version of /usr/libexec/gcc/darwin/ppc/as... 
++<PAUSES HERE AND JUST SITS THERE DOING NOTHING>
++
++--- glibc-2.3.2/configure~	Wed Feb 26 09:20:48 2003
+++++ glibc-2.3.2/configure	Fri Feb 27 13:12:53 2004
++@@ -3914,7 +3914,7 @@
++   # Found it, now check the version.
++   echo "$as_me:$LINENO: checking version of $AS" >&5
++ echo $ECHO_N "checking version of $AS... $ECHO_C" >&6
++-  ac_prog_version=`$AS --version 2>&1 | sed -n 's/^.*GNU assembler.* \([0-9]*\.[0-9.]*\).*$/\1/p'`
+++  ac_prog_version=`$AS -v </dev/null 2>&1 | sed -n 's/^.*GNU assembler.* \([0-9]*\.[0-9.]*\).*$/\1/p'`
++   case $ac_prog_version in
++     '') ac_prog_version="v. ?.??, bad"; ac_verc_fail=yes;;
++     2.1[3-9]*)
++
++Signed-off-by: Robert P. J. Day <rpjday@mindspring.com>
+diff -urN ct-ng-trunk-20081121-orig/glibc/2.3.4/200-use_short_for_fnstsw.patch ct-ng-trunk-20081121/glibc/2.3.4/200-use_short_for_fnstsw.patch
+--- ct-ng-trunk-20081121-orig/glibc/2.3.4/200-use_short_for_fnstsw.patch	1969-12-31 17:00:00.000000000 -0700
++++ ct-ng-trunk-20081121/glibc/2.3.4/200-use_short_for_fnstsw.patch	2008-11-23 10:03:38.000000000 -0700
+@@ -0,0 +1,18 @@
++Original patch from H.J. Lu, as reported there:
++http://www.nabble.com/PATCH:-Use-short-for-fnstsw-td14775171.html
++
++fnstsw stores 16bit into %ax. The upper 16bit of %eax is unchanged.
++The new assembler (binutils-2.18.50.0.4 and up) will disallow "fnstsw %eax".
++
++diff -dur glibc-2.6.1.orig/sysdeps/i386/fpu/ftestexcept.c glibc-2.6.1/sysdeps/i386/fpu/ftestexcept.c
++--- glibc-2.6.1.orig/sysdeps/i386/fpu/ftestexcept.c	2004-03-05 11:14:48.000000000 +0100
+++++ glibc-2.6.1/sysdeps/i386/fpu/ftestexcept.c	2008-06-24 10:56:14.000000000 +0200
++@@ -26,7 +26,7 @@
++ int
++ fetestexcept (int excepts)
++ {
++-  int temp;
+++  short temp;
++   int xtemp = 0;
++ 
++   /* Get current exceptions.  */
+diff -urN ct-ng-trunk-20081121-orig/glibc/2.3.4/210-fix-pr631.patch ct-ng-trunk-20081121/glibc/2.3.4/210-fix-pr631.patch
+--- ct-ng-trunk-20081121-orig/glibc/2.3.4/210-fix-pr631.patch	1969-12-31 17:00:00.000000000 -0700
++++ ct-ng-trunk-20081121/glibc/2.3.4/210-fix-pr631.patch	2008-11-23 10:03:38.000000000 -0700
+@@ -0,0 +1,45 @@
++From dank@kegel.com
++Wed Jun 15 09:12:43 PDT 2005
++
++Fixes
++
++build-glibc/libc.a(nsswitch.o)(.data+0x64): undefined reference to `_nss_files_getaliasent_r'
++build-glibc/libc.a(nsswitch.o)(.data+0x6c): undefined reference to `_nss_files_endaliasent'
++... 53 lines deleted ...
++build-glibc/libc.a(nsswitch.o)(.data+0x21c): undefined reference to `_nss_files_getspnam_r'
++collect2: ld returned 1 exit status
++make[2]: *** [/build/gcc-3.4.3-glibc-2.3.5-hdrs-2.6.11.2/i686-unknown-linux-gnu/build-glibc/elf/ldconfig] Error 1
++
++when building glibc with --enable-static-nss.
++
++See http://sources.redhat.com/bugzilla/show_bug.cgi?id=631
++
++--- glibc-2.3.5/Makeconfig.old	Wed Jun 15 08:13:12 2005
+++++ glibc-2.3.5/Makeconfig	Wed Jun 15 08:13:14 2005
++@@ -487,7 +487,7 @@
++ 
++ # The static libraries.
++ ifeq (yes,$(build-static))
++-link-libc-static = $(common-objpfx)libc.a $(static-gnulib) $(common-objpfx)libc.a
+++link-libc-static = $(common-objpfx)libc.a $(static-gnulib) $(otherlibs) $(common-objpfx)libc.a
++ link-extra-libs-static = $(foreach lib,$(LDLIBS-$(@F)),$(common-objpfx)$(lib).a)
++ else
++ ifeq (yes,$(build-shared))
++--- glibc-2.3.5/elf/Makefile.old	Wed Jun 15 07:46:49 2005
+++++ glibc-2.3.5/elf/Makefile	Wed Jun 15 08:14:00 2005
++@@ -115,6 +115,13 @@
++ install-bin-script = ldd
++ endif
++ 
+++ifeq (yes,$(build-static-nss))
+++nssobjdir := $(patsubst ../$(subdir),.,$(common-objpfx)nss)
+++resolvobjdir := $(patsubst ../$(subdir),.,$(common-objpfx)resolv)
+++otherlibs += $(nssobjdir)/libnss_files.a $(resolvobjdir)/libnss_dns.a \
+++	     $(resolvobjdir)/libresolv.a
+++endif
+++
++ others		= sprof sln
++ install-bin	= sprof
++ others-static   = sln
++
++Signed-off-by: Robert P. J. Day <rpjday@mindspring.com>
+diff -urN ct-ng-trunk-20081121-orig/glibc/2.3.4/220-fp-byteorder.patch ct-ng-trunk-20081121/glibc/2.3.4/220-fp-byteorder.patch
+--- ct-ng-trunk-20081121-orig/glibc/2.3.4/220-fp-byteorder.patch	1969-12-31 17:00:00.000000000 -0700
++++ ct-ng-trunk-20081121/glibc/2.3.4/220-fp-byteorder.patch	2008-11-23 10:03:38.000000000 -0700
+@@ -0,0 +1,205 @@
++Taken from http://sources.redhat.com/ml/crossgcc/2004-02/msg00104.html
++Author: addsub@eyou.com
++Target: ARM
++
++Fixes http://gcc.gnu.org/cgi-bin/cvsweb.cgi/gcc/gcc/testsuite/gcc.c-torture/execute/920501-8.c
++and makes printf("%f", 1.0) work.
++
++Lennert Buytenhek wrote in http://sources.redhat.com/ml/crossgcc/2004-09/msg00115.html :
++ It ... fixes the 'printf("%f\n", 0.5); prints 0.000000' and general 'floating point
++ is broken' on my big-endian hardfloat FPA ARM platform. ...
++ It's definitely needed for hardfloat.  So I'd think it's needed for
++ big-endian systems in any case, and for VFP on little-endian systems
++ too.  Someone would have to verify that though.
++
++Lennert Buytenhek wrote in http://sources.redhat.com/ml/crossgcc/2004-09/msg00123.html
++ I just had a look at glibc-20040830, and [this patch] is still needed and useful
++ for this version.  glibc-20040830 out-of-the-box still contains the
++ following wrong assumptions:
++ - sysdeps/arm/bits/endian.h: float word order is big endian (which it is
++   not on vfp systems)
++ - sysdeps/arm/gmp-mparam.h: IEEE doubles are mixed endian (which they
++   are not on big endian systems, neither on vfp systems)
++ - sysdeps/arm/ieee754.h: IEEE doubles are in little endian byte order
++   (which they are not on big endian systems)
++ [This patch] seems the right solution for all of these issues.
++
++Dimitry Andric wrote in http://sources.redhat.com/ml/crossgcc/2004-09/msg00132.html :
++ It's even needed for glibc CVS, AFAICS.
++ The patch hunk which modifies glibc.new/sysdeps/arm/bits/endian.h
++ (currently at version 1.4) is only needed for proper VFP operation.
++ But the hunk which modifies sysdeps/arm/gmp-mparam.h, and the hunk
++ that deletes sysdeps/arm/ieee754.h (yes, this IS correct), are needed
++ for proper operation of *any* FP model on big endian ARM.
++
++See also discussion in followups to
++http://sources.redhat.com/ml/crossgcc/2004-05/msg00245.html)
++
++Message-ID: <276985760.37584@eyou.com>
++Received: from unknown (HELO eyou.com) (172.16.2.2)
++ by 0.0.0.0 with SMTP; Tue, 17 Feb 2004 10:42:40 +0800
++Received: (qmail 8238 invoked by uid 65534); 17 Feb 2004 10:42:38 +0800
++Date: 17 Feb 2004 10:42:38 +0800
++Message-ID: <20040217104238.8237.qmail@eyou.com>
++From: "add" <addsub@eyou.com>
++To: dank@kegel.com
++Reply-To: "add" <addsub@eyou.com>
++Subject: Re:&nbsp;&nbsp;&nbsp;problem&nbsp;while&nbsp;building&nbsp;arm&nbsp;vfp&nbsp;softfloat&nbsp;gcc&nbsp;`
++
++Hi, Dan, This is a patch I applied to my glibc-2.3.2, then my softfloat
++toolchain can printf("%f\n",1.0). So you may have a try of this
++
++
++diff -uNrp glibc.old/sysdeps/arm/bits/endian.h glibc.new/sysdeps/arm/bits/endian.h
++--- glibc.old/sysdeps/arm/bits/endian.h	1999-04-12 11:59:13.000000000 -0400
+++++ glibc.new/sysdeps/arm/bits/endian.h	2004-02-12 09:15:13.000000000 -0500
++@@ -9,4 +9,9 @@
++ #else
++ #define __BYTE_ORDER __LITTLE_ENDIAN
++ #endif
+++
+++#ifdef __VFP_FP__
+++#define __FLOAT_WORD_ORDER __BYTE_ORDER
+++#else
++ #define __FLOAT_WORD_ORDER __BIG_ENDIAN
+++#endif
++diff -uNrp glibc.old/sysdeps/arm/gmp-mparam.h glibc.new/sysdeps/arm/gmp-mparam.h
++--- glibc.old/sysdeps/arm/gmp-mparam.h	2001-07-07 15:21:19.000000000 -0400
+++++ glibc.new/sysdeps/arm/gmp-mparam.h	2004-02-12 09:15:13.000000000 -0500
++@@ -26,5 +26,13 @@ MA 02111-1307, USA. */
++ #define BITS_PER_SHORTINT 16
++ #define BITS_PER_CHAR 8
++ 
++-#define IEEE_DOUBLE_BIG_ENDIAN 0
++-#define IEEE_DOUBLE_MIXED_ENDIAN 1
+++#if defined(__ARMEB__)
+++# define IEEE_DOUBLE_MIXED_ENDIAN 0
+++# define IEEE_DOUBLE_BIG_ENDIAN 1
+++#elif defined(__VFP_FP__)
+++# define IEEE_DOUBLE_MIXED_ENDIAN 0
+++# define IEEE_DOUBLE_BIG_ENDIAN 0
+++#else
+++# define IEEE_DOUBLE_BIG_ENDIAN 0
+++# define IEEE_DOUBLE_MIXED_ENDIAN 1
+++#endif
++diff -uNrp glibc.old/sysdeps/arm/ieee754.h glibc.new/sysdeps/arm/ieee754.h
++--- glibc.old/sysdeps/arm/ieee754.h	2001-07-07 15:21:19.000000000 -0400
+++++ glibc.new/sysdeps/arm/ieee754.h	1969-12-31 19:00:00.000000000 -0500
++@@ -1,115 +0,0 @@
++-/* Copyright (C) 1992, 1995, 1996, 1998 Free Software Foundation, Inc.
++-   This file is part of the GNU C Library.
++-
++-   The GNU C Library is free software; you can redistribute it and/or
++-   modify it under the terms of the GNU Lesser General Public
++-   License as published by the Free Software Foundation; either
++-   version 2.1 of the License, or (at your option) any later version.
++-
++-   The GNU C Library is distributed in the hope that it will be useful,
++-   but WITHOUT ANY WARRANTY; without even the implied warranty of
++-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++-   Lesser General Public License for more details.
++-
++-   You should have received a copy of the GNU Lesser General Public
++-   License along with the GNU C Library; if not, write to the Free
++-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
++-   02111-1307 USA.  */
++-
++-#ifndef _IEEE754_H
++-
++-#define _IEEE754_H 1
++-#include <features.h>
++-
++-#include <endian.h>
++-
++-__BEGIN_DECLS
++-
++-union ieee754_float
++-  {
++-    float f;
++-
++-    /* This is the IEEE 754 single-precision format.  */
++-    struct
++-      {
++-	unsigned int mantissa:23;
++-	unsigned int exponent:8;
++-	unsigned int negative:1;
++-      } ieee;
++-
++-    /* This format makes it easier to see if a NaN is a signalling NaN.  */
++-    struct
++-      {
++-	unsigned int mantissa:22;
++-	unsigned int quiet_nan:1;
++-	unsigned int exponent:8;
++-	unsigned int negative:1;
++-      } ieee_nan;
++-  };
++-
++-#define IEEE754_FLOAT_BIAS	0x7f /* Added to exponent.  */
++-
++-
++-union ieee754_double
++-  {
++-    double d;
++-
++-    /* This is the IEEE 754 double-precision format.  */
++-    struct
++-      {
++-	unsigned int mantissa0:20;
++-	unsigned int exponent:11;
++-	unsigned int negative:1;
++-	unsigned int mantissa1:32;
++-      } ieee;
++-
++-    /* This format makes it easier to see if a NaN is a signalling NaN.  */
++-    struct
++-      {
++-	unsigned int mantissa0:19;
++-	unsigned int quiet_nan:1;
++-	unsigned int exponent:11;
++-	unsigned int negative:1;
++-	unsigned int mantissa1:32;
++-      } ieee_nan;
++-  };
++-
++-#define IEEE754_DOUBLE_BIAS	0x3ff /* Added to exponent.  */
++-
++-
++-/* The following two structures are correct for `new' floating point systems but
++-   wrong for the old FPPC.  The only solution seems to be to avoid their use on
++-   old hardware.  */
++-
++-union ieee854_long_double
++-  {
++-    long double d;
++-
++-    /* This is the IEEE 854 double-extended-precision format.  */
++-    struct
++-      {
++-	unsigned int exponent:15;
++-	unsigned int empty:16;
++-	unsigned int negative:1;
++-	unsigned int mantissa1:32;
++-	unsigned int mantissa0:32;
++-      } ieee;
++-
++-    /* This is for NaNs in the IEEE 854 double-extended-precision format.  */
++-    struct
++-      {
++-	unsigned int exponent:15;
++-	unsigned int empty:16;
++-	unsigned int negative:1;
++-	unsigned int mantissa1:32;
++-	unsigned int mantissa0:30;
++-	unsigned int quiet_nan:1;
++-	unsigned int one:1;
++-      } ieee_nan;
++-  };
++-
++-#define IEEE854_LONG_DOUBLE_BIAS 0x3fff
++-
++-__END_DECLS
++-
++-#endif /* ieee754.h */
++
++Signed-off-by: Robert P. J. Day <rpjday@mindspring.com>
+diff -urN ct-ng-trunk-20081121-orig/glibc/2.3.4/230-mips-bootstrap-gcc-header-install.patch ct-ng-trunk-20081121/glibc/2.3.4/230-mips-bootstrap-gcc-header-install.patch
+--- ct-ng-trunk-20081121-orig/glibc/2.3.4/230-mips-bootstrap-gcc-header-install.patch	1969-12-31 17:00:00.000000000 -0700
++++ ct-ng-trunk-20081121/glibc/2.3.4/230-mips-bootstrap-gcc-header-install.patch	2008-11-23 10:03:38.000000000 -0700
+@@ -0,0 +1,37 @@
++http://sourceware.org/ml/crossgcc/2005-05/msg00165.html
++Fixes a MIPS build problem (unrelated to NPTL)
++
++Message-ID: <428E8B24.1000201@realitydiluted.com>
++Date: Fri, 20 May 2005 20:13:08 -0500
++From: "Steven J dot  Hill" <sjhill at realitydiluted dot com>
++To:  crossgcc at sources dot redhat dot com,  toolchain at gentoo dot org, 
++ Shay_Gal-On at pmc-sierra dot com,  TheNop at gmx dot net
++Subject: New NPTL patches for crosstools and MIPS NPTL patches....
++
++Greetings.
++
++I have uploaded the latest NPTL patch for crosstool-0.34. I have also
++uploaded a tarball of the patches necessary to build a MIPS NPTL
++cross toolchain. To build a MIPS NPTL toolchain you will need the
++released version of binutils-2.16 and the absolute latest GCC and
++glibc code from the HEAD of cvs. Use the 'demo-mips-nptl.sh' script
++to build the toolchain. Please report bugs or issues to the crossgcc
++mailing list. Here is the link off of my FTP site:
++
++    ftp://ftp.realitydiluted.com/crosstools/crosstool-0.34/
++
++[Note: BOOTSTRAP_GCC is set by crosstool.sh when invoking make install-headers]
++
++diff -ur glibc-2.4.0-20050406/sysdeps/mips/mips32/Makefile glibc-2.4.0-20050406-patched/sysdeps/mips/mips32/Makefile
++--- glibc-2.4.0-20050406/sysdeps/mips/mips32/Makefile	2003-03-29 02:15:28.000000000 -0600
+++++ glibc-2.4.0-20050406-patched/sysdeps/mips/mips32/Makefile	2005-04-12 21:36:51.318837655 -0500
++@@ -1,3 +1,7 @@
+++ifeq ($(filter -DBOOTSTRAP_GCC,$(CFLAGS)),)
++ ifeq ($(filter -mabi=32,$(CC)),)
++ CC += -mabi=32
++ endif
+++else
+++CC += -D"_MIPS_SZPTR=32"
+++endif
++
++Signed-off-by: Robert P. J. Day <rpjday@mindspring.com>
+diff -urN ct-ng-trunk-20081121-orig/glibc/2.3.4/240-make-install-lib-all.patch ct-ng-trunk-20081121/glibc/2.3.4/240-make-install-lib-all.patch
+--- ct-ng-trunk-20081121-orig/glibc/2.3.4/240-make-install-lib-all.patch	1969-12-31 17:00:00.000000000 -0700
++++ ct-ng-trunk-20081121/glibc/2.3.4/240-make-install-lib-all.patch	2008-11-23 10:03:38.000000000 -0700
+@@ -0,0 +1,26 @@
++From http://svn.exactcode.de/t2/trunk/package/base/glibc32/make-install-lib-all.patch
++Rule to install all needed libraries, not just the ones installed by install-lib,
++yet not install programs.  
++Needed because we can't use the main install target, as we can't build programs before
++we have the final gcc installed; linking fails because libeh.a is not present,
++and glibc insists on linking programs with that library.
++
++diff -Naur glibc-2.3.4.orig/Makerules glibc-2.3.4/Makerules
++--- glibc-2.3.4.orig/Makerules	2004-12-15 20:52:39.000000000 +0200
+++++ glibc-2.3.4/Makerules	2005-02-19 15:16:31.415125176 +0200
++@@ -844,6 +844,13 @@
++ installed-libcs := $(foreach o,$(filter-out .os,$(object-suffixes-for-libc)),\
++ 			     $(inst_libdir)/$(patsubst %,$(libtype$o),\
++ 						     $(libprefix)$(libc-name)))
+++
+++install-lib-all: $(inst_slibdir)/libc.so$(libc.so-version) \
+++		$(inst_slibdir)/libc-$(version).so \
+++		$(inst_libdir)/libc.so \
+++		$(inst_libdir)/libc.a \
+++		install-lib
+++
++ install: $(installed-libcs)
++ $(installed-libcs): $(inst_libdir)/lib$(libprefix)%: lib $(+force)
++ 	$(make-target-directory)
++
++Signed-off-by: Robert P. J. Day <rpjday@mindspring.com>
+diff -urN ct-ng-trunk-20081121-orig/glibc/2.3.4/250-weakalias.patch ct-ng-trunk-20081121/glibc/2.3.4/250-weakalias.patch
+--- ct-ng-trunk-20081121-orig/glibc/2.3.4/250-weakalias.patch	1969-12-31 17:00:00.000000000 -0700
++++ ct-ng-trunk-20081121/glibc/2.3.4/250-weakalias.patch	2008-11-23 10:03:38.000000000 -0700
+@@ -0,0 +1,45 @@
++This one was taken from debian.
++
++# DP: Description: Fix __bind redefinition problem
++# DP: Related bugs: 
++# DP: Dpatch author: Phil Blundell
++# DP: Patch author: Daniel Jacobowitz
++# DP: Upstream status: In CVS
++# DP: Status Details:
++# DP: Date: 2005-12-25
++
++Index: sysdeps/unix/sysv/linux/arm/socket.S
++===================================================================
++RCS file: /cvs/glibc/ports/sysdeps/unix/sysv/linux/arm/socket.S,v
++retrieving revision 1.12
++retrieving revision 1.13
++diff -u -r1.12 -r1.13
++--- glibc-2.3.6.ds1.orig/sysdeps/unix/sysv/linux/arm/socket.S	4 Dec 2004 21:20:16 -0000	1.12
+++++ glibc-2.3.6.ds1/sysdeps/unix/sysv/linux/arm/socket.S	27 Oct 2005 18:50:12 -0000	1.13
++@@ -1,4 +1,6 @@
++-/* Copyright (C) 1995, 1996, 1997, 1998, 2003 Free Software Foundation, Inc.
+++/* Copyright (C) 1995, 1996, 1997, 1998, 2003, 2004, 2005
+++   Free Software Foundation, Inc.
+++
++    This file is part of the GNU C Library.
++ 
++    The GNU C Library is free software; you can redistribute it and/or
++@@ -32,7 +34,11 @@
++    The .S files for the other calls just #define socket and #include this.  */
++ 
++ #ifndef __socket
+++#ifndef NO_WEAK_ALIAS
++ #define __socket P(__,socket)
+++#else
+++#define __socket socket
+++#endif
++ #endif
++ 
++ #define PUSHARGS_1	str a1, [sp, $-4]!
++@@ -120,4 +126,6 @@
++ 
++ PSEUDO_END (__socket)
++ 
+++#ifndef NO_WEAK_ALIAS
++ weak_alias (__socket, socket)
+++#endif
+diff -urN ct-ng-trunk-20081121-orig/glibc/2.3.4/260-csu-Makefile.patch ct-ng-trunk-20081121/glibc/2.3.4/260-csu-Makefile.patch
+--- ct-ng-trunk-20081121-orig/glibc/2.3.4/260-csu-Makefile.patch	1969-12-31 17:00:00.000000000 -0700
++++ ct-ng-trunk-20081121/glibc/2.3.4/260-csu-Makefile.patch	2008-11-23 10:03:38.000000000 -0700
+@@ -0,0 +1,39 @@
++Use printf instead of echo for some shells.
++
++http://www.cygwin.com/ml/libc-alpha/2005-02/msg00123.html
++
++This patch does not generate invalid csu/version-info.h which has
++unterminating " line because some /bin/sh cannot parse correctly.  The
++previous discussion was:
++
++	http://sources.redhat.com/ml/libc-alpha/2004-08/msg00129.html
++	http://sources.redhat.com/ml/libc-alpha/2004-08/msg00145.html
++
++This patch gets rid of all this issue because the conclusion of the
++discussion was to use printf instead of echo.  Roland, could you look
++at it again?
++
++Regards,
++-- gotom
++
++2005-02-26  GOTO Masanori  <gotom@debian.or.jp>
++
++	* csu/Makefile: Use printf instead of echo for some shells.
++
++Index: csu/Makefile
++===================================================================
++RCS file: /cvs/glibc/libc/csu/Makefile,v
++retrieving revision 1.75
++diff -u -p -r1.75 Makefile
++--- glibc/csu/Makefile	3 Jan 2005 17:57:14 -0000	1.75
+++++ glibc.new/csu/Makefile	27 Feb 2005 01:17:49 -0000
++@@ -241,7 +241,7 @@ $(objpfx)version-info.h: $(common-objpfx
++ 	 esac; \
++ 	 files="$(all-Banner-files)";				\
++ 	 if test -n "$$files"; then				\
++-	   echo "\"Available extensions:\\n\"";			\
+++	   printf '"Available extensions:\\n"\n';		\
++ 	   sed -e '/^#/d' -e 's/^[[:space:]]*/	/'		\
++ 	       -e 's/^\(.*\)$$/\"\1\\n\"/' $$files;		\
++ 	 fi) > $@T
++
+diff -urN ct-ng-trunk-20081121-orig/glibc/2.3.4/270-alpha-asm_page.patch ct-ng-trunk-20081121/glibc/2.3.4/270-alpha-asm_page.patch
+--- ct-ng-trunk-20081121-orig/glibc/2.3.4/270-alpha-asm_page.patch	1969-12-31 17:00:00.000000000 -0700
++++ ct-ng-trunk-20081121/glibc/2.3.4/270-alpha-asm_page.patch	2008-11-23 10:03:38.000000000 -0700
+@@ -0,0 +1,26 @@
++2008-06-07  Mike Frysinger  <vapier@gentoo.org>
++
++	* sysdeps/unix/sysv/linux/alpha/sys/user.h: Copy page.h definitions
++	from the kernel header to sys/user.h and remove the #include of
++	sys/user.h.
++
++--- a/sysdeps/unix/sysv/linux/alpha/sys/user.h
+++++ b/sysdeps/unix/sysv/linux/alpha/sys/user.h
++@@ -23,7 +23,6 @@
++    only. Don't read too much into it. Don't use it for anything other
++    than gdb/strace unless you know what you are doing. */
++ 
++-#include <asm/page.h>
++ #include <asm/reg.h>
++ 
++ struct user
++@@ -41,6 +40,9 @@ struct user
++   char u_comm[32];				/* user command name */
++ };
++ 
+++#define PAGE_SHIFT		13
+++#define PAGE_SIZE		(1 << PAGE_SHIFT)
+++#define PAGE_MASK		(~(PAGE_SIZE-1))
++ #define NBPG			PAGE_SIZE
++ #define UPAGES			1
++ #define HOST_TEXT_START_ADDR	(u.start_code)
+diff -urN ct-ng-trunk-20081121-orig/glibc/2.3.4/280-alpha-asm_elf.patch ct-ng-trunk-20081121/glibc/2.3.4/280-alpha-asm_elf.patch
+--- ct-ng-trunk-20081121-orig/glibc/2.3.4/280-alpha-asm_elf.patch	1969-12-31 17:00:00.000000000 -0700
++++ ct-ng-trunk-20081121/glibc/2.3.4/280-alpha-asm_elf.patch	2008-11-23 10:03:38.000000000 -0700
+@@ -0,0 +1,194 @@
++since the kernel no longer provides asm/elf.h, the sys/procfs.h from the 
++common code, alpha, and sh fail when used.  this should things up.
++-mike
++
++2008-06-07  Mike Frysinger  <vapier@gentoo.org>
++
++	* sysdeps/unix/sysv/linux/sys/procfs.h: Replace with #error stub.
++	* sysdeps/unix/sysv/linux/alpha/sys/procfs.h: Copy some asm/elf.h
++	definitions from the kernel header to sys/procfs.h and remove the
++	#include of asm/elf.h.
++	* sysdeps/unix/sysv/linux/sh/sys/procfs.h: Likewise.
++
++*Attachment: signature.asc <msg00012/signature.asc>*
++/Description:/ This is a digitally signed message part.
++
++2008-06-07  Mike Frysinger  <vapier@gentoo.org>
++
++	* sysdeps/unix/sysv/linux/sys/procfs.h: Replace with #error stub.
++	* sysdeps/unix/sysv/linux/alpha/sys/procfs.h: Copy some asm/elf.h
++	definitions from the kernel header to sys/procfs.h and remove the
++	#include of asm/elf.h.
++	* sysdeps/unix/sysv/linux/sh/sys/procfs.h: Likewise.
++
++--- a/sysdeps/unix/sysv/linux/alpha/sys/procfs.h
+++++ b/sysdeps/unix/sysv/linux/alpha/sys/procfs.h
++@@ -29,10 +29,23 @@
++ #include <sys/types.h>
++ #include <sys/ucontext.h>
++ #include <sys/user.h>
++-#include <asm/elf.h>
++ 
++ __BEGIN_DECLS
++ 
+++/*
+++ * The OSF/1 version of <sys/procfs.h> makes gregset_t 46 entries long.
+++ * I have no idea why that is so.  For now, we just leave it at 33
+++ * (32 general regs + processor status word).
+++ */
+++#define ELF_NGREG  33
+++#define ELF_NFPREG 32
+++
+++typedef unsigned long elf_greg_t;
+++typedef elf_greg_t elf_gregset_t[ELF_NGREG];
+++
+++typedef double elf_fpreg_t;
+++typedef elf_fpreg_t elf_fpregset_t[ELF_NFPREG];
+++
++ struct elf_siginfo
++   {
++     int si_signo;			/* Signal number.  */
++--- a/sysdeps/unix/sysv/linux/sh/sys/procfs.h
+++++ b/sysdeps/unix/sysv/linux/sh/sys/procfs.h
++@@ -29,10 +29,19 @@
++ #include <sys/types.h>
++ #include <sys/ucontext.h>
++ #include <sys/user.h>
++-#include <asm/elf.h>
++ 
++ __BEGIN_DECLS
++ 
+++/*
+++ * ELF register definitions...
+++ */
+++typedef unsigned long elf_greg_t;
+++
+++#define ELF_NGREG (sizeof (struct pt_regs) / sizeof(elf_greg_t))
+++typedef elf_greg_t elf_gregset_t[ELF_NGREG];
+++
+++typedef struct user_fpu_struct elf_fpregset_t;
+++
++ struct elf_siginfo
++   {
++     int si_signo;			/* Signal number.  */
++--- a/sysdeps/unix/sysv/linux/sys/procfs.h
+++++ b/sysdeps/unix/sysv/linux/sys/procfs.h
++@@ -1,115 +1,2 @@
++-/* Copyright (C) 1996, 1997, 1999 Free Software Foundation, Inc.
++-   This file is part of the GNU C Library.
++-
++-   The GNU C Library is free software; you can redistribute it and/or
++-   modify it under the terms of the GNU Lesser General Public
++-   License as published by the Free Software Foundation; either
++-   version 2.1 of the License, or (at your option) any later version.
++-
++-   The GNU C Library is distributed in the hope that it will be useful,
++-   but WITHOUT ANY WARRANTY; without even the implied warranty of
++-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++-   Lesser General Public License for more details.
++-
++-   You should have received a copy of the GNU Lesser General Public
++-   License along with the GNU C Library; if not, write to the Free
++-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
++-   02111-1307 USA.  */
++-
++-#ifndef _SYS_PROCFS_H
++-#define _SYS_PROCFS_H	1
++-
++-/* This is somehow modelled after the file of the same name on SysVr4
++-   systems.  It provides a definition of the core file format for ELF
++-   used on Linux.  */
++-
++-#include <features.h>
++-#include <signal.h>
++-#include <sys/time.h>
++-#include <sys/types.h>
++-#include <sys/ucontext.h>
++-#include <sys/user.h>
++-#include <asm/elf.h>
++-
++-__BEGIN_DECLS
++-
++-struct elf_siginfo
++-  {
++-    int si_signo;			/* Signal number.  */
++-    int si_code;			/* Extra code.  */
++-    int si_errno;			/* Errno.  */
++-  };
++-
++-/* Definitions to generate Intel SVR4-like core files.  These mostly
++-   have the same names as the SVR4 types with "elf_" tacked on the
++-   front to prevent clashes with linux definitions, and the typedef
++-   forms have been avoided.  This is mostly like the SVR4 structure,
++-   but more Linuxy, with things that Linux does not support and which
++-   gdb doesn't really use excluded.  Fields present but not used are
++-   marked with "XXX".  */
++-struct elf_prstatus
++-  {
++-#if 0
++-    long int pr_flags;			/* XXX Process flags.  */
++-    short int pr_why;			/* XXX Reason for process halt.  */
++-    short int pr_what;			/* XXX More detailed reason.  */
++-#endif
++-    struct elf_siginfo pr_info;		/* Info associated with signal.  */
++-    short int pr_cursig;		/* Current signal.  */
++-    unsigned long int pr_sigpend;	/* Set of pending signals.  */
++-    unsigned long int pr_sighold;	/* Set of held signals.  */
++-#if 0
++-    struct sigaltstack pr_altstack;	/* Alternate stack info.  */
++-    struct sigaction pr_action;		/* Signal action for current sig.  */
++-#endif
++-    __pid_t pr_pid;
++-    __pid_t pr_ppid;
++-    __pid_t pr_pgrp;
++-    __pid_t pr_sid;
++-    struct timeval pr_utime;		/* User time.  */
++-    struct timeval pr_stime;		/* System time.  */
++-    struct timeval pr_cutime;		/* Cumulative user time.  */
++-    struct timeval pr_cstime;		/* Cumulative system time.  */
++-#if 0
++-    long int pr_instr;			/* Current instruction.  */
++-#endif
++-    elf_gregset_t pr_reg;		/* GP registers.  */
++-    int pr_fpvalid;			/* True if math copro being used.  */
++-  };
++-
++-
++-#define ELF_PRARGSZ     (80)    /* Number of chars for args */
++-
++-struct elf_prpsinfo
++-  {
++-    char pr_state;			/* Numeric process state.  */
++-    char pr_sname;			/* Char for pr_state.  */
++-    char pr_zomb;			/* Zombie.  */
++-    char pr_nice;			/* Nice val.  */
++-    unsigned long int pr_flag;		/* Flags.  */
++-    unsigned short int pr_uid;
++-    unsigned short int pr_gid;
++-    int pr_pid, pr_ppid, pr_pgrp, pr_sid;
++-    /* Lots missing */
++-    char pr_fname[16];			/* Filename of executable.  */
++-    char pr_psargs[ELF_PRARGSZ];	/* Initial part of arg list.  */
++-  };
++-
++-/* Addresses.  */
++-typedef void *psaddr_t;
++-
++-/* Register sets.  Linux has different names.  */
++-typedef gregset_t prgregset_t;
++-typedef fpregset_t prfpregset_t;
++-
++-/* We don't have any differences between processes and threads,
++-   therefore habe only ine PID type.  */
++-typedef __pid_t lwpid_t;
++-
++-
++-typedef struct elf_prstatus prstatus_t;
++-typedef struct elf_prpsinfo prpsinfo_t;
++-
++-__END_DECLS
++-
++-#endif	/* sys/procfs.h */
+++/* sys/procfs.h is architecture specific.  */
+++#error "This file must be supplied by every Linux architecture."
++
+diff -urN ct-ng-trunk-20081121-orig/glibc/2.3.4/290-gcc-4.3-include.patch ct-ng-trunk-20081121/glibc/2.3.4/290-gcc-4.3-include.patch
+--- ct-ng-trunk-20081121-orig/glibc/2.3.4/290-gcc-4.3-include.patch	1969-12-31 17:00:00.000000000 -0700
++++ ct-ng-trunk-20081121/glibc/2.3.4/290-gcc-4.3-include.patch	2008-11-23 10:03:38.000000000 -0700
+@@ -0,0 +1,40 @@
++GCC trunk now has multiple internal headers directories, one
++containing the self-contained GCC-provided headers and one containing
++the <limits.h> (not self-contained but including libc's <limits.h> or
++a fixed version thereof) and the fixed headers; more such directories
++may be added in future.
++
++When glibc uses -nostdinc, it needs to use -isystem options for all
++these internal directories.  This patch teaches it about the
++include-fixed directory (and is harmless with old GCC versions without
++that directory).
++
++2007-03-18  Joseph Myers  <joseph@codesourcery.com>
++
++	* configure.in: Also pass -isystem option for GCC's include-fixed
++	directory.
++	* configure: Regenerate.
++
++
++--- glibc-2.3.6.ori/configure.in	2008-10-22 14:55:58.000000000 +0200
+++++ glibc-2.3.6/configure.in	2008-10-22 14:56:15.000000000 +0200
++@@ -804,7 +804,7 @@
++ # thing on a system that doesn't need fixincludes.  (Not presently a problem.)
++ if test -n "$sysheaders"; then
++   ccheaders=`$CC -print-file-name=include`
++-  SYSINCLUDES="-nostdinc -isystem $ccheaders \
+++  SYSINCLUDES="-nostdinc -isystem $ccheaders -isystem $ccheaders-fixed \
++ -isystem `echo $sysheaders | sed 's/:/ -isystem /g'`"
++ fi
++ AC_SUBST(SYSINCLUDES)
++--- glibc-2.3.6.ori/configure	2008-10-22 15:11:37.000000000 +0200
+++++ glibc-2.3.6/configure	2008-10-22 15:11:54.000000000 +0200
++@@ -4438,7 +4438,7 @@
++ # thing on a system that doesn't need fixincludes.  (Not presently a problem.)
++ if test -n "$sysheaders"; then
++   ccheaders=`$CC -print-file-name=include`
++-  SYSINCLUDES="-nostdinc -isystem $ccheaders \
+++  SYSINCLUDES="-nostdinc -isystem $ccheaders -isystem $ccheaders-fixed \
++ -isystem `echo $sysheaders | sed 's/:/ -isystem /g'`"
++ fi
++ 
+diff -urN ct-ng-trunk-20081121-orig/glibc/2.3.4/300-i686-assembler.patch ct-ng-trunk-20081121/glibc/2.3.4/300-i686-assembler.patch
+--- ct-ng-trunk-20081121-orig/glibc/2.3.4/300-i686-assembler.patch	1969-12-31 17:00:00.000000000 -0700
++++ ct-ng-trunk-20081121/glibc/2.3.4/300-i686-assembler.patch	2008-11-23 10:03:38.000000000 -0700
+@@ -0,0 +1,54 @@
++2007-02-15  Khem Raj  <kraj@xxxxxxxxxx>
++
++       * sysdeps/unix/sysv/linux/i386/sysdep.h: Re-define __i686.
++       * nptl/sysdeps/pthread/pt-initfini.c: Ditto.
++
++
++
++Index: glibc-2.4/sysdeps/unix/sysv/linux/i386/sysdep.h
++===================================================================
++--- glibc-2.4/sysdeps/unix/sysv/linux/i386/sysdep.h	(revision 1469)
+++++ glibc-2.4/sysdeps/unix/sysv/linux/i386/sysdep.h	(working copy)
++@@ -29,6 +29,10 @@
++ #include <dl-sysdep.h>
++ #include <tls.h>
++ 
+++#if defined __i686 && defined __ASSEMBLER__
+++#undef __i686
+++#define __i686 __i686
+++#endif
++ 
++ /* For Linux we can use the system call table in the header file
++ 	/usr/include/asm/unistd.h
++Index: glibc-2.4/nptl/sysdeps/pthread/pt-initfini.c
++===================================================================
++--- glibc-2.4/nptl/sysdeps/pthread/pt-initfini.c	(revision 1469)
+++++ glibc-2.4/nptl/sysdeps/pthread/pt-initfini.c	(working copy)
++@@ -45,6 +45,11 @@
++ /* Embed an #include to pull in the alignment and .end directives. */
++ asm ("\n#include \"defs.h\"");
++ 
+++asm ("\n#if defined __i686 && defined __ASSEMBLER__");
+++asm ("\n#undef __i686");
+++asm ("\n#define __i686 __i686");
+++asm ("\n#endif");
+++
++ /* The initial common code ends here. */
++ asm ("\n/*@HEADER_ENDS*/");
++ 
++Index: glibc-2.4/sysdeps/generic/initfini.c
++===================================================================
++--- glibc-2.4/sysdeps/generic/initfini.c   (revision 1469)
+++++ glibc-2.4/sysdeps/generic/initfini.c   (working copy)
++@@ -53,6 +53,11 @@
++ /* Embed an #include to pull in the alignment and .end directives. */
++ asm ("\n#include \"defs.h\"");
++ 
+++asm ("\n#if defined __i686 && defined __ASSEMBLER__");
+++asm ("\n#undef __i686");
+++asm ("\n#define __i686 __i686");
+++asm ("\n#endif");
+++
++ /* The initial common code ends here. */
++ asm ("\n/*@HEADER_ENDS*/");
++ 
+diff -urN ct-ng-trunk-20081121-orig/glibc/2.3.4/310-gcc4.patch ct-ng-trunk-20081121/glibc/2.3.4/310-gcc4.patch
+--- ct-ng-trunk-20081121-orig/glibc/2.3.4/310-gcc4.patch	1969-12-31 17:00:00.000000000 -0700
++++ ct-ng-trunk-20081121/glibc/2.3.4/310-gcc4.patch	2008-11-23 10:03:38.000000000 -0700
+@@ -0,0 +1,75 @@
++This patch fixes build error
++
++1).
++In file included from ../include/pthread.h:1,
++from ../nptl/sysdeps/pthread/bits/libc-lock.h:23,
++from ./gconv_int.h:25,
++from gconv.c:23:
++../nptl/sysdeps/pthread/pthread.h:664: error: array type has incomplete 
++lement type
++
++3).
++In file included from jis0208.c:23:
++jis0208.h:32: error: array type has incomplete element type
++
++ elf/dynamic-link.h 			|	37 -------------------------------------
++ iconvdata/jis0208.h			|	16 +++++++---------
++ nptl/sysdeps/pthread/pthread.h |	 3 +--
++ 3 files changed, 8 insertions(+), 48 deletions(-)
++
++--- glibc-2.3.4/nptl/sysdeps/pthread/pthread.h.orig    2004-11-24 
++3:55:24.000000000 +0100
+++++ glibc-2.3.4/nptl/sysdeps/pthread/pthread.h 2005-02-14 16:24:22.104239520 
++0100
++@@ -24,9 +24,9 @@
++ #include <time.h>
++ 
++ #define __need_sigset_t
+++#include <setjmp.h>
++ #include <signal.h>
++ #include <bits/pthreadtypes.h>
++-#include <bits/setjmp.h>
++ #include <bits/wordsize.h>
++ 
++ 
++@@ -660,7 +660,6 @@
++ #endif
++ 
++ /* Function used in the macros.  */
++-struct __jmp_buf_tag;
++ extern int __sigsetjmp (struct __jmp_buf_tag __env[1], int __savemask) __THROW;
++ 
++ 
++--- glibc-2.3.4/iconvdata/jis0208.h.orig	   2005-02-16 10:30:39.185701576 
++0100
+++++ glibc-2.3.4/iconvdata/jis0208.h    2005-02-16 10:31:18.736688912 +0100
++@@ -24,15 +24,6 @@
++ #include <gconv.h>
++ #include <stdint.h>
++ 
++-/* Conversion table.  */
++-extern const uint16_t __jis0208_to_ucs[];
++-
++-extern const char __jisx0208_from_ucs4_lat1[256][2];
++-extern const char __jisx0208_from_ucs4_greek[0xc1][2];
++-extern const struct jisx0208_ucs_idx __jisx0208_from_ucs_idx[];
++-extern const char __jisx0208_from_ucs_tab[][2];
++-
++-
++ /* Struct for table with indeces in UCS mapping table.  */
++ struct jisx0208_ucs_idx
++ {
++@@ -41,6 +32,13 @@
++   uint16_t idx;
++ };
++ 
+++/* Conversion table.  */
+++extern const uint16_t __jis0208_to_ucs[];
+++
+++extern const char __jisx0208_from_ucs4_lat1[256][2];
+++extern const char __jisx0208_from_ucs4_greek[0xc1][2];
+++extern const struct jisx0208_ucs_idx __jisx0208_from_ucs_idx[];
+++extern const char __jisx0208_from_ucs_tab[14210][2];
++ 
++ static inline uint32_t
++ __attribute ((always_inline))
+diff -urN ct-ng-trunk-20081121-orig/glibc/2.3.4/320-allow-gcc4-symbols.patch ct-ng-trunk-20081121/glibc/2.3.4/320-allow-gcc4-symbols.patch
+--- ct-ng-trunk-20081121-orig/glibc/2.3.4/320-allow-gcc4-symbols.patch	1969-12-31 17:00:00.000000000 -0700
++++ ct-ng-trunk-20081121/glibc/2.3.4/320-allow-gcc4-symbols.patch	2008-11-23 10:03:38.000000000 -0700
+@@ -0,0 +1,126 @@
++If I'm really lucky, this fixes the following error building with gcc-4.0.0:
++
++../sysdeps/ieee754/dbl-64/s_isinf.c:29: error: 'isinf' aliased to undefined symbol '__isinf'
++make[2]: *** [/home/dank/queue/jobdir.fast/crosstool-0.32/build/i686-unknown-linux-gnu/gcc-4.0.0-20050410-glibc-2.3.4/build-glibc/math/s_isinf.os] Error 1
++make[1]: *** [math/subdir_lib] Error 2
++make: *** [lib] Error 2
++
++---
++
++
++Revision 1.71, Thu Mar 17 21:06:27 2005 UTC (3 weeks, 5 days ago) by roland
++Branch: MAIN
++CVS Tags: fedora-glibc-20050405T2114, fedora-glibc-20050401T1444, fedora-glibc-20050324T0715, fedora-glibc-20050319T1907, HEAD
++Changes since 1.70: +11 -66 lines
++Diff to previous 1.70 (colored)
++
++2005-03-16  Richard Henderson  <rth@redhat.com>
++
++	* include/libc-symbols.h (__hidden_proto): Remove bogus declaration
++	of internal.
++	(__hidden_def1, __hidden_dot_def1): Remove.
++	(__hidden_def2, __hidden_def3): Remove.
++	(__hidden_ver1): New.
++	(hidden_ver, hidden_def, hidden_weak): Use it.
++	(hidden_data_ver, hidden_data_ver, hidden_data_weak): Use non-data
++	version of the macro.
++
++http://sourceware.org/cgi-bin/cvsweb.cgi/libc/include/libc-symbols.h.diff?r1=1.70&r2=1.71&cvsroot=glibc
++
++===================================================================
++RCS file: /cvs/glibc/libc/include/libc-symbols.h,v
++retrieving revision 1.70
++retrieving revision 1.71
++diff -u -r1.70 -r1.71
++--- libc/include/libc-symbols.h	2005/02/11 00:29:46	1.70
+++++ libc/include/libc-symbols.h	2005/03/17 21:06:27	1.71
++@@ -583,78 +583,23 @@
++ #  define hidden_proto(name, attrs...) \
++   __hidden_proto (name, __GI_##name, ##attrs)
++ #  define __hidden_proto(name, internal, attrs...) \
++-  extern __typeof (name) internal; \
++   extern __typeof (name) name __asm__ (__hidden_asmname (#internal)) \
++   __hidden_proto_hiddenattr (attrs);
++ #  define __hidden_asmname(name) \
++   __hidden_asmname1 (__USER_LABEL_PREFIX__, name)
++ #  define __hidden_asmname1(prefix, name) __hidden_asmname2(prefix, name)
++ #  define __hidden_asmname2(prefix, name) #prefix name
++-#  ifdef HAVE_ASM_SET_DIRECTIVE
++-#   define __hidden_def1(original, alias)			\
++-  ASM_GLOBAL_DIRECTIVE C_SYMBOL_NAME (alias) ASM_LINE_SEP	\
++-  .set C_SYMBOL_NAME (alias), C_SYMBOL_NAME (original)
++-#   ifdef HAVE_ASM_GLOBAL_DOT_NAME
++-#     define __hidden_dot_def1(original, alias)	 ASM_LINE_SEP	\
++-  ASM_GLOBAL_DIRECTIVE C_SYMBOL_DOT_NAME (alias) ASM_LINE_SEP	\
++-  .set C_SYMBOL_DOT_NAME (alias), C_SYMBOL_DOT_NAME (original)
++-#   else
++-#     define __hidden_dot_def1(original, alias)
++-#   endif
++-#  else
++-#   define __hidden_def1(original, alias)			\
++-  ASM_GLOBAL_DIRECTIVE C_SYMBOL_NAME (alias) ASM_LINE_SEP	\
++-  C_SYMBOL_NAME (alias) = C_SYMBOL_NAME (original)
++-#   ifdef HAVE_ASM_GLOBAL_DOT_NAME
++-#    define __hidden_dot_def1(original, alias)	ASM_LINE_SEP	\
++-  ASM_GLOBAL_DIRECTIVE C_SYMBOL_DOT_NAME (alias) ASM_LINE_SEP	\
++-  C_SYMBOL_DOT_NAME (alias) = C_SYMBOL_DOT_NAME (original)
++-#   else
++-#    define __hidden_dot_def1(original, alias)
++-#   endif
++-#  endif
++-#  define __hidden_def2(...) #__VA_ARGS__
++-#  define __hidden_def3(...) __hidden_def2 (__VA_ARGS__)
++-#  define hidden_def(name)					\
++-  __asm__ (__hidden_def3 (__hidden_def1 (__GI_##name, name) \
++-  __hidden_dot_def1 (__GI_##name, name)));
++-#  define hidden_data_def(name)					\
++-  __asm__ (__hidden_def3 (__hidden_def1 (__GI_##name, name)));
++-#  define hidden_ver(local, name)				\
++-  __asm__ (__hidden_def3 (__hidden_def1 (local, __GI_##name) \
++-  __hidden_dot_def1 (local, __GI_##name)));
++-#  define hidden_data_ver(local, name)				\
++-  __asm__ (__hidden_def3 (__hidden_def1 (local, __GI_##name)));
++-#  ifdef HAVE_WEAK_SYMBOLS
++-#   ifdef HAVE_ASM_WEAKEXT_DIRECTIVE
++-#    define __hidden_weak1(original, alias)			\
++-  .weakext C_SYMBOL_NAME (alias), C_SYMBOL_NAME (original)
++-#    ifdef HAVE_ASM_GLOBAL_DOT_NAME
++-#     define __hidden_dot_weak1(original, alias)	ASM_LINE_SEP	\
++-  .weakext C_SYMBOL_DOT_NAME (alias), C_SYMBOL_DOT_NAME (original)
++-#    else
++-#     define __hidden_dot_weak1(original, alias)
++-#    endif
++-#   else /* ! HAVE_ASM_WEAKEXT_DIRECTIVE */
++-#    define __hidden_weak1(original, alias)			\
++-  .weak C_SYMBOL_NAME (alias) ASM_LINE_SEP			\
++-  C_SYMBOL_NAME (alias) = C_SYMBOL_NAME (original)
++-#    ifdef HAVE_ASM_GLOBAL_DOT_NAME
++-#     define __hidden_dot_weak1(original, alias)	ASM_LINE_SEP	\
++-  .weak C_SYMBOL_DOT_NAME (alias) ASM_LINE_SEP	\
++-  C_SYMBOL_DOT_NAME (alias) = C_SYMBOL_DOT_NAME (original)
++-#    else
++-#     define __hidden_dot_weak1(original, alias)
++-#    endif
++-#   endif
++-#   define hidden_weak(name)					\
++-  __asm__ (__hidden_def3 (__hidden_weak1 (__GI_##name, name) \
++-  __hidden_dot_weak1 (__GI_##name, name)));
++-#   define hidden_data_weak(name)					\
++-  __asm__ (__hidden_def3 (__hidden_weak1 (__GI_##name, name)));
++-#  else
++-#   define hidden_weak(name) hidden_def (name)
++-#  endif
+++#  define __hidden_ver1(local, internal, name) \
+++  extern __typeof (name) __EI_##name __asm__(__hidden_asmname (#internal)); \
+++  extern __typeof (name) __EI_##name \
+++	__attribute__((alias (__hidden_asmname (#local))))
+++#  define hidden_ver(local, name)	__hidden_ver1(local, __GI_##name, name);
+++#  define hidden_data_ver(local, name)	hidden_ver(local, name)
+++#  define hidden_def(name)		__hidden_ver1(__GI_##name, name, name);
+++#  define hidden_data_def(name)		hidden_def(name)
+++#  define hidden_weak(name) \
+++	__hidden_ver1(__GI_##name, name, name) __attribute__((weak));
+++#  define hidden_data_weak(name)	hidden_weak(name)
++ # else
++ /* For assembly, we need to do the opposite of what we do in C:
++    in assembly gcc __REDIRECT stuff is not in place, so functions
+diff -urN ct-ng-trunk-20081121-orig/glibc/2.3.4/330-allow-gcc4-string.patch ct-ng-trunk-20081121/glibc/2.3.4/330-allow-gcc4-string.patch
+--- ct-ng-trunk-20081121-orig/glibc/2.3.4/330-allow-gcc4-string.patch	1969-12-31 17:00:00.000000000 -0700
++++ ct-ng-trunk-20081121/glibc/2.3.4/330-allow-gcc4-string.patch	2008-11-23 10:03:38.000000000 -0700
+@@ -0,0 +1,83 @@
++
++Fixes? the following error when building with gcc-4.0.0:
++
++../string/strcoll.c:39: error: '__EI_strcoll' aliased to undefined symbol '__GI_strcoll'
++make[2]: *** [/home/dank/crosstool-0.32/build/i686-unknown-linux-gnu/gcc-4.0.0-20050410-glibc-2.3.4/build-glibc/wcsmbs/wcscoll.os] Error 1
++make[2]: Leaving directory `/home/dank/crosstool-0.32/build/i686-unknown-linux-gnu/gcc-4.0.0-20050410-glibc-2.3.4/glibc-2.3.4/wcsmbs'
++
++
++Thu Mar 17 21:06:24 2005 UTC (3 weeks, 5 days ago) by roland
++Branch: MAIN
++CVS Tags: fedora-glibc-20050405T2114, fedora-glibc-20050401T1444, fedora-glibc-20050324T0715, fedora-glibc-20050319T1907, HEAD
++
++2005-03-16  Richard Henderson  <rth@redhat.com>
++
++	* include/wchar.h (__wcscoll): Remove.
++	* wcsmbs/wcscoll.c: Define wcscoll directly instead of via __wcscoll.
++	* string/strcoll.c: Don't issue libc_hidden_def STRCOLL redefined.
++
++http://sourceware.org/cgi-bin/cvsweb.cgi/libc/string/strcoll.c.diff?r1=1.33&r2=1.34&cvsroot=glibc
++http://sourceware.org/cgi-bin/cvsweb.cgi/libc/include/wchar.h.diff?r1=1.26&r2=1.27&cvsroot=glibc
++http://sourceware.org/cgi-bin/cvsweb.cgi/libc/wcsmbs/wcscoll.c.diff?r1=1.13&r2=1.14&cvsroot=glibc
++
++===================================================================
++RCS file: /cvs/glibc/libc/string/strcoll.c,v
++retrieving revision 1.33
++retrieving revision 1.34
++diff -u -r1.33 -r1.34
++--- libc/string/strcoll.c	2004/03/14 20:51:30	1.33
+++++ libc/string/strcoll.c	2005/03/17 21:06:24	1.34
++@@ -23,6 +23,7 @@
++ # define STRING_TYPE char
++ # define STRCOLL strcoll
++ # define STRCOLL_L __strcoll_l
+++# define USE_HIDDEN_DEF
++ #endif
++ 
++ #include "../locale/localeinfo.h"
++@@ -35,6 +36,7 @@
++ {
++   return STRCOLL_L (s1, s2, _NL_CURRENT_LOCALE);
++ }
++-#if !defined WIDE_CHAR_VERSION
++-libc_hidden_def (strcoll)
+++
+++#ifdef USE_HIDDEN_DEF
+++libc_hidden_def (STRCOLL)
++ #endif
++===================================================================
++RCS file: /cvs/glibc/libc/include/wchar.h,v
++retrieving revision 1.26
++retrieving revision 1.27
++diff -u -r1.26 -r1.27
++--- libc/include/wchar.h	2004/03/14 20:45:10	1.26
+++++ libc/include/wchar.h	2005/03/17 21:06:24	1.27
++@@ -56,7 +56,6 @@
++ extern int __wcsncasecmp (__const wchar_t *__s1, __const wchar_t *__s2,
++ 			  size_t __n)
++      __attribute_pure__;
++-extern int __wcscoll (__const wchar_t *__s1, __const wchar_t *__s2);
++ extern size_t __wcslen (__const wchar_t *__s) __attribute_pure__;
++ extern size_t __wcsnlen (__const wchar_t *__s, size_t __maxlen)
++      __attribute_pure__;
++===================================================================
++RCS file: /cvs/glibc/libc/wcsmbs/wcscoll.c,v
++retrieving revision 1.13
++retrieving revision 1.14
++diff -u -r1.13 -r1.14
++--- libc/wcsmbs/wcscoll.c	2004/03/14 21:05:48	1.13
+++++ libc/wcsmbs/wcscoll.c	2005/03/17 21:06:24	1.14
++@@ -22,12 +22,11 @@
++ 
++ #define STRING_TYPE wchar_t
++ #define USTRING_TYPE wint_t
++-#define STRCOLL __wcscoll
+++#define STRCOLL wcscoll
++ #define STRCOLL_L __wcscoll_l
++ 
++ #include "../string/strcoll.c"
++ 
++ #ifndef USE_IN_EXTENDED_LOCALE_MODEL
++-weak_alias (__wcscoll, wcscoll)
++ libc_hidden_weak (wcscoll)
++ #endif
+diff -urN ct-ng-trunk-20081121-orig/glibc/2.3.4/340-amd64_sem_trywait.patch ct-ng-trunk-20081121/glibc/2.3.4/340-amd64_sem_trywait.patch
+--- ct-ng-trunk-20081121-orig/glibc/2.3.4/340-amd64_sem_trywait.patch	1969-12-31 17:00:00.000000000 -0700
++++ ct-ng-trunk-20081121/glibc/2.3.4/340-amd64_sem_trywait.patch	2008-11-23 10:03:38.000000000 -0700
+@@ -0,0 +1,23 @@
++Fixes:
++
++../nptl/sysdeps/unix/sysv/linux/x86_64/sem_trywait.S: Assembler messages:
++../nptl/sysdeps/unix/sysv/linux/x86_64/sem_trywait.S:59: Error: symbol `sem_trywait' is already defined
++
++patch from http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=339389
++
++--- glibc-2.3.4/nptl/sysdeps/unix/sysv/linux/x86_64/sem_trywait.S.old	2005-11-15 23:09:31.000000000 +0100
+++++ glibc-2.3.4/nptl/sysdeps/unix/sysv/linux/x86_64/sem_trywait.S	2005-11-15 23:10:09.000000000 +0100
++@@ -29,10 +29,10 @@
++ 
++ 	.text
++ 
++-	.globl	sem_trywait
++-	.type	sem_trywait,@function
+++	.globl	__new_sem_trywait
+++	.type	__new_sem_trywait,@function
++ 	.align	16
++-sem_trywait:
+++__new_sem_trywait:
++ 	movl	(%rdi), %eax
++ 2:	testl	%eax, %eax
++ 	jz	1f
+diff -urN ct-ng-trunk-20081121-orig/glibc/2.3.4/maybe/100-allow-gcc-4.0-powerpc32.patch ct-ng-trunk-20081121/glibc/2.3.4/maybe/100-allow-gcc-4.0-powerpc32.patch
+--- ct-ng-trunk-20081121-orig/glibc/2.3.4/maybe/100-allow-gcc-4.0-powerpc32.patch	1969-12-31 17:00:00.000000000 -0700
++++ ct-ng-trunk-20081121/glibc/2.3.4/maybe/100-allow-gcc-4.0-powerpc32.patch	2008-11-23 10:03:38.000000000 -0700
+@@ -0,0 +1,45 @@
++Fixes
++
++../sysdeps/powerpc/powerpc32/dl-machine.h: In function '_dl_relocate_object':
++../sysdeps/powerpc/powerpc32/dl-machine.h:461: error: invalid storage class for function 'elf_machine_rela_relative'
++../sysdeps/powerpc/powerpc32/dl-machine.h:469: error: invalid storage class for function 'elf_machine_lazy_rel'
++make[2]: *** [/home/dank/queue/jobdir.dual2/crosstool-dev/build/powerpc-750-linux-gnu/gcc-4.0-20050305-glibc-2.3-20050307/build-glibc/elf/dl-reloc.o] Error 1
++
++--- glibc-2.3.6.orig/sysdeps/powerpc/powerpc32/dl-machine.h	Wed Jul 30 23:33:52 2003
+++++ glibc-2.3.6/sysdeps/powerpc/powerpc32/dl-machine.h		Thu Mar 17 13:19:16 2005
++@@ -455,8 +455,14 @@
++     }
++ }
++ 
++-auto inline void
++-__attribute__ ((always_inline))
+++#if __GNUC__ >= 4
+++  auto inline void
+++#else
+++  static inline void
+++#endif
+++#if __GNUC__ >= 4 || (__GNUC__ == 3 && __GNUC_MINOR__ >= 2)
+++  __attribute ((always_inline))
+++#endif
++ elf_machine_rela_relative (Elf32_Addr l_addr, const Elf32_Rela *reloc,
++ 			   void *const reloc_addr_arg)
++ {
++@@ -464,8 +470,14 @@
++   *reloc_addr = l_addr + reloc->r_addend;
++ }
++ 
++-auto inline void
++-__attribute__ ((always_inline))
+++#if __GNUC__ >= 4
+++  auto inline void
+++#else
+++  static inline void
+++#endif
+++#if __GNUC__ >= 4 || (__GNUC__ == 3 && __GNUC_MINOR__ >= 2)
+++  __attribute ((always_inline))
+++#endif
++ elf_machine_lazy_rel (struct link_map *map,
++ 		      Elf32_Addr l_addr, const Elf32_Rela *reloc)
++ {
++
++Signed-off-by: Robert P. J. Day <rpjday@mindspring.com>
+diff -urN ct-ng-trunk-20081121-orig/glibc/2.3.4/maybe/101-allow-gcc-4.0-powerpc64.patch ct-ng-trunk-20081121/glibc/2.3.4/maybe/101-allow-gcc-4.0-powerpc64.patch
+--- ct-ng-trunk-20081121-orig/glibc/2.3.4/maybe/101-allow-gcc-4.0-powerpc64.patch	1969-12-31 17:00:00.000000000 -0700
++++ ct-ng-trunk-20081121/glibc/2.3.4/maybe/101-allow-gcc-4.0-powerpc64.patch	2008-11-23 10:03:38.000000000 -0700
+@@ -0,0 +1,65 @@
++Fixes:
++
++In file included from dynamic-link.h:22,
++                 from dl-reloc.c:269:
++../sysdeps/powerpc/powerpc64/dl-machine.h: In function '_dl_relocate_object':
++../sysdeps/powerpc/powerpc64/dl-machine.h:573: error: invalid storage class for function 'elf_machine_rela_relative'
++../sysdeps/powerpc/powerpc64/dl-machine.h:607: error: invalid storage class for function 'elf_machine_rela'
++../sysdeps/powerpc/powerpc64/dl-machine.h:889: error: invalid storage class for function 'elf_machine_lazy_rel'
++make[2]: Leaving directory `/home/dank/queue/jobdir.fast2/crosstool-dev/build/powerpc64-unknown-linux-gnu/gcc-4.0-20050305-glibc-2.3-20050307/glibc-2.3-20050307/elf'
++
++--- glibc-2.3.6.orig/sysdeps/powerpc/powerpc64/dl-machine.h	Thu Mar 17 13:35:23 2005
+++++ glibc-2.3.6/sysdeps/powerpc/powerpc64/dl-machine.h		Thu Mar 17 13:37:12 2005
++@@ -567,8 +567,14 @@
++                                 const Elf64_Sym *refsym)
++                                 attribute_hidden;
++ 
++-auto inline void
++-__attribute__ ((always_inline))
+++#if __GNUC__ >= 4
+++  auto inline void
+++#else
+++  static inline void
+++#endif
+++#if __GNUC__ >= 4 || (__GNUC__ == 3 && __GNUC_MINOR__ >= 2)
+++  __attribute ((always_inline))
+++#endif
++ elf_machine_rela_relative (Elf64_Addr l_addr, const Elf64_Rela *reloc,
++ 			   void *const reloc_addr_arg)
++ {
++@@ -599,8 +605,14 @@
++ 
++ /* Perform the relocation specified by RELOC and SYM (which is fully
++    resolved).  MAP is the object containing the reloc.  */
++-auto inline void
++-__attribute__ ((always_inline))
+++#if __GNUC__ >= 4
+++  auto inline void
+++#else
+++  static inline void
+++#endif
+++#if __GNUC__ >= 4 || (__GNUC__ == 3 && __GNUC_MINOR__ >= 2)
+++  __attribute ((always_inline))
+++#endif
++ elf_machine_rela (struct link_map *map,
++ 		  const Elf64_Rela *reloc,
++ 		  const Elf64_Sym *sym,
++@@ -885,8 +897,14 @@
++   MODIFIED_CODE_NOQUEUE (reloc_addr);
++ }
++ 
++-auto inline void
++-__attribute__ ((always_inline))
+++#if __GNUC__ >= 4
+++  auto inline void
+++#else
+++  static inline void
+++#endif
+++#if __GNUC__ >= 4 || (__GNUC__ == 3 && __GNUC_MINOR__ >= 2)
+++  __attribute ((always_inline))
+++#endif
++ elf_machine_lazy_rel (struct link_map *map,
++ 		      Elf64_Addr l_addr, const Elf64_Rela *reloc)
++ {
++
++Signed-off-by: Robert P. J. Day <rpjday@mindspring.com>
+diff -urN ct-ng-trunk-20081121-orig/glibc/2.3.6/300-i686-assembler.patch ct-ng-trunk-20081121/glibc/2.3.6/300-i686-assembler.patch
+--- ct-ng-trunk-20081121-orig/glibc/2.3.6/300-i686-assembler.patch	1969-12-31 17:00:00.000000000 -0700
++++ ct-ng-trunk-20081121/glibc/2.3.6/300-i686-assembler.patch	2008-11-23 10:03:38.000000000 -0700
+@@ -0,0 +1,54 @@
++2007-02-15  Khem Raj  <kraj@xxxxxxxxxx>
++
++       * sysdeps/unix/sysv/linux/i386/sysdep.h: Re-define __i686.
++       * nptl/sysdeps/pthread/pt-initfini.c: Ditto.
++
++
++
++Index: glibc-2.4/sysdeps/unix/sysv/linux/i386/sysdep.h
++===================================================================
++--- glibc-2.4/sysdeps/unix/sysv/linux/i386/sysdep.h	(revision 1469)
+++++ glibc-2.4/sysdeps/unix/sysv/linux/i386/sysdep.h	(working copy)
++@@ -29,6 +29,10 @@
++ #include <dl-sysdep.h>
++ #include <tls.h>
++ 
+++#if defined __i686 && defined __ASSEMBLER__
+++#undef __i686
+++#define __i686 __i686
+++#endif
++ 
++ /* For Linux we can use the system call table in the header file
++ 	/usr/include/asm/unistd.h
++Index: glibc-2.4/nptl/sysdeps/pthread/pt-initfini.c
++===================================================================
++--- glibc-2.4/nptl/sysdeps/pthread/pt-initfini.c	(revision 1469)
+++++ glibc-2.4/nptl/sysdeps/pthread/pt-initfini.c	(working copy)
++@@ -45,6 +45,11 @@
++ /* Embed an #include to pull in the alignment and .end directives. */
++ asm ("\n#include \"defs.h\"");
++ 
+++asm ("\n#if defined __i686 && defined __ASSEMBLER__");
+++asm ("\n#undef __i686");
+++asm ("\n#define __i686 __i686");
+++asm ("\n#endif");
+++
++ /* The initial common code ends here. */
++ asm ("\n/*@HEADER_ENDS*/");
++ 
++Index: glibc-2.4/sysdeps/generic/initfini.c
++===================================================================
++--- glibc-2.4/sysdeps/generic/initfini.c   (revision 1469)
+++++ glibc-2.4/sysdeps/generic/initfini.c   (working copy)
++@@ -53,6 +53,11 @@
++ /* Embed an #include to pull in the alignment and .end directives. */
++ asm ("\n#include \"defs.h\"");
++ 
+++asm ("\n#if defined __i686 && defined __ASSEMBLER__");
+++asm ("\n#undef __i686");
+++asm ("\n#define __i686 __i686");
+++asm ("\n#endif");
+++
++ /* The initial common code ends here. */
++ asm ("\n/*@HEADER_ENDS*/");
++ 
+diff -urN ct-ng-trunk-20081121-orig/scripts/build/binutils.sh ct-ng-trunk-20081121/scripts/build/binutils.sh
+--- ct-ng-trunk-20081121-orig/scripts/build/binutils.sh	2008-11-23 10:01:32.000000000 -0700
++++ ct-ng-trunk-20081121/scripts/build/binutils.sh	2008-11-23 10:08:57.000000000 -0700
+@@ -31,6 +31,12 @@
+     if [ "${CT_GMP_MPFR}" = "y" ]; then
+         binutils_opts="--with-gmp=${CT_PREFIX_DIR} --with-mpfr=${CT_PREFIX_DIR}"
+     fi
++    
++    if [ "${CT_ARCH_64_MULTILIB}" = "y" ]; then
++        binutils_opts="--enable-64-bit-bfd ${binutils_opts}"
++    else
++        binutils_opts="--disable-multilib ${binutils_opts}"
++    fi
+ 
+     CT_DoLog EXTRA "Configuring binutils"
+     CFLAGS="${CT_CFLAGS_FOR_HOST}"                  \
+@@ -41,7 +47,6 @@
+         --target=${CT_TARGET}                       \
+         --prefix=${CT_PREFIX_DIR}                   \
+         --disable-nls                               \
+-        --disable-multilib                          \
+         --disable-werror                            \
+         ${binutils_opts}                            \
+         ${CT_ARCH_WITH_FLOAT}                       \
+diff -urN ct-ng-trunk-20081121-orig/scripts/build/cc/gcc.sh ct-ng-trunk-20081121/scripts/build/cc/gcc.sh
+--- ct-ng-trunk-20081121-orig/scripts/build/cc/gcc.sh	2008-11-23 10:01:32.000000000 -0700
++++ ct-ng-trunk-20081121/scripts/build/cc/gcc.sh	2008-11-23 10:08:57.000000000 -0700
+@@ -124,6 +124,10 @@
+     fi
+ 
+     CT_DoLog DEBUG "Extra config passed: '${extra_config}'"
++    
++    if [ "${CT_ARCH_64_MULTILIB}" != "y" ]; then
++        extra_config="--disable-multilib ${extra_config}"
++    fi
+ 
+     # Use --with-local-prefix so older gccs don't look in /usr/local (http://gcc.gnu.org/PR10532)
+     CC_FOR_BUILD="${CT_BUILD}-gcc"                  \
+@@ -135,7 +139,6 @@
+         --target=${CT_TARGET}                       \
+         --prefix="${core_prefix_dir}"               \
+         --with-local-prefix="${CT_SYSROOT_DIR}"     \
+-        --disable-multilib                          \
+         ${CC_CORE_SYSROOT_ARG}                      \
+         ${extra_config}                             \
+         --disable-nls                               \
+@@ -238,7 +241,9 @@
+     lang_opt=$(echo "${lang_opt},${CT_CC_LANG_OTHERS}" |sed -r -e 's/,+/,/g; s/,*$//;')
+ 
+     extra_config="--enable-languages=${lang_opt}"
+-    extra_config="${extra_config} --disable-multilib"
++    if [ "${CT_ARCH_64_MULTILIB}" != "y" ]; then
++        extra_config="${extra_config} --disable-multilib "
++    fi
+     extra_config="${extra_config} ${CT_ARCH_WITH_ARCH}"
+     extra_config="${extra_config} ${CT_ARCH_WITH_ABI}"
+     extra_config="${extra_config} ${CT_ARCH_WITH_CPU}"
+diff -urN ct-ng-trunk-20081121-orig/scripts/build/libc/glibc.sh ct-ng-trunk-20081121/scripts/build/libc/glibc.sh
+--- ct-ng-trunk-20081121-orig/scripts/build/libc/glibc.sh	2008-11-23 10:01:32.000000000 -0700
++++ ct-ng-trunk-20081121/scripts/build/libc/glibc.sh	2008-11-23 10:08:57.000000000 -0700
+@@ -209,9 +209,12 @@
+     [ "${CT_THREADS}" = "nptl" ] || return 0
+ 
+     CT_DoStep INFO "Installing C library start files"
++    
++    multilib_pass=
++    eval $1
+ 
+-    mkdir -p "${CT_BUILD_DIR}/build-libc-startfiles"
+-    cd "${CT_BUILD_DIR}/build-libc-startfiles"
++    mkdir -p "${CT_BUILD_DIR}/build-libc-startfiles${multilib_pass}"
++    cd "${CT_BUILD_DIR}/build-libc-startfiles${multilib_pass}"
+ 
+     CT_DoLog EXTRA "Configuring C library"
+ 
+@@ -255,6 +258,28 @@
+         extra_cc_args="${CT_CFLAGS_FOR_HOST}"
+     fi
+     extra_cc_args="${extra_cc_args} ${CT_ARCH_ENDIAN_OPT}"
++    
++    if [    ${glibc_version_major} -eq 2 -a ${glibc_version_minor} -lt 6    ]; then
++        # add an additional check for gcc >= 4.3 (when c99 inline behaviour became standard)?
++        # use -fgnu89-inline as glibc expects this behaviour instead of the c99 behaviour
++        extra_cc_args="${extra_cc_args} -fgnu89-inline"
++    fi	
++    
++    glibc_host=${CT_TARGET}
++    glibc_target_cflags=${CT_TARGET_CFLAGS}
++    if [ "${CT_ARCH_64_MULTILIB}" = "y" ]; then
++        if [ "${multilib_pass}" = "2" ]; then
++            CT_DoLog EXTRA "Building 64 bit glibc"
++            extra_cc_args="${extra_cc_args} -m64"
++        else
++            CT_DoLog EXTRA "Building 32 bit glibc"
++            extra_cc_args="${extra_cc_args} -m32"
++            case ${CT_TARGET} in
++                x86_64-*) glibc_host="${CT_TARGET/x86_64/i686}"; glibc_target_cflags="${CT_TARGET_CFLAGS//x86_64/i686}";;
++                *) CT_DoAbort "${CT_TARGET} is not a valid multilib target";;
++            esac
++        fi
++    fi
+ 
+     cross_cc=$(CT_Which "${CT_TARGET}-gcc")
+     CT_DoLog DEBUG "Using gcc for target    : '${cross_cc}'"
+@@ -272,23 +297,23 @@
+ 
+     # Please see the comment for the configure step in do_libc().
+ 
+-    BUILD_CC="${CT_BUILD}-gcc"                                      \
+-    CFLAGS="${CT_TARGET_CFLAGS} ${CT_LIBC_GLIBC_EXTRA_CFLAGS} -O "  \
+-    CC="${cross_cc} ${CT_LIBC_EXTRA_CC_ARGS} ${extra_cc_args}"      \
+-    AR=${CT_TARGET}-ar                                              \
+-    RANLIB=${CT_TARGET}-ranlib                                      \
+-    CT_DoExecLog ALL                                                \
+-    "${CT_SRC_DIR}/${CT_LIBC_FILE}/configure"                       \
+-        --prefix=/usr                                               \
+-        --build="${CT_BUILD}"                                       \
+-        --host=${CT_TARGET}                                         \
+-        --without-cvs                                               \
+-        --disable-profile                                           \
+-        --disable-debug                                             \
+-        --without-gd                                                \
+-        --with-headers="${CT_HEADERS_DIR}"                          \
+-        --cache-file=config.cache                                   \
+-        ${extra_config}                                             \
++    BUILD_CC="${CT_BUILD}-gcc"                                       \
++    CFLAGS="${glibc_target_cflags} ${CT_LIBC_GLIBC_EXTRA_CFLAGS} -O" \
++    CC="${cross_cc} ${CT_LIBC_EXTRA_CC_ARGS} ${extra_cc_args}"       \
++    AR=${CT_TARGET}-ar                                               \
++    RANLIB=${CT_TARGET}-ranlib                                       \
++    CT_DoExecLog ALL                                                 \
++    "${CT_SRC_DIR}/${CT_LIBC_FILE}/configure"                        \
++        --prefix=/usr                                                \
++        --build="${CT_BUILD}"                                        \
++        --host=${glibc_host}                                         \
++        --without-cvs                                                \
++        --disable-profile                                            \
++        --disable-debug                                              \
++        --without-gd                                                 \
++        --with-headers="${CT_HEADERS_DIR}"                           \
++        --cache-file=config.cache                                    \
++        ${extra_config}                                              \
+         ${CT_LIBC_GLIBC_EXTRA_CONFIG}
+ 
+ 
+@@ -296,23 +321,35 @@
+     #      and copy the startfiles into the appropriate libdir.
+     CT_DoLog EXTRA "Building C library start files"
+     CT_DoExecLog ALL make OBJDUMP_FOR_HOST="${CT_TARGET}-objdump" csu/subdir_lib
++    
++    libdir="lib"
++    if [ "${CT_ARCH_64_MULTILIB}" = "y" -a "${multilib_pass}" = "2" ]; then
++        libdir="lib64"
++    fi
+ 
+     CT_DoLog EXTRA "Installing C library start files"
+     if [ "${CT_USE_SYSROOT}" = "y" ]; then
+-        CT_DoExecLog ALL cp -fpv csu/crt[1in].o "${CT_SYSROOT_DIR}/usr/lib/"
++        CT_DoExecLog ALL cp -fpv csu/crt[1in].o "${CT_SYSROOT_DIR}/usr/${libdir}/"
+     else
+-        CT_DoExecLog ALL cp -fpv csu/crt[1in].o "${CT_SYSROOT_DIR}/lib/"
++        CT_DoExecLog ALL cp -fpv csu/crt[1in].o "${CT_SYSROOT_DIR}/${libdir}/"
+     fi
+ 
+     CT_EndStep
++    
++    if [ "${CT_ARCH_64_MULTILIB}" = "y" -a "${multilib_pass}" != "2" ]; then
++        do_libc_start_files multilib_pass=2
++    fi
+ }
+ 
+ # This function builds and install the full glibc
+ do_libc() {
+     CT_DoStep INFO "Installing C library"
++    
++    multilib_pass=
++    eval $1
+ 
+-    mkdir -p "${CT_BUILD_DIR}/build-libc"
+-    cd "${CT_BUILD_DIR}/build-libc"
++    mkdir -p "${CT_BUILD_DIR}/build-libc${multilib_pass}"
++    cd "${CT_BUILD_DIR}/build-libc${multilib_pass}"
+ 
+     CT_DoLog EXTRA "Configuring C library"
+ 
+@@ -367,6 +404,28 @@
+         extra_cc_args="${CT_CFLAGS_FOR_HOST}"
+     fi
+     extra_cc_args="${extra_cc_args} ${CT_ARCH_ENDIAN_OPT}"
++    
++    if [    ${glibc_version_major} -eq 2 -a ${glibc_version_minor} -lt 6    ]; then
++        # add an additional check for gcc >= 4.3 (when c99 inline behaviour became standard)?
++        # use -fgnu89-inline as glibc expects this behaviour instead of the c99 behaviour
++        extra_cc_args="${extra_cc_args} -fgnu89-inline"
++    fi	
++    
++    glibc_host=${CT_TARGET}
++    glibc_target_cflags=${CT_TARGET_CFLAGS}
++    if [ "${CT_ARCH_64_MULTILIB}" = "y" ]; then
++        if [ "${multilib_pass}" = "2" ]; then
++            CT_DoLog EXTRA "Building 64 bit glibc"
++            extra_cc_args="${extra_cc_args} -m64"
++        else
++            CT_DoLog EXTRA "Building 32 bit glibc"
++            extra_cc_args="${extra_cc_args} -m32"
++            case ${CT_TARGET} in
++                x86_64-*) glibc_host="${glibc_host/x86_64/i686}"; glibc_target_cflags="${glibc_target_cflags//x86_64/i686}";;
++                *) CT_DoAbort "${CT_TARGET} is not a valid multilib target";;
++            esac
++        fi
++    fi
+ 
+     cross_cc=$(CT_Which "${CT_TARGET}-gcc")
+     CT_DoLog DEBUG "Using gcc for target    : '${cross_cc}'"
+@@ -400,24 +459,24 @@
+     # I don't want nptl! --disable-sanity-checks will shut up those
+     # silly messages. GNU folks again, he?
+ 
+-    BUILD_CC="${CT_BUILD}-gcc"                                      \
+-    CFLAGS="${CT_TARGET_CFLAGS} ${CT_LIBC_GLIBC_EXTRA_CFLAGS} -O"   \
+-    CC="${CT_TARGET}-gcc ${CT_LIBC_EXTRA_CC_ARGS} ${extra_cc_args}" \
+-    AR=${CT_TARGET}-ar                                              \
+-    RANLIB=${CT_TARGET}-ranlib                                      \
+-    CT_DoExecLog ALL                                                \
+-    "${CT_SRC_DIR}/${CT_LIBC_FILE}/configure"                       \
+-        --prefix=/usr                                               \
+-        --build=${CT_BUILD}                                         \
+-        --host=${CT_TARGET}                                         \
+-        --without-cvs                                               \
+-        --disable-profile                                           \
+-        --disable-debug                                             \
+-        --without-gd                                                \
+-        --disable-sanity-checks                                     \
+-        --cache-file=config.cache                                   \
+-        --with-headers="${CT_HEADERS_DIR}"                          \
+-        ${extra_config}                                             \
++    BUILD_CC="${CT_BUILD}-gcc"                                       \
++    CFLAGS="${glibc_target_cflags} ${CT_LIBC_GLIBC_EXTRA_CFLAGS} -O" \
++    CC="${CT_TARGET}-gcc ${CT_LIBC_EXTRA_CC_ARGS} ${extra_cc_args}"  \
++    AR=${CT_TARGET}-ar                                               \
++    RANLIB=${CT_TARGET}-ranlib                                       \
++    CT_DoExecLog ALL                                                 \
++    "${CT_SRC_DIR}/${CT_LIBC_FILE}/configure"                        \
++        --prefix=/usr                                                \
++        --build=${CT_BUILD}                                          \
++        --host=${glibc_host}                                         \
++        --without-cvs                                                \
++        --disable-profile                                            \
++        --disable-debug                                              \
++        --without-gd                                                 \
++        --disable-sanity-checks                                      \
++        --cache-file=config.cache                                    \
++        --with-headers="${CT_HEADERS_DIR}"                           \
++        ${extra_config}                                              \
+         ${CT_LIBC_GLIBC_EXTRA_CONFIG}
+ 
+     if grep -l '^install-lib-all:' "${CT_SRC_DIR}/${CT_LIBC_FILE}/Makerules" > /dev/null; then
+@@ -483,10 +542,14 @@
+     # corresponding lib/ directories.
+     #
+     # To make "strip *.so.*" not fail (ptxdist does this), rename to .so_orig rather than .so.orig
++    lib_dirs="lib usr/lib"
++    if [ "${CT_ARCH_64_MULTILIB}" = "y" -a "${multilib_pass}" = "2" ]; then
++        lib_dirs="lib64 usr/lib64"
++    fi
+     CT_DoLog EXTRA "Fixing C library linker scripts"
+     for file in libc.so libpthread.so libgcc_s.so; do
+-        for dir in lib usr/lib; do
+-            if [ -f "${CT_SYSROOT_DIR}/${dir}/${file}" -a ! -L ${CT_SYSROOT_DIR}/$lib/$file ]; then
++        for dir in ${lib_dirs}; do
++            if [ -f "${CT_SYSROOT_DIR}/${dir}/${file}" -a ! -L ${CT_SYSROOT_DIR}/${dir}/${file} ]; then
+                 CT_DoExecLog ALL cp -v "${CT_SYSROOT_DIR}/${dir}/${file}" "${CT_SYSROOT_DIR}/${dir}/${file}_orig"
+                 CT_DoLog DEBUG "Fixing '${CT_SYS_ROOT_DIR}/${dir}/${file}'"
+                 CT_DoExecLog ALL sed -i -r -e '/BUG in libc.scripts.output-format.sed/d' "${CT_SYSROOT_DIR}/${dir}/${file}"
+@@ -495,6 +558,10 @@
+     done
+ 
+     CT_EndStep
++    
++    if [ "${CT_ARCH_64_MULTILIB}" = "y" -a "${multilib_pass}" != "2" ]; then
++        do_libc multilib_pass=2
++    fi
+ }
+ 
+ # This function finishes the glibc install
+@@ -506,8 +573,11 @@
+     [ "${GLIBC_INSTALL_APPS_LATER}" = "yes" ] || return 0
+ 
+     CT_DoStep INFO "Finishing C library"
++    
++    multilib_pass=
++    eval $1
+ 
+-    cd "${CT_BUILD_DIR}/build-libc"
++    cd "${CT_BUILD_DIR}/build-libc${multilib_pass}"
+ 
+     CT_DoLog EXTRA "Re-building C library"
+     CT_DoExecLog ALL make LD=${CT_TARGET}-ld RANLIB=${CT_TARGET}-ranlib
+@@ -522,6 +592,10 @@
+     done
+ 
+     CT_EndStep
++    
++    if [ "${CT_ARCH_64_MULTILIB}" = "y" -a "${multilib_pass}" != "2" ]; then
++        do_libc_finish multilib_pass=2
++    fi
+ }
+ 
+ # Build up the addons list, separated with $1
+diff -urN ct-ng-trunk-20081121-orig/scripts/crosstool.sh ct-ng-trunk-20081121/scripts/crosstool.sh
+--- ct-ng-trunk-20081121-orig/scripts/crosstool.sh	2008-11-23 10:01:32.000000000 -0700
++++ ct-ng-trunk-20081121/scripts/crosstool.sh	2008-11-23 10:08:57.000000000 -0700
+@@ -268,14 +268,23 @@
+ 
+     # Prevent gcc from installing its libraries outside of the sys-root
+     ln -sf "sys-root/lib" "${CT_PREFIX_DIR}/${CT_TARGET}/lib"
++    
++    # install all binaries to the same location
++    ln -sf "../bin" "${CT_PREFIX_DIR}/${CT_TARGET}/bin"
+ 
+     # Now, in case we're 64 bits, just have lib64/ be a symlink to lib/
+     # so as to have all libraries in the same directory (we can do that
+     # because we are *not* multilib).
+     if [ "${CT_ARCH_64}" = "y" ]; then
+-        ln -sf "lib" "${CT_SYSROOT_DIR}/lib64"
+-        ln -sf "lib" "${CT_SYSROOT_DIR}/usr/lib64"
+-        ln -sf "sys-root/lib" "${CT_PREFIX_DIR}/${CT_TARGET}/lib64"
++        if [ "${CT_ARCH_64_MULTILIB}" = "y" ]; then
++            mkdir -p "${CT_SYSROOT_DIR}/lib64"
++            mkdir -p "${CT_SYSROOT_DIR}/usr/lib64"
++            ln -sf "sys-root/lib64" "${CT_PREFIX_DIR}/${CT_TARGET}/lib64"
++        else
++            ln -sf "lib" "${CT_SYSROOT_DIR}/lib64"
++            ln -sf "lib" "${CT_SYSROOT_DIR}/usr/lib64"
++            ln -sf "sys-root/lib" "${CT_PREFIX_DIR}/${CT_TARGET}/lib64"
++	fi
+     fi
+ 
+     # Determine build system if not set by the user

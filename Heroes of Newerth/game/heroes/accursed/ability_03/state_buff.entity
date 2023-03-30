@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Accursed_Ability3_Buff"
+
+	
+	
+	icon="icon.tga"
+
+	attackspeed="0.1,0.2,0.3,0.4"
+	movespeedmultiplier="0.1"
+	
+	effecttype="StatusBuff"
+	
+	displaylevel="true"
+>
+</state>

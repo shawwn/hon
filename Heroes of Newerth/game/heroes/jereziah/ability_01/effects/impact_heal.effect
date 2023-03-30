@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" deferred="true" useentityeffectscale="1">
+	<definitions>
+	
+		<particlesystem name="system0" space="world" scale="1.5">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".55"
+				sample="../sounds/impact_heal.wav"
+			/>
+		
+			<model 
+				life="500"
+				anim="attack_2"
+				model="../../model.mdf"
+				color="2 1 .5"
+				startalpha=".5"
+				endalpha="0"
+				startscale="2"
+				endscale="0"
+				expirelife="500"
+				yawspeed="500"
+			>	
+				<template name="trail">
+					<twopointtrailemitter
+						bone_a="{bone_a}"
+						bone_b="{bone_b}"
+						spawnrate="150"
+						particlelife="250"
+						texpostime="500"
+						texposscale="0.0"
+						texstretchscale="1.0"
+						material="/shared/effects/materials/swoosh_add.material"
+						subframepose="true"
+					>
+						<particle
+							startcolor="0 0 0"
+							midcolor=".4 .2 0"
+							endcolor="0 0 0" 
+						/>
+					</twopointtrailemitter>
+				</template>
+				
+				<instance name="trail" bone_a="_bone_weapon3" bone_b="_bone_weapon2"/>
+					
+			</model>
+
+			<groundsprite
+				material="/shared/effects/materials/attrition.material"
+				life="1000"
+				startsize="40"
+				midsize="40"
+				endsize="40"
+				startcolor="0 0 0"
+				midcolor="1 1 1"
+				endcolor="0 0 0"
+				midcolorpos=".25"
+				yawspeed="0"
+			/>
+
+			<!--goldBands-->
+			<simpleemitter
+				spawnrate="75"
+				count="20"
+				particlelife="1000"
+				gravity="-55"
+				speed="40"
+				drag=".08"
+				acceleration="0"
+				position="0 0 0"
+				material="/shared/effects/materials/phantom_smoke_10.material"
+				offsetsphere="20 20 70"
+				minangle="90"
+				maxangle="-90"
+			>
+				<particle 
+					startcolor="0 0 0"
+					midcolor="2 .7 .2"
+					endcolor="0"
+					midcolorpos=".1"
+					startframe="0"
+					endframe="1"
+					startwidth="20"
+					midwidth="15"
+					endwidth="6"
+					midwidthpos=".5"
+					startheight="0"
+					endheight="1000"
+					lockup="true"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				spawnrate="100"
+				particlelife="500"
+				count="20"
+				material="/shared/effects/materials/flare2.material"
+			>
+				<particle
+					startcolor="1 1 1"
+					midcolor="1 1 1"
+					endcolor="0 0 0"
+					midcolorpos="0.5"
+					startalpha="1"
+					endalpha="0"
+					minangle="0"
+					maxangle="360"
+					minanglespeed="0"
+					maxanglespeed="0"
+					width="19"
+					startheight="0"
+					endheight="50"
+					flare="true"
+					turn="true"
+				/>
+			</simpleemitter>
+
+			<billboard 
+				material="/shared/effects/materials/flare2.material" 
+				width="55"
+				height="1000"
+				life="1000"
+				startcolor=".5 .3 0"
+				endcolor="0 0 0"
+				lockup="true"
+			/>
+			
+			<billboard 
+				material="/shared/effects/materials/flare2.material" 
+				width="55"
+				startheight="0"
+				endheight="950"
+				life="500"
+				startcolor=".5 .3 0"
+				endcolor="0 0 0"
+				lockup="true"
+				roll="45"
+				yawspeed="-180"
+			/>
+			
+			<billboard 
+				position="0 0 50"
+				material="/shared/effects/materials/flare2.material" 
+				width="55"
+				startheight="0"
+				endheight="750"
+				life="500"
+				startcolor=".5 .3 0"
+				endcolor="0 0 0"
+				lockup="true"
+				roll="45"
+				pitch="90"
+			/>
+
+			<billboard 
+				material="/shared/effects/materials/flare2.material" 
+				width="35"
+				startheight="950"
+				endheight="100"
+				life="800"
+				startcolor=".75 .75 .75"
+				endcolor="0 0 0"
+				lockup="true"
+			/>
+		<simpleemitter
+			life="500"
+			spawnrate="5"
+			particlelife="400"
+			gravity="-6"
+			speed="0.0"
+			acceleration="0.0"
+			position="0 0 50"
+			offsetsphere="0 0 0"
+			material="/shared/effects/materials/blink.material"
+		>
+			<particle
+				startcolor="0 0 0"
+				midcolor=".75 .75 0"
+				endcolor="0 0 0"
+				minangle="0"
+				maxangle="360"
+				minanglespeed="0"
+				maxanglespeed="0"
+				startsize="200"
+				midsize="100"
+				endsize="50"
+				lockup="true"
+				pitch="90"
+			/>
+			<particle
+				startcolor="0 0 0"
+				midcolor="1 .75 0"
+				endcolor="0 0 0"
+				minangle="0"
+				maxangle="360"
+				minanglespeed="0"
+				maxanglespeed="0"
+				startsize="200"
+				midsize="100"
+				endsize="50"
+				lockup="true"
+				pitch="90"
+			/>
+		</simpleemitter>
+			
+	</particlesystem>
+</definitions>
+
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<spawnmodifier instance="instance1" modifier="modifier0"/>  
+	<waitfordeath instance="instance0" />
+</thread>
+
+</effect>
+
+
+
+
+
+
+

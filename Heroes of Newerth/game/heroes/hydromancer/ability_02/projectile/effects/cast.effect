@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" useentityeffectscale="true">
+
+	<definitions>
+	
+		<particlesystem name="system0" space="world" scale=".75">
+
+			<billboard
+				delay="250"
+				bone="_bone_weapon3"
+				life="250"
+				startcolor="0 0 0"
+				midcolor="0 .5 1"
+				midcolorpos="0.3"
+				endcolor="0"
+				startsize="200"
+				endsize="200"
+				depthbias="0"
+				material="/shared/effects/materials/whitedot.material"
+				lockup="true"
+				lockright="true"
+				pitch="90"
+			/>
+			
+			<billboard
+				delay="250"
+				bone="_bone_weapon3"
+				material="/shared/effects/materials/whitedot.material"
+				startcolor="0 0 0"
+				midcolor=".4 .25 .1"
+				endcolor="0 0 0"
+				life="250"
+				startsize="50"
+				endsize="300"
+			/>
+			
+			<billboard
+				delay="250"
+				bone="_bone_weapon3"
+				material="/shared/effects/materials/corona_06.material"
+				startcolor="0 0 0"
+				midcolor=".4 .25 .1"
+				endcolor="0 0 0"
+				life="250"
+				startsize="0"
+				endsize="200"
+				lockup="1"
+				pitch="90"
+			/>	
+			
+			<trailemitter
+				delay="200"
+				life="250"
+				bone="_bone_weapon3"
+				spawnrate="100"
+				particlelife="200"
+				texpostime="200"
+			 	texposscale="0.0"
+			 	texstretchscale=".5"
+				material="/shared/effects/materials/arrow_trail.material"
+			>
+				<particle
+					startcolor="0 .25 .5"
+					midcolor="0"
+					endcolor="0 0 0"
+					startsize="50"
+					endsize="20"
+			 />
+			</trailemitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance1" particlesystem="system0" />
+		<spawnmodifier instance="instance0"/>
+		<waitfordeath  instance="instance0"/>
+		<waitfordeath  instance="instance1"/>
+	</thread>
+
+</effect>

@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1.15">
+
+
+			<groundsprite
+				life="175"
+				startcolor="0 0 0"
+				midcolor=".25 .05 0"
+				endcolor="0 0 0"
+				size="135"
+				depthbias="0"
+				material="/shared/effects/materials/whitedot_ground.material"
+				loop="true"
+			/>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+<!--
+			<simpleemitter
+				spawnrate="3"
+				count="3"
+				anchor="1"
+				timenudge="333"
+			>
+				<particle
+					particlelife="3000"
+				>
+				<groundsprite
+					delay="0"					
+					life="800"
+					color="1.0 1.0 1.0"
+					startalpha="0"					
+					midalpha=".5"
+					endalpha="0.0"
+					midalphapos="0.3"					
+					startsize="0"
+					endsize="448"			
+					material="/shared/effects/materials/corona_ground.material"			
+				/>
+				</particle>
+			</simpleemitter>	
+-->
+<!--
+			<simpleemitter
+				delay="1000"
+				spawnrate="3"
+				count="3"
+				anchor="1"
+				timenudge="333"
+			>
+				<particle
+					particlelife="3000"
+				>
+				<groundsprite
+					delay="0"					
+					life="800"
+					color="1.0 1.0 1.0"
+					startalpha="0"					
+					midalpha=".4"
+					endalpha="0.0"
+					midalphapos="0.3"					
+					startsize="0"
+					endsize="548"			
+					material="/shared/effects/materials/pulse_ground.material"			
+				/>	
+				
+	
+				<groundsprite
+					delay="0"
+					life="1000"
+					loop="false"			
+					material="/shared/effects/materials/coals_add.material"
+					startsize="10"
+					midsize="140"
+					endsize="140"
+					midsizepos=".2"
+					maxyaw="360"
+					startcolor="2 .5 0"
+					endcolor="0 0 0"
+				/>				
+				
+	
+				<model
+					model="rupt.mdf"
+					anim="idle"
+					minscale="0.6"
+					maxscale="1.9"
+					life="3500"
+					startalpha="1"				
+					endalpha="0"
+					minyaw="-360"
+					maxyaw="360"
+					
+				>
+				</model>	
+	
+				
+				</particle>
+			</simpleemitter>
+
+
+			<simpleemitter
+				delay="2000"
+				spawnrate="3"
+				count="3"
+				anchor="1"
+				timenudge="333"
+			>
+				<particle
+					particlelife="3000"
+				>
+				<groundsprite
+					delay="0"					
+					life="800"
+					color="1.0 1.0 1.0"
+					startalpha="0"					
+					midalpha=".3"
+					endalpha="0.0"
+					midalphapos="0.3"					
+					startsize="0"
+					endsize="848"			
+					material="/shared/effects/materials/pulse_ground.material"			
+				/>	
+	
+	
+				<groundsprite
+					delay="0"
+					life="1000"
+					loop="false"			
+					material="/shared/effects/materials/coals_add.material"
+					startsize="10"
+					midsize="140"
+					endsize="140"
+					midsizepos=".2"
+					maxyaw="360"
+					startcolor="2 .5 0"
+					endcolor="0 0 0"
+				/>
+	
+				<model
+					model="rupt.mdf"
+					anim="idle"
+					minscale="0.6"
+					maxscale="1.9"
+					life="3500"
+					startalpha="1"				
+					endalpha="0"
+					minyaw="-360"
+					maxyaw="360"
+				>
+				</model>
+				
+				</particle>
+			</simpleemitter>				
+			
+
+			<simpleemitter
+				life="3334"
+				spawnrate="3"
+				count="3"
+				anchor="1"	
+				timenudge="333"
+			>
+				<particle
+					particlelife="3000"
+				>
+					<billboard
+					
+						name="refract"
+						life="700"
+						color="1.0 1.0 1.0"
+						startalpha="1.0"
+						midalpha="1.0"
+						endalpha="0.0"
+						midalphapos="0.75"
+						startparam=".05"
+						endparam="0.0"
+						startsize="88"
+						endsize="1268"
+						depthbias="-100"
+						position="0 0 0"
+						material="/shared/effects/materials/refract_swell.material"
+						lockup="true"
+						pitch="90"				
+					/>					
+				</particle>
+			</simpleemitter>
+			
+			<simpleemitter
+				delay="1000"
+				life="3334"
+				spawnrate="3"
+				count="3"
+				anchor="1"	
+				timenudge="333"
+			>
+				<particle
+					particlelife="3000"
+				>
+					<billboard
+					
+						name="refract"
+						life="700"
+						color="1.0 1.0 1.0"
+						startalpha="1.0"
+						midalpha="1.0"
+						endalpha="0.0"
+						midalphapos="0.75"
+						startparam=".05"
+						endparam="0.0"
+						startsize="88"
+						endsize="1568"
+						depthbias="-100"
+						position="0 0 0"
+						material="/shared/effects/materials/refract_swell.material"
+						lockup="true"
+						pitch="90"				
+					/>					
+				</particle>
+			</simpleemitter>
+			
+			<simpleemitter
+				delay="2000"
+				life="3334"
+				spawnrate="3"
+				count="3"
+				anchor="1"	
+				timenudge="333"
+			>
+				<particle
+					particlelife="3000"
+				>
+					<billboard
+					
+						name="refract"
+						life="700"
+						color="1.0 1.0 1.0"
+						startalpha="1.0"
+						midalpha="1.0"
+						endalpha="0.0"
+						midalphapos="0.75"
+						startparam=".05"
+						endparam="0.0"
+						startsize="88"
+						endsize="1868"
+						depthbias="-100"
+						position="0 0 0"
+						material="/shared/effects/materials/refract_swell.material"
+						lockup="true"
+						pitch="90"				
+					/>					
+				</particle>
+			</simpleemitter>			
+-->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+<!--
+			<groundsprite 
+				position="0 0 50"
+				startsize="50"
+				endsize="400"
+				life="750"
+				startcolor="0 0 0"
+				midcolor=".15 0 0"
+				endcolor=" 0 0 0"
+				midcolorpos=".1"
+				material="/shared/effects/materials/corona_ground.material"
+			/>
+			
+			<groundsprite 
+				position="0 0 50"
+				startsize="50"
+				endsize="400"
+				life="1500"
+				startcolor="0 0 0"
+				midcolor=".15 0 0"
+				endcolor=" 0 0 0"
+				midcolorpos=".1"
+				material="/shared/effects/materials/corona_ground.material"
+			/>
+			
+			<groundsprite 
+				delay="150"
+				position="0 0 50"
+				startsize="50"
+				endsize="400"
+				life="2000"
+				startcolor="0 0 0"
+				midcolor=".15 0 0"
+				endcolor=" 0 0 0"
+				midcolorpos=".1"
+				material="/shared/effects/materials/corona_ground.material"
+			/>
+
+			
+			
+			
+
+			<groundsprite 
+				position="0 0 50"
+				startsize="350"
+				expirelife="500"
+				startcolor=".2 0 0"
+				endcolor=" 0 0 0"
+				material="/shared/effects/materials/whitedot_ground.material"
+			/>
+
+
+			
+			
+			
+			
+			
+			
+			<groundsprite 
+				delay="1000"
+				position="0 0 50"
+				startsize="50"
+				endsize="400"
+				life="750"
+				startcolor="0 0 0"
+				midcolor=".15 0 0"
+				endcolor=" 0 0 0"
+				midcolorpos=".1"
+				material="/shared/effects/materials/corona_ground.material"
+			/>
+			
+			<groundsprite 
+				delay="1000"
+				position="0 0 50"
+				startsize="50"
+				endsize="400"
+				life="1500"
+				startcolor="0 0 0"
+				midcolor=".15 0 0"
+				endcolor=" 0 0 0"
+				midcolorpos=".1"
+				material="/shared/effects/materials/corona_ground.material"
+			/>
+			
+			<groundsprite 
+				delay="1150"
+				position="0 0 50"
+				startsize="50"
+				endsize="400"
+				life="2000"
+				startcolor="0 0 0"
+				midcolor=".15 0 0"
+				endcolor=" 0 0 0"
+				midcolorpos=".1"
+				material="/shared/effects/materials/corona_ground.material"
+			/>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<groundsprite 
+			delay="2000"
+				position="0 0 50"
+				startsize="50"
+				endsize="400"
+				life="750"
+				startcolor="0 0 0"
+				midcolor=".15 0 0"
+				endcolor=" 0 0 0"
+				midcolorpos=".1"
+				material="/shared/effects/materials/corona_ground.material"
+			/>
+			
+			<groundsprite 
+			delay="2000"
+				position="0 0 50"
+				startsize="50"
+				endsize="400"
+				life="1500"
+				startcolor="0 0 0"
+				midcolor=".15 0 0"
+				endcolor=" 0 0 0"
+				midcolorpos=".1"
+				material="/shared/effects/materials/corona_ground.material"
+			/>
+			
+			<groundsprite 
+				delay="2150"
+				position="0 0 50"
+				startsize="50"
+				endsize="400"
+				life="2000"
+				startcolor="0 0 0"
+				midcolor=".15 0 0"
+				endcolor=" 0 0 0"
+				midcolorpos=".1"
+				material="/shared/effects/materials/corona_ground.material"
+			/>
+-->
+
+			
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>  
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" /> 
+	</thread>
+
+</effect>

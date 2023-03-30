@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Engineer_Ability4_FenceLink"
+	icon="icon.tga"
+	ishidden="false"
+	passiveeffect="zapper/link.effect"
+>
+</state>

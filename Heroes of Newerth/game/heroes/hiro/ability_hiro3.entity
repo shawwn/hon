@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Hiro3"
+
+	
+	
+	icon="icons/ability_3.tga"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="passive"
+	
+	criticalchance="0.10,0.18,0.26,0.36"
+	criticalmultiplier="2.0"
+>
+</ability>

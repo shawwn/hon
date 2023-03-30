@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Engineer4"
+
+	icon="icon.tga"
+	statuseffecttooltip="State_Engineer_Ability4_Zap"
+	
+	casttime="1000"
+	castactiontime="500"
+	anim="ability_4"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="self_position"
+	targetscheme="enemy_nonboss_units"
+	casteffecttype="Magic"
+
+	manacost="200"
+	cooldowntime="85000"
+	
+	novoiceresponse="true"
+	
+	targetradius="475"
+>
+	<onimpact>
+		<spawnunit name="Gadget_Engineer_Ability4_Shield" count="1" facing="true" pushentity="true" />
+		<setproxy index="1" target="stack_entity" />
+		
+		<spawnunit name="Gadget_Engineer_Ability4_Pylon" target="source_position" owner="this_owner_entity" count="1" offset="500 0" facing="source_entity" angle="180" fixedposition="true" pushentity="true" proxy="this_proxy_entity1" />
+		<setproxy entity="this_entity" target="stack_entity" />
+		
+		<spawnunit name="Gadget_Engineer_Ability4_Pylon" target="source_position" owner="this_owner_entity" count="1" offset="350 350" facing="source_entity" angle="180" fixedposition="true" pushentity="true" proxy="this_proxy_entity1" />
+		<applystate name="State_Engineer_Ability4_FenceLink" inflictor="this_proxy_entity" target="stack_entity" duration="-1" />
+		<setproxy entity="this_entity" target="stack_entity" />
+
+		<spawnunit name="Gadget_Engineer_Ability4_Pylon" target="source_position" owner="this_owner_entity" count="1" offset="0 500" facing="source_entity" angle="180" fixedposition="true" pushentity="true" proxy="this_proxy_entity1"  />
+		<applystate name="State_Engineer_Ability4_FenceLink" inflictor="this_proxy_entity" target="stack_entity" duration="-1" />
+		<setproxy entity="this_entity" target="stack_entity" />
+		
+		<spawnunit name="Gadget_Engineer_Ability4_Pylon" target="source_position" owner="this_owner_entity" count="1" offset="-350 350" facing="source_entity" angle="180" fixedposition="true" pushentity="true" proxy="this_proxy_entity1"  />
+		<applystate name="State_Engineer_Ability4_FenceLink" inflictor="this_proxy_entity" target="stack_entity" duration="-1" />
+		<setproxy entity="this_entity" target="stack_entity" />
+			
+		<spawnunit name="Gadget_Engineer_Ability4_Pylon" target="source_position" owner="this_owner_entity" count="1" offset="-500 0" facing="source_entity" angle="180" fixedposition="true" pushentity="true" proxy="this_proxy_entity1"  />
+		<applystate name="State_Engineer_Ability4_FenceLink" inflictor="this_proxy_entity" target="stack_entity" duration="-1" />
+		<setproxy entity="this_entity" target="stack_entity" />
+	
+		<spawnunit name="Gadget_Engineer_Ability4_Pylon" target="source_position" owner="this_owner_entity" count="1" offset="-350 -350" facing="source_entity" angle="180" fixedposition="true" pushentity="true" proxy="this_proxy_entity1"  />
+		<applystate name="State_Engineer_Ability4_FenceLink" inflictor="this_proxy_entity" target="stack_entity" duration="-1" />
+		<setproxy entity="this_entity" target="stack_entity" />
+		
+		<spawnunit name="Gadget_Engineer_Ability4_Pylon" target="source_position" owner="this_owner_entity" count="1" offset="0 -500" facing="source_entity" angle="180" fixedposition="true" pushentity="true" proxy="this_proxy_entity1"  />
+		<applystate name="State_Engineer_Ability4_FenceLink" inflictor="this_proxy_entity" target="stack_entity" duration="-1" />
+		<setproxy entity="this_entity" target="stack_entity" />
+
+		<spawnunit name="Gadget_Engineer_Ability4_Pylon" target="source_position" owner="this_owner_entity" count="1" offset="350 -350" facing="source_entity" angle="180" fixedposition="true" pushentity="true" proxy="this_proxy_entity1"  />
+		<applystate name="State_Engineer_Ability4_FenceLink" inflictor="this_proxy_entity" target="stack_entity" duration="-1" />
+		<setproxy entity="this_entity" target="stack_entity" />
+
+		<popentity/>
+		<popentity/>
+		<popentity/>
+		<popentity/>
+		<popentity/>
+		<popentity/>
+		<popentity/>
+		<applystate name="State_Engineer_Ability4_FenceLink" inflictor="this_proxy_entity" target="stack_entity" duration="-1" />
+	</onimpact>
+</ability>

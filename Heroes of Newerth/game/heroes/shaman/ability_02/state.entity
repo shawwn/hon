@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Shaman_Ability2"
+
+	
+	
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+
+	
+	displaylevel="true"
+	initialcharges="5"
+	effecttype="StatusBuff"
+>
+	<oninflict>
+		<setcharges a="5" />
+		<setaccumulator entity="this_entity" value="100,200,300,400" />
+	</oninflict>
+	<onattackeddamageevent>
+		<damageeffecttype effecttype="DOT" />
+		<else>
+			<condition test="target_type hero or target_type Boss or target_type Tower">
+				<setvar0 a="damage_attempted" b="0.5" op="mult" />
+				<condition test="accumulator le var0">
+					<setvalue name="damage_attempted" a="damage_attempted" b="accumulator" op="sub" />
+					<expire />
+				</condition>
+				<condition test="accumulator gt var0">
+					<evaluate a="accumulator" b="var0" op="sub" />
+					<setaccumulator value="result" />
+					<setvalue name="damage_attempted" a="damage_attempted" b="0.5" op="mult" />
+					<removecharge />
+				</condition>
+			</condition>
+			<condition test="charges eq 0" >
+				<expire />
+			</condition>
+		</else>
+	</onattackeddamageevent>
+	
+	
+	<onframe />
+	
+</state>

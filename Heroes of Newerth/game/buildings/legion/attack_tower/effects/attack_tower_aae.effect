@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="idleEffects">
+	<definitions>
+		<particlesystem name="system0" space="world">
+
+			<!--sparksGoingOut-->
+			<simpleemitter
+				spawnrate="50"
+				bone="Box02"
+				particlelife="1000"
+				life="500"
+				gravity="-5"
+				speed="200"
+				drag=".1"
+				acceleration="0"
+				position="0 0 0"
+				material="/shared/effects/materials/spark_10.material"
+				offsetsphere="6 6 6"
+				minangle="0"
+				maxangle="360"
+			>
+				<particle 
+					minangle="0"
+					maxangle="0"
+					minanglespeed="0"
+					maxanglespeed="0"
+					startcolor=".5 1 .5"
+					midcolor=".5 1 .5"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					startframe="0"
+					endframe="1"
+					startsize="10"
+					midsize="3"
+					endsize="2"
+					startalpha="0"
+					midalpha=".7"
+					endalpha="0"
+					midalphapos=".5"
+					turn="true"
+				/>
+			</simpleemitter>
+			
+			<!--biggerSparksGoingOut-->
+			<simpleemitter
+				spawnrate="50"
+				bone="Box02"
+				particlelife="1000"
+				life="500"
+				gravity="-5"
+				speed="50"
+				drag="0"
+				acceleration="0"
+				position="0 0 0"
+				material="/shared/effects/materials/spark_10.material"
+				offsetsphere="6 6 6"
+				minangle="0"
+				maxangle="360"
+			>
+				<particle 
+					minangle="0"
+					maxangle="0"
+					minanglespeed="0"
+					maxanglespeed="0"
+					startcolor=".5 1 .5"
+					midcolor=".5 1 .5"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					startframe="0"
+					endframe="1"
+					startsize="20"
+					midsize="8"
+					endsize="2"
+					startalpha="0"
+					midalpha=".7"
+					endalpha="0"
+					midalphapos=".5"
+					turn="true"
+				/>
+			</simpleemitter>
+
+			<!--sparksGoingUp-->
+			<simpleemitter
+				spawnrate="50"
+				bone="Box02"
+				particlelife="1000"
+				life="500"
+				gravity="-10"
+				speed="200"
+				drag=".2"
+				acceleration="0"
+				position="0 0 0"
+				material="/shared/effects/materials/spark_10.material"
+				offsetsphere="5 5 5"
+				minangle="0"
+				maxangle="0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="0"
+					minanglespeed="0"
+					maxanglespeed="0"
+					startcolor=".5 1 .5"
+					midcolor=".5 1 .5"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					startframe="0"
+					endframe="1"
+					startsize="20"
+					midsize="10"
+					endsize="2"
+					startalpha="0"
+					midalpha=".7"
+					endalpha="0"
+					midalphapos=".5"
+					turn="true"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				bone="Box02"
+				spawnrate="2000"
+				count="2"
+				particlelife="400"
+				material="/shared/effects/materials/star_04.material"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="0 0 0"
+					midcolor=".3 .4 .3"
+					endcolor="0 0 0"
+					size="200"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				bone="Box02"
+				life="500"
+				spawnrate="30"
+				particlelife="500"
+				gravity="0"
+				offsetsphere="30 0 0"
+				minspeed="5"
+				maxspeed="15"
+				drag="0"
+				acceleration="0"
+				direction="0 0 0"
+				material="/shared/effects/materials/wisp_03.material"
+			>
+				<particle 
+					startcolor=".1 .2 .1"
+					midcolor=".1 .2 .1"
+					endcolor="0 0 0"
+					midcolorpos="0.4"
+					minangle="0"
+					maxangle="360"
+					startsize="0"
+					midsize="40"
+					endsize="15"
+					midsizepos=".2"
+					startalpha=".2 .2 .2"
+					minanglespeed="-90"
+					maxanglespeed="90"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				bone="Box02"
+				spawnrate="2000"
+				count="10"
+				minparticlelife="400"
+				maxparticlelife="1200"
+				gravity="-20"
+				drag="0.5"
+				material="/shared/effects/materials/phantom_smoke_13.material"
+				position="0 0 15"
+				offsetsphere="15 15 15"
+			>
+				<particle 
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-50"
+					maxanglespeed="50"
+					startcolor="0 0 0"
+					midcolor=".06 .1 .08"
+					endcolor="0 0 0"
+					midcolorpos="0.3"
+					startsize="50"
+					endsize="100"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+			bone="Box02"
+				life="300"
+				spawnrate="15"
+				particlelife="400"
+				gravity="-6"
+				speed="0.0"
+				acceleration="0.0"
+				timenudge="0"
+				position="0 0 0"
+				material="/shared/effects/materials/flare_01.material"
+			>
+				<particle
+					startcolor=".1 0 0"
+					endcolor="0.0 0.0 0.0"
+					startalpha=".02"
+					endalpha="0"
+					minangle="0"
+					maxangle="360"
+					minanglespeed="0"
+					maxanglespeed="0"
+					startsize="125"
+					midsize="100"
+					endsize="50"
+					lockup="true"
+					pitch="90"
+				/>
+			</simpleemitter>		
+			
+			<simpleemitter
+				bone="Box02"
+				count="1"
+				particlelife="200"
+				gravity="-6"
+				speed="0.0"
+				acceleration="0.0"
+				timenudge="0"
+				position="0 0 0"
+				material="/shared/effects/materials/blink.material"
+			>
+				<particle
+					minangle="0"
+					maxangle="90"
+					startcolor="0 0 0"
+					midcolor=".2 .2 .2"
+					endcolor="0.0 0.0 0.0"
+					midcolorpos=".1"
+					startsize="165"
+					midsize="125"
+					endsize="0"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				life="1800"
+				delay="0"
+				spawnrate="500"
+				bone="Box02"
+				count="25"
+				particlelife="1400"			
+				gravity="50"
+				minspeed="220"
+				maxspeed="780"
+				drag=".03"
+				acceleration="0"
+				position="0 0 0"
+				material="/shared/effects/materials/flare_02.material"
+				offsetsphere="1 1 1"
+				minangle="-10"
+				maxangle="20"
+				direction="0 0 1"
+				offsetdirection="0 0 0"
+				offsetradial="0 0 0"
+				directionalspace="global"
+			>
+					<particle 
+						startcolor=".5 1 .5"
+						midcolor=".5 1 .5"
+						endcolor="0 0 0"
+						midcolorpos=".2"
+						startframe="0"
+						endframe="1"
+						startsize="5"
+						midsize="3"
+						endsize="1"
+						startalpha="0"
+						midalpha=".7"
+						endalpha="0"
+						midalphapos=".5"
+						anchor=".75"
+						turn="true"
+					/>
+			</simpleemitter>
+	
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+</effect>
+
+

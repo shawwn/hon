@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Krixi3"
+	
+	icon="icons/ability_3.tga"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="no_target"
+	frontqueue="true"
+	inheritmovement="true"
+	casttime="0"
+	castactiontime="0"
+	cooldowntime="1000"
+	cooldowntype="krixiauratoggle"
+	noresponse="true"
+>
+	<modifier key="krixiauratoggle_heroes" modpriority="100"
+		displayname="true"
+	>
+		<onimpact>
+			<setactivemodifierkey name="" />
+		</onimpact>
+		
+		<aura state="State_Krixi_Ability3" radius="900" targetscheme="ally_ranged_heroes" effecttype="Buff"  propagatecondition="not_stealthed" />
+	</modifier>
+	
+	<modifier key="" modpriority="100"
+		displayname="true"
+	>
+		<onimpact>
+			<setactivemodifierkey name="krixiauratoggle_heroes" />
+		</onimpact>
+		
+		<aura state="State_Krixi_Ability3" radius="900" targetscheme="ally_ranged_units" effecttype="Buff"  propagatecondition="not_stealthed" />
+	</modifier>
+</ability>

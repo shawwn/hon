@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect>
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale=".8">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume="0.5"
+				sample="../sounds/cast.wav"
+			/>
+
+			<light
+				delay="80"
+				life="250"			
+				startcolor="3 15 3"			
+				endcolor="0"
+				midcolorpos=".2"
+				falloffstart="00"
+				falloffend="255"
+				position="0 0 20"	
+			/>		
+
+			<simpleemitter
+				position="0 0 60"
+				spawnrate="5"
+				gravity="-53"
+				life="300"
+				particlelife="600"
+				offsetsphere="15"
+				material="/shared/effects/materials/nova_12.material"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					color=".8 1 .8"
+					startalpha=".6"				
+					endalpha="0"
+					anglespeed="1320"
+					endcolor="0"
+					startsize="120"
+					endsize="160"
+					lockup="1"
+					pitch="90"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				position="0 0 60"
+				spawnrate="1400"
+				count="3"
+				particlelife="500"
+				offsetsphere="10"
+				material="/shared/effects/materials/cuirass_aura_3.material"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor=".2 .7 .2"
+					endcolor="0"
+					anglespeed="-330"
+					startalpha=".6"				
+					endalpha="0"
+					size="180"
+				/>
+			</simpleemitter>
+
+			<billboard
+				roll="-90"
+				position="0 0 60"
+				life="300"
+				startparam=".1"
+				endparam="0"				
+				startsize="20"
+				endsize="400"
+				material="/shared/effects/materials/refract_pinch.material"
+			/>
+
+			<billboard
+				position="0 0 60"
+				life="300"
+				startcolor=".4 1 .6"
+				endcolor="0"			
+				startsize="150"
+				endsize="400"
+				material="/shared/effects/materials/blink.material"
+				depthbias="-40"
+			/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Pyromancer_Ability3"
+
+	
+	
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+	
+	movespeedmultiplierpercharge="0.02,0.03,0.04,0.05"
+	attackspeedpercharge="0.20,0.30,0.40,0.50"
+	
+	effecttype="StatusBuff"
+	
+	maxcharges="3"
+>
+	<oninflict>
+		<addcharges count="1" />
+	</oninflict>
+	
+	<onrefresh>
+		<addcharges count="1" />
+	</onrefresh>
+</state>
+
+<!--
+	movespeedmultiplier="0.02,0.03,0.04,0.05" 
+		attackspeed="0.20,0.30,0.40,0.50" -->

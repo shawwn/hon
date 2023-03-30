@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Frosty_Attack"
+
+	speed="1000"
+	gravity="0"
+
+	modelscale=".7"
+	model="model.mdf"
+
+	impacteffect="impact.effect"
+>
+</projectile>

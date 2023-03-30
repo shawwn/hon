@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="ability_02" useentityeffectscale="1">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="2">
+
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume="0.65"
+				sample="../sounds/impact_damage.wav"
+			/>			
+
+	<simpleemitter
+			
+			spawnrate="1000"
+			count="2"
+			particlelife="750"
+			gravity="0"
+			speed="0"
+			drag="0"
+			acceleration="0"
+			position="0 0 0"
+			
+			offsetsphere="0 0 0"
+		>
+			<particle>
+				<model
+					life="5000"
+					model="/heroes/xalynx/ability_04/effects/model.mdf"
+					anim="up"
+					scale="4"
+					
+					expirelife="500"
+					startparticlealpha="1"
+					endparticlealpha="0"
+					minyaw="0"
+					maxyaw="360"
+					yawspeed="180"
+					position="0 0 10"
+					roll="360"
+					directionalspace="world"
+				>
+
+					<template name="spirits">
+						<twopointtrailemitter
+							life="1000"
+							bone_a="{bone01}"
+							bone_b="{bone02}"
+							spawnrate="150"
+							minparticlelife="400"
+							maxparticlelife="500"
+							texpostime="400"
+							texposscale="0"
+							texstretchscale="1"
+							material="/shared/effects/materials/mysticenergy.material"
+							minexpirelife="200"
+							maxexpirelife="500"
+							startparticlecolor=".5 .5 0"
+							midparticlecolor="1 .8 .2"
+							endparticlecolor="0 0 0"
+							midparticlecolorpos=".7"
+							subframepose="true"
+						>
+							<particle
+							/>
+						</twopointtrailemitter>
+					</template>
+					
+					<instance name="spirits" bone01="_bone_01" bone02="_bone_02" />
+					<instance name="spirits" bone01="_bone_05" bone02="_bone_06" />
+					<instance name="spirits" bone01="_bone_07" bone02="_bone_08" />
+					<instance name="spirits" bone01="_bone_11" bone02="_bone_12" />
+					
+				</model>
+				
+		</particle>
+		</simpleemitter>
+	
+		
+		<simpleemitter
+			bone="_bone_centerofchest"
+			life="300"
+			spawnrate="15"
+			particlelife="400"
+			gravity="-6"
+			speed="0.0"
+			acceleration="0.0"
+			timenudge="0"
+			depthbias="-32"
+			material="/shared/effects/materials/flare_10.material"
+		>
+			<particle
+				startcolor="1 1 0"
+				endcolor="0.0 0.0 0.0"
+
+
+				startalpha=".02"
+				endalpha="0"
+
+				minangle="0"
+				maxangle="360"
+				minanglespeed="0"
+				maxanglespeed="0"
+
+				startsize="150"
+				midsize="120"
+				endsize="10"
+				depthbias="-30"
+				lockup="true"
+				pitch="90"
+
+			/>
+		</simpleemitter>
+
+		
+		
+		<simpleemitter
+			bone="_bone_centerofchest"
+			count="1"
+			particlelife="200"
+			gravity="-6"
+			speed="0.0"
+			acceleration="0.0"
+			timenudge="0"
+			position="0 0 10"
+			depthbias="-32"
+			material="/shared/effects/materials/blink.material"
+		>
+			<particle
+				anglespeed="20"
+				startcolor="0 0 0"
+				midcolor="1 1 .3"
+				endcolor="0.0 0.0 0.0"
+				midcolorpos=".1"
+
+
+				startsize="280"
+				midsize="220"
+				endsize="0"
+
+
+			/>
+		</simpleemitter>		
+
+
+			<billboard
+				bone="_bone_centerofchest"
+				position="0 0 20"
+				life="200"
+				color="1 1 1"
+				startalpha="1.0"				
+				endalpha="1"
+				startparam="0.05"
+				endparam="0.0"				
+				startsize="128"
+				endsize="524"
+				material="/shared/effects/materials/refract_pinch.material"
+				lockup="1"
+				pitch="90"
+				depthbias="-32"
+			/>
+			
+				
+		<billboard
+				bone="_bone_centerofchest"
+				position="0 0 20"
+				life="200"
+				startcolor="1 1 1"
+				endcolor="0 0 0"
+				startalpha="1.0"				
+				endalpha="0"
+								
+				startsize="10"
+				endsize="250"
+				material="/shared/effects/materials/fuzzy_01.material"
+				lockup="1"
+				pitch="90"
+				depthbias="-32"
+			/>
+
+
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

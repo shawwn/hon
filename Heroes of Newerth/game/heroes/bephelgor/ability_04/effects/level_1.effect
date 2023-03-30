@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2200"
+				volume="1"
+				sample="../sounds/cast3.wav"
+			/>
+
+			<sound
+				life="3000"
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".7"
+				sample="../sounds/pulse.wav"
+			/>
+
+			<light
+				life="1500"			
+				startcolor="10 1.5 0"			
+				endcolor="0 0 0"
+				midcolorpos=".4"
+				falloffstart="100"
+				falloffend="400"
+				position="0 0 150"	
+			/>
+
+			<groundsprite
+				material="/shared/effects/materials/ground_fire_ring.material"
+				startsize="25"
+				endsize="700"
+				life="1100"
+				startcolor=".7 .4 0"
+				endcolor="0 0 0"
+			/>
+
+			<groundsprite
+				delay="100"
+				life="1100"
+				material="/shared/effects/materials/ring_ground.material"
+				startsize="110"
+				endsize="800"
+				startcolor=".6 .3 .4"
+				midcolor=".6 .3 .4"
+				endcolor="0 0 0"
+			/>
+
+			<billboard
+				life="500"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".75"
+				startparam=".25"
+				endparam="0"
+				startsize="0"
+				endsize="1500"
+				depthbias="-100"
+				position="0 0 20"
+				material="/shared/effects/materials/refract_ring.material"
+				lockup="true"
+				pitch="90"
+			/>
+
+			<billboard
+				material="/shared/effects/materials/fresnel_blend.material"			
+				color=".4 .2 0"		
+				startalpha="1"
+				endalpha="0"				
+				life="600"
+				position="0 0 10"
+				startsize="200"
+				endsize="1000"
+				depthbias="-150"			
+			/>
+
+			<billboard
+				life="1100"
+				position="0 0 50"			
+				startcolor=".8 .2 .3"
+				midcolor=".5 .2 0"
+				endcolor="0"
+				startsize="200"
+				endsize="1250"
+				depthbias="-150"
+				lockup="1"
+				pitch="90"
+				lockright="1"
+				maxroll="360"
+				material="/shared/effects/materials/pulse.material"
+			/>
+
+			<billboard
+				life="1100"
+				position="0 0 50"			
+				startcolor=".8 .2 .3"
+				midcolor=".5 .2 0"
+				endcolor="0"
+				startsize="200"
+				endsize="1250"
+				depthbias="-150"
+				lockup="1"
+				pitch="90"
+				lockright="1"
+				maxroll="360"
+				material="/shared/effects/materials/pulse.material"
+			/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

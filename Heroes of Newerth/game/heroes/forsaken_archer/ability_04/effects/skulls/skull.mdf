@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="skull.max" file="skull.model" type="K2" >
+<anim name="clip1" clip="clip1.clip" fps="60" loop="0"/>
+<anim name="clip2" clip="clip2.clip" fps="90" loop="0"/>
+</model>

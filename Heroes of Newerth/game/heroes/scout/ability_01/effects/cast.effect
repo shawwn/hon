@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect entityeffectscale="true" deferred="true">
+
+	<definitions>
+		<modifier
+			name="modifier1"
+			material="refract.material"
+			life="800"
+			color="0 1 .5"
+			startparam0="0"
+			endparam0=".85"
+		/>
+		<particlesystem name="system0" space="world" scale=".75" >
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".65"
+				sample="../sounds/cast.wav"
+			/>
+
+			<model
+				life="500"
+				parentmodel="true"
+				parentskeleton="true"
+				startcolor="0 .5 0"
+				endcolor="0 0 0"
+				startscale="1.1"
+				midscale="1.1"
+				endscale="1.1"
+				midscalepos=".5"
+				material="/shared/effects/materials/shell2.material"
+				position="0 0 0"
+			/>
+		
+			<simpleemitter
+				count="5"
+				spawnrate="4"
+				particlelife="750"
+				gravity="-10"
+				speed="5"
+				position="0 10 50"
+				offsetsphere="25 25 0"
+				material="/shared/effects/materials/heathaze.material"
+				loop="true"
+			>
+				<particle 
+					minangle="0"
+					maxangle="180"
+					anglespeed="25"
+					startparam="0"
+					midparam=".5"
+					endparam="0"
+					midparampos=".2"
+					startcolor="1 1 1"
+					alpha=".2"
+					startsize="100" 
+					endsize="50"
+					anchor=".25"
+				/>
+			</simpleemitter>
+			<twopointtrailemitter
+				life="1500"
+			 	bone_a="Bip01 L Clavicle"
+				bone_b="Bip01 L Hand"
+				spawnrate="100"
+				particlelife="500"
+				texpostime="500"
+				texposscale="0"
+				texstretchscale="1.0"
+				material="/shared/effects/materials/swoosh_add.material"
+				subframepos="true"
+			>
+	         	<particle
+					startcolor="0 .15 0"
+					endcolor="0" 
+				/>
+			</twopointtrailemitter>
+			
+			<twopointtrailemitter
+				life="1500"
+				bone_a="Bip01 R Clavicle"
+				bone_b="Bip01 R Hand"
+				spawnrate="100"
+				particlelife="500"
+				texpostime="500"
+				texposscale="0"
+				texstretchscale="1.0"
+				material="/shared/effects/materials/swoosh_add.material"
+				subframepos="true"
+			>
+	            <particle
+					startcolor="0 .15 0"
+					endcolor="0" 
+				/>
+			</twopointtrailemitter>
+					
+			<twopointtrailemitter
+				life="1500"
+				bone_a="Bip01 R Foot"
+				bone_b="Bip01 R Thigh"
+				spawnrate="100"
+				particlelife="500"
+				texpostime="500"
+				texposscale="0"
+				texstretchscale="1.0"
+				material="/shared/effects/materials/swoosh_add.material"
+				subframepos="true"
+			>
+	           	 <particle
+					startcolor="0 .15 0"
+					endcolor="0" 
+				/>
+			</twopointtrailemitter>	
+
+			<twopointtrailemitter
+				life="1500"
+				bone_a="Bip01 L Foot"
+				bone_b="Bip01 L Thigh"
+				spawnrate="100"
+				particlelife="500"
+				texpostime="500"
+				texposscale="0"
+				texstretchscale="1.0"
+				material="/shared/effects/materials/swoosh_add.material"
+				subframepos="true"
+			>
+           		<particle
+					startcolor="0 .15 0"
+					endcolor="0" 
+				/>
+			</twopointtrailemitter>			
+						
+			<twopointtrailemitter
+				life="1500"
+				bone_a="Bip01 Pelvis"
+				bone_b="Bip01 Head"
+				spawnrate="100"
+				particlelife="500"
+				texpostime="500"
+				texposscale="0"
+				texstretchscale="1.0"
+				material="/shared/effects/materials/swoosh_add.material"
+				subframepos="true"
+			>
+           		<particle
+					startcolor="0 .15 0"
+					endcolor="0" 
+				/>
+			</twopointtrailemitter>
+
+			<simpleemitter
+				count="20"
+				spawnrate="25"
+				particlelife="1000"
+				gravity="-5"
+				speed="5"
+				position="0 10 50"
+				offsetsphere="50 50 0"
+				material="/shared/effects/materials/phantom_smoke_04.material"
+				loop="true"
+			>
+				<particle
+					minangle="0"
+					maxangle="90"
+					anglespeed="25"
+					startcolor="0"
+					midcolor="0 .5 0"
+					endcolor="0"
+					startsize="40"
+					midsize="50"				
+					endsize="40"
+					anchor=".5"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				count="20"
+				spawnrate="25"
+				particlelife="1000"
+				gravity="-5"
+				speed="5"
+				position="0 10 50"
+				offsetsphere="50 50 0"
+				material="/shared/effects/materials/phantom_smoke_04.material"
+				loop="true"
+			>
+				<particle
+					minangle="0"
+					maxangle="180"
+					anglespeed="25"
+					startcolor="0"
+					midcolor="0 .5 .2"
+					endcolor="0"
+					startsize="40"
+					midsize="50"				
+					endsize="30"
+					anchor=".25"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				spawnrate="10"
+				life="500"
+				particlelife="600"
+				minspeed="0"
+				maxspeed="3000"
+				drag="0.07"
+				offsetsphere="15"
+				material="/shared/effects/materials/refract_outsplash.material"
+			>
+				<particle
+					startalpha="1.0"
+					endalpha="0.0"
+					minangle="0"
+					maxangle="360"
+					anglespeed="-90"
+					startsize="50"
+					endsize="180"
+					param=".1"
+					depthbias="-130"
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier1"/> 
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+		
+	</thread>
+
+</effect>

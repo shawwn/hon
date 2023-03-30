@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_DoctorRepulsor"
+
+	team="Hellbourne"
+	icon="icon.tga"
+	portrait="icon.tga"
+	model="model.mdf"
+	skin=""
+
+	passiveeffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="sounds/voice/select_%.wav"
+	selectedflavorsound="sounds/voice/select_flavour_%.wav"
+	confirmmovesound="sounds/voice/move_%.wav"
+	confirmattacksound="sounds/voice/attack_%.wav"
+	nomanasound="sounds/voice/no_mana.wav"
+	cooldownsound="sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="sounds/voice/taunt_prior.wav"
+	tauntkillsound="sounds/voice/taunt_after.wav"
+	
+	preglobalscale="1.47"
+	infoheight="180"
+	modelscale="1.0"
+	effectscale="1.0"
+	boundsheight="112"
+	boundsradius="24"
+	selectionradius="44"
+	targetoffset="0 0 64"
+
+	movespeed="295"
+	turnrate="540"
+	turnsmoothing="0.05"
+
+	maxhealth="150"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="-1.02"
+	magicarmor="5.5"
+
+	inventory0="Ability_DoctorRepulsor1"
+	inventory1="Ability_DoctorRepulsor2"
+	inventory2="Ability_DoctorRepulsor3"
+	inventory3="Ability_DoctorRepulsor4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8="Ability_Taunt"
+
+	attackduration="800"
+	attackactiontime="500"
+	attackcooldown="1700"
+	attackdamagemin="22"
+	attackdamagemax="32"
+	attacknumanims="2"
+	attackoffset="0 100 70"
+	attackprojectile="Projectile_DoctorRepulsorAttack"
+	attackrange="500"
+	attackstarteffect="effects/attack.effect"
+	attackactioneffect="projectile/effects/onattackaction.effect"
+	attackimpacteffect="effects/impact.effect"
+	attacktype="ranged"
+	combattype="Hero"
+
+	aggrorange="800"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="Intelligence"
+	strength="17"
+	strengthperlevel="1.5"
+	agility="22"
+	agilityperlevel="1.8"
+	intelligence="25"
+	intelligenceperlevel="2.6"
+	
+	corpsetime="3000"
+	corpsefadetime="1000"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+	
+>
+	<recommendeditem name="Item_ManaPotion" />
+	<recommendeditem name="Item_MinorTotem" />
+	<recommendeditem name="Item_RunesOfTheBlight" />
+	<recommendeditem name="Item_HealthPotion" />
+	<recommendeditem name="Item_HomecomingStone" />
+	
+	<recommendeditem name="Item_Intelligence5" />
+	<recommendeditem name="Item_Strength5" />
+	<recommendeditem name="Item_Steamboots" />
+	<recommendeditem name="Item_Intelligence6" />
+	<recommendeditem name="Item_Protect" />
+	<recommendeditem name="Item_Silence" />
+	<recommendeditem name="Item_HealthMana3" />
+	<recommendeditem name="Item_HarkonsBlade" />
+	<recommendeditem name="Item_FrostfieldPlate" />
+	<recommendeditem name="Item_Morph" />
+	
+	<modifier key="DoctorRepulsorAttackboost" priority="100"
+		attackprojectile="Projectile_DoctorRepulsorEpicAttack"
+	>
+	</modifier>
+</hero>

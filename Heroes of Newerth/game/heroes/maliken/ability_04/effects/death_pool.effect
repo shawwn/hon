@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1">
+
+	<definitions>
+
+		<simpleemitter
+			name="lifeStealTrail2"
+			spawnrate="100"
+			startminparticlelife="1250"
+			startmaxparticlelife="1750"
+			endminparticlelife="0"
+			endmaxparticlelife="0"
+			position="0 0 0"
+			material="/shared/effects/materials/phantom_smoke_04.material"
+		>
+			<particle
+				maxangle="360"
+				minanglespeed="-90"
+				maxanglespeed="90"
+				startcolor="1"
+				midcolor="1 .5 0"
+				endcolor="0 0 0"
+				startsize="0"
+				midsize="50"
+				endsize="10"
+				midcolorpos=".3"
+				midsizepos=".1"
+			/>
+		</simpleemitter>
+		
+		<simpleemitter
+			name="lifeStealTrail"
+			spawnrate="120"
+			startminparticlelife="1250"
+			startmaxparticlelife="1750"
+			endminparticlelife="0"
+			endmaxparticlelife="0"
+			position="0 0 0"
+			material="/shared/effects/materials/soul_projectile.material"
+		>
+			<particle
+				maxangle="360"
+				turn="true"
+				startcolor="2 2 0"
+				midcolor="1 0 0"
+				endcolor="0 0 0"
+				startsize="0"
+				midsize="30"
+				endsize="0"
+				midcolorpos=".4"
+				midsizepos=".1"
+			/>
+		</simpleemitter>
+
+		<particlesystem name="system0" space="world" scale=".5">
+
+			<groundsprite	
+				life="3250"
+				material="/shared/effects/materials/earth_cracks_02.material"
+				minsize="265"
+				maxsize="305"
+				color="1"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos="0.8"
+				maxyaw="360"
+			/>
+
+			<groundsprite	
+				life="3250"
+				material="/shared/effects/materials/ground_smash_overlay.material"
+				size="190"			
+				color="1"
+				startalpha=".7"
+				midalpha=".7"
+				endalpha="0"
+				midalphapos="0.8"
+				maxyaw="360"
+			/>
+
+			<light
+				life="1750"
+				startcolor="4 1 0"
+				midcolor="4 1 0"
+				endcolor="0 0 0"
+				falloffstart="0"
+				falloffend="400"
+				position="0 0 70"	
+			/>
+
+			<!-- Lava Base Layer -->
+
+			<terrainemitter
+				life="3250"
+				timenudge="1500"
+				startrange="40"
+				spawnrate="60"
+				minparticlelife="2000"
+				maxparticlelife="4000"
+				minspeed="20"
+				maxspeed="30"
+				material="/shared/effects/materials/blob.material"
+				offsetsphere="25 25 0"
+				position="0 0 10"
+				minangle="-90"
+				maxangle="-90"
+				expirelife="300"
+				startparticlealpha="1"
+				endparticlealpha="0"
+			>
+				<particle
+					color="1 .3 0"
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-20"
+					maxanglespeed="20"
+					startsize="50"
+					endsize="145"
+					midalpha="1"
+					startalpha="0"
+					endalpha="0"
+					lockup="1"
+					lockright="1"
+					pitch="90"
+				/>
+			</terrainemitter>
+
+			<billboard
+				life="3250"
+				
+				material="/shared/effects/materials/black_spot.material"
+				startcolor="1 .3 0"
+				midcolor="1 .3 0"
+				endcolor="0"	
+				startsize="220"
+				midsize="220"
+				endsize="110"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"			
+			/>
+
+			<!-- Additive details -->
+
+			<simpleemitter
+				life="1250"
+				minparticlelife="1100"
+				maxparticlelife="1200"
+				spawnrate="50"
+				depthbias="-30"
+				minspeed="30"
+				maxspeed="70"
+				material="/shared/effects/materials/blob_add.material"
+				offsetsphere="65 65 15"
+				drag="0.05"
+			>
+				<particle 
+					minanglespeed="-110"
+					maxanglespeed="130"
+					minangle="-360"
+					maxangle="360"
+					startcolor="0"
+					midcolor=".15 .05 0"
+					endcolor="0"
+					startsize="5"
+					minstartscale="0"
+					maxstartscale="4"
+					endsize="45"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				life="1000"
+				minparticlelife="400"
+				maxparticlelife="1200"
+				spawnrate="30"
+				depthbias="-30"
+				minspeed="0"
+				maxspeed="150"
+				material="/shared/effects/materials/pyroclast_02.material"
+				offsetsphere="25 25 5"
+				drag="0.05"
+			>
+				<particle 
+					minanglespeed="-40"
+					maxanglespeed="40"
+					minangle="-360"
+					maxangle="360"
+					color="1 .4 .1"
+					startalpha="1"
+					endalpha="0"
+					startsize="10"
+					minstartscale="1"
+					maxstartscale="4"
+					endsize="75"
+				/>
+			</simpleemitter>
+
+			<billboard
+				life="3250"
+				depthbias="-60"
+				material="/shared/effects/materials/blob_add.material"
+				startcolor=".8 .3 0"
+				midcolor=".8 .3 0"
+				endcolor="0"	
+				startsize="220"
+				midsize="220"
+				endsize="0"			
+				maxangle="360"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+				position="0 0 3"
+			/>
+
+			<!-- Lava blobs -->
+
+			<simpleemitter
+				life="1000"
+				minparticlelife="700"
+				maxparticlelife="1000"
+				spawnrate="36"
+				depthbias="-20"
+				minspeed="30"
+				maxspeed="250"
+				material="/shared/effects/materials/bubble_add.material"
+				offsetsphere="55 55 15"
+				drag="0.03"
+				gravity="10"
+				angle="30"
+			>
+				<particle 
+					minanglespeed="-130"
+					maxanglespeed="130"
+					minangle="-360"
+					maxangle="360"
+					startcolor=".8 .3 0"
+					endcolor="0"
+					startsize="2"
+					minstartscale="2"
+					maxstartscale="6"
+					endsize="8"
+				/>
+				<particle 
+					minanglespeed="-40"
+					maxanglespeed="40"
+					minangle="-360"
+					maxangle="360"
+					startcolor=".5 .1 0"
+					endcolor="0"
+					startsize="4"
+					minstartscale="2"
+					maxstartscale="6"
+					endsize="10"
+				/>
+			</simpleemitter>
+
+			<billboard
+				life="3250"
+				depthbias="-80"
+				material="/shared/effects/materials/whitedot.material"
+				startcolor=".25 .02 0"
+				midcolor=".25 .02 0"
+				endcolor="0"	
+				startsize="460"
+				midsize="460"
+				endsize="0"			
+				maxangle="360"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+				position="0 0 1"
+			/>
+
+			<!-- Slight refraction -->
+
+			<simpleemitter
+				life="2500"
+				offsetsphere="75 75 15"
+				position="0 0 10"
+				spawnrate="15"
+				minparticlelife="1000"
+				maxparticlelife="1200"
+				speed="30"
+				material="/shared/effects/materials/refract_wellwave.material"
+			>
+				<particle
+					midalpha=".5"
+					startalpha="0"
+					endalpha="0.0"
+					minangle="0"
+					maxangle="360"
+					startsize="10"
+					endsize="250"
+					param=".1"
+					depthbias="-100"
+					turn="true"
+				/>
+			</simpleemitter>
+
+			<!-- Fire trails 
+
+			<trackeremitter
+				bone="_bone_centerofchest"
+				owner="source"
+				targetbone="_bone_centerofchest"
+				targetowner="target"
+				tracktype="angular"
+				trackspeed="4"
+				drag="0"
+				spawnrate="8"
+				particlelife="3000"
+				life="2000"
+				gravity="-25"
+				offsetsphere="55"
+				minspeed="200"
+				maxspeed="400"
+				acceleration="50"
+				direction="0 0 1"
+				inheritvelocity="1"
+				distancelife="true"
+			>
+				<particle
+					turn="true"
+					emitter0="lifeStealTrail"
+					emitter1="lifeStealTrail2"
+				/>
+			</trackeremitter>
+-->
+			<billboard
+				life="1500"
+				bone="_bone_centerofchest"
+				startcolor=".5 .15 0"
+				endcolor="0"
+				size="300"
+				material="/shared/effects/materials/whitedot.material"
+				maxroll="360"
+			/>
+			
+			<billboard
+				position="25 -25 10"
+				delay="0"
+				life="750"
+				param="0.05"	
+				startsize="40"
+				endsize="150"
+				startalpha="0"
+				midalpha=".75"
+				endalpha="0"				
+				depthbias="0"
+				material="/shared/effects/materials/refract_swell.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+			/>
+			
+			<billboard
+				position="25 -25 10"
+				delay="250"
+				life="750"
+				param="0.05"	
+				startsize="40"
+				endsize="100"
+				startalpha="0"
+				midalpha=".75"
+				endalpha="0"				
+				depthbias="0"
+				material="/shared/effects/materials/refract_swell.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+			/>
+			
+			<billboard
+				position="-50 0 10"
+				delay="250"
+				life="750"
+				param="0.025"	
+				startsize="25"
+				endsize="120"
+				startalpha="0"
+				midalpha=".75"
+				endalpha="0"				
+				depthbias="0"
+				material="/shared/effects/materials/refract_swell.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+			/>
+			
+			<billboard
+				position="-50 0 10"
+				delay="350"
+				life="750"
+				param="0.025"	
+				startsize="25"
+				endsize="75"
+				startalpha="0"
+				midalpha=".75"
+				endalpha="0"				
+				depthbias="0"
+				material="/shared/effects/materials/refract_swell.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+			/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>
+     	 	<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+	</thread>
+
+</effect>

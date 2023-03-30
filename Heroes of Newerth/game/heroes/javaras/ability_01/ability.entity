@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Javaras1"
+
+	icon="icon.tga"
+	
+	anim="ability_1"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="passive"
+>
+	<onattackimpact />
+	<modifier key="manacombustion" modpriority="125" exclusive="true">
+		<onattackimpact effectdescription="true" propagatetoillusions="true">
+			<cantarget targetscheme="enemy_units" effecttype="Magic">
+				<takemana amount="16,32,48,64" />
+				<condition test="result gt 0">
+					<playeffect effect="impact.effect" source="source_entity" target="target_entity" />
+					<popup name="manaburn" source="target_entity" target="source_entity" a="result" />
+					<setvar0 a="result" />
+					<damage effecttype="Physical" amount="0.6" b="var0" op="mult" />
+				</condition>
+			</cantarget>
+		</onattackimpact>
+	</modifier>
+</ability>

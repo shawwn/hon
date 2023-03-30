@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" useentityeffectscale="1">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+
+			<sound
+				volume=".4"
+				sample="../../sounds/impact.wav"
+				linearfalloff="true"
+				falloffstart="0"
+				falloffend="1500"
+			/>
+
+			<sound
+				volume=".2"
+				sample="/heroes/pollywogpriest/sounds/impact_%.wav"
+				linearfalloff="true"
+				falloffstart="0"
+				falloffend="1500"
+			/>
+
+			<simpleemitter
+				spawnrate="2000"
+				count="8"
+				life="400"
+				particlelife="400"
+				offsetsphere="0"
+				material="/shared/effects/materials/electric_impact_add.material"
+			>
+				<particle
+					startcolor="1"
+					midcolor=".5 0 .4"
+					midcolorpos="0.3"
+					endcolor="0"
+					startsize="25"
+					endsize="50"
+					maxangle="360"
+					depthbias="-180"
+					minendscale="1"
+					maxendscale="3"
+					height="12"
+					endwidth="45"
+					flare="1"
+			 	/>
+			</simpleemitter>
+
+			<billboard
+				bone="_bone_centerofchest"
+				life="700"								
+				startcolor=".5 .2 .6"				
+				endcolor="0"
+				position="0"
+				startsize="30"
+				endsize="100"
+				depthbias="-100"
+				material="/shared/effects/materials/whitedot.material"
+				directionalspace="world"
+			/>
+
+			<simpleemitter
+				life="400"
+				spawnrate="20"
+				count="5"
+				depthbias="-50"
+				particlelife="500"
+				offsetsphere="25"
+				bone="_bone_centerofchest"
+				material="/shared/effects/materials/phantom_smoke_13.material"
+			>
+				<particle
+					startcolor="0 0 .5"
+					midcolor=".5 0 .6"
+					midcolorpos="0.3"
+					endcolor="0"
+					startsize="25"
+					endsize="50"
+					maxangle="360"
+					minendscale="1"
+					maxendscale="2"
+			 	/>
+			</simpleemitter>
+
+			<trackeremitter	
+				life="400"
+				bone="_bone_center"
+				position="0 0 40"
+				targetbone="_bone_center"
+				inheritvelocity="1.25"
+				tracktype="distance"
+				trackspeed="1.4" 
+				spawnrate="20"
+				particlelife="2000"
+				offsetsphere="65 65 5"
+				speed="220"
+				direction="0 0 1"
+				material="/shared/effects/materials/flare1.material"
+			>
+				<particle 
+					size="2"
+					startalpha="1"
+					endalpha="0"
+					midalphapos=".7"
+					angle="90"
+					minscale="1.5"
+					maxscale="3.5"
+					startcolor="1"
+					midcolor="1 0 1"
+					endcolor="0"					
+				/>
+			</trackeremitter>
+
+			<simpleemitter
+				minangle="-90"
+				maxangle="-90"
+				bone="_bone_centerofchest"
+				life="400"
+				spawnrate="650"
+				count="20"
+				minparticlelife="230"
+				maxparticlelife="2000"
+				speed="1000"
+				drag="0.075"
+				gravity="-1"
+				offsetsphere="15"
+				material="/shared/effects/materials/bad_healing_smoke_12.material"
+			>
+				<particle
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="-150"
+					maxanglespeed="150"
+					turn="1"
+					startcolor=".25 0 .5"
+					midcolor=".25 0 .5"
+					endcolor=".25 0 .5"
+					midcolorpos="0.2"
+					startsize="50"
+					minendscale="6"
+					maxendscale="10"
+					startalpha=".15"
+					midalpha=".25"
+					endalpha="0"
+					midalphapos="0.25"
+				/>
+			</simpleemitter>
+
+
+			<simpleemitter
+				minangle="-90"
+				maxangle="-90"
+				bone="_bone_centerofchest"
+				life="400"
+				spawnrate="650"
+				count="20"
+				minparticlelife="230"
+				maxparticlelife="3000"
+				speed="1000"
+				drag="0.05"
+				offsetsphere="15"
+				depthbias="-40"
+				material="/shared/effects/materials/mysticenergy2.material"
+			>
+				<particle
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="-250"
+					maxanglespeed="250"
+					turn="1"
+					startcolor=".5 0 .4"
+					midcolor=".2 0 .2"
+					endcolor="0"
+					midcolorpos="0.2"
+					startsize="25"
+					startstickiness="0"
+					maxendstickiness="2"
+					minendscale="5"
+					maxendscale="10"
+					startalpha=".3"
+					midalpha="1"
+					midalphapos="0.1"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<billboard
+				life="500"
+				bone="_bone_centerofchest"
+				startsize="175"
+				endsize="250"
+				startcolor=".3 .1 .4"
+				endcolor="0"
+				material="/shared/effects/materials/starlight.material"
+			/>
+			
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

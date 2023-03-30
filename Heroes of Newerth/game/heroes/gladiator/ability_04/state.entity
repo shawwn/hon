@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Gladiator_Ability4"
+	
+	icon="icon.tga"
+	passiveeffect=""
+	
+	movespeedmultiplier="0.10"
+
+	effecttype=""
+>
+	<onframe />
+
+	<ondamaged>
+		<accumulatedamage scale="0.50" />
+		<scaledamage scale="0.50" />
+	</ondamaged>
+
+	<onexpired>
+		<evaluate a="accumulator" b="-1" op="mult" />
+		<evaluate a="result" b="5,6,7" op="div" />
+		<setvar0 a="result" b="frametime" op="mult" />
+		<condition test="result lt 0">
+			<applystate name="State_Gladiator_Ability4_Damage" target="this_owner_entity" duration="5000,6000,7000" pushentity="true" />
+			<setaccumulator entity="stack_entity" value="var0" />
+		</condition>
+	</onexpired>
+</state>

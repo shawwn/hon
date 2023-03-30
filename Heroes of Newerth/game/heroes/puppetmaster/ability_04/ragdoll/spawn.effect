@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" useentityeffectsscale="1">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="0.8">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".5"
+				sample="../sounds/cast.wav"
+			/>
+			<template name="trail">				
+				<trailemitter
+										
+					bone="{bone}"					
+					spawnrate="20"					
+					particlelife="1200"
+					position="0 0 150"
+					
+					life="650"
+					
+					inheritvelocity="0"
+					texpostime="1200"
+					texposscale="0"
+					texstretchscale="1"	
+					
+					material="/shared/effects/materials/arrow_trail.material"
+				>
+					<particle 
+						startcolor=".2 .6 0" 
+						midcolor=".1 .05 0"
+						endcolor="0 0 0"
+						startsize="20"
+						endsize="0"
+					/>
+				</trailemitter>	
+				
+				<trailemitter
+										
+					bone="{bone}"					
+					spawnrate="20"					
+					particlelife="1200"
+						
+					position="0 0 150"
+					
+					life="650"
+					inheritvelocity="0"
+					texpostime="1200"
+					texposscale="0"
+					texstretchscale="1"	
+					
+					material="/shared/effects/materials/arrow_trail.material"
+				>
+					<particle 
+						startcolor=".3 .8 0" 
+						midcolor=".1 .05 0"
+						endcolor="0 0 0"
+						startsize="10"
+						endsize="0"
+					/>
+				</trailemitter>		
+
+				<billboard	
+				bone="(bone)"
+				material="/shared/effects/materials/whitedot.material"
+				color=".3 .6 .1"
+				size="110"
+				depthbias="-20"
+				life="500"
+			/>
+				
+				<simpleemitter		
+								bone="{bone}"			
+								spawnrate="10"
+								minparticlelife="800"
+								maxparticlelife="1000"
+								gravity="10"
+								speed="50"
+								offsetsphere="20 20 0"
+								drag="0"
+								inheritvelocity=".1"
+								direction="0 0 0"
+								material="/shared/effects/materials/star_03.material"
+								life="1200"
+							>
+								<particle 
+									startcolor="0 0 0"
+									midcolor="0 2 1"
+									endcolor="2 1 0"
+									midcolorpos=".2"				
+									minangle="0"
+									maxangle="360"
+									startsize="0"
+									midsize="15"				
+									endsize="0"
+									startstickiness=".85"
+									endstickiness=".35"
+									
+								/>			
+							</simpleemitter>
+				
+			</template>
+			
+			<instance name="trail"   bone="Bip01 R Hand" />
+			<instance name="trail"   bone="Bip01 L Hand" />
+			<instance name="trail"   bone="_bone_head" />
+			<instance name="trail"   bone="_bone_4" />
+			
+			<billboard	
+				bone="_bone_centerofchest"
+				material="/shared/effects/materials/whitedot.material"
+				startcolor=".2 .6 .1"
+				endcolor="0 0 0"
+				startsize="150"
+				endsize="300"
+				depthbias="-120"
+				life="1500"
+			/>
+			
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+     	 	<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

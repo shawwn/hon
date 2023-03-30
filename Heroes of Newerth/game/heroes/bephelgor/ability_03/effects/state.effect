@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1" useentityeffectscale="1">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="2">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2500"
+				volume=".3"
+				sample="../sounds/gibs.wav"
+			/>
+
+			<simpleemitter
+				life="2000"
+				spawnrate="5"
+				count="14"
+			>
+				<particle>
+					<model		
+						minscale=".4"
+						maxscale="1.4"
+						model="gib.mdf"
+						anim="death"
+						startalpha="1"
+						minyaw="-360"
+						maxyaw="360"
+						midalpha=".8"
+						endalpha="0"				
+						position="0 0 0"				
+					>
+						<simpleemitter
+							owner="gib"
+							bone="_bone_gib30"
+							life="600"
+							count="50"
+							particlelife="800"
+							gravity="15"
+							minspeed="0"
+							maxspeed="300"
+							drag="0" 
+							acceleration="0.0"
+							minangle="0" 
+							maxangle="15" 
+							position="0 0 0"
+							material="/shared/effects/materials/blood1.material"
+							delay="0"
+							startanchor="0"
+							endanchor="0"
+							inheritvelocity="0"	
+						>
+							<particle
+								startcolor=".5 .15 0"
+								endcolor=".2 .05 0"
+								startalpha="1"
+								endalpha="0.0"
+								angle="15"
+								anglespeed="20"
+								
+								
+								startscale="4"
+								endscale="8"
+								heightdistort="0.01" 
+								turn="true"
+								flare="false"
+							/>	
+						</simpleemitter>	
+						
+						<simpleemitter
+								owner="gib"
+								bone="_bone_gib39"
+								life="1500"
+								spawnrate="20"
+								particlelife="1000"
+								
+								
+								gravity="0"
+								minspeed="0"
+								maxspeed="10"
+								drag="0" 
+								acceleration="0.0"
+								minangle="-360" 
+								maxangle="145" 
+								position="0 0 0"
+								material="/shared/effects/materials/blood1.material"
+								delay="0"
+								startanchor="0"
+								endanchor="0"
+								inheritvelocity=".3"	
+							>
+								<particle
+									startcolor=".7 .3 0"
+									endcolor=".5 .1 0"
+									startalpha="1.0"
+									endalpha="0.0"
+									angle="45"
+									
+									turn="true"
+									startscale="8"
+									endscale="4"
+									 
+									
+									flare="false"
+								/>	
+						</simpleemitter>						
+						
+						
+						<simpleemitter
+								owner="gib"
+								bone="_bone_gib23"
+								life="1500"
+								spawnrate="20"
+								particlelife="1000"
+								
+								
+								gravity="0"
+								minspeed="0"
+								maxspeed="10"
+								drag="0" 
+								acceleration="0.0"
+								minangle="-360" 
+								maxangle="145" 
+								position="0 0 0"
+								material="/shared/effects/materials/blood1.material"
+								delay="0"
+								startanchor="0"
+								endanchor="0"
+								inheritvelocity=".3"	
+							>
+								<particle
+									startcolor=".7 .3 0"
+									endcolor=".5 .1 0"
+									startalpha="1.0"
+									endalpha="0.0"
+									angle="45"
+									
+									turn="true"
+									startscale="8"
+									endscale="4"
+									 
+									
+									flare="false"
+								/>	
+						</simpleemitter>
+					</model>
+				</particle>
+					
+			</simpleemitter>			
+		
+		
+		
+			<orbiteremitter
+				life="3000"
+				spawnrate="30"
+				particlelife="5000"
+				gravity="0.0"
+				minspeed=".8"
+				maxspeed="1.5"
+				acceleration="0" 
+				drag="0.0"
+				minangle="-90" 
+				maxangle="90" 
+				position="0.0 0.0 20" 
+				origin="1.0 1 20" 
+				orbit="1.0 0.0 1.0" 
+				direction="0.0 0.0 1.0" 
+				offset="3.14 0 20"
+				cylindrical="false" 
+				material="/shared/effects/materials/fly.material"
+			>
+				<particle
+					
+				
+					color=".7 .7 .7"
+					midcolorpos="0.5"
+
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					
+
+					frame="0"
+					framespeed="15"			 
+
+					angle="0"
+					anglespeed="0"
+					size="1.5"
+					minscale=".5"
+					maxscale="1"
+			
+					lockup="false"
+					lockright="false"
+					pitch="0"
+					turn="true"
+				/>
+			</orbiteremitter>
+		
+		
+			<simpleemitter
+				life="401"
+				delay="0"
+				particlelife="5200"				
+				spawnrate="40"
+				speed="0"
+				gravity="0"
+				direction="0 0 0"			
+				
+				particledirectionalspace="local"
+				
+				offsetsphere="22 22 0"
+				position="0 0 0"	
+			>
+
+				<particle> 
+					<groundsprite
+						life="3000"						
+						material="/shared/effects/materials/blood_ground.material"
+
+						minyaw="-360"	
+						maxyaw="360"
+						minsize="20"
+						maxsize="40"
+
+						position="0 0 0"
+
+						color=".4 .4 0"
+						
+			
+						midcolorpos=".1"
+
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".1"
+							
+					/>						
+				</particle>
+			</simpleemitter>	
+			
+			
+			
+		<simpleemitter
+				life="401"
+				delay="930"
+				particlelife="5200"				
+				spawnrate="10"
+				speed="0"
+				gravity="0"
+				direction="0 0 0"			
+				
+				particledirectionalspace="local"
+				
+				offsetsphere="100 100 0"
+				position="0 0 0"	
+			>
+
+				<particle> 
+					<groundsprite
+						life="3000"						
+						material="/shared/effects/materials/blood_ground.material"
+
+						minyaw="-360"	
+						maxyaw="360"
+						minsize="20"
+						maxsize="40"
+
+						position="0 0 0"
+
+						color=".4 .4 0"
+						
+			
+						midcolorpos=".1"
+
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".1"
+							
+					/>						
+				</particle>
+			</simpleemitter>				
+
+
+			<simpleemitter
+				delay="0"
+				count="2"
+				particlelife="1100"				
+				spawnrate="11"
+				speed="220"
+				gravity="20"
+				direction="0 0 1"
+				minangle="0"
+				
+				maxangle="15"
+				particledirectionalspace="local"
+				material="/shared/effects/materials/venom_splash.material"
+				offsetsphere="11 11 0"
+				position="0 0 44"
+			>
+				<particle 
+					startsize="20"
+				
+					endsize="100"
+					color=".7 0 0"					
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+				/>
+			</simpleemitter>	
+		
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+
+

@@ -1,0 +1,894 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1" name="ability_01_impact">
+	<definitions>
+		<particlesystem name="system0" space="world"  scale="2.23">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2000"
+				volume=".3"
+				sample="/heroes/rocky/ability_01/sounds/ability_01_impact_%.wav"
+			/>
+		
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2500"
+				volume="1"
+				sample="../sounds/impact.wav"
+			/>
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2500"
+				volume=".8"
+				sample="../sounds/cast.wav"
+			/>
+
+			<groundsprite
+				delay="30"
+				position="0 0 0"
+				life="200"
+				material="/shared/effects/materials/ground_corona_06.material"
+				startsize="44"
+				midsize="150"
+				
+				endsize="150"
+				
+				startcolor=".0 0.2 0.6"
+				endcolor="0 0 0 "
+				startalpha="0"
+				midalpha="1"
+				endalpha="0"
+				midalphapos="0.05"				
+			/>
+	
+			
+			<model
+				delay="0"
+				life="200"
+				parentmodel="true"
+				parentskeleton="true"
+				startcolor=".5 1 5"
+				endcolor="0 0 0"
+				material="/shared/effects/materials/shell4.material"
+				scale="1.1"
+			/>
+<!--
+			<simpleemitter
+				delay="150"
+				count="1"
+				spawnrate="5000"
+				particlelife="750"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+			>
+				<particle
+					turn="1"
+				>
+					<model
+						model="ground_models/model.mdf"
+						anim="idle"
+						scale=".8"
+						life="2500"
+						startalpha="1"				
+						endalpha="0"
+						position="0 0 0"
+						color=".5 .5 1"
+					/>
+					
+				</particle>
+			</simpleemitter>
+			
+	-->		
+			
+			
+			
+			
+			
+			
+			<simpleemitter
+				delay="200"
+				count="1"
+				spawnrate="5000"
+				particlelife="2500"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+			>
+				<particle
+					turn="1"
+				>
+
+					<model
+						position="0 55 0"
+						life="1200"
+						model="rocks/model.mdf"
+						anim="idle_slower"
+						color="1"
+						expirelife="500"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".5"
+						minscale=".1"
+						maxscale=".225"
+						directionalspace="local"
+						minyaw="0"
+						maxyaw="180"
+					>
+					</model>
+					
+					<model
+						position="0 -45 0"
+						life="1200"
+						model="rocks/model.mdf"
+						anim="idle_slower"
+						color="1"
+						expirelife="500"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".5"
+						minscale=".065"
+						maxscale=".1"
+						directionalspace="local"
+						minyaw="0"
+						maxyaw="180"
+					>
+					</model>
+					
+				</particle>
+			</simpleemitter>
+			
+			<simpleemitter
+				delay="100"
+				count="1"
+				spawnrate="5000"
+				particlelife="2500"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+			>
+				<particle
+					turn="1"
+				>
+					<model
+						position="60 0 0"
+						life="1200"
+						model="rocks/model.mdf"
+						anim="idle_slower"
+						color="1"
+						expirelife="500"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".5"
+						minscale=".1"
+						maxscale=".15"
+						directionalspace="local"
+						minyaw="0"
+						maxyaw="180"
+					>
+					</model>
+					
+					<model
+						position="-70 0 0"
+						life="1700"
+						model="rocks/model.mdf"
+						anim="idle_slower"
+						color="1"
+						expirelife="500"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".5"
+						minscale=".05"
+						maxscale=".1"
+						directionalspace="local"
+						minyaw="0"
+						maxyaw="180"
+					>
+					</model>
+					
+				</particle>
+			</simpleemitter>
+			
+			
+			
+			
+			
+			
+			
+			
+			<simpleemitter
+				delay="350"
+				count="1"
+				spawnrate="5000"
+				particlelife="1500"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+			>
+				<particle
+					turn="1"
+				>
+					<model
+						position="105 0 0"
+						life="1500"
+						model="rocks/model.mdf"
+						anim="idle"
+						color="1"
+						expirelife="500"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".5"
+						minscale=".1"
+						maxscale=".13"
+						directionalspace="local"
+						minyaw="0"
+						maxyaw="360"
+					>
+					</model>
+					
+					<model
+						position="-115 0 0"
+						life="1600"
+						model="rocks/model.mdf"
+						anim="idle"
+						color="1"
+						expirelife="500"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".5"
+						minscale=".1"
+						maxscale=".13"
+						directionalspace="local"
+						minyaw="0"
+						maxyaw="360"
+					>
+					</model>
+					
+				</particle>
+			</simpleemitter>
+			
+			<simpleemitter
+				delay="300"
+				count="1"
+				spawnrate="5000"
+				particlelife="2500"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+			>
+				<particle
+					turn="1"
+				>
+					<model
+						position="0 110 0"
+						life="1600"
+						model="rocks/model.mdf"
+						anim="idle"
+						color="1"
+						expirelife="500"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".5"
+						minscale=".1"
+						maxscale=".13"
+						directionalspace="local"
+						minyaw="0"
+						maxyaw="360"
+					>
+					</model>
+					
+					<model
+						position="0 -120 0"
+						life="1900"
+						model="rocks/model.mdf"
+						anim="idle"
+						color="1"
+						expirelife="500"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".5"
+						minscale=".1"
+						maxscale=".13"
+						directionalspace="local"
+						minyaw="0"
+						maxyaw="360"
+					>
+					</model>
+					
+				</particle>
+			</simpleemitter>
+			
+
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+
+
+
+
+
+
+			<simpleemitter
+				count="1"
+				spawnrate="5000"
+				particlelife="750"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+			>
+				<particle
+					turn="1"
+				>
+				
+				
+					<groundsprite
+						delay="00"
+						position="0 0 0"
+						life="300"
+						material="/shared/effects/materials/ground_ice.material"
+						size="150"
+						startcolor=".0 .5 .5"
+						endcolor="0 0 0 "
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"
+						midalphapos="0.05"				
+					/>	
+					
+					
+					<billboard
+						delay="150"
+						life="150"
+						position="0 0 10"
+						material="/shared/effects/materials/stomper.material"
+						startsize="50"
+						endsize="300"
+						color="1 1 2"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".85"
+						lockup="true"
+						lockright="true"
+						pitch="90"
+					/>
+					
+					<billboard
+						delay="150"
+						life="300"
+						position="0 0 10"
+						material="/shared/effects/materials/stomper.material"
+						startsize="50"
+						endsize="300"
+						color="1 1 2"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".25"
+						lockup="true"
+						lockright="true"
+						pitch="90"
+					/>
+					
+					<billboard
+						delay="150"
+						life="450"
+						position="0 0 10"
+						material="/shared/effects/materials/stomper.material"
+						startsize="50"
+						endsize="300"
+						color="1 1 2"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".25"
+						lockup="true"
+						lockright="true"
+						pitch="90"
+					/>
+				
+					<groundsprite
+						delay="150"
+						life="2000"
+						material="/shared/effects/materials/earth_cracks_02.material"
+						minsize="50"
+						maxsize="75"
+						color="1.0 1.0 1.0"
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"
+						midalphapos="0.05"
+						minyaw="0"
+						maxyaw="360"
+					/>
+
+					
+					<groundsprite
+						delay="300"
+						position="0 50 0"
+						life="2000"
+						material="/shared/effects/materials/earth_cracks_02.material"
+						size="80"
+						color="1.0 1.0 1.0"
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"
+						midalphapos="0.05"
+						directionalspace="local"
+					/>
+
+					<groundsprite
+						delay="450"
+						position="0 100 0"
+						life="2000"
+						material="/shared/effects/materials/earth_cracks_02.material"
+						size="55"
+						color="1.0 1.0 1.0"
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"
+						midalphapos="0.05"
+						directionalspace="local"
+					/>
+
+					<groundsprite
+						delay="600"
+						position="0 185 0"
+						life="2000"
+						material="/shared/effects/materials/earth_cracks_02.material"
+						size="35"
+						color="1.0 1.0 1.0"
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"
+						midalphapos="0.05"
+						directionalspace="local"
+					/>
+
+					<groundsprite
+						delay="300"
+						position="0 -50 0"
+						life="2000"
+						material="/shared/effects/materials/earth_cracks_02.material"
+						size="80"
+						color="1.0 1.0 1.0"
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"
+						midalphapos="0.05"
+						minyaw="0"
+						maxyaw="360"
+						directionalspace="local"
+					/>
+					
+					<groundsprite
+						delay="450"
+						position="0 -100 0"
+						life="2000"
+						material="/shared/effects/materials/earth_cracks_02.material"
+						size="55"
+						color="1.0 1.0 1.0"
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"
+						midalphapos="0.05"
+						minyaw="0"
+						maxyaw="360"
+						directionalspace="local"
+					/>
+					
+					<groundsprite
+						delay="600"
+						position="0 -185 0"
+						life="2000"
+						material="/shared/effects/materials/earth_cracks_02.material"
+						minsize="35"
+						maxsize="55"
+						color="1.0 1.0 1.0"
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"
+						midalphapos="0.05"
+						minyaw="0"
+						maxyaw="360"
+						directionalspace="local"
+					/>
+					
+					
+					<groundsprite
+						delay="300"
+						position="-50 0 0"
+						life="2000"
+						material="/shared/effects/materials/earth_cracks_02.material"
+						size="80"
+						color="1.0 1.0 1.0"
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"
+						midalphapos="0.05"
+						minyaw="0"
+						maxyaw="360"
+						directionalspace="local"
+					/>
+					
+					<groundsprite
+						delay="450"
+						position="-100 0 0"
+						life="2000"
+						material="/shared/effects/materials/earth_cracks_02.material"
+						size="55"
+						color="1.0 1.0 1.0"
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"
+						midalphapos="0.05"
+						minyaw="0"
+						maxyaw="360"
+						directionalspace="local"
+					/>
+					
+					<groundsprite
+						delay="600"
+						position="-185 0 0"
+						life="2000"
+						material="/shared/effects/materials/earth_cracks_02.material"
+						minsize="35"
+						maxsize="55"
+						color="1.0 1.0 1.0"
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"
+						midalphapos="0.05"
+						minyaw="0"
+						maxyaw="360"
+						directionalspace="local"
+					/>
+
+					<groundsprite
+						delay="300"
+						position="50 0 0"
+						life="2000"
+						material="/shared/effects/materials/earth_cracks_02.material"
+						size="80"
+						color="1.0 1.0 1.0"
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"
+						midalphapos="0.05"
+						minyaw= "0"
+						maxyaw="360"
+						directionalspace="local"
+					/>
+					
+					<groundsprite
+						delay="450"
+						position="100 0 0"
+						life="2000"
+						material="/shared/effects/materials/earth_cracks_02.material"
+						size="55"
+						color="1.0 1.0 1.0"
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"
+						midalphapos="0.05"
+						minyaw="0"
+						maxyaw="360"
+						directionalspace="local"
+					/>
+					
+					<groundsprite
+						delay="450"
+						position="185 0 0"
+						life="2000"
+						material="/shared/effects/materials/earth_cracks_02.material"
+						minsize="35"
+						maxsize="55"
+						color="1.0 1.0 1.0"
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"
+						midalphapos="0.05"
+						minyaw="0"
+						maxyaw="360"
+						directionalspace="local"
+					/>
+
+					<groundsprite	
+						delay="100"
+						life="2000"
+						material="/shared/effects/materials/ground_smash_overlay.material"
+						size="60"			
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						maxyaw="360"
+					/>
+
+					<model
+						position="0 0 0"
+						life="1000"
+						model="motion_rig/model.mdf"
+						anim="idle"
+						color="1 1 1"
+						expirelife="500"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".95"
+						scale=".16"
+						directionalspace="local"
+						yawspeed="0"
+					>
+						<template name="flashes">
+							<twopointtrailemitter
+								life="650"
+								bone_a="{bone_a}"
+								bone_b="{bone_b}"
+								spawnrate="35"
+								particlelife="650"
+								texpostime="650"
+								texposscale="0"
+								texstretchscale="1"
+								material="/shared/effects/materials/phantom_smoke_13.material"
+								startparticlecolor="1 1 1"
+								endparticlecolor="0 0 0"
+							>
+								<particle
+									startcolor="0 0 0"
+									midcolor="0 .5 2.5"
+									endcolor="0 .5 2.5"
+									midcolorpos=".85"
+								/>
+							</twopointtrailemitter>
+						</template>
+
+						<instance name="flashes" bone_a="_bone_fx_01" bone_b="_bone_fx_02"/>
+						<instance name="flashes" bone_a="_bone_fx_03" bone_b="_bone_fx_04"/>
+						<instance name="flashes" bone_a="_bone_fx_05" bone_b="_bone_fx_06"/>
+						<instance name="flashes" bone_a="_bone_fx_07" bone_b="_bone_fx_08"/>
+
+					</model>
+					
+					<model
+						position="0 0 0"
+						life="1000"
+						model="motion_rig/model.mdf"
+						anim="idle"
+						color="1 1 1"
+						expirelife="500"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".95"
+						scale=".125"
+						directionalspace="local"
+						yawspeed="360"
+					>
+						<template name="flashes">
+							<twopointtrailemitter
+								life="250"
+								bone_a="{bone_a}"
+								bone_b="{bone_b}"
+								spawnrate="35"
+								particlelife="1000"
+								texpostime="1000"
+								texposscale="0"
+								texstretchscale="1"
+								material="/shared/effects/materials/phantom_smoke_13.material"
+								startparticlecolor="1 1 1"
+								endparticlecolor="0 0 0"
+							>
+								<particle
+									startcolor="0 0 0"
+									midcolor="0 3 3.5"
+									endcolor="0 3 3.5"
+									midcolorpos=".85"
+								/>
+							</twopointtrailemitter>
+						</template>
+
+						<instance name="flashes" bone_a="_bone_fx_01" bone_b="_bone_fx_02"/>
+						<instance name="flashes" bone_a="_bone_fx_03" bone_b="_bone_fx_04"/>
+						<instance name="flashes" bone_a="_bone_fx_05" bone_b="_bone_fx_06"/>
+						<instance name="flashes" bone_a="_bone_fx_07" bone_b="_bone_fx_08"/>
+
+					</model>
+					
+
+					<template name="pulse">
+						<billboard
+							delay="{delay}"
+							life="600"
+							startcolor="0 .025 .075"
+							endcolor="0"
+							startsize="50"
+							endsize="300"
+							midsizepos=".4"				
+							position="0 0 25"
+							material="/shared/effects/materials/corona_06.material"
+							lockup="true"
+							pitch="90"
+						/>
+					</template>
+				
+					<instance name="pulse" delay="400"/>
+					<instance name="pulse" delay="550"/>
+
+				</particle>
+			</simpleemitter>
+
+			<billboard
+				delay="50"
+				position="0 0 25"
+				life="150"
+				color="0 .15 .75"
+				startsize="125"
+				endsize="200"
+				rollspeed="-1250"
+				depthbias="-50"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+
+			<billboard
+				delay="50"
+				life="200"
+				position="0 0 50"
+				midalpha="1"			
+				startalpha="0"
+				endalpha="0"
+				startsize="100"
+				endsize="350"
+				depthbias="-100"
+				startparam="0.4"
+				endparam="0"
+				lockup="1"
+				pitch="90"
+				material="/shared/effects/materials/refract_ring.material"
+			/>
+			
+			<billboard
+				delay="50"
+				life="400"
+				position="0 0 50"
+				midalpha="1"			
+				startalpha="0"
+				endalpha="0"
+				startsize="100"
+				endsize="350"
+				depthbias="-100"
+				startparam="0.4"
+				endparam="0"
+				lockup="1"
+				pitch="90"
+				material="/shared/effects/materials/refract_ring.material"
+			/>
+			
+			<simpleemitter
+				delay="0"
+				life="350"
+				spawnrate="275"
+				minparticlelife="100"
+				maxparticlelife="250"
+				gravity="500"
+				speed="40"
+				drag="0"
+				acceleration="0"
+				position="0 0 150"
+				material="/shared/effects/materials/phantom_smoke_10.material"
+				offsetsphere="20 20 200"
+			>
+				<particle 
+					startcolor="0 0 0"
+					midcolor=".05 .15 .5"
+					endcolor="0"
+					midcolorpos=".1"
+					startframe="0"
+					endframe="1"
+					startwidth="20"
+					midwidth="15"
+					endwidth="6"
+					midwidthpos=".5"
+					minstartheight="200"
+					maxstartheight="300"
+					endheight="0"
+					lockup="true"
+				/>
+				
+				<particle 
+					startcolor="0 0 0"
+					midcolor=".05 .25 .1"
+					endcolor="0"
+					midcolorpos=".1"
+					startframe="0"
+					endframe="1"
+					startwidth="20"
+					midwidth="15"
+					endwidth="6"
+					midwidthpos=".5"
+					minstartheight="200"
+					maxstartheight="300"
+					endheight="0"
+					lockup="true"
+				/>
+				
+				<particle 
+					startcolor="0 0 0"
+					midcolor=".05 .15 .5"
+					endcolor="0"
+					midcolorpos=".1"
+					startframe="0"
+					endframe="1"
+					startwidth="20"
+					midwidth="15"
+					endwidth="6"
+					midwidthpos=".5"
+					minstartheight="200"
+					maxstartheight="300"
+					endheight="0"
+					lockup="true"
+				/>
+				
+				<particle 
+					startcolor="0 0 0"
+					midcolor="0 0 .25"
+					endcolor="0"
+					midcolorpos=".1"
+					startframe="0"
+					endframe="1"
+					startwidth="20"
+					midwidth="15"
+					endwidth="6"
+					midwidthpos=".5"
+					minstartheight="200"
+					maxstartheight="300"
+					endheight="0"
+					lockup="true"
+				/>
+			</simpleemitter>
+
+			
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<camerashake2 scale="2" radius="1000" duration="750" frequency="22" />
+		<wait duration="750"/>
+		<waitfordeath instance="instance0" />
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

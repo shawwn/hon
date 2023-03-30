@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect>
+
+	<definitions>
+
+		<modifier
+			name="modifier0"
+			life="1000"
+			startcolor="3 6 2"
+			endcolor="1.0 1.0 1.0"
+		/>
+	
+		<particlesystem name="system0" space="world" useentityeffectscale="true" scale="1.3">
+		
+			<light
+				life="350"			
+				startcolor="3 3 1"			
+				endcolor="0 0 0"
+				midcolorpos=".2"
+				falloffstart="80"
+				falloffend="105"
+				position="0 0 50"	
+			/>
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2200"
+				volume=".5" 
+				sample="../sounds/attack_%.wav"
+			/>	
+	
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2200"
+				volume=".55" 
+				sample="../sounds/impact.wav"
+			/>
+					
+				<simpleemitter
+					position="0 0 40"
+					spawnrate="233"
+					particlelife="1000"
+					count="10"
+					particlelifealloc="6000"
+					gravity="9.0"
+					minspeed="120"
+					maxspeed="282.0"
+					direction="0 0 1"
+					minangle="0"
+					maxangle="90"
+					drag="0.01"
+					acceleration="0.0"
+					inheritvelocity="0.5"
+				>
+					<particle>
+						
+
+					
+										<trailemitter
+						life="1200"
+						startparticlealpha="1"
+						midparticlealpha="1"
+						endparticlealpha="0"
+						particlelife="1200"							
+						spawnrate="10"
+						texpostime="1200"
+						texposscale="0"
+						texstretchscale="1"
+						position="0 0 0"
+						inheritvelocity="0.25"
+						material="/shared/effects/materials/goo_trail_blend.material"
+					>
+						<particle
+							
+							color=".7 .7 .2"					
+							startalpha="1"
+							midalpha="1"
+							endalpha="0"
+							midalphapos=".2"
+							startsize="16"
+							midsize="10"				
+							endsize="12"								
+						/>
+					</trailemitter>	
+					
+					<simpleemitter
+						
+						spawnrate="20"
+						count="80"		
+						particlelife="1550"			
+						gravity="5"
+						speed="40"
+						acceleration="0"
+						position="0 0 0"
+
+						
+						material="/shared/effects/materials/poison_05.material"
+						offsetsphere="1 1 1"
+						minangle="0"
+						maxangle="180"
+						direction="0 0 1"
+						offsetdirection="0 0 0"
+						offsetradial="0 0 0"
+						inheritvelocity="0.15"
+					>
+						<particle 
+							minangle="0"
+							maxangle="0"
+							minanglespeed="0"
+							maxanglespeed="0"
+							startcolor="0 0 0"
+							midcolor=".6 .7 .05"
+							endcolor="0 0 0"
+							midcolorpos=".2"
+
+							startframe="0"
+							endframe="1"
+
+							startsize="20"
+							midsize="20"
+							endsize="20"
+							midsizepos=".8"
+
+							turn="true"
+						/>
+					</simpleemitter>
+
+
+					
+					
+				</particle>			
+			</simpleemitter>
+
+
+			<billboard
+				life="500"
+				startcolor="0.5 1 0"
+				endcolor="0 0 0"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="0.0"
+				midalphapos="0.75"
+				startparam="0.05"
+				endparam="0.0"				
+				
+				startsize="000"
+				endsize="200"
+				
+				midsizepos=".4"				
+				
+				depthbias="0"
+				position="0 0 30"
+				material="/shared/effects/materials/stomp_02.material"
+				lockup="true"
+				pitch="90"
+			/>
+
+
+			<billboard
+				delay="100"
+				life="500"
+				color="1.0 1.0 1.0"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="0.0"
+				midalphapos="0.75"
+				startparam=".05"
+				endparam="0.0"
+				startsize="128"
+				endsize="248"
+				depthbias="0"
+				position="0 0 20"
+				material="/shared/effects/materials/refract_ring.material"
+				lockup="true"
+				pitch="90"
+			/>	
+<!---->
+
+			<simpleemitter
+				minangle="-90"
+				maxangle="-90"
+				bone="_bone_centerofchest"
+				life="200"
+				spawnrate="2650"
+				count="40"
+				minparticlelife="230"
+				maxparticlelife="1000"
+				speed="2000"
+				drag="0.05"
+				offsetsphere="5 5 5"
+				depthbias="-40"
+				material="/shared/effects/materials/smoke_particle.material"
+			>
+				<particle
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="-150"
+					maxanglespeed="150"
+					turn="1"
+					startcolor="0 0 0"
+					midcolorpos="0.2"
+					midcolor=".2 .3 0"
+					endcolor="0"
+					startsize="50"
+					startstickiness="0"
+					maxendstickiness="1"
+					minendscale="2"
+					maxendscale="3"
+					startalpha=".3"
+					midalpha="1"
+					midalphapos="0.1"
+					endalpha="0"
+				/>
+			</simpleemitter>			
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+			
+				spawnrate="650"
+				count="10"
+				minparticlelife="230"
+				maxparticlelife="400"
+				speed="200"
+				drag="0.05"
+				offsetsphere="0 0 0"
+				depthbias="-40"
+				material="/shared/effects/materials/frost_burst.material"
+			>
+				<particle
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="-150"
+					maxanglespeed="150"
+					turn="1"
+					startcolor="0 1 0"
+					midcolorpos="0.2"
+					midcolor=".2 .3 0"
+					endcolor="0"
+					startsize="70"					
+					endsize="100"
+					startalpha=".3"
+					midalpha="1"
+					midalphapos="0.1"
+					endalpha="0"
+				/>
+			</simpleemitter>				
+			
+			<simpleemitter
+				spawnrate="100"
+				count="10"
+				particlelife="2000"
+				gravity="-.2"
+				speed="130"
+				drag="0.07"
+				acceleration="0.0"		
+				mintimenudge="0"
+				maxtimenudge="1000"
+				position="0 0 0"
+				material="/shared/effects/materials/smoke_particle.material"
+				offsetsphere="20 50 15"
+				
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-30"
+					color=".6 .6 .2"
+					maxanglespeed="30"
+					startsize="50"
+					endsize="380"
+					startalpha="0"
+					midalpha=".6"
+					endalpha="0"
+					midalphapos=".2"
+					startanchor="0"
+					endanchor="0"					
+				 />			
+			 
+			</simpleemitter>				
+			
+    
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0"  particlesystem="system0" />	
+	  <spawnmodifier instance="instance1" modifier="modifier0"/>  
+	 
+	  <waitfordeath instance="instance0" />
+	  <waitfordeath instance="instance1" />	  
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

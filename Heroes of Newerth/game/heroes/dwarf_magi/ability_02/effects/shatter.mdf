@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="" file="shatter.model" type="K2" >
+	<anim name="idle" clip="shatter.clip" fps="30" loop="1"/>
+</model>

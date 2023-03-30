@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Scar_Ability2"
+
+	speed="3000"
+	gravity="0"
+
+	modelscale="1.0"
+	model=""
+	
+	canturn="false"
+	flying="true"
+	flyheight="0"
+
+>
+	
+	<onspawn>
+		<spawnaffector name="Affector_Scar_Ability2" target="this_entity" owner="this_owner_entity" />
+	</onspawn>
+	<onimpact>
+		<spawnprojectile name="Projectile_Scar_Ability2_Return" source="this_owner_entity" target="proxy_position" proxy="proxy_entity" bind="this_owner_entity" bindturn="false" bindstate="State_Scar_Ability2_Self" />
+		<playanim name="ability_walk_2" target="this_owner_entity" />
+	</onimpact>
+</projectile>

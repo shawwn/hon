@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Tundra_Ability3_Buff"
+
+	icon="icon.tga"
+
+	attackspeed="0.15,0.3,0.45,0.6"	
+	
+	effecttype="StatusBuff"
+>
+
+</state>

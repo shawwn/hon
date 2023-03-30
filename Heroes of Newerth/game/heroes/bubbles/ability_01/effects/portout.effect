@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1.0" entityeffectscale="true">
+			<simpleemitter	
+				life="200"			
+				position="0 0 0"
+				spawnrate="1225"
+				particlelife="1000"					
+				minspeed="10.0"
+				maxspeed="110"
+				inheritvelocity=".25"
+				offsetsphere="10 10 10"
+				material="/shared/effects/materials/bub.material"
+			>
+				<particle	
+					color=".6 1 1"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-80"
+					maxanglespeed="80"
+					startsize="40"
+					endsize="0"					
+					depthbias="-160"
+				/>
+			</simpleemitter>
+			
+			
+			<simpleemitter
+				count="16"
+				particlelife="1300"				
+				spawnrate="650"
+				minspeed="100"
+				maxspeed="750"
+				gravity="10"
+				direction="0 0 1"
+				minangle="0"
+				maxangle="25"
+				drag="0.01"
+				material="/shared/effects/materials/whitewater_02.material"
+				offsetsphere="25 25 10"
+				position="0 0 40"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-60"
+					maxanglespeed="60"
+					startsize="40"
+					endsize="110"
+					startcolor=".6"	
+					endcolor="0"				
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					startstickiness="0"
+					endstickiness=".4"
+				/>
+			</simpleemitter>
+
+			<simpleemitter	
+				life="400"
+				spawnrate="6600"		
+				gravity="10"
+				count="10"
+				speed="500"
+				drag=".01"
+				minangle="0"
+				maxangle="20"
+				particlelife="1600"
+				direction="0 0 1"
+				offsetsphere="35"
+				material="/shared/effects/materials/dust.material"		
+			>
+				<particle	
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-80"
+					maxanglespeed="80"
+					startsize="40"
+					endsize="180"
+					color=".75 .9 1"
+					startalpha=".5"
+					endalpha="0"					
+				/>
+			</simpleemitter>
+			
+			<simpleemitter	
+				life="400"
+				spawnrate="6600"		
+				gravity="10"
+				count="6"
+				speed="500"
+				drag=".01"
+				minangle="0"
+				maxangle="10"
+				minparticlelife="300"
+				maxparticlelife="1600"
+				direction="0 0 1"
+				offsetsphere="65"
+				material="/shared/effects/materials/water_05.material"		
+			>
+				<particle	
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-20"
+					maxanglespeed="20"
+					startsize="20"
+					endsize="100"
+					color="1"
+					startalpha="1"
+					endalpha="0"					
+				/>
+			</simpleemitter>
+
+			<simpleemitter	
+				life="600"
+				spawnrate="2500"	
+				count="10"	
+				gravity="10"
+				minspeed="100"
+				maxspeed="600"
+				drag=".015"
+				minangle="0"
+				maxangle="20"
+				particlelife="1000"
+				direction="0 0 1"
+				offsetsphere="35"
+				material="/shared/effects/materials/wave.material"		
+			>
+				<particle						
+					startsize="65"
+					endsize="133"
+					startcolor="0"
+					midcolor=".2 .22 .24"
+					endcolor="0 0 0"										
+					minangle="0"
+					maxangle="30"
+				/>
+			</simpleemitter>
+
+
+			<billboard				
+				delay="00"
+				life="300"
+				material="/shared/effects/materials/outsplash_blend.material"
+				position="0 0 80"
+				depthbias="-230"
+				startcolor="1 1 1"
+				endcolor="1 1 1"
+				startsize="250"
+				endsize="10"
+				startalpha=".6"
+				midalpha=".6"
+				endalpha="0"				
+				lockup="1"
+				lockright="1"
+				pitch="-90"
+				anchor=".8"
+			/>	
+
+			<billboard				
+				delay="200"
+				life="400"
+				material="/shared/effects/materials/outsplash_blend.material"
+				position="0 0 80"
+				depthbias="-230"
+				startcolor="1 1 1"
+				endcolor="1 1 1"
+				startsize="10"
+				endsize="250"
+				startalpha=".6"
+				midalpha=".6"
+				endalpha="0"				
+				lockup="1"
+				lockright="1"
+				pitch="-90"
+				anchor=".8"
+			/>			
+			
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

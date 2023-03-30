@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="singleButterfly.max" file="butterfly.model" type="K2" >
+
+	<anim name="idle" clip="butterfly_1.clip" fps="42" loop="true"/>
+	
+</model>

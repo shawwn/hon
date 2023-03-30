@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_PuppetMaster4"
+	
+	icon="icon.tga"
+	
+	anim="ability_4"
+	casttime="1670"
+	castactiontime="300"
+	
+	maxlevel="3"
+	requiredlevel="6,11,16"
+	
+	actiontype="target_entity"
+	casteffecttype="Magic"
+	casteffect="ragdoll/cast.effect"
+	targetscheme="enemy_units"
+	
+	novoiceresponse="true"
+
+	cooldowntime="150000"
+	manacost="150,200,250"
+	range="600"
+>
+	<onimpact >
+		<evaluate a="target_team" />
+		<spawnunit name="Pet_PuppetMaster_Ability4" target="source_entity" proxy="target_entity" pushentity="true" offset="0 150" facing="source_entity" team="result" />
+		<applystate name="State_PuppetMaster_Ability4" duration="-1" target="target_entity" proxy="stack_entity" />
+	</onimpact>
+</ability>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_CorruptedDisciple_Ability1_Timer"
+
+	radius="0"
+	impactdelay="650"
+	persist="true"
+>
+	<onimpact>
+		<spawnaffector name="Affector_CorruptedDisciple_Ability1_Return" target="source_entity" />
+	</onimpact>
+</affector>

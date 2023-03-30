@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="model_high.max" file="high.model" type="K2" high="high.model" med="med.model" low="low.model" >
+	
+	<skin name="freeze">
+		<reference mesh="model" material="effects/freeze.material"/>
+	</skin>
+	
+	<anim name="idle" clip="clips/default_1.clip" loop="true">
+	</anim>
+	
+	<anim name="portrait" clip="clips/portrait.clip" loop="true"/>
+	
+	<anim name="walk_1" clip="clips/walk_1.clip" loop="true" fps="26">
+		<frameevent frame="1" cmd="PlaySoundLinear /heroes/frosty/sounds/move_1.wav 0 1500 .2"/>
+		<frameevent frame="26" cmd="PlaySoundLinear /heroes/frosty/sounds/move_1.wav 0 1500 .05"/>	
+	</anim>
+	
+	<anim name="item_1" clip="clips/item_1.clip"/>
+	
+	<anim name="bored_1" clip="clips/bored_1.clip"/>
+	
+	<anim name="taunt_1" clip="clips/taunt_1.clip">
+		<frameevent frame="32" cmd="PlaySoundLinear /heroes/devourer/sounds/death.wav 1500 2500 .5"/>	
+	</anim>
+	
+	<anim name="death_1" clip="clips/death_1.clip" loop="true" loopbackframe="-1" fps="20">
+		<frameevent frame="0" cmd="StartEffect effects/freeze.effect 1"/>
+		<frameevent frame="1" cmd="PlaySoundLinear /heroes/frosty/sounds/death.wav 1500 2500 .65"/>	
+		<frameevent frame="15" cmd="StartEffect effects/death_debris2.effect 1"/>
+		<endevent cmd="StopEffect 1" />
+	</anim>
+	
+	<anim name="attack_1" clip="clips/attack_1.clip" fps="100">
+		<frameevent frame="12" cmd="PlaySoundLinear /heroes/frosty/sounds/attack_%.wav 400 1800 .65"/>
+	</anim>
+	
+	<anim name="attack_2" clip="clips/attack_2.clip" fps="100">
+		<frameevent frame="12" cmd="PlaySoundLinear /heroes/frosty/sounds/attack_%.wav 400 1800 .65"/>
+	</anim>
+	
+	<anim name="ability_1" clip="clips/ability_2.clip">
+		<frameevent frame="1" cmd="PlaySoundLinear /heroes/frosty/ability_01/sounds/cast.wav 1500 2500 0.6"/>
+	</anim>
+	
+	<anim name="ability_2" clip="clips/ability_1.clip">
+	</anim>
+	
+	<anim name="ability_4" clip="clips/ability_4.clip" loop="true" >	
+	</anim>
+	
+	<anim name="knock_1" clip="clips/knock_1.clip" loop="true" loopbackframe="-1"/>
+	
+	<anim name="getup_1" clip="clips/getup_1.clip"/>		
+	
+</model>

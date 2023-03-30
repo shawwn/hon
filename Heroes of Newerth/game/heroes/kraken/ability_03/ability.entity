@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Kraken3"
+
+	icon="icon.tga"
+	statuseffecttooltip="State_Kraken_Ability3"
+	
+	anim="ability_1"
+	casttime="700"
+	castactiontime="250"
+	casteffect=""
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_entity"
+	targetscheme="enemy_units"
+	casteffecttype="Magic"
+	
+	manacost="120"
+	cooldowntime="12000"
+	
+	range="700"
+	
+	projectile="Projectile_Kraken_Ability3"
+>
+	<onimpact>
+		<damage effecttype="Magic" amount="110,160,210,260"/>
+		<applystate name="State_Kraken_Ability3" duration="3000"/>
+	</onimpact>
+</ability>

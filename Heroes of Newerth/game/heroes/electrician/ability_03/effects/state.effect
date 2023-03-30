@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+			<template name="beam">
+				<beam
+					bone_a="_bone_fx_{a}"
+					bone_b="_bone_fx_{b}"
+					size="{size}"
+					expirelife="500"
+					startcolor=".3 .2 0"
+					endcolor="0 0 0 "
+					material="/shared/effects/materials/femme_lightning_10.material"
+					startframe="{frame}"
+					framespeed="5"
+				/>
+
+				<billboard
+				 bone="_bone_fx_{a}"
+				 material="/shared/effects/materials/whitedot.material"
+				 size="{size}"
+				 expirelife="500"
+				 startcolor=".15 .075 0"
+				 endcolor="0 0 0"
+				/>
+				
+				<billboard
+				 bone="_bone_fx_{b}"
+				 material="/shared/effects/materials/whitedot.material"
+				 size="{size}"
+				 expirelife="500"
+				 startcolor=".15 .075 0"
+				 endcolor="0"
+				/>
+				
+			</template>
+	
+			<particlesystem name="system0" space="world" scale="1.0">
+
+				<instance name="beam" a="28" b="12" size="26" frame=".8"/>
+				<instance name="beam" a="08" b="26"  size="26" frame=".3"/>
+				<instance name="beam" a="06" b="29" size="26" frame=".2"/>
+				<instance name="beam" a="24" b="62" size="26" frame=".6"/>
+				<instance name="beam" a="05" b="21" size="26" frame=".1"/>
+				<instance name="beam" a="09" b="32" size="26" frame=".2"/>
+
+				
+				<billboard
+					material="/shared/effects/materials/fresnel_blend.material"
+					bone="_bone_centerofchest"
+					expirelife="500"
+					startcolor=".5 .5 .1"
+					endcolor="0 0 0"
+					alpha="0"
+					position="0 0 10"
+					size="90"
+					depthbias="-150"
+				/>
+				<billboard
+					material="/shared/effects/materials/corona_07.material"
+					bone="_bone_centerofchest"
+					expirelife="500"
+					startcolor=".5 .15 0"
+					endcolor="0 0 0"
+					alpha="0"
+					position="0 0 10"
+					size="90"
+					depthbias="-150"
+				/>
+				<billboard
+					material="/shared/effects/materials/fresnel.material"
+					bone="_bone_centerofchest"
+					expirelife="500"
+					startcolor=".5 .1 0"
+					alpha="0"
+					endcolor="0 0 0"
+					position="0 0 10"
+					size="90"
+					depthbias="-150"
+				/>
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+		<spawnmodifier instance="instance1" modifier="modifier0"/>
+		<waitfordeath instance="instance0" />
+	</thread>
+</effect>

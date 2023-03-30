@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Hydromancer_Ability3"
+
+	radius="200"
+	lifetime="-1"
+
+	targetselection="all"
+	targetscheme="enemy_units"
+	maximpactspertarget="1"
+	
+	effecttype="Magic"
+	impacteffect="effects/impact.effect"
+>
+	<onimpact>
+		<applystate name="State_Hydromancer_Ability3_Slow" target="target_entity" duration="3000" />
+	</onimpact>
+</affector>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1" useentityeffectscale="1">
+	<definitions>
+		
+		<particlesystem name="system0" space="world" scale="1.5">
+
+			<template name="lava">
+				<twopointemitter
+					bone_a="{bone_a}" 
+					bone_b="{bone_b}"
+					spawnrate="25"
+					depthbias="-40"
+					minparticlelife="600"
+					maxparticlelife="1200"
+					minspeed="0"
+					maxspeed="20"
+					drag="0.01"
+					offsetsphere="20"
+					angle="30"
+					gravity="2"
+					collide="1"
+          				material="/shared/effects/materials/magma_overlay.material"
+         			>
+					<particle 
+						minangle="0"
+						maxangle="360"
+						startcolor="1 .55 0"
+						midcolorpos=".15"
+						endcolor="1 .2 0"
+						startsize="10"
+						endsize="45"
+						scale="1.5"
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"
+						minanglespeed="-50"
+						maxanglespeed="50"
+						startanchor="1"
+						endanchor=".5"
+					/>
+				</twopointemitter>		
+	
+				<billboard
+					bone="{bone_b}"
+					material="/shared/effects/materials/whitedot.material"			
+					startcolor=".64 .2 0"		
+					endcolor="0"				
+					size="70"
+					depthbias="-60"	
+					expirelife="300"
+				/>
+
+				<simpleemitter
+					timenudge="500"
+					bone="{bone_b}"
+					spawnrate="5"
+					particlelife="2100"
+					offsetsphere="5 5 0"
+				>
+					<particle>
+						<groundsprite
+							life="1000"
+							material="/shared/effects/materials/magma_overlay.material"
+							startsize="25"
+							endsize="45"
+							maxyaw="360"
+							color=".85 .3 0"
+							startalpha="0"
+							midalpha="1"
+							midalphapos=".8"
+							endalpha="0"
+							expirelife="300"
+						/>
+					</particle>	
+				</simpleemitter>
+
+			</template>		
+		
+			<instance name="lava" bone_a="Bip01 L Toe0" bone_b="Bip01 L Foot"/>
+			<instance name="lava" bone_a="Bip01 R Toe0" bone_b="Bip01 R Foot"/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Mumra_Ability1"
+
+	radius="300"
+	
+	lifetime="10000"
+	impactinterval="750"
+	maximpactsperinterval="1"
+	maxtotalimpacts="13"
+	targetselection="random"
+	targetscheme="visible_enemy_units"
+	effecttype="Magic"
+	
+	effect="effects/self.effect"
+>
+	<onimpact>
+		<applystate name="State_Stunned" duration="100"/>
+		<damage effecttype="Magic" amount="10,30,50,70" />
+		<playeffect effect="effects/impact.effect" target="target_entity" source="target_entity"/>
+	</onimpact>
+</affector>

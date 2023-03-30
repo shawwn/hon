@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1.3">
+
+			<billboard
+				bone="_bone_centerofchest"				
+				material="/shared/effects/materials/blink.material"
+				startcolor="1"
+				endcolor="0 0 0"
+				scale="6"
+				width="10"
+				life="400"
+				roll="90"
+			/>
+
+		<simpleemitter
+			life="400"
+			spawnrate="100"
+			count="7"
+			bone="_bone_centerofchest"
+			particlelife="350"			
+			speed="50"
+			material="/shared/effects/materials/star_02.material"
+			offsetsphere="15"
+		>
+			<particle 
+				minangle="0"
+				maxangle="360"
+				startcolor="0 .2 1"
+				midcolor=".65 .2 1"
+				endcolor="0"
+				startsize="45"
+				endsize="150"
+			/>
+
+		</simpleemitter>			
+
+				<billboard
+					bone="_bone_centerofchest"				
+					material="/shared/effects/materials/star_03.material"
+					startcolor=".5 .2 .7"
+					endcolor="0  0 0"
+					scale="4"
+					depthbias="-20"
+					life="400"
+					maxroll="360"
+				/>
+
+				<billboard
+					bone="_bone_centerofchest"				
+					material="/shared/effects/materials/corona_07.material"
+					startcolor=".3 .1 .2"
+					endcolor="0  0 0"
+					scale="2"
+					depthbias="-20"
+					life="400"
+				/>
+
+				<billboard
+					bone="_bone_centerofchest"				
+					material="/shared/effects/materials/refract_pinch.material"
+					param="0.1"
+					startalpha="1"
+					endalpha="0"
+					endscale="2"
+					depthbias="-20"
+					life="400"
+				/>
+
+
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

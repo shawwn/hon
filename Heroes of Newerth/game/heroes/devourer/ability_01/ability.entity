@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Devourer1"
+	
+	icon="icon.tga"
+	
+	anim="ability_1"
+	casttime="1400"
+	castactiontime="300"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_position"
+	targetradius="60"
+	casteffecttype="Physical Push"
+	targetscheme="hook_targets"
+	casteffect="effects/cast.effect"
+	
+	manacost="140"
+	cooldowntime="14000"
+	
+	projectile="Projectile_Devourer_Ability1"
+	range="1100"
+	forcerange="1100"
+	allowoutofboundscast="true"
+>
+	<onabilityimpact>
+		<applystate name="State_Devourer_Ability1_Data" duration="2000" target="source_entity" />
+	</onabilityimpact>
+
+	<onimpact>
+	</onimpact>
+</ability>

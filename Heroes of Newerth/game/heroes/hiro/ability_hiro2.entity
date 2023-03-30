@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Hiro2"
+	
+	icon="icons/ability_2.tga"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="passive"
+>
+	<onattackedpreimpact>
+		<combatsupertype supertype="attack">
+			<condition test="canactivate">
+				<cantarget targetscheme="enemy_melee_heroes">
+					<chance threshold="0.15,0.20,0.25,0.30">
+						<damage effecttype="Physical" amount="1" b="source_attackdamage" op="mult" />
+						<playeffect effect="effects/ability_02/meleecounter.effect" source="source_entity" target="target_entity" />
+						<startcooldown />
+					</chance>
+				</cantarget>
+				<cantarget targetscheme="enemy_ranged_heroes">
+					<chance threshold="0.15,0.20,0.25,0.30">
+						<spawnprojectile name="Projectile_Hiro_CounterAttack" source="source_entity" target="target_entity" offset="0 0 70" noresponse="true" />
+						<playeffect effect="effects/ability_02/rangedcounter.effect" source="source_entity" target="target_entity" />
+						<startcooldown />
+					</chance>
+				</cantarget>
+			</condition>
+		</combatsupertype>
+	</onattackedpreimpact>
+</ability>
+
+
+ 

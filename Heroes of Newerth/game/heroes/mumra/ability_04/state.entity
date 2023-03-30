@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Mumra_Ability4_Drag"
+	
+	icon="icon.tga"
+	
+	invulnerable="true"
+	silenced="true"
+	perplexed="true"
+	immobilized="true"
+	disarmed="true"
+	stunned="true"
+		
+	passiveeffect="effects/flying.effect"
+	
+	effecttype=""
+>
+	<onexpired>
+		<playanim name="ability_4_impact" source="this_owner_entity" target="this_owner_entity"/>
+	</onexpired>
+</state>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Moraxus3"
+
+	
+	icon="icon.tga"	
+	anim="ability_3"
+	casttime="0"
+	castactiontime="0"
+	casteffect="effects/cast.effect"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+	statuseffecttooltip="State_Moraxus_Ability3_Slow"
+
+	actiontype="target_position"
+	
+	manacost="30"
+	cooldowntime="1000"
+	frontqueue="true"
+	targetscheme="organic_enemy_units"
+	
+	casteffecttype="Magic"	
+	range="1000"
+	forcerange="1000"
+	maxcharges="1,2,3,4"
+	allowoutofrangecast="true"
+	allowoutofboundscast="true"
+	novoiceresponse="true"
+>
+	<onlearn>
+		<setcharges a="1" />
+		<setaccumulator value="1" />
+		<setactivemodifierkey name="Moraxus_Ability3_1" />
+	</onlearn>
+	
+	<onframe>
+		<condition test="charges eq 4">
+			<setactivemodifierkey name="Moraxus_Ability3_4" />
+		</condition>
+		<condition test="charges eq 3">
+			<setactivemodifierkey name="Moraxus_Ability3_3" />
+		</condition>
+		<condition test="charges eq 2">
+			<setactivemodifierkey name="Moraxus_Ability3_2" />
+		</condition>
+		<condition test="charges eq 1">
+			<setactivemodifierkey name="Moraxus_Ability3_1" />
+		</condition>
+	</onframe>
+	
+	<onupgrade>
+		<addcharges count="1" />
+		<condition test="charges eq 4">
+			<setactivemodifierkey name="Moraxus_Ability3_4" />
+		</condition>
+		<condition test="charges eq 3">
+			<setactivemodifierkey name="Moraxus_Ability3_3" />
+		</condition>
+		<condition test="charges eq 2">
+			<setactivemodifierkey name="Moraxus_Ability3_2" />
+		</condition>
+	</onupgrade>
+	
+	<onimpact>
+		<setvar0 a="0" />
+		<spawnunit name="Gadget_Moraxus_Ability3_Reveal" count="1" target="source_position" pushentity="true" />
+		<spawnprojectile name="Projectile_Moraxus_Ability3" source="source_entity" target="target_position" bind="stack_entity" proxy="stack_entity" />
+		<condition test="accumulator eq 3">
+			<setaccumulator value="0" />
+		</condition>
+		<condition test="accumulator eq 2">
+			<setaccumulator value="3" />
+		</condition>
+		<condition test="accumulator eq 1">
+			<setaccumulator value="2" />
+		</condition>
+		<condition test="accumulator eq 0">
+			<setaccumulator value="1" />
+		</condition>
+		<applystate name="State_Moraxus_Ability3_Charges" target="source_entity" duration="8000,7000,6000,5000" proxy="this_entity" pushentity="true" />
+		<addcharges entity="stack_entity" count="1" />
+		<removecharge />
+		<condition test="charges eq 4">
+			<setactivemodifierkey name="Moraxus_Ability3_4" />
+		</condition>
+		<condition test="charges eq 3">
+			<setactivemodifierkey name="Moraxus_Ability3_3" />
+		</condition>
+		<condition test="charges eq 2">
+			<setactivemodifierkey name="Moraxus_Ability3_2" />
+		</condition>
+		<condition test="charges eq 1">
+			<setactivemodifierkey name="Moraxus_Ability3_1" />
+		</condition>
+		<condition test="charges eq 0">
+			<setactivemodifierkey name="armorthrowmovedisabled" />
+		</condition>
+	</onimpact>
+	
+	<ondeath>
+		<setcharges a="1,2,3,4" />
+		<setactivemodifierkey name="" />
+		<starttimer entity="this_entity" duration="0" />
+	</ondeath>
+
+	<ontimer>
+		<condition test="charges eq 4">
+		</condition>
+		<condition test="charges eq 3">
+			<setactivemodifierkey name="Moraxus_Ability3_4" />
+			<playeffect effect="effects/newaxe.effect" source="source_entity" target="source_entity" />
+		</condition>
+		<condition test="charges eq 2">
+			<setactivemodifierkey name="Moraxus_Ability3_3" />
+			<playeffect effect="effects/newaxe.effect" source="source_entity" target="source_entity" />
+		</condition>
+		<condition test="charges eq 1">
+			<setactivemodifierkey name="Moraxus_Ability3_2" />
+		</condition>
+		<playeffect effect="effects/newaxe.effect" source="source_entity" target="source_entity" />
+	</ontimer>
+	
+	<modifier key="armorthrowmovedisabled" modpriority="90"
+		disabled="true"
+	>
+		<onframe>
+			<condition test="charges gt 0">
+				<setactivemodifierkey name="Moraxus_Ability3_1" />
+			</condition>
+		</onframe>
+	</modifier>
+	
+	
+	<modifier key="Moraxus_Ability3_4" modpriority="100"
+		passiveeffect="effects/charge4_state.effect"
+	>
+		<onframe />
+	</modifier>
+	
+	<modifier key="Moraxus_Ability3_3" modpriority="100"
+		passiveeffect="effects/charge3_state.effect"
+	>
+		<onframe />
+	</modifier>
+	
+	<modifier key="Moraxus_Ability3_2" modpriority="100"
+		passiveeffect="effects/charge2_state.effect"
+	>
+		<onframe />
+	</modifier>
+	
+	<modifier key="Moraxus_Ability3_1" modpriority="100"
+		passiveeffect="effects/charge1_state.effect"
+	>
+		<onframe />
+	</modifier>
+	
+</ability>

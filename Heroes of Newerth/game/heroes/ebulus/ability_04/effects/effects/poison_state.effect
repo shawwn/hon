@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="sting_02">
+	<definitions>
+		<particlesystem name="system0" space="entity">
+
+
+
+
+		<simpleemitter
+		
+			spawnrate="18"
+			bone="_bone_centerofchest"
+			particlelife="1100"			
+			gravity="0"
+			speed="17"
+			drag=".02"
+			acceleration="0"
+			position="0 0 0"
+			timenudge="-100"
+			material="/shared/effects/materials/poison_07.material"
+			offsetsphere="5 5 5"
+			minangle="0"
+			maxangle="360"
+			direction="0 0 1"
+			offsetdirection="0 0 0"
+			offsetradial="0 0 0"
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="20"
+				maxanglespeed="80"
+				startcolor=".4 .8 .4"
+				midcolor=".4 .8 .4"
+				endcolor="0 0 0"
+				midcolorpos=".6"
+
+				startframe="0"
+				endframe="1"
+				startsize="1"
+				midsize="15"
+				endsize="30"
+				startalpha="0"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".5"
+
+				startstickiness=".1"
+				endstickiness="0"
+
+
+
+
+			/>
+
+		</simpleemitter>
+
+
+
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Dampeer_Ability4_Hero"
+	icon="icon.tga"
+
+	effecttype="StatusDebuff"
+	displaylevel="true"
+	deathpersist="true"
+>
+
+</state>

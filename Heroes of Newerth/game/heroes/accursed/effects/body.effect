@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect>
+	<definitions>
+
+
+		<particlesystem name="system0" space="world" scale="1.0">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="1200"
+				volume="0.1" 
+				soundloop="true"
+				fadein="200"
+				fadeout="300"
+				sample="/shared/sounds/effects/torch.wav"
+			/>
+		
+			<!-- Neck -->
+			
+			<simpleemitter
+				bone="Bip01 Neck"
+				spawnrate="5"
+				particlelife="1200"
+				gravity="-1.0"
+				speed="0.20"
+				drag="2.0"
+				material="/shared/effects/materials/flame.material"
+				offsetsphere="3"
+				inheritvelocity=".025"
+			>
+				<particle
+					startcolor="1"
+					midcolor="1 .3 0.0"
+					endcolor="0"
+					minangle="0"
+					maxangle="90"
+					minanglespeed="0"
+					maxanglespeed="30"
+					startsize="0"
+					endsize="45"
+					startanchor="1"
+					endanchor=".5"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="Bip01 Neck"
+				spawnrate="5"
+				particlelife="1000"
+				gravity="-1.0"
+				speed="0.20"
+				drag="2.0"
+				material="/shared/effects/materials/dust_smoke_02.material"
+				offsetsphere="3"
+				inheritvelocity=".025"
+			>
+				<particle
+					startalpha="1"
+					endalpha="0"
+					startcolor="0"
+					midcolor=".5 .1 0.0"
+					endcolor="0"
+					minangle="0"
+					maxangle="90"
+					minanglespeed="0"
+					maxanglespeed="30"
+					startsize="4"
+					endsize="35"
+					startanchor="1"
+					endanchor="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="Bip01 Neck"
+				spawnrate="10"
+				minparticlelife="200"
+				maxparticlelife="400"
+				gravity="-1.0"
+				speed="0.20"
+				drag="2.0"
+				material="/shared/effects/materials/femme_lightning_01.material"
+				offsetsphere="7"
+				inheritvelocity=".025"
+			>
+				<particle
+					startcolor="0"
+					midcolor="1 .55 0.2"
+					endcolor="0"
+					minangle="0"
+					maxangle="90"
+					minanglespeed="0"
+					maxanglespeed="30"
+					startsize="2"
+					endsize="10"
+					startanchor="1"
+					endanchor="0"
+				/>
+			</simpleemitter>
+
+			<billboard
+				bone="Bip01 Neck"
+				material="/shared/effects/materials/flare_02.material"
+				color=".5 .2 0"	
+				startsize="20"				
+				endsize="30"
+				depthbias="-20"
+				loop="true"
+				life="300"
+			/>
+
+			<!-- Back -->
+			
+			<simpleemitter
+				bone="_bone_back"
+				spawnrate="6"
+				particlelife="1200"
+				gravity="-1.0"
+				speed="3"
+				drag="0.1"
+				material="/shared/effects/materials/flame.material"
+				offsetsphere="6 3 13"
+				inheritvelocity=".025"
+				direction="0 0 0"
+				angle="10"
+				position="0 10 0"
+			>
+				<particle
+					startcolor="1"
+					midcolor=".7 .3 0.0"
+					endcolor="0"
+					minangle="0"
+					maxangle="90"
+					minanglespeed="0"
+					maxanglespeed="30"
+					startsize="0"
+					endsize="35"
+					startanchor="1"
+					endanchor=".3"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_back"
+				spawnrate="8"
+				particlelife="1300"
+				gravity="0"
+				speed="0.20"
+				drag="12.0"
+				material="/shared/effects/materials/dust_smoke_02.material"
+				offsetsphere="8"
+				inheritvelocity="0"
+				position="0 10 0"
+			>
+				<particle
+					startalpha="1"
+					endalpha="0"
+					startcolor=".3 .1 0"
+					midcolor=".4 .1 0.0"
+					endcolor="0"
+					minangle="0"
+					maxangle="90"
+					minanglespeed="0"
+					maxanglespeed="30"
+					startsize="0"
+					endsize="35"
+					startanchor="1"
+					endanchor=".5"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_back"
+				spawnrate="30"
+				minparticlelife="400"
+				maxparticlelife="800"
+				gravity="-1.0"
+				speed="0.20"
+				drag="2.0"
+				material="/shared/effects/materials/femme_lightning_01.material"
+				offsetsphere="7"
+				inheritvelocity=".025"
+			>
+				<particle
+					startcolor="0"
+					midcolor=".8 .3 0.2"
+					endcolor="0"
+					minangle="180"
+					maxangle="360"
+					minanglespeed="0"
+					maxanglespeed="30"
+					startsize="2"
+					endsize="15"
+					startanchor="1"
+					endanchor=".5"
+				/>
+			</simpleemitter>
+
+			<billboard
+				bone="_bone_back"
+				material="/shared/effects/materials/flare_02.material"
+				color=".5 .1 0"	
+				startsize="40"				
+				endsize="50"
+				depthbias="-20"
+				loop="true"
+				life="300"
+			/>
+
+			<!-- Left Shoulder -->
+			
+			<simpleemitter
+				position="-10 0 -3"
+				bone="Box03"
+				spawnrate="6"
+				particlelife="1000"
+				gravity="-1.0"
+				speed="0.20"
+				drag="2.0"
+				material="/shared/effects/materials/flame.material"
+				offsetsphere="3"
+				inheritvelocity=".025"
+			>
+				<particle
+					startcolor="1"
+					midcolor=".7 .3 0.0"
+					endcolor="0"
+					minangle="0"
+					maxangle="90"
+					minanglespeed="0"
+					maxanglespeed="30"
+					startsize="0"
+					endsize="45"
+					startanchor="1"
+					endanchor=".6"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				position="-10 0 -3"
+				bone="Box03"
+				spawnrate="15"
+				particlelife="1800"
+				gravity="-1.0"
+				speed="0.20"
+				drag="2.0"
+				material="/shared/effects/materials/dust_smoke_02.material"
+				offsetsphere="8"
+				inheritvelocity=".025"
+			>
+				<particle
+					midalpha="1"
+					startalpha="0"
+					endalpha="0"
+					startcolor="0"
+					midcolor=".25 .1 0.0"
+					endcolor="0"
+					minangle="0"
+					maxangle="90"
+					minanglespeed="0"
+					maxanglespeed="30"
+					startsize="10"
+					endsize="0"
+					startanchor="1"
+					endanchor="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				position="-10 0 -3"
+				bone="Box03"
+				spawnrate="5"
+				minparticlelife="400"
+				maxparticlelife="600"
+				gravity="-1.0"
+				speed="0.20"
+				drag="2.0"
+				material="/shared/effects/materials/femme_lightning_01.material"
+				offsetsphere="1"
+				inheritvelocity=".025"
+			>
+				<particle
+					startcolor="0"
+					midcolor="1 .5 0.2"
+					endcolor="0"
+					minangle="0"
+					maxangle="90"
+					minanglespeed="0"
+					maxanglespeed="30"
+					startsize="5"
+					endsize="15"
+					startanchor="1"
+					endanchor=".7"
+				/>
+			</simpleemitter>
+
+			<billboard
+				position="-10 0 -3"
+				bone="Box03"
+				material="/shared/effects/materials/flare_02.material"
+				color=".3 .1 0"	
+				startsize="40"				
+				endsize="50"
+				depthbias="-20"
+				loop="true"
+				life="350"
+			/>
+
+			<!-- Right Shoulder -->
+			
+			<simpleemitter
+				position="10 0 -3"
+				bone="Box02"
+				spawnrate="6"
+				particlelife="1000"
+				gravity="-1.0"
+				speed="0.20"
+				drag="2.0"
+				material="/shared/effects/materials/flame.material"
+				offsetsphere="3"
+				inheritvelocity=".025"
+			>
+				<particle
+					startcolor="1"
+					midcolor=".7 .3 0.0"
+					endcolor="0"
+					minangle="0"
+					maxangle="90"
+					minanglespeed="0"
+					maxanglespeed="30"
+					startsize="0"
+					endsize="45"
+					startanchor="1"
+					endanchor=".6"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				position="10 0 -3"
+				bone="Box02"
+				spawnrate="15"
+				particlelife="1800"
+				gravity="-1.0"
+				speed="0.20"
+				drag="2.0"
+				material="/shared/effects/materials/dust_smoke_02.material"
+				offsetsphere="8"
+				inheritvelocity=".025"
+			>
+				<particle
+					midalpha="1"
+					startalpha="0"
+					endalpha="0"
+					startcolor="0"
+					midcolor=".25 .1 0.0"
+					endcolor="0"
+					minangle="0"
+					maxangle="90"
+					minanglespeed="0"
+					maxanglespeed="30"
+					startsize="10"
+					endsize="0"
+					startanchor="1"
+					endanchor="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				position="10 0 -3"
+				bone="Box02"
+				spawnrate="5"
+				minparticlelife="400"
+				maxparticlelife="600"
+				gravity="-1.0"
+				speed="0.20"
+				drag="2.0"
+				material="/shared/effects/materials/femme_lightning_01.material"
+				offsetsphere="1"
+				inheritvelocity=".025"
+			>
+				<particle
+					startcolor="0"
+					midcolor="2 .5 0.2"
+					endcolor="0"
+					minangle="0"
+					maxangle="90"
+					minanglespeed="0"
+					maxanglespeed="30"
+					startsize="5"
+					endsize="15"
+					startanchor="1"
+					endanchor=".7"
+				/>
+			</simpleemitter>
+
+			<billboard
+				position="10 0 -3"
+				bone="Box02"
+				material="/shared/effects/materials/flare_02.material"
+				color=".3 .1 0"	
+				startsize="40"				
+				endsize="50"
+				depthbias="-20"
+				loop="true"
+				life="350"
+			/>
+
+			<!-- Ambient Glow -->
+
+			<!--
+			<billboard
+				material="/shared/effects/materials/whitedot.material"
+				position="0 0 50"
+				color=".10 .04 0"					
+				size="250"
+				depthbias="-300"
+			/>
+
+			<groundsprite
+				minlife="90"
+				maxlife="150"
+				loop="true"
+				material="/shared/effects/materials/whitedot_ground.material"
+				minstartsize="40"
+				maxstartsize="55"
+				minendsize="80"
+				maxendsize="140"
+				startcolor="0 0 0"
+				midcolor=".1 .02 0"
+				endcolor="0 0 0"
+			/>
+			-->
+	
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+	
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+

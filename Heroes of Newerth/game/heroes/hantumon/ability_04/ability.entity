@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Hantumon4"
+	
+	icon="icon.tga"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="passive"
+
+>
+	<onframe>
+		<condition test="not_hastrait silenced" target="source_entity" source="source_entity">
+			<applystate name="State_Hantumon_Ability4" duration="100" />
+		</condition>
+	</onframe>
+</ability>

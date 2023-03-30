@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1.2">
+
+			<twopointemitter
+				bone_a="_bone_weapon1"
+				bone_b="_bone_weapon3"
+				spawnrate="355"
+				minparticlelife="100"
+				maxparticlelife="300"
+				angle="0"
+				offsetsphere="10"
+				material="/shared/effects/materials/femme_lightning_01.material"
+			>
+				<particle
+					startcolor="0"
+					midcolor=".2 .7 1"
+					endcolor="0"
+					midcolorpos="0.5"
+					minangle="0"
+					maxangle="350"
+					minanglespeed="-45"
+					maxanglespeed="45"
+					startsize="10"
+					maxendsize="30"
+					flare="1"
+					anchor="1"
+					height="6"
+				/>
+			</twopointemitter>
+			
+			<twopointemitter
+				bone_a="_bone_weapon1"
+				bone_b="_bone_weapon3"
+				spawnrate="130"
+				particlelife="300"
+				offsetsphere="2"
+				material="/shared/effects/materials/whitedot.material"
+			>
+				<particle
+					color="1 1 1"
+					midcolorpos="0.5"
+					startalpha="1.0"
+					endalpha="1.0"
+					maxangle="360"
+					minanglespeed="-45"
+					maxanglespeed="45"
+					minendsize="5"
+					startsize="5"
+					endsize="25"
+					flare="0"
+					anchor="1"
+					height="5"
+				/>
+			</twopointemitter>
+
+			<beam
+				bone_a="_bone_weapon3"
+				bone_b="_bone_weapon1"
+				size="60"
+				startcolor=".6 .8 1"
+				endcolor="0"
+				material="/shared/effects/materials/femme_lightning_01.material"
+				framespeed="1"
+				depthbias="-20"
+				anchor="1"
+			/>
+
+			<billboard
+				bone="_bone_fx_08"	
+				material="/shared/effects/materials/flare_01.material"
+				startcolor=".3 .5 .5"
+				endcolor="0"
+				size="80"
+			/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

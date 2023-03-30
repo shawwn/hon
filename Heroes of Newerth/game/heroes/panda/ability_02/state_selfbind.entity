@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Panda_Ability2_Selfbind"
+
+	
+	
+	icon="icon.tga"
+	
+
+	stunned="true"
+	effecttype=""
+	ishidden="true"
+>
+</state>

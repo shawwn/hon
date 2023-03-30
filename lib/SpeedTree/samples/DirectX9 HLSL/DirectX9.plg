@@ -1,0 +1,65 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: DirectX9 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug VC 6.0/DirectX9.res" /d "_DEBUG" "C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.6.0 Final Release\samples\DirectX9\DirectX9.rc"" 
+Creating temporary file "C:\DOCUME~1\king\LOCALS~1\Temp\RSP2F0.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "..\Common Source\\" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /FR"Debug VC 6.0/" /Fp"Debug VC 6.0/DirectX9.pch" /YX /Fo"Debug VC 6.0/" /Fd"Debug VC 6.0/" /FD /GZ /c 
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.6.0 Final Release\samples\DirectX9\DirectXExample.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.6.0 Final Release\samples\Common Source\Navigation.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.6.0 Final Release\samples\DirectX9\SpeedTreeForest.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.6.0 Final Release\samples\DirectX9\SpeedTreeForestDirectX9.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.6.0 Final Release\samples\DirectX9\SpeedTreeWrapper.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.6.0 Final Release\samples\Common Source\Transform.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.6.0 Final Release\samples\DirectX9\d3dapp.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.6.0 Final Release\samples\DirectX9\d3denumeration.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.6.0 Final Release\samples\DirectX9\d3dsettings.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.6.0 Final Release\samples\DirectX9\d3dutil.cpp"
+"C:\__WORK__\SpeedTree\SpeedTreeRT SDK 1.6.0 Final Release\samples\DirectX9\dxutil.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\king\LOCALS~1\Temp\RSP2F0.tmp" 
+Creating temporary file "C:\DOCUME~1\king\LOCALS~1\Temp\RSP2F1.tmp" with contents
+[
+dsound.lib dinput8.lib dxerr9.lib d3dx9.lib d3d9.lib d3dxof.lib dxguid.lib winmm.lib comctl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib SpeedTreeRT.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug VC 6.0/SpeedTreeRT DirectX 9.0.pdb" /debug /machine:I386 /out:"..\..\bin\VC 6.0\Debug\SpeedTreeRT DirectX 9.0.exe" /pdbtype:sept /libpath:"..\..\lib\VC 6.0\Release" 
+".\Debug VC 6.0\DirectXExample.obj"
+".\Debug VC 6.0\Navigation.obj"
+".\Debug VC 6.0\SpeedTreeForest.obj"
+".\Debug VC 6.0\SpeedTreeForestDirectX9.obj"
+".\Debug VC 6.0\SpeedTreeWrapper.obj"
+".\Debug VC 6.0\Transform.obj"
+".\Debug VC 6.0\d3dapp.obj"
+".\Debug VC 6.0\d3denumeration.obj"
+".\Debug VC 6.0\d3dsettings.obj"
+".\Debug VC 6.0\d3dutil.obj"
+".\Debug VC 6.0\dxutil.obj"
+".\Debug VC 6.0\DirectX9.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\king\LOCALS~1\Temp\RSP2F1.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+DirectXExample.cpp
+Navigation.cpp
+SpeedTreeForest.cpp
+SpeedTreeForestDirectX9.cpp
+SpeedTreeWrapper.cpp
+Transform.cpp
+d3dapp.cpp
+d3denumeration.cpp
+d3dsettings.cpp
+d3dutil.cpp
+dxutil.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+SpeedTreeRT DirectX 9.0.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

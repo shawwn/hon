@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect persistent="1" name="ability_01_impact">
+	<definitions>
+		<particlesystem name="system0" space="entity"  scale=".30">
+
+
+
+
+
+		
+		
+
+
+
+		<template name="pulse">
+					<billboard
+						delay="{delay}"
+						life="600"
+						startcolor=".4 .3 0"
+						endcolor="0 0 0"
+						
+						startalpha="1.0"
+						midalpha="1.0"
+						endalpha="0.0"
+						midalphapos="0.75"
+						startparam="0.05"
+						endparam="0.0"				
+						
+						startsize="50"
+						
+						endsize="1850"
+						midsizepos=".4"				
+						
+						depthbias="0"
+						position="0 0 20"
+						material="/shared/effects/materials/corona_06.material"
+						lockup="true"
+						pitch="90"
+					/>
+					
+					<billboard
+						delay="{delay}"
+						life="500"
+						color="1.0 1.0 1.0"
+						startalpha="1.0"
+						midalpha="1.0"
+						endalpha="0.0"
+						midalphapos="0.75"
+						startparam=".05"
+						endparam="0.0"
+						startsize="128"
+						endsize="1368"
+						depthbias="-100"
+						position="0 0 20"
+						material="/shared/effects/materials/refract_ring.material"
+						lockup="true"
+						pitch="90"
+					/>				
+		</template>		
+		<instance name="pulse" delay="0"/>
+		<instance name="pulse" delay="80"/>
+		<instance name="pulse" delay="160"/>
+
+
+
+					
+
+      </particlesystem>
+   </definitions>
+   <thread>
+   
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+	   
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

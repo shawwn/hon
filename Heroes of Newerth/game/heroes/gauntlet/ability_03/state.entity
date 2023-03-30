@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Gauntlet_Ability3"
+	icon="icon.tga"
+
+	effecttype="StatusDebuff"
+	displaylevel="true"
+	
+	movespeedslowpercharge="0.01"
+	attackspeedslowpercharge="0.01"
+	castspeedpercharge="-0.01"
+	passiveeffect="effects/state_enemy.effect"
+	mincharges="0"
+	maxcharges="35"
+>
+	<onframe/>
+	
+	<oninflict>
+		<playeffect effect="effects/cast.effect" source="source_entity" target=""/>
+	</oninflict>
+</state>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="1" deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1.2">
+
+			<model
+				position="0 0 20"
+				scale="1"
+				life="340"
+				model="/shared/effects/arrows/arrow.mdf"
+				anim="idle"				
+				color="1 0 0"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="0.0"
+				midalphapos="0.9"
+			/>
+
+			<groundsprite
+				life="300"
+				delay="200"
+				timenudge="0"
+				material="/shared/effects/materials/ground_arrow_impact.material"
+				startsize="0"
+				endsize="100"				
+				midsizepos=".5"
+				startcolor="0 0 0"
+				midcolor="1 0 0"
+				endcolor="0 0 0"
+				midcolorpos=".1"
+				minangle="15"
+				maxangle="55"
+				angles="0 0 0"
+			/>
+
+			<billboard
+				life="500"
+				material="/shared/effects/materials/whitedot.material"
+				startcolor="1 .5 0"
+				midcolor="1 .5 0"
+				endcolor="0 0 0"
+				startsize="25"
+				endsize="125"
+				depthbias="-15"
+				position="0 0 25"
+			/>
+			
+			<billboard
+				life="500"
+				material="/shared/effects/materials/whitedot.material"
+				startcolor="1 .5 0"
+				midcolor="1 .5 0"
+				endcolor="0 0 0"
+				startsize="10"
+				endsize="90"
+				depthbias="-15"
+				position="0 0 25"
+			/>
+			
+			<groundsprite 
+				scale="1.6"
+				life="1000"
+				startcolor=".4 .1 0"
+				midcolor=".4 .1 0"
+				endcolor=" 0 0 0"
+				material="/shared/effects/materials/whitedot_ground.material"
+			/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>  
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" /> 
+	</thread>
+
+</effect>

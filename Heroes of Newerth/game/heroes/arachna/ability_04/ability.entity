@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Arachna4"
+	
+	icon="icon.tga"
+	passiveeffect=""
+	statuseffecttooltip="State_Arachna_Ability4"
+	
+	anim="ability_4"
+	casttime="800"
+	castactiontime="300"
+	casteffecttype="Physical"
+	
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_entity"
+	targetscheme="enemy_units"
+	manacost="125,175,250"
+	cooldowntime="80000,50000,30000"
+	range="500"
+>
+	<onimpact>
+		<spawnprojectile name="Projectile_Arachna_Ability4" source="source_attack_offset" target="target_entity" proxy="target_entity" noresponse="true" />
+	</onimpact>
+</ability>

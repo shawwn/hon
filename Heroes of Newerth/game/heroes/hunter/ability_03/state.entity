@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Hunter_Ability3"
+	
+	icon=""
+	passiveeffect=""
+	revealed="true"
+	sighted="true"
+	ishidden="true"
+>
+</state>

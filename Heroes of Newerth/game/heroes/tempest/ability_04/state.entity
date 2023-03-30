@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Tempest_Ability4_Pull"
+
+	immobilized="true"
+	silenced="true"
+	disarmed="true"
+	perplexed="true"
+
+	
+	icon="icon.tga"
+	
+	passiveeffect=""
+	effecttype="Push"
+
+>
+	<onframe>
+		<push force="-75" frame="true" source="source_entity" />
+	</onframe>
+</state>

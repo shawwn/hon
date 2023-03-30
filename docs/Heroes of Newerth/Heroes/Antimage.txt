@@ -1,0 +1,22 @@
+Ability 1:
+----------
+This is a passive. It is an attack modifier. It burns mana from the target on each attack. This deals damage bonus magical damage based on a factor of how much mana was drained. If the target has no mana, you drain zero mana, so you deal zero bonus magical damage.
+
+
+Ability 2:
+----------
+Target a point on the map. If cast point is beyond the maximum blink, you will blink in that direction. This is a teleportation ability. See teleportation mechanics for more details.
+
+
+Ability 3:
+----------
+This is a passive. It gives you bonus magical armor. 
+
+
+Ultimate:
+----------
+Targets an enemy unit with this spell, dealing magical damage to him based on how much mana he is missing. This interrupts channeling spells.
+
+
+
+Agility/Melee

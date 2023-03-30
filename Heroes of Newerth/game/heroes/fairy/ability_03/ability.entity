@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Fairy3"
+
+	statuseffecttooltip="State_Fairy_Ability3"
+	
+	icon="icon.tga"
+	
+	anim="ability_3"
+	casttime="800"
+	castactiontime="400"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_position"
+	casteffecttype="Magic"
+	targetscheme="enemy_units"
+	
+	manacost="100,120,140,160"
+	cooldowntime="13000"
+	
+	projectile="Projectile_Fairy_Ability3"
+	range="900"
+	forcerange="900"
+	allowoutofboundscast="true"
+>
+	<onimpact />
+</ability>

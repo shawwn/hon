@@ -1,0 +1,2 @@
+refraction on ult impact is too strong or bad sprite
+timing and positioning of the refraction is off at different attack speeds (why isn't this in the attack action effect instead?)

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Fade2"
+	
+	icon="icon.tga"
+	passiveeffect=""
+	
+	anim="ability_2"
+	casttime="1000"
+	castactiontime="300"
+	casteffecttype="Magic"
+	casteffect=""
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_dual_position"
+	targetscheme="all_other_organic_units"
+	manacost="85,105,125,145"
+	cooldowntime="12000"
+	
+	range="500"
+
+>
+	<onimpact>
+		<spawnaffector name="Affector_Fade_Ability2" target="source_position" distance="0" />
+		<applystate name="State_Fade_Ability2_Cooldown" target="source_entity" continuous="true" pushentity="true" />
+		<setproxy entity="this_entity" target="stack_entity" />
+	</onimpact>
+	
+	<modifier key="fadeabilitytwocooldown" modpriority="100"
+	>
+		<onframe>
+			<condition test="isready">
+				<expire entity="proxy_entity" />
+			</condition>
+		</onframe>
+	</modifier>
+</ability>

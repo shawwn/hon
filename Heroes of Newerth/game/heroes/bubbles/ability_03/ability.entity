@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Bubbles3"
+
+	statuseffecttooltip="State_Bubbles_Ability3"
+	icon="icon.tga"
+	passiveeffect=""
+	impacteffect=""
+	
+	anim="ability_3"
+	casttime="500"
+	castactiontime="0"
+	channeltime="750,1500,2250,3000"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_self"
+	ischanneling="true"
+	manacost="50,40,30,20"
+	cooldowntime="6000"
+	casteffecttype="Magic"
+	allowautocast="true"
+>
+	<onimpact />
+
+	<onchannelstart>
+		<disjoint target="source_entity" />
+		
+		<applystate name="State_Bubbles_Ability3" ischannel="true" />
+	</onchannelstart>
+	
+	<onattackeddamageevent>
+		<cantarget targetscheme="enemy_objects" ignoreinvulnerable="true" >
+			<condition test="istoggled">
+				<canactivate>
+					<damageeffecttype effecttype="DOT" />
+					<else>
+						<setvalue name="damage_attempted" a="damage_attempted" b="0" op="mult" />
+						<useability/>
+					</else>
+				</canactivate>
+			</condition>
+		</cantarget>
+	</onattackeddamageevent>
+</ability>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" useentityeffectscale="1">
+	<definitions>
+		<particlesystem name="system0" space="entity" scale=".65" >
+
+		<simpleemitter
+		
+			spawnrate="15"
+			bone="_bone_centerofchest"
+			particlelife="1100"			
+			gravity="0"
+			speed="20"
+			drag=".02"
+			acceleration="0"
+			position="0 0 0"
+			timenudge="-100"
+			material="/shared/effects/materials/poison_07.material"
+			offsetsphere="3 3 3"
+			minangle="0"
+			maxangle="180"
+			direction="0 0 1"
+			offsetdirection="0 0 0"
+			offsetradial="0 0 0"
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="20"
+				maxanglespeed="80"
+				startcolor=".8 .8 .8"
+				midcolor="1 1 1"
+				endcolor="0 0 0"
+				midcolorpos=".6"
+
+				startframe="0"
+				endframe="1"
+				startsize="1"
+				midsize="15"
+				endsize="30"
+				startalpha="0"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".5"
+
+				startstickiness=".1"
+				endstickiness="0"
+
+
+
+
+			/>
+
+		</simpleemitter>
+
+
+		<simpleemitter
+		
+			spawnrate="40"
+			bone="_bone_centerofchest"
+			particlelife="1200"			
+			gravity="0"
+			speed="20"
+			drag=".02"
+			acceleration="0"
+			position="0 0 0"
+			timenudge="-100"
+			material="/shared/effects/materials/poison_10.material"
+			offsetsphere="3 3 3"
+			minangle="0"
+			maxangle="180"
+			direction="0 0 1"
+			offsetdirection="0 0 0"
+			offsetradial="0 0 0"
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+				maxanglespeed="0"
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="0 0 0"
+				midcolorpos=".2"
+
+				startframe="0"
+				endframe="1"
+				startsize="1"
+				midsize="10"
+				endsize="20"
+				startalpha="0"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".5"
+
+				startstickiness=".1"
+				endstickiness="0"
+
+
+
+
+			/>
+
+		</simpleemitter>
+
+
+
+
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

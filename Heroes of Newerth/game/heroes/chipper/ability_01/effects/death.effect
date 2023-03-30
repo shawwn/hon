@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect>
+	<definitions>
+	
+		<particlesystem name="system0" space="world" scale=".825">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2000"
+				volume="0.75" 
+				sample="../sounds/death.wav"
+			/>
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2000"
+				volume="0.2" 
+				sample="/heroes/pyromancer/sounds/impact_%.wav"
+			/>
+
+			<simpleemitter
+				life="250"
+				spawnrate="15"		
+				particlelife="400"			
+				speed="30"
+				material="/shared/effects/materials/dust_smoke_02.material"
+				offsetsphere="25"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-40"
+					maxanglespeed="-40"
+					startcolor=".3"
+					endcolor="0"		
+					startsize="150"
+					endsize="260"
+					startalpha="1"
+					midalpha=".5"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				life="250"
+				spawnrate="350"	
+				count="15"
+				minparticlelife="200"	
+				maxparticlelife="600"
+				minspeed="100"			
+				maxspeed="520"
+				material="/shared/effects/materials/cloud.material"
+				offsetsphere="35 35 10"
+			>
+				<particle 
+					minangle="0"
+					maxangle="20"
+					minanglespeed="-30"
+					maxanglespeed="-30"
+					color="1 1 .80"
+					startsize="80"
+					endsize="180"
+					startalpha="0"
+					midalpha=".2"
+					endalpha="0"
+					endstickiness=".7"
+				/>
+
+			</simpleemitter>
+
+			<simpleemitter
+				life="250"
+				spawnrate="1350"	
+				count="12"
+				minparticlelife="100"	
+				maxparticlelife="400"			
+				speed="230"
+				material="/shared/effects/materials/phantom_smoke_03.material"
+				offsetsphere="55 55 10"
+				depthbias="-50"
+			>
+				<particle 
+					minangle="0"
+					maxangle="120"
+					minanglespeed="-30"
+					maxanglespeed="-30"
+					startcolor=".85 .73 0"
+					midcolor=".7 .2 0"
+					endcolor="0"		
+					startsize="70"
+					endsize="220"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					endstickiness=".4"
+				/>
+				
+			</simpleemitter>
+			
+			<simpleemitter
+				life="1000"
+				spawnrate="3300"
+				count="10"
+				minparticlelife="400"
+				maxparticlelife="700"
+				gravity="20"
+				minspeed="100"
+				maxspeed="1000"
+				drag=".01"
+				material="/shared/effects/materials/spark_10.material"
+				offsetsphere="2 2 0"
+				minangle="0"
+				maxangle="90"
+				direction="0 0 1"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="1"
+					midcolor="1 .55 0"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					minstartsize="5"
+					maxstartsize="15"
+					midsize="15"
+					endsize="5"
+					startalpha="0"
+					midalpha=".7"
+					endalpha="0"
+					midalphapos=".5"
+				/>
+			</simpleemitter>
+
+			<billboard
+				life="150"
+				material="/shared/effects/materials/whitedot.material"
+				startsize="60"
+				endsize="280"
+				depthbias="-30"
+				startcolor=".75 .55 0"
+				midcolor=".55 .15 0"
+				endcolor="0"
+			/>
+
+			<billboard
+				life="200"
+				material="/shared/effects/materials/corona_07.material"
+				startsize="100"
+				endsize="350"
+				depthbias="-30"
+				startcolor=".1"
+				endcolor="0"
+				lockup="1"
+				pitch="90"
+			/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

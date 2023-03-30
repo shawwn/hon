@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Jereziah2"
+
+	
+	
+	statuseffecttooltip="State_Jereziah_Ability2"
+	statuseffectheader="true"
+	icon="icon.tga"
+	
+	anim="ability_2"
+	casttime="1500"
+	castactiontime="500"
+	casteffect="effects/cast.effect"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_entity"
+	targetscheme="ally_units"
+	casteffecttype=""
+	
+	manacost="60,70,80,90"
+	cooldowntime="20000"
+	
+	range="500"
+
+	doubleactivate="true"
+>
+	<onimpact >
+		<dispel type="StatusDebuff" />	
+		<applystate name="State_Jereziah_Ability2" duration="5000,8000,11000,14000"/>
+	</onimpact>
+
+</ability>

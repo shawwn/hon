@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+	<definitions>
+
+		<particlesystem name="system0" scale=".3" space="entity">
+
+			<sound
+				delay="300"
+				linearfalloff="true"
+				falloffstart="1000"
+				falloffend="2000" 
+				volume="0.75" 
+				sample="/heroes/Accursed/ability_04/sounds/ability_04.wav"
+				fadein="10"
+				fadeout="5000"
+			/>
+
+			<simpleemitter
+				bone="_bone_back"
+				delay="400"
+				expirelife="1300"
+				startparticlecolor="1 1 1"
+				endparticlecolor="0 0 0"	
+				speed="20" 
+				spawnrate="15"
+				minparticlelife="400"
+				maxparticlelife="900"
+				offsetsphere="25"
+				depthbias="-120"
+				material="/shared/effects/materials/smash_add.material"
+
+			>
+				<particle 
+					startcolor="0"
+					midcolor="0 .1 .7"
+					endcolor="0 0 0"
+					startalpha="0.0"
+					midalpha="1"
+					endalpha="0.0"
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="-10"
+					maxanglespeed="10"
+					startsize="100"
+					minendsize="170"
+					maxendsize="250"
+					
+				/>
+			</simpleemitter>
+		
+			<trackeremitter
+				delay="700"
+				expirelife="1300"
+				startparticlecolor=".9 .9 1"
+				endparticlecolor="0 0 0"	
+				position="0.0 0.0 30.0" 
+				targetposition="0.0 0.0 100.0"
+				targetowner="target"
+				tracktype="distance"
+				trackspeed="100.0" 
+				spawnrate="30"
+				particlelife="900"
+				speed="20"
+				offsetsphere="120"
+				material="/shared/effects/materials/dust_smoke_02.material"
+				inheritvelocity="0.0"
+				distancelife="true"
+				angle="0"
+			>
+				<particle 
+					color="0 .1 .75"
+					midalpha="1"
+					endalpha="0"
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-90"
+					maxanglespeed="90"
+					maxendsize="300"
+					startsize="10"
+					minendsize="200"
+					
+					
+				/>
+			</trackeremitter>
+
+			<simpleemitter
+				bone="_bone_back"
+				spawnrate="13"
+				particlelife="1200"
+				gravity="-52.0"
+				speed="22.20"
+				material="/shared/effects/materials/dust_smoke_02.material"
+				offsetsphere="3"
+				position="0 10 0"
+				inheritvelocity=".025"
+			>
+				<particle
+					startcolor="0 .25 1"
+					midcolor=".5 .25 .1"
+					endcolor="1 0 0"
+					midcolorpos=".75"
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".9"
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="0"
+					maxanglespeed="30"
+					startsize="165"					
+					endsize="20"
+				/>
+			</simpleemitter>
+	
+			<simpleemitter
+				bone="_bone_back"
+				spawnrate="13"
+				particlelife="1200"
+				gravity="-52.0"
+				speed="22.20"
+				material="/shared/effects/materials/femme_lightning_01.material"
+				offsetsphere="3"
+				position="0 10 0"
+				inheritvelocity=".025"
+			>
+				<particle
+					startcolor="0 .25 1"
+					midcolor=".5 .25 .1"
+					endcolor="1 0 0"
+					midcolorpos=".75"
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".9"
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="0"
+					maxanglespeed="30"
+					startsize="165"					
+					endsize="20"
+				/>
+			</simpleemitter>
+			
+		</particlesystem>
+		
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+</effect>

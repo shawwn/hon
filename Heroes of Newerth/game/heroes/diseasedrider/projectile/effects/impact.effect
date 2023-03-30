@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+		
+			<sound
+				linearfalloff="true"
+				falloffstart="0"
+				falloffend="1600"
+				volume=".4" 
+				sample="../../sounds/impact_%.wav"
+			/>
+
+			<simpleemitter
+				spawnrate="150"
+				count="6"
+				bone="_bone_centerofchest"
+				particlelife="800"
+				gravity="15"
+				minspeed="50"
+				maxspeed="200"
+				drag=".03"
+				material="/shared/effects/materials/goo.material"
+				offsetsphere="15"
+				minangle="160"
+				maxangle="160"
+				direction="0 0 -1"
+			>
+				<particle 
+					color=".5 .4 .2"
+					startalpha="1"
+					endalpha="0"
+					midcolorpos=".2"
+					maxangle="360"
+					startsize="15"
+					endsize="70"
+					minanglespeed="-60"
+					maxanglespeed="60"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				spawnrate="150"
+				count="15"
+				bone="_bone_centerofchest"
+				particlelife="1000"
+				gravity="15"
+				minspeed="50"
+				maxspeed="200"
+				drag=".02"
+				material="/shared/effects/materials/poison_09.material"
+				offsetsphere="25 25 25"
+				minangle="160"
+				maxangle="160"
+				direction="0 0 -1"
+			>
+				<particle 
+					startcolor=".5 .4 .2"
+					midcolor=".5 .4 .2"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					minangle="0"
+					maxangle="360"
+					startsize="25"
+					endsize="85"
+					minanglespeed="-60"
+					maxanglespeed="60"
+				/>
+				<particle 
+					startcolor=".5 .5 .5"
+					midcolor=".5 .5 .5"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					minangle="0"
+					maxangle="360"
+					startsize="25"
+					endsize="85"
+					minanglespeed="-60"
+					maxanglespeed="60"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				spawnrate="233"
+				particlelife="1000"
+				count="10"
+				particlelifealloc="6000"
+				gravity="9.0"
+				minspeed="120"
+				maxspeed="282.0"
+				direction="0 0 1"
+				minangle="0"
+				maxangle="90"
+				drag="0.075"
+				acceleration="0.0"
+				inheritvelocity="0.5"
+			>
+				<particle>
+					<trailemitter
+						life="1200"
+						startparticlealpha="1"
+						midparticlealpha="1"
+						endparticlealpha="0"
+						particlelife="500"
+						spawnrate="10"
+						texpostime="1200"
+						texposscale="0"
+						texstretchscale="1"
+						position="0 0 0"
+						inheritvelocity="0.25"
+						material="/shared/effects/materials/goo_trail_blend.material"
+					>
+						<particle
+							color=".6 .5 .2"
+							startalpha="1"
+							midalpha="1"
+							endalpha="0"
+							midalphapos=".2"
+							startsize="16"
+							midsize="10"
+							endsize="12"
+						/>
+					</trailemitter>
+					
+					<simpleemitter
+						spawnrate="20"
+						count="80"
+						particlelife="750"
+						gravity="5"
+						speed="40"
+						acceleration="0"
+						position="0 0 0"
+						material="/shared/effects/materials/poison_05.material"
+						offsetsphere="1 1 1"
+						minangle="0"
+						maxangle="180"
+						direction="0 0 1"
+						offsetdirection="0 0 0"
+						offsetradial="0 0 0"
+						inheritvelocity="0.15"
+					>
+						<particle
+							minangle="0"
+							maxangle="0"
+							minanglespeed="0"
+							maxanglespeed="0"
+							startcolor="0 0 0"
+							midcolor=".6 .6 .05"
+							endcolor="0 0 0"
+							midcolorpos=".2" 
+							startframe="0"
+							endframe="1"
+							startsize="20"
+							midsize="20"
+							endsize="20"
+							midsizepos=".8"
+							turn="true"
+						/>
+					</simpleemitter>
+				</particle>
+			</simpleemitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0"  particlesystem="system0"/>
+		<waitfordeath instance="instance0"/>
+	</thread>
+
+</effect>

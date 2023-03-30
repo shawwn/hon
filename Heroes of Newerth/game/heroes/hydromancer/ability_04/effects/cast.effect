@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<modifier
+			name="modifier0"
+			life="300"
+			startalpha="1"
+			endalpha="0"
+		/>
+		
+		
+		<particlesystem name="system1" space="world" scale=".9" entityeffectscale="true">
+<!--
+			<template name="morph">
+				<model
+					delay="{delay}"
+					life="300"
+					model="ult_form/model.mdf"
+					anim="cast"
+					startcolor="1 1 1"
+					midcolor="1 1 1"
+					endcolor="1 1 1"
+					midcolorpos=".2"
+					expirelife="500"
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".9"
+					startscale="{ssize}"
+					midscale="{msize}"
+					endscale="{esize}"
+					yawspeed="{yspeed}"
+				/>
+			</template>
+			
+			<instance name="morph" delay="200" ssize="0" msize="1.25" esize="1.25" yspeed="0"/>
+-->
+		</particlesystem>
+
+		<particlesystem name="system0" space="world" scale=".45" entityeffectscale="true">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2200"
+				volume=".8"
+				sample="../sounds/cast.wav"
+			/>
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2200"
+				volume=".3"
+				sample="/heroes/kraken/ability_01/sounds/impact.wav"
+			/>
+
+			<model
+				parentmodel="true"
+				parentskeleton="true"
+				startcolor="0"
+				midcolor=".5 1 2"
+				endcolor="0"
+				material="/shared/effects/materials/shell4.material"
+				startalpha="0"
+				endalpha="1"
+				startsize="1.15"
+				endsize="1.05"
+				life="1000"
+			/>
+
+			<simpleemitter
+				depthbias="-30"
+				life="500"
+				minparticlelife="750"				
+				maxparticlelife="1300"				
+				startspawnrate="500"
+				endspawnrate="0"
+				minspeed="0"
+				maxspeed="1750"
+				gravity="65"
+				direction="0 0 1"
+				minangle="0"
+				maxangle="15"
+				drag="0.01"
+				material="/shared/effects/materials/blood_white.material"
+				offsetsphere="25 25 50"
+				position="0 0 20"
+				collide="1"
+			>
+				<particle 
+					minangle="0"
+					maxangle="160"
+					minanglespeed="-10"
+					maxanglespeed="10"
+					startsize="40"
+					endsize="150"
+					startcolor="1"
+					midcolor=".5 .8 1"					
+					endcolor="1"				
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					minscale=".5"
+					maxscale="1"
+				/>
+				<particle 
+					minangle="0"
+					maxangle="160"
+					minanglespeed="-10"
+					maxanglespeed="10"
+					startsize="40"
+					endsize="160"
+					startcolor="1"
+					midcolor=".6 1 1"					
+					endcolor="1"				
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					minscale=".5"
+					maxscale="1"
+				/>
+				<particle 
+					minangle="0"
+					maxangle="260"
+					minanglespeed="-20"
+					maxanglespeed="20"
+					startsize="110"
+					endsize="0"
+					startcolor="1"
+					endcolor=".8 1 1"				
+					startalpha=".5"
+					midalpha="1"
+					endalpha="0"
+					minscale=".5"
+					maxscale="1"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				depthbias="-30"
+				life="500"
+				minparticlelife="750"				
+				maxparticlelife="1500"				
+				spawnrate="40"
+				minspeed="0"
+				maxspeed="1450"
+				gravity="55"
+				direction="0 0 1"
+				minangle="20"
+				maxangle="15"
+				drag="0.01"
+				material="/shared/effects/materials/refract_outsplash.material"
+				offsetsphere="25 25 50"
+				position="0 0 20"
+			>
+				<particle 
+					maxangle="360"
+					startsize="145"
+					endsize="325"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					startparam="0.5"
+					endparam="0"
+				/>
+			</simpleemitter>
+			
+			<billboard
+				life="800"
+				startcolor="0 .5 1"
+				midcolor=".1 .55 1"
+				midcolorpos="0.3"
+				endcolor="0"
+				startsize="300"
+				endsize="600"
+				depthbias="0"
+				material="/shared/effects/materials/whitedot.material"
+				position="0 0 15"
+				lockup="true"
+				lockright="true"
+				pitch="90"
+			/>
+
+			<billboard
+				depthbias="-30"
+				position="0 0 15"
+				life="800"
+				material="/shared/effects/materials/refract_ripple.material"
+				startsize="135"
+				endsize="525"
+				startalpha="0"
+				midalpha=".75"
+				endalpha="0"
+				startparam="0.02"
+				endparam="0"
+				lockup="true"
+				lockright="true"
+				pitch="90"
+			/>
+
+			<billboard
+				delay="50"
+				life="700"
+				material="/shared/effects/materials/outsplash_blend.material"
+				position="0 0 15"
+				depthbias="-30"
+				startcolor="1 1 1"
+				endcolor="1 1 1"
+				startsize="105"
+				endsize="305"
+				startalpha="0"
+				midalphapos=".2"
+				midalpha=".75"
+				endalpha="0"
+				lockup="1"
+				lockright="1"
+				pitch="-90"
+				anchor=".8"
+			/>
+		</particlesystem>
+			
+
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnparticlesystem instance="instance2" particlesystem="system1" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>  
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+		<waitfordeath instance="instance1" />
+	</thread>
+
+</effect>

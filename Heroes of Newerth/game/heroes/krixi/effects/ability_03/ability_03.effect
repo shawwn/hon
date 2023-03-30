@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="luna_aura" useentityeffectscale="true">
+
+	<definitions>
+		<particlesystem name="system0" space="entity" scale="1.2">
+
+
+
+
+		<groundsprite
+
+			life="800"
+			loop="true"
+			material="/shared/effects/materials/luna_aura_01.material"
+			startsize="45"
+			midsize="50"
+			endsize="45"
+			midsizepos=".5"
+			startcolor=".2 .2 .2"
+			midcolor=".5 .5 .5"
+			endcolor=".2 .2 .2"
+			
+
+			midcolorpos=".2"
+			minangle="0"
+			maxangle="0"
+			angles="0 0 0"
+			yawspeed="0"
+			
+
+
+		/>
+
+
+
+	</particlesystem>
+
+</definitions>
+
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<waitfordeath instance="instance0" />
+	<!-- <die /> -->
+</thread>
+
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+
+
+
+
+
+
+

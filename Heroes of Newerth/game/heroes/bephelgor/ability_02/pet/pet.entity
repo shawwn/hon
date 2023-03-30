@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pet
+	name="Pet_Bephelgor_Ability2"
+	
+	
+	
+	icon="/heroes/bephelgor/ability_02/icon.tga"
+	portrait="/heroes/bephelgor/ability_02/icon.tga"
+	model="model.mdf"
+	skin=""
+	
+	passiveeffect="effects/body.effect"
+	spawneffect="effects/spawn.effect"
+	respawneffect=""
+	selectsound=""
+	orderconfirmedsound=""
+	
+	preglobalscale="1.305"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="64"
+	boundsradius="16"
+	selectionradius="32"
+	targetoffset="0 0 0"
+
+	movespeed="400"
+	turnrate="450"
+	turnsmoothing="0.05"
+
+	maxhealth="250,325,400,475"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0"
+
+	armor="0"
+	magicarmor="3"
+
+	cancarryitems="false"
+	inventory0="Ability_Bephelgor2_Pet_Ability1"
+	inventory1=""
+	inventory2=""
+	inventory3=""
+
+	attackduration="1000"
+	attackactiontime="350"
+	attackcooldown="1250"
+	attackdamagemin="17,27,34,43"
+	attackdamagemax="18,30,40,49"
+	attacknumanims="2"
+	attackoffset="0 60 100"
+	attackprojectile=""
+	attackrange="100"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="effects/impact.effect"
+	attacktype="melee"
+	combattype="Melee"
+
+	aggrorange="600"
+	sightrangeday="1200"
+	sightrangenight="800"
+	
+	goldbountymin="10,13,18,20"
+	goldbountymax="10,13,18,20"
+	experiencebounty="20"
+	
+	lifetime="35000"
+	
+	unittype="summoned"
+	nocorpse="true"
+	corpsetime="4000"
+	corpsefadetime="4500"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+>
+	<onspawn>
+		<applystate name="State_Bephelgor_Ability2_Spawn" duration="500" />
+		<removecharge entity="proxy_entity" />
+		<removecharge entity="proxy_entity" />
+		<removecharge entity="proxy_entity" />
+		<removecharge entity="proxy_entity" />
+	</onspawn>
+</pet>

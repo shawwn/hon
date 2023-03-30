@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+	
+		<modifier
+		life="250"
+			name="modifier0"
+			startcolor=".5"
+			endcolor="1 1 1"
+			startalpha="0"
+			midalpha="1"
+			endalpha="1"
+		/>
+		
+		<particlesystem name="system0" space="world" scale=".8">
+
+			<simpleemitter
+				spawnrate="45"
+				particlelife="450"
+				offsetsphere="5"
+				material="/shared/effects/materials/phantom_smoke_04.material"
+			>
+				<particle 
+					startcolor=".2 0 .7"
+					midcolor=".2 0 .7"
+					endcolor="0 0 0"
+					midcolorpos="0.4"
+					minangle="0"
+					maxangle="360"
+					startsize="45"
+					midsize="25"
+					endsize="15"
+					startalpha=".2 .2 .2"
+					midsizepos=".8"
+					minanglespeed="-90"
+					maxanglespeed="90"
+					anchor=".25"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				spawnrate="25"
+				particlelife="500"
+				material="/shared/effects/materials/phantom_smoke_04.material"
+			>
+				<particle 
+					startcolor=".3 0 .25"
+					midcolor=".3 0 .25"
+					endcolor="0 0 0"
+					midcolorpos="0.4"
+					minangle="0"
+					maxangle="360"
+					startsize="45"
+					midsize="25"
+					endsize="15"
+					startalpha=".2 .2 .2"
+					midsizepos=".8"
+					minanglespeed="-90"
+					maxanglespeed="90"
+					anchor=".25"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				spawnrate="65"
+				minparticlelife="900"
+				maxparticlelife="1200"
+				material="/shared/effects/materials/bad_healing_smoke_12.material"
+				offsetsphere="15"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="0"
+					startcolor=".15 0 .5"
+					midcolor=".15 0 .5"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					startsize="20"
+					maxendsize="120"
+					midsizepos=".3"
+					startalpha="1"
+					endalpha="0 0 0"
+					midalphapos=".5"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				spawnrate="45"
+				particlelife="350"
+				offsetsphere="25"
+				material="/shared/effects/materials/phantom_smoke_04.material"
+				inheritvelocity="-.25"
+			>
+				<particle 
+					startcolor="0"
+					midcolor=".25 0 .5"
+					endcolor="0 0 0"
+					midcolorpos="0.4"
+					minangle="0"
+					maxangle="360"
+					startsize="100"
+					endsize="0"
+					midsizepos=".8"
+					minanglespeed="-90"
+					maxanglespeed="90"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				depthbias="-40"
+				spawnrate="40"
+				particlelife="600"
+				offsetsphere="25"
+				material="/shared/effects/materials/dust.material"
+			>
+				<particle 
+					startcolor=".25 0 1"
+					midcolor=".25 0 1"
+					midcolorpos="0.2"
+					endcolor="0 0 0"
+					minangle="0"
+					maxangle="360"
+					startsize="0"
+					endsize="75"
+					minanglespeed="-90"
+					maxanglespeed="90"
+					anchor=".65"
+					startalpha=".75"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				spawnrate="22"
+				particlelife="600"
+				position="0 0 0"
+				material="/shared/effects/materials/refract_wellwave.material"
+				offsetsphere="15"
+				angle="20"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					startsize="0"
+					endsize="50"
+					startparam="1.25"
+					endparam="0"
+					startalpha="1"
+					endalpha="0"
+					anglespeed="-90"
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+	</thread>
+
+</effect>

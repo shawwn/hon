@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Tundra_Ability1"
+
+	icon=""
+	portrait=""
+	model="/shared/models/invis.mdf"
+	passiveeffect="effects/trail.effect"
+	preglobalscale="1.0"
+	modelscale="1.0"
+	effectscale="1.0"
+	boundsheight="0"
+	boundsradius="0"
+	isselectable="false"
+	selectionradius="0"
+	targetoffset="0 0 0"
+
+	canrotate="false"
+	ismobile="false"
+
+	attacktype="none"
+	combattype="Ranged"
+
+	sightrangeday="500"
+	sightrangenight="500"
+	unitwalking="true"
+	canattack="false"
+	deathtime="0"
+	corpsetime="0"
+	
+	invulnerable="true"
+	flying="false"
+	drawonmap="false"
+	clearvision="true"
+
+>
+</gadget>

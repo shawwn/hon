@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_SandWraith_Ability4_Illusion_Pause"
+
+	ishidden="false"
+	disarmed="true"
+	
+>
+	<onexpired>
+		<order command="attack" source="target_entity" target="proxy_entity" />
+	</onexpired>
+</state>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Devourer2"
+
+	statuseffecttooltip="State_Devourer_Ability2_Other"
+	icon="icon.tga"
+	
+	anim="ability_2"
+	casttime="0"
+	castactiontime="0"
+	frontqueue="true"
+	inheritmovement="true"
+	noninterrupting="true"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="toggle"
+	targetradius="250"
+	
+	casteffecttype=""
+	noresponse="true"
+	
+	manacost="0"
+	cooldowntime="0"
+	
+	targetscheme=""
+>
+	<ontoggleon>
+		<spawnaffector name="Affector_Devourer_Ability2" istoggle="true" />
+		<applystate name="State_Devourer_Ability2_Self" istoggle="true" />
+	</ontoggleon>
+	
+	<onimpact effectdescription="true"/>
+	
+	<modifier key="decay_active" condition="toggle_active" modpriority="100"
+		casttime="0"
+		anim=""
+	/>
+</ability>

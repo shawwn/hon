@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Gladiator2"
+	
+	icon="icon.tga"
+	
+	cooldowntime="16000,12000,8000,4000"
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+	
+	impacteffect=""
+	casteffect=""
+	passiveeffect=""
+	
+	actiontype="passive"
+>
+	<onframe />
+	
+	<onattackstart propagatetoillusions="false">
+		<condition test="canactivate">
+			<cantarget targetscheme="ally_units_and_structures" effecttype="Physical">
+				<bonusdamageadd a="15,30,45,60" target="" />
+			</cantarget>
+			<cantarget targetscheme="enemy_buildings" effecttype="Physical">
+				<playanim name="ability_2" speed="source_attackspeed" target="source_entity" />
+				<bonusdamageadd a="15,30,45,60" target="" />
+				<addattackimpactactions>
+					<startcooldown />
+				</addattackimpactactions>
+			</cantarget>
+			<cantarget targetscheme="enemy_objects" effecttype="Physical">
+				<targettype type="building" />
+				<else>
+					<bonusdamageadd a="15,30,45,60" target="" />
+					<cantarget targetscheme="enemy_units" effecttype="Physical">
+						<playanim name="ability_2" speed="source_attackspeed" target="source_entity" />
+						<addattackimpactactions>
+							<playeffect effect="effects/cast.effect" target="" source="source_entity"/>
+							<spawnaffector name="Affector_Gladiator_Ability2" target="target_position" positionmodifier="pointonline" positionorigin="source_entity" positionvalue="380,420,460,500" />
+							<splashdamage a="total_adjusted_damage" b="1" op="mult" radius="380,420,460,500" effecttype="Splash Cleave" targetscheme="enemy_units" />
+							<startcooldown />
+						</addattackimpactactions>
+					</cantarget>
+					<else>
+						<addattackimpactactions>
+							<startcooldown />
+						</addattackimpactactions>
+					</else>
+				</else>
+			</cantarget>
+		</condition>
+	</onattackstart>
+	
+	<onattackimpact />
+	
+
+	<modifier key="ready" modpriority="90"
+		condition="ready"
+		passiveeffect="effects/state_self.effect"
+	/>
+
+</ability>

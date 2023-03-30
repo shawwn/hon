@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Devourer_Ability1_Unbind"
+
+	icon="icon.tga"
+	impactinterval="900"
+	ishidden="true"
+
+	effecttype=""
+>
+	<onimpact>
+		<expire entity="proxy_entity" />
+		<unbind target="target_entity" />
+	</onimpact>
+</state>

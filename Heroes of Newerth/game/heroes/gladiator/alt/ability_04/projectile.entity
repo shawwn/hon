@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Gladiator_Alt_Ability4"
+
+	speed="750"
+	gravity="0"
+
+	modelscale="1.0"
+	model="effects/ball/model.mdf"
+	traileffect="effects/trail.effect"
+	canturn="false"
+	flying="true"
+	flyheight="0"
+	deatheffect="effects/smash.effect"
+	
+	touchradius="400"
+	touchradiusdiradjust="true"
+	touchtargetscheme="ally_units"
+	toucheffecttype=""
+	
+	maxtouchespertarget="1"
+>
+	<onimpact>
+		<areaofeffect
+				radius="400"
+				center="this_position"
+				targetselection="all"
+				targetscheme="enemy_units"
+			>
+				<applystate name="State_Stunned" duration="1000"/>
+				<damage effecttype="Magic" amount="300,400,500" />
+		</areaofeffect>
+		<kill target="proxy_entity" source="" />
+		<spawnunit name="Gadget_Gladiator_Ability4_Linger" count="1" target="target_position" />
+	</onimpact>
+	
+	<ontouch>
+		<applystate name="State_Gladiator_Ability4" duration="5000,6000,7000"/>
+	</ontouch>
+</projectile>

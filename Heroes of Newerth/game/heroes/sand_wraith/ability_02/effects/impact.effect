@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale=".6" entityeffectscale="true">
+
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2200"
+				volume=".7"
+				sample="sounds/impact.wav"
+			/>
+
+
+
+			
+			<simpleemitter
+					
+				count="1"
+				particlelife="1300"				
+				spawnrate="650"
+				minspeed="100"
+				maxspeed="750"
+				gravity="20"
+				direction="0 0 1"
+				minangle="0"
+				maxangle="1"
+				drag="0.01"
+				material="/shared/effects/materials/pyroclast_03.material"
+				offsetsphere="0 0 10"
+				position="0 0 40"
+			>
+				<particle 
+					depthbias="-100"
+					startcolor=".8 .8 .5 "
+					endcolor=".5 .5 .3"					
+					height="400"
+					startwidth="30"
+					endwidth="60"
+					startscale="1"
+					endscale="2"
+					startalpha="1"
+					endalpha="0"
+					lockup="1"
+					lockright="1"
+				/>
+			</simpleemitter>			
+
+	
+
+			<simpleemitter					
+				count="5"
+				particlelife="2300"				
+				spawnrate="650"
+				minspeed="70"
+				maxspeed="440"
+				gravity="20"
+				direction="0 0 1"
+				minangle="0"
+				maxangle="66"
+				drag="0.01"
+				collide="0"
+				offsetsphere="25 25 10"
+				position="0 0 0"
+				particlespace="world"
+				bone="_bone_centerofchest"
+			>
+				<particle 
+					
+				>
+					<simpleemitter	
+						life="1600"
+						startparticlealpha="1"
+						endparticlealpha="0"
+						particlelife="775"				
+						spawnrate="33"
+						minspeed="5"
+						maxspeed="10"					
+
+						drag="0.01"
+						material="/shared/effects/materials/pyroclast_03.material"
+						
+						
+					>
+						<particle 
+							depthbias="-100"
+							startcolor=".8 .8 .5 "
+							endcolor=".5 .5 .3"					
+							startscale="5"
+							endscale="15"			
+							
+							startalpha="1"
+							endalpha="0"
+						/>
+					</simpleemitter>					
+				
+				</particle>
+			</simpleemitter>	
+			
+		<billboard	
+			bone="_bone_centerofchest"			
+			life="400"
+			material="/shared/effects/materials/whitedot.material"
+			position="0 0 0"
+			startcolor="1 .5 0"					
+			endcolor="0 0 0"
+		
+			size="230"
+			depthbias="-30"
+		/>			
+			
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

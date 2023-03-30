@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="rig.max" file="high.model" type="K2" high="high.model" med="high.model" low="high.model">
+
+	<anim name="idle" clip="clips/default_1.clip" fps="32" loop="true" numframes="134" blendtime="200"/>
+
+	<anim name="item_1" clip="clips/item_1.clip" fps="35"/>
+
+	<anim name="portrait" clip="clips/portrait.clip" loop="true" numframes="134" fps="30"/>
+	
+	<anim name="ability_1" clip="clips/ability_1.clip" fps="30" loop="false">
+		<frameevent frame="1" cmd="PlaySoundLinear /heroes/pyromancer/ability_01/sounds/ability_01.wav 1500 2500"/>
+	</anim>
+
+	<anim name="ability_2" clip="clips/ability_2.clip" fps="30" loop="false">
+		<frameevent frame="12" cmd="PlaySoundLinear /heroes/pyromancer/ability_02/sounds/ability_02_cast.wav 1500 2500 0.6"/>
+		<frameevent frame="9" cmd="StartEffect ../ability_02/effects/ability_02_cast.effect" />
+	</anim>
+
+	<anim name="ability_4" clip="clips/ability_4.clip" fps="30" loop="false">
+		<frameevent frame="10" cmd="PlaySoundLinear ability_04/sounds/cast.wav 1500 2500"/>
+		<frameevent frame="1" cmd="PlaySoundLinear /heroes/pyromancer/ability_04/sounds/ability_04.wav 1500 2500"/>
+		<frameevent frame="1" cmd="StartEffect ../ability_04/effects/ability_04_cast.effect" />
+	</anim>
+
+	<anim name="attack_1" clip="clips/attack_1.clip" fps="32" loop="false" blendtime="200">
+		<frameevent frame="12" cmd="PlaySoundLinear /heroes/pyromancer/sounds/attack_1.wav 400 2000 0.8"/>
+	</anim>
+
+	<anim name="attack_2" clip="clips/attack_2.clip" fps="32" loop="false" blendtime="200">
+		<frameevent frame="5" cmd="PlaySoundLinear sounds/attack_grunt_%.wav 500 2000 1"/>
+		<frameevent frame="10" cmd="PlaySoundLinear /heroes/pyromancer/sounds/attack_2.wav 400 2000 0.7"/>
+	</anim>
+
+	<anim name="walk_1" clip="clips/walk_1.clip" fps="39" blendtime="200" loop="true">
+		<frameevent frame="1" cmd="PlaySoundLinear sounds/move.wav 200 1700 0.6"/>
+	</anim>
+	
+	<anim name="death_1" clip="clips/death_1.clip" fps="30" loop="true" loopbackframe="-1">
+		<frameevent frame="1" cmd="StartEffect effects/death.effect"/>
+		<frameevent frame="1" cmd="PlaySoundLinear sounds/death.wav 800 2200 .85"/>
+	</anim>
+
+	<anim name="bored_1" clip="clips/bored_1.clip" fps="30" loop="false">
+
+	</anim>
+
+	<anim name="taunt_1" clip="clips/taunt_1.clip" fps="30" loop="false">
+		<frameevent frame="9" cmd="StartEffect ../effects/taunt.effect" />
+	</anim>
+
+	<anim name="knock_1" clip="clips/knock_1.clip" loop="true" loopbackframe="-1"/>
+	
+	<anim name="getup_1" clip="clips/getup_1.clip"/>		
+</model>

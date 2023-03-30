@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="chain_lightning" deffered="true">
+	<definitions>
+		<particlesystem name="system0" space="world">
+
+			
+
+			<beam
+				expirelife="100"
+
+				owner_a="target"
+				owner_b="source"
+
+				bone_a="_bone_righthand"
+				bone_b="_bone_righthand"
+
+				size="15"
+				color=".1 .5 .3"
+				alpha="1.0"
+				material="/shared/effects/materials/string2.material"
+
+				framespeed="1.75"
+			/>
+
+			
+
+			<beam
+				expirelife="100"
+
+				owner_a="target"
+				owner_b="source"
+
+				bone_a="_bone_lefthand"
+				bone_b="_bone_lefthand"
+				size="15"
+				color=".2 .5 .2"
+				alpha="1.0"
+				material="/shared/effects/materials/string2.material"
+
+				
+			/>
+
+		
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+		<waitfordeath instance="instance0"/>
+	</thread>
+</effect>

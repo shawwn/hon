@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_DoctorRepulsor_Ability2_Self"
+	
+	icon="icon.tga"
+	passiveeffect=""
+	
+	effecttype="StatusDebuff"
+
+	movespeedslow="0.5"
+>
+</state>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="projectile" deferred="true">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="1.6">
+
+		
+			<trailemitter
+
+				spawnrate="20"
+				startminparticlelife="260"
+				startmaxparticlelife="260"		
+				
+				endminparticlelife="1"
+				endmaxparticlelife="1" 
+				texpostime="200"
+				texposscale="1"
+				texstretchscale="0"
+				position="0 0 0"
+				material="/shared/effects/materials/arrow_trail.material"
+			>
+				<particle
+					startcolor=".3 .3 0"
+					midcolor=".3 .3 0"
+					endcolor="0 0 0"
+					startsize="0"
+					midsize="10"
+					endsize=".5"
+					midsizepos="0.02"
+				/>
+			</trailemitter>	
+				
+			<simpleemitter
+			
+				spawnrate="80"
+						
+				particlelife="1000"			
+				gravity="2"
+				speed="5"
+				acceleration="0"
+				position="0 0 0"
+
+
+				material="/shared/effects/materials/poison_12.material"
+				offsetsphere="1 1 1"
+				minangle="0"
+				maxangle="360"
+				direction="0 0 1"
+				offsetdirection="0 0 0"
+				offsetradial="3 3 3"
+				particledirectionalspace="local"
+			>
+
+				<particle 
+					minangle="0"
+					maxangle="0"
+					minanglespeed="0"
+					maxanglespeed="0"
+					startcolor=".2 .35 0"
+					midcolor=".2 .35 0"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+
+					startframe="0"
+					endframe="1"
+
+					startsize="20"
+					midsize="11"
+					endsize="1"
+					midsizepos=".3"
+
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".3"
+
+					lockup="true"
+					lockright="true"
+					pitch="90"
+					yaw="0"
+				/>
+
+
+			</simpleemitter>
+
+			<simpleemitter
+			
+				spawnrate="160"
+				count="80"		
+				particlelife="550"			
+				gravity="85"
+				speed="485"
+				acceleration="0"
+				position="0 0 0"
+
+
+				material="/shared/effects/materials/poison_12.material"
+				offsetsphere="1 1 1"
+				minangle="0"
+				maxangle="360"
+				direction="0 0 1"
+				offsetdirection="0 0 0"
+				offsetradial="0 0 0"
+				particledirectionalspace="local"
+			>
+
+				<particle 
+					minangle="0"
+					maxangle="0"
+					minanglespeed="0"
+					maxanglespeed="0"
+					startcolor=".1 .3 0"
+					midcolor=".1 .3 0"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+
+					startframe="0"
+					endframe="1"
+
+					startsize="9"
+					midsize="9"
+					endsize="9"
+					midsizepos=".8"
+
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".3"
+
+					lockup="true"
+					lockright="true"
+					pitch="90"
+					yaw="0"
+				/>
+
+
+			</simpleemitter>
+
+			<billboard
+				material="/shared/effects/materials/voodoo_01.material"
+				color="0 .8 0"
+				size="35"
+				lockup="true"
+				lockright="true"
+				pitch="-90"
+				yaw="0"
+				directionalspace="local"
+			/>
+			
+			<billboard
+				material="/shared/effects/materials/voodoo_01.material"
+				color="0 .8 0"
+				size="35"
+				lockup="true"
+				lockright="true"
+				pitch="-90"
+				yaw="-90"
+				directionalspace="local"
+			/>
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

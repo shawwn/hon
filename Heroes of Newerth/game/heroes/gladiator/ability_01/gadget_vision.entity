@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Gladiator_Ability1_Vision"
+	
+	model=""
+	isselectable="false"
+	attacktype="none"
+	passiveeffect="effects/affector.effect"
+	sightrangeday="400"
+	sightrangenight="400"
+
+	deathtime="0"
+	corpsetime="0"
+	
+	invulnerable="true"
+	flying="true"
+	drawonmap="false"
+	
+	lifetime="4000"
+>
+</gadget>

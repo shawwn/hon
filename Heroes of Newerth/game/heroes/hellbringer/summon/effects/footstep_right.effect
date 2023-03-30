@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="flamestepr">
+	<definitions>
+
+		<particlesystem name="system0" space="world" useentityeffectscale="0">
+		
+
+
+
+			<simpleemitter
+				life="500"
+				spawnrate="120"
+				bone="_bone_rightfoot"
+				count="1"
+				particlelife="1000"
+				position="0 0 -2"
+			>
+				<particle>
+
+				
+					<simpleemitter
+						spawnrate="20"
+						count="30"
+						drag=".001"
+						particlelife="3000"
+						offsetsphere="10 10 10"
+						gravity="-0.4"
+						minspeed="10"
+						maxspeed="50.0"								
+						direction="0.0 0.0 1.0"
+						minangle="-40"
+						maxangle="40"
+						material="/shared/effects/materials/spark_10.material"
+						inheritvelocity=".35"				
+					>			
+						<particle
+							startcolor="1 .5 .2"
+							endcolor="0 0 0"
+							alpha="1.0"
+							minsize="1"
+							maxsize="7"
+							lockup="false"
+							lockright="false"
+							minangle="-360"
+							maxangle="1"
+							minanglespeed="110"
+							maxanglespeed="-110"
+						/>
+					</simpleemitter>
+				
+				
+				<!--
+					<groundsprite
+						startcolor="0 0 0"
+						midcolor="0 0 0" 
+						endcolor="0 0 0"
+						material="/shared/effects/materials/whitedot_blend.material"
+						startsize="0"
+						midsize="22"
+						endsize="22"
+						life="600"
+					/>
+					-->
+				
+					<billboard
+						startcolor="0 0 0"
+						midcolor=".6 .3 0" 
+						endcolor="0 0 0"
+						material="/shared/effects/materials/whitedot.material"
+						size="52"
+
+						depthbias="-20"
+						life="1600"
+					/>
+				
+					<simpleemitter
+						position="0 0 0"						
+						spawnrate="5"
+						particlelife="800"
+						gravity="-1.0"
+						speed="0.20"
+						drag="2.0"
+						material="/shared/effects/materials/flame.material"
+						offsetsphere="3"
+						inheritvelocity=".025"
+					>
+						<particle
+							startcolor="1"
+							midcolor="1 .3 0.0"
+							endcolor="0"
+							minangle="0"
+							maxangle="90"
+							minanglespeed="0"
+							maxanglespeed="30"
+							startsize="0"
+							endsize="45"
+							startanchor="1"
+							endanchor=".5"
+						/>
+					</simpleemitter>
+
+					<simpleemitter
+						position="0 0 0"							
+						spawnrate="5"
+						particlelife="700"
+						gravity="-1.0"
+						speed="0.20"
+						drag="2.0"
+						material="/shared/effects/materials/dust_smoke_02.material"
+						offsetsphere="3"
+						inheritvelocity=".025"
+					>
+						<particle
+							startalpha="1"
+							endalpha="0"
+							startcolor="0"
+							midcolor=".5 .1 0.0"
+							endcolor="0"
+							minangle="0"
+							maxangle="90"
+							minanglespeed="0"
+							maxanglespeed="30"
+							startsize="4"
+							endsize="35"
+							startanchor="1"
+							endanchor="0"
+						/>
+					</simpleemitter>
+
+					<simpleemitter
+						life="1000"
+						position="0 0 0"						
+						spawnrate="10"
+						minparticlelife="200"
+						maxparticlelife="400"
+						gravity="-1.0"
+						speed="0.20"
+						drag="2.0"
+						material="/shared/effects/materials/femme_lightning_01.material"
+						offsetsphere="7"
+						inheritvelocity=".025"
+					>
+						<particle
+							startcolor="0"
+							midcolor="1 .55 0.2"
+							endcolor="0"
+							minangle="0"
+							maxangle="90"
+							minanglespeed="0"
+							maxanglespeed="30"
+							startsize="2"
+							endsize="10"
+							startanchor="1"
+							endanchor="0"
+						/>
+					</simpleemitter>				
+				
+				</particle>
+			</simpleemitter>
+
+			
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->

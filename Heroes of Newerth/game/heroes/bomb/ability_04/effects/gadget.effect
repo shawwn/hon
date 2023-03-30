@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" useentityeffectscale="1" deferred="true">
+
+	<definitions>
+		<particlesystem name="system0" space="world" scale="1.1">
+
+			<simpleemitter
+					bone="Scene Root"
+				position="0 0 0"
+				spawnrate="5000"
+				count="1"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+			>
+				<particle
+				turn="1"
+				>
+
+					<groundsprite
+						bone="_bone01"
+						delay="0"
+						material="/shared/effects/materials/sand_groun.material"
+						minscale="3"
+						maxscale="3.35"
+						expirelife="600"
+						color="0 0 0"
+						startalpha=".7"
+						endalpha="0"
+						directionalspace="local"
+					/>
+				</particle>
+			</simpleemitter>
+
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<terrainemitter	
+				spawnrate="6"
+				particlelife="5000"
+				range="125"
+			>
+				<particle>
+
+					<simpleemitter
+						life="800"
+						spawnrate="20"
+						minparticlelife="350"
+						maxparticlelife="500"
+						gravity="-15"
+						speed="30"
+						drag=".003"
+						material="/shared/effects/materials/flame.material"
+						offsetsphere="10 10 0"
+						angle="90"
+						depthbias="-25"
+					>
+						<particle 
+							minangle="-35"
+							maxangle="35"
+							startcolor="1 .5 .5"
+							endcolor="0"
+							startsize="0"
+							midsize="62"
+							endsize="5"
+						/>
+						<particle 
+							minangle="-35"
+							maxangle="35"
+							startcolor=".8 .4 0"
+							endcolor="0"
+							startsize="0"
+							midsize="62"
+							endsize="5"
+						/>
+					</simpleemitter>
+
+
+					<simpleemitter
+						life="800"
+						spawnrate="20"
+						minparticlelife="350"
+						maxparticlelife="500"
+						gravity="-15"
+						speed="30"
+						drag=".003"
+						material="/shared/effects/materials/flames_07.material"
+						offsetsphere="35 35 0"
+						angle="90"
+						depthbias="-25"
+					>
+						<particle 
+							maxanglespeed="30"
+							maxangle="360"
+							color="1 .75 .5"
+							startsize="35"
+							endsize="50"
+							startalpha="0"
+							midalpha=".4"
+							endalpha="0"
+						/>
+						<particle 
+							maxanglespeed="50"
+							maxangle="360"
+							color="1"
+							startsize="25"
+							endsize="40"
+							startalpha="0"
+							midalpha=".4"
+							endalpha="0"
+						/>
+					</simpleemitter>
+
+					<simpleemitter
+						timenudge="-500"
+						life="6200"
+						minparticlelife="750"
+						maxparticlelife="1000"
+						spawnrate="3"
+						gravity="-10"
+						minspeed="50"
+						maxspeed="150"
+						material="/shared/effects/materials/flare2.material"
+						offsetsphere="0 0 0"
+						angle="10"
+						depthbias="-25"
+					>
+						<particle 
+							minanglespeed="-430"
+							maxanglespeed="430"
+							minangle="-360"
+							maxangle="360"
+							color="1 .5 .2"
+							minstartscale="0"
+							maxstartscale="5"
+							endsize="0"
+							endstickiness="0.8"
+						/>
+					</simpleemitter>
+
+					<simpleemitter
+						offsetsphere="15 35 5"
+						position="0 0 25"
+						spawnrate="4"
+						particlelife="800"
+						life="7000"
+						material="/shared/effects/materials/refract_outsplash.material"
+						depthbias="-25"
+					>
+						<particle
+							startalpha="1.0"
+							endalpha="0.0"
+							minangle="0"
+							maxangle="360"
+							anglespeed="-90"
+							startsize="30"
+							endsize="100"
+							param=".1"
+							depthbias="-20"
+						/>
+					</simpleemitter>
+
+					<groundsprite
+						maxyaw="360"
+						life="1250"							
+						material="/shared/effects/materials/coals_add.material"					
+						size="65"					
+						startcolor="0"
+						midcolor=".4 .2 0"
+						endcolor="0"					
+					/>	
+<!--
+				<simpleemitter
+					count="6"
+					spawnrate="500"
+					minparticlelife="500"
+					maxparticlelife="750"
+					mingravity="-20"
+					maxgravity="-50"
+					minspeed="1"
+					maxspeed="3"
+					drag="0"
+					acceleration="50"
+					position="0 0 -25"
+					material="/shared/effects/materials/flame.material"
+					offsetsphere="15 15 0"
+					direction="0 0 0"
+					depthbias="-150"
+				>
+					<particle 
+						minangle="0"
+						maxangle="360"
+						startcolor="0 0 0"
+						midcolor=".65 .15 .05"
+						endcolor="0 0 0"
+						midcolorpos=".2"
+						minstartsize="70"
+						maxstartsize="85"
+						endsize="105"
+					/>
+				</simpleemitter>
+-->
+				</particle>
+					
+			</terrainemitter>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+
+
+
+			<simpleemitter
+				position="-20 0 -10"
+				spawnrate="35"
+				minparticlelife="500"
+				maxparticlelife="1000"			
+				gravity="25"
+				minspeed="250"
+				maxspeed="900"
+				drag=".01"
+				material="/shared/effects/materials/spark_10.material"
+				offsetsphere="25 25 0"
+				direction="0 0 1"
+				minangle="0"
+				maxangle="20"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="1"
+					midcolor="1 .5 0"
+					endcolor="0 0 0"
+					midcolorpos=".15"
+					minstartsize="10"
+					maxstartsize="15"
+					midsize="17"
+					endsize="7"
+					startalpha="0"
+					midalpha=".7"
+					endalpha="0"
+					midalphapos=".5"
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+			
+			
+		<particlesystem name="system1" space="entity" scale="1">
+
+		</particlesystem>
+	</definitions>
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<spawnparticlesystem instance="instance1" particlesystem="system1" />
+	<waitfordeath instance="instance0" />
+	<waitfordeath instance="instance1" />
+</thread>
+
+</effect>

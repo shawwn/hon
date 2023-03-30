@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" useentityscale="true">
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume="0.65"
+				sample="../sounds/cast.wav"
+			/>
+		
+		<simpleemitter
+			delay="130"
+			bone="_bone_weapon3"
+			count="1"
+			particlelife="200"
+			gravity="-6"
+			speed="0.0"
+			acceleration="0.0"
+			timenudge="0"
+			position="0 0 10"
+			
+			material="/shared/effects/materials/blink.material"
+		>
+			<particle
+				anglespeed="20"
+				startcolor="0 0 0"
+				midcolor=".5 .5 .1"
+				endcolor="0.0 0.0 0.0"
+				midcolorpos=".1"
+
+
+				startsize="180"
+				midsize="120"
+				endsize="0"
+
+
+			/>
+		</simpleemitter>
+			
+			<twopointtrailemitter
+				life="350"
+				bone_a="_bone_weaponattach"
+				bone_b="_bone_weapon1"
+				spawnrate="100"
+				particlelife="350"
+				texpostime="355"
+				texposscale=".5"
+				texstretchscale="0.0"
+				material="/shared/effects/materials/dragon.material"
+				subframepose="true"
+			>
+				<particle 
+					startcolor=".3 1 0"
+					endcolor="0 0 0"
+				/>
+			</twopointtrailemitter>
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+		<spawnmodifier instance="instance1" modifier="modifier0"/> 
+		<waitfordeath instance="instance0" />
+	</thread>
+</effect>

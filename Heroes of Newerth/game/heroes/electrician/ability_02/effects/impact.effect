@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" useentityeffectsscale="true">
+	<definitions>
+	
+
+
+			<template name="beam">
+
+			
+				<billboard
+				life="200"				
+				bone="_bone_fx_{a}"
+				 material="/shared/effects/materials/whitedot.material"
+				 size="{size}"
+				 startcolor="1 .2 0"	
+				 endcolor="0 0  0"
+				 
+				/>
+				<billboard
+				life="200"
+				 bone="_bone_fx_{b}"
+				 material="/shared/effects/materials/whitedot.material"
+				 size="{size}"
+				 startcolor="1 .2 0"	
+				 endcolor="0 0  0"		
+				/>		
+			
+					
+				<simpleemitter
+					delay="0"
+					count="22"
+					spawnrate="1500"
+					 bone="_bone_fx_{a}"
+					particlelife="800"			
+					gravity="5"
+					minspeed="1"
+					maxspeed="100"
+					drag=".04"
+					
+					position="5 5 -14"
+					pitchspeed="79"
+					material="/shared/effects/materials/whitedot.material"
+					offsetsphere="5 5 5"
+					
+					inheritvelocity="0.35"
+					
+					direction="0 0 1"
+					
+				>
+
+
+					<particle 
+						
+						startcolor="1 1 .2"
+						
+						midcolor="1 .3 0"
+						endcolor="0 0 0"
+						startheightdistort=".06"
+					
+						endframe="15"
+						
+						startsize="1"
+						midsize="2"
+						endsize="2"
+						
+						startalpha="0"
+						midalpha="0"
+						endalpha="0"
+						midalphapos="0"
+						startstickiness="0"
+						endstickiness="0"
+						turn="1"
+
+					/>
+				</simpleemitter>			
+			
+			
+			
+			
+			
+			
+			</template>
+	
+
+
+
+		<particlesystem name="system1" space="world" scale="1.0">
+
+			<sound
+				linearfalloff="true"
+				falloffstart="0"
+				falloffend="2000" 
+				volume="0.45" 
+				sample="../sounds/impact_%.wav"
+			/>
+
+			<instance name="beam" a="28" b="12" size="26" frame=".8"/>
+			<instance name="beam" a="08" b="26"  size="26" frame=".3"/>
+			<instance name="beam" a="06" b="29" size="26" frame=".2"/>
+			<instance name="beam" a="24" b="62" size="26" frame=".6"/>
+			<instance name="beam" a="05" b="21" size="26" frame=".1"/>	
+			<instance name="beam" a="09" b="32" size="26" frame=".2"/>				
+
+			<billboard
+				material="/shared/effects/materials/fresnel.material"
+				bone="_bone_centerofchest"
+				startcolor="1 .2 0"
+				endcolor="0 0 0"
+				
+				life="300"
+
+				position="0 0 10"
+				size="100"
+				depthbias="-150"			
+			/>
+		
+		</particlesystem>
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnparticlesystem instance="instance1" particlesystem="system1" />	
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+	</thread>
+</effect>
+
+
+
+
+
+
+

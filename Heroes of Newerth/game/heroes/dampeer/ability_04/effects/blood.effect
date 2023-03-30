@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect>
+	<definitions>
+		<particlesystem name="system0" space="world">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".7"
+				sample="/heroes/hunter/ability_02/sounds/ability_02_grunt.wav"
+			/>
+			
+			<model
+				life="2750"
+				parentmodel="true"
+				parentskeleton="true"
+				startcolor=".5 0 0"
+				endcolor="0 0 0"
+				material="/shared/effects/materials/shell.material"
+				scale="1"
+			/>
+			
+		</particlesystem>
+			
+			<modifier
+				life="2750"
+				name="modifier0"
+				startcolor="1 1 1"
+				midcolor=".5 0  0"
+				endcolor="1 1 1"
+				midcolorpos="0.2"
+			/>
+
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+

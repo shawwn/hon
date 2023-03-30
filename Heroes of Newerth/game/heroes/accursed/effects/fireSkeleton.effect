@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="1.3">
+
+			<!-- smoke -->
+
+			<skeletonemitter
+				delay="750"
+				life="2500"
+				spawnrate="80"
+				particlelife="4000"
+				gravity="0.2"
+				speed="15.0"
+				material="/shared/effects/materials/dust_smoke_03.material"
+				inheritvelocity="0.5"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					startcolor=".45 0.17 0"
+					endcolor="0"
+					startalpha="1"
+					endalpha="0"
+					startsize="0"
+					endsize="90"
+				/>
+				<particle
+					minangle="0"
+					maxangle="360"
+					startcolor=".35 0.1 0"
+					endcolor="0"
+					startalpha="1"
+					endalpha="0"
+					startsize="0"
+					endsize="80"
+				/>
+				<particle
+					minangle="0"
+					maxangle="360"
+					startcolor=".1"
+					endcolor="0.2"
+					startalpha="1"
+					endalpha="0"
+					startsize="0"
+					endsize="80"
+				/>
+			</skeletonemitter>
+
+			<skeletonemitter
+				timenudge="500"
+				life="900"
+				spawnrate="300"
+				particlelife="3000"
+				gravity="-0.2"
+				speed="5.0"
+				material="/shared/effects/materials/phantom_smoke_03.material"
+				inheritvelocity="0.5"		
+			>
+				<particle
+					startcolor="0.0 0.0 0.0"
+					midcolor=".5 0.2 0.0"
+					endcolor="0.0 0.0 0.0"
+					midcolorpos="0.5"
+					startalpha="1.0"
+					endalpha="1.0"
+					maxangle="360"
+					anglespeed="0"
+					startsize="0"
+					endsize="35"
+				/>
+			</skeletonemitter>
+
+			<simpleemitter
+				life="500"
+	         		bone="Bip01 Spine1"			
+				spawnrate="300"
+				depthbias="-100"
+				particlelife="500"
+				count="6"
+          			material="/shared/effects/materials/phantom_smoke_03.material"
+         	>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="0"
+					midcolor="1 .3 0"
+					endcolor="0"
+					midcolorpos="0.5"
+					maxstartsize="40"
+					maxendsize="75"
+					startheight="0"
+					endheight="200"
+					width="15"
+					scale="1.5"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				life="500"
+	         		bone="Bip01 Spine1"			
+				count="6"
+				spawnrate="130"
+				depthbias="-100"
+				minparticlelife="400"
+				maxparticlelife="800"
+				speed="150"
+				drag="0.1"
+          			material="/shared/effects/materials/scorch_02.material"
+         	>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="2"
+					midcolor=".5 .1 0"
+					endcolor="0"
+					startsize="0"
+					endsize="65"
+					scale="2"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				life="500"
+	         		bone="Bip01 Spine1"			
+				count="20"
+				spawnrate="130"
+				depthbias="-100"
+				minparticlelife="1600"
+				maxparticlelife="1900"
+				speed="250"
+				drag="0.1"
+				offsetsphere="3"
+          			material="/shared/effects/materials/phantom_smoke_04.material"
+         	>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="2 2 0"
+					midcolorpos="0.2"
+					midcolor=".5 .1 0"
+					endcolor="0"
+					startalpha="1"
+					endalpha="0"
+					startsize="30"
+					endsize="95"
+					minanglespeed="-40"
+					maxanglespeed="40"
+				/>
+
+			</simpleemitter>
+
+			<skeletonemitter
+				timenudge="500"
+				life="700"
+				spawnrate="100"
+				particlelife="300"
+				gravity="-0.2"
+				speed="5.0"
+				material="/shared/effects/materials/scorch_02.material"
+				inheritvelocity="0.5"		
+			>
+				<particle
+					startcolor="0"
+					midcolor="1 .3 0"
+					endcolor="0"
+					midcolorpos="0.5"
+					startalpha="1.0"
+					endalpha="1.0"
+					maxangle="360"
+					anglespeed="0"
+					startsize="30"
+					endsize="5"
+				/>
+			</skeletonemitter>
+			
+			<billboard
+				bone="_bone_centerofchest"
+				life="600"
+				startcolor="1 .3 0"
+				endcolor="0"
+				startsize="120"	
+				endsize="350"		
+				depthbias="-65"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+
+			<billboard
+				bone="_bone_centerofchest"
+				life="800"
+				startcolor="1 .1 0"
+				endcolor="0"
+				startsize="0"	
+				endsize="220"		
+				depthbias="-55"
+				material="/shared/effects/materials/stomp_01.material"
+			/>
+
+			<billboard
+				bone="_bone_centerofchest"
+				life="300"
+				color="1 .15 0"
+				midalphapos="0.25"
+				startsize="20"
+				endsize="400"
+				startalpha="1"
+				midalpha=".9"
+				endalpha="0"				
+				depthbias="-85"
+				material="/shared/effects/materials/nova_01.material"
+				lockup="0"
+				pitch="0"
+				scale="1.5"
+			/>
+			<billboard
+				bone="_bone_centerofchest"
+				life="400"
+				param="0.05"	
+				startsize="160"
+				endsize="250"
+				startalpha="0"
+				midalpha="1"
+				endalpha="0"				
+				material="/shared/effects/materials/refract_pinch.material"
+			/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->

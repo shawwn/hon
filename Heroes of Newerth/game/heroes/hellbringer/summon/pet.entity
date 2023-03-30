@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pet
+	name="Pet_Hellbringer_Ability4"
+	
+	
+	
+	icon="icon.tga"
+	portrait="icon.tga"
+
+	model="model.mdf"
+	skin=""
+	
+	passiveeffect="effects/body.effect"
+	spawneffect=""
+	respawneffect=""
+	selectsound=""
+	orderconfirmedsound=""
+	immunity="TransfigureImmunity"
+	
+	preglobalscale="1.8"
+	modelscale="1"
+	effectscale="1.26"
+	boundsheight="96"
+	boundsradius="24"
+	selectionradius="50"
+	targetoffset="0 0 64"
+
+	movespeed="325"
+	turnrate="540"
+	turnsmoothing="0.05"
+
+	maxhealth="900,1200,1500"
+	healthregen="15,20,25"
+	maxmana="400"
+	manaregen="0"
+
+	armor="5,7,10"
+	magicarmor="17"
+
+	cancarryitems="false"
+	inventory0="Ability_Malphas2"
+	inventory1="Ability_Malphas1"
+	inventory2="Ability_Malphas3"
+	inventory3=""
+
+	attackduration="1000"
+	attackactiontime="600"
+	attackcooldown="1350"
+	attackdamagemin="50,100,150"
+	attackdamagemax="50,100,150"
+	attacknumanims="2"
+	attackoffset="60 60 100"
+	attackprojectile=""
+	attackrange="125"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="effects/impact.effect"
+	attacktype="melee"
+	combattype="Hero"
+
+	aggrorange="600"
+	sightrangeday="1800"
+	sightrangenight="1800"
+	
+	goldbountymin="100,150,200"
+	goldbountymax="100,150,200"
+	experiencebounty="50"
+	
+	deniablepercent="0.5"
+	
+	lifetime="60000"
+
+	corpsetime="2000"
+	corpsefadetime="10000"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+	
+	unittype="summoned"
+>
+</pet>

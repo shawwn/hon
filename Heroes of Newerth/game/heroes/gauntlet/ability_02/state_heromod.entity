@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Gauntlet_Ability2_HeroMod"
+
+	icon="icon.tga"
+	passiveeffect=""
+	ishidden="true"
+	
+	modifierkey="gauntlet_heromod"
+	effecttype=""
+>		
+</state>

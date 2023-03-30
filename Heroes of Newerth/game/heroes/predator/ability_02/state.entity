@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Predator_Ability2"
+
+	icon="icon.tga"
+	passiveeffect="state_in.effect"
+	immunitytype="MagicImmunity1"
+	armor="3,6,9,12"
+	
+>
+	<onexpired>
+		<playeffect effect="state_out.effect" target="source_entity" />
+	</onexpired>	
+</state>

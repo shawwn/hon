@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="rig.max" file="high.model" type="K2" high="high.model" med="med.model" low="low.model" >
+	
+	<anim name="idle" clip="clips/default_1.clip" fps="30" loop="true"/>
+	
+	<anim name="attack_1" clip="clips/attack_1.clip" fps="30" loop="false">
+		<frameevent frame="10" cmd="PlaySoundLinear sounds/attack_%.wav 400 2000 .65"/>
+	</anim>
+	
+	<anim name="attack_2" clip="clips/attack_2.clip" fps="30" loop="false">
+		<frameevent frame="10" cmd="PlaySoundLinear sounds/attack_%.wav 400 2000 .65"/>
+		<frameevent frame="8" cmd="PlaySoundLinear sounds/attack_grunt_%.wav 400 2000 1"/>
+	</anim>
+	
+	<anim name="walk_1" clip="clips/walk_1.clip" fps="30" loop="true">
+		<frameevent frame="6" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="11" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="17" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="21" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		
+		<frameevent frame="6" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+		<frameevent frame="17" cmd="StartEffect /shared/effects/footstep_l_#GetTerrainType()#.effect"/>
+	</anim>
+	
+	<anim name="death_1" clip="clips/death_1.clip" fps="50" loop="true" numframes="44" loopbackframe="-1">
+		<frameevent frame="1" cmd="StartEffect effects/death.effect"/>
+		<frameevent frame="8" cmd="StartEffect effects/staff_drop.effect"/>
+	</anim>
+	
+	<anim name="ability_1" clip="clips/attackability1_1.clip" fps="25" loop="false">
+		<frameevent frame="10" cmd="PlaySoundLinear sounds/attack_%.wav 400 2000 .65"/>
+	</anim>
+	
+	<anim name="attackability1_1" clip="clips/attackability1_1.clip" fps="21" loop="false">
+		<frameevent frame="10" cmd="PlaySoundLinear sounds/attack_%.wav 400 2000 .65"/>
+		<frameevent frame="8" cmd="PlaySoundLinear ability_01/sounds/attack_grunt_%.wav 400 2000 1"/>
+	</anim>
+
+	<anim name="attackability1_2" clip="clips/attackability1_2.clip" fps="21" loop="false">
+		<frameevent frame="1" cmd="PlaySoundLinear ability_01/sounds/attack_grunt_%.wav 400 2000 1"/>
+		<frameevent frame="1" cmd="PlaySoundLinear /shared/sounds/attacks/attack_medium_%.wav 400 2000 .65"/>
+	</anim>
+	
+	<anim name="attackability1_3" clip="clips/attackability1_3.clip" fps="21" loop="false">
+		<frameevent frame="10" cmd="PlaySoundLinear ability_01/sounds/attack_grunt_%.wav 400 2000 1"/>
+		<frameevent frame="7" cmd="PlaySoundLinear /shared/sounds/attacks/attack_medium_%.wav 400 2000 .65"/>
+	</anim>
+	
+	<anim name="attackability1_4" clip="clips/attackability1_4.clip" fps="21" loop="false">
+		<frameevent frame="8" cmd="PlaySoundLinear ability_01/sounds/attack_grunt_%.wav 400 2000 1"/>
+		<frameevent frame="10" cmd="PlaySoundLinear sounds/attack_%.wav 400 2000 .65"/>
+	</anim>
+	
+	<anim name="ability_2" clip="clips/ability_2.clip" fps="25" loop="false">
+		<frameevent frame="8" cmd="PlaySoundLinear ability_02/sounds/attack_grunt.wav 400 2000 1"/>
+		<frameevent frame="10" cmd="PlaySoundLinear ability_02/sounds/cast.wav 400 2000 .65"/>
+	</anim>
+	
+	<anim name="ability_2_leap" clip="clips/ability_2_leap.clip" fps="30" loop="false" blendtime="100">
+		<frameevent frame="1" cmd="PlaySoundLinear ability_03/sounds/attack_grunt.wav 400 2000 1"/>
+	</anim>
+	
+	<anim name="ability_3" clip="clips/ability_3.clip" fps="30" loop="false">
+		<frameevent frame="11" cmd="PlaySoundLinear ability_03/sounds/attack_grunt_2.wav 400 2000 1"/>
+		<frameevent frame="1" cmd="PlaySoundLinear ability_03/sounds/cast.wav 400 2000 .8"/>
+	</anim>
+	
+	<anim name="ability_3_stuck" clip="clips/ability_3_stuck.clip" fps="35" loop="false">
+		<frameevent frame="1" cmd="PlaySoundLinear ability_03/sounds/stuck.wav 400 2000 1"/>
+	</anim>	
+	
+	<anim name="ability_4" clip="clips/ability_4.clip" fps="30" loop="false">
+		<frameevent frame="1" cmd="PlaySoundLinear ability_04/sounds/cast.wav 400 2000 1"/>
+		<frameevent frame="8" cmd="PlaySoundLinear ability_01/sounds/attack_grunt_1.wav 400 2000 1"/>
+		<frameevent frame="10" cmd="PlaySoundLinear sounds/attack_1.wav 400 2000 .65"/>
+		<frameevent frame="37" cmd="PlaySoundLinear ability_01/sounds/attack_grunt_2.wav 400 2000 1"/>
+		<frameevent frame="39" cmd="PlaySoundLinear sounds/attack_2.wav 400 2000 .65"/>
+		<frameevent frame="69" cmd="PlaySoundLinear ability_01/sounds/attack_grunt_3.wav 400 2000 1"/>
+		<frameevent frame="71" cmd="PlaySoundLinear /shared/sounds/attacks/attack_medium_1.wav 400 2000 .65"/>
+		<frameevent frame="103" cmd="PlaySoundLinear sounds/attack_4.wav 400 2000 .65 1"/>
+		<frameevent frame="101" cmd="PlaySoundLinear ability_01/sounds/attack_grunt_4.wav 400 2000 1"/>
+		<frameevent frame="106" cmd="PlaySoundLinear sounds/attack_2.wav 400 2000 .65 1"/>
+		<frameevent frame="105" cmd="PlaySoundLinear ability_01/sounds/attack_grunt_6.wav 400 2000 1"/>
+		<frameevent frame="129" cmd="PlaySoundLinear ability_01/sounds/attack_grunt_8.wav 400 2000 1"/>
+		<frameevent frame="132" cmd="PlaySoundLinear sounds/attack_3.wav 400 2000 .65"/>
+	</anim>
+
+	<anim name="bored_1" clip="clips/bored_1.clip" fps="30" loop="false"/>
+	<anim name="item_1" clip="clips/item_1.clip" fps="30" loop="false"/>
+	<anim name="knock_1" clip="clips/knock_1.clip" loop="true" loopbackframe="-1"/>
+	<anim name="taunt_1" clip="clips/taunt_1.clip" fps="30" loop="false"/>
+	<anim name="portrait" clip="clips/portrait_1.clip" fps="30" loop="true"/>
+	
+</model>

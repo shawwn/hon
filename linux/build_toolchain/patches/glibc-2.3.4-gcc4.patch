@@ -1,0 +1,129 @@
+This patch fixes build error
+
+1).
+In file included from ../include/pthread.h:1,
+from ../nptl/sysdeps/pthread/bits/libc-lock.h:23,
+from ./gconv_int.h:25,
+from gconv.c:23:
+../nptl/sysdeps/pthread/pthread.h:664: error: array type has incomplete 
+lement type
+
+2).
+rtld.c: In function '_dl_start':
+dynamic-link.h:47: error: nested function 'elf_machine_rela_relative' declared 
+ut never defined
+dynamic-link.h:41: error: nested function 'elf_machine_rela' declared but 
+ever defined
+
+3).
+In file included from jis0208.c:23:
+jis0208.h:32: error: array type has incomplete element type
+
+ elf/dynamic-link.h 			|	37 -------------------------------------
+ iconvdata/jis0208.h			|	16 +++++++---------
+ nptl/sysdeps/pthread/pthread.h |	 3 +--
+ 3 files changed, 8 insertions(+), 48 deletions(-)
+
+--- glibc-2.3.4/nptl/sysdeps/pthread/pthread.h.orig    2004-11-24 
+3:55:24.000000000 +0100
++++ glibc-2.3.4/nptl/sysdeps/pthread/pthread.h 2005-02-14 16:24:22.104239520 
+0100
+@@ -24,9 +24,9 @@
+ #include <time.h>
+ 
+ #define __need_sigset_t
++#include <setjmp.h>
+ #include <signal.h>
+ #include <bits/pthreadtypes.h>
+-#include <bits/setjmp.h>
+ #include <bits/wordsize.h>
+ 
+ 
+@@ -660,7 +660,6 @@
+ #endif
+ 
+ /* Function used in the macros.  */
+-struct __jmp_buf_tag;
+ extern int __sigsetjmp (struct __jmp_buf_tag __env[1], int __savemask) __THROW;
+ 
+ 
+--- glibc-2.3.4/elf/dynamic-link.h.orig	2004-09-24 11:09:03.000000000 -0600
++++ glibc-2.3.4/elf/dynamic-link.h	2008-01-09 01:26:35.000000000 -0700
+@@ -19,43 +19,6 @@
+ 
+ #include <elf.h>
+ #include <assert.h>
+-
+-#ifdef RESOLVE
+-/* We pass reloc_addr as a pointer to void, as opposed to a pointer to
+-   ElfW(Addr), because not all architectures can assume that the
+-   relocated address is properly aligned, whereas the compiler is
+-   entitled to assume that a pointer to a type is properly aligned for
+-   the type.  Even if we cast the pointer back to some other type with
+-   less strict alignment requirements, the compiler might still
+-   remember that the pointer was originally more aligned, thereby
+-   optimizing away alignment tests or using word instructions for
+-   copying memory, breaking the very code written to handle the
+-   unaligned cases.  */
+-auto void __attribute__((always_inline))
+-elf_machine_rel (struct link_map *map, const ElfW(Rel) *reloc,
+-		 const ElfW(Sym) *sym, const struct r_found_version *version,
+-		 void *const reloc_addr);
+-auto void __attribute__((always_inline))
+-elf_machine_rela (struct link_map *map, const ElfW(Rela) *reloc,
+-		  const ElfW(Sym) *sym, const struct r_found_version *version,
+-		  void *const reloc_addr);
+-auto void __attribute__((always_inline))
+-elf_machine_rel_relative (ElfW(Addr) l_addr, const ElfW(Rel) *reloc,
+-			  void *const reloc_addr);
+-auto void __attribute__((always_inline))
+-elf_machine_rela_relative (ElfW(Addr) l_addr, const ElfW(Rela) *reloc,
+-			   void *const reloc_addr);
+-# if ELF_MACHINE_NO_RELA || defined ELF_MACHINE_PLT_REL
+-auto void __attribute__((always_inline))
+-elf_machine_lazy_rel (struct link_map *map,
+-		      ElfW(Addr) l_addr, const ElfW(Rel) *reloc);
+-# else
+-auto void __attribute__((always_inline))
+-elf_machine_lazy_rel (struct link_map *map,
+-		      ElfW(Addr) l_addr, const ElfW(Rela) *reloc);
+-# endif
+-#endif
+-
+ #include <dl-machine.h>
+ 
+ #ifndef VERSYMIDX
+ 
+--- glibc-2.3.4/iconvdata/jis0208.h.orig	   2005-02-16 10:30:39.185701576 
+0100
++++ glibc-2.3.4/iconvdata/jis0208.h    2005-02-16 10:31:18.736688912 +0100
+@@ -24,15 +24,6 @@
+ #include <gconv.h>
+ #include <stdint.h>
+ 
+-/* Conversion table.  */
+-extern const uint16_t __jis0208_to_ucs[];
+-
+-extern const char __jisx0208_from_ucs4_lat1[256][2];
+-extern const char __jisx0208_from_ucs4_greek[0xc1][2];
+-extern const struct jisx0208_ucs_idx __jisx0208_from_ucs_idx[];
+-extern const char __jisx0208_from_ucs_tab[][2];
+-
+-
+ /* Struct for table with indeces in UCS mapping table.  */
+ struct jisx0208_ucs_idx
+ {
+@@ -41,6 +32,13 @@
+   uint16_t idx;
+ };
+ 
++/* Conversion table.  */
++extern const uint16_t __jis0208_to_ucs[];
++
++extern const char __jisx0208_from_ucs4_lat1[256][2];
++extern const char __jisx0208_from_ucs4_greek[0xc1][2];
++extern const struct jisx0208_ucs_idx __jisx0208_from_ucs_idx[];
++extern const char __jisx0208_from_ucs_tab[14210][2];
+ 
+ static inline uint32_t
+ __attribute ((always_inline))

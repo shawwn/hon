@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+			
+
+			<sound
+				delay="1300"
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="3600"
+				volume="1.0" 
+				life="5000"
+				sample="/heroes/gladiator/ability_01/sounds/impact.wav"
+			/>
+			
+			<groundsprite
+				delay="1600"
+				life="4000"
+				material="/shared/effects/materials/ground_smash_overlay.material"
+				size="85"
+				color="1.0 1.0 1.0"
+				startalpha=".5"
+				midalpha=".5"
+				endalpha="0"
+				midalphapos="0.05"
+			/>
+
+			<groundsprite
+				delay="1600"
+				life="1000"
+				material="/shared/effects/materials/earth_cracks_02.material"
+				size="155"
+				color="1.0 1.0 1.0"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos="0.05"
+			/>
+			
+			<simpleemitter
+				delay="1500"
+				count="1"
+				spawnrate="1900"
+				expirelife="30"
+				particlelife="6000"
+			>
+				<particle>
+					<model
+						position="0 0 0"
+						life="2500"
+						anim="idle"
+						model="model.mdf"
+						scale="1.5"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+					>
+						<simpleemitter
+							bone="Box02"
+							offsetsphere="25 25 0"
+							spawnrate="100"
+							count="10"
+							particlelife="1500"
+							gravity="-3"
+							acceleration="0"
+							speed="20"
+							position="0 0 25"
+							material="/shared/effects/materials/pyroclast_01.material"
+						>
+							<particle
+								minangle="-360"
+								maxangle="360"
+								color=".36 .383 .3"
+								minstartsize="10"
+								maxstartsize="50"
+								minendsize="100"
+								maxendsize="200"
+								minanglespeed="-30"
+								maxanglespeed="33"
+								startalpha="0"
+								midalpha=".4"
+								endalpha="0"
+								frame="1"
+								framespeed="1"
+								anchor="1"
+								lockup="0"
+								lockright="false"
+								turn="false"
+							/>
+						</simpleemitter>
+						
+						<simpleemitter
+							bone="Box03"
+							offsetsphere="25 25 0"
+							spawnrate="100"
+							count="10"
+							particlelife="1500"
+							gravity="-3"
+							acceleration="0"
+							speed="20"
+							position="0 0 25"
+							material="/shared/effects/materials/pyroclast_01.material"
+						>
+							<particle
+								minangle="-360"
+								maxangle="360"
+								color=".36 .383 .3"
+								minstartsize="10"
+								maxstartsize="50"
+								minendsize="100"
+								maxendsize="200"
+								minanglespeed="-30"
+								maxanglespeed="33"
+								startalpha="0"
+								midalpha=".4"
+								endalpha="0"
+								frame="1"
+								framespeed="1"
+								anchor="1"
+								lockup="0"
+								lockright="false"
+								turn="false"
+							/>
+						</simpleemitter>
+
+					</model>
+					
+				</particle>
+				
+			</simpleemitter>
+			
+			<groundsprite
+				delay="1500"
+				life="2500"
+				material="/shared/effects/materials/whitedot_blend.material"
+				size="250"
+				minyaw="-360"
+				maxyaw="360"
+				color="0 0 0"
+				startalpha="1"
+				midalpha="1"
+				endalpha=".2"
+			/>
+			
+			<simpleemitter
+				delay="1100"
+				offsetsphere="75 75 0"
+				spawnrate="25"
+				count="100"
+				particlelife="1500"
+				gravity="-.5"
+				acceleration="0"
+				speed="20"
+				position="0 0 50"
+				material="/shared/effects/materials/pyroclast_01.material"
+			>
+				<particle
+					minangle="-360"
+					maxangle="360"
+					color=".36 .383 .3"
+					minstartsize="10"
+					maxstartsize="50"
+					minendsize="100"
+					maxendsize="200"
+					minanglespeed="-30"
+					maxanglespeed="33"
+					startalpha="0"
+					midalpha=".25"
+					endalpha="0"
+					frame="1"
+					framespeed="1"
+					anchor="1"
+					lockup="0"
+					lockright="false"
+					turn="false"
+				/>
+			</simpleemitter>
+			
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

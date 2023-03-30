@@ -1,0 +1,82 @@
+<item
+	name=""
+	displayname=""
+	description=""
+	icon=""
+	cost=""
+	components="a,b,c"
+	activationtype=""
+>
+	<passive
+		scheme=""
+		targetscheme=""
+		
+		strength="1,2,3"
+		agility=""
+		intelligence=""
+		
+		maxhealth=""
+		maxmana=""
+		
+		healthregen=""
+		healthregenmult=""
+		
+		manaregen=""
+		manaregenmult=""
+		
+		damage=""
+		armor=""
+		magicarmor=""
+		
+		evasion=""
+		
+		criticalchance=""
+		criticalmult=""
+		
+		deflectionchance=""
+		deflectionamount=""
+		
+		splashamount=""
+	/>
+
+	<passive
+		scheme=""
+		targetscheme=""
+		
+		strength="2,3,4"
+		agility=""
+		intelligence=""
+	/>
+	
+	<active
+		scheme=""
+		targetscheme=""
+		
+		strength="3,4,5"
+		agility=""
+		intelligence=""
+	/>
+	
+	<onactivate>
+		<damage value="" target="other"/>
+		<applystate name="" target="self"/>
+		<createaffector name=""/>
+	</onactivate>
+	
+	<onattack>
+		<applystate name=""/>
+		<chance value="0.2">
+			<damage type="physical" value=""/>
+			<stun duration=""/>
+		</chance>
+	</onattack>
+	
+	<ondamaged>
+	</ondamaged>
+	
+	<oncast>
+	</oncast>
+	
+	<ondeath>
+	</ondeath>
+</item>

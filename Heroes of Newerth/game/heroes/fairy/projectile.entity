@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Fairy_Attack"
+
+	speed="900"
+	gravity="-1000"
+
+	modelscale="1.9"
+	model="projectile/model.mdf"
+
+	impacteffect="impact.effect"
+	passiveeffect="projectile/glow.effect"
+>
+</projectile>

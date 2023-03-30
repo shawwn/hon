@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1">
+
+	<definitions>
+
+		<modifier
+			name="modifier0"
+		/>
+
+		<particlesystem name="system0" space="world" scale="1.65">
+
+			<billboard
+				delay="1000"
+				bone="_bone_centerofchest"
+				depthbias="-60"
+				material="/shared/effects/materials/whitedot.material"
+				startcolor=".05 .25 0"
+				endcolor="0 0 0"
+				size="25"
+				maxangle="360"
+				expirelife="500"
+			/>
+
+			<billboard
+				delay="1000"
+				bone="Bip01 L Hand"
+				depthbias="-60"
+				material="/shared/effects/materials/whitedot.material"
+				startcolor=".05 .25 0"
+				endcolor="0 0 0"
+				size="15"
+				maxangle="360"
+				expirelife="500"
+			/>
+			
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>
+			<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+	</thread>
+
+</effect>

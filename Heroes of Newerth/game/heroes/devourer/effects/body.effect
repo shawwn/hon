@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="1">
+	<definitions>
+		<particlesystem name="system0" space="world">
+			
+			<simpleemitter
+				bone="_bone_head"
+				spawnrate="10"
+				offsetsphere="20"
+				particlelife="3000"
+				depthbias="-120"
+			>
+				<particle>
+					<groundsprite						
+						loop="false"			
+						material="/shared/effects/materials/blood_pool_02.material"						
+						life="2000"
+						size="5"			
+						minscale="1"
+						maxscale="6"
+						minyaw="-360"
+						maxyaw="360"
+						startcolor=".35 .2 .2"
+						endcolor=".2 .1 .1"
+						startalpha=".8"
+						midalpha=".8"
+						endalpha="0"
+						minendwidth="10"
+						maxendwidth="15"
+						minyaspweed="-2"
+						maxyawspeed="2"
+					/>				
+				</particle>
+				<particle>
+					<groundsprite						
+						loop="false"			
+						material="/shared/effects/materials/blood_pool_02.material"						
+						life="1500"
+						size="3"			
+						minscale="1"
+						maxscale="5"
+						minyaw="-360"
+						maxyaw="360"
+						startcolor=".25 .2 .2"
+						endcolor=".15 .15 .15"
+						startalpha=".8"
+						midalpha=".8"
+						endalpha="0"
+						minendscale="1"
+						maxenscale="1"
+					/>				
+				</particle>
+			</simpleemitter>
+
+		</particlesystem>	
+		
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+

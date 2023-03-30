@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" deferred="true" useentityeffectscale="true">
+	<definitions>
+
+
+			
+		<particlesystem name="system0" space="world" scale="0.7">
+
+			<sound
+				soundloop="true"
+				fadein="300"
+				fadeout="500"
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2000"
+				volume=".4"
+				sample="../sounds/state_self.wav"
+			/>
+
+
+			<model
+				expirelife="100"
+				position="0 0 0"
+				name="hand" 
+				anim="idle"
+				startcolor="1 1 1"
+				endcolor="0 0 0"
+				model="suck_bones.mdf"			
+				startscale="0.85"	
+				yaw="180"
+				endscale="1"
+			>
+			</model>	
+			
+
+
+			<template name="beam">
+
+
+
+				
+
+				
+				<trackeremitter				
+					targetowner="source"
+					owner="hand"
+					
+					bone="{bone_b}"
+					targetbone="{bone_a}"
+					
+					spawnrate="40"
+					tracktype="distance"
+					trackspeed="1.0" 				
+					drag="0"
+					
+					particlelife="800"
+					gravity="-50"
+					offsetsphere="5 5 5"
+					minspeed="50.0"
+					maxspeed="50.0"
+					
+					acceleration="30.0"
+					direction="0.0 0.0 1.0"
+					material="/shared/effects/materials/sand_blend.material"					
+					distancelife="true"
+				>
+					<particle	
+						startscale="50"
+						endscale="30"
+						color=".8 .8 .4"
+						alpha=".2"
+					>					
+					</particle>				
+				</trackeremitter>					
+				
+				
+				<trackeremitter				
+					targetowner="source"
+					owner="hand"
+					
+					bone="{bone_b}"
+					targetbone="{bone_a}"
+					
+					spawnrate="50"
+					tracktype="distance"
+					trackspeed="1.0" 				
+					drag="0"
+					
+					particlelife="800"
+					gravity="-50"
+					offsetsphere="5 5 5"
+					minspeed="50.0"
+					maxspeed="50.0"
+					
+					acceleration="30.0"
+					direction="0.0 0.0 1.0"
+					material="/shared/effects/materials/pyroclast_03.material"					
+					distancelife="true"
+				>
+					<particle	
+						startscale="20"
+						endscale="10"
+						startcolor=".5 .5 .25"
+						endcolor="1 1 .5"
+						alpha=".4"
+					>					
+					</particle>				
+				</trackeremitter>	
+<!--
+				<simpleemitter
+					owner="hand"
+					position="0 0 0"
+					spawnrate="12"
+					bone="{bone_b}"
+					particlelife="400"
+					gravity="-61"
+					material="/shared/effects/materials/sand_blend.material"
+					offsetsphere="0 0  0"
+					direction="1 0 0"
+					minangle="-180"
+					maxangle="180"
+					speed="0"
+					directionalspace="global"
+					inheritvelocity="0"
+					depthbias="-20"
+				>
+					<particle
+						minangle="0"
+						maxangle="360"
+						anglespeed="20"
+						startsize="44"
+						midsize="30"
+						endsize="50"
+						lockup="true"
+						lockright="true"
+						pitch="90"
+						
+							startcolor="1 1 .5 "
+							endcolor="0 0 0"					
+						
+						
+						
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".75"
+					/>
+				</simpleemitter>					
+				
+				<billboard
+					bone="{bone_a}"
+					material="/shared/effects/materials/whitedot.material"
+					color=".2 .17 .1"
+					size="50"
+					depthbias="-20"
+				/>
+				
+				<billboard
+					owner="hand"
+					bone="{bone_b}"
+					material="/shared/effects/materials/whitedot.material"
+					color=".4 .3 .2"
+					size="50"
+					depthbias="-20"
+				/>	
+				-->				
+			</template>
+			
+			<instance name="beam" bone_b="_bone_left" bone_a="_bone_lefthand"/>		
+
+			<instance name="beam" bone_b="_bone_right" bone_a="_bone_righthand"/>
+			<instance name="beam" bone_b="_bone_head" bone_a="_bone_head"/>
+			
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

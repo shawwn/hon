@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1" useentityeffectscale="1">
+
+<definitions>
+	<particlesystem name="system0" space="world" scale="1">
+
+			<sound
+				soundloop="true"
+				fadein="200"
+				fadeout="300"
+				volume=".1"
+				sample="sounds/state.wav"
+				linearfalloff="true"
+				falloffstart="1000"
+				falloffend="2200"
+			/>
+
+		<simpleemitter
+			
+			spawnrate="5"
+			life="4900"
+			particlelife="800"
+			
+			gravity="0"
+			speed="50"
+			drag="0"
+			acceleration="0"
+			position="0 0 150"
+			material="/shared/effects/materials/flare_01.material"
+			offsetsphere="0 0 450"
+			minangle="0"
+			maxangle="0"
+			direction="0 0 1"
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="0"
+				startcolor=".0 .0 .0"
+				midcolor=".5 .5 .5"
+				endcolor="0 0 0"
+				midcolorpos=".5"
+				maxanglespeed="0"
+				startframe="0"
+				endframe="0"
+				startsize="1"
+				midsize="320"
+				endsize="640"
+				midsizepos=".5"
+				startalpha="1"
+				midalpha="1"
+				endalpha="1"
+				midalphapos=".3"
+				startstickiness="1"
+				endstickiness="1"
+			/>
+		</simpleemitter>
+		<orbiteremitter
+				position="0 0 150"
+				life="5100"
+				spawnrate="15"
+				particlelife="900"
+				origin="0 0 -80" 
+				orbit="-5 5 100" 
+				direction="0 0 1" 
+				offset="120 120 20"
+				cylindrical="true" 
+				material="/shared/effects/materials/butterfly.material"
+			>
+				<particle 
+					minangle="0"
+					maxangle="0"
+					minanglespeed="-720"
+					maxanglespeed="720" 	   
+					color="1 1 1"
+					midcolorpos=".5" 	   
+					size="25"
+					startalpha="1"
+					endalpha="0"
+				/>
+			</orbiteremitter>
+		
+		
+	</particlesystem>
+</definitions>
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	
+	
+		<waitfordeath instance="instance0" />
+	<!-- <die /> -->
+</thread>
+
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+

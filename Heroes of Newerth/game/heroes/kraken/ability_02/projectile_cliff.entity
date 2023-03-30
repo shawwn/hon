@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Kraken_Ability2_Cliff"
+
+	speed="850"
+	gravity="0"
+
+	modelscale="1.0"
+	model=""
+	
+	canturn="true"
+	flying="true"
+	flyheight="0"
+	
+	touchcliffs="true"
+	
+	touchradius="1"
+	touchradiusdiradjust="true"
+	touchtargetscheme="Nothing"
+	toucheffecttype=""
+	maxtouchespertarget="1"
+>	
+	<ontouch>
+		<setparam entity="this_proxy_entity" a="2" />
+		<kill target="this_proxy_entity" source="" />
+		<kill target="this_entity" source="" />
+		<playeffect effect="effects/charge_impact.effect" target="this_proxy_entity"/>
+	</ontouch>
+	
+	<onimpact>
+
+	</onimpact>
+</projectile>

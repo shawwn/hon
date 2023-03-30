@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="SwordProjectile.max" file="swordprojectile.model" type="K2" >
+<anim name="idle" clip="swordprojectile.clip" fps="120" loop="true"/>
+</model>

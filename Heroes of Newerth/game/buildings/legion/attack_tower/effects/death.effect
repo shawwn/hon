@@ -1,0 +1,955 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="deathExplosionLarge">
+	<definitions>
+	
+			
+		<trailemitter
+			name="emitter0"
+			spawnrate="30"
+			particlelife="900"
+			texpostime="900"
+			texposscale="0"
+			texstretchscale="1"
+			startminparticlelife="1000"
+			startmaxparticlelife="1000"			
+			endminparticlelife="1"
+			endmaxparticlelife="1" 		
+			material="/shared/effects/materials/phantom_smoke_03.material"
+			pitch="90"
+		>
+			<particle
+				 startcolor="1 1 1"
+				 midcolor="1 1 1"
+				 endcolor="0 0 0"
+				 startsize="00"
+				 midsize="20"
+				 endsize="0"
+				 midsizepos="0.4"
+
+		 />
+		</trailemitter>		
+	
+		<particlesystem name="system0" space="entity" scale=".65">
+
+			<sound
+				linearfalloff="true"
+				falloffstart="900"
+				falloffend="2000"
+				volume="0.85"
+				sample="/shared/sounds/effects/legion_building_death.wav"
+			/>
+	
+			<model
+				delay="250"
+				name="ring"
+				life="5000"
+				model="/shared/effects/models/legion_death_rig/model.mdf"
+				anim="idle"
+				yawspeed="0"
+				startscale="10"
+				midscale="10"
+				endscale="0"		
+				position="0 0 50"					
+				
+			/>			
+		
+			<light
+				life="1000"
+				falloff="300"
+				color="2 0.9 0.3"
+				endcolor="0 0 0"
+				position="0 0 100"
+			/>
+			
+			
+			
+			
+			<simpleemitter
+
+				spawnrate="2000"
+				count="10"
+				minparticlelife="1500"
+				maxparticlelife="2500"
+				gravity="-20"
+				maxspeed="80"
+				position="0 0 40"
+				drag="0.01"
+				material="/shared/effects/materials/dust_smoke_02.material"
+				offsetsphere="15 15 15"
+
+			>
+				<particle
+					minangle="0"
+					maxangle="0"
+					minanglespeed="0"
+					startcolor="0 0 0"
+					endcolor="0 0 0"
+					
+					maxanglespeed="10"
+					endanglespeed="0"
+					endanglespeedpos="0.1"
+					startsize="0"
+					midsize="150"
+					endsize="200"
+					startalpha=".75"
+					midalpha=".25"
+					endalpha="0"
+					midalphapos="0.5"
+
+				/>
+			</simpleemitter>
+			
+			<simpleemitter			
+				spawnrate="500"
+				count="10"
+				minparticlelife="1500"
+				maxparticlelife="3500"
+				gravity="-5"
+				speed="150"
+				position="0 0 60"
+				angle="15"
+				material="/shared/effects/materials/phantom_smoke_03.material"
+				offsetsphere="50 50 50"
+			>
+				<particle 
+					scale="1"
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-30"
+					startcolor=".8 .8 .8"
+					endcolor="-1 -1 -1"
+					startalpha="0 0 0"
+					endalpha="0 0 0"
+					maxanglespeed="30"
+					startsize="100"
+					endsize="275"
+
+				/>
+			</simpleemitter>			
+			
+
+<!-- gray smoke -->
+			<simpleemitter
+
+				spawnrate="2000"
+				count="25"
+				minparticlelife="1000"
+				maxparticlelife="2000"
+				gravity="-20"
+				maxspeed="80"
+				position="0 0 40"
+				drag="0.07"
+				material="/shared/effects/materials/dust_smoke_02.material"
+				offsetsphere="50 50 50"
+				timenudge="400"
+			>
+				<particle
+					minangle="0"
+					maxangle="45"
+					minanglespeed="0"
+					startcolor=".4 .4 .4"
+					endcolor="0 0 0"
+					
+					maxanglespeed="10"
+					endanglespeed="0"
+					endanglespeedpos="0.1"
+					startsize="0"
+					midsize="50"
+					endsize="125"
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					midalphapos="0.5"
+
+				/>
+			</simpleemitter>		
+		
+			<simpleemitter			
+				spawnrate="2225"
+				count="10"
+				minparticlelife="1500"
+				maxparticlelife="3500"
+				gravity="-5"
+				speed="150"
+				position="0 0 60"
+				angle="15"
+				material="/shared/effects/materials/fireball_02.material"
+				offsetsphere="125 125 175"
+			>
+				<particle 
+					scale="1"
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-30"
+					startcolor=".25 .25 .25"
+					endcolor="-1 -1 -1"
+					maxanglespeed="30"
+					startsize="150"
+					endsize="75"
+
+				/>
+			</simpleemitter>
+			
+			
+			
+
+<!-- spotted flames -->			
+			<simpleemitter			
+
+				count="10"
+				particlelife="800"
+				gravity="0"
+				speed="0"
+				position="0 0 50"
+				angle="50"
+				material="/shared/effects/materials/fireball_03.material"
+				offsetsphere="50 50 50"
+			>
+				<particle 
+					scale="1"
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-80"
+					startcolor="1 1 1"
+					midcolor="1 1 1"
+					endcolor="0 0 0"
+					maxanglespeed="30"
+					startsize="20"
+					endsize="50"
+
+				/>
+			</simpleemitter>
+
+
+	
+
+			
+		<groundsprite
+			life="4000"
+			loop="false"
+			
+			material="/shared/effects/materials/smash_blend.material"
+			
+			startsize="65"
+			midsize="65"
+			endsize="65"
+			midsizepos=".5"
+
+			color="1 1 1"
+			
+			startalpha="1 1 1"
+			midalpha=".7 .7 .7"
+			endalpha="0 0 0"
+			midalphapos=".7"			
+
+			minangle="55"
+			maxangle="55"
+		
+			angles="0 0 0"
+		/>			
+		
+		
+		<groundsprite
+			life="4000"
+			loop="false"			
+			material="/shared/effects/materials/smash_add.material"
+			
+			startsize="65"
+			midsize="65"
+			endsize="65"
+			midsizepos=".5"
+
+			startcolor=".1 .1 .1"
+			endcolor="0 0 0"
+
+			midalphapos=".7"			
+
+			minangle="55"
+			maxangle="55"
+		
+			angles="0 0 0"
+		/>
+		
+		
+			<simpleemitter			
+
+				count="5"
+				minparticlelife="1000"
+				maxparticlelife="2000"
+				gravity="-20"
+				maxspeed="80"
+				position="0 0 0"
+				drag="0.05"
+				material="/shared/effects/materials/fireball_03.material"
+				offsetsphere="0 0 0"
+
+			>
+				<particle
+					startcolor=".3 .2 .2"
+					endcolor="0 0 0"
+					startsize="0"
+					midsize="150"
+					endsize="100"
+
+				/>
+			</simpleemitter>				
+
+			<billboard		
+				delay="0"
+				life="1200"
+				color=".7 .7 10"
+				midcolor=".8 .5 10"
+				endcolor="0 0 0"
+				midcolorpos=".2"
+				startsize="0"
+				midsize="600"
+				endsize="0"
+				midsizepos=".5"
+				depthbias="-15"
+				material="/shared/effects/materials/flare_07.material"
+				lockup="true"
+				pitch="90"
+				
+			/>
+
+			<billboard
+				delay="0"
+				life="1200"
+				color=".7 .7 10"
+				midcolor=".8 .5 10"
+				endcolor="1 1 1"
+				midcolorpos=".2"
+				startsize="0"
+				midsize="100"
+				endsize="0"
+				midsizepos=".5"
+				depthbias="-15"
+				material="/shared/effects/materials/flare_07.material"
+				lockup="true"
+				pitch="90"
+				
+			/>
+			
+			
+			<billboard
+				delay="0"
+				life="500"
+				loop="false"
+				color="1.0 1.0 1.0"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".3"
+				startparam=".25"
+				endparam="0.0"
+				startsize="0"
+				endsize="500"
+				depthbias="-25"
+				position="0 0 0"
+				material="/shared/effects/materials/refract_ring.material"
+				lockup="true"
+				pitch="90"		
+			/>	
+			
+			<simpleemitter			
+				spawnrate="5000"
+				count="1"
+				minparticlelife="1500"
+				maxparticlelife="3500"
+				gravity="-5"
+				speed="150"
+				position="0 0 60"
+				angle="0"
+				material="/shared/effects/materials/heathaze.material"
+				offsetsphere="0 0 0"
+			>
+				<particle 
+					startparam="0.1"
+					endparam="0.0"
+					scale="1"
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-30"
+					startcolor="1 1 1"
+					maxanglespeed="0"
+					startsize="100"
+					endsize="275"
+					startalpha=".5"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+<!-- spirits going straight up
+			<simpleemitter
+
+				spawnrate="233"
+				particlelife="3000"
+				count="5"
+				particlelifealloc="6000"
+				gravity="-15"
+				minspeed="50"
+				maxspeed="100"
+				drag="0"
+				acceleration="50"
+				inheritvelocity="2"
+				offsetsphere="50 50 50"
+			>
+				<particle
+				emitter="emitter0"
+				/>			
+			</simpleemitter>					
+-->
+
+<!-- spirits -->		
+		<twopointtrailemitter
+			owner="ring" 
+			life="1800"
+			name="trail01"
+			bone_a="_bone_01"
+			bone_b="_bone_02"
+			spawnrate="30"
+			
+			particlelife="1800"
+
+			startparticlealpha="1"
+			endparticlealpha="0"
+			
+			startparticlecolor="1 1 1"
+			midparticlecolor="1 1 1"
+			endparticlecolor="0 0 0"
+			midpariclecolorpos=".7"
+			
+			midpartcilealphapos=".99"
+			texpostime="1800"
+			texposscale="0"
+			texstretchscale="1"				
+			material="/shared/effects/materials/phantom_smoke_03.material"
+		>
+			<particle 				
+				startcolor=".7 .7 .7"
+				midcolor=".7 .7 .7"
+				endcolor="0 0 0"
+				
+				startalpha="1" midalpha="1" endalpha="0"
+			/>
+		</twopointtrailemitter>	
+
+
+		<twopointtrailemitter
+			owner="ring" 
+			life="1800"
+			name="trail01"
+			bone_a="_bone_05"
+			bone_b="_bone_06"
+			spawnrate="30"
+			
+			particlelife="1800"
+
+			startparticlealpha="1"
+			endparticlealpha="0"
+			
+			startparticlecolor="1 1 1"
+			midparticlecolor="1 1 1"
+			endparticlecolor="0 0 0"
+			midpariclecolorpos=".7"
+			
+			midpartcilealphapos=".99"
+			texpostime="1800"
+			texposscale="0"
+			texstretchscale="1"				
+			material="/shared/effects/materials/phantom_smoke_03.material"
+		>
+			<particle 				
+				startcolor=".9 .9 .9"
+				midcolor=".9 .9 .9"
+				endcolor="0 0 0"
+				
+				startalpha="1" midalpha="1" endalpha="0"
+			/>
+		</twopointtrailemitter>			
+			
+		<twopointtrailemitter
+			owner="ring" 
+			life="4000"
+			name="trail01"
+			bone_a="_bone_07"
+			bone_b="_bone_08"
+			spawnrate="30"
+			
+			particlelife="1800"
+
+			startparticlealpha="1"
+			endparticlealpha="0"
+			
+			startparticlecolor="1 1 1"
+			midparticlecolor="1 1 1"
+			endparticlecolor="0 0 0"
+			midpariclecolorpos=".7"
+			
+			midpartcilealphapos=".99"
+			texpostime="1800"
+			texposscale="0"
+			texstretchscale="1"				
+			material="/shared/effects/materials/phantom_smoke_03.material"
+		>
+			<particle 				
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="0 0 0"
+				
+				startalpha="1" midalpha="1" endalpha="0"
+			/>
+		</twopointtrailemitter>	
+
+	
+
+		<twopointtrailemitter
+			owner="ring" 
+			life="4000"
+			name="trail01"
+			bone_a="_bone_11"
+			bone_b="_bone_12"
+			spawnrate="30"
+			
+			particlelife="1800"
+
+			startparticlealpha="1"
+			endparticlealpha="0"
+			
+			startparticlecolor="1 1 1"
+			midparticlecolor="1 1 1"
+			endparticlecolor="0 0 0"
+			midpariclecolorpos=".7"
+			
+			midpartcilealphapos=".99"
+			texpostime="1800"
+			texposscale="0"
+			texstretchscale="1"				
+			material="/shared/effects/materials/phantom_smoke_03.material"
+		>
+			<particle 				
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="0 0 0"
+				
+				startalpha="1" midalpha="1" endalpha="0"
+			/>
+		</twopointtrailemitter>	
+		
+	
+
+		
+		<twopointtrailemitter
+			owner="ring" 
+			life="1800"
+			name="trail01"
+			bone_a="_bone_15"
+			bone_b="_bone_16"
+			spawnrate="30"
+			
+			particlelife="1800"
+
+			startparticlealpha="1"
+			endparticlealpha="0"
+			
+			startparticlecolor="1 1 1"
+			midparticlecolor="1 1 1"
+			endparticlecolor="0 0 0"
+			midpariclecolorpos=".7"
+			
+			midpartcilealphapos=".99"
+			texpostime="1800"
+			texposscale="0"
+			texstretchscale="1"				
+			material="/shared/effects/materials/phantom_smoke_03.material"
+		>
+			<particle 				
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="0 0 0"
+				
+				startalpha="1" midalpha="1" endalpha="0"
+			/>
+		</twopointtrailemitter>	
+
+		<twopointtrailemitter
+			owner="ring" 
+			life="4000"
+			name="trail01"
+			bone_a="_bone_03"
+			bone_b="_bone_04"
+			spawnrate="30"
+			
+			particlelife="1800"
+
+			startparticlealpha="1"
+			endparticlealpha="0"
+			
+			startparticlecolor="1 1 1"
+			midparticlecolor="1 1 1"
+			endparticlecolor="0 0 0"
+			midpariclecolorpos=".7"
+			
+			midpartcilealphapos=".99"
+			texpostime="1800"
+			texposscale="0"
+			texstretchscale="1"				
+			material="/shared/effects/materials/phantom_smoke_03.material"
+		>
+			<particle 				
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="0 0 0"
+				
+				startalpha="1" midalpha="1" endalpha="0"
+			/>
+		</twopointtrailemitter>	
+
+		<twopointtrailemitter
+			owner="ring" 
+			life="4000"
+			name="trail01"
+			bone_a="_bone_09"
+			bone_b="_bone_10"
+			spawnrate="30"
+			
+			particlelife="1800"
+
+			startparticlealpha="1"
+			endparticlealpha="0"
+			
+			startparticlecolor="1 1 1"
+			midparticlecolor="1 1 1"
+			endparticlecolor="0 0 0"
+			midpariclecolorpos=".7"
+			
+			midpartcilealphapos=".99"
+			texpostime="1800"
+			texposscale="0"
+			texstretchscale="1"				
+			material="/shared/effects/materials/phantom_smoke_03.material"
+		>
+			<particle 				
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="0 0 0"
+				
+				startalpha="1" midalpha="1" endalpha="0"
+			/>
+		</twopointtrailemitter>	
+
+		<twopointtrailemitter
+			owner="ring" 
+			life="2000"
+			name="trail01"
+			bone_a="_boneSpin_01"
+			bone_b="_boneSpin_02"
+			spawnrate="30"
+			
+			particlelife="1800"
+
+			startparticlealpha="1"
+			endparticlealpha="0"
+			
+			startparticlecolor="1 1 1"
+			midparticlecolor="1 1 1"
+			endparticlecolor="0 0 0"
+			midpariclecolorpos=".7"
+			
+			midpartcilealphapos=".99"
+			texpostime="3500"
+			texposscale="0"
+			texstretchscale="1"				
+			material="/shared/effects/materials/phantom_smoke_03.material"
+		>
+			<particle 				
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="0 0 0"
+				
+				startalpha="1" midalpha="1" endalpha="0"
+			/>
+		</twopointtrailemitter>	
+
+		<twopointtrailemitter
+			owner="ring" 
+			life="2000"
+			name="trail01"
+			bone_a="_boneSpin_03"
+			bone_b="_boneSpin_04"
+			spawnrate="30"
+			
+			particlelife="1800"
+
+			startparticlealpha="1"
+			endparticlealpha="0"
+			
+			startparticlecolor="1 1 1"
+			midparticlecolor="1 1 1"
+			endparticlecolor="0 0 0"
+			midpariclecolorpos=".7"
+			
+			midpartcilealphapos=".99"
+			texpostime="3500"
+			texposscale="0"
+			texstretchscale="1"				
+			material="/shared/effects/materials/phantom_smoke_03.material"
+		>
+			<particle 				
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="0 0 0"
+				
+				startalpha="1" midalpha="1" endalpha="0"
+			/>
+		</twopointtrailemitter>	
+
+		<twopointtrailemitter
+			owner="ring" 
+			life="2000"
+			name="trail01"
+			bone_a="_boneSpin_05"
+			bone_b="_boneSpin_06"
+			spawnrate="30"
+			
+			particlelife="1800"
+
+			startparticlealpha="1"
+			endparticlealpha="0"
+			
+			startparticlecolor="1 1 1"
+			midparticlecolor="1 1 1"
+			endparticlecolor="0 0 0"
+			midpariclecolorpos=".7"
+			
+			midpartcilealphapos=".99"
+			texpostime="3500"
+			texposscale="0"
+			texstretchscale="1"				
+			material="/shared/effects/materials/phantom_smoke_03.material"
+		>
+			<particle 				
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="0 0 0"
+				
+				startalpha="1" midalpha="1" endalpha="0"
+			/>
+		</twopointtrailemitter>		
+
+		<twopointtrailemitter
+			owner="ring" 
+			life="2000"
+			name="trail01"
+			bone_a="_boneSpin_07"
+			bone_b="_boneSpin_08"
+			spawnrate="30"
+			
+			particlelife="1800"
+
+			startparticlealpha="1"
+			endparticlealpha="0"
+			
+			startparticlecolor="1 1 1"
+			midparticlecolor="1 1 1"
+			endparticlecolor="0 0 0"
+			midpariclecolorpos=".7"
+			
+			midpartcilealphapos=".99"
+			texpostime="3500"
+			texposscale="0"
+			texstretchscale="1"				
+			material="/shared/effects/materials/phantom_smoke_03.material"
+		>
+			<particle 				
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="0 0 0"
+				
+				startalpha="1" midalpha="1" endalpha="0"
+			/>
+		</twopointtrailemitter>							
+
+		<twopointtrailemitter
+			owner="ring" 
+			life="2000"
+			name="trail01"
+			bone_a="_boneSpin01_01"
+			bone_b="_boneSpin01_02"
+			spawnrate="30"
+			
+			particlelife="1800"
+
+			startparticlealpha="1"
+			endparticlealpha="0"
+			
+			startparticlecolor="1 1 1"
+			midparticlecolor="1 1 1"
+			endparticlecolor="0 0 0"
+			midpariclecolorpos=".7"
+			
+			midpartcilealphapos=".99"
+			texpostime="3500"
+			texposscale="0"
+			texstretchscale="1"				
+			material="/shared/effects/materials/phantom_smoke_03.material"
+		>
+			<particle 				
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="0 0 0"
+				
+				startalpha="1" midalpha="1" endalpha="0"
+			/>
+		</twopointtrailemitter>	
+
+		<twopointtrailemitter
+			owner="ring" 
+			life="2000"
+			name="trail01"
+			bone_a="_boneSpin01_03"
+			bone_b="_boneSpin01_04"
+			spawnrate="30"
+			
+			particlelife="1800"
+
+			startparticlealpha="1"
+			endparticlealpha="0"
+			
+			startparticlecolor="1 1 1"
+			midparticlecolor="1 1 1"
+			endparticlecolor="0 0 0"
+			midpariclecolorpos=".7"
+			
+			midpartcilealphapos=".99"
+			texpostime="3500"
+			texposscale="0"
+			texstretchscale="1"				
+			material="/shared/effects/materials/phantom_smoke_03.material"
+		>
+			<particle 				
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="0 0 0"
+				
+				startalpha="1" midalpha="1" endalpha="0"
+			/>
+		</twopointtrailemitter>	
+
+		<twopointtrailemitter
+			owner="ring" 
+			life="2000"
+			name="trail01"
+			bone_a="_boneSpin01_05"
+			bone_b="_boneSpin01_06"
+			spawnrate="30"
+			
+			particlelife="1800"
+
+			startparticlealpha="1"
+			endparticlealpha="0"
+			
+			startparticlecolor="1 1 1"
+			midparticlecolor="1 1 1"
+			endparticlecolor="0 0 0"
+			midpariclecolorpos=".7"
+			
+			midpartcilealphapos=".99"
+			texpostime="3500"
+			texposscale="0"
+			texstretchscale="1"				
+			material="/shared/effects/materials/phantom_smoke_03.material"
+		>
+			<particle 				
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="0 0 0"
+				
+				startalpha="1" midalpha="1" endalpha="0"
+			/>
+		</twopointtrailemitter>		
+
+		<twopointtrailemitter
+			owner="ring" 
+			life="2000"
+			name="trail01"
+			bone_a="_boneSpin01_07"
+			bone_b="_boneSpin01_08"
+			spawnrate="30"
+			
+			particlelife="1800"
+
+			startparticlealpha="1"
+			endparticlealpha="0"
+			
+			startparticlecolor="1 1 1"
+			midparticlecolor="1 1 1"
+			endparticlecolor="0 0 0"
+			midpariclecolorpos=".7"
+			
+			midpartcilealphapos=".99"
+			texpostime="3500"
+			texposscale="0"
+			texstretchscale="1"				
+			material="/shared/effects/materials/phantom_smoke_03.material"
+		>
+			<particle 				
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="0 0 0"
+				
+				startalpha="1" midalpha="1" endalpha="0"
+			/>
+		</twopointtrailemitter>							
+
+
+<!-- purple smoke -->		
+			<simpleemitter
+				delay="0"
+				spawnrate="2000"
+				count="20"
+				minparticlelife="1500"
+				maxparticlelife="2500"
+				gravity="0"
+				maxspeed="150"
+				position="0 0 50"
+				drag="0.01"
+				material="/shared/effects/materials/dust_smoke_02.material"
+				offsetsphere="0 0 0"
+
+			>
+				<particle
+					minangle="0"
+					maxangle="0"
+					minanglespeed="0"
+					startcolor=".6 .4 .8"
+					endcolor="0 0 0"
+					
+					maxanglespeed="10"
+					endanglespeed="0"
+					endanglespeedpos="0.1"
+					startsize="0"
+					midsize="100"
+					endsize="200"
+					startalpha=".4"
+					midalpha=".25"
+					endalpha="0"
+					midalphapos="0.5"
+
+				/>
+			</simpleemitter>			
+			
+		
+	
+      </particlesystem>
+   </definitions>
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	 <camerashake2 scale="11.0" radius="1200" duration="400" frequency="22" />
+	<waitfordeath instance="instance0" />
+	<!-- <die /> -->
+</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

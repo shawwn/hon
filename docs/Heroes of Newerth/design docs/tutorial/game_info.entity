@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<game
+	name="Game_Rules"
+
+	startinggold="0"
+	repickcost="0"
+	randombonus="0"
+	goldpertick="0"
+	incomeinterval="875"
+	
+	experiencemultiplier="1.0"
+	
+	norepick="false"
+	noswap="false"
+	forcerandom="false"
+	
+	allowallheroes="false"
+	allowagility="true"
+	allowintelligence="true"
+	allowstrength="true"
+	heropoolsize="0"
+	bancount="0"
+	usecaptains="false"
+	
+	spawnpowerups="true"
+	alternatepicks="false"
+	
+	respawntimeperlevel="4000"
+	repickonrespawn="false"
+	
+	nolobby="true"
+	noheroselect="true"
+>
+	<onaddplayer>
+		<setteamsize team="0" size="1" />
+		<changeteam entity="target_entity" team="0" />
+		<setinterface entity="target_entity" name="game_tutorial1" />
+		<createcamera name="pcam1" position="1000.0 1000.0" pushentity="true" />
+		<setcamera entity="target_entity" camera="stack_entity" /> <!-- Link player's view to camera1 -->
+		
+	</onaddplayer>
+	
+	<onentergame>
+		<spawnthread name="script1" />
+	</onentergame>
+	
+	<scriptthread name="script1">
+		<pushentitybyname name="pcam1" />
+		<movecamera entity="stack_entity" positionname="camera0" duration="0" />
+		<movecamera entity="stack_entity" positionname="camera1" duration="1000" block="true" />
+		<wait duration="5000" />
+		<movecamera entity="stack_entity" positionname="camera2" duration="1000" block="true" />
+		<wait duration="5000" />
+		<movecamera entity="stack_entity" positionname="camera3" duration="1000" block="true" />
+		<wait duration="5000" />
+		<movecamera entity="stack_entity" positionname="camera0" duration="1000" block="true" />
+		<wait duration="5000" />
+		<spawnclientthread name="overview1" />
+		<clientuitrigger name="Event1" param="1" />
+		<waituntilmessage name="response1" value="1" />
+		<spawnthread name="script2" />
+	</scriptthread>
+	
+	<scriptthread name="script2">
+		<spawn name="hero0" />
+		<spawnthread name="script3" />
+		<setent0 name="hero0" />
+		<loop>
+			<setpos0 name="camera0" />
+			<order command="move" source="ent0" target="pos0" />
+			<setvar0 a="result" />
+			<waituntilcondition target="ent0" test="not_hasorderseq var0" />
+			<setpos0 name="camera1" />
+			<order command="move" source="ent0" target="pos0" block="true"/>
+			<setpos0 name="camera2" />
+			<order command="move" source="ent0" target="pos0" block="true" />
+			<setpos0 name="camera3" />
+			<order command="move" source="ent0" target="pos0" block="true" />
+		</loop>
+	</scriptthread>
+	
+	<scriptthread name="script3">
+		<setent0 name="hero0" />
+		<setent1 name="pcam1" />
+		<loop>
+			<movecamera entity="ent1" positionentity="ent0" interpolate="true" />
+			<yield />
+		</loop>
+	</scriptthread>
+</game>

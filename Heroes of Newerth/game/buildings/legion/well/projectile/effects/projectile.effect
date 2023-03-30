@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="tower_projectile" deferred="true">
+	<definitions>
+		<particlesystem name="system0" space="entity">
+
+
+      </particlesystem>
+	
+      <particlesystem name="system1" space="world" scale="1.8">
+
+
+		<trailemitter
+			spawnrate="400"
+			bone="_bone_fx_01"
+			particlelife="310"
+			texpostime="310"
+		 	texposscale="1.8"
+		 	texstretchscale="0"
+			material="/shared/effects/materials/spirit_03.material"
+		>
+			<particle
+				 startalpha="0"
+				 midalpha=".5"
+				 endalpha="0.0"
+				 startcolor=".6 .6 .6"
+				 midcolor=".6 .6 .6"
+				 endcolor="0 0 0"
+				 startsize="22"
+				 endsize="22"
+				midsizepos=".3"
+
+		 />
+
+		</trailemitter>
+
+
+		
+
+
+
+
+		<simpleemitter
+     
+			bone="_bone_fx_01"
+			spawnrate="150"
+
+			particlelife="200"			
+			acceleration="50"
+			
+			offsetsphere="4 4 4"
+			material="/shared/effects/materials/fireball_01.material"
+        >
+
+			<particle 
+				minangle="-360"
+				maxangle="360"
+				minanglespeed="0"
+				startcolor=".3 .3 0"
+				midcolor=".3 .3 0"
+				endcolor="0 0 0"
+				midcolorpos=".4"
+				maxanglespeed="00"
+
+				startframe="0"
+				endframe="1"
+
+				startsize="30"
+				midsize="10"
+				endsize="5"
+				midsizepos=".8"
+
+				startalpha="0"
+				midalpha=".2"
+				endalpha=".2"
+				midalphapos=".5"
+		/>
+
+			<particle 
+				minangle="-360"
+				maxangle="360"
+				minanglespeed="0"
+				startcolor=".2 .1 0"
+				midcolor=".2 .1 0"
+				endcolor="0 0 0"
+				midcolorpos=".1"
+				maxanglespeed="00"
+
+				startframe="0"
+				endframe="1"
+
+				startsize="5"
+				midsize="3"
+				endsize="1"
+				midsizepos=".8"
+
+				startalpha="0"
+				midalpha=".2"
+				endalpha=".2"
+				midalphapos=".5"
+			/>
+
+		</simpleemitter>
+
+		<simpleemitter
+
+			spawnrate="50"
+			bone="_bone_fx_01"
+			particlelife="200"			
+			gravity="-1"
+			speed="200"
+			drag="0"
+			acceleration="0"
+			position="0 0 0"
+			material="/shared/effects/materials/spark_10.material"
+			offsetsphere="0 0 0"
+			minangle="0"
+			maxangle="360"
+			direction="0 0 0"
+			offsetdirection="0 0 0"
+			offsetradial="0 0 0"
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+				maxanglespeed="0"
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="0 0 0"
+				midcolorpos=".2"
+
+				startframe="0"
+				endframe="1"
+				startsize="7"
+				midsize="5"
+				endsize="3"
+
+
+				startalpha="0"
+				midalpha=".7"
+				endalpha="0"
+				midalphapos=".5"
+				turn="true"
+			/>
+
+
+		</simpleemitter>	
+		
+		
+
+
+
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<spawnparticlesystem instance="instance1" particlesystem="system1" />
+      <waitfordeath instance="instance0" />
+	<waitfordeath instance="instance1" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

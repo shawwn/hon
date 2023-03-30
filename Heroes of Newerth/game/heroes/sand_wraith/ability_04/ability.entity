@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_SandWraith4"
+
+	icon="icon.tga"
+	
+	maxlevel="3"
+	requiredlevel="6,11,16"
+	
+	anim="ability_4"
+	actiontype="global"
+	targetscheme="nonillusion_enemy_heroes"
+	
+	casttime="100"
+	castactiontime="100"
+	casteffect=""
+	cooldowntime="120000"
+	manacost="150"
+>
+	<onaction>
+		<playeffect effect="effects/spawn.effect" />
+	</onaction>
+	<onimpact>
+		<spawnillusion
+			owner="source_entity"
+			source="source_entity"
+			target="target_entity"
+			count="1"
+			lifetime="5000,6000,7000"
+			receivedamagemultiplier="2.0"
+			inflictdamagemultiplier="0.4"
+			spawneffect=""
+			deatheffect=""
+			playdeathanim="true"
+			pushentity="true"
+			uncontrollable="true"
+		/>
+		<setproxy entity="stack_entity" target="target_entity" />
+		<order command="follow" source="stack_entity" target="target_entity" />
+		<applystate name="State_SandWraith_Ability4" target="source_entity" duration="100" />
+		<applystate name="State_SandWraith_Ability4_Illusion" target="stack_entity" duration="-1" />
+		<applystate name="State_SandWraith_Ability4_Illusion_Pause" target="stack_entity" duration="1000" proxy="target_entity" />
+		<applystate name="State_SandWraith_Ability4_Sight" target="target_entity" proxy="stack_entity" duration="5000,6000,7000" />
+	</onimpact>
+
+	<modifier key="SandWraith4_Active" modpriority="100"
+		anim=""
+		ignorecooldown="true"
+		icon="icon_b.tga"
+		actiontype="target_position"
+		targetscheme="my_illusions"
+		allowoutofrangecast="true"
+		range="99999"
+		manacost="0"
+		casttime="0"
+		castactiontime="0"
+		cooldowntime="0"
+	>
+		<onimpact>
+			<pushentity searchfortarget="true" searchorigin="target_position" radius="99999" targetscheme="my_illusions" ignoreinvulnerable="true"/>
+			<condition test="stack_entity != 0">
+				<delete target="stack_entity" />
+				<disjoint target="source_entity" />
+				<teleport source="source_entity" target="stack_position" interpolate="false" />
+				<pushentityproxy entity="stack_entity" />
+				<order command="attack" source="source_entity" target="stack_entity" />
+				<expirestate name="State_SandWraith_Ability4_AbilitySwitch" target="source_entity" />
+			</condition>
+		</onimpact>
+	</modifier>
+</ability>

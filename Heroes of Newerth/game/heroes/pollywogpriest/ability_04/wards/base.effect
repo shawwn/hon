@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1.0">
+
+			<simpleemitter
+				delay="0"
+				count="1"
+				spawnrate="1000"
+				drag="0.0"
+				acceleration="0.0"
+				position="0 0 10"
+				direction="0 1 0"
+				offsetdirection="0 0 0"
+				offsetradial="0 0 0"
+				particledirectionalspace="local"
+				inheritvelocity="0"
+			>
+				<particle
+				>
+					<model
+						expirelife="1000"
+						startalpha="1"
+						endalpha="0" 
+						model="model.mdf"
+						anim="idle"
+						scale="0.75"
+						directionalspace="global"
+						minyaw="-135" 
+						maxyaw="135"
+					/>
+				</particle>
+			</simpleemitter>
+			
+				<billboard
+					position="0 0 35"
+					life="2000"
+					size="40"
+					color=".7 .2 0"
+					material="/shared/effects/materials/whitedot.material"
+					loop="true"
+				/>
+
+				<billboard
+					position="0 0 35"
+					life="2000"
+					size="15"
+					color="1 .5 0"
+					material="/shared/effects/materials/whitedot.material"
+					loop="true"
+				/>
+			
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+</effect>

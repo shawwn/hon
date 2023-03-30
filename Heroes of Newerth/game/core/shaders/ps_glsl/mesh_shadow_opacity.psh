@@ -1,0 +1,56 @@
+// (C)2008 S2 Games
+// mesh_shadow_opacity.psh
+// 
+// ...
+//=============================================================================
+
+//=============================================================================
+// Uniform variables
+//=============================================================================
+#if (SHADOWMAP_TYPE == 0) 
+// SHADOWMAP_R32F
+uniform float	fShadowDepthBias;
+#endif
+
+//=============================================================================
+// Varying variables
+//=============================================================================
+#if (SHADOWMAP_TYPE == 0) 
+// SHADOWMAP_R32F
+varying vec2	v_vDepth;
+#endif
+
+//=============================================================================
+// Samplers
+//=============================================================================
+uniform sampler2D	opacity;
+
+//=============================================================================
+// Pixel Shader
+//=============================================================================
+void main()
+{
+	float fOpacity = texture2D(opacity, gl_TexCoord[0].xy).a;
+
+#if (TEXKILL == 1)
+	if (fOpacity < 91.0 / 255.0)
+		discard;
+#endif
+
+#if (SHADOWMAP_TYPE == 0) 
+// SHADOWMAP_R32F
+	
+	#if 0 
+	// Not ATI
+	float fDepth = gl_FragCoord.z + fShadowDepthBias;
+	#else
+	// Perform w divide manually and remap from [-1, 1] to [0, 1]
+	float fDepth = (v_vDepth.x / v_vDepth.y + fShadowDepthBias) * 0.5 + 0.5;
+	#endif
+	
+	gl_FragColor = vec4(fDepth, 0.0, 0.0, fOpacity);
+#else 
+// SHADOWMAP_DEPTH
+	gl_FragColor = vec4(0.0, 0.0, 0.0, fOpacity);
+#endif
+}

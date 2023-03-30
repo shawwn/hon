@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Gladiator4"
+
+	icon="icon.tga"
+	statuseffecttooltip="State_Gladiator_Ability4"
+	
+	anim="ability_4"
+	casttime="400"
+	castactiontime="400"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_position"
+	casteffecttype="Magic"
+	targetscheme=""
+	casteffect=""
+	
+	manacost="150,200,250"
+	cooldowntime="100000"
+
+	range="1000"
+	forcerange="1000"
+>
+	<onimpact>
+		<spawnunit name="Gadget_Gladiator_Ability4_Marker" count="1" target="source_position" pushentity="true" facing="target_position" />
+		<setproxy entity="this_entity" target="stack_entity" />
+		<spawnunit name="Gadget_Gladiator_Ability4_Sight" count="1" target="this_proxy_entity" offset="0 -1000 0" offsetspace="this_proxy_entity" pushentity="true" />
+		<spawnprojectile name="Projectile_Gladiator_Ability4" source="this_proxy_entity" target="target_position" offsetspace="this_proxy_entity" offset="0 -1000 0" bind="stack_entity" proxy="stack_entity" />
+		<spawnunit name="Gadget_Gladiator_Ability4" count="1" target="target_position" offset="0 -150 0" offsetspace="this_proxy_entity" pushentity="true" />
+		<spawnprojectile name="Projectile_Gladiator_Ability4_Chariot" source="this_proxy_entity" target="stack_entity" offsetspace="this_proxy_entity" proxy="stack_entity"  offset="0 -1150 0" />
+		<spawnunit name="Gadget_Gladiator_Ability4" count="1" target="target_position" offset="30 0 0" offsetspace="this_proxy_entity" pushentity="true" />
+		<spawnprojectile name="Projectile_Gladiator_Ability4_Horse" source="this_proxy_entity" target="stack_entity" offsetspace="this_proxy_entity" proxy="stack_entity" offset="70 -1025 0" />
+		<spawnunit name="Gadget_Gladiator_Ability4" count="1" target="target_position" offset="-30 0 0" offsetspace="this_proxy_entity" pushentity="true" />
+		<spawnprojectile name="Projectile_Gladiator_Ability4_Horse" source="this_proxy_entity" target="stack_entity" offsetspace="this_proxy_entity" proxy="stack_entity" offset="-30 -1000 0" />
+		<spawnunit name="Gadget_Gladiator_Ability4" count="1" target="target_position" offset="30 180 0" offsetspace="this_proxy_entity" pushentity="true" />
+		<spawnprojectile name="Projectile_Gladiator_Ability4_Horse" source="this_proxy_entity" target="stack_entity" offsetspace="this_proxy_entity" proxy="stack_entity" offset="40 -820 0" />
+		<spawnunit name="Gadget_Gladiator_Ability4" count="1" target="target_position" offset="-30 180 0" offsetspace="this_proxy_entity" pushentity="true" />
+		<spawnprojectile name="Projectile_Gladiator_Ability4_Horse" source="this_proxy_entity" target="stack_entity" offsetspace="this_proxy_entity" proxy="stack_entity" offset="-60 -845 0" />
+	</onimpact>
+	
+	<modifier key="Alt" modpriority="1"
+	>
+		<onimpact>
+			<spawnunit name="Gadget_Gladiator_Ability4_Marker" count="1" target="source_position" pushentity="true" facing="target_position" />
+			<setproxy entity="this_entity" target="stack_entity" />
+			<spawnunit name="Gadget_Gladiator_Ability4_Sight" count="1" target="this_proxy_entity" offset="0 -1000 0" offsetspace="this_proxy_entity" pushentity="true" />
+			<spawnprojectile name="Projectile_Gladiator_Alt_Ability4" source="this_proxy_entity" target="target_position" offsetspace="this_proxy_entity" offset="0 -1000 0" bind="stack_entity" proxy="stack_entity" />
+		</onimpact>
+	</modifier>
+</ability>

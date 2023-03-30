@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="ability_02" useentityeffectscale="1">
+	<definitions>
+		<modifier
+			name="modifier0"
+			life="500"
+			startcolor="11 5 10"
+			endcolor="1.0 1.0 1.0"
+		/>	
+	
+
+		<particlesystem name="system0" space="world" scale=".5">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2000"
+				volume=".25"
+				sample="../sounds/impact_%.wav"
+			/>
+
+		
+		<billboard
+			delay="00"		
+			life="200"
+			bone="_bone_centerofchest"		
+			
+			material="/shared/effects/materials/whitedot.material"
+			position="0 0 0"
+			color=".3 0 .6"							
+			
+			size="380"
+			endsize="0"
+			midsizepos=".3"
+			depthbias="-100"
+		/>		
+			<simpleemitter 
+				bone="_bone_centerofchest"
+				count="10"
+         		spawnrate="222"				
+				minparticlelife="800"
+          		maxparticlelife="1200"
+          		gravity="0"
+          		drag="0"
+				speed="50"
+				position="0 0 0"
+				offsetsphere="20 20 20"
+          		material="/shared/effects/materials/neb_blend.material"
+				inheritvelocity="0.25"
+
+      		>
+  				
+				<particle 
+					maxangle="360"			
+					minanglespeed="-44"
+					maxanglespeed="44"
+					
+					scale="6"					
+					color=".1 0 .2"		
+					
+					startalpha="0"
+					midalpha=".7"
+					endalpha="0"
+					
+					
+					startsize="75"
+					midsize="11"
+					endsize="44"
+									
+				/>
+        	</simpleemitter>
+
+			
+			<simpleemitter	
+				bone="_bone_centerofchest"
+				count="1"
+				particlelife="2000"
+				spawnrate="10000"
+				gravity="-0"
+				speed="0.0"
+				acceleration="0.0"		
+				position="0 0 40"			
+				
+				
+			>
+				<particle>				
+					<simpleemitter			
+						count="10"
+						spawnrate="1055"
+						particlelife="1000"
+						gravity="0"
+						minspeed="133.0"
+						maxspeed="230"
+						acceleration="0.0"
+						timenudge="0"
+						position="0 0 40"
+						offsetsphere="50 50 20"
+						
+						material="/shared/effects/materials/bat.material"
+						
+					>
+						<particle
+							color="1 1 1"
+							midcolorpos="0.5"
+							startalpha="1"
+							midalpha="1"
+							endalpha="0"
+							minframe="0"
+							maxframe="1"
+							framespeed="2"		
+							minscale="52"
+							maxscale="65"								
+							turn="true"
+						/>
+					</simpleemitter>			
+				</particle>
+			</simpleemitter>	
+		
+<!--
+-->
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+	  <spawnmodifier instance="instance1" modifier="modifier0"/> 
+	  
+      <waitfordeath instance="instance0" />
+	   <waitfordeath instance="instance1" />	
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

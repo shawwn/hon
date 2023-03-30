@@ -1,0 +1,7 @@
+/glibc-2.3.4-cygwin.patch///1210979324////
+/glibc-2.3.4-gcc4.patch///1210979324////
+/glibc-2.3.4-sem_trywait.patch///1210979324////
+/glibc-2.3.5-allow-gcc4-string.patch///1210979324////
+/glibc-2.3.5-allow-gcc4-symbols.patch///1210979324////
+/glibc-2.3.5-allow-gcc4-wcstol_l.patch///1210979324////
+/make-install-lib-all.patch///1210979324////

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Bephelgor4"
+	
+	statuseffecttooltip="State_Bephelgor_Ability4"
+	icon="icon.tga"
+	
+	anim="ability_4"
+	casttime="0"
+	castactiontime="0"
+	
+	frontqueue="true"
+	inheritmovement="true"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="self_position"
+	targetscheme="enemy_units"
+	casteffecttype="Magic"
+	targetradius="600"
+	casteffect=""
+	maxcharges="100"
+	manacost="100,150,200"
+	cooldowntime="35000"
+	
+	novoiceresponse="true"
+>
+	<onframe>
+		<condition test="isready">
+			<expirestate target="source_entity" name="State_Bephelgor_Ability4_NotReady" />
+		</condition>
+		<else>
+			<condition test="not_hasstate State_Bephelgor_Ability4_NotReady">
+				<applystate name="State_Bephelgor_Ability4_NotReady" continuous="true" target="source_entity" />
+			</condition>
+		</else>
+		<condition test="not_hasstate State_Bephelgor_Ability4_Removecharges and charges gt 0" target="source_entity">
+			<applystate name="State_Bephelgor_Ability4_Removecharges" duration="100000" />
+		</condition>
+		<compare a="charges" b="40" op="lt">
+			<setactivemodifierkey name="" />
+			<setaccumulator value="0" />
+		</compare>
+		<condition test="charges ge 40 and charges lt 80">
+			<hasmodifier name="bephelgor_ability4_level2" />
+			<else>
+				<setactivemodifierkey name="bephelgor_ability4_level2" />
+			</else>			
+		</condition>
+		<compare a="charges" b="70" op="ge">
+			<compare a="accumulator" b="0" op="eq">
+				<playeffect effect="effects/ready.effect" source="source_entity" target="" />
+				<setaccumulator value="1" />
+			</compare>
+		</compare>
+		<compare a="charges" b="80" op="ge">
+			<hasmodifier name="bephelgor_ability4_level3" />
+			<else>
+				<setactivemodifierkey name="bephelgor_ability4_level3" />
+			</else>
+		</compare>
+	</onframe>
+	
+	<onimpact>
+		<setcharges a="0" />
+		<setactivemodifierkey name="" />
+		<spawnaffector name="Affector_Bephelgor_Ability4" proxy="source_entity" target="source_entity"/>
+	</onimpact>
+	
+	<ondeath>
+		<hasmodifier name="ihazatokenoflife" />
+		<else>
+			<setcharges a="0" />
+			<setaccumulator value="0" />
+		</else>
+	</ondeath>	
+
+	<aura state="State_Bephelgor_Ability4_Aura" radius="1000" notooltip="true" targetscheme="player_controlled_enemy_units" stack="true" />
+	
+	<modifier key="bephelgor_ability4_level2" modpriority="60"
+		description="true"
+		disabled="false"
+		icon="icon_b.tga"
+		cooldowntime="60000"
+	>
+		<onimpact>
+			<setcharges a="0" />
+			<setactivemodifierkey name="" />
+			<spawnaffector name="Affector_Bephelgor_Ability4_Level2" proxy="source_entity" target="source_entity"/>
+		</onimpact>
+	</modifier>
+	
+	<modifier key="bephelgor_ability4_level3" modpriority="70"
+		description="true"
+		disabled="false"
+		icon="icon_c.tga"
+		cooldowntime="120000"
+	>
+		<onimpact>
+			<setcharges a="0" />
+			<setactivemodifierkey name="" />
+			<playeffect effect="effects/cast.effect" source="source_entity" target="" />
+			<spawnaffector name="Affector_Bephelgor_Ability4_Level3" proxy="source_entity" target="source_entity"/>
+			<spawnaffector name="Affector_Bephelgor_Ability4_Level3_Minion" proxy="source_entity" target="source_position"/>
+			<setaccumulator value="0" />
+		</onimpact>
+	</modifier>	
+</ability>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Scout2"
+
+	
+	
+	icon="icon.tga"
+	
+	anim="ability_2"
+	casttime="800"
+	castactiontime="0"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_position"
+	targetradius="450"
+	targetmaterial="/shared/materials/area_cast_indicator_simple.material"
+	modifierkey="eye1,eye2,eye3,eye4"
+	
+	manacost="50"
+	cooldowntime="30000"
+	interface="single_plus_one"
+	
+	notargetradius="75"
+	notargetmaterial="/shared/materials/area_cast_indicator_simple_red.material"
+	notargetscheme="trees"
+	notargetignoreinvulnerable="true"
+	
+	range="100"
+>
+	<onimpact>
+		<spawnunit name="Gadget_Scout_Ability2" maxactive="2,3,4,5" proxy="this_entity" target="target_position" />
+		<pushability name="Ability_Scout2_Detonate" />
+		<resetcooldown entity="stack_entity" />
+	</onimpact>
+</ability>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+			
+			
+		
+			
+			<twopointtrailemitter
+			 	bone_a="Bip01 R Forearm"
+				bone_b="_bone_righthand"
+				spawnrate="200"
+				particlelife="300"
+				texpostime="300"
+				texposscale="0.0"
+				texstretchscale="1.0"
+				material="/shared/effects/materials/swoosh_add.material"
+				subframepose="true"
+			>
+	         	<particle
+					startcolor="0 .8 .3"
+					endcolor="0 0 0" 
+				/>
+			</twopointtrailemitter>
+			
+			<twopointtrailemitter
+			 	bone_a="Bip01 L Forearm"
+				bone_b="_bone_lefthand"
+				spawnrate="200"
+				particlelife="300"
+				texpostime="300"
+				texposscale="0.0"
+				texstretchscale="1.0"
+				material="/shared/effects/materials/swoosh_add.material"
+				subframepose="true"
+			>
+	         	<particle
+					startcolor="0 .8 .3"
+					endcolor="0 0 0" 
+				/>
+			</twopointtrailemitter>
+		
+
+					<billboard
+						bone="_bone_righthand"
+						expirelife="400"
+						startcolor=".4 .9 .4"
+						endcolor="0 0 0"
+						startalpha="1.0"
+						midalpha="1.0"
+						endalpha="0.0"
+						midalphapos="0.75"
+						startparam="0.05"
+						endparam="0.0"
+										
+						size="30"
+						
+						midsizepos=".4"
+										
+						depthbias="-30"
+						position="0 0 0"
+						material="/shared/effects/materials/whitedot.material"
+						lockup="true"
+						pitch="90"
+					/>
+					<billboard
+						bone="_bone_head"
+						expirelife="400"
+						startcolor=".4 .9 .4"
+						endcolor="0 0 0"
+						startalpha="1.0"
+						midalpha="1.0"
+						endalpha="0.0"
+						midalphapos="0.75"
+						startparam="0.05"
+						endparam="0.0"
+										
+						size="30"
+						
+						midsizepos=".4"
+										
+						depthbias="-30"
+						position="0 0 0"
+						material="/shared/effects/materials/whitedot.material"
+						lockup="true"
+						pitch="90"
+					/>
+				<billboard
+						bone="_bone_lefthand"
+						expirelife="400"
+						startcolor=".4 .9 .4"
+						endcolor="0 0 0"
+						startalpha="1.0"
+						midalpha="1.0"
+						endalpha="0.0"
+						midalphapos="0.75"
+						startparam="0.05"
+						endparam="0.0"
+										
+						size="30"
+						
+						midsizepos=".4"
+										
+						depthbias="-30"
+						position="0 0 0"
+						material="/shared/effects/materials/whitedot.material"
+						lockup="true"
+						pitch="90"
+					/>
+				
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

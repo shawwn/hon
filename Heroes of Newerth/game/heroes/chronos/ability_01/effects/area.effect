@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="false">
+
+	<definitions>
+
+		
+		
+		<particlesystem name="system0" space="world"  scale="1">
+
+			<groundsprite
+				life="250"
+				material="/shared/effects/materials/starlight.material"
+				startsize="30"
+				endsize="320"
+				startcolor="0.0 0.0 0.0"
+				midcolor="0.0 0.3 0.5"
+				endcolor="0.0 0.0 0.0"
+				startalpha=".3"
+				midalpha="0.75"
+				midalphapos="0.5"
+				endalpha="0"
+				maxyaw="360"
+			/>
+			
+					
+			
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0"  particlesystem="system0" />	
+		
+		<waitfordeath instance="instance0" />
+		  
+      		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->

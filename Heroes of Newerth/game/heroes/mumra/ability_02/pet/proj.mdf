@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="rig.max" file="fly.model" type="K2" >
+	
+	<anim name="idle2" clip="clips/default_1.clip" fps="30" loop="true" minstartframe="0" maxstartframe="-1" blendtime="300" />
+	<anim name="idle" clip="clips/fly.clip" fps="30" loop="true"  />
+	<anim name="idle_2" clip="clips/default_2.clip" fps="30" loop="true"/>
+	
+	<anim name="spawn_1" clip="clips/birth_1.clip"  minstartframe="13" maxstartframe="30" fps="30" loop="false" blendtime="0">
+		<frameevent frame="35" cmd="StartEffect effects/spawn.effect"/>
+	</anim>
+	
+	<anim name="spawn_2" clip="clips/birth_2.clip" fps="30" loop="false">
+	</anim>
+	
+	<anim name="push" clip="clips/push_1.clip" fps="32" loop="false">
+	</anim>
+	
+	<anim name="death_1" clip="clips/default_1.clip" fps="50" loop="true" blendtime="100" loopbackframe="-1">
+		<frameevent frame="1" cmd="PlaySoundLinear /shared/sounds/effects/gib_explode.wav 0 1800 1"/>
+		<frameevent frame="1" cmd="StartEffect effects/death.effect"/>
+	</anim>	
+	<anim name="death_deny_1" clip="clips/default_1.clip" fps="50" loop="true" blendtime="100" loopbackframe="-1">
+		<frameevent frame="1" cmd="PlaySoundLinear /shared/sounds/effects/gib_explode.wav 0 1800 1"/>
+		<frameevent frame="1" cmd="StartEffect effects/death.effect"/>
+	</anim>		
+</model>

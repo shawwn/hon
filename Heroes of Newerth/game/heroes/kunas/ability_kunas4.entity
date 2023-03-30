@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Kunas4"
+	
+	icon="icons/ability_4.tga"
+	
+	anim="ability_4"
+	casttime="1000"
+	castactiontime="300"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="global"
+	targetscheme="nonillusion_enemy_heroes"
+	casteffecttype="Magic"
+	
+	manacost="225,325,450"
+	cooldowntime="120000"
+	
+	impacteffect="effects/ability_04/light_strike_engine.effect"
+>
+	<onaction>
+		<playeffect effect="effects/ability_04/ability_04_cast.effect" source="source_entity" target="" />
+	</onaction>
+
+	<onimpact effectdescription="true">
+		<spawnunit name="Gadget_KunasDummyReveal" target="target_position"/>
+		<damage effecttype="Magic" amount="210,335,460"/>
+	</onimpact>
+	
+	<modifier key="ult_boost" modpriority="100"
+		displayname="true"
+	>
+		<onimpact effectdescription="true">
+			<spawnunit name="Gadget_KunasDummyReveal" target="target_position"/>
+			<damage effecttype="Magic" amount="335,460,570"/>
+		</onimpact>
+	</modifier>
+</ability>

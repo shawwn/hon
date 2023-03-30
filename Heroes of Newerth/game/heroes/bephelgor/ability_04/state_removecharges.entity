@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Bephelgor_Ability4_Removecharges"
+
+	icon="icon.tga"
+	ishidden="true"
+	impactinterval="1000"
+	
+	effecttype=""
+>
+	<onimpact>
+		<condition test="not_hasstate State_Bephelgor_Ability4_Recentcharge">
+			<removecharge entity="this_spawner_entity" />
+		</condition>
+	</onimpact>
+
+
+</state>

@@ -1,0 +1,4 @@
+*.user
+*.ncb
+*.suo
+Win32_LIB_Release

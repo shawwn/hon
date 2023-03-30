@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true"  useentityeffectscale="1">
+	<definitions>
+		<particlesystem name="system0" space="local" scale="1">
+
+				
+				<model
+					model="orb2.mdf"
+					anim="idle"
+					bone="_bone_centerofchest"
+					life="2000"
+					scale=".25"	
+					yawspeed="200"					
+				/>
+				
+				<model
+					model="orb2.mdf"
+					anim="idle"
+					bone="_bone_centerofchest"
+					life="2000"
+					scale=".25"	
+					yawspeed="300"					
+				/>
+
+				<model
+					model="orb2.mdf"
+					anim="idle"
+					bone="_bone_centerofchest"
+					life="2000"
+					scale=".25"	
+					yawspeed="500"					
+				/>				
+				
+				<trailemitter
+					bone="_bone_rightfoot3"
+					spawnrate="50"
+					particlelife="200"
+					texpostime="200"
+					texposscale="0"
+					texstretchscale="1"	
+					material="/shared/effects/materials/web.material"
+				>
+					<particle
+						color="1 1 1"
+						size="10"						
+				/>
+				</trailemitter>
+				
+			
+				<trailemitter
+					bone="_bone_leftfoot3"
+					spawnrate="50"
+					particlelife="200"
+					texpostime="200"
+					texposscale="0"
+					texstretchscale="1"	
+					material="/shared/effects/materials/web.material"
+				>
+					<particle
+						color="1 1 1"
+						size="10"						
+				/>
+				</trailemitter>	
+			
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+</effect>

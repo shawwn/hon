@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_PollywogPriest_Ward"
+	radius="150,200,220"
+	targetselection="all"
+	targetscheme="enemy_units"
+
+>
+	<onimpact>
+		<setvar0 a="50,75,85" /> 
+		<setvar1 a="75,100,110" /> 
+		<setvar2 a="150,200,220" /> 
+		<condition test="not_target_type self" target="proxy_entity" source="target_entity">
+			<condition test="distance le var2" source="proxy_entity" target="target_entity">
+				<condition test="distance gt var1" source="proxy_entity" target="target_entity">
+					<damage effecttype="Physical Splash" amount="0.2" b="param" op="mult" />
+				</condition>
+			</condition>
+			<condition test="distance le var1" source="proxy_entity" target="target_entity">
+				<condition test="distance gt var0" source="proxy_entity" target="target_entity">
+					<damage effecttype="Physical Splash" amount="0.4" b="param" op="mult" />
+				</condition>
+			</condition>
+			<condition test="distance le var0" source="proxy_entity" target="target_entity">
+				<damage effecttype="Physical Splash" amount="1.0" b="param" op="mult" />
+			</condition>
+		</condition>
+	</onimpact>
+</affector>

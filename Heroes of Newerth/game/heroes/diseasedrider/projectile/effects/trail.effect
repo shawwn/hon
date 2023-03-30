@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="attack_projectile" deferred="true">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="6.5">
+	
+
+			<simpleemitter				
+				spawnrate="71"
+				count="10"		
+				particlelife="950"			
+				gravity="5"
+				speed="0"
+				acceleration="0"
+				position="0 0 0"
+
+				minangle="0"
+				maxangle="180"
+				direction="0 0 1"
+			
+				offsetsphere="22 50 0"
+				inheritvelocity="0"
+				depthbias="100"
+			>
+				<particle>	
+					<groundsprite
+							minlife="600"
+							maxlife="1200"
+							material="/shared/effects/materials/blood_white.material"
+							color="1 1 0"							
+							minscale=".1"
+							maxscale=".6"
+							startalpha="1"
+							endalpha="0"
+					/>
+				</particle>
+			</simpleemitter>	
+	
+	
+			<simpleemitter				
+				spawnrate="160"
+				count="40"		
+				particlelife="550"			
+				gravity="5"
+				speed="40"
+				acceleration="0"
+				position="0 0 0"
+
+				minangle="0"
+				maxangle="180"
+				direction="0 0 1"
+				material="/shared/effects/materials/smoke_particle.material"
+				offsetsphere="5 5 5"
+				inheritvelocity=".5"
+				depthbias="100"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-30"
+					color=".6 .6 .2"
+					maxanglespeed="30"
+					startsize="50"
+					endsize="20"
+					startalpha="0"
+					midalpha=".6"
+					endalpha="0"
+					midalphapos=".2"
+					startanchor="0"
+					endanchor="0"					
+				 />	
+			</simpleemitter>
+			
+			
+			<simpleemitter		         	
+		         	spawnrate="380"					
+		          	particlelife="1500"
+		          	gravity="2"
+		         	speed="120"
+		          	drag=".02"
+					direction="0 0 1"
+					minangle="0"
+					maxangle="30"
+		          	acceleration="0.0"
+					position="0 0 0"
+					offsetsphere="0 0 0"
+		          	material="/shared/effects/materials/splatter_blend.material"
+					inheritvelocity=".35"
+		         	>
+		  		<particle 
+					minangle="-360"
+					maxangle="360"
+					angle="180"			
+					color="0 0 0"
+					anglespeed="20"
+					
+					frame=".5"
+
+					startsize="3"							
+					endsize="0"			
+
+					startalpha="1"
+					
+					endalpha="0"
+					
+				/>
+		    </simpleemitter>	
+
+
+			<simpleemitter
+				
+				spawnrate="160"
+				count="80"		
+				particlelife="550"			
+				gravity="5"
+				speed="40"
+				acceleration="0"
+				position="0 0 0"
+
+
+				material="/shared/effects/materials/poison_05.material"
+				offsetsphere="1 1 1"
+				minangle="0"
+				maxangle="180"
+				direction="0 0 1"
+				offsetdirection="0 0 0"
+				offsetradial="0 0 0"
+				inheritvelocity="0.25"
+			>
+				<particle 
+					minangle="0"
+					maxangle="0"
+					minanglespeed="0"
+					maxanglespeed="0"
+					startcolor="1 1 .05"
+					midcolor=".2 .3 .05"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+
+					startframe="0"
+					endframe="1"
+
+					startsize="20"
+					midsize="20"
+					endsize="20"
+					midsizepos=".8"
+
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".3"
+					turn="true"
+				/>
+			</simpleemitter>
+			
+			<trailemitter							
+				particlelife="900"							
+				spawnrate="40"
+				texpostime="900"
+				texposscale="0"
+				texstretchscale="1"
+				position="0 0 0"
+				inheritvelocity="0.25"
+				material="/shared/effects/materials/goo_trail_blend.material"
+			>
+				<particle
+					
+					color=".5 .5 .2"					
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".2"
+					startsize="26"
+					midsize="10"				
+					endsize="12"								
+				/>
+			</trailemitter>	
+
+
+
+
+
+
+
+
+
+
+
+			<billboard
+					
+				material="/shared/effects/materials/whitedot.material"
+				color=".14 .2 .2"
+				size="40"
+			/>
+			
+			<simpleemitter
+					
+				material="/shared/effects/materials/whitedot.material"
+				spawnrate="40"
+				particlelife="100"
+			>
+				<particle
+				
+				color=".24 .5 .2"
+				startsize="4"
+				endsize="2">
+				</particle>
+			</simpleemitter>
+			
+			<simpleemitter
+					
+				material="/shared/effects/materials/whitedot.material"
+				spawnrate="400"
+				particlelife="300"
+				gravity="7"
+				speed="30"
+				inheritvelocity="0.21"
+				offsetsphere="5 5 5"
+				drag="0.1"
+			>
+				<particle
+				heightdistort="0.01"
+				turn="1"
+				startcolor=".7 .4 .2"
+				endcolor="0 0 0"
+				startsize="2"
+				endsize="0">
+				</particle>
+			</simpleemitter>
+
+			<simpleemitter
+				
+				material="/shared/effects/materials/phantom_smoke_06.material"
+				spawnrate="60"
+				particlelife="300"
+				gravity="7"
+				speed="30"
+				inheritvelocity="0.21"
+				offsetsphere="5 5 5"
+				drag="0.1"
+			>
+				<particle
+				roll="180"
+				heightdistort="0.01"
+				turn="1"
+				startcolor="0 0 0"
+				midcolor=".4 .4 .00"
+				endcolor="0 0 0"
+				midcolorpos=".2"
+				startsize="26"
+				endsize="20">
+				</particle>
+			</simpleemitter>			
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

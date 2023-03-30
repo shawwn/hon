@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Rocky_Ability2"
+	
+	boundsheight="0"
+	boundsradius="0"
+	isselectable="false"
+	canrotate="false"
+	ismobile="false"
+
+	attacktype="none"
+
+	lifetime="1000"
+	deathtime="0"
+	corpsetime="0"
+	
+	invulnerable="true"
+	flying="true"
+	drawonmap="false"
+>
+	<onexpired>
+		<damage effecttype="Magic" amount="15,30,45,60" target="target_entity" />
+	</onexpired>
+
+	<modifier key="Rocky_Grow1" modpriority="100">
+		<onexpired>
+			<condition test="ally">
+				<damage effecttype="Magic" amount="15,30,45,60" target="target_entity" />
+			</condition>
+			<condition test="enemy">
+				<damage effecttype="Magic" amount="26,53,79,105" target="target_entity" />
+			</condition>
+		</onexpired>
+	</modifier>
+
+	<modifier key="Rocky_Grow2" modpriority="100">
+		<onexpired>
+			<condition test="ally">
+				<damage effecttype="Magic" amount="15,30,45,60" target="target_entity" />
+			</condition>
+			<condition test="enemy">
+				<damage effecttype="Magic" amount="38,75,113,150" target="target_entity" />
+			</condition>
+		</onexpired>
+	</modifier>
+
+	<modifier key="Rocky_Grow3" modpriority="100">
+		<onexpired>
+			<condition test="ally">
+				<damage effecttype="Magic" amount="15,30,45,60" target="target_entity" />
+			</condition>
+			<condition test="enemy">
+				<damage effecttype="Magic" amount="49,98,146,195" target="target_entity" />
+			</condition>
+		</onexpired>
+	</modifier>
+</gadget>

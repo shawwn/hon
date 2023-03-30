@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Electrician_Ability1"
+	
+	icon="icon.tga"
+	passiveeffect="effects/entrap.effect"
+	
+	stunned="true"
+	revealed="true"
+	frozen="true"
+	
+	effecttype="StatusDebuff"
+>
+	<onframe>
+		<damage effecttype="Magic DOT" amount="20,40,65,80" b="frametime" op="mult"/>
+	</onframe>
+	
+	<onexpired>
+		<kill target="proxy_entity" source="" />
+		<breakchannel entity="this_spawner_entity" />
+		<playanim name="idle" target="target_entity" />
+	</onexpired>
+</state>

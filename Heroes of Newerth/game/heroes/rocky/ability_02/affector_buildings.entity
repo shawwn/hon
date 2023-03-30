@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Rocky_Ability2_Buildings"
+	
+	radius="300"	
+	targetselection="all"
+	targetscheme="enemy_buildings"
+	effecttype="Magic"
+>
+	<onimpact>
+		<damage effecttype="Magic" amount="25,50,75,100" />
+	</onimpact>
+</affector>

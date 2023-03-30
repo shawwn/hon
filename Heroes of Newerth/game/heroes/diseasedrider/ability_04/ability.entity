@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_DiseasedRider4"
+
+	icon="icon.tga"
+	
+	statuseffecttooltip="State_DiseasedRider_Ability4"
+	anim="ability_4"
+	casttime="1100"
+	castactiontime="400"
+	casteffect=""
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_entity"
+	targetscheme="nonstealth_organic_enemy_units"
+	casteffecttype="SuperiorMagic"
+
+	manacost="200,325,500"
+	cooldowntime="145000,115000,60000"
+	
+	range="750"
+>
+	<onimpact>
+		<applystate name="State_Stunned" duration="100" target="target_entity" />
+		<spawnprojectile name="Projectile_DiseasedRider_Ability4" source="source_entity" target="target_position" proxy="target_entity" param="7" />
+	</onimpact>
+	
+	<modifier key="ult_boost" priority="100" >
+		<onimpact>
+			<applystate name="State_Stunned" duration="100" target="target_entity" />
+			<spawnprojectile name="Projectile_DiseasedRider_Ability4" source="source_entity" target="target_position" proxy="target_entity" param="7" />
+		</onimpact>
+	</modifier>
+</ability>

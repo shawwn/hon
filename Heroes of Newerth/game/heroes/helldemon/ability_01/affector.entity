@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_HellDemon_Ability1"
+
+	radius="400,450,475,500"
+	lifetime="0"
+	targetselection="all"
+	targetscheme="all_other_units"
+	effecttype=""
+>
+	<onimpact>
+		<cantarget targetscheme="organic_ally_units">
+			<spawnprojectile name="Projectile_HellDemon_Ability1" source="source_attack_offset" effecttype="AbilityBasedProjectile" />
+		</cantarget>
+		<cantarget targetscheme="nonstealth_organic_enemy_units">
+			<spawnprojectile name="Projectile_HellDemon_Ability1_Enemy" source="source_attack_offset" effecttype="AbilityBasedProjectile" />
+		</cantarget>
+	</onimpact>
+</affector>

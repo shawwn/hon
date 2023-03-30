@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Electrician_Ability1"
+
+	gravity="0"
+	useexactlifetime="true"
+	lifetime="3000"
+
+	modelscale="1.0"
+	model=""
+	
+	canturn="false"
+	flying="true"
+  flyheight="0" 
+
+	
+	impactdistance="120"
+>
+</projectile>

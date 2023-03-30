@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Jereziah_Ability4"
+
+	radius="600"
+	targetselection="all"
+	targetscheme="organic_ally_units"
+>
+	<onimpact>
+		<condition test="target_type hero">
+			<playeffect effect="effects/impact.effect" source="target_entity"/>
+			<applystate name="State_Jereziah_Ability4" duration="5000,6000,7000" />
+		</condition>
+		<condition test="not_target_type hero">
+			<applystate name="State_Jereziah_Ability4_Creep" duration="5000,6000,7000" />
+		</condition>
+	</onimpact>
+</affector>

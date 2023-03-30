@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_Tempest"
+
+	team="Legion"
+	icon="icon.tga"
+	portrait="icon.tga"
+	model="model.mdf"
+	skin=""
+	
+	passiveeffect="effects/body.effect"
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	deatheffect=""
+	selectedsound="sounds/voice/select_%.wav"
+	selectedflavorsound="sounds/voice/select_flavour_%.wav"
+	confirmmovesound="sounds/voice/move_%.wav"
+	confirmattacksound="sounds/voice/attack_%.wav"
+	nomanasound="sounds/voice/no_mana.wav"
+	cooldownsound="sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="sounds/voice/taunt_prior.wav"
+	tauntkillsound="sounds/voice/taunt_after.wav"
+	
+	preglobalscale="1.35"
+	modelscale="1.0"
+	effectscale="1.08"
+	boundsheight="112"
+	boundsradius="24"
+	selectionradius="54"
+	targetoffset="0 0 64"
+
+	movespeed="300"
+	turnrate="450"
+	turnsmoothing="0.08"
+
+	maxhealth="150"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="2"
+	magicarmor="5.5"
+
+	inventory0="Ability_Tempest1"
+	inventory1="Ability_Tempest2"
+	inventory2="Ability_Tempest3"
+	inventory3="Ability_Tempest4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8="Ability_Taunt"
+
+	attackduration="1170"
+
+	attackactiontime="375"
+
+	attackcooldown="1700"
+	attackdamagemin="22"
+	attackdamagemax="28"
+	attacknumanims="2"
+	attackoffset="0 70 80"
+	attackprojectile="Projectile_TempestAttack"
+	attackrange="500"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect=""
+	attacktype="ranged"
+	combattype="Hero"
+
+	aggrorange="800"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="Intelligence"
+	strength="17"
+	strengthperlevel="2.1"
+	agility="14"
+	agilityperlevel="1.0"
+	intelligence="20"
+	intelligenceperlevel="3.4"
+>
+	<gooditem name="Item_Something"/>
+	
+	<recommendeditem name="Item_ManaPotion" />	
+	<recommendeditem name="Item_MinorTotem" />
+	<recommendeditem name="Item_RunesOfTheBlight" />
+	<recommendeditem name="Item_HealthPotion" />
+	<recommendeditem name="Item_HomecomingStone" />
+	
+	<recommendeditem name="Item_Intelligence5" />
+	<recommendeditem name="Item_Strength5" />
+	<recommendeditem name="Item_Bottle" />
+	<recommendeditem name="Item_ManaRegen3" />
+	<recommendeditem name="Item_PlatedGreaves" />
+	<recommendeditem name="Item_NomesWisdom" />
+	<recommendeditem name="Item_PortalKey" />
+	<recommendeditem name="Item_Summon" />
+	<recommendeditem name="Item_Immunity" />
+	<recommendeditem name="Item_RestorationStone" />
+
+	<modifier key="frost" modpriority="100"
+		attackprojectile="Projectile_Frost"
+	>
+	</modifier>
+</hero>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Fairy4_TPIn"
+
+	statuseffecttooltip=""
+	
+	icon="icon.tga"
+	
+	anim="ability_4"
+	casttime="0"
+	castactiontime="0"
+	channeltime="5500,4500,3500"
+	ischanneling="true"
+
+	baselevel="0"
+	maxlevel="1"
+
+	actiontype="target_entity"
+	casteffecttype=""
+	targetscheme="willing_ally_heroes"
+
+	manacost="90"
+	cooldowntime="60000"
+
+	range="999999"
+>
+	<onimpact />
+	<onchannelstart>
+		<applystate name="State_Fairy_Ability4" target="target_entity" ischannel="true" />
+		<applystate name="State_Fairy_Ability4" target="source_entity" ischannel="true" />
+	</onchannelstart>
+	
+	<onchannelend>
+		<teleport source="target_entity" target="source_entity" interpolate="false" />
+		<disjoint target="target_entity" />
+		<unbind target="target_entity" />
+	</onchannelend>
+	
+	<modifier key="tp1" modpriority="90"
+		baselevel="1"
+	/>
+	
+	<modifier key="tp2" modpriority="90"
+		baselevel="2"
+	/>
+	
+	<modifier key="tp3" modpriority="90"
+		baselevel="3"
+	/>
+</ability>

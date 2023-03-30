@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="aphotic_shield" persistent="1">
+	<definitions>
+
+		
+		
+		<particlesystem name="system0" space="world" scale="1">
+
+			<sound
+				delay="200"
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".76"
+				sample="../sounds/cast.wav"
+			/>
+			
+			<simpleemitter
+				life="101"
+				bone="_bone_righthand"
+				count="4"
+				delay="500"
+				particlelife="3200"				
+				spawnrate="100"
+				speed="0"
+				gravity="0"
+				direction="0 0 0"			
+				
+				particledirectionalspace="local"
+				
+				offsetsphere="44 44 0"
+				position="0 0 0"	
+			>
+
+				<particle> 
+					<groundsprite
+						life="2000"						
+						material="/shared/effects/materials/splatter_blend.material"
+						scale=".35"
+						minyaw="-360"	
+						maxyaw="360"
+						minsize="40"
+						maxsize="100"
+
+						position="0 0 0"
+
+						color=".2 0 .3"
+						
+					
+						midcolorpos=".1"
+
+						startalpha=".5"
+						midalpha=".5"
+						endalpha="0"
+						midalphapos=".1"
+							
+					/>						
+				</particle>
+			</simpleemitter>		
+		
+			
+		
+			
+
+
+
+		<simpleemitter
+			delay="340"
+			bone="_bone_lefthand"
+			life="340"
+			particlelife="1500"				
+			spawnrate="80"
+			speed="130"
+			gravity="14"
+			inheritvelocity=".025"
+			
+			particledirectionalspace="local"
+			material="/shared/effects/materials/splatter_blend.material"
+			offsetsphere="0 0 0"
+			position="0 0 0"
+	
+		>
+
+			<particle 
+				minanglespeed="-100"
+				maxanglespeed="100"
+				
+				
+				minangle="-360"
+				maxangle="360"
+				startcolor=".8 1 0"
+				endcolor="0 0 0"
+				startsize="20"
+				minendsize="40"				
+				maxendsize="80"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+			/>
+		</simpleemitter>				
+
+		
+		<simpleemitter
+			delay="340"
+			bone="_bone_righthand"
+			life="140"
+			particlelife="1500"				
+			spawnrate="80"
+			speed="30"
+			gravity="14"
+			inheritvelocity=".025"
+			
+			particledirectionalspace="local"
+			material="/shared/effects/materials/splatter_blend.material"
+			offsetsphere="0 0 0"
+			position="0 0 0"
+	
+		>
+
+			<particle 
+				minanglespeed="-100"
+				maxanglespeed="100"
+				
+				
+				minangle="-360"
+				maxangle="360"
+				startcolor=".1 .1 0.20"
+				endcolor="0 0 0"
+				startsize="20"
+				minendsize="40"				
+				maxendsize="80"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+			/>
+		</simpleemitter>		
+
+
+		 
+			 
+		 
+
+		
+
+		<simpleemitter
+			bone="_bone_righthand"
+			delay="320"
+			count="3"
+			particlelife="800"				
+			spawnrate="30"
+			speed="10"
+			gravity="0"
+			direction="0 0 1"
+			minangle="0"
+			inheritvelocity=".24"
+			maxangle="12"
+			particledirectionalspace="local"
+			material="/shared/effects/materials/venom_splash.material"
+			offsetsphere="0 0 0"
+			position="0 0 0"
+	
+		>
+
+			<particle 
+				color="1 1 .5"
+				startsize="00"
+				turn="1"			
+				maxendsize="180"
+				startalpha="0"
+				midalpha="1"
+				endalpha="0"
+				
+
+			/>
+		</simpleemitter>			
+
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

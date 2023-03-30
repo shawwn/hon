@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Ophelia2"
+	
+	icon="icon.tga"
+	statuseffecttooltip="State_Ophelia_Ability2"
+	
+	anim="ability_2"
+	casttime="800"
+	castactiontime="300"
+	casteffect="effects/cast.effect"
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_entity"
+	casteffecttype="Magic"
+	targetscheme="enemy_and_willing_other_units"
+	deferchannelcost="true"
+	
+	manacost="175"
+	cooldowntime="30000"
+	
+	range="600"
+>
+	<onimpact>
+		<cantarget targetscheme="enemy_units">
+			<damage min="50,100,150,200" max="100,200,300,400" />
+			<playeffect effect="effects/damage_impact.effect" source="target_entity" />
+			<order command="stop" force="true" source="source_entity" target="source_entity" />
+		</cantarget>
+		<cantarget targetscheme="ally_heroes">
+			<applystate name="State_Ophelia_Ability2" duration="6000,5000,4000,3000"/> 
+		</cantarget>
+		<condition test="target_type mine">
+			<pushentitysearch global="true" targetscheme="ally_well" ignoreinvulnerable="true" />
+			<condition test="stack_entity != 0">
+				<playeffect effect="effects/teleport_impact.effect" source="target_position"/>
+				<playeffect effect="effects/teleport_impact_well.effect" source="target_entity"/>
+				<unbind target="target_entity" />
+				<teleport source="target_entity" target="stack_position" interpolate="false" />
+				<disjoint target="target_entity" />
+				<expirestate name="State_Ophelia_Ability2" target="target_entity"/>
+			</condition>
+			<order command="stop" force="true" source="target_entity" target="target_entity" />
+		</condition>
+	</onimpact>
+</ability>

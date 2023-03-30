@@ -1,0 +1,16 @@
+For noob Evan, who keeps it fake only!
+
+
+
+Melee Rax:
+==========
+HP: 1500
+Armor: 15
+Type: Fortified
+
+
+Ranged Rax:
+==========
+HP: 1500
+Armor: 15
+Type: Fortified

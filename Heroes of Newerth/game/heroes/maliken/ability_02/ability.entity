@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Maliken2"
+	
+	
+	
+	statuseffecttooltip="State_Maliken_Ability2_Flame"
+	statuseffecttooltip2="State_Maliken_Ability2_Healing"
+	icon="icon.tga"
+	passiveeffect=""
+	
+	anim="ability_2"
+	casttime="0"
+	castactiontime="0"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="no_target"
+	frontqueue="true"
+
+	modifierkey="malikensword1,malikensword2,malikensword3,malikensword4"
+	interface="double"
+>
+	<onimpact />
+
+	<modifier key="malikensword1" modpriority="90"
+		disabled="true"
+	/>
+	
+	<modifier key="malikensword2" modpriority="90"
+		disabled="true"
+	/>
+	
+	<modifier key="malikensword3" modpriority="90"
+		disabled="true"
+	/>
+	
+	<modifier key="malikensword4" modpriority="90"
+		disabled="true"
+	/>
+	
+	
+
+</ability>

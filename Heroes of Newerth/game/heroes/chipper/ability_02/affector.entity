@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Chipper_Ability2"
+
+	radius="300"	
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Magic"
+	impactdelay="0"
+	impacteffect=""
+>
+	<onimpact>
+		<applystate name="State_Chipper_Ability2" target="target_entity" duration="2000,3000,4000,5000" pushentity="true" />
+		<distance target="target_entity" source="this_entity" />
+		<setvar0 a="result" />
+		<condition test="var0 gt 300" />
+		<else>
+			<setvar1 a="300" b="var0" op="sub" />
+			<setvar2 a="var1" b="300" op="div" />
+			<setvar1 a="var2" b="100" op="mult" />
+			<addcharges entity="stack_entity" count="var1" />
+			<condition test="var1 ge 90">
+				<popup name="max" source="target_entity" target="source_entity" />
+			</condition>
+		</else>
+
+	</onimpact>
+</affector>

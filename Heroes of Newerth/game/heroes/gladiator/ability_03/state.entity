@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Gladiator_Ability3"
+	
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+
+	effecttype=""
+>
+	<onframe />
+
+	<onexpired>
+		<unbind target="target_entity" />
+		<expirestate target="this_inflictor_entity" name="State_Gladiator_Ability3_Return" />
+		<cantarget effecttype="Magic">
+			<teleport source="target_entity" target="proxy_position" interpolate="false" />
+			<order command="stop" source="target_entity" target="target_entity" />
+		</cantarget>
+		<kill target="proxy_entity" source="" />
+	</onexpired>
+</state>

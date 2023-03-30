@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Valkyrie_Ability1_Half"
+
+	
+	
+	icon="icon.tga"
+	
+	impactinterval="500"
+	
+	ishidden="true"
+	
+	effecttype=""
+>
+	<oninflict>
+		<setaccumulator value="0" />
+	</oninflict>
+	<onimpact>
+		<condition test="accumulator eq 0">
+			<playeffect effect="effects/impact.effect" source="target_entity" target="target_entity"/>
+			<setaccumulator value="1" />
+		</condition>
+	</onimpact>
+	
+	<onexpired>
+		<damage effecttype="Magic" amount="37.5,75,112.5,150" />
+		<playeffect effect="effects/actual_impact.effect" target="target_entity" source="target_entity"/>
+	</onexpired>
+</state>

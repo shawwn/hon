@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="cyclone" deferred="true" useentityeffectscale="0">
+	<definitions>
+		
+		
+		
+		<particlesystem name="system0" space="world" scale="1">
+			
+				<billboard
+					life="800"
+					material="/shared/effects/materials/comet_blend.material"
+					color="1 1 1"
+					size="402"
+					directionalspace="local"
+					startalpha="1"
+					endalpha="0"
+					
+					pitch="-90"
+					depthbias="0"
+					lockup="1"
+					lockright="1"
+					
+				/>	
+
+				
+				
+				<billboard
+					life="1300"
+					material="/shared/effects/materials/comet_blend.material"
+					color=".5 .2 .5"
+					size="302"
+					directionalspace="local"
+					startalpha="1"
+					endalpha="0"
+					yaw="-40"
+					yawspeed="200"
+					pitch="-90"
+					depthbias="0"
+					lockup="1"
+					lockright="1"
+					
+				/>				
+				<billboard
+					life="800"
+					material="/shared/effects/materials/whitedot.material"
+					color=".4 .4 .6"
+					size="102"
+					directionalspace="local"
+					startalpha="1"
+					endalpha="0"
+					
+					pitch="-90"
+					depthbias="0"
+					lockup="1"
+					lockright="1"
+					
+				/>				
+				
+			<simpleemitter				
+				particlelife="400"
+				spawnrate="200"				
+				speed="510.0"
+				acceleration="0.0"		
+				position="0 0 00"		
+				drag="0.00"
+				material="/shared/effects/materials/neb_add.material"
+				offsetsphere="20 20 20"
+				direction="-1 -1 0"
+				minangle="0"
+				maxangle="80"
+				
+			>
+		
+				<particle
+					turn="true"
+					startcolor=".5 .25 .5"
+					endcolor="0 0 0"
+					size="111"
+					startscale="1"
+					endscale="0"					
+				>					
+				</particle>
+			</simpleemitter>			
+		
+		
+			<simpleemitter				
+				particlelife="400"
+				spawnrate="200"				
+				speed="1510.0"
+				acceleration="0.0"		
+				position="0 0 00"		
+				drag="0.1"
+				material="/shared/effects/materials/star_11.material"
+				offsetsphere="20 20 20"
+				direction="0 -1 0"
+				minangle="0"
+				maxangle="120"
+				
+			>
+		
+				<particle
+					turn="true"
+					startcolor="0 0 0"
+					midcolor="1 .5 1"
+					endcolor="0 0 0"
+					size="111"
+					startscale="1"
+					endscale="0"					
+				>					
+				</particle>
+			</simpleemitter>			
+		
+		</particlesystem>
+		
+		
+		<particlesystem name="system1" space="entity" scale="1">		
+
+		
+
+	
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnparticlesystem instance="instance1" particlesystem="system1" />
+		
+      		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

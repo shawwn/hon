@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Magmar_Ability2_Damageeffects"
+	icon="icon.tga"
+	passiveeffect="effects/impact.effect"
+	effecttype="StatusDebuff"
+>
+	<onframe />
+
+</state>

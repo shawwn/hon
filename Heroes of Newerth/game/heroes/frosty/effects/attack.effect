@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+	<definitions>
+	
+		<particlesystem name="system0" space="world" scale="1">
+<!--staff-->
+
+			<simpleemitter	
+				bone="_bone_weaponattach"
+				spawnrate="2225"
+				count="1"
+				particlelife="300"
+				
+				acceleration="50"
+				position="0 0 0"
+
+				depthbias="-60"
+				material="/shared/effects/materials/rad_add.material"
+				offsetsphere="0 0 0"
+				minangle="0"
+				maxangle="360"
+				direction="0 0 0"
+				particledirectionalspace="local"				
+			>
+
+				<particle 
+					minangle="-20"
+					maxangle="20"
+					minanglespeed="100"
+
+					startcolor="0 0 0"
+					midcolor=".2 .5 1"
+					endcolor="0 0 0"
+					midcolorpos=".7"
+
+					maxanglespeed="0"
+					startframe="0"
+					endframe="1"				
+					
+					
+					size="125"		
+					
+					midsizepos=".7"		
+
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".7"
+					anchor="1"
+				/>
+			</simpleemitter> 
+			
+			<simpleemitter	
+				bone="_bone_weaponattach"
+				spawnrate="2225"
+				count="1"
+				particlelife="300"
+				
+				acceleration="50"
+				position="0 0 0"
+
+				depthbias="-60"
+				material="/shared/effects/materials/whitedot.material"
+				offsetsphere="0 0 0"
+				minangle="0"
+				maxangle="360"
+				direction="0 0 0"
+				particledirectionalspace="local"				
+			>
+
+				<particle 
+					minangle="-20"
+					maxangle="20"
+					minanglespeed="100"
+
+					startcolor="0 0 0"
+					midcolor=".2 .5 1"
+					endcolor="0 0 0"
+					midcolorpos=".7"
+
+					maxanglespeed="0"
+					startframe="0"
+					endframe="1"				
+					
+					
+					size="50"		
+				
+					midsizepos=".7"		
+
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".7"
+					anchor="1"
+				/>
+			</simpleemitter> 
+
+
+				
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />		
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

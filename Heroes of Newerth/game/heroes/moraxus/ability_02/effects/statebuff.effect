@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" deferred="true" useentityeffectsscale="true">
+	<definitions>
+		<particlesystem name="system1" space="entity" scale="1">
+
+			<sound
+				linearfalloff="true"
+				falloffstart="0"
+				falloffend="2200"
+				volume="0.75"
+				sample="../sounds/buff.wav"
+			/>
+			
+			<model 
+				bone="Box008"
+				startalpha="1"
+				endalpha="0"
+				model="axe/model.mdf"
+				anim="idle"
+				startcolor=".075 .3 1"
+				endcolor="0 0 0"
+				scale="1"
+				expirelife="500"
+				position="0 0 0"
+				directionalspace="local"
+				yaw="180"
+			>
+			
+				<template name="flashes">
+				
+					<simpleemitter
+						delay="{delayz}"
+						bone="{bone}"
+						spawnrate="1000"
+						count="30"
+						minparticlelife="250"
+						maxparticlelife="750"
+						speed="25"
+						drag=".05"
+						gravity="0"
+						offsetsphere="25"
+						material="/shared/effects/materials/phantom_smoke_04.material"
+					>
+						<particle
+							minangle="0"
+							maxangle="180"
+							minanglespeed="0"
+							maxanglespeed="45"
+							startcolor="0 0 0"
+							midcolor="0 .25 .7"
+							endcolor="0 0 0"
+							startscale="20"
+							endscale="25"
+						/>
+					</simpleemitter>	
+
+					<simpleemitter
+						delay="{delayz}"
+						bone="{bone}"
+						life="1800"
+						spawnrate="500"
+						count="40"
+						particlelife="500"			
+						gravity="1"
+						minspeed="50"
+						maxspeed="150"
+						drag=".01"
+						position="0 0 0"
+						material="/shared/effects/materials/flare_01.material"
+						offsetsphere="25"
+						minangle="-10"
+						maxangle="70"
+						direction="0 0 1"
+					>
+							<particle 
+								startcolor="0 1 1"
+								midcolor="0 0 1"
+								endcolor="0 0 0"
+								midcolorpos=".2"
+								startsize="7"
+								midsize="3"
+								endsize="3"
+								startalpha="0"
+								midalpha=".7"
+								endalpha="0"
+								midalphapos=".5"
+								startanchor="1"
+								endanchor="0"
+							/>			
+					</simpleemitter>
+
+					<billboard
+						delay="{delayz}"
+						bone="{bone}"
+						life="400"
+						startcolor="0 .05 .3"
+						endcolor="0"
+						startsize="175"
+						endsize="0"
+						depthbias="-50"
+						material="/shared/effects/materials/whitedot.material"
+					/>
+					
+					<billboard
+						delay="{delayz}"
+						bone="{bone}"
+						expirelife="500"
+						startcolor="0 .1 .3"
+						endcolor="0"
+						startsize="75"
+						endsize="0"
+						depthbias="-50"
+						material="/shared/effects/materials/whitedot.material"
+					/>
+
+					<simpleemitter
+						delay="{delayz}"
+						bone="{bone}"
+						count="1"
+						spawnrate="1000"
+						particlelife="350"
+						gravity="-6"
+						speed="0.0"
+						acceleration="0.0"
+						position="0 0 0"
+						offsetsphere="0 0 0"
+						material="/shared/effects/materials/blink.material"
+					>
+						<particle
+							startcolor="0 0 0"
+							midcolor="0 .25 .5"
+							endcolor="0 0 0"
+							minangle="0"
+							maxangle="360"
+							minanglespeed="0"
+							maxanglespeed="90"
+							startsize="200"
+							midsize="100"
+							endsize="50"
+							lockup="true"
+							pitch="90"
+						/>
+						<particle
+							startcolor="0 0 0"
+							midcolor=".2"
+							endcolor="0 0 0"
+							minangle="0"
+							maxangle="360"
+							minanglespeed="0"
+							maxanglespeed="90"
+							startsize="200"
+							midsize="100"
+							endsize="50"
+							lockup="true"
+							pitch="90"
+						/>
+					</simpleemitter>
+
+					<simpleemitter
+						delay="{delayz}"
+						bone="{bone}"
+						count="1"
+						spawnrate="1000"
+						particlelife="350"
+						gravity="-6"
+						speed="0.0"
+						acceleration="0.0"
+						position="0 0 0"
+						offsetsphere="0 0 0"
+						material="/shared/effects/materials/blink.material"
+					>
+						<particle
+							startcolor="0 0 0"
+							midcolor=".2"
+							endcolor="0 0 0"
+							minangle="0"
+							maxangle="360"
+							minanglespeed="0"
+							maxanglespeed="90"
+							startsize="200"
+							midsize="100"
+							endsize="50"
+							lockup="true"
+							pitch="90"
+						/>
+					</simpleemitter>
+
+					<simpleemitter
+						delay="{delayz}"
+						bone="{bone}"
+						life="300"
+						count="10"
+						spawnrate="1000"
+						particlelife="300"
+						offsetsphere="10"
+						depthbias="-50"
+						material="/shared/effects/materials/whitedot.material"
+					>
+						<particle
+							minangle="-360"
+							maxangle="360"
+							minanglespeed="-60"
+							maxanglespeed="60"
+							startcolor="0 .125 .5"
+							midcolor="0 .125 .5"
+							endcolor="0"
+							minheight="5"
+							maxheight="40"
+							endwidth="75"
+						/>
+					</simpleemitter>
+
+					<billboard
+						delay="{delayz}"
+						bone="{bone}"
+						life="500"
+						startalpha="1"
+						endalpha="0"
+						startsize="35"
+						endsize="60"
+						depthbias="-100"
+						material="/shared/effects/materials/refract_outsplash.material"
+						param=".5"
+					/>
+
+				</template>
+
+				<instance name="flashes" bone="_bone_fx_weapon1" delayz="100" />
+				<instance name="flashes" bone="_bone_fx_weapon2" delayz="200" />
+				<instance name="flashes" bone="_bone_fx_weapon3" delayz="300" />
+
+				
+			</model>
+			
+		</particlesystem>
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnparticlesystem instance="instance1" particlesystem="system1" />	
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+	</thread>
+</effect>
+
+
+
+
+
+
+

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Maliken_Ability1"
+
+	radius="200"
+	lifetime="-1"
+	maximpactspertarget="1"
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Magic"
+	
+>
+	<onspawn>
+		<setparam entity="this_entity" a="" />
+	</onspawn>
+	
+	<onimpact>
+		<damage effecttype="Magic" amount="80,140,200,260" />
+		<applystate name="State_Maliken_Ability1_Slow" duration="6000" />
+		<playeffect effect="effects/impact.effect" source="target_entity"/>
+	</onimpact>
+	
+	<modifier key="swordflame" modpriority="100"
+	>
+		<onimpact>
+			<hasmodifier name="swordflame1">
+				<damage effecttype="Magic" amount="120,180,240,300" />
+			</hasmodifier>
+			<hasmodifier name="swordflame2">
+				<damage effecttype="Magic" amount="130,190,250,310" />
+			</hasmodifier>
+			<hasmodifier name="swordflame3">
+				<damage effecttype="Magic" amount="140,200,260,320" />
+			</hasmodifier>
+			<hasmodifier name="swordflame4">
+				<damage effecttype="Magic" amount="150,210,270,330" />
+			</hasmodifier>
+			<applystate name="State_Maliken_Ability1_Slow" duration="6000" />
+			<playeffect effect="effects/impact_flame.effect" source="target_entity"/>
+		</onimpact>
+	</modifier>
+		
+	<modifier key="swordhealing" modpriority="100"
+	>
+		<onimpact>
+			<damage effecttype="Magic" amount="48,84,120,156" />
+			<applystate name="State_Maliken_Ability1_Slow" duration="6000" />
+			<playeffect effect="effects/impact_heal.effect" source="target_entity"/>
+			<condition test="param lt 300">
+				<!-- test if total amount attempting to be healed is going to put total healing greater than 300 (max heal)  -->
+				<setvar1 a="10" b="param" op="add" />
+				<condition test="var1 gt 300">
+					<heal target="source_entity" a="var1" b="300" op="sub" />
+					<setparam entity="this_entity" a="300" />
+				</condition>
+				<condition test="var1 lt 300">
+					<hasmodifier name="swordhealing1">
+						<heal target="source_entity" a="10" />
+					</hasmodifier>
+					<hasmodifier name="swordhealing2">
+						<heal target="source_entity" a="20" />
+					</hasmodifier>
+					<hasmodifier name="swordhealing3">
+						<heal target="source_entity" a="30" />
+					</hasmodifier>
+					<hasmodifier name="swordhealing4">
+						<heal target="source_entity" a="40" />
+					</hasmodifier>
+					<evaluate a="param" b="result" op="add" />
+					<setparam entity="this_entity" a="result" />
+				</condition>
+			</condition>
+		</onimpact>
+	</modifier>
+
+</affector>

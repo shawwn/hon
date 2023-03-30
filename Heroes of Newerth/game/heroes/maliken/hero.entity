@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_Maliken"
+
+	team="Hellbourne"
+	icon="icon.tga"
+	portrait="icon.tga"
+	model="model.mdf"
+	skin=""
+	
+	passiveeffect=""
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="sounds/voice/select_%.wav"
+	selectedflavorsound="sounds/voice/select_flavour_%.wav"
+	confirmmovesound="sounds/voice/move_%.wav"
+	confirmattacksound="sounds/voice/attack_%.wav"
+	nomanasound="sounds/voice/no_mana.wav"
+	cooldownsound="sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="sounds/voice/taunt_prior.wav"
+	tauntkillsound="sounds/voice/taunt_after.wav"
+	
+	preglobalscale="1.61"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="112"
+	boundsradius="24"
+	selectionradius="48"
+	targetoffset="0 0 92"
+
+	movespeed="300"
+	turnrate="540"
+	turnsmoothing="0.05"
+
+	maxhealth="150"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="-0.9"
+	magicarmor="5.5"
+
+	inventory0="Ability_Maliken1"
+	inventory1="Ability_Maliken2"
+	inventory2="Ability_Maliken3"
+	inventory3="Ability_Maliken4"
+	inventory4="Ability_AttributeBoost"
+	inventory5="Ability_Maliken2_Flame"
+	inventory6="Ability_Maliken2_Healing"
+	inventory8="Ability_Taunt"
+
+	attackduration="1000"
+	attackactiontime="500"
+	attackcooldown="1700"
+	attackdamagemin="22"
+	attackdamagemax="28"
+	attacknumanims="2"
+	attackoffset="0 30 100"
+	attackprojectile=""
+	attackrange="125"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="effects/impact.effect"
+	attacktype="melee"
+	combattype="Hero"
+
+	aggrorange="600"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="Strength"
+	strength="24"
+	strengthperlevel="2.6"
+	agility="20"
+	agilityperlevel="2.0"
+	intelligence="17"
+	intelligenceperlevel="1.7"
+	
+	corpsetime="1000"
+	corpsefadetime="1000"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+	
+	previewmodel="preview.mdf"
+	previewpos="0 0 -50"
+	previewangles="0 0 0"
+	previewscale="1.5"
+>
+	<recommendeditem name="Item_ManaPotion" />
+	<recommendeditem name="Item_MinorTotem" />
+	<recommendeditem name="Item_RunesOfTheBlight" />
+	<recommendeditem name="Item_HealthPotion" />
+	<recommendeditem name="Item_HomecomingStone" />
+	<recommendeditem name="Item_LoggersHatchet" />
+	
+	<recommendeditem name="Item_Strength5" />
+	<recommendeditem name="Item_Steamboots" />
+	<recommendeditem name="Item_Insanitarius" />
+	<recommendeditem name="Item_Immunity" />
+	<recommendeditem name="Item_Critical1" />
+	<recommendeditem name="Item_LifeSteal4" />
+	<recommendeditem name="Item_DaemonicBreastplate" />
+	<recommendeditem name="Item_BehemothsHeart" />
+
+	<modifier key="swordflame" modpriority="80"
+		idleanim="ability_2_fireDefault"
+		attackanim="ability_2_fireAttack_%"
+		attacknumanims="2"
+		attackimpacteffect="effects/impact_flame.effect"
+	/>
+		
+	<modifier key="swordhealing" modpriority="80"
+		idleanim="ability_2_LifeDefault"
+		attackanim="ability_2_LifeAttack_%"
+		attacknumanims="2"
+		attackimpacteffect="effects/impact_heal.effect"
+	/>
+	
+	<modifier key="malikenult" modpriority="100"
+	
+		model="ability_04/model.mdf"
+		preglobalscale="1.64"
+		attackprojectile="Projectile_MalikenAttack"
+		attackcooldown="1700"
+		attackoffset="0 100 70"
+		attackrange="550"
+		attacktype="ranged"
+		attackimpacteffect="effects/impact_heal.effect"
+	/>
+</hero>

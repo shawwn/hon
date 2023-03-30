@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="model_high.max" file="water.model" type="K2" >
+
+	
+	<anim name="idle" clip="water.clip" loop="1">
+		<startevent cmd="PlaySoundLoopingLinear /buildings/legion/well/sounds/idle.wav 1200 2500 0.2 0 100 300"/>
+	</anim>
+</model>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect  useentityeffectscale="1" name="ability_03">
+
+	<definitions>
+		<particlesystem name="system0" space="entity" scale="1.2">
+
+
+		<groundsprite
+			life="2200"
+			loop="true"
+			timenudge="0"
+			material="/shared/effects/materials/mana_regen.material"
+
+			startsize="55"
+			midsize="35"
+			endsize="55"
+
+			midsizepos=".5"
+			startcolor=".0 .02 .3"
+			midcolor=".0 .1 .5"
+			endcolor=".0 .02.3"
+			midcolorpos=".2"
+			minangle="15"
+			maxangle="55"
+
+			angles="0 0 0"
+
+
+		/>
+
+
+
+
+
+
+	</particlesystem>
+
+
+
+
+
+</definitions>
+
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<waitfordeath instance="instance0" />
+	<!-- <die /> -->
+</thread>
+
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+
+
+
+
+
+
+

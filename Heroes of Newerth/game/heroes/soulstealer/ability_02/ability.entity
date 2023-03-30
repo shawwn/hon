@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Soulstealer2"
+
+	icon="icon.tga"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="passive"
+	
+	maxcharges="8,15,23,30"
+	damagepercharge="2"
+	counterpercharge="1"
+>
+	<onframe />
+	<onkill propagatetoillusions="false" >
+		<targettype type="building" />
+		<else>
+			<targettype target="source_entity" type="alive">
+				<addcharges count="1" />
+				<playeffect effect="effects/impact.effect" target="target_entity" source="source_entity"/>
+			</targettype>
+		</else>
+	</onkill>
+	
+	<onkilled>
+		<multcharges value="0.5" />
+	</onkilled>
+</ability>

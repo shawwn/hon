@@ -1,0 +1,47 @@
+This document assumes you know how to use the commandline version of cvs and have basic knowledge of linux/OS X.
+
+
+Linux
+
+Setup:
+1. Checkout the "Heroes of Newerth" "src" and "linux" cvs modules
+2. Install the toolchain by doing the following:
+	cd linux/toolchain
+	sudo ./install.sh
+3. Optional: Install "scons". This should be available via your distribution's package manager. If you don't install it, the build script will use the older version in the linux cvs module.
+4. From the src module do a "./build.sh update-libs" to copy over the libs to the "Heroes of Newerth" module from the toolchain.
+
+Building:
+1. Set the desired settings in k2_settings.h
+2. I've been handling build_number.h by hand so just create it and fill in the number.
+3. Build by doing the following from the src directory (add a -jX with X set to the number of parallel jobs if you want it to use more than the default 2):
+	./build.sh all-release
+4. Archive the debug symbols & source by doing the following:
+	./build.sh archive
+
+Updating:
+1. Generate the new texture archives using the Windows client and copy them over.
+2. From the "Heroes of Newerth" module do the following to generate the update:
+	./hon.sh -dedicated -execute \""GenerateUpdate; Quit"\"
+3. From the "Heroes of Newerth" module do the following to upload the update:
+	./hon.sh -dedicated -execute \""UploadUpdate server username password; Quit"\"
+2/3b. Alternatively, run the client and do the GenerateUpdate/UploadUpdate from the console.
+
+
+
+Mac OS X
+
+Setup:
+1. Install XCode 3 from developer.apple.com
+2. Checkout the "Heroes of Newerth" "src" and "lib" cvs modules
+
+Building:
+1. Open the XCode project file, HoN.xcodeproj
+2. Set the desired settings in k2_settings.h
+3. I've been handling build_number.h by hand so just create it and fill in the number.
+4. Build by right clicking "client" in the targets and selecting 'Build "client"'
+5. Archive the debug symbols & source by right clicking "archive" in the targets and selecting 'Build "archive"'
+
+Updating:
+1. Generate the new texture archives using the Windows client and copy them over.
+2. Run the client and do the GenerateUpdate/UploadUpdate from the console.

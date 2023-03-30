@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Soulstealer_Ability1"
+
+	radius="275"
+	
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Magic"
+>
+	<onimpact>
+		<damage effecttype="Magic" amount="75,150,225,300" />
+	</onimpact>
+</affector>

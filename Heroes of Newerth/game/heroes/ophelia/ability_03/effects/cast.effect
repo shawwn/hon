@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" useentityeffectscale="true">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="1">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume="0.65"
+				sample="../sounds/cast.wav"
+			/>
+
+			<simpleemitter
+				count="12"
+         		spawnrate="100"
+				minparticlelife="500"
+          		maxparticlelife="1000"
+          		gravity="-10"
+          		drag=".25"
+				position="0 75 75"
+				offsetsphere="10 10 0"
+				material="/shared/effects/materials/phantom_smoke_03.material"
+			>
+  				<particle 
+					maxangle="360"
+					minanglespeed="-6"
+					maxanglespeed="6"
+					startcolor="0 0 0"
+					midcolor="0 .65 0"
+					endcolor="0 0 0"
+					startsize="75" 
+					endsize="150"
+				/>
+        	</simpleemitter>
+			
+			<simpleemitter
+				count="12"
+         		spawnrate="100"
+				minparticlelife="500"
+          		maxparticlelife="1000"
+          		gravity="-10"
+          		drag=".25"
+				position="0 75 75"
+				offsetsphere="10 10 0"
+				material="/shared/effects/materials/mysticenergy2.material"
+			>
+  				<particle 
+					maxangle="360"
+					minanglespeed="-6"
+					maxanglespeed="6"
+					startcolor="0 0 0"
+					midcolor=".65 .15 0"
+					endcolor="0 0 0"
+					startsize="15"
+					endsize="30"
+				/>
+        	</simpleemitter>
+
+			<model
+				life="600"
+				parentmodel="true"
+				parentskeleton="true"
+				startcolor="0 .35 0"
+				endcolor="0 0 0"
+				material="/shared/effects/materials/shell2.material"
+				startalpha="0"
+				endalpha="10"
+			/>
+
+			<model
+				life="600"
+				delay="200"
+				parentmodel="true"
+				parentskeleton="true"
+				startcolor="0 .35 0"
+				endcolor="0 0 0"
+				material="/shared/effects/materials/shell2.material"
+				startalpha="0"
+				endalpha="10"
+			/>
+	
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnparticlesystem instance="instance1" particlesystem="system1" />
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+	</thread>
+</effect>

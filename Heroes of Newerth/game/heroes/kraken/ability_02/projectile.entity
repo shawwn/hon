@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Kraken_Ability2"
+
+	speed="850"
+	gravity="0"
+
+	modelscale="1.0"
+	model=""
+	
+	canturn="true"
+	flying="true"
+	flyheight="0"
+	
+	touchradius="80"
+	touchradiusdiradjust="true"
+	touchtargetscheme="heroes_trees_and_buildings"
+	touchignoreinvulnerable="false"
+	toucheffecttype="Magic"
+	maxtouchespertarget="1"
+	ignoreinvulnerable="true"
+>	
+	<onspawn>
+		<spawnaffector name="Affector_Kraken_Ability2" target="this_entity" owner="this_owner_entity" />
+		<applystate name="State_Kraken_Ability2_Self_Killprojectile" duration="10000" proxy="this_entity" inflictor="this_entity" source="this_entity" target="this_owner_entity" />
+	</onspawn>
+
+	<ontouch>
+		<targettype type="hero">
+			<targettype type="enemy">
+				<condition test="param eq 0">
+					<unbind target="target_entity" />
+					<setproxy entity="this_entity" target="target_entity" />
+					<applystate name="State_Stunned" duration="2500" />
+					<bind target="target_entity" vertical="true" unbindondeath="true" turn="true" position="true" positionoverride="0 75" />
+					<playanim name="knock_1" target="target_entity"/>
+					<playeffect effect="effects/charge_impact.effect" target="target_entity"/>
+					<setparam a="1" />
+				</condition>
+			</targettype>
+		</targettype>
+		<else>
+			<setparam a="2" />
+			<forceimpact />
+			<playeffect effect="effects/charge_impact.effect" target="this_position"/>
+		</else>
+	</ontouch>
+	
+	<onimpact>
+		<kill target="this_entity" source="" />
+	</onimpact>
+	
+	<ondeath>
+		<compare a="this_proxy_entity" b="0" op="ne">
+			<condition test="param eq 2">
+				<expirestate name="State_Stunned" target="this_proxy_entity" />
+				<applystate name="State_Stunned_Knockdown" duration="1000,1330,1660,2000" target="this_proxy_entity" />
+				<damage effecttype="Magic" amount="50,100,150,200" target="this_proxy_entity" />
+				<playeffect effect="effects/charge_impact.effect" target="target_entity"/>
+				<setparam a="3" />
+			</condition>
+			<playanim name="idle" target="this_proxy_entity" />
+		</compare>
+		<expirestate name="State_Kraken_Ability2_Self_Killprojectile" target="this_owner_entity" />
+		<playanim name="idle" target="source_entity" />
+		<spawnunit name="Gadget_Kraken_Ability2_Sight" count="1" target="source_position" pushentity="true" />
+		<killtrees target="this_position" radius="70" />
+		<expirestate name="State_Stunned" target="this_proxy_entity" />
+		<playanim name="idle" target="source_entity" />
+	</ondeath>
+</projectile>

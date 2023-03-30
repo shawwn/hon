@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Succubis3"
+
+	statuseffecttooltip="State_Succubis_Ability3"
+	icon="icon.tga"
+	passiveeffect=""
+	impacteffect="effects/impact.effect"
+	
+	anim="ability_3"
+	casttime="1000"
+	castactiontime="500"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_entity"
+	targetscheme="enemy_and_willing_ally_units"
+	manacost="165"
+	cooldowntime="15000"
+	casteffecttype="Magic"
+	novoiceresponse="true"
+	
+	range="500,550,600,650"
+	
+	doubleactivate="true"
+>
+	<onimpact>
+		<applystate name="State_Succubis_Ability3" duration="4000,5000,6000,7000" />
+		<applystate name="State_Succubis_Ability3_Invulnerable" duration="1000" />
+	</onimpact>
+</ability>

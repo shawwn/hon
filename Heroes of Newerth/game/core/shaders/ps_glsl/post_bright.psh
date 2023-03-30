@@ -1,0 +1,36 @@
+// (C)2009 S2 Games
+// post_bright.psh
+// 
+// ...
+//=============================================================================
+
+//=============================================================================
+// Uniform variables
+//=============================================================================
+uniform vec3	vLinearBright;
+
+//=============================================================================
+// Varying variables
+//=============================================================================
+
+//=============================================================================
+// Sampler
+//=============================================================================
+uniform sampler2D	image;
+
+//=============================================================================
+// Pixel Shader
+//=============================================================================
+void main()
+{
+	gl_FragColor = texture2D(image, gl_TexCoord[0].xy);
+	gl_FragColor.rgb = vec3(dot(gl_FragColor.rgb, vec3(0.30, 0.59, 0.11)));
+	
+	vec4 vColor = texture2D(image, gl_TexCoord[0].xy);
+	
+	float fBrightness = max(vColor.r, max(vColor.g, vColor.b)) + dot(vColor.rgb, vec3(1.0, 1.0, 1.0));
+	float fScale = clamp(fBrightness * vLinearBright.x + vLinearBright.y, 0.0, 1.0) * vLinearBright.z;
+
+	gl_FragColor.rgb = vColor.rgb * fScale;
+	gl_FragColor.a = vColor.a;
+}

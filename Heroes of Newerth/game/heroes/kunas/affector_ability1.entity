@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Kunas_Ability1"
+
+	radius="500"
+	
+	impactdelay="200"
+	maximpactsperinterval="1"
+	maximpactspertarget="1"
+	targetscheme="visible_enemy_units"
+	targetselection="closest"
+	effecttype="Magic"
+	persist="true"
+	
+	impacteffect="effects/ability_01/chain_impact.effect"
+	linkeffect="effects/ability_01/chain_lightning_link.effect"
+>
+	<onimpact>
+		<chain count="4,6,8,14"/>
+		<condition test="target_entity eq proxy_entity" />
+		<else>
+			<damage effecttype="Magic" amount="85,100,115,130"/>
+		</else>
+	</onimpact>
+</affector>

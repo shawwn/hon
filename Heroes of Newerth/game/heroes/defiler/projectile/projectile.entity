@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_DefilerAttack"
+
+	speed="900"
+	gravity="0"
+	canturn="false"
+	modelscale=".4"
+
+	model="effects/projectile.mdf"
+	traileffect="effects/projectile.effect"
+	impacteffect="effects/impact.effect"
+>
+</projectile>

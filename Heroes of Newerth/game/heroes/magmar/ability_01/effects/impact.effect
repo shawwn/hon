@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" useentityeffectscale="1" persistent="true">
+
+	<definitions>
+
+		<modifier
+			delay="100"
+			life="400"
+			name="modifier0"			
+			startcolor="10 5 1"			
+			endcolor="1 1 1"
+			midcolorpos=".8"
+		/>	
+	
+		<particlesystem name="system0" space="world" scale="1">
+
+		<sound
+			linearfalloff="true" 
+			falloffstart="1000"
+			falloffend="2500"
+			volume=".65"
+			sample="../sounds/impact_%.wav"
+		/>
+
+		<sound
+			linearfalloff="true" 
+			falloffstart="0"
+			falloffend="1500"
+			volume=".2"
+			sample="../sounds/impact2.wav"
+		/>
+
+		<simpleemitter			
+			count="1"
+			particlelife="8000"				
+			spawnrate="222"
+			offsetsphere="66 77 1"	
+			anchor="1"
+		>						
+			<particle 	
+				size="11"
+				anchor="1"
+			>	
+
+				<simpleemitter	
+					life="1100"
+					particlelife="2000"					
+					spawnrate="8"
+					gravity="-10"
+					speed="22"
+					drag="0.1"
+					offsetsphere="50"
+					material="/shared/effects/materials/whitedot.material"
+				>						
+					<particle 	
+						startcolor="0 0 0 "
+						midcolor="1 .2 0"	
+						endcolor="0 0 0"
+						startsize="5"
+						endsize="5"						
+					>	
+					</particle>
+				</simpleemitter>
+
+			
+				<simpleemitter	
+					life="1100"
+					particlelife="1000"
+					
+					spawnrate="4"
+					gravity="-8"
+					speed="0"
+					offsetsphere="20"
+					material="/shared/effects/materials/flame.material"
+				>						
+					<particle 	
+						
+						
+						startcolor="0 0 0 "
+						midcolor="1 1 .8"	
+						endcolor="0 0 0"
+						size="80"
+						minstartscale="0.2"
+						maxstartscale="1.4"
+						endscale="0"						
+					>	
+					</particle>
+				</simpleemitter>
+				
+	
+				
+				
+				<simpleemitter	
+					delay="2550"
+					life="3800"
+					particlelife="2000"
+					
+					spawnrate="1"
+					gravity="-3"
+					speed="0"
+					offsetsphere="20"
+					material="/shared/effects/materials/smoke_particle.material"
+				>						
+					<particle 	
+						startcolor="1 1 1"
+						midcolor="1 1 1"	
+						endcolor="1 1 1"
+						startsize="130"
+						endsize="150"	
+						startalpha="0"
+						midalpha=".2"
+						endalpha="0"
+					>	
+					</particle>
+				</simpleemitter>	
+
+				<simpleemitter
+					offsetsphere="15 50 5"
+					position="0 0 50"
+					spawnrate="10"
+					particlelife="800"
+					life="2000"
+					material="/shared/effects/materials/refract_outsplash.material"
+				>
+					<particle
+						startalpha="1.0"
+						endalpha="0.0"
+						minangle="0"
+						maxangle="360"
+						anglespeed="-90"
+						startsize="30"
+						endsize="100"
+						startparam=".1"
+						endparam="0"
+						depthbias="-20"
+					/>
+				</simpleemitter>		
+				
+				
+				
+				
+				<simpleemitter
+						timenudge="200"
+						delay="0"
+						count="2"
+						particlelife="1100"				
+						spawnrate="11"
+						speed="290"
+						gravity="20"
+						direction="0 0 1"
+						minangle="0"
+						
+						maxangle="15"
+						particledirectionalspace="local"
+						material="/shared/effects/materials/white_splash.material"
+						offsetsphere="11 11 0"
+						position="0 0 10"
+				
+					>
+
+						<particle 
+							startsize="20"
+						
+							endsize="150"
+							startcolor="1 1 .4"
+							midcolor="1 .6 0"
+							endcolor="1 0 0"
+							
+							startalpha="0"
+							midalpha="1"
+							endalpha="0"
+							
+
+						/>
+				</simpleemitter>				
+			</particle>
+		</simpleemitter>
+
+			
+		
+		
+		</particlesystem>
+	</definitions>
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<spawnmodifier instance="instance1" modifier="modifier0"/> 
+
+	<waitfordeath instance="instance1" />
+</thread>
+
+</effect>

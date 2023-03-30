@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name=" ">
+	<definitions>
+	
+		<modifier
+			material="material.material"
+			life="7500"
+			startcolor="3 1.5 1.35"
+			midcolor="0 0 0"
+			endcolor="0 0 0"
+			midcolorpos=".35"
+			startalpha="1"
+			midalpha="1"
+			endalpha="0"
+			midalphapos=".35"
+		/>
+	
+		<particlesystem name="system0" space="world" scale="1">
+
+			<billboard
+				life="500"
+				bone="Box27"
+				size="40"
+				depthbias="-50"
+				color=".4 .1 .08"				
+				material="/shared/effects/materials/whitedot.material"
+			/>		
+			<billboard
+				life="500"
+				bone="Box25"
+				size="40"
+				depthbias="-50"
+				color=".4 .1 .08"				
+				material="/shared/effects/materials/whitedot.material"
+			/>
+		
+			<billboard
+				life="1500"
+				bone="_bone_root_of_ball"
+				startsize="50"
+				midsize="200"
+				endsize="50"			
+				color=".5 .05 .1"				
+				material="/shared/effects/materials/whitedot.material"
+			/>
+			
+			
+			<billboard
+			delay="1000"
+				material="/shared/effects/materials/fresnel_blend.material"
+				bone="_bone_root_of_ball"
+				color=".4 .1 .08"
+				life="500"
+				startalpha=".2"
+				midalpha=".7"
+				endalpha=".2"
+				position="0 0 10"
+				startsize="75"
+				endsize="25"
+				depthbias="-150"			
+			/>
+			
+			<billboard
+			delay="1000"
+				material="/shared/effects/materials/corona_07.material"
+				bone="_bone_root_of_ball"
+				color=".4 .1 .08"
+				life="500"
+				startalpha=".2"
+				midalpha=".7"
+				endalpha=".2"
+				position="0 0 10"
+				startsize="75"
+				endsize="25"
+				depthbias="-150"			
+			/>	
+	
+			<simpleemitter
+				bone="_bone_root_of_ball"
+				life="1000"
+				position="0 0 0"
+				spawnrate="25"
+				minparticlelife="100"
+				maxparticlelife="500"
+				minspeed="0"
+				maxspeed="500"
+				drag="0.05"
+				angle="20"
+				offsetsphere="25 25 0"
+				depthbias="-60"
+				material="/shared/effects/materials/femme_lightning_01.material"
+			>
+				<particle
+					minangle="-70"
+					maxangle="70"
+					minanglespeed="-110"
+					maxanglespeed="110"
+					startcolor=".5 .5 .5"
+					midcolor="1 .25 .25"
+					endcolor="0"
+					midcolorpos=".7"
+					size="20"
+					minendscale="2"
+					maxendscale="5"
+					endstickiness=".3"
+				/>
+			</simpleemitter>
+			
+			<template name="lightning">
+				<simpleemitter
+					bone="{bone}"
+					life="1000"
+					position="0 0 0"
+					spawnrate="15"
+					minparticlelife="100"
+					maxparticlelife="500"
+					minspeed="0"
+					maxspeed="500"
+					drag="0.05"
+					angle="20"
+					offsetsphere="25 25 0"
+					depthbias="-60"
+					material="/shared/effects/materials/femme_lightning_01.material"
+				>
+					<particle
+						minangle="-70"
+						maxangle="70"
+						minanglespeed="-110"
+						maxanglespeed="110"
+						startcolor=".5 .5 .5"
+						midcolor="1 .25 .25"
+						endcolor="0"
+						midcolorpos=".7"
+						size="15"
+						minendscale="2"
+						maxendscale="5"
+						startstickiness="1"
+						endstickiness=".35"
+					/>
+				</simpleemitter>
+			</template>
+	
+			<instance name="lightning" bone="Box01"/>
+			<instance name="lightning" bone="Box02"/>
+			<instance name="lightning" bone="Box03"/>
+			
+				
+			<template name="light">
+				<simpleemitter
+					bone="{bone}"
+					life="1000"
+					spawnrate="25"
+					minparticlelife="100"
+					maxparticlelife="500"
+					minspeed="0"
+					maxspeed="500"
+					drag="0.05"
+					angle="20"
+					offsetsphere="50 50 0"
+					depthbias="-60"
+					material="/shared/effects/materials/femme_lightning_01.material"
+				>
+					<particle
+						minangle="0"
+						maxangle="360"
+						minanglespeed="-110"
+						maxanglespeed="110"
+						startcolor=".5 .5 .5"
+						midcolor="1 .25 .25"
+						endcolor="0"
+						midcolorpos=".7"
+						size="15"
+						minendscale="2"
+						maxendscale="5"
+						startstickiness=".5"
+						endstickiness=".1"
+					/>
+				</simpleemitter>
+			</template>
+	
+			<instance name="light" bone="Bip01 Spine2"/>
+			
+			
+			
+			
+			<simpleemitter
+				bone="_bone_root_of_ball"
+				delay="1500"
+				life="1000"
+				count="1"
+				spawnrate="25"
+				minparticlelife="100"
+				maxparticlelife="500"
+			>
+				<particle>
+
+					<groundsprite
+						bone="_bone_root_of_ball"
+						life="4000"
+						material="/shared/effects/materials/ground_smash_overlay.material"
+						maxyaw="360"
+						minsize="25"
+						maxsize="40"			
+						color="1"
+						startalpha=".8"
+						midalpha=".8"
+						midalphapos="0.9"
+						endalpha="0"
+					/>
+				
+					<groundsprite	
+						bone="_bone_root_of_ball"
+						life="4000"
+						material="/shared/effects/materials/earth_cracks_02.material"
+						minyaw="0"
+						maxyaw="360"
+						minsize="50"
+						maxsize="100"			
+						color="1"
+						startalpha="1"
+						midalpha=".5"
+						midalphapos="0.9"
+						endalpha="0"
+					/>
+					
+				</particle>
+			</simpleemitter>
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance1" particlesystem="system0" />
+		<spawnmodifier instance="instance0"/>
+		<waitfordeath  instance="instance0"/>
+		<waitfordeath  instance="instance1"/>
+	</thread>
+</effect>

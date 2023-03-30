@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_DwarfMagi4"
+
+	
+	
+	
+	icon="icon.tga"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="passive"
+
+	modifierkey="DwarfMagi_Ability4_1,DwarfMagi_Ability4_2,DwarfMagi_Ability4_3"
+>
+<!--
+	<modifier key="ult_boost" modpriority="100"
+		displayname="true"
+		modifierkey="DwarfMagi_Ability4_1_Boosted,DwarfMagi_Ability4_2_Boosted,DwarfMagi_Ability4_3_Boosted"
+	/>
+-->
+</ability>

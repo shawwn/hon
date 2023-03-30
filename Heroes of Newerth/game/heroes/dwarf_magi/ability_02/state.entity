@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_DwarfMagi_Ability2"
+
+	
+	
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+	
+	movespeedslow="0.15,0.20,0.25,0.30"
+	magicarmorstart="-1,-2,-3,-4"
+	magicarmormid="-1,-2,-3,-4"
+	magicarmorend="0.0"
+	magicarmorduration="7500"
+	magicarmormidpos="0.13"
+
+	deniable="true"
+	
+	effecttype="StatusDebuff"
+>
+	<onframe >
+		<damage effecttype="Magic DOT" amount="10,20,30,40" b="frametime" op="mult"/>
+	</onframe>
+</state>

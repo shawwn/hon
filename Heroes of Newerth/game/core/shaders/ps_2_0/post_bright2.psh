@@ -1,0 +1,56 @@
+// (C)2008 S2 Games
+// post_bright.psh
+// 
+// ...
+//=============================================================================
+
+//=============================================================================
+// Global variables
+//=============================================================================
+float4	vTexelSize;
+float3	vBright;
+
+//=============================================================================
+// Vertex shader output structure
+//=============================================================================
+struct VS_OUTPUT
+{
+	float2 Texcoord0 : TEXCOORD0;
+};
+
+//=============================================================================
+// Pixel shader input structure
+//=============================================================================
+struct PS_OUTPUT
+{
+	float4 Color : COLOR;
+};
+
+sampler image;
+
+//=============================================================================
+// Pixel Shader
+//=============================================================================
+PS_OUTPUT PS( VS_OUTPUT In )
+{
+	PS_OUTPUT Out;
+	
+	float4 vColor = tex2D(image, In.Texcoord0);
+	
+	Out.Color.rgb = vColor.rgb;
+	
+	float fBrightness = max(Out.Color.r, max(Out.Color.g, Out.Color.b)) + dot(Out.Color.rgb, float3(1.0f, 1.0f, 1.0f));
+
+#if 1
+	float fScale = smoothstep(vBright.x, vBright.y, fBrightness) * vBright.z;
+#else
+	float fScale = saturate(fBrightness - 1.0f);
+#endif
+
+	Out.Color.rgb *= fScale;
+
+	Out.Color.a = vColor.a;
+
+	return Out;
+}
+

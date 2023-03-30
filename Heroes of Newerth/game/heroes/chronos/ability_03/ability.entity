@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Chronos3"
+
+	icon="icon.tga"
+	statuseffecttooltip="State_Chronos_Ability3"
+	statuseffecttooltip2="State_Chronos_Ability3_Self"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="passive"
+	cooldowntype="bashing"
+	cooldowntime="1000"
+	initialcharges="8,7,6,5"
+>
+
+	<onlearn>
+		<setcharges a="8,7,6,5" />
+	</onlearn>
+	
+	<onupgrade>
+		<setvar0 a="8,7,6,5" />
+		<condition test="charges gt var0">
+			<setcharges a="8,7,6,5" />
+		</condition>
+	</onupgrade>
+	
+	<onattackimpact propagatetoillusions="false">
+		<targettype type="building" />
+		<else>
+			<condition test="not_hasstate State_Chronos_Ability3_Timelock" target="target_entity" >
+				<removecharge />
+				<condition test="charges eq 0">
+					<applystate name="State_Chronos_Ability3_Timelock" duration="1000" />
+					<damage effecttype="Physical" amount="15,30,45,60" />
+					<setcharges a="8,7,6,5" />
+					<startcooldown />
+				</condition>
+			</condition>
+		</else>
+	</onattackimpact>
+</ability>

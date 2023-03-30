@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect>
+
+	<definitions>
+
+		<particlesystem name="system0" scale="2" space="world">
+			<simpleemitter
+				bone="_bone_weapon3"
+				life="200"	
+				spawnrate="20"		
+				particlelife="400"			
+				speed="30"
+				position="0 0 50"
+				material="/shared/effects/materials/blink.material"
+				offsetsphere="15"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-40"
+					maxanglespeed="-40"
+					startcolor="0"
+					midcolor="0.0 1 1"
+					endcolor="0"		
+					startsize="200"
+					endsize="0"
+					startstickiness="-1"
+					endstickiness="1"
+				/>
+			</simpleemitter>
+		
+		
+		</particlesystem>
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->

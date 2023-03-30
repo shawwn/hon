@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Scout_Ability4_Slow"
+	
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+	
+	movespeedslow="0.2,0.3,0.4"
+	
+	effecttype="StatusDebuff"
+>
+</state>

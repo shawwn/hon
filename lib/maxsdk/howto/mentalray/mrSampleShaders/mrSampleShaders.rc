@@ -1,0 +1,162 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_TWOSIDEDSHADER DIALOGEX 0, 0, 217, 44
+STYLE DS_SETFONT | DS_CENTER | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CONTROL         "Custom1",IDC_BUTTON_FRONTMAP,"CustButton",WS_TABSTOP,80,
+                    8,116,12
+    CONTROL         "Custom1",IDC_COLOR_FRONT,"ColorSwatch",WS_TABSTOP,32,8,
+                    44,12
+    LTEXT           "Front:",IDC_STATIC,8,10,19,8
+    CONTROL         "",IDC_CHECK_FRONTMAPON,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,200,10,8,8
+    CONTROL         "Custom1",IDC_BUTTON_BACKMAP,"CustButton",WS_TABSTOP,80,
+                    24,116,12
+    CONTROL         "Custom1",IDC_COLOR_BACK,"ColorSwatch",WS_TABSTOP,32,24,
+                    44,12
+    LTEXT           "Back:",IDC_STATIC,8,26,20,8
+    CONTROL         "",IDC_CHECK_BACKMAPON,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,200,26,8,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_TWOSIDEDSHADER, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 213
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 8
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "#include ""veroverrides.h""\r\n"
+    "#include ""maxversion.r""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_LIBDESCRIPTION      "mental ray Sample Shaders (Discreet)"
+    IDS_CATEGORY            "mental ray"
+    IDS_FRONT               "Front"
+    IDS_BACK                "Back"
+    IDS_TWOSIDEDSHADER_CLASSNAME "Two Sided Sample Shader"
+    IDS_PARAMETERS          "Parameters"
+    IDS_TWOSIDEDSHADER_PARAMETERS "Two-Sided Shader Parameters"
+    IDS_FRONTCOLOR          "Front Color"
+    IDS_BACKCOLOR           "Back Color"
+    IDS_FRONTMAP            "Front Map"
+    IDS_BACKMAP             "Back Map"
+    IDS_FRONTMAPON          "Front Map On"
+    IDS_BACKMAPON           "Back Map On"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENC)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+#include "veroverrides.h"
+#include "maxversion.r"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

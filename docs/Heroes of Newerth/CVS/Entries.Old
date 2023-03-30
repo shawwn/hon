@@ -1,0 +1,55 @@
+/An Attack Example.txt/1.3/Fri Jun 18 00:55:23 2010//
+/Armor.txt/1.1/Thu May  8 02:35:37 2008//
+/Attack Damage.txt/1.1/Thu May  8 02:35:37 2008//
+/Attack Events.txt/1.1/Thu May  8 02:35:37 2008//
+/Attack Modifiers.txt/1.1/Thu May  8 02:35:38 2008//
+/Attack Speed.txt/1.1/Thu May  8 02:35:38 2008//
+/Attack and Armor Class.txt/1.1/Thu May  8 02:35:38 2008//
+/Attributes.txt/1.1/Thu May  8 02:35:38 2008//
+/Cleave.txt/1.1/Thu May  8 02:35:38 2008//
+/Coding TODO.txt/1.22/Tue Oct 13 03:36:37 2009//
+/Combat Types.slk/1.1/Thu May  8 02:35:38 2008//
+/CreepAI.txt/1.1/Thu May  8 02:35:38 2008//
+/Damage Flow.txt/1.1/Thu May  8 02:35:38 2008//
+/Lifesteal.txt/1.1/Thu May  8 02:35:38 2008//
+/Movement Modifiers.txt/1.1/Thu May  8 02:35:38 2008//
+/Regeneration.txt/1.1/Thu May  8 02:35:38 2008//
+/Scales.txt/1.1/Thu May  8 02:35:38 2008//
+/Spell Resistance.txt/1.1/Thu May  8 02:35:38 2008//
+/TempNotes.txt/1.1/Thu May  8 02:35:38 2008//
+/Truesight.txt/1.1/Thu May  8 02:35:38 2008//
+/Turn Rates.txt/1.1/Mon Sep 14 20:43:40 2009//
+/XP Table.ods/1.1/Thu May  8 02:35:38 2008/-kb/
+/contact.rtf/1.7/Fri Jun 11 22:12:49 2010/-kb/
+/entitysystemdocumentation.txt/1.1/Thu Oct 21 21:05:25 2010//
+/events.txt/1.1/Fri Apr 24 04:59:51 2009//
+/hero_checklist.rtf/1.3/Thu Oct 21 15:35:12 2010/-kb/
+/item sample.txt/1.1/Fri May  9 03:23:23 2008//
+/kongor_notes.txt/1.1/Thu Apr  9 13:12:10 2009//
+/linux_mac_patching.txt/1.2/Fri Dec 18 20:10:51 2009//
+/profile.txt/1.1/Thu Feb 26 05:43:43 2009//
+/profile2.txt/1.1/Mon Mar  2 06:46:01 2009//
+/projectile sample.txt/1.1/Fri May  9 03:23:23 2008//
+/stats3000000.txt/1.1/Thu Sep 17 20:44:06 2009//
+/stats3000000.xls/1.1/Thu Sep 17 20:44:06 2009/-kb/
+/stats500.txt/1.3/Tue Sep 15 01:02:04 2009//
+/stats600.txt/1.1/Tue Sep 15 01:02:04 2009//
+/stats600.xls/1.2/Thu Sep 17 20:44:06 2009/-kb/
+/test_server.txt/1.1/Mon Oct 27 07:05:22 2008//
+/tooltip.txt/1.4/Fri Oct 17 16:11:49 2008//
+/updater messages.txt/1.1/Thu Feb 19 13:36:38 2009//
+D/DotATest////
+D/Effects////
+D/Heroes////
+D/NSIS////
+D/Programming////
+D/Stats////
+D/Utils////
+D/build_archives////
+D/design docs////
+D/logs////
+D/maps////
+D/profiling////
+D/ref////
+D/replays////
+D/servers////

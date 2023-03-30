@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1" useentityeffectscale="1">
+
+	<definitions>
+	
+		<modifier
+			name="modifier0"
+			startcolor="0 0 0"
+			endcolor="0 0 0"
+			alpha="1"
+		/>
+
+		<particlesystem name="system0" space="world" scale="1">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2500"
+				volume=".95"
+				sample="../sounds/cast.wav"
+			/>
+		
+			<simpleemitter
+				speed="2"
+				angle="50"
+				timenudge="2000"
+				bone="_bone_centerofchest"
+				spawnrate="15"
+				minparticlelife="1000"
+				maxparticlelife="1500"
+				gravity="4"
+				drag=".01"
+				depthbias="-40"
+				offsetsphere="85 25 65"
+				material="/shared/effects/materials/phantom_black.material"
+			>
+				<particle
+					maxangle="360"
+					minanglespeed="-116"
+					maxanglespeed="116"
+					color="0 0 0"
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					startsize="0"
+					endsize="225"
+					endstickiness="0"
+					turn="1"
+					
+				/>
+			</simpleemitter>
+		
+			<template name="trails">
+				<trailemitter
+					bone="{bone}"
+					spawnrate="{spawnrate}"
+					startminparticlelife="{life}"
+					startmaxparticlelife="{life}"
+					gravity="15"
+					drag=".1"
+					endminparticlelife="1"
+					endmaxparticlelife="1" 
+					texpostime="{life}"
+					texposscale="0"
+					texstretchscale="1"
+					speed="1"
+					position="{position}"
+					material="/shared/effects/materials/arrow_trail_blend.material"
+					inheritvelocity=".25"
+					limitinheritvelocity="500"
+				>
+					<particle
+						startcolor="0 0 0"
+						endcolor="0 0 0"
+						startsize="30"
+						midsize="15"
+						endsize="2"
+						startalpha=".35"
+						endalpha="0"
+					/>
+				</trailemitter>
+			</template>
+			
+			<instance name="trails" spawnrate="50" life="750" position="0 0 0" bone="_bone_righthand"/>
+			<instance name="trails" spawnrate="50" life="750" position="0 0 0" bone="_bone_lefthand"/>
+			<instance name="trails" spawnrate="50" life="750" position="0 0 0" bone="Bip01 L Foot"/>
+			<instance name="trails" spawnrate="50" life="750" position="0 0 0" bone="Bip01 R Foot"/>
+			<instance name="trails" spawnrate="40" life="500" position="0 0 0" bone="Bip01 R Clavicle"/>
+			<instance name="trails" spawnrate="40" life="500" position="0 0 0" bone="Bip01 L Clavicle"/>
+			<instance name="trails" spawnrate="40" life="200" position="0 0 0" bone="Bip01 R Forearm"/>
+			<instance name="trails" spawnrate="40" life="200" position="0 0 0" bone="Bip01 L Forearm"/>
+			<instance name="trails" spawnrate="40" life="200" position="0 0 0" bone="Bip01 R Upperarm"/>
+			<instance name="trails" spawnrate="40" life="275" position="0 0 0" bone="Bip01 L Upperarm"/>
+			<instance name="trails" spawnrate="40" life="275" position="0 0 0" bone="Bip01 Spine3"/>
+			<instance name="trails" spawnrate="40" life="500" position="0 0 0" bone="_bone_leftfoot"/>
+			<instance name="trails" spawnrate="40" life="500" position="0 0 0" bone="_bone_rightfoot"/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>
+		<spawnmodifier instance="instance1" modifier="modifier1"/>
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

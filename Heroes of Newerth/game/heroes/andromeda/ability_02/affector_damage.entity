@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Andromeda_Ability2_Damage"
+
+
+	radius="275"
+	lifetime="-1"
+	maximpactspertarget="1"
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Magic"
+	persist="false"
+
+	impacteffect="effects/impact.effect"
+>
+	<onimpact>
+		<damage effecttype="Magic" amount="40,65,90,115" />
+		<applystate name="State_Andromeda_Ability2" duration="14000,16000,18000,20000"/>
+	</onimpact>
+</affector>

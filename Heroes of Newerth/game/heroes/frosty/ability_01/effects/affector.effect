@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="true" deferred="true">
+	<definitions>
+	
+	
+		
+		<particlesystem name="system0" space="world" scale="1.2">
+
+		<sound
+			delay="222"
+			linearfalloff="true" 
+			falloffstart="1000"
+			falloffend="1800"
+			volume="0.4" 
+			sample="/heroes/pyromancer/sounds/impact_%.wav"
+		/>
+			<simpleemitter
+			count="1"
+			delay="222"
+			spawnrate="11111"
+			particlelife="5000"
+			>	
+				<particle
+				>
+					<debris
+						position="0 0 50"
+						
+						scale="0.5"
+						
+						life="1800"
+						model="debris.mdf"
+						anim="idle"	
+						minspeed="200.0"
+						maxspeed="300.0"
+						minrotationspeed="100.0"
+						maxrotationspeed="300.0"
+						gravity="41.0"
+					
+						minangle="0"
+						maxangle="90"
+						direction="0 0 1"
+						collide="true"
+						startalpha="1.0"
+						midalpha="1.0"
+						endalpha="1.0"
+						midalphapos="0.5"
+						bounce="0.7"
+						reflect="0.6"
+						animpose="true"
+					/>	
+												
+					
+					
+					<groundsprite
+						life="3100"						
+						material="/shared/effects/materials/ice_reveal.material"
+						
+						startcolor="0 0 0"					
+						midcolor=".6 .8 1"
+						endcolor="0 0 0"
+						midcolorpos=".1"
+						
+						startframe=".81"
+						midframe=".0"
+						endframe=".81"
+						midframepos=".1"
+						
+						startsize="80"					
+						endsize="80"
+					/>			
+			
+			
+					
+				
+
+					
+
+					<simpleemitter
+						bone="_bone_centerofchest"
+						life="400"
+						spawnrate="10"
+						particlelife="400"
+						minspeed="0"
+						maxspeed="3000"
+						drag="0.07"
+						offsetsphere="15"
+						material="/shared/effects/materials/refract_outsplash.material"
+					>
+						<particle
+							startalpha="1.0"
+							endalpha="0.0"
+							minangle="0"
+							maxangle="360"
+							anglespeed="-90"
+							startsize="120"
+							endsize="280"
+							param=".1"
+							depthbias="-130"
+						/>
+					</simpleemitter>
+				
+
+					<billboard
+						
+						bone="_bone_centerofchest"
+						life="200"
+						yaw="20"
+						startcolor=".5 1 1"
+						endcolor="0 0 0"
+						startalpha="1.0"
+						midalpha="1.0"
+						endalpha="0.0"
+						midalphapos="0.75"
+						startparam="0.05"
+						endparam="0.0"
+										
+						startsize="100"
+						midsize="200"
+						endsize="300"
+						midsizepos=".4"
+										
+						depthbias="0"
+						position="0 0 50"
+						material="/shared/effects/materials/frost_burst.material"
+						lockup="true"
+						pitch="90"
+					/>						
+
+					<billboard
+						bone="_bone_centerofchest"
+						life="500"
+						startcolor=".2 .5 1"
+						endcolor="0 0 0"
+						startalpha="1.0"
+						midalpha="1.0"
+						endalpha="0.0"
+						midalphapos="0.75"
+						startparam="0.05"
+						endparam="0.0"
+										
+						startsize="100"
+						midsize="130"
+						endsize="250"
+						midsizepos=".4"
+										
+						depthbias="0"
+						position="0 0 20"
+						material="/shared/effects/materials/smash_add.material"
+						lockup="true"
+						pitch="90"
+					/>	
+				</particle>
+			</simpleemitter>
+
+			
+			
+			<simpleemitter
+				delay="222"
+				minangle="-90"
+				maxangle="-90"
+				bone="_bone_centerofchest"
+				life="200"
+				spawnrate="650"
+				count="20"
+				minparticlelife="230"
+				maxparticlelife="1000"
+				speed="2000"
+				drag="0.05"
+				offsetsphere="5 5 5"
+				depthbias="-40"
+				material="/shared/effects/materials/neb_add.material"
+			>
+				<particle
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="-150"
+					maxanglespeed="150"
+					turn="1"
+					startcolor="1 1 .5"
+					midcolorpos="0.2"
+					midcolor=".2 .3 .5"
+					endcolor="0"
+					startsize="50"
+					startstickiness="0"
+					maxendstickiness="1"
+					minendscale="4"
+					maxendscale="6"
+					startalpha=".3"
+					midalpha="1"
+					midalphapos="0.1"
+					endalpha="0"
+				/>
+			</simpleemitter>			
+			
+			
+		
+			
+			
+			
+			
+			
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>  
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" /> 
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

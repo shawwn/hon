@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Pet_Engineer_Burstfire"
+	
+	icon="icon.tga"
+	
+	impactinterval="100"
+	ishidden="true"
+	
+	passiveeffect=""
+	effecttype=""
+>
+	<onimpact>
+		<condition test="accumulator eq 6">
+			<setaccumulator value="0" />
+		</condition>
+		<condition test="accumulator eq 5">
+			<playanim name="attack_1" target="this_owner_entity" />
+			<setpos0 position="this_owner_entity" offsetspace="this_owner_entity" offset="-200 750 0" />
+			<spawnprojectile name="Projectile_EngineerTurretAttackBurst" source="this_owner_entity" target="pos0" offset="0 0 70" proxy="this_owner_entity" />
+			<setaccumulator value="6" />
+		</condition>
+		<condition test="accumulator eq 4">
+			<playanim name="attack_1" target="this_owner_entity" />
+			<setpos0 position="this_owner_entity" offsetspace="this_owner_entity" offset="-120 775 0" />
+			<spawnprojectile name="Projectile_EngineerTurretAttackBurst" source="this_owner_entity" target="pos0" offset="0 0 70" proxy="this_owner_entity" />
+			<setaccumulator value="5" />
+		</condition>
+		<condition test="accumulator eq 3">
+			<playanim name="attack_1" target="this_owner_entity" />
+			<setpos0 position="this_owner_entity" offsetspace="this_owner_entity" offset="-40 800 0" />
+			<spawnprojectile name="Projectile_EngineerTurretAttackBurst" source="this_owner_entity" target="pos0" offset="0 0 70" proxy="this_owner_entity" />
+			<setaccumulator value="4" />
+		</condition>
+		<condition test="accumulator eq 2">
+			<playanim name="attack_1" target="this_owner_entity" />
+			<setpos0 position="this_owner_entity" offsetspace="this_owner_entity" offset="40 800 0" />
+			<spawnprojectile name="Projectile_EngineerTurretAttackBurst" source="this_owner_entity" target="pos0" offset="0 0 70" proxy="this_owner_entity" />
+			<setaccumulator value="3" />
+		</condition>
+		<condition test="accumulator eq 1">
+			<playanim name="attack_1" target="this_owner_entity" />
+			<setpos0 position="this_owner_entity" offsetspace="this_owner_entity" offset="120 775 0" />
+			<spawnprojectile name="Projectile_EngineerTurretAttackBurst" source="this_owner_entity" target="pos0" offset="0 0 70" proxy="this_owner_entity" />
+			<setaccumulator value="2" />
+		</condition>
+		<condition test="accumulator eq 0">
+			<playanim name="attack_1" target="this_owner_entity" />
+			<setpos0 position="this_owner_entity" offsetspace="this_owner_entity" offset="200 750 0" />
+			<spawnprojectile name="Projectile_EngineerTurretAttackBurst" source="this_owner_entity" target="pos0" offset="0 0 70" proxy="this_owner_entity" />
+			<setaccumulator value="1" />
+		</condition>
+	</onimpact>
+</state>

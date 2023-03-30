@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Hammerstorm_Ability3"
+
+	
+	
+	icon="icons/ability_3.tga"
+	passiveeffect="effects/ability_03/ability_03.effect"
+	displaylevel="true"
+	
+	armor="3,5,7,10"
+	movespeedmultiplier="0.14"
+	
+	effecttype="StatusBuff"
+>
+</state>

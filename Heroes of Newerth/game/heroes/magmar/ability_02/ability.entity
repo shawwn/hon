@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Magmar2"
+
+	icon="icon.tga"
+	
+	anim="ability_2"
+	casttime="0"
+	castactiontime="0"
+	channeltime="20000,40000,60000,80000"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+	targetradius="300,350,400,550"
+	casteffect="effects/cast.effect"
+	
+	actiontype="target_self"
+	targetscheme="nonneutral_enemy_units"
+	ischanneling="true"
+	
+	manacost="60,50,40,30"
+	cooldowntime="40000,30000,20000,10000"
+>
+	<onchannelstart>
+		<disjoint target="source_entity" />
+		<applystate name="State_Magmar_Ability2_Aura" target="source_entity" ischannel="true"/>
+		<spawnaffector name="Affector_Magmar_Ability2" target="source_entity" ischannel="true"/>
+	</onchannelstart>
+	<onimpact />
+</ability>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Moraxus2"
+
+	icon="icon.tga"
+	
+	anim="ability_2"
+	casttime="0"
+	castactiontime="0"
+	statuseffecttooltip="State_Moraxus_Ability2_Buff"
+	passiveeffect="effects/original_state.effect"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+	frontqueue="true"
+
+	actiontype="target_self"
+	casteffect=""
+	
+	manacost="50"
+	cooldowntime="30000,25000,20000,15000"
+	
+	armor="2,4,6,8"
+>
+	<onimpact>
+		<applystate name="State_Moraxus_Ability2" target="source_entity" duration="2000" />
+	</onimpact>
+</ability>

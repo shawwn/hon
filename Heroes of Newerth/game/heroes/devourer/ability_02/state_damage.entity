@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Devourer_Ability2_Damage"
+
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+	ishidden="true"
+	
+	effecttype="StatusDebuff"
+>
+	<onframe>
+		<damage effecttype="Magic DOT Interrupting" amount="25,50,75,100" b="frametime" op="mult"/>
+	</onframe>
+</state>

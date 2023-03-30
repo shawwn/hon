@@ -1,0 +1,6 @@
+Cleave has the AoE of a circle, where the attacking unit is on the perimeter of the circle, and the center of the circle is collinear with the attacking unit and the attacked unit, in the direction such that the center of the circle located such that the unit vector of the vector pointing from the center of the circle to the attacked unit is equal to the unit vector of the vector pointing to the attacking unit.
+
+Cleave damage is the same damage type as its source. The damage that is considred here is Primary Damage in its final phase. It carries the subtype SPLASH.
+
+
+This subtype is used to tell the damage function, not to trigger certain effects, like lifestealing off of cleaved damage for example. It may have applications in spells in the future as well, unclear right now

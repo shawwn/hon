@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Armadon_Ability2"
+
+	speed="2700"
+	gravity="2500"
+
+	modelscale=".4"
+	model="effects/spine_proj.mdf"
+
+	impacteffect="effects/impact.effect"
+>
+	<onimpact>
+		<applystate name="State_Armadon_Ability2" target="target_entity" duration="13000" />
+	</onimpact>
+</projectile>

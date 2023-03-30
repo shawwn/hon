@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<material>
+	<parameters vDiffuseColor="1.0000 1.0000 1.0000" fSpecularLevel="1.0000" fGlossiness="60" fOpacity="1.0000" fReflect="1.0000" />
+	<phase name="shadow" vs="mesh_shadow_opacity" ps="mesh_shadow_opacity" srcblend="BLEND_ONE" dstblend="BLEND_ZERO" translucent="false" cull="CULL_BACK" alphatest="true">
+		<sampler name="opacity" texture="color.tga" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="1.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false" filtering="true" border="false" />
+	</phase>	
+	<phase name="depth" vs="mesh_depth" ps="mesh_depth" srcblend="BLEND_ONE" dstblend="BLEND_ZERO" translucent="false" cull="CULL_BACK" />
+	<phase name="color" vs="mesh_color" ps="mesh_color" srcblend="BLEND_ONE" dstblend="BLEND_ZERO" translucent="false" cull="CULL_BACK" layer="0">
+		<sampler name="diffuse" texture="color.tga" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="1.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false" filtering="true" border="false" />
+		<sampler name="normalmap" texture="normal.tga" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="1.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false" filtering="true" border="false" />
+	</phase>
+	<phase name="fade" vs="mesh_depth_opacity" ps="mesh_depth_opacity" srcblend="BLEND_ONE" dstblend="BLEND_ZERO" translucent="true" cull="CULL_BACK" alphatest="true" layer="2" colorwrite="false" alphawrite="false" depthwrite="true">		
+		<multipass vs="mesh_color" ps="mesh_color" srcblend="BLEND_SRC_ALPHA" dstblend="BLEND_ONE_MINUS_SRC_ALPHA" translucent="true" cull="CULL_BACK" alphatest="false" layer="0" >
+			<sampler name="diffuse" texture="color.tga" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="1.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false" filtering="true" border="false" />
+			<sampler name="normalmap" texture="normal.tga" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="1.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false" filtering="true" border="false" />			
+		</multipass>
+	</phase>
+</material>

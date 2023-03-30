@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Bubbles_Ability1"
+	
+	icon=""
+	portrait=""
+	
+	model="effects/model.mdf"
+	passiveeffect="effects/wake.effect"
+	preglobalscale="1.4"
+	modelscale="1.0"
+	effectscale="1.0"
+	boundsheight="0"
+	boundsradius="0"
+	isselectable="false"
+	selectionradius="0"
+	targetoffset="0 0 0"
+
+	canrotate="true"
+	ismobile="false"
+
+	attacktype="none"
+	combattype="Ranged"
+
+	sightrangeday="800"
+	sightrangenight="800"
+	unitwalking="true"
+	canattack="false"
+	deathtime="0"
+	corpsetime="0"
+	
+	invulnerable="true"
+	flying="false"
+	drawonmap="false"
+	clearvision="true"
+
+>
+	<ondeath>
+		<expirestate name="State_Bubbles_Ability1" target="this_owner_entity"/>
+		<spawnunit name="Gadget_Bubbles_Ability1_Linger" count="1" target="this_position" />
+	</ondeath>
+</gadget>

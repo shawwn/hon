@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resourcelist>
+	<fontface file="/fonts/system.ttf">
+		<fontmap name="system" size="12" />
+		<fontmap name="system_tiny" size="8" />
+		<fontmap name="system_small" size="10" />
+		<fontmap name="system_medium" size="12" />
+		<fontmap name="system_medium_italic" size="12" style="italic" />
+		<fontmap name="system_medium_bold" size="12" style="bold" />
+		<fontmap name="system_large" size="22" />
+	</fontface>
+	
+	<cursor name="cursor" file="/core/cursors/arrow.cursor" />
+
+	<texture name="alphagrad" file="$alphagrad" />
+	<texture name="logo" file="/textures/logo.tga" />
+	<texture name="console_background" file="/textures/console_blank.tga" />
+</resourcelist>
+

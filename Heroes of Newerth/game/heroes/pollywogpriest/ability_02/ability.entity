@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_PollywogPriest2"
+
+	statuseffecttooltip="State_PollywogPriest_Ability2"
+	icon="../icons/ability_2.tga"
+	
+	anim="ability_2"
+	casttime="1000"
+	castactiontime="0"
+	casteffect="effects/cast.effect"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_entity"
+	targetscheme="enemy_units"
+	casteffecttype="Magic"
+	
+	manacost="110,140,170,200"
+	cooldowntime="13000"
+	
+	range="500"
+>
+	<onimpact>
+		<killillusions />
+		<dispel type="StatusStealth" />
+		<playeffect effect="effects/impact.effect" source="target_entity" target="" />
+		<applystate name="State_PollywogPriest_Ability2" duration="1250,2000,2750,3500" />
+	</onimpact>
+</ability>

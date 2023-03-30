@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world">
+			
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="1800"
+				volume="0.5" 
+				sample="../sounds/cast.wav"
+			/>
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="1800"
+				volume="0.2" 
+				sample="/heroes/rocky/ability_01/sounds/ability_01_impact_%.wav"
+			/>
+
+			<terrainemitter
+				timenudge="1000"
+				life="2500"
+				spawnrate="25"
+				count="20"
+				particlelife="2500"
+				range="600"
+				minangle="-30"
+				maxangle="30"
+				collide="true"
+			>
+				<particle 
+					turn="true"
+					minscale=".4"
+					maxscale="1" 
+				>
+					<groundsprite
+						life="3500"
+						startalpha=".3"
+						midalpha=".5"
+						midalphapos=".9"	
+						endalpha="0"
+						material="/shared/effects/materials/earth_cracks_reveal.material"
+						size="200"
+						startframe="1"
+						midframepos=".1"
+						endframe="0.1"
+						maxyaw="360"
+					/>
+
+					<groundsprite
+						life="3500"
+						startalpha=".3"
+						midalpha=".5"
+						midalphapos=".9"	
+						endalpha="0"
+						material="/shared/effects/materials/earth_cracks_reveal.material"
+						size="200"
+						startframe="1"
+						midframepos=".1"
+						endframe="0.1"
+						maxyaw="360"
+					/>
+				</particle>
+				<particle 
+					minscale=".5"
+					maxscale="1.5" 
+				>
+					<groundsprite
+						life="3500"
+						startalpha=".4"
+						midalpha=".6"
+						midalphapos=".9"	
+						endalpha="0"
+						material="/shared/effects/materials/earth_cracks_reveal.material"
+						size="200"
+						startframe="1"
+						midframepos=".4"
+						endframe="0"
+						maxyaw="360"
+					/>
+				</particle>
+			</terrainemitter>
+			
+			<terrainemitter
+				position="0 0 10"
+				spawnrate="200"
+				count="20"
+				particlelife="1500"
+				range="650"
+				direction="0 1 0.1"
+				minangle="-30"
+				maxangle="30"
+			>
+				<particle
+					turn="true"
+				>
+					<model
+						name="roots"
+						model="model.mdf"
+						anim="idle"
+						expirelife="3000"
+						minscale="1.25"
+						maxscale="1.75"
+						directionalspace="local"
+						minyaw="-360"
+						maxyaw="360"
+						startalpha="1"
+						endalpha="0"
+					>
+					<simpleemitter
+						count="1"
+						minparticlelife="700"
+						maxparticlelife="3500"
+						expirelife="3500"
+						maxspeed="10"
+						drag="0"
+						angle="30"
+						depthbias="-70"
+						material="/shared/effects/materials/pyroclast_02.material"
+						offsetsphere="15 15 15"
+					>
+						<particle
+							minangle="-360"
+							maxangle="360"
+							color=".3"
+							minanglespeed="-20"
+							maxanglespeed="20"
+							size="95"
+							minendscale="2"
+							maxendscale="4"
+							startalpha=".75"
+							endalpha="0"
+						/> 
+						<particle
+							minangle="-360"
+							maxangle="360"
+							color=".2"
+							minanglespeed="-20"
+							maxanglespeed="20"
+							size="105"
+							minendscale="2"
+							maxendscale="4"
+							startalpha=".75"
+							endalpha="0"
+						/> 
+					</simpleemitter>
+					</model>
+				
+				</particle>
+				
+			</terrainemitter>
+
+			<terrainemitter
+				position="0 0 10"
+				spawnrate="200"
+				count="50"
+				particlelife="2500"
+				range="650"
+				direction="0 1 0.1"
+				minangle="-30"
+				maxangle="30"
+			>
+				<particle
+				>
+					<simpleemitter
+						timenudge="2500"
+						count="11"
+						minparticlelife="1750"
+						maxparticlelife="2500"
+						expirelife="3500"
+						depthbias="-20"
+						speed="0"
+						drag=".160"
+						maxangle="10"
+						material="/shared/effects/materials/leaves.material"
+						offsetsphere="45 45 55"
+					>
+						<particle
+							minangle="-360"
+							maxangle="360"
+							color="0.6 .6 0.6"
+							startsize="20"
+							endsize="25"
+							midsizepos=".2"
+							maxpitch="45"							
+							startalpha=".8"
+							midalpha=".8"
+							endalpha="0"
+							midalphapos=".65"
+						/> 
+						<particle
+							minangle="-360"
+							maxangle="360"
+							color="0.3 .6 0.4"
+							startsize="30"
+							endsize="40"
+							midsizepos=".2"
+							maxpitch="15"							
+							startalpha=".8"
+							midalpha=".8"
+							endalpha="0"
+							midalphapos=".65"
+						/> 
+						<particle
+							minangle="-360"
+							maxangle="360"
+							color="0.4 .4 0.1"
+							startsize="2"
+							endsize="30"
+							midsizepos=".2"
+							maxpitch="35"							
+							startalpha="1"
+							midalpha="1"
+							endalpha="0"
+							midalphapos=".65"
+						/> 
+					</simpleemitter>
+
+					<simpleemitter
+						count="2"
+						minparticlelife="1000"
+						maxparticlelife="3500"
+						expirelife="3500"
+						speed="20"
+						drag="0"
+						angle="30"
+						depthbias="-40"
+						material="/shared/effects/materials/cherry_blossom.material"
+						offsetsphere="15 15 15"
+					>
+						<particle
+							minangle="0"
+							maxangle="360"
+							minanglespeed="25"
+							maxanglespeed="75"
+							color="1 .9 .5"
+							size="6"
+							minendscale="2"
+							maxendscale="4"
+							startalpha="1"
+							endalpha="0"
+						/> 
+						<particle
+							minangle="0"
+							maxangle="360"
+							minanglespeed="25"
+							maxanglespeed="75"
+							color="1 .6 .25"
+							size="6"
+							minendscale="2"
+							maxendscale="4"
+							startalpha="1"
+							endalpha="0"
+						/>
+						<particle
+							minangle="0"
+							maxangle="360"
+							minanglespeed="25"
+							maxanglespeed="75"
+							color="1 1 1"
+							size="6"
+							minendscale="2"
+							maxendscale="4"
+							startalpha="1"
+							endalpha="0"
+						/>
+						
+						
+					</simpleemitter>
+					
+					<simpleemitter
+						count="3"
+						minparticlelife="1000"
+						maxparticlelife="3500"
+						expirelife="3500"
+						speed="20"
+						drag="0"
+						angle="30"
+						depthbias="-40"
+						material="/shared/effects/materials/leaf_01.material"
+						offsetsphere="15 15 15"
+					>
+						<particle
+							minangle="0"
+							maxangle="360"
+							minanglespeed="0"
+							maxanglespeed="100"
+							color="0 .5 0"
+							size="8"
+							minendscale="4"
+							maxendscale="8"
+							startalpha="1"
+							endalpha="0"
+						/> 
+					</simpleemitter>
+				
+				</particle>
+				
+			</terrainemitter>
+
+			<terrainemitter
+				timenudge="1000"
+				position="0 0 10"
+				material="/shared/effects/materials/grass.material"
+				spawnrate="100"
+				count="200"
+				range="700"
+				direction="0 0 1"
+				minangle="-30"
+				maxangle="30"
+				particlelife="3250"
+			>
+				<particle
+					minyaw="0"
+					maxyaw="360"
+					lockright="0"
+					lockup="0"
+					color=".5 1 .5"
+					startsize="0"
+					midsize="50"
+					minendsize="150"
+					maxendsize="175"
+					midsizepos=".11"
+					flare="true"
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".75"
+				/>
+			</terrainemitter>
+
+			
+			<!-- halloween-->
+			<!--
+			<terrainemitter
+				position="0 0 10"
+				spawnrate="200"
+				count="20"
+				particlelife="1500"
+				range="650"
+				direction="0 1 0.1"
+				minangle="-30"
+				maxangle="30"
+			>
+				<particle
+					turn="true"
+				>
+					<model
+						name="pumpkins"
+						model="/world/props/halloween_props/pumpkinnormal.mdf"
+						anim="idle"
+						expirelife="3000"
+						minscale="1"
+						maxscale="1.75"
+						directionalspace="local"
+						minyaw="-360"
+						maxyaw="360"
+						startalpha="1"
+						endalpha="0"
+					>
+					
+					</model>
+				
+				</particle>
+				
+			</terrainemitter>-->
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		
+	</thread> 
+
+</effect>

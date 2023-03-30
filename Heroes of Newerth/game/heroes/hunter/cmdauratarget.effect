@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect>
+	<definitions>
+		<particlesystem name="system0" space="entity" scale=".5">
+
+			<model
+				parentmodel="true"
+				parentskeleton="true"
+				color="0 .5 1"
+				material="/shared/effects/materials/shell.material"
+				scale="1"
+			/>
+
+			
+		
+			<billboard
+				life="500"
+				startalpha=".5"
+				midalpha="1"
+				endalpha=".5"
+				bone="_bone_centerofchest"
+				color="0 .4 .7"
+				width="200"
+				height="200"
+				material="/shared/effects/materials/glow_01.material"
+				loop="true"
+				depthbias="-50"
+				position="0 -5 0"
+			/>
+			
+		
+		</particlesystem>
+		
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+

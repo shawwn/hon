@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Pestilence3"
+
+	
+	
+	icon="icon.tga"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	cooldowntime="2000"
+	cooldowntype="bashing"
+	actiontype="passive"
+>
+	<onattackstart>
+		<canactivate>
+			<cantarget targetscheme="enemy_units" effecttype="Physical">
+				<chance threshold="0.10,0.15,0.20,0.25">
+					<condition test="target_type hero">
+						<addattackimpactactions>
+							<applystate name="State_Stunned" duration="1000" />
+						</addattackimpactactions>
+					</condition>
+					<condition test="not_target_type hero">
+						<addattackimpactactions>
+							<applystate name="State_Stunned" duration="2000" />
+						</addattackimpactactions>
+					</condition>
+					<addattackimpactactions>
+						<damage effecttype="Magic" amount="40,50,60,70" />
+						<playeffect effect="effects/gore.effect" target="target_entity" source="source_entity"/>
+						<startcooldown />
+					</addattackimpactactions>
+					<playanim name="ability_3" speed="source_attackspeed" target="source_entity" />
+				</chance>
+			</cantarget>
+		</canactivate>
+	</onattackstart>
+
+	<onattackimpact />
+</ability>

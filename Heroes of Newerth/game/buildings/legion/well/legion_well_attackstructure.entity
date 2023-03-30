@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<building
+	name="Building_LegionWell_Attack"
+	
+	
+	
+	icon=""
+	portrait=""
+	model="/core/null/invis.mdf"
+	skin=""
+	
+	passiveeffect=""
+	destroyedsound=""
+	lowhealtheffect=""
+	lowhealthsound=""
+	selectsound=""
+	isselectable="false"
+	
+	preglobalscale="1"
+	modelscale="1.0"
+	effectscale="1.8"
+	boundsheight="0"
+	boundsradius="0"
+	selectionradius="0"
+	targetoffset="0 0 0"
+
+	maxhealth="0"
+	healthregen="0"
+
+	armor="0"
+	magicarmor="0"
+
+	canattack="true"
+	
+	attackduration="150"
+	attackactiontime="50"
+	attackcooldown="0"
+	attackdamagemin="190"
+	attackdamagemax="199"
+	attacknumanims="1"
+	attackoffset="0 0 230"
+	attackprojectile="Projectile_well"
+	attackrange="800"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect=""
+	attacktype="ranged"	
+	combattype="Structure"
+
+	aggrorange="800"
+	sightrangeday="900"
+	sightrangenight="600"
+	drawonmap="false"
+	revealrange="900"
+	revealtype="tower"
+	
+	isshop="false"
+	invulnerable="true"
+	unittype="Well"
+>
+
+</building>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_CorruptedDisciple2"
+
+	icon="icon.tga"
+	statuseffecttooltip="State_CorruptedDisciple_Ability2_Enemy"
+	statuseffecttooltip2="State_CorruptedDisciple_Ability2_Self"
+
+	anim="ability_2"
+	casttime="1000"
+	castactiontime="500"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_entity"
+	targetscheme="enemy_heroes"
+	casteffecttype="Magic"
+	
+	manacost="20,30,40,50"
+	cooldowntime="45000,40000,35000,30000"
+	
+	range="600"
+>
+	<onimpact>
+		<applystate name="State_CorruptedDisciple_Ability2_Self" target="source_entity" continuous="true" pushentity="true" />
+		<setproxy entity="this_entity" target="stack_entity" />
+		<applystate name="State_CorruptedDisciple_Ability2_Enemy" target="target_entity"  continuous="true" proxy="stack_entity" pushentity="true" />
+		<setproxy entity="this_proxy_entity" target="stack_entity" />
+	</onimpact>
+	
+	<onframe>
+	</onframe>
+</ability>

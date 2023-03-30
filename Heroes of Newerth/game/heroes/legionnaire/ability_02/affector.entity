@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Legionnaire_Ability2"
+
+	radius="240"
+	arc="110"
+	
+	maximpactspertarget="1"
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype=""
+>
+	<onimpact>
+		<combatevent effecttype="AbilityBasedProjectile">
+			<onimpact>
+				<applystate name="State_Legionnaire_Ability2_Terrify" target="target_entity" duration="4000,5000,6000,7000" />
+				<damage target="target_entity" effecttype="Physical" amount="1" b="source_attackdamage" op="mult" />
+			</onimpact>
+		</combatevent>
+	</onimpact>
+	
+	<onexpired>
+		<expirestate name="State_Legionnaire_Ability2_Self" target="source_entity" />
+	</onexpired>
+</affector>

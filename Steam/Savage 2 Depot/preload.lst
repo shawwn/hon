@@ -1,0 +1,14 @@
+#
+# This is the default master resource list which Steam uses to load
+# resources into your cache file when your application is not running.
+# You can add resources, or references to other reslists, in this file.
+#
+# Format:
+#     <file name>                     Specifies an entire file for loading.
+#     <file name> <offset> <length>   Specifies part of a file for loading.
+#    @<file name>                     Specifies a reslist to open and load.
+#
+# This file has been initially created in a default location.  You may
+# move it to any location that you like, however it must always be called
+# 'reslists\preload.lst' in your depot.
+#

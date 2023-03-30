@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Ebulus_Ability4"
+
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+	
+	effecttype=""
+>
+	<onframe>
+		<damage effecttype="Magic DOT" amount="36,58,81" b="frametime" op="mult" nonlethal="true" />
+	</onframe>
+	
+	<modifier key="ult_boost" modpriority="100">
+		<onframe>
+			<damage effecttype="Magic DOT" amount="58,81,108" b="frametime" op="mult" nonlethal="true" />
+		</onframe>
+	</modifier>
+</state>

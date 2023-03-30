@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" name="orb" useentityeffectscale="1">
+	<definitions>
+	
+
+
+		<particlesystem name="system0" space="world" scale="1.3">
+	
+		<model		
+			life="800"
+			minyaw="0"
+			maxyaw="100"			
+			
+			
+			color="0.5 0.5 0.5"
+			startalpha=".3"
+			midalpha=".8"
+			endalpha="0"
+			midcolorpos=".7"
+			
+			position="0 0 120"			
+			model="soul.mdf"
+			
+			anim="idle"							
+			scale="0.9">		
+		</model>	
+
+	
+		<billboard
+			delay="350"
+			life="300"
+			position="0 0 350"
+			material="/shared/effects/materials/flare2.material"
+			startheight="000"
+			midheight="1500"
+			endheight="1500"
+			midheightpos=".75"
+			width="7"
+			lockup="1"
+			startcolor=".1 .1 .1"
+			endcolor=".1 .1 .0"			
+			midcolorpos=".9"
+		/>		
+	
+		<billboard
+			delay="450"
+			life="300"
+			position="0 0 350"
+			material="/shared/effects/materials/flare2.material"
+			startheight="1500"
+			midheight="1500"
+			endheight="1500"
+			midheightpos=".75"
+			width="20"
+			lockup="1"
+			startcolor="0 .2 .32"
+			endcolor="0 0 0"			
+			midcolorpos=".5"
+		/>	
+		
+		
+
+			
+			
+			<billboard
+				delay="400"
+				life="500"
+				startcolor=".5 .3 0"	
+				endcolor="0 0 0"
+				midalphapos="0.75"
+				startparam="0.05"
+				endparam="0.0"	
+				
+				startsize="000"
+				
+				endsize="180"
+				midsizepos=".4"
+					
+				depthbias="0"
+				position="0 0 50"
+				material="/shared/effects/materials/corona_07.material"
+				lockup="true"
+				pitch="90"
+			/>				
+
+			<billboard
+				delay="500"
+				life="500"
+				startcolor=".0 .5 .8"	
+				endcolor="0 0 0"
+				midalphapos="0.75"
+				startparam="0.05"
+				endparam="0.0"	
+				
+				startsize="000"
+				
+				endsize="150"
+				midsizepos=".4"
+					
+				depthbias="0"
+				position="0 0 50"
+				material="/shared/effects/materials/corona_06.material"
+				lockup="true"
+				pitch="90"
+			/>					
+
+			<billboard
+				delay="400"
+				life="400"
+				color="1.0 1.0 1.0"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="0.0"
+				midalphapos="0.75"
+				startparam=".025"
+				endparam="0.0"
+				startsize="20"
+				endsize="150"
+				depthbias="-20"
+				position="0 0 60"
+				material="/shared/effects/materials/refract_ring.material"
+				lockup="true"
+				pitch="90"
+			/>		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<simpleemitter
+				
+				count="1"
+				spawnrate="1333"				
+				particlelife="800"								
+												
+				direction="0 0 -1"
+				minangle="0"
+				maxangle="0"
+				speed="2400"
+				position="0 0 1240"
+			>
+				<particle 					
+			
+				>				
+				
+					<model		
+						life="800"
+						color="1 1 1"						
+						position="0 0 0"
+						pitch="90"
+						model="../../projectile/effects/spear.mdf"											
+						scale=".5"
+					>		
+						<trailemitter
+							bone="_bone_weapon3"
+							spawnrate="20"
+							particlelife="800"
+							texpostime="800"
+							texposscale="0.0"
+							texstretchscale=".4"
+							position="0 60 0"
+							material="/shared/effects/materials/arrow_trail.material"
+						>
+							<particle
+								 startcolor=".25 .25 0"
+								 midcolor="0.051 0.2 0.4"
+								 endcolor="0 0 0"
+								 startsize="10"
+								 midsize="60"
+								 endsize="24"
+								 midsizepos="0.2"
+						 />
+						</trailemitter>	
+
+						<trailemitter
+							bone="_bone_weapon2"
+							spawnrate="50"
+							particlelife="800"
+							texpostime="800"
+							texposscale="0.0"
+							texstretchscale=".4"
+							position="0 60 0"
+							material="/shared/effects/materials/arrow_trail.material"
+						>
+							<particle
+								 startcolor=".25 .25 0"
+								 midcolor="0.051 0.2 0.4"
+								 endcolor="0 0 0"
+								 startsize="10"
+								 midsize="60"
+								 endsize="25"
+								 midsizepos="0.2"
+						 />
+						</trailemitter>	
+					</model>	
+
+				</particle>
+			</simpleemitter>			
+			
+			
+			
+			
+	
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	<!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

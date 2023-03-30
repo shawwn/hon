@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Devourer2"
+
+	icon="icon.tga"
+	
+	maxlevel="8"
+	requiredlevel="1,3,5,7,9,11,13,15"
+
+	actiontype="passive"
+	
+	modifierkey="Devourer_Distance1,Devourer_Distance2,Devourer_Distance3,Devourer_Distance4,Devourer_Distance5,Devourer_Distance6,Devourer_Distance7,Devourer_Distance8"
+>
+
+</ability>

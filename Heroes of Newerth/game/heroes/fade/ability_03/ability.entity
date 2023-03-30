@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Fade3"
+
+	icon="icon_b.tga"
+	passiveeffect="effects/state_scythe.effect"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="no_target"
+	frontqueue="true"
+	inheritmovement="true"
+	casttime="0"
+	castactiontime="0"
+	cooldowntime="0"
+	cooldowntype="fadeabilitythreetoggle"
+	noresponse="true"
+	
+	maxcharges="1,2,3,4"
+	initialcharges="1,2,3,4"
+>
+	<onlearn>
+		<setcharges a="2" />
+		<applystate name="State_Fade_Ability3_Charges" target="source_entity" continuous="true" proxy="this_entity" />
+	</onlearn>
+	
+	<onupgrade>
+		<addcharges count="1" />
+	</onupgrade>
+	
+	<ondeath>
+		<setcharges a="1,2,3,4" />
+	</ondeath>
+	
+	<onimpact>
+		<applystate name="State_Fade_Ability3" target="source_entity" continuous="true" pushentity="true" />
+		<setproxy entity="this_entity" target="stack_entity" />
+	</onimpact>
+
+	<onattackeddamageevent>
+		<condition test="target_type player_controlled">
+			<evaluate a="charges" b="40" op="mult" />
+			<setvar0 a="result" />
+			<condition test="damage_attempted gt 25">
+				<hasmodifier name="fadeshadowmode">
+					<damageeffecttype effecttype="Magic">
+						<condition test="damage_attempted gt var0">
+							<playeffect effect="effects/feedback.effect" source="source_entity" target="source_entity" />
+							<setvalue name="damage_attempted" a="damage_attempted" b="var0" op="sub" />
+							<setcharges a="0" />
+						</condition>
+						<else>
+							<playeffect effect="effects/feedback.effect" source="source_entity" target="source_entity" />
+							<setvar1 a="var0" b="damage_attempted" op="sub" />
+							<setvar1 a="var1" b="50" op="div" />
+							<setcharges a="var1" />
+							<setvalue name="damage_attempted" a="damage_attempted" b="0" op="mult" />
+						</else>					
+					</damageeffecttype>
+				</hasmodifier>
+				<else>
+					<damageeffecttype effecttype="Physical">
+						<condition test="damage_attempted gt var0">
+							<playeffect effect="effects/feedback.effect" source="source_entity" target="source_entity" />
+							<setvalue name="damage_attempted" a="damage_attempted" b="var0" op="sub" />
+							<setcharges a="0" />
+						</condition>
+						<else>
+							<playeffect effect="effects/feedback.effect" source="source_entity" target="source_entity" />
+							<setvar1 a="var0" b="damage_attempted" op="sub" />
+							<setvar1 a="var1" b="50" op="div" />
+							<setcharges a="var1" />
+							<setvalue name="damage_attempted" a="damage_attempted" b="0" op="mult" />
+						</else>					
+					</damageeffecttype>
+				</else>
+			</condition>
+		</condition>
+	</onattackeddamageevent>	
+	
+	<modifier key="fadeshadowmode" modpriority="100"
+		displayname="true"
+		icon="icon.tga"
+		passiveeffect="effects/state.effect"
+	>
+		<onimpact>
+			<expire entity="proxy_entity" />
+		</onimpact>
+	</modifier>
+	
+	<modifier key="fadeabilityonecooldown" modpriority="100"
+		disabled="true"
+	>
+		<onframe>
+		</onframe>
+	</modifier>
+	
+	<modifier key="fadeabilitytwocooldown" modpriority="100"
+		disabled="true"
+	>
+	</modifier>
+</ability>

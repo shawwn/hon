@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1" useentityeffectscale="1">
+	<definitions>
+
+		
+		
+		<particlesystem name="system0" space="world" scale="1.0" >
+
+	
+		<model
+			bone="_bone_head"
+			
+			
+			expirelife="1000"
+			position="0 3 -0" 
+			model="/npcs/kongor/effects/hat.mdf"			
+			startscale="0.50"			
+			color="1 1 1"
+			directionalspace="local"			
+		
+		>
+
+		</model>
+		
+
+
+		
+
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

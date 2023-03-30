@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="true">
+	<definitions>
+
+		<modifier
+			name="modifier0"
+			delay="200"
+			life="800"
+			startcolor="6 3 1"
+			endcolor="1.0 1.0 1.0"
+		/>
+		
+		<particlesystem name="system0" space="entity" useentityeffectscale="true" scale="0.4">
+
+			<simpleemitter
+				life="400"
+	         		bone="Bip01 Spine1"			
+				directionalspace="global"
+				position="0 0 5"				
+				spawnrate="5000"
+				depthbias="-100"
+				maxparticlelife="500"
+				offsetsphere="0"
+				count="20"
+				direction="0 0 1"	
+          			material="/shared/effects/materials/smash_add.material"
+         	>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="0"
+					midcolor="1 0.3 0"
+					endcolor="0"
+					midcolorpos="0.25"
+					startsize="40"
+					endsize="75"
+					startanchor="1.0"
+					midanchor="0.9"
+					endanchor="0.8"
+					flare="1"
+					startheight="50"
+					endheight="100"
+				
+				/>
+			</simpleemitter>
+
+			<billboard
+				bone="_bone_centerofchest"
+				life="300"
+				startcolor="1 .3 0"
+				endcolor="0"
+				startsize="120"
+				endsize="260"
+				depthbias="-100"
+				material="/shared/effects/materials/stomp_01.material"
+			/>
+
+			<billboard
+				bone="_bone_centerofchest"
+				life="300"
+				startcolor="1 .1 0"
+				endcolor="0"
+				startsize="120"
+				endsize="260"
+				depthbias="-100"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+
+					<billboard
+						bone="_bone_centerofchest"
+						life="400"
+						param="0.01"	
+						startsize="160"
+						endsize="250"
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"				
+						depthbias="0"
+						material="/shared/effects/materials/refract_pinch.material"
+						lockup="0"
+						pitch="0"
+					/>		
+			
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0"  particlesystem="system0" />	
+	  <spawnmodifier instance="instance1" modifier="modifier0"/>  
+	  <waitfordeath instance="instance0" />
+	  <waitfordeath instance="instance1" />	  
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

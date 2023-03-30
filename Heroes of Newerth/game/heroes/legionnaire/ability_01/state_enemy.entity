@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Legionnaire_Ability1_Enemy"
+
+	
+	
+	icon="icon.tga"
+	silenced="true"
+	perplexed="true"
+
+	passiveeffect="effects/state.effect"
+	
+>
+
+</state>

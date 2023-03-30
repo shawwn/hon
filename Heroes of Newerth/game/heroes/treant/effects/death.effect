@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" deferred="true" persistent="true">
+	<definitions>
+
+		<modifier
+			life="7500"
+			name="modifier0"
+			startcolor=".75"
+			midcolor="1 1 1"
+			endcolor="1 1 1"
+			midcolorpos=".25"
+			startalpha="1"
+			midalpha="1"
+			endalpha="0"
+			midalphapos=".25"
+		/>		
+	
+		<particlesystem name="system0" space="world" scale=".75">
+		
+			<model
+				delay="1500"
+				life="4000"
+				model="vine.mdf"
+				anim="idle"
+				scale="1.35"
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="1 1 1"
+				startalpha="0"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".6"
+				expirelife="500"
+			>
+			</model>
+
+			<terrainemitter
+				timenudge="500"
+				position="0 0 0"
+				offsetsphere="150 150 0"
+				material="/shared/effects/materials/grass.material"
+				spawnrate="500"
+				count="100"
+				range="75"
+				direction="0 0 1"
+				minangle="-30"
+				maxangle="30"
+				particlelife="12500"
+			>
+				<particle
+					minyaw="0"
+					maxyaw="360"
+					minroll="-10"
+					maxroll="10"
+					lockright="true"
+					lockup="true"
+					color="2.5 5 0"
+					startsize="0"
+					midsize="50"
+					endsize="50"
+					midsizepos=".3"
+					flare="true"
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+				/>
+			</terrainemitter>
+		
+			<terrainemitter
+				timenudge="1250"
+				life="2500"
+				spawnrate="4"
+				expirelife="600"
+				gravity="0"
+				range="80"
+				position="0 0 0"
+				offsetsphere="75 75 0"
+			>
+				<particle>
+					<model
+						life="7500"
+						color=".5 0 1"
+						model="/heroes/fairy/effects/model.mdf"
+						anim="default_3"
+						loop="false"
+						startscale=".65"
+						endscale=".75"
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".25"
+					/>
+				</particle>
+			</terrainemitter>
+<!--
+			<simpleemitter
+				position="0 0 0"
+				life="500"
+				spawnrate="25"
+				speed="20"
+				drag="0.25"
+				direction="0 0 1"
+				minparticlelife="1000"
+				maxparticlelife="1500"
+				offsetsphere="50 50 0"
+				count="15"
+				depthbias="-100"
+				gravity="-15"
+				material="/shared/effects/materials/dust_smoke_10.material"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor=".5 .5 .5"
+					endcolor=".65 .65 .65"
+					startalpha="0"
+					midalpha=".2"
+					endalpha="0"
+					midalphapos=".2"
+					startsize="100"
+					endsize="200"
+				/>
+			</simpleemitter>
+-->
+			<simpleemitter
+				bone="_bone_center"
+				count="30"
+				minparticlelife="600"
+				maxparticlelife="800"							
+				spawnrate="40"
+				speed="50"
+				gravity="-5"
+				drag="0"
+				position="0 0 0"
+				material="/shared/effects/materials/leaf_01.material"
+				offsetsphere="50 50 0"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					startcolor=".5 .25 .1"
+					midcolor=".25 .25 .1"
+					endcolor=".25 .25 .1"
+					midcolorpos=".5"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".4"
+					startsize="30"
+					endsize="15"					
+					mindsizepos=".1"
+				/>
+				<particle
+					minangle="0"
+					maxangle="360"
+					startcolor=".5 .25 0"
+					midcolor=".5 .25 0"
+					endcolor=".5 .25 0"
+					midcolorpos=".5"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".4"
+					startsize="30"
+					endsize="15"					
+					mindsizepos=".1"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				position="0 0 75"
+				life="500"
+				spawnrate="100"
+				particlelife="1250"
+				gravity=".5"
+				speed="150"
+				drag="0.1"
+				acceleration="0.0"
+				material="/shared/effects/materials/leaf_01.material"
+				offsetsphere="50 50 0"
+				direction="0 0 0"
+				minangle="-180"
+				maxangle="180"
+				directionalspace="global"
+				collide="true"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					anglespeed="20"
+					minsize="15"
+					maxsize="25"
+					lockup="true"
+					lockright="true"
+					pitch="90"
+					startcolor="1 .25 0"
+					midcolor="1 .25 0"
+					endcolor="1 .5 0"
+					midcolorpos=".15"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".5"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				position="0 0 75"
+				life="500"
+				spawnrate="50"
+				particlelife="1250"
+				gravity=".5"
+				speed="150"
+				drag="0.1"
+				acceleration="0.0"
+				material="/shared/effects/materials/leaf.material"
+				offsetsphere="50 50 0"
+				direction="0 0 0"
+				minangle="-180"
+				maxangle="180"
+				directionalspace="global"
+				collide="true"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					anglespeed="20"
+					minsize="10"
+					maxsize="15"
+					lockup="true"
+					lockright="true"
+					pitch="90"
+					startcolor=".5 .5 0"
+					midcolor=".5 .5 0"
+					endcolor=".5 .5 0"
+					midcolorpos=".15"
+					startalpha="0"
+					midalpha=".5"
+					endalpha="0"
+					midalphapos=".5"
+				/>
+			</simpleemitter>
+			
+			
+			<!--delayed-->
+			<simpleemitter
+				delay="1200"
+				position="0 -65 0"
+				life="500"
+				spawnrate="25"
+				speed="20"
+				drag="0.25"
+				direction="0 0 1"
+				minparticlelife="1000"
+				maxparticlelife="1500"
+				offsetsphere="50 50 0"
+				count="15"
+				depthbias="-100"
+				gravity="-15"
+				material="/shared/effects/materials/dust_smoke_10.material"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor=".5 .5 .5"
+					midcolor=".5"
+					endcolor=".2 .65 .2"
+					startalpha="0"
+					midalpha=".2"
+					endalpha="0"
+					midalphapos=".2"
+					startsize="75"
+					endsize="150"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				delay="1000"
+				position="0 -75 15"
+				life="500"
+				spawnrate="25"
+				particlelife="1250"
+				gravity="5"
+				speed="150"
+				drag="0.05"
+				acceleration="0.0"
+				material="/shared/effects/materials/leaf_01.material"
+				offsetsphere="50 50 0"
+				direction="0 0 0"
+				minangle="-180"
+				maxangle="180"
+				directionalspace="global"
+				collide="true"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					anglespeed="20"
+					minsize="15"
+					maxsize="25"
+					lockup="true"
+					lockright="true"
+					pitch="90"
+					startcolor="1 .25 0"
+					midcolor="1 .25 0"
+					endcolor="1 .5 0"
+					midcolorpos=".15"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".5"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				delay="1200"
+				position="0 -75 15"
+				life="500"
+				spawnrate="25"
+				particlelife="1250"
+				gravity=".5"
+				speed="150"
+				drag="0.1"
+				acceleration="0.0"
+				material="/shared/effects/materials/leaf.material"
+				offsetsphere="50 50 0"
+				direction="0 0 0"
+				minangle="-180"
+				maxangle="180"
+				directionalspace="global"
+				collide="true"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					anglespeed="20"
+					minsize="10"
+					maxsize="15"
+					lockup="true"
+					lockright="true"
+					pitch="90"
+					startcolor=".5 .5 0"
+					midcolor=".5 .5 0"
+					endcolor=".5 .5 0"
+					midcolorpos=".15"
+					startalpha="0"
+					midalpha=".5"
+					endalpha="0"
+					midalphapos=".5"
+				/>
+			</simpleemitter>
+	
+      </particlesystem>
+   </definitions>
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<spawnmodifier instance="instance1" modifier="modifier0"/>  
+	
+	<waitfordeath instance="instance0" />
+	<waitfordeath instance="instance1" />
+	<!-- <die /> -->
+</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->

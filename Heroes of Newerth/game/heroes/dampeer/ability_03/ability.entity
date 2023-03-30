@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Dampeer3"
+
+	statuseffecttooltip="State_Dampeer_Ability3_Ally"
+	icon="icon.tga"
+	
+	anim="ability_3"
+	casttime="0"
+	castactiontime="0"
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+	
+	actiontype="no_target"
+	frontqueue="true"
+	
+	cooldowntime="1000"
+	
+>
+	<onlearn>
+		<setactivemodifierkey name="Dampeers_Mean" />
+	</onlearn>
+	
+	<modifier key="Dampeers_Mean" modpriority="100"
+		displayname="true"
+	>
+		<aura state="State_Dampeer_Ability3_Ally" radius="650" targetscheme="ally_units" />
+		
+		<modifier key="Dampeer_Ranged" condition="ranged" modpriority="100"
+		>
+		</modifier>
+		
+		<modifier key="Dampeer_Melee" condition="melee" modpriority="100"
+		>
+		</modifier>
+		
+		<onimpact>
+			<setactivemodifierkey name="Dampeers_Hungry" />
+		</onimpact>
+	</modifier>
+	
+	<modifier key="Dampeers_Hungry" modpriority="100"
+		displayname="true"
+	>
+		<aura state="State_Dampeer_Ability3_Ally" radius="650" targetscheme="ally_heroes" />
+		
+		
+		<modifier key="Dampeer_Ranged" condition="ranged" modpriority="100"
+		>
+		</modifier>
+		
+		<modifier key="Dampeer_Melee" condition="melee" modpriority="100"
+		>
+		</modifier>
+		
+		<onimpact>
+			<setactivemodifierkey name="Dampeers_Mean" />
+		</onimpact>
+	</modifier>
+</ability>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Fade_Ability4_DoT"
+
+	icon="icon.tga"
+	passiveeffect=""
+	ishidden="true"
+	
+	impactinterval="1000"
+	
+	effecttype=""
+>
+	<onframe />
+
+	<onimpact>
+		<hasmodifier name="fadeshadowmode" entity="source_entity">
+			<damage effecttype="Magic DOT" amount="75,125,175" />
+			<popup name="poison" a="result" source="target_entity" target="source_entity"/>
+		</hasmodifier>
+		<else>
+			<damage effecttype="Physical DOT" amount="75,125,175" />
+			<popup name="dot_physical_damage" a="result" source="target_entity" target="source_entity"/>
+		</else>
+	</onimpact>
+
+	<oninflict>
+		<playeffect effect="effects/impact.effect" source="target_entity" target="" />
+		<hasmodifier name="fadeshadowmode" entity="source_entity">
+			<damage effecttype="Magic DOT" amount="75,125,175" />
+			<popup name="poison" a="result" source="target_entity" target="source_entity"/>
+		</hasmodifier>
+		<else>
+			<damage effecttype="Physical DOT" amount="75,125,175" />
+			<popup name="dot_physical_damage" a="result" source="target_entity" target="source_entity"/>
+		</else>
+	</oninflict>
+</state>

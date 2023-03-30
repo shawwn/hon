@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="1" deferred="true">
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="2.25">
+			
+			<template name="red">
+				<billboard
+					bone="{bone}"
+					life="1000"
+					expirelife="300"
+					loop="true"
+					material="/shared/effects/materials/whitedot.material"
+					startcolor=".75 0 0"
+					midcolor=".35 0 0"
+					endcolor="0 0 0"
+					midcolorpos=".25"
+					size="12"
+					depthbias="0"
+					position="0 0 0"
+				/>
+			</template>
+
+			<instance name="red" bone="_bone_red1" />
+			<instance name="red" bone="_bone_red2" />
+			<instance name="red" bone="_bone_red3" />
+			<instance name="red" bone="_bone_red4" />
+			<instance name="red" bone="_bone_red5" />
+			<instance name="red" bone="_bone_red6" />
+			<instance name="red" bone="_bone_red7" />
+			<instance name="red" bone="_bone_red8" />
+			<instance name="red" bone="_bone_red9" />
+			<instance name="red" bone="_bone_red10" />
+			<instance name="red" bone="_bone_red11" />
+			<instance name="red" bone="_bone_red12" />
+			<instance name="red" bone="_bone_red13" />
+			<instance name="red" bone="_bone_red14" />
+			<instance name="red" bone="_bone_red15" />
+			<instance name="red" bone="_bone_red16" />
+			
+			
+			<template name="green">
+				<billboard
+					bone="{bone}"
+					life="2000"
+					expirelife="300"
+					loop="true"
+					material="/shared/effects/materials/whitedot.material"
+					startcolor="0 .65 0"
+					midcolor="0 .35 0"
+					endcolor="0 0 0"
+					midcolorpos=".25"
+					size="11"
+					depthbias="0"
+					position="0 0 0"
+				/>
+			</template>
+
+			<instance name="green" bone="_bone_green1" />
+			<instance name="green" bone="_bone_green2" />
+			<instance name="green" bone="_bone_green3" />
+			<instance name="green" bone="_bone_green4" />
+			<instance name="green" bone="_bone_green5" />
+			<instance name="green" bone="_bone_green6" />
+			<instance name="green" bone="_bone_green7" />
+			<instance name="green" bone="_bone_green8" />
+			<instance name="green" bone="_bone_green9" />
+			<instance name="green" bone="_bone_green10" />
+			<instance name="green" bone="_bone_green11" />
+			<instance name="green" bone="_bone_green12" />
+			<instance name="green" bone="_bone_green13" />
+			<instance name="green" bone="_bone_green14" />
+			
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>  
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" /> 
+	</thread>
+
+</effect>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_FlintBeastwood_Ability4"
+
+	speed="2500"
+	gravity="500"
+
+	modelscale=".8"
+	model="../projectile/effects/bullet/bullet.mdf"
+
+	effectscale="1"
+	impacteffect="effects/impact.effect"
+	traileffect="effects/trail.effect"
+>
+	<onimpact>
+		<combatevent effecttype="AbilityBasedProjectile">
+			<onimpact>
+				<applystate name="State_Stunned" duration="200"/>
+				<damage effecttype="Magic" amount="355,505,655"/>
+				<setvar0 a="355,505,655" />
+				<calculatedamage amount="var0" effecttype="Magic" />
+				<setvar2 a="result" />
+				<condition test="target_health le var2">
+					<playeffect effect="effects/impact_kill.effect" target="source_entity" />
+				</condition>
+			</onimpact>
+		</combatevent>
+	</onimpact>
+	
+	<modifier key="Alt" modpriority="1"
+		altavatar="true"
+		
+	>
+	<onimpact>
+		<combatevent effecttype="AbilityBasedProjectile">
+			<onimpact>
+				<applystate name="State_Stunned" duration="200"/>
+				<damage effecttype="Magic" amount="355,505,655"/>
+				<setvar0 a="355,505,655" />
+				<calculatedamage amount="var0" effecttype="Magic" />
+				<setvar2 a="result" />
+				<condition test="target_health le var2">
+					<playeffect effect="../alt/ability_04/effects/impact_kill.effect" target="source_entity" />
+				</condition>
+			</onimpact>
+		</combatevent>
+	</onimpact>
+	</modifier>
+</projectile>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect>
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale=".85">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume="0.5"
+				sample="../sounds/cast.wav"
+			/>
+
+			<light
+				delay="80"
+				life="250"			
+				startcolor="3 12 15"			
+				endcolor="0"
+				midcolorpos=".2"
+				falloffstart="00"
+				falloffend="255"
+				position="0 0 20"	
+			/>		
+
+			<simpleemitter
+				position="0 0 0"
+				spawnrate="5"
+				gravity="-53"
+				life="300"
+				particlelife="600"
+				offsetsphere="15"
+				material="/shared/effects/materials/shout_blend.material"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					color=".8 1 .8"
+					startalpha=".6"				
+					endalpha="0"
+					anglespeed="1320"
+					endcolor="0"
+					startsize="120"
+					endsize="160"
+					lockup="1"
+					pitch="90"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				position="0 0 20"
+				spawnrate="1400"
+				count="4"
+				particlelife="400"
+				offsetsphere="10"
+				material="/shared/effects/materials/crystals.material"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					color=".8 1 1"
+					anglespeed="-30"
+					startalpha=".6"				
+					endalpha="0"
+					size="210"
+				/>
+			</simpleemitter>
+
+			<billboard
+				position="0 0 40"
+				life="300"
+				startparam=".07"
+				endparam="0"				
+				startsize="150"
+				endsize="400"
+				material="/shared/effects/materials/refract_pinch.material"
+				depthbias="-40"
+			/>
+
+			<billboard
+				position="0 0 20"
+				life="500"
+				startcolor=".6"
+				endcolor="0"
+				startparam=".1"
+				endparam="0"				
+				startsize="160"
+				endsize="210"
+				material="/shared/effects/materials/corona_07.material"
+				lockup="1"
+				pitch="90"
+			/>
+
+			<billboard
+				position="0 0 20"
+				life="200"
+				startalpha=".5"				
+				endalpha="0"
+				startparam=".2"
+				endparam="0"				
+				startsize="220"
+				endsize="600"
+				material="/shared/effects/materials/refract_ring.material"
+			/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

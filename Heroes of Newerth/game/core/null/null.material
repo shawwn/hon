@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<material>
+	<parameters vDiffuseColor="1.0 1.0 1.0" fSpecularLevel="1.0000" fGlossiness="16.0000"></parameters>
+	<phase name="depth" vs="mesh_depth" ps="mesh_depth" srcblend="BLEND_ONE" dstblend="BLEND_ZERO" cull="CULL_BACK" translucent="false"></phase>
+	<phase name="shadow" vs="mesh_shadow" ps="mesh_shadow" srcblend="BLEND_ONE" dstblend="BLEND_ZERO" cull="CULL_BACK" translucent="false"></phase>
+	<phase name="color" vs="mesh_color" ps="mesh_color" srcblend="BLEND_ONE" dstblend="BLEND_ZERO" cull="CULL_BACK" translucent="false">
+		<sampler name="diffuse" texture="relief_rockwall_diffuse.tga" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="1.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false"></sampler>
+		<sampler name="normalmap" texture="relief_rockwall_normalmap.tga" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="1.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false"></sampler>
+	</phase>
+	<phase name="fade" vs="mesh_depth" ps="mesh_depth" srcblend="BLEND_ONE" dstblend="BLEND_ZERO" cull="CULL_BACK" translucent="true" depthwrite="true" colorwrite="false" alphawrite="false">
+		<multipass vs="mesh_color" ps="mesh_color" srcblend="BLEND_SRC_ALPHA" dstblend="BLEND_ONE_MINUS_SRC_ALPHA" cull="CULL_BACK" translucent="true" depthread="true">
+			<sampler name="diffuse" texture="relief_rockwall_diffuse.tga" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="1.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false"></sampler>
+			<sampler name="normalmap" texture="relief_rockwall_normalmap.tga" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="1.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false"></sampler>
+		</multipass>
+	</phase>
+</material>

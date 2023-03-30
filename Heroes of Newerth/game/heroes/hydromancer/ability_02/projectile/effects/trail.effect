@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect entityeffectscale="true" deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+
+			<model
+				delay="300"
+				position="0 0 125"
+				model="trident/model.mdf"
+				anim="idle"
+				scale="2.1"
+				startcolor="1 1 1"
+				endcolor="0 0 0"
+				expirelife="50"
+				startalpha="0"
+				endalpha="0"
+				directionalspace="local"
+				lockup="true"
+				lockright="true"
+				pitch="0"
+				yaw="0"
+				rollspeed="-720"
+			>
+
+			<terrainemitter
+				spawnrate="10"
+				startrange="24"
+				endrange="24"
+				particlelife="2000"
+				position="0 -20 0"
+			>
+				<particle>
+
+					<groundsprite
+						life="750"
+						material="/shared/effects/materials/ice_blob_overlay.material"
+						minsize="30"
+						maxsize="50"
+						minyaw="-360"
+						maxyaw="360"
+						startcolor=".5"
+						endcolor=".25 .75 1"
+						startalpha="0"
+						midalpha=".2"
+						endalpha="0"
+						midalphapos=".25"
+						position="0 0 0"
+					/>
+
+					<simpleemitter
+						count="10"
+						particlelife="500"
+						spawnrate="40"
+						minspeed="250"
+						maxspeed="400"
+						gravity="-15"
+						direction="0 0 1"
+						drag="0.05"
+						material="/shared/effects/materials/whitewater_02.material"
+						offsetsphere="25 25 10"
+						position="0 0 0"
+						depthbias="0"
+					>
+						<particle
+							minangle="0"
+							maxangle="360"
+							minanglespeed="-60"
+							maxanglespeed="60"
+							startsize="30"
+							endsize="75"
+							startcolor=".5"
+							endcolor="0"
+							startalpha=".1"
+							midalpha=".1"
+							endalpha="0"
+						/>
+					</simpleemitter>
+				</particle>
+			</terrainemitter>
+
+			</model>
+
+			<simpleemitter
+				bone="_bone_head"
+				spawnrate="3"
+				particlelife="5000"
+				minangle="0"
+				maxangle="0"
+				direction="0 -1 0"
+			>
+				<particle
+					turn="1"
+				>
+					<model
+						life="2000"
+						model="leviathon_hump/model.mdf"
+						anim="idle"
+						midcolorpos=".2"
+						expirelife="500"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".75"
+						directionalspace="local"
+						lockup="true"
+						lockright="true"
+						pitch="0"
+						yaw="0"
+						position="0 0 20"
+					>
+
+						<groundsprite
+							life="750"
+							startcolor=".4 .55 .6"
+							endcolor="0 0 0"
+							startalpha="0"
+							midalpha=".8"
+							endalpha="0"							
+							size="70"
+							maxyaw="360"
+							material="/shared/effects/materials/water_overlay.material"
+							position="0 85 0"
+							lockup="true"
+							lockright="true"
+						/>
+
+						<billboard
+							life="350"
+							color="1"
+							startalpha="1"
+							midalpha="1"
+							endalpha="0"							
+							startsize="50"
+							endsize="150"
+							depthbias="-65"
+							material="/shared/effects/materials/outsplash_blend2.material"
+							position="0 75 20"
+							lockup="true"
+							lockright="true"
+							pitch="90"
+							maxroll="360"
+						/>
+
+						<sound
+							linearfalloff="true" 
+							falloffstart="0"
+							falloffend="2500"
+							volume=".5"
+							sample="../../sounds/water_%.wav"
+						/>
+
+						<simpleemitter
+							count="10"
+							particlelife="500"
+							spawnrate="90"
+							minspeed="350"
+							maxspeed="550"
+							gravity="-15"
+							direction="0 0 1"
+							drag="0.05"
+							material="/shared/effects/materials/whitewater_02.material"
+							offsetsphere="25 25 10"
+							position="0 75 0"
+						>
+							<particle
+								minangle="0"
+								maxangle="360"
+								minanglespeed="-60"
+								maxanglespeed="60"
+								startsize="65"
+								endsize="110"
+								startcolor=".75"
+								endcolor="0"
+								startalpha="1"
+								midalpha="1"
+								endalpha="0"
+							/>
+						</simpleemitter>
+						
+						<simpleemitter
+							count="10"
+							particlelife="500"
+							spawnrate="90"
+							minspeed="350"
+							maxspeed="550"
+							gravity="-15"
+							direction="0 0 1"
+							drag="0.02"
+							material="/shared/effects/materials/whitewater_02.material"
+							offsetsphere="25 25 10"
+							position="0 75 0"
+						>
+							<particle
+								minangle="0"
+								maxangle="360"
+								minanglespeed="-60"
+								maxanglespeed="60"
+								startsize="65"
+								endsize="110"
+								startcolor="0 .5 1"
+								endcolor="0"
+								startalpha="1"
+								midalpha="1"
+								endalpha="0"
+							/>
+						</simpleemitter>
+					
+						<simpleemitter
+							count="15"
+							particlelife="500"
+							spawnrate="90"
+							minspeed="20"
+							maxspeed="850"
+							gravity="25"
+							direction="0 0 1"
+							drag="0.02"
+							material="/shared/effects/materials/whitewater_02.material"
+							offsetsphere="35 35 10"
+							position="0 75 30"
+							minangle="10"
+							maxangle="35"
+						>
+							<particle
+								minangle="0"
+								maxangle="360"
+								minanglespeed="-60"
+								maxanglespeed="60"
+								startsize="45"
+								endsize="110"
+								startcolor=".65"
+								endcolor="0"
+								startalpha="1"
+								midalpha="1"
+								endalpha="0"
+								turn="1"
+							/>
+						</simpleemitter>
+						
+						<simpleemitter
+							count="2"
+							spawnrate="10"
+							particlelife="500"
+							position="0 75 0"
+							material="/shared/effects/materials/refract_swell.material"
+							particledirectionalspace="local"
+							offsetsphere="10 10 0"
+						>
+							<particle
+								startsize="75"
+								endsize="190"
+								startparam="0.45"
+								endparam="0"
+								startalpha=".25"
+								midalpha=".4"
+								endalpha="0"
+								midalphapos=".5"
+								lockup="true"
+								lockright="true"
+								pitch="90"
+								minscale=".85"
+								maxscale="1.4"
+							/>
+						</simpleemitter>
+
+						<billboard
+							life="400"
+							position="0 75 0"
+							depthbias="-35"
+							material="/shared/effects/materials/refract_outsplash.material"
+							startsize="25"
+							endsize="350"
+							param="0.25"
+							startalpha=".25"
+							midalpha="1"
+							endalpha="0"
+							midalphapos=".5"
+							lockup="true"
+							lockright="true"
+							pitch="90"
+							minscale=".85"
+							maxscale="1.2"
+							maxroll="360"
+						/>
+
+					</model>
+				</particle>
+			</simpleemitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

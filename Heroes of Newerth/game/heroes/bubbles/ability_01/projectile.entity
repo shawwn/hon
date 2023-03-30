@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Bubbles_Ability1"
+
+	speed="850"
+	gravity=""
+	
+	effectscale="1 "
+	
+	canturn="true"
+	flying="true"
+	flyheight="0"
+>
+	<onimpact>
+		<kill target="proxy_entity" source="" />
+	</onimpact>
+	
+	<ontouch />
+</projectile>

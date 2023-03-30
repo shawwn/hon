@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Treant3"
+
+	statuseffecttooltip="State_Treant_Ability3"
+	icon="icon.tga"
+	
+	anim="ability_2"
+	casttime="500"
+	castactiontime="250"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_entity"
+	targetscheme="ally_units_and_structures"
+	
+	casteffecttype="Magic"
+	
+	manacost="30,35,40,40"
+	cooldowntime="5000"
+	
+	range="500"
+
+	doubleactivate="true"
+>
+	<onimpact>
+		<condition target="target_entity" test="target_type building">
+			<condition target="target_entity" test="target_type Tower">
+				<applystate name="State_Treant_Ability3_Building" duration="40000" />
+			</condition>
+			<else>
+				<applystate name="State_Treant_Ability3_NonTower" duration="40000" />
+			</else>
+		</condition>
+		<else>
+			<applystate name="State_Treant_Ability3" duration="40000" />
+		</else>
+	</onimpact>
+</ability>

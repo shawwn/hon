@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_SandWraith_Ability1_Vision"
+	
+	lifetime="-1"
+	targetselection="none"
+	impactinterval="250"
+>
+	<oninterval>
+		<spawnunit name="Gadget_SandWraith_Ability1_Reveal" target="target_position" pushentity="true" />
+	</oninterval>
+</affector>

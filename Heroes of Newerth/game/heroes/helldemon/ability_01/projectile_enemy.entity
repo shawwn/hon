@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_HellDemon_Ability1_Enemy"
+
+	speed="500"
+	gravity="0"
+	flying="true"
+	flyheight="100"
+	
+	modelscale="2"
+	model="effects/reaper/model.mdf"
+
+	traileffect="effects/trail_enemy.effect"
+>
+		<onimpact>
+			<combatevent effecttype="AbilityBasedProjectile">
+				<onimpact>
+					<playeffect effect="effects/impact_enemy.effect" source="target_entity" target="" />
+					<damage effecttype="Magic" amount="75,125,200,275" target="target_entity" />
+				</onimpact>
+			</combatevent>
+		</onimpact>
+	
+</projectile>

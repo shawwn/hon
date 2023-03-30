@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="dragon_slave" persistent="true" useentityeffectscale="true">
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+<!--
+		<sound
+			linearfalloff="true" 
+			falloffstart="1000"
+			falloffend="2500"
+			volume=".7"
+			sample="../sounds/cast.wav"
+		/>
+-->
+	
+			<simpleemitter
+				life="3000"
+				count="1"
+				spawnrate="222"
+				particlelife="1300"
+				direction="0 0 -1"
+				speed="2000"
+				minangle="0"
+				maxangle="0" 
+				position="0 0 600"
+			>
+				<particle>
+
+					<billboard
+						spawnrate="50"
+						particlelife="400"
+						life="4000"
+						material="/shared/effects/materials/flare2.material"
+						size="200"
+						midheightpos=".75"
+						width="40"
+						lockup="1"
+						color=".075 .06 .075"
+					/>
+					
+					<billboard
+						spawnrate="50"
+						particlelife="400"
+						life="4000"
+						material="/shared/effects/materials/blink.material"
+						size="150"
+						lockup="1"
+						color=".25 .3 .4"
+					/>
+
+					<billboard
+						spawnrate="50"
+						particlelife="400"
+						life="200"
+						material="/shared/effects/materials/flare2.material"
+						startheight="0"
+						endheight="500"
+						width="10"
+						roll="90"
+						midheightpos=".75"
+						lockup="1"
+						color=".25 .35 .75"
+					/>
+
+				</particle>
+			</simpleemitter>
+			
+			<simpleemitter
+				life="3000"
+				count="10"
+				spawnrate="35"
+				particlelife="1200"
+				material="/shared/effects/materials/corona_06.material"
+				direction="0 0 -1"
+				speed="2000"
+				minangle="0"
+				maxangle="0" 
+				position="0 0 350"
+			>
+				<particle
+					startcolor=".05 .05 .25"
+					endcolor="0"
+					startsize="120"
+					endsize="85"
+					maxangle="360"
+					minendscale="2"
+					maxendscale="3"
+					startanchor="1"
+					endanchor="0"
+					lockup="true"
+					pitch="90"
+					alpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				count="50"
+				spawnrate="500"
+				particlelife="250"
+				gravity="-55"
+				speed="40"
+				drag=".08"
+				acceleration="0"
+				position="0 0 50"
+				material="/shared/effects/materials/phantom_smoke_10.material"
+				offsetsphere="50 50 70"
+				minangle="90"
+				maxangle="-90"
+			>
+				<particle 
+					startcolor="0 0 0"
+					midcolor=".35 .125 0"
+					endcolor="0 0 0"
+					midcolorpos=".1"
+					startframe="0"
+					endframe="1"
+					startwidth="20"
+					midwidth="15"
+					endwidth="6"
+					midwidthpos=".5"
+					startheight="1500"
+					endheight="0"
+					lockup="true"
+				/>
+			</simpleemitter>
+
+			<billboard 
+				position="0 50 0"
+				material="/shared/effects/materials/flare2.material" 
+				width="55"
+				height="1500"
+				life="250"
+				startcolor="0 0 0"
+				midcolor="0 .05 .25"
+				endcolor="0 0 0"
+				lockup="true"
+			/>
+
+			<billboard 
+				life="250"
+				material="/shared/effects/materials/flare2.material" 
+				width="100"
+				startheight="2000"
+				endheight="0"
+				startcolor=".125 .075 0"
+				midcolor=".25 .15 0"
+				endcolor=".125 .075 0"
+				lockup="true"
+				roll="0"
+				yaw="-180"
+			/>
+<!--
+			<simpleemitter
+				spawnrate="1"
+				particlelife="2000"
+				gravity="-10"
+				speed="0"
+				drag=".1"
+				acceleration="0"
+				position="0 65 25"
+				material="/shared/effects/materials/phantom_smoke_10.material"
+				offsetsphere="0 0 0"
+				minangle="90"
+				maxangle="-90"
+			>
+				<particle> 
+
+					<billboard 
+						position="0 0 0"
+						material="/shared/effects/materials/flare2.material" 
+						width="55"
+						startheight="0"
+						endheight="500"
+						life="1000"
+						startcolor=".6 .4 .1"
+						endcolor="0 0 0"
+						lockup="true"
+						minroll="-65"
+						maxroll="65"
+						pitch="90"
+						loop="true"
+						depthbias="-100"
+					/>
+					
+					<billboard 
+						position="0 0 0"
+						material="/shared/effects/materials/flare2.material" 
+						width="55"
+						startheight="0"
+						endheight="750"
+						life="2000"
+						startcolor=".6 .4 .1"
+						endcolor="0 0 0"
+						lockup="true"
+						minroll="-65"
+						maxroll="65"
+						pitch="90"
+						loop="true"
+						depthbias="-100"
+					/>
+
+				</particle>
+			</simpleemitter>
+
+			<billboard 
+				position="0 65 0"
+				material="/shared/effects/materials/flare2.material" 
+				width="35"
+				height="2500"
+				life="2500"
+				startcolor="0 0 0"
+				midcolor=".25 .2 .15"
+				endcolor="0 0 0"
+				lockup="true"
+				loop="true"
+			/>
+			
+			<billboard 
+				position="0 0 0"
+				material="/shared/effects/materials/flare2.material" 
+				width="35"
+				height="2500"
+				life="2500"
+				startcolor=".25 .2 .15"
+				midcolor="0 0 0"
+				endcolor=".25 .2 .15"
+				lockup="true"
+				loop="true"
+			/>
+
+			<simpleemitter
+				spawnrate="5"
+				particlelife="400"
+				gravity="-6"
+				speed="0.0"
+				acceleration="0.0"
+				position="0 75 30"
+				offsetsphere="40 40 0"
+				depthbias="-100"
+				material="/shared/effects/materials/whitedot.material"
+			>
+				<particle
+					startcolor="0 0 0"
+					midcolor=".75 .5 .25"
+					endcolor="0 0 0"
+					minangle="0"
+					maxangle="360"
+					minanglespeed="0"
+					maxanglespeed="0"
+					startsize="125"
+					midsize="85"
+					endsize="50"
+					lockup="true"
+					pitch="90"
+				/>
+				<particle
+					startcolor="0 0 0"
+					midcolor=".5 .5 .5"
+					endcolor="0 0 0"
+					minangle="0"
+					maxangle="360"
+					minanglespeed="0"
+					maxanglespeed="0"
+					startsize="125"
+					midsize="85"
+					endsize="50"
+					lockup="true"
+					pitch="90"
+				/>
+				
+			</simpleemitter>
+
+			<groundsprite
+				life="5000"
+				loop="true"
+				material="/shared/effects/materials/whitedot_ground.material"
+				size="450"
+				startcolor="0 0 0"
+				midcolor=".4 .25 .1"
+				endcolor="0 0 0"
+				position="0 50 0"
+			/>
+			
+			<groundsprite
+				life="2500"
+				loop="true"
+				material="/shared/effects/materials/whitedot_ground.material"
+				size="220"
+				color=".4 .25 .1"
+				position="0 50 0"
+			/>
+
+			<billboard
+				position="0 65 50"
+				life="150"
+				color=".4 .25 .1"
+				startsize="80"
+				midsize="50"
+				endsize="80"
+				material="/shared/effects/materials/whitedot.material"
+				loop="1"
+				depthbias="-100"
+			/>
+
+			<billboard
+				position="0 65 50"
+				life="1500"
+				color=".4 .25 .1"
+				startsize="250"
+				midsize="10"
+				endsize="250"
+				material="/shared/effects/materials/flare_03.material"
+				loop="1"
+				depthbias="-100"
+			/>
+
+			<billboard
+				position="0 65 50"
+				life="1000"
+				color=".5"
+				startsize="200"
+				midsize="100"
+				endsize="200"
+				material="/shared/effects/materials/flare_03.material"
+				loop="1"
+				depthbias="-100"
+			/>	
+
+			<simpleemitter
+				spawnrate="2"
+				particlelife="800"
+				gravity="0"
+				minspeed="2"
+				maxspeed="10"
+				drag=".1"
+				position="0 65 50"
+				material="/shared/effects/materials/blink.material"
+				offsetsphere="0 0 0"
+				direction="0 0 1"
+				depthbias="-100"
+			>
+				<particle 
+					startcolor="0 0 0"
+					midcolor=".5 .25 0"
+					endcolor="0 0 0"
+					minsize="100"
+					maxsize="500"
+					startalpha="0"
+					midalpha="0"
+					endalpha="0"
+					midalphapos="0"
+					turn="true"
+				/>
+			</simpleemitter>
+
+
+
+			<simpleemitter
+				spawnrate="3"
+				minparticlelife="750"
+				maxparticlelife="1500"
+				gravity="0"
+				drag="0"
+				position="0 65 50"
+				offsetsphere="10 10 10"
+				material="/shared/effects/materials/phantom_smoke_13.material"
+				startparticlealpha="1"
+				endparticlealpha="0"
+				depthbias="-100"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-6"
+					maxanglespeed="6"
+					startcolor="0 0 0"
+					midcolor=".5 .25 0"
+					endcolor="0 0 0"
+					midcolorpos=".5"
+					startsize="0"
+					endsize="275"
+					endanchor="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				spawnrate="2"
+				particlelife="1000"
+				gravity="-10"
+				speed="5"
+				drag="0"
+				acceleration="0.0"
+				position="0 65 50"
+				offsetsphere="25 25 0"
+				material="/shared/effects/materials/heathaze.material"
+				loop="true"
+			>
+				<particle 
+				angle="180"
+				startparam=".05"
+				endparam="0.0"
+				startcolor="1 1 1"
+				frame=".1"
+				startalpha="0"
+				midalpha=".35"
+				endalpha="0"
+				startsize="150" 
+				endsize="300"
+				/>
+			</simpleemitter>
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<simpleemitter
+			life="300"
+			spawnrate="15"
+			particlelife="400"
+			gravity="-6"
+			speed="0.0"
+			acceleration="0.0"
+			timenudge="0"
+			position="0 0 0"
+			material="/shared/effects/materials/flare_01.material"
+		>
+			<particle
+				startcolor="1 .5 0"
+				endcolor="0 0 0"
+				startalpha=".02"
+				endalpha="0"
+				minangle="0"
+				maxangle="360"
+				minanglespeed="0"
+				maxanglespeed="0"
+				startsize="200"
+				midsize="120"
+				endsize="50"
+				lockup="true"
+				pitch="90"
+			/>
+		</simpleemitter>
+
+		<simpleemitter
+			count="1"
+			particlelife="200"
+			gravity="-6"
+			speed="0.0"
+			acceleration="0.0"
+			timenudge="0"
+			position="0 0 40"
+			material="/shared/effects/materials/blink.material"
+		>
+			<particle
+				anglespeed="20"
+				startcolor="0 0 0"
+				midcolor="1 .5 0"
+				endcolor="0 0 0"
+				midcolorpos=".1"
+				startsize="350"
+				midsize="220"
+				endsize="0"
+			/>
+		</simpleemitter>
+
+		<billboard
+			position="0 0 20"
+			life="300"
+			color="1 1 1"
+			startalpha="1.0"
+			endalpha="1"
+			startparam="0.1"
+			endparam="0.0"
+			startsize="128"
+			endsize="524"
+			material="/shared/effects/materials/refract_pinch.material"
+			lockup="1"
+			pitch="90"
+		/>
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

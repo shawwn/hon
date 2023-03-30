@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Tundra_Ability2_RangedPet_Debuff"
+	
+	icon="icon.tga"
+	ishidden="true"
+	passiveeffect=""
+	effecttype=""
+>
+</state>

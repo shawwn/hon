@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Engineer_Ability3_Allies"
+	
+	icon="icon.tga"
+	passiveeffect="effects/state_turret.effect"
+	
+	attackspeed=".1,.2,.3,.4"
+	basedamagemultiplier=".2,.4,.6,.8"
+	incomingdamagemultiplier="-0.66"
+	effecttype="StatusBuff"
+>
+</state>

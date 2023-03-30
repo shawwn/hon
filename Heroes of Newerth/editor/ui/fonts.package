@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package>
+	<fontface file="/core/fonts/game.ttf">
+		<fontmap name="chat_8" size="8"/>
+		<fontmap name="chat_9" size="9"/>
+		<fontmap name="chat_10" size="10"/>
+		<fontmap name="chat_11" size="11"/>
+		<fontmap name="chat_12" size="12"/>
+		<fontmap name="chat_13" size="13"/>
+		<fontmap name="chat_14" size="14"/>
+		<fontmap name="chat_16" size="16"/>
+		<fontmap name="chat_18" size="18"/>
+		<fontmap name="chat_22" size="22"/>
+		<fontmap name="chat_28" size="28"/>
+
+		<fontmap name="gamemicro" size="10"/>
+		<fontmap name="gametiny" size="12"/>
+		<fontmap name="gametweener" size="14"/>
+		<fontmap name="gamesmall" size="16"/>
+		<fontmap name="gamemedium" size="22"/>
+		<fontmap name="gamelarge" size="30"/>
+	</fontface>
+</package>

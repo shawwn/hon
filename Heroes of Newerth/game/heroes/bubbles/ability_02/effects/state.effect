@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="lifeStealEffectForDominatingCreep" useentityeffectscale="1">
+	<definitions>
+		<particlesystem name="system0" space="entity" scale="1.0">
+
+			<simpleemitter	
+				life="600"			
+				position="0 0 60"
+				spawnrate="225"
+				particlelife="1000"					
+				minspeed="10.0"
+				maxspeed="110"
+				drag="0.01"
+				inheritvelocity=".25"
+				offsetsphere="10 10 10"
+				gravity="2"
+				material="/shared/effects/materials/bub.material"
+			>
+				<particle	
+					color=".3 1 1"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-80"
+					maxanglespeed="80"
+					startsize="20"
+					endsize="0"					
+					depthbias="-160"
+				/>
+			</simpleemitter>
+			<orbiteremitter
+				
+				spawnrate="121"
+				count="10"
+				particlelife="1000"
+				gravity="0.0"
+				minspeed=".8"
+				maxspeed="1.5"
+				acceleration="0" 
+				drag="0.0"
+				minangle="-90" 
+				maxangle="90" 
+				position="0.0 0.0 20" 
+				origin="1.0 1 80" 
+				orbit="1.0 0.0 1.0" 
+				direction="0.0 0.0 1.0" 
+				offset="3.14 0 20"
+				cylindrical="false" 
+				material="/shared/effects/materials/note_1.material"
+				
+			>
+				<particle
+					color="0 1 .2"
+					midcolorpos="0.5"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					frame="0"
+					framespeed="8"		
+					minscale="7.5"
+					maxscale="24.5"								
+					turn="true"
+				/>
+			</orbiteremitter>
+		
+			<orbiteremitter
+				
+				spawnrate="121"
+				count="10"
+				particlelife="1000"
+				gravity="0.0"
+				minspeed=".8"
+				maxspeed="1.5"
+				acceleration="0" 
+				drag="0.0"
+				minangle="-90" 
+				maxangle="90" 
+				position="0.0 0.0 20" 
+				origin="1.0 1 80" 
+				orbit="1.0 0.0 1.0" 
+				direction="0.0 0.0 1.0" 
+				offset="3.14 0 20"
+				cylindrical="false" 
+				material="/shared/effects/materials/note_2.material"
+				
+			>
+				<particle
+					color="0.3 .4 1"
+					midcolorpos="0.5"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					frame="0"
+					framespeed="8"		
+					minscale="6.5"
+					maxscale="24.5"								
+					turn="true"
+				/>
+			</orbiteremitter>	
+
+
+
+			<orbiteremitter
+				
+				spawnrate="121"
+				count="10"
+				particlelife="1000"
+				gravity="0.0"
+				minspeed=".8"
+				maxspeed="1.5"
+				acceleration="0" 
+				drag="0.0"
+				minangle="-90" 
+				maxangle="90" 
+				position="0.0 0.0 20" 
+				origin="1.0 1 80" 
+				orbit="1.0 0.0 1.0" 
+				direction="0.0 0.0 1.0" 
+				offset="3.14 0 20"
+				cylindrical="false" 
+				material="/shared/effects/materials/note_3.material"
+				
+			>
+				<particle
+					color="0 .5 1"
+					midcolorpos="0.5"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					frame="0"
+					framespeed="8"		
+					minscale="7.5"
+					maxscale="24.5"								
+					turn="true"
+				/>
+			</orbiteremitter>
+
+			
+			<billboard					
+				size="50"
+				position="0 0 40"
+				bone="_bone_overhead"
+				life="700"
+				loop="1"
+				material="/shared/effects/materials/silence.material"
+				color="1 1 1"
+				startalpha="1"			
+				midalpha=".4"
+				endalpha="1"
+		
+			>
+			</billboard>		
+			
+
+
+	
+				
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnparticlesystem instance="instance1" particlesystem="system1" />
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+	</thread>
+</effect>

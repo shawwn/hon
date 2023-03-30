@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="true" deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1.0" >
+
+			<simpleemitter
+				position="0 0 50"
+				spawnrate="5"
+				particlelife="1500"
+				gravity="2"
+				speed="5"
+				offsetsphere="22"
+				direction="0 0 1"
+				material="/shared/effects/materials/twirl_blend.material"
+			>
+				<particle
+					startcolor="0"
+					midcolor="1"
+					endcolor="0"
+					midcolorpos=".5"
+					startalpha="0"
+					midalpha=".5"
+					endalpha="0"					
+					maxangle="360"
+					anglespeed="-30"
+					startsize="170"
+					endsize="0"
+					lockup="1"
+					lockright="1"
+					pitch="-90"
+					anchor=".8"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				spawnrate="15"			
+				particlelife="1200"	
+				material="/shared/effects/materials/whitewater_02.material"
+				offsetsphere="10"
+				minangle="-90"
+				maxangle="-90"
+				direction="0 0 -1"
+				offsetradial="30"
+				position="0 0 50"
+				depthbias="-150"
+			>
+				<particle
+					startcolor="1"
+					endcolor="0"
+					midcolorpos="0"
+					startsize="0"
+					maxangle="360"
+					maxendsize="100"
+					endstickiness=".3"
+				/>
+			</simpleemitter>
+
+
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

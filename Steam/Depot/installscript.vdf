@@ -1,0 +1,31 @@
+"InstallScript"
+{
+	"Run Process"
+	{
+		"MSVC Redistributables"
+   		{ 
+    			"HasRunKey"   				"HKEY_CURRENT_USER\\Software\\Valve\\Steam\\Apps\\13700"
+    			"process 1"   				"%INSTALLDIR%\\vcredist_x86.exe"
+			"command 1"				"/q:a /c:\"vcredi~3.exe /q:a /c:\"\"msiexec /i vcredist.msi /qb!\"\" \""
+    			"NoCleanUp"   				"1"
+   		}
+
+		"Microsoft .NET Framework"
+   		{
+    			"HasRunKey"   				"HKEY_CURRENT_USER\\Software\\Valve\\Steam\\Apps\\13700"
+    			"process 1"   				"%INSTALLDIR%\\dotnetfx.exe"
+			"command 1"				"/q:a /c:\"install /q\""
+    			"NoCleanUp"   				"1"
+    			"IgnoreExitCode"			"1"
+   		}
+
+		"DirectX"
+   		{ 
+    			"HasRunKey"   				"HKEY_CURRENT_USER\\Software\\Valve\\Steam\\Apps\\13700"
+    			"process 1"   				"%INSTALLDIR%\\directxredist\\dxsetup.exe"
+    			"command 1"						""
+    			"NoCleanUp"   				"1"
+   		}
+
+	}
+}

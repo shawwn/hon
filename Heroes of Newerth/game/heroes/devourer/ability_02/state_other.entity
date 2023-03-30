@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Devourer_Ability2_Other"
+
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+	
+	movespeedslow="0.2"
+	
+	effecttype="StatusDebuff"
+>
+	<onframe />
+</state>

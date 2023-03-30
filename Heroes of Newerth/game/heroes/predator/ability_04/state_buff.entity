@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Predator_Ability4_Buff"
+
+	
+	
+	icon="icon.tga"
+	passiveeffect="effects/state_level2.effect"
+
+	attackspeed="0.20,0.40,0.60"
+	movespeedmultiplier="0.15"
+	effecttype=""
+>
+
+</state>

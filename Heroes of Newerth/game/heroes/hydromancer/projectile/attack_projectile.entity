@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_HydromancerAttack"
+
+	speed="900"
+	gravity="2200"
+
+	modelscale="1.5"
+	model="effects/model.mdf"
+	
+	traileffect="effects/trail.effect"
+	impacteffect="effects/impact.effect"
+>
+</projectile>

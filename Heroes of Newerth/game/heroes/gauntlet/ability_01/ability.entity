@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Gauntlet1"
+	
+	statuseffecttooltip="State_Gauntlet_Ability1"
+	icon="icon.tga"
+	
+	anim="ability_1"
+	casttime="0"
+	castactiontime="0"
+	casteffect=""
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_self"
+	casteffecttype="Magic"
+	targetradius="250"
+	
+	frontqueue="true"
+	inheritmovement="true"
+	
+	manacost="80,90,100,110"
+	cooldowntime="11000"
+
+	modifierkey="gauntletfist1,gauntletfist2,gauntletfist3,gauntletfist4"
+>
+	<onimpact>
+		<applystate name="State_Gauntlet_Ability1" duration="4000" />
+	</onimpact>
+	
+	<modifier key="gauntlet_nohand" modpriority="100"
+		anim="nohand_ability_1"
+	/>
+</ability>

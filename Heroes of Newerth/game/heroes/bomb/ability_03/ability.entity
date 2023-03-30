@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Bombardier3"
+
+	icon="icon.tga"
+	
+	anim="ability_3"
+	casttime="200"
+	castactiontime="0"
+	frontqueue="true"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_entity"
+	targetscheme="all_units"
+	casteffecttype="Magic"
+	
+	casteffect="effects/cast.effect"
+	
+	manacost="25,30,35,40"
+	cooldowntime="0"
+	range="500"
+	
+	doubleactivate="true"
+
+	maxcharges="4"
+	initialcharges="4"
+>
+	<onlearn>
+		<setcharges a="4" />
+		<setaccumulator value="4" />
+	</onlearn>
+	
+	<onpreimpact>
+		<removecharge />
+		<applystate name="State_Bombardier_Ability3_Charges" target="source_entity" duration="10000,8000,6000,4000" proxy="this_entity" pushentity="true"/>
+		<addcharges entity="stack_entity" count="1" />
+	</onpreimpact>
+	
+	<onimpact>
+		<setvar0 a="0" />
+		<cantarget targetscheme="enemy_units">
+			<applystate name="State_Bombardier_Ability3_Enemy" target="target_entity" duration="7000" />
+		</cantarget>
+		<cantarget targetscheme="ally_units">
+			<applystate name="State_Bombardier_Ability3" target="target_entity" duration="7000" />
+		</cantarget>
+		<condition test="charges eq 0">
+			<setactivemodifierkey name="bombardierbuffdisabled" />
+		</condition>
+	</onimpact>
+	
+	<ondeath>
+		<setcharges a="4" />
+	</ondeath>
+
+	<modifier key="bombardierbuffdisabled" modpriority="100"
+		disabled="true"
+	>
+		<onframe>
+			<compare a="charges" b="0" op="gt">
+				<setactivemodifierkey name="" />
+			</compare>
+		</onframe>
+	</modifier>
+</ability>

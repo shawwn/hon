@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Hunter_Ability4"
+
+	icon="icon.tga"
+	
+	passiveeffect="effects/gush.effect"
+>
+	<onframe>
+		<damage amount="0.2,0.4,0.6" b="movement" op="mult" effecttype="DOT" />
+	</onframe>
+</state>

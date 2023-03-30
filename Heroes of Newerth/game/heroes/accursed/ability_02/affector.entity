@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Accursed_Ability2"
+
+	radius="700"
+	
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Magic"
+	impacteffect="effects/affector.effect"
+>
+	<onimpact>
+		<damage effecttype="Magic" amount="110,140,170,200" />
+	</onimpact>
+</affector>

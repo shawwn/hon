@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2500"
+				volume="0.65" 
+				sample="../sounds/impact.wav"
+			/>
+		
+			<simpleemitter
+				spawnrate="28"
+				bone="_bone_centerofchest"
+				count="3"
+				particlelife="1000"
+				gravity="-2"
+				minspeed="15"
+				maxspeed="35"
+				drag="007"
+				acceleration="50"
+				position="0 0 15"
+				timenudge="-60"
+				offsetsphere="20 20 20"
+				minangle="-25"
+				maxangle="10"
+				direction="0 0 0"
+				material="/shared/effects/materials/fireball_3d_32_split.material"
+			>
+				<particle 
+					minangle="15"
+					maxangle="-15"
+					minanglespeed="0"
+					color=".3 .1 0"
+					midcolorpos=".1"
+					maxanglespeed="00"
+					startframe="0"
+					endframe="1"
+					startsize="30"
+					midsize="75"
+					endsize="24"
+					midsizepos=".1"
+			/>
+
+		</simpleemitter>
+
+		<billboard
+			bone="_bone_centerofchest"
+			material="/shared/effects/materials/whitedot.material"
+			startcolor="0 0 0"
+			endcolor="0 0 0"
+			life="300"
+			startsize="50"
+			endsize="150"
+			depthbias="-50"
+		/>
+		
+		<simpleemitter
+			bone="_bone_centerofchest"
+			count="15"
+			spawnrate="50"
+			particlelife="1250"
+			gravity="-5"
+			speed="0"
+			drag="0.07"
+			acceleration="0.0"
+			mintimenudge="0"
+			maxtimenudge="1000"
+			material="/shared/effects/materials/phantom_smoke_04.material"
+			offsetsphere="20 20 20"
+			inheritvelocity=".25"
+			direction="0 0 1"
+			position="0 0 0"
+		>
+			<particle 
+				minangle="0"
+				maxangle="360"
+				minanglespeed="-30"
+				startcolor="0 0 0"
+				midcolor="1 0 0"
+				endcolor="0 0 0"
+				maxanglespeed="30"
+				startsize="15"
+				endsize="40"
+				startalpha="0"
+				midalpha=".25"
+				endalpha="0"
+				midalphapos=".2"
+				startanchor="0"
+				endanchor="0"
+			/>
+		</simpleemitter>
+		
+		<simpleemitter
+			bone="_bone_centerofchest"
+			count="10"
+			spawnrate="100"
+			particlelife="2000"
+			gravity="-.2"
+			speed="10"
+			drag="0.07"
+			acceleration="0.0"
+			mintimenudge="0"
+			maxtimenudge="1000"
+			material="/shared/effects/materials/smoke_particle.material"
+			offsetsphere="15 15 15"
+			position="0 20 0"
+		>
+			<particle 
+				minangle="0"
+				maxangle="360"
+				minanglespeed="-30"
+				startcolor=".5 0 0"
+				endcolor="0 0 0"
+				maxanglespeed="30"
+				startsize="30"
+				endsize="70"
+				startalpha="0"
+				midalpha=".25"
+				endalpha="0"
+				midalphapos=".2"
+				startanchor="1"
+				endanchor=".5"
+			/>
+
+			<particle
+				minangle="0"
+				maxangle="360"
+				minanglespeed="-50"
+				color=".5 0 0"
+				maxanglespeed="50"
+				startsize="35"
+				endsize="75"
+				startalpha="0"
+				midalpha=".25"
+				endalpha="0"
+				midalphapos=".2"
+				startanchor="1"
+				endanchor=".5"
+			/>
+		</simpleemitter>
+
+	</particlesystem>
+</definitions>
+
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<spawnmodifier instance="instance1" modifier="modifier0"/>  
+	<waitfordeath instance="instance0" />
+</thread>
+
+</effect>
+

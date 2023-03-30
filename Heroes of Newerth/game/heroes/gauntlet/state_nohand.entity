@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Gauntlet_NoHand"
+
+	icon="icon.tga"
+	ishidden="true"
+	modifierkey="gauntlet_nohand"
+
+>
+	
+	<onexpired>
+		<playanim name="idle" target="source_entity" />
+	</onexpired>
+</state>

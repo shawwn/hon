@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Bombardier_Ability3"
+	
+	icon="icon.tga"
+	passiveeffect=""
+	
+	effecttype="StatusBuff"
+
+	maxcharges="4"
+	
+	impactinterval="250"
+>
+	<oninflict>
+		<addcharges a="1" timed="true" />
+		<setactivemodifierkey entity="this_entity" name="Bombardier_Ability3_1" />
+	</oninflict>
+	
+	<onrefresh>
+		<addcharges a="1" timed="true" />
+		<condition test="charges eq 4">
+			<setactivemodifierkey entity="this_entity" name="Bombardier_Ability3_4" />
+		</condition>
+		<condition test="charges eq 3">
+			<setactivemodifierkey entity="this_entity" name="Bombardier_Ability3_3" />
+		</condition>
+		<condition test="charges eq 2">
+			<setactivemodifierkey entity="this_entity" name="Bombardier_Ability3_2" />
+		</condition>
+	</onrefresh>
+	
+	<onimpact>
+		<condition test="charges eq 4">
+			<setactivemodifierkey entity="this_entity" name="Bombardier_Ability3_4" />
+		</condition>
+		<condition test="charges eq 3">
+			<setactivemodifierkey entity="this_entity" name="Bombardier_Ability3_3" />
+		</condition>
+		<condition test="charges eq 2">
+			<setactivemodifierkey entity="this_entity" name="Bombardier_Ability3_2" />
+		</condition>
+		<condition test="charges eq 1">
+			<setactivemodifierkey entity="this_entity" name="Bombardier_Ability3_1" />
+		</condition>
+	</onimpact>
+	
+	<onattackeddamageevent>
+		<targettype type="enemy">
+			<combateffecttype effecttype="AbilityBasedProjectile" />
+			<else>
+				<damageeffecttype effecttype="Returned" />
+				<else>
+					<damageeffecttype effecttype="DOT" />
+					<else>
+						<areaofeffect
+							radius="250"
+							targetselection="all"
+							targetscheme="enemy_units"
+							effecttype="Magic Returned"
+							center="this_owner_entity"
+						>
+							<playeffect effect="effects/impact.effect" target="this_position" source="this_owner_entity" occlude="true" />
+							<damage effecttype="Magic Returned" amount="40,60,80,100" source="this_inflictor_entity" />
+							<playeffect effect="effects/explosion.effect" source="target_position" occlude="true" />
+						</areaofeffect>
+						<removecharge />
+						<condition test="charges eq 3">
+							<setactivemodifierkey entity="this_entity" name="Bombardier_Ability3_3" />
+						</condition>
+						<condition test="charges eq 2">
+							<setactivemodifierkey entity="this_entity" name="Bombardier_Ability3_2" />
+						</condition>
+						<condition test="charges eq 1">
+							<setactivemodifierkey entity="this_entity" name="Bombardier_Ability3_1" />
+						</condition>
+						<condition test="charges eq 0" >
+							<expire />
+						</condition>	
+					</else>
+				</else>
+			</else>
+		</targettype>
+	</onattackeddamageevent>
+	
+	<modifier key="Bombardier_Ability3_4" modpriority="100"
+		passiveeffect="effects/state4.effect"
+	/>
+	
+	<modifier key="Bombardier_Ability3_3" modpriority="100"
+		passiveeffect="effects/state3.effect"
+	/>
+	
+	<modifier key="Bombardier_Ability3_2" modpriority="100"
+		passiveeffect="effects/state2.effect"
+	/>
+	
+	<modifier key="Bombardier_Ability3_1" modpriority="100"
+		passiveeffect="effects/state1.effect"
+	/>
+	
+</state>

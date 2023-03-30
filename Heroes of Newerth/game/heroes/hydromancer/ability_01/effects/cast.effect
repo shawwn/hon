@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world">
+		
+		<!--splashy sound for cast of seaweed-->
+			<sound
+				delay="0"
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2500"
+				volume="1"
+				sample="../sounds/cast.wav"
+			/>
+			
+		<!--cool explosion sound thingy-->
+			<sound
+				delay="750"
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2500"
+				volume=".7"
+				sample="../sounds/impact.wav"
+			/>
+
+			<sound
+				delay="750"
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2500"
+				volume=".3"
+				sample="/heroes/kraken/ability_01/sounds/impact.wav"
+			/>
+			
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>
+      		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+	</thread>
+
+</effect>

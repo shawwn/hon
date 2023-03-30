@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_BabaYagaAttack"
+
+	speed="1500"
+	gravity="0"
+	canturn="false"
+	modelscale="1.0"
+
+	model="effects/bat.mdf"
+	traileffect="effects/projectile.effect"
+	impacteffect="effects/impact.effect"
+>
+</projectile>

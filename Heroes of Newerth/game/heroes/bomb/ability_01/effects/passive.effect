@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="0" useentityeffectscale="1">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="1">
+
+			<template name="waves">	
+
+				<light
+					delay="{delay1}"
+					position="0 0 70"
+					life="400"
+					startcolor="0 0 0"
+					midcolor="3 0 0"
+					midcolorpos=".1"
+					endcolor="0"
+					falloffstart="0"
+					falloffend="300"
+				/>				
+			
+				<billboard
+					delay="{delay1}"			
+					startsize="30"
+					endsize="{endsize1}"
+					position="0 0 50"
+					life="300"					
+					material="/shared/effects/materials/waves.material"
+					startcolor="1 0 0"
+					endcolor="1 0 0"
+					startalpha="1"				
+					endalpha="0"
+					depthbias="-40"	
+					lockup="1"
+					pitch="90"	
+				/>		
+				
+				<billboard
+					delay="{delay2}"			
+					startsize="30"
+					endsize="{endsize2}"
+					position="0 0 50"
+					life="300"					
+					material="/shared/effects/materials/waves.material"
+					startcolor="1 0 0"
+					endcolor="1 0 0"
+					startalpha="1"				
+					endalpha="0"	
+					depthbias="-40"	
+					lockup="1"
+					pitch="90"
+				/>
+
+				<billboard
+					delay="{delay3}"			
+					startsize="30"
+					endsize="{endsize3}"
+					position="0 0 50"
+					life="300"
+					material="/shared/effects/materials/waves.material"
+					startcolor="1 0 0"
+					endcolor="1 0 0"
+					startalpha="1"				
+					endalpha="0"
+					depthbias="-40"	
+					lockup="1"
+					pitch="90"	
+				/>										
+			</template>
+
+			<template name="sound_pulse">	
+
+			<sound
+				delay="{delay}"
+				sample="../sounds/pulse.wav"
+				linearfalloff="true"
+				falloffstart="0" 
+				falloffend="2500" 
+				volume="{volume}"
+			/>
+			
+			</template>
+						
+			<instance delay1="0" delay2="150" delay3="300" name="waves" endsize1="50" endsize2="100" endsize3="200"/>
+			<instance delay1="1000" delay2="1150" delay3="1300" name="waves" endsize1="100" endsize2="150" endsize3="300"/>
+			<instance delay1="2000" delay2="2150" delay3="2300" name="waves" endsize1="200" endsize2="250" endsize3="400"/>
+			<instance delay1="3000" delay2="3150" delay3="3300" name="waves" endsize1="300" endsize2="350" endsize3="500"/>
+			
+			<instance delay1="4000" delay2="4150" delay3="4300" name="waves" endsize1="400" endsize2="450" endsize3="600"/>
+
+			
+			<instance delay1="5000" delay2="5150" delay3="5300" name="waves" endsize1="500" endsize2="550" endsize3="700"/>
+			
+
+			<instance delay1="6000" delay2="6150" delay3="6300" name="waves" endsize1="600" endsize2="650" endsize3="800"/>
+			<instance delay1="7000" delay2="7150" delay3="7300" name="waves" endsize1="700" endsize2="750" endsize3="900"/>
+			<instance delay1="8000" delay2="8150" delay3="8300" name="waves" endsize1="800" endsize2="850" endsize3="1000"/>		
+
+
+			<instance  name="sound_pulse" delay="0" volume=".2"/>
+			<instance  name="sound_pulse" delay="1000" volume=".2"/>
+			<instance  name="sound_pulse" delay="2000" volume=".3"/>
+			<instance  name="sound_pulse" delay="3000" volume=".4"/>
+			<instance  name="sound_pulse" delay="4000" volume=".5"/>
+			<instance  name="sound_pulse" delay="5000" volume=".6"/>
+			<instance  name="sound_pulse" delay="6000" volume=".7"/>
+			<instance  name="sound_pulse" delay="7000" volume=".8"/>
+			<instance  name="sound_pulse" delay="8000" volume=".9"/>
+
+							
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />		
+		<waitfordeath instance="instance0" />		
+	</thread>
+</effect>

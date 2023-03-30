@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Gadget_Scout2_2"
+
+	icon="icon.tga"
+	
+	casttime="0"
+	castactiontime="0"
+	frontqueue="true"
+	inheritmovement="true"
+
+	actiontype="global"
+	casteffecttype=""
+	
+	targetscheme="electriceyes"
+	cooldowntime="10000"
+	nosilence="true"
+>
+	<onaction>
+		<playeffect effect="explosion.effect" source="source_entity" target="" />
+		<spawnaffector name="Affector_Scout_Ability2" target="source_position" />
+		<kill target="this_owner_entity" source="" />
+	</onaction>
+	
+	<onimpact>
+		<startcooldown toolname="Ability_Gadget_Scout2_2" duration="10000"/>
+	</onimpact>
+</ability>

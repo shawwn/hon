@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Mumra_Ability2_Immunity"
+
+	ishidden="true"
+>
+	<onexpired>
+		<playeffect effect="pet/effects/expire_sound.effect" source="source_position"/>
+	</onexpired>
+</state>

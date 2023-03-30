@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1">
+
+	<definitions>
+
+		<modifier
+			name="modifier0"
+			startcolor="2 1 1"
+			endcolor="1 1 1"
+			life="1000"
+		/>
+
+		<particlesystem name="system0" space="world" scale=".60">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2500"
+				volume=".85"
+				sample="../sounds/explode.wav"
+			/>
+
+			<groundsprite			
+				life="3000"
+				material="/shared/effects/materials/ground_scorch.material"
+				size="250"			
+				startalpha=".6"
+				midalpha=".6"
+				endalpha="0"
+				maxyaw="360"
+			/>
+
+			<simpleemitter
+				position="0 0 40"
+				life="700"
+				count="15"
+				spawnrate="2130"
+				depthbias="-30"
+				minparticlelife="200"
+				maxparticlelife="800"
+				speed="650"
+				drag="0.1"
+				offsetsphere="50"
+          			material="/shared/effects/materials/pyroclast_01.material"
+         	>
+				<particle 
+					minanglespeed="-30"
+					maxanglespeed="30"
+					minangle="-360"
+					maxangle="0"
+					startcolor=".4"
+					midcolorpos=".1"
+					endcolor="0"
+					startalpha=".7"
+					endalpha="0"
+					startsize="130"
+					endsize="195"
+					endwidth="110"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				position="0 0 40"
+				life="200"
+				count="20"
+				spawnrate="2000"
+				depthbias="-40"
+				minparticlelife="400"
+				maxparticlelife="800"
+				speed="430"
+				drag="0.05"
+				offsetsphere="40"
+          			material="/shared/effects/materials/phantom_smoke_04.material"
+         	>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="1 .3 0"
+					endcolor="0"
+					startsize="70"
+					endsize="125"
+					minanglespeed="-80"
+					maxanglespeed="80"
+				/>
+			</simpleemitter>
+
+			<billboard
+				position="0 0 40"
+				life="1250"
+				startalpha="1"
+				endalpha="0"
+				startsize="300"
+				endsize="600"
+				depthbias="-20"
+				startparam=".015"
+				endparam="0"
+				material="/shared/effects/materials/refract_ripples.material"
+			/>
+
+			<template name="pulse">
+				
+				<billboard
+					delay="{delay}"
+					life="200"
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".75"
+					startparam=".15"
+					endparam="0"
+					startsize="128"
+					endsize="568"
+					depthbias="-100"
+					position="0 0 20"
+					material="/shared/effects/materials/refract_ring.material"
+					lockup="true"
+					pitch="90"
+				/>				
+			</template>
+		
+			<instance name="pulse" delay="150"/>			
+			<instance name="pulse" delay="220"/>	
+
+			<simpleemitter
+				life="10"
+				spawnrate="1200"
+				count="3"
+				particlelife="200"
+				depthbias="-30"
+				material="/shared/effects/materials/rad_add.material"
+				offsetsphere="5 5 10"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-25"
+					maxanglespeed="25"
+					startcolor="0"
+					midcolor=".3 .15 0"
+					endcolor="0"
+					midcolorpos=".5"
+					endsize="300"
+
+				/>
+			</simpleemitter>			
+
+			<billboard
+				material="/shared/effects/materials/pulse.material"			
+				startcolor="0.8 .4 .3"		
+				endcolor="0"				
+				life="300"
+				position="0 0 10"
+				startsize="100"
+				endsize="500"
+				depthbias="-150"
+				startalpha="1"
+				endalpha="0"
+				maxroll="360"			
+			/>
+
+			<billboard
+				material="/shared/effects/materials/bulb_add.material"				
+				startcolor=".8 .5 1"				
+				endcolor="0 0 0"
+				life="300"	
+				position="0 0 10"
+				startsize="100"
+				endsize="300"
+				depthbias="-150"			
+			/>
+	
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	  	<spawnmodifier instance="instance1" modifier="modifier0"/>  
+		<waitfordeath instance="instance0" />
+	 	<waitfordeath instance="instance1" />
+	</thread>
+
+</effect>

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<modifier
+			life="30000"
+			color="1 1 1"
+			alpha="0"
+		/>
+	
+		<particlesystem name="system0" space="world" scale=".5">
+
+			<simpleemitter
+				position="0 0 25"
+				life="200"
+				count="35"
+				spawnrate="2000"
+				depthbias="-70"
+				minparticlelife="250"
+				maxparticlelife="750"
+				minspeed="250"
+				maxspeed="750"
+				drag="0.1"
+				offsetsphere="15"
+          		material="/shared/effects/materials/phantom_smoke_03.material"
+         	>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="0 1 1"
+					endcolor="0"
+					startsize="10"
+					endsize="50"
+					minanglespeed="-80"
+					maxanglespeed="80"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				count="1" 
+				spawnrate="1000"
+				angle="0"
+				direction="0 1 0"
+				particledirectionalspace="local"
+			>
+				<particle
+				>
+					<model
+						life="5500"
+						startalpha="0"
+						midalpha="0"
+						endalpha="0"
+						model="/heroes/engineer/ability_04/zapper/shield_death/model.mdf"
+						anim="death_1"
+						directionalspace="global"
+						scale=".5"
+					>
+
+						<simpleemitter
+							life="100"
+							position="0 0 35"
+							spawnrate="10000"
+							count="20"
+							minparticlelife="200"
+							maxparticlelife="400"
+							minspeed="0"
+							maxspeed="22"
+							offsetsphere="20"
+							depthbias="-40"
+							material="/shared/effects/materials/soul_projectile3.material"
+						>
+							<particle
+								maxangle="360"
+								startcolor=".15 .15 .5"
+								endcolor="0"
+								size="10"
+								minendscale="4"
+								maxendscale="6"
+								endheight="4"
+							/>
+						</simpleemitter>
+					</model>
+				</particle>
+			</simpleemitter>
+
+			<billboard
+				position="0 0 50"
+				size="25"
+				depthbias="-102"
+				life="200"
+				startcolor="1 1 1"
+				endcolor="0 0 0"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+
+			<billboard
+				position="0 0 50"
+				size="80"
+				depthbias="-100"
+				life="200"
+				startcolor="0 .5 1"
+				endcolor="0 0 0"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+			
+			<billboard
+				position="0 0 50"
+				life="200"
+				param="0.1"	
+				startsize="50"
+				endsize="150"
+				startalpha="0"
+				midalpha=".4"
+				endalpha="0"				
+				depthbias="0"
+				material="/shared/effects/materials/refract_swell.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+			/>
+			
+			<billboard
+				position="0 0 50"
+				delay="175"
+				life="200"
+				param="0.1"	
+				startsize="50"
+				endsize="150"
+				startalpha="0"
+				midalpha=".4"
+				endalpha="0"				
+				depthbias="0"
+				material="/shared/effects/materials/refract_swell.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+			/>
+
+			<simpleemitter
+				position="0 0 50"
+				count="20"
+				spawnrate="100"
+				particlelife="200"
+				speed="220"
+				inheritvelocity="0.0"
+				offsetsphere="30 30 0"
+			>
+				<particle
+				>
+					<trailemitter
+						life="200"
+						spawnrate="61"
+						startminparticlelife="200"
+						startmaxparticlelife="200"
+						offsetsphere="5 5 5"
+						endminparticlelife="1"
+						endmaxparticlelife="1" 
+						texpostime="200"
+						texposscale="0"
+						texstretchscale="1"
+						position="0 0 0"
+						material="/shared/effects/materials/arrow_trail.material"
+					>
+						<particle
+							startcolor="1 1 1"
+							midcolor="0 .5 1"
+							endcolor="0 0 0"
+							startsize="1"
+							endsize="0"
+							midcolorpos=".1"
+							midsizepos=".1"
+						/>
+					</trailemitter>
+				</particle>
+			</simpleemitter>
+			
+			<simpleemitter
+				position="0 0 50"
+				count="20"
+				spawnrate="100"
+				particlelife="200"
+				speed="220"
+				inheritvelocity="0.0"
+				offsetsphere="15 15 0"
+			>
+				<particle
+				>
+					<trailemitter
+						life="200"
+						spawnrate="61"
+						startminparticlelife="200"
+						startmaxparticlelife="200"
+						offsetsphere="5 5 5"
+						endminparticlelife="1"
+						endmaxparticlelife="1" 
+						texpostime="200"
+						texposscale="0"
+						texstretchscale="1"
+						position="0 0 0"
+						material="/shared/effects/materials/arrow_trail.material"
+					>
+						<particle
+							startcolor="1 1 1"
+							midcolor="0 .35 1"
+							endcolor="0 0 0"
+							startsize="1"
+							endsize="0"
+							midcolorpos=".1"
+							midsizepos=".1"
+						/>
+					</trailemitter>
+				</particle>
+			</simpleemitter>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+
+			<simpleemitter
+				count="1"
+				spawnrate="1111"
+				life="3000"
+				particlelife="4000"
+			>
+				<particle>
+
+					<billboard
+						name="refract"
+						life="500"
+						color="1.0 1.0 1.0"
+						startalpha=".5"
+						midalpha=".25"
+						endalpha="0.0"
+						midalphapos="0.75"
+						startparam=".1"
+						endparam="0.0"
+						startsize="125"
+						endsize="200"
+						depthbias="-100"
+						position="0 0 25"
+						material="/shared/effects/materials/refract_ring.material"
+						lockup="true"
+						pitch="90"
+					/>
+
+					<billboard
+						material="/shared/effects/materials/fresnel_blend.material"
+						bone="_bone_centerofchest"
+						color=".2 1 1"
+						life="200"
+						startalpha=".5"
+						midalpha=".5"
+						endalpha="0"
+						position="0 0 25"
+						startsize="35"
+						endsize="75"
+						depthbias="-150"
+					/>
+					
+					<billboard
+						material="/shared/effects/materials/corona_07.material"
+						bone="_bone_centerofchest"
+						startcolor="0 0 .25"
+						endcolor="0 0 0"
+						life="200"
+						position="0 0 25"
+						startsize="35"
+						endsize="75"
+						depthbias="-150"
+					/>
+				</particle>
+			</simpleemitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance1" particlesystem="system0" />
+		<spawnmodifier instance="instance0"/>
+		<waitfordeath  instance="instance0"/>
+		<waitfordeath  instance="instance1"/>
+	</thread>
+
+</effect>

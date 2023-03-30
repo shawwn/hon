@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Tundra_Ability4_Slow"
+
+	icon="icon.tga"
+	passiveeffect=""
+	
+	movespeedslow="0.50"
+	attackspeed="-0.50"
+	
+	effecttype="StatusDebuff"
+>
+	<onframe />
+</state>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" useentityeffectscale="true">
+
+	<definitions>
+
+		<modifier
+			name="modifier0"
+			delay="200"
+			life="1000"
+			loop="true"
+			startcolor="1 1 1"
+			midcolor=".5 .5 .5"
+			endcolor="1 1 1"
+		/>
+		
+		<particlesystem name="system0" space="world" useentityeffectscale="true" scale="0.4">
+
+			<simpleemitter
+				bone="_bone_centerofchest"	
+				spawnrate="15"		
+				particlelife="700"
+				speed="30"
+				material="/shared/effects/materials/scorch_02.material"
+				offsetsphere="15"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-40"
+					maxanglespeed="-40"
+					startcolor="1 0 1"
+					endcolor="0"		
+					startsize="120"
+					endsize="260"
+				/>
+			</simpleemitter>			
+
+			<billboard
+				bone="_bone_overhead"
+				loop="true"
+				expirelife="600"
+				startcolor=".1 0 1"
+				endcolor="0"
+				startsize="100"
+				endsize="0"
+				depthbias="-30"
+				rollspeed="160"
+				material="/shared/effects/materials/dragon.material"
+			/>
+	
+			<billboard
+				bone="_bone_overhead"
+				loop="true"
+				expirelife="600"
+				startcolor=".1 0 1"
+				endcolor="0"
+				rollspeed="150"
+				startsize="100"
+				endsize="0"
+				depthbias="-30"
+				material="/shared/effects/materials/dragon.material"
+				yaw="180"
+			/>	
+
+			<billboard
+				loop="true"
+				bone="_bone_overhead"
+				expirelife="300"
+				color=".3 0 1"
+				startsize="100"
+				midsize="100"
+				endsize="80"
+				depthbias="30"
+				life="1500"
+				material="/shared/effects/materials/pent_add.material"
+			/>
+			
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0"  particlesystem="system0" />	
+		<spawnmodifier instance="instance1" modifier="modifier0"/>  
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />	  
+	</thread>
+
+</effect>

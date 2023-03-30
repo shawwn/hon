@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+		
+		<particlesystem name="system0" space="world" scale="1">
+
+			<sound
+				volume="1" 
+				sample="../sounds/cast.wav"
+				linearfalloff="true"
+				falloffstart="1000"
+				falloffend="2500"
+				life="4000"
+			/>
+			
+			<!--
+			<billboard
+				life="800"
+				material="/shared/effects/materials/comet_blend.material"
+				color="1 1 1"
+				size="402"
+				directionalspace="local"
+				startalpha="1"
+				endalpha="0"
+				pitch="-90"
+				depthbias="0"
+				lockup="1"
+				lockright="1"
+			/>	
+			-->
+			<model
+				turn="1"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+				anim="idle"
+				scale="1"
+				model="aurora1.mdf"
+				position="0 0 -40"
+				life="3500"
+			>
+			
+					<simpleemitter
+						bone="_bone_fx"
+						spawnrate="20"
+						particlelife="3500"
+						offsetsphere="0 0 0"
+					>
+						<particle 
+						>
+				
+
+							<billboard
+								material="/shared/effects/materials/light_rays.material"
+								startscale="1"
+								endscale="1"
+								width="120"
+								minheight="220"
+								maxheight="200"
+								startcolor="0 0 0"
+								midcolor=".23 .0 .15"
+								endcolor="0 0 0"
+								position="0 0 125"	
+								
+								lockup="1"
+								minlife="1333"
+								maxlife="2000"
+							/>
+						
+						
+						</particle>
+
+					</simpleemitter>
+				
+			</model>
+			
+			
+			<model
+				turn="1"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+				anim="idle2"
+				scale="1"
+				model="aurora1.mdf"
+				position="0 0 -40"
+				life="3500"
+			>
+			
+					<simpleemitter
+						bone="_bone_fx"
+						spawnrate="20"
+						particlelife="3500"
+						offsetsphere="0 0 0"
+					>
+						<particle 
+						>
+				
+
+							<billboard
+								material="/shared/effects/materials/light_rays.material"
+								startscale="1"
+								endscale="1"
+								width="120"
+								minheight="220"
+								maxheight="200"
+								startcolor="0 0 0 "
+								midcolor=".0 .3 .15"
+								endcolor="0 0 0"
+								position="0 0 125"	
+								
+								lockup="1"
+								minlife="1333"
+								maxlife="2000"
+							/>
+						
+						
+						</particle>
+
+					</simpleemitter>
+				
+			</model>			
+		
+			<simpleemitter				
+				particlelife="1200"
+				spawnrate="10"				
+				speed="0.0"
+				material="/shared/effects/materials/neb_add.material"								
+			>
+				<particle					
+					startcolor="0 0 0"
+					midcolor=".2 .5 .2"
+					endcolor="0 0 0"
+					minsize="351"
+					maxsize="450"
+					pitch="90"
+					lockup="1"					
+					lockright="1"
+				/>		
+				<particle					
+					startcolor="0 0 0"
+					midcolor=".5 .25 .5"
+					endcolor="0 0 0"
+					minsize="351"
+					maxsize="450"
+					pitch="90"
+					lockup="1"					
+					lockright="1"
+				/>
+
+				<particle					
+					startcolor="0 0 0"
+					midcolor=".8 .0 .5"
+					endcolor="0 0 0"
+					minsize="351"
+					maxsize="450"
+					pitch="90"
+					lockup="1"					
+					lockright="1"
+				/>				
+				
+			</simpleemitter>			
+		
+		
+			
+		
+		</particlesystem>
+		
+		
+		<particlesystem name="system1" space="entity" scale="1">		
+
+		
+
+	
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnparticlesystem instance="instance1" particlesystem="system1" />
+		
+      		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

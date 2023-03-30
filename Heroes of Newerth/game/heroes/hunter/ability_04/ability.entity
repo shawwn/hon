@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Hunter4"
+
+	icon="icon.tga"
+	
+	anim="ability_4"
+	casttime="1000"
+	castactiontime="500"
+	statuseffecttooltip="State_Hunter_Ability4"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_entity"
+	targetscheme="enemy_units"
+	casteffecttype="Magic"
+	
+	manacost="150,200,250"
+	cooldowntime="70000"
+	
+	range="1000"
+>
+	<onimpact >
+		<damage effecttype="" amount="150,250,350"/>
+		<applystate name="State_Hunter_Ability4" duration="5000,7000,9000"/>
+	</onimpact>
+</ability>

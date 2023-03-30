@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" useentityscale="true">
+	<definitions>
+		<modifier
+			name="modifier0"
+			life="500"
+			startcolor="6 2 0"
+			midcolor="1 1 1"
+			endcolor="1 1 1"
+			midcolorpos="0.889"
+		/>
+		<particlesystem name="system0" space="world" scale="1">
+
+		
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2000"
+				volume="0.4" 
+				sample="/heroes/voodoo/ability_04/sounds/ability_04_impact.wav"
+			/>
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="1800"
+				volume="0.2" 
+				sample="/heroes/pyromancer/sounds/impact_%.wav"
+			/>
+			
+	
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+		<spawnmodifier instance="instance1" modifier="modifier0"/> 
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

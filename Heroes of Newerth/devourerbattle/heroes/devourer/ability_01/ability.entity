@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Devourer1"
+	
+	icon="icon.tga"
+	
+	anim="ability_1"
+	casttime="1400"
+	castactiontime="300"
+
+	maxlevel="1"
+	requiredlevel="1"
+
+	actiontype="target_position"
+	targetradius="60"
+	casteffecttype="Physical Push"
+	targetscheme="hook_targets"
+	casteffect="effects/cast.effect"
+	
+	manacost="1"
+	cooldowntime="9000"
+	
+	projectile="Projectile_Devourer_Ability1"
+	range="600"
+	forcerange="600"
+	allowoutofboundscast="true"
+>
+	<onabilityimpact>
+		<applystate name="State_Devourer_Ability1_Data" duration="2000" target="source_entity" />
+	</onabilityimpact>
+
+	<onimpact>
+	</onimpact>
+	
+	<modifier key="Devourer_Distance1" modpriority="80"
+		range="700"
+		forcerange="700"
+	>
+	</modifier>
+	<modifier key="Devourer_Distance2" modpriority="80"
+		range="800"
+		forcerange="800"
+	>
+	</modifier>
+	<modifier key="Devourer_Distance3" modpriority="80"
+		range="900"
+		forcerange="900"
+	>
+	</modifier>
+	<modifier key="Devourer_Distance4" modpriority="90"
+		range="1000"
+		forcerange="1000"
+	>
+	</modifier>
+	<modifier key="Devourer_Distance5" modpriority="90"
+		range="1100"
+		forcerange="1100"
+	>
+	</modifier>
+	<modifier key="Devourer_Distance6" modpriority="90"
+		range="1200"
+		forcerange="1200"
+	>
+	</modifier>
+	<modifier key="Devourer_Distance7" modpriority="100"
+		range="1300"
+		forcerange="1300"
+	>
+	</modifier>
+	<modifier key="Devourer_Distance8" modpriority="100"
+		range="1400"
+		forcerange="1400"
+	>
+	</modifier>
+	
+	
+	<modifier key="Devourer_Radius1" modpriority="100"
+		projectile="Projectile_Devourer_Ability1_Rad1"
+	>
+	</modifier>
+	<modifier key="Devourer_Radius2" modpriority="100"
+		projectile="Projectile_Devourer_Ability1_Rad2"
+	>
+	</modifier>
+	<modifier key="Devourer_Radius3" modpriority="100"
+		projectile="Projectile_Devourer_Ability1_Rad3"
+	>
+	</modifier>
+	<modifier key="Devourer_Radius4" modpriority="100"
+		projectile="Projectile_Devourer_Ability1_Rad4"
+	>
+	</modifier>
+	<modifier key="Devourer_Radius5" modpriority="100"
+		projectile="Projectile_Devourer_Ability1_Rad5"
+	>
+	</modifier>
+	<modifier key="Devourer_Radius6" modpriority="100"
+		projectile="Projectile_Devourer_Ability1_Rad6"
+	>
+	</modifier>
+	<modifier key="Devourer_Radius7" modpriority="100"
+		projectile="Projectile_Devourer_Ability1_Rad7"
+	>
+	</modifier>
+	<modifier key="Devourer_Radius8" modpriority="100"
+		projectile="Projectile_Devourer_Ability1_Rad8"
+	>
+	</modifier>
+</ability>

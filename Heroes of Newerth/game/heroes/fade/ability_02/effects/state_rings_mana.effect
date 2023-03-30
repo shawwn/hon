@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1" useentityeffectscale="1">
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+
+			<simpleemitter
+				spawnrate="50"
+				expirelife="500"
+				startparticlecolor="0 0 0.5"
+				endparticlecolor="0 0 0.5"
+				bone="_bone_centerofchest"
+				maxparticlelife="500"
+				minparticlelife="400"
+				gravity="-22"
+				speed="25"
+				drag=".2"
+				acceleration="1"
+				position="0 0 0"
+				material="/shared/effects/materials/Phantom_black.material"
+				offsetsphere="40 40 40"
+				direction="0 0 0"
+			>
+				<particle 
+					minangle="90"
+					maxangle="360"
+					minanglespeed="60"
+					maxanglespeed="100"
+					startcolor="0 0 0"
+					midcolor=".0 1 1"
+					endcolor="0 0 0"
+					midcolorpos=".5"
+					startframe="0"
+					endframe="1"
+					startsize="30"
+					midsize="75"
+					endsize="100"
+					midsizepos=".3"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".6"
+					startstickiness="0"
+					endstickiness="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				spawnrate="35"
+				expirelife="500"
+				startparticlecolor="1 1 1"
+				endparticlecolor="1 1 1"
+				maxparticlelife="500"
+				minparticlelife="400"
+				minspeed="-50"
+				maxspeed="51"
+				acceleration="1"
+				position="0 0 0"
+				minangle="0"
+				maxangle="0"
+				material="/shared/effects/materials/electric_impact_blend.material"
+				offsetsphere=" 0 0 180"
+				direction="0 0 1"
+			>
+				<particle 
+					minangle="-360"
+					maxangle="360"
+					anglespeed="220"
+					lockup="1"
+					pitch="-90"
+					color="0 0 0"
+					startsize="60"
+					midsize="180"
+					endsize="60"
+					midsizepos=".3"
+					startalpha="0"
+					midalpha=".75"
+					endalpha="0"
+					midalphapos=".6"
+					startstickiness="0"
+					endstickiness="0"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				spawnrate="60"
+				expirelife="500"
+				startparticlecolor="1 1 1"
+				endparticlecolor="1 1 1"
+				maxparticlelife="500"
+				minparticlelife="400"
+				minspeed="-50"
+				maxspeed="51"
+				acceleration="1"
+				position="0 0 0"
+				minangle="0"
+				maxangle="0"
+				material="/shared/effects/materials/corona_06.material"
+				offsetsphere=" 0 0 180"
+				direction="0 0 1"
+			>
+				<particle 
+					minangle="-360"
+					maxangle="360"
+					anglespeed="220"
+					lockup="1"
+					pitch="-90"
+					startcolor="0 0 0"
+					midcolor="0 .1 .25"
+					endcolor="0 0 0"
+					midcolorpos=".5"
+					startsize="60"
+					midsize="180"
+					endsize="60"
+					midsizepos=".3"
+					startstickiness="0"
+					endstickiness="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				spawnrate="25"
+				expirelife="500"
+				startparticlecolor="1 1 1"
+				endparticlecolor="1 1 1"
+				maxparticlelife="500"
+				minparticlelife="400"
+				minspeed="-50"
+				maxspeed="51"
+				acceleration="1"
+				position="0 0 0"
+				minangle="0"
+				maxangle="0"
+				material="/shared/effects/materials/electric_impact_blend.material"
+				offsetsphere=" 0 0 180"
+				direction="0 0 1"
+			>
+				<particle 
+					minangle="-360"
+					maxangle="360"
+					anglespeed="220"
+					lockup="1"
+					pitch="-90"
+					startcolor="0 0 0"
+					midcolor="0 .5 1"
+					endcolor="0 0 0"
+					midcolorpos=".5"
+					startsize="60"
+					midsize="180"
+					endsize="60"
+					midsizepos=".3"
+					startalpha="0"
+					midalpha=".25"
+					endalpha="0"
+					midalphapos=".6"
+					startstickiness="0"
+					endstickiness="0"
+				/>
+			</simpleemitter>
+<!--
+			<simpleemitter
+				spawnrate="30"
+				expirelife="500"
+				startparticlecolor="1 1 1"
+				endparticlecolor="1 1 1"
+				maxparticlelife="500"
+				minparticlelife="400"
+				minspeed="-50"
+				maxspeed="51"
+				acceleration="1"
+				position="0 0 0"
+				minangle="0"
+				maxangle="0"
+				material="/shared/effects/materials/smash_blend.material"
+				offsetsphere=" 0 0 180"
+				direction="0 0 1"
+			>
+				<particle 
+					minangle="-360"
+					maxangle="360"
+					anglespeed="220"
+					lockup="1"
+					pitch="-90"
+					startcolor="0 0 0"
+					midcolor="0 0 0"
+					endcolor="0 0 0"
+					midcolorpos=".5"
+					startsize="60"
+					midsize="180"
+					endsize="60"
+					midsizepos=".3"
+					startalpha="0"
+					midalpha=".5"
+					endalpha="0"
+					midalphapos=".6"
+					startstickiness="0"
+					endstickiness="0"
+				/>
+			</simpleemitter>
+-->
+
+			<simpleemitter
+				spawnrate="50"
+				expirelife="500"
+				bone="_bone_centerofchest"
+				maxparticlelife="500"
+				minparticlelife="400"
+				gravity="-22"
+				speed="25"
+				drag=".2"
+				acceleration="1"
+				position="0 0 0"
+				material="/shared/effects/materials/femme_lightning_01.material"
+				offsetsphere="50 50 50"
+				direction="0 0 0"
+			>
+				<particle 
+					minangle="90"
+					maxangle="360"
+					minanglespeed="60"
+					maxanglespeed="100"
+					startcolor="0 0 0"
+					midcolor=".35 .25 .75"
+					endcolor="0 0 "
+					midcolorpos=".5"
+					startframe="0"
+					endframe="1"
+					startsize="25"
+					midsize="55"
+					endsize="100"
+					midsizepos=".3"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".6"
+					startstickiness="0"
+					endstickiness="0"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				spawnrate="50"
+				expirelife="500"
+				bone="_bone_centerofchest"
+				maxparticlelife="500"
+				minparticlelife="400"
+				gravity="-22"
+				speed="25"
+				drag=".2"
+				acceleration="1"
+				position="0 0 0"
+				material="/shared/effects/materials/smash_add.material"
+				offsetsphere="50 50 50"
+				direction="0 0 0"
+			>
+				<particle 
+					minangle="90"
+					maxangle="360"
+					minanglespeed="60"
+					maxanglespeed="100"
+					startcolor="0 0 0"
+					midcolor=".25 .375 .5"
+					endcolor="0 0 "
+					midcolorpos=".5"
+					startframe="0"
+					endframe="1"
+					startsize="20"
+					midsize="50"
+					endsize="85"
+					midsizepos=".3"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".6"
+					startstickiness="0"
+					endstickiness="0"
+				/>
+			</simpleemitter>
+			
+			<billboard
+				position="0 0 50"
+				delay="0"
+				life="350"
+				param="0.1"	
+				startsize="175"
+				endsize="375"
+				startalpha="0"
+				midalpha=".4"
+				endalpha="0"				
+				depthbias="0"
+				material="/shared/effects/materials/refract_swell.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+			/>
+			
+			<billboard
+				position="0 0 50"
+				delay="175"
+				life="350"
+				param="0.1"	
+				startsize="175"
+				endsize="375"
+				startalpha="0"
+				midalpha=".4"
+				endalpha="0"				
+				depthbias="0"
+				material="/shared/effects/materials/refract_swell.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+			/>
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

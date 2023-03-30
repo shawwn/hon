@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<material>
+	<parameters vDiffuseColor="1.0000 1.0000 1.0000" fSpecularLevel="0.0001" fGlossiness="23" fOpacity="1.0000" fReflect="1.0000" eLightingScheme="terrain" />
+	<!-- <phase name="shadow" vs="mesh_shadow" ps="mesh_shadow" srcblend="BLEND_ONE" dstblend="BLEND_ZERO" translucent="false" cull="CULL_BACK" /> -->
+	<phase name="depth" vs="mesh_depth" ps="mesh_depth" srcblend="BLEND_ONE" dstblend="BLEND_ZERO" translucent="false" cull="CULL_BACK" />
+	<phase name="color" vs="mesh_color_ground" ps="mesh_color_ground" srcblend="BLEND_ONE" dstblend="BLEND_ZERO" translucent="false" cull="CULL_BACK" layer="2">
+		<sampler name="diffuse" texture="color.tga" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="1.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false" filtering="true" border="false" />
+		<sampler name="normalmap" texture="normal.tga" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="1.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false" filtering="true" border="false" />
+		<sampler name="terrain_diffuse" texture="!terrain_d" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="1.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false"></sampler>
+		<sampler name="terrain_normalmap" texture="!terrain_n" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="1.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false"></sampler>
+	</phase>
+	<phase name="fade" vs="mesh_depth" ps="mesh_depth" srcblend="BLEND_ONE" dstblend="BLEND_ZERO" translucent="true" cull="CULL_BACK" alphatest="false" layer="0" colorwrite="false" alphawrite="false" depthwrite="true">
+		<multipass  vs="mesh_color_ground" ps="mesh_color_ground" srcblend="BLEND_SRC_ALPHA" dstblend="BLEND_ONE_MINUS_SRC_ALPHA" translucent="true" cull="CULL_BACK" alphatest="false" layer="2">
+			<sampler name="diffuse" texture="color.tga" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="1.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false" filtering="true" border="false" />
+			<sampler name="normalmap" texture="normal.tga" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="1.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false" filtering="true" border="false" />
+			<sampler name="terrain_diffuse" texture="!terrain_d" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="1.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false"></sampler>
+			<sampler name="terrain_normalmap" texture="!terrain_n" repeat_u="true" repeat_v="true" scale_u="1.0000" scale_v="1.0000" fps="15" mipmaps="true" fullquality="false" nocompress="false"></sampler>
+		</multipass>
+	</phase>	
+</material>

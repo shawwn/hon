@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<modifier
+			name="modifier0"
+			startcolor="4 1.8 1"
+			endcolor="1"
+			alpha="1"
+			life="300"
+		/>
+
+		<particlesystem name="system0" space="world" scale=".75">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="550"
+				falloffend="2500"
+				volume=".75"
+				sample="../sounds/cast.wav"
+			/>
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2500"
+				volume=".85"
+				sample="../sounds/cast2.wav"
+			/>
+
+			<simpleemitter
+				minangle="-90"
+				maxangle="-90"
+				bone="_bone_weapon3"
+				life="400"
+				spawnrate="650"
+				count="40"
+				minparticlelife="250"
+				maxparticlelife="1000"
+				speed="1000"
+				drag="0.05"
+				gravity="-1"
+				offsetsphere="15"
+				material="/shared/effects/materials/bad_healing_smoke_12.material"
+			>
+				<particle
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="-150"
+					maxanglespeed="150"
+					turn="1"
+					startcolor="1 1 1"
+					midcolorpos="0.2"
+					midcolor=".6 .3 .1"
+					endcolor="-1"
+					startsize="35"
+					minendscale="6"
+					maxendscale="10"
+					startalpha=".3"
+					midalpha="1"
+					midalphapos="0.1"
+					endalpha="0"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				minangle="-90"
+				maxangle="-90"
+				bone="_bone_weapon3"
+				life="400"
+				spawnrate="650"
+				count="40"
+				minparticlelife="250"
+				maxparticlelife="1000"
+				speed="1000"
+				drag="0.05"
+				gravity="-1"
+				offsetsphere="15"
+				material="/shared/effects/materials/pyroclast_06.material"
+			>
+				<particle
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="-150"
+					maxanglespeed="150"
+					turn="1"
+					startcolor="1 1 1"
+					midcolor=".5"
+					endcolor="0"
+					midcolorpos="0.2"
+					startsize="35"
+					minendscale="6"
+					maxendscale="10"
+					startalpha=".3"
+					midalpha=".5"
+					endalpha="0"
+					midalphapos="0.1"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				life="1800"
+				spawnrate="400"
+				bone="_bone_weapon3"
+				count="25"
+				minparticlelife="0"
+				maxparticlelife="1500"
+				gravity="24"
+				minspeed="350"
+				maxspeed="1600"
+				drag=".01"
+				material="/shared/effects/materials/spark_10.material"
+				offsetsphere="2"
+				minangle="-10"
+				maxangle="40"
+				direction="0 0 1"
+				directionalspace="global"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startcolor="1"
+					midcolor="1 .6 0"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					minstartsize="18"
+					maxstartsize="12"
+					midsize="6"
+					endsize="3"
+					startalpha="0"
+					midalpha=".7"
+					endalpha="0"
+					midalphapos=".5"
+					turn="true"
+					scale="1.5"
+				/>
+			</simpleemitter>
+
+			<billboard
+				life="250"
+				bone="_bone_weapon3"
+				startsize="50"
+				endsize="150"
+				startcolor="0 0 0"
+				midcolor="1 .35 0"
+				endcolor="0 0 0"
+				material="/shared/effects/materials/whitedot.material"
+				depthbias="-100"
+			/>
+
+			<billboard
+				life="500"
+				bone="_bone_weapon3"
+				startsize="150"
+				endsize="300"
+				startparam=".05"
+				endparam="0"
+				material="/shared/effects/materials/refract_ring.material"
+			/>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		<template name="cannonBalls">
+			<simpleemitter
+				particlelife="2500"
+				spawnrate="2500"
+				count="1"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+			>
+				<particle
+					turn="true"
+				>
+					<model
+						life="1000"
+						model="cannon_fire/model.mdf"
+						anim="idle"
+						color="1 1 1"
+						alpha="1"
+						scale="1.25"
+						directionalspace="local"
+						position="0 -75 0"
+					>
+					
+						<model
+							delay="200"
+							bone="{bone}"
+							life="500"
+							model="bomb_model/model.mdf"
+							color="1 1 1"
+							startalpha="1"
+							midalpha="1"
+							endalpha="0"
+							startscale=".85"
+							endscale=".5"
+							directionalspace="local"
+						>
+							<trailemitter
+								spawnrate="50"
+								particlelife="200"
+								texpostime="200"
+								texposscale="0.0"
+								texstretchscale="1"
+								position="0 0 0"
+								material="/shared/effects/materials/arrow_trail.material"
+							>
+								<particle
+									 startcolor="0 0 0"
+									 midcolor=".065"
+									 endcolor="0 0 0"
+									 startsize="40"
+									 midsize="30"
+									 endsize="5"
+									 midsizepos="0.2"
+							 />
+							</trailemitter>
+						</model>
+
+						<simpleemitter
+							delay="350"
+							life="350"
+							bone="{bone}"
+							spawnrate="500"
+							minparticlelife="250"
+							maxparticlelife="500"
+							inheritvelocity=".05"
+							position="0 -10 0"
+							material="/shared/effects/materials/smoke_particle.material"
+							minangle="0"
+							maxangle="40"
+							direction="0 0 1"
+							offsetsphere="15 15 5"
+						>
+							<particle
+								minangle="0"
+								maxangle="360"
+								minanglespeed="-55"
+								maxanglespeed="55"
+								startcolor="1"
+								midcolor="1"
+								endcolor=".25"
+								midcolorpos=".5"
+								startsize="20"
+								midsize="50"
+								midsizepos=".2"
+								endsize="30"
+								startalpha="0"
+								midalpha=".1"
+								endalpha="0"
+							/>
+						</simpleemitter>
+
+<!--
+						<simpleemitter
+							bone="_bone_fx_01"
+							spawnrate="50"
+							minparticlelife="200"
+							maxparticlelife="500"
+							inheritvelocity=".05"
+							position="0 -10 0"
+							material="/shared/effects/materials/whitedot.material"
+							minangle="0"
+							maxangle="40"
+							direction="0 0 1"
+							offsetsphere="10 10 0"
+						>
+							<particle
+								minangle="0"
+								maxangle="360"
+								minanglespeed="-55"
+								maxanglespeed="55"
+								startcolor=".5 .5 .25"
+
+								midcolor=".35 .05 0"
+								endcolor="0"
+								midcolorpos=".15"
+								startsize="50"
+								endsize="5"
+							/>
+						</simpleemitter>
+
+						<simpleemitter
+							bone="_bone_fx_01"
+							spawnrate="100"
+							drag=".001"
+							minparticlelife="300"
+							maxparticlelife="500"
+							gravity="-1"
+							minspeed="20"
+							maxspeed="120"								
+							direction="0 0 1"
+							offsetsphere="10 10 0"
+							minangle="-40"
+							maxangle="40"
+							material="/shared/effects/materials/spark_10.material"
+							inheritvelocity=".15"				
+						>			
+							<particle
+								startcolor="1 .6 .3"
+								endcolor="0"
+								width="5"
+								height="10"
+								lockup="false"
+								lockright="false"
+								minangle="-360"
+								maxangle="1"
+								minanglespeed="110"
+								maxanglespeed="-110"
+							/>
+						</simpleemitter>
+
+						<billboard
+							bone="_bone_fx_01"
+							life="500"
+							material="/shared/effects/materials/whitedot.material"
+							startsize="100"
+							endsize="50"
+							depthbias="0"
+							startcolor="1 .5 .25"
+							midcolor=".5 0 0"
+							endcolor="0"
+						/>
+
+						<simpleemitter
+							bone="{bone}"
+							spawnrate="75"
+							minparticlelife="250"
+							maxparticlelife="1000"
+							inheritvelocity=".05"
+							position="0 -10 0"
+							material="/shared/effects/materials/pyroclast_06.material"
+							minangle="0"
+							maxangle="40"
+							direction="0 0 1"
+							offsetsphere="20 20 5"
+						>
+							<particle
+								angle="-90"
+								minangle="0"
+								maxangle="30"
+								minanglespeed="-55"
+								maxanglespeed="55"
+								startcolor="0 0 0"
+								midcolorpos=".65"
+								midcolor=".7"
+								endcolor=".7"
+								startsize="15"
+								midsize="20"
+								midsizepos=".2"
+								endsize="185"
+								startalpha=".5"
+								endalpha="0"
+								turn="true"
+							/>
+						</simpleemitter>
+-->
+						
+					</model>
+				</particle>
+			</simpleemitter>
+		</template>
+
+		<instance name="cannonBalls" bone="_bone_fx_01" />
+		<instance name="cannonBalls" bone="_bone_fx_02" />
+		<instance name="cannonBalls" bone="_bone_fx_03" />
+		<instance name="cannonBalls" bone="_bone_fx_04" />
+		<instance name="cannonBalls" bone="_bone_fx_05" />
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+		<spawnmodifier instance="instance1" modifier="modifier0"/> 
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+	</thread>
+
+</effect>

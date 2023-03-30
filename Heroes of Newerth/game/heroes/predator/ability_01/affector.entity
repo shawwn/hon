@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Predator_Ability1"
+
+	radius="0"
+	
+	lifetime="100"
+	impactdelay="100"
+	maxtotalimpacts="1"
+	targetselection="all"
+	effecttype="Magic"
+>
+
+	<onimpact>
+		<combatevent effecttype="AbilityBasedProjectile">
+			<onimpact>
+				<applystate name="State_Predator_Ability1" duration="2000,3000,4000,5000"/>
+				<damage effecttype="Magic" amount="75,125,175,225" />
+			</onimpact>
+		</combatevent>
+	</onimpact>
+	
+	<onexpired>
+		<expirestate name="State_Predator_Ability1_SelfDisarm" target="this_owner_entity"/>
+	</onexpired>
+</affector>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="rig.max" file="break.model" type="K2" high="break.model" >
+
+	<anim name="idle" clip="break.clip" fps="80" loop="true" loopbackframe="-1" />
+	
+		
+		
+</model>

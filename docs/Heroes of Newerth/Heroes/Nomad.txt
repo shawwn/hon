@@ -1,0 +1,81 @@
+Nomad
+-----
+
+Ability 1 - Sand Form
+---------
+Activated State
+
+During state, the Hero:
+
+Has a speed boost
+Has Unit-Walking
+Does damage over time to enemy units around him (similar to Rot)
+Gains High Armor (or High Evasion)
+
+*Attacking or doing the spell "Twist the Blade" should take the Hero out of this State.
+** The night version of third spell may also remove state..
+
+
+
+Ability 2 - Twist the Blade
+---------
+Activated Single Target
+
+Target enemy gets a debuff that lasts a short duration, lowering their max HP. 
+
+On initial impact, this inflicts a mini-bash - maybe .5 seconds or less. 
+
+
+
+Ability 3 - 
+---------
+*This spell becomes a different spell during night time.
+
+Day Time spell: Sun Stroke
+--------------
+Activated Single Target 
+
+Target's movement speed is slowed by a small initial value such as 5 or 10%
+* When target casts spells or use abilities, slow is increased by 10%'
+* When target attacks, slow is increased by 2.5%
+* When target is attacked, slow is increased by 5%
+
+---------------
+// NOTE TO SELF:
+// Will do this with ticks, see shaman ult
+---------------
+
+Night Time spell: Night Strike
+----------------
+Activated Single Target
+Moon Strike  - Hero blinks to a unit - Deals one regular attack in an area around him to all enemies
+
+
+Ability 4
+---------
+Passive
+
+The Hero's attack does stacking bonus damage based on a percentage of the damage dealt by the last attack made by the Hero.
+This is marked by a stacking debuff on the attacked unit - the point being that the bonus damage is dealt only to units the Hero has previously hit. 
+
+The bonus damage is purely based on the Hero's regular melee attacks and is unaffected by any spells he has that cause a unit damage. 
+
+The bonus damage is "Pure".
+
+
+---------------
+// NOTE TO SELF:
+// 1. apply state to enemy
+// 2. in ondamaged in that state, check if the source of damage is the inflictor of the state.
+// 3. the state_b.entity in there currently isn't being used.. nor are charges
+---------------
+
+WOrks like this:
+stores all damage done, adds X% of it as your bonus
+Example:
+- Deal 100 damage on first attack, 0 bonus, stores 100 total damage done
+- Deal 100 damage on attack, 10% * 100 stored damage = 10 bonus damage, store 210 total damage done
+- deal 100, 21 bonus damage, store 331
+- deal 100, 33 bonus, 464 stored
+
+Applies a state that tracks this and refreshes on hit. State lasts a short duration (say, 5s or so)

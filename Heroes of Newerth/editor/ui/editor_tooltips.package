@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package>
+
+	<!-- Common Tooltips -->
+	<instance name="simple_tooltip_nowrap" tip_id="gen_collapse_tip" y="0.2h" align="center" valign="bottom" label="general_collapse" />
+	<instance name="simple_tooltip_nowrap" tip_id="gen_expand_tip" y="0.2h" align="center" valign="bottom" label="general_expand" />
+	<instance name="simple_tooltip_nowrap" tip_id="gen_close_tip" y="0.2h" align="center" valign="bottom" label="general_close" />
+	
+
+	<!-- Sysbar Tooltips -->
+	<instance name="simple_tooltip_nowrap" tip_id="sysbar_file_tip" align="left" y="-0.8h" x="2.0h" valign="top" label="mapedit_tip_svloadfile" />
+	<instance name="simple_tooltip_nowrap" tip_id="sysbar_options_tip" align="left" y="-0.8h" x="2.0h" valign="top" label="mapedit_tip_settings" />	
+	<instance name="simple_tooltip_nowrap" tip_id="sysbar_grid_tip" align="right" y="-0.8h" x="0.3h" valign="top" label="mapedit_tip_grid" />
+	<instance name="simple_tooltip_nowrap" tip_id="sysbar_scripts_tip" align="right" y="-0.8h" x="0.3h" valign="top" label="mapedit_tip_scripts" />
+	<instance name="simple_tooltip_nowrap" tip_id="sysbar_enviro_tip" align="right" y="-0.8h" x="0.3h" valign="top" label="mapedit_tip_enviro" />
+	<instance name="simple_tooltip_nowrap" tip_id="sysbar_properties_tip" align="right" y="-0.8h" x="0.3h" valign="top" label="mapedit_tip_mapproperties" />
+	
+
+	<!-- Category Menu Tooltips -->
+	<instance name="simple_tooltip_floater" tip_id="menu_deform_tip" width="18.0h" valign="top" textalign="left" label="mapedit_category_tip_deform" />
+	<instance name="simple_tooltip_floater" tip_id="menu_textures_tip" width="18.0h" valign="top" textalign="left" label="mapedit_category_tip_textures" />
+	<instance name="simple_tooltip_floater" tip_id="menu_entities_tip" width="18.0h" valign="top" textalign="left" label="mapedit_category_tip_entities" />
+	<instance name="simple_tooltip_floater" tip_id="menu_lights_tip" width="18.0h" valign="top" textalign="left" label="mapedit_category_tip_lights" />
+	<instance name="simple_tooltip_floater" tip_id="menu_foliage_tip" width="18.0h" valign="top" textalign="left" label="mapedit_category_tip_foliage" />
+	<instance name="simple_tooltip_floater" tip_id="menu_occluder_tip" width="18.0h" valign="top" textalign="left" label="mapedit_category_tip_occluder" />
+	<instance name="simple_tooltip_floater" tip_id="menu_sounds_tip" width="18.0h" valign="top" textalign="left" label="mapedit_category_tip_sounds" />
+	<instance name="simple_tooltip_floater" tip_id="menu_blockers_tip" width="18.0h" valign="top" textalign="left" label="mapedit_category_tip_blockers" />
+	<instance name="simple_tooltip_floater" tip_id="menu_cliffs_tip" width="18.0h" valign="top" textalign="left" label="mapedit_category_tip_cliffs" />
+	<instance name="simple_tooltip_floater" tip_id="menu_spawns_tip" width="18.0h" valign="top" textalign="left" label="mapedit_category_tip_spawns" />
+	
+	
+	<!-- Tool Names -->
+	<instance name="simple_tooltip_nowrap" tip_id="deform_raiselower" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_deform_height" />
+	<instance name="simple_tooltip_nowrap" tip_id="deform_flatten" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_deform_flatten" />
+	<instance name="simple_tooltip_nowrap" tip_id="deform_cut" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_deform_cut" />
+	<instance name="simple_tooltip_nowrap" tip_id="deform_smooth" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_deform_smooth" />
+	<instance name="simple_tooltip_nowrap" tip_id="deform_clear" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_deform_clear" />
+	<instance name="simple_tooltip_nowrap" tip_id="deform_noise" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_deform_noise" />
+	<instance name="simple_tooltip_nowrap" tip_id="deform_stamp" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_deform_stamp" />
+	
+	<instance name="simple_tooltip_nowrap" tip_id="texture_color" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_paint_color" />
+	<instance name="simple_tooltip_nowrap" tip_id="texture_texture" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_paint_texture" />
+	<instance name="simple_tooltip_nowrap" tip_id="texture_alpha" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_paint_alpha" />
+	
+	<instance name="simple_tooltip_nowrap" tip_id="entity_modelmode" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_entity_modelmode" />
+	<instance name="simple_tooltip_nowrap" tip_id="entity_treemode" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_entity_treemode" />	
+	<instance name="simple_tooltip_nowrap" tip_id="entity_create" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_entity_create" />
+	<instance name="simple_tooltip_nowrap" tip_id="entity_select" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_entity_select" />
+	<instance name="simple_tooltip_nowrap" tip_id="entity_translatexy" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_entity_translatexy" />
+	<instance name="simple_tooltip_nowrap" tip_id="entity_translatez" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_entity_translatez" />
+	<instance name="simple_tooltip_nowrap" tip_id="entity_yaw" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_entity_yaw" />
+	<instance name="simple_tooltip_nowrap" tip_id="entity_roll" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_entity_roll" />
+	<instance name="simple_tooltip_nowrap" tip_id="entity_pitch" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_entity_pitch" />
+	<instance name="simple_tooltip_nowrap" tip_id="entity_scale" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_entity_scale" />
+	<instance name="simple_tooltip_nowrap" tip_id="entity_ground" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_entity_ground" />
+	<instance name="simple_tooltip_nowrap" tip_id="entity_straighten" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_entity_straighten" />
+	<instance name="simple_tooltip_nowrap" tip_id="entity_resetscale" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_entity_resetscale" />
+	<instance name="simple_tooltip_nowrap" tip_id="entity_selectbymodel" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_entity_selectbymodel" />	
+	<instance name="simple_tooltip_nowrap" tip_id="entity_corpse_time" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_entity_corpse_time_tip" />
+	<instance name="simple_tooltip_nowrap" tip_id="entity_max_health" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_entity_max_health_tip" />
+	<instance name="simple_tooltip_nowrap" tip_id="entity_death_animation" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_entity_death_animation_tip" />	
+	<instance name="simple_tooltip_nowrap" tip_id="entity_npc_spawn_radius" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_entity_npc_spawn_radius_tip" />
+	<instance name="simple_tooltip_nowrap" tip_id="entity_npc_spawn_period" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_entity_npc_spawn_period_tip" />
+	<instance name="simple_tooltip_nowrap" tip_id="entity_water_effect_type" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_entity_water_effect_type_tip" />
+	
+	<instance name="simple_tooltip_nowrap" tip_id="create_tip" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_create_tip" />
+	<instance name="simple_tooltip_nowrap" tip_id="select_tip" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_select_tip" />
+	<instance name="simple_tooltip_nowrap" tip_id="translate_tip" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_translate_tip" />
+	<instance name="simple_tooltip_nowrap" tip_id="translate_z_tip" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_translate_z_tip" />
+	<instance name="simple_tooltip_nowrap" tip_id="rotate_yaw_tip" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_rotate_yaw_tip" />
+	<instance name="simple_tooltip_nowrap" tip_id="rotate_roll_tip" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_rotate_roll_tip" />
+	<instance name="simple_tooltip_nowrap" tip_id="rotate_pitch_tip" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_rotate_pitch_tip" />
+	<instance name="simple_tooltip_nowrap" tip_id="scale_tip" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_scale_tip" />
+	<instance name="simple_tooltip_nowrap" tip_id="cm_avg_tip" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_cm_avg_tip" />
+	<instance name="simple_tooltip_nowrap" tip_id="cm_indiv_tip" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_cm_indiv_tip" />
+	<instance name="simple_tooltip_nowrap" tip_id="cm_hover_tip" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_cm_hover_tip" />
+	
+	<instance name="generic_tooltip_floater" tip_id="foliage_lazymode_tip" valign="top" title="mapedit_foliage_all" label="mapedit_foliage_all_tip" />	
+	<instance name="simple_tooltip_nowrap" tip_id="foliage_all_tip" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_foliage_all" />
+	<instance name="simple_tooltip_nowrap" tip_id="foliage_texture_tip" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_foliage_texture_only" />
+	<instance name="simple_tooltip_nowrap" tip_id="foliage_density_tip" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_foliage_density_only" />
+	<instance name="simple_tooltip_nowrap" tip_id="foliage_size_tip" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_foliage_size_only" />
+	<instance name="simple_tooltip_nowrap" tip_id="foliage_scale_tip" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_foliage_scale_only" />
+	<instance name="simple_tooltip_nowrap" tip_id="foliage_smooth_tip" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_foliage_smooth" />
+	
+	<instance name="simple_tooltip_nowrap" tip_id="foliage_settings_pri_density_tip" x="0" y="-1.7h" align="right" valign="top" font="dyn_9" label="mapedit_foliage_pri_density_tip" />
+	<instance name="simple_tooltip_nowrap" tip_id="foliage_settings_sec_density_tip" x="0" y="-1.7h" align="right" valign="top" font="dyn_9" label="mapedit_foliage_sec_density_tip" />	
+	<instance name="simple_tooltip_nowrap" tip_id="foliage_settings_size_height" x="0" y="-1.7h" align="right" valign="top" font="dyn_9" label="mapedit_foliage_size_height_tip" />
+	<instance name="simple_tooltip_nowrap" tip_id="foliage_settings_size_width" x="0" y="-1.7h" align="right" valign="top" font="dyn_9" label="mapedit_foliage_size_width_tip" />
+	<instance name="simple_tooltip_nowrap" tip_id="foliage_settings_rand_height" x="0" y="-1.7h" align="right" valign="top" font="dyn_9" label="mapedit_foliage_size_rand_height_tip" />
+	<instance name="simple_tooltip_nowrap" tip_id="foliage_settings_rand_width" x="0" y="-1.7h" align="right" valign="top" font="dyn_9" label="mapedit_foliage_size_rand_width_tip" />
+	<instance name="simple_tooltip_nowrap" tip_id="foliage_settings_pri_scale" x="0" y="-1.7h" align="right" valign="top" font="dyn_9" label="mapedit_foliage_pri_scale_tip" />
+	<instance name="simple_tooltip_nowrap" tip_id="foliage_settings_sec_scale" x="0" y="-1.7h" align="right" valign="top" font="dyn_9" label="mapedit_foliage_sec_scale_tip" />
+	
+	<instance name="simple_tooltip_nowrap" tip_id="blockers_movement" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_blocker_movement" />
+	<instance name="simple_tooltip_nowrap" tip_id="blockers_visual" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_blocker_visual" />
+	
+	<instance name="simple_tooltip_nowrap" tip_id="cliff_create" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_cliff_create" />
+	<instance name="simple_tooltip_nowrap" tip_id="cliff_paint" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_cliff_paint" />
+	<instance name="simple_tooltip_nowrap" tip_id="cliff_clear" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_cliff_clear" />
+	<instance name="simple_tooltip_nowrap" tip_id="cliff_flatten" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_cliff_flatten" />
+	<instance name="simple_tooltip_nowrap" tip_id="cliff_variation" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_cliff_variation" />
+	<instance name="simple_tooltip_nowrap" tip_id="cliff_createramp" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_cliff_createramp" />
+	<instance name="simple_tooltip_nowrap" tip_id="cliff_rotateramp" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_cliff_rotateramp" />
+	
+	
+
+	<template name="le_currenttool_tooltip">
+		<floater
+			name="{tip_id}"
+			x="{x=2.2h}" y="{y=-0.5h}"
+			width="{width=25.0h}"
+			align="{align=left}"
+			valign="{valign=top}"
+			color="invisible"
+			visible="{visible=0}"
+			passivechildren="true"
+			grow="true"
+			regrow="true"
+		>
+			<frame texture="/ui/frames/tooltip_bg.tga" color="0 0 0 .8" borderthickness=".6h" />
+			<frame texture="/ui/frames/roundframe.tga" color="#A0A0A0" borderthickness=".6h" />			
+				<label
+					x="0.8h" y="0.6h"
+					textvalign="top"
+					textalign="left"
+					align="center"
+					font="dyn_10"
+					noclick="1"
+					color="#ffab01"
+					shadow="1"					
+					wrap="1"
+					fity="true"					
+					fitypadding="0.8h"
+					watch="{title_watch}" ontrigger="{title_ontrigger}"			
+				>{title}</label>				
+				<panel y="2.5h" width="-1.6h" align="center" noclick="true" grow="true" regrow="true" float="bottom">
+					<label						
+						textvalign="top"
+						textalign="left"
+						align="center"
+						font="dyn_10"
+						noclick="1"
+						color="white"
+						shadow="1"					
+						wrap="1"
+						fity="true"
+						fitxpadding="0"
+						watch="{label_watch}" ontrigger="{label_ontrigger}"
+					>{label}</label>
+					<panel height="1.0h" color="invisible" noclick="true"/>
+				</panel>
+		</floater>
+	</template>
+	
+	<!-- Current Tool Tooltips -->
+	<instance name="le_currenttool_tooltip" tip_id="TMP_currenttool_tip" valign="top" title_watch="EditorRefreshToolDisplay" title_ontrigger="SetText(Translate('mapedit_' # le_tool_current # '_' # le_subtool_current));" label_watch="EditorRefreshToolDisplay" label_ontrigger="SetText(Translate('mapedit_' # le_tool_current # '_' # le_subtool_current # '_tip'));" title="Tool Name" label="Full description of what the tool does. Its fun to know. And knowing is half the battle!" />
+	
+	<instance name="simple_tooltip_floater" tip_id="grid_tip" x="0" width="20.0h" align="right" valign="top" textalign="left" label="mapedit_gridsize_tip" />
+	
+	<instance name="generic_tooltip_floater" tip_id="brush_str_tip" valign="top" title="mapedit_brushstr" label="mapedit_brushstr_tip" />
+	<instance name="generic_tooltip_floater" tip_id="cut_options_tip" valign="top" title="mapedit_cutheight" label="mapedit_cutheight_tip" />
+	<instance name="generic_tooltip_floater" tip_id="clear_options_tip" valign="top" title="mapedit_clearheight" label="mapedit_clearheight_tip" />
+	<instance name="generic_tooltip_floater" tip_id="noise_options_tip" valign="top" title="mapedit_noiseoctave" label="mapedit_noiseoctave_tip" />
+	<instance name="generic_tooltip_floater" tip_id="harmonics_options_tip" valign="top" title="mapedit_harmonics" label="mapedit_harmonics_tip" />
+	<instance name="generic_tooltip_floater" tip_id="centermode_tip" valign="top" title="mapedit_centermode" label="mapedit_centermode_tip" />
+	
+	<!-- New Map -->
+	<instance name="simple_tooltip_floater" tip_id="newmap_name" width="18.0h" valign="top" textalign="left" label="mapedit_newmap_name_tip" />
+	<instance name="simple_tooltip_floater" tip_id="newmap_size" width="18.0h" valign="top" textalign="left" label="mapedit_newmap_size_tip" />
+	<instance name="simple_tooltip_floater" tip_id="newmap_scale" width="18.0h" valign="top" textalign="left" label="mapedit_newmap_scale_tip" />
+	<instance name="simple_tooltip_floater" tip_id="newmap_minplayers" width="18.0h" valign="top" textalign="left" label="mapedit_newmap_minplayers_tip" />
+	<instance name="simple_tooltip_floater" tip_id="newmap_maxplayers" width="18.0h" valign="top" textalign="left" label="mapedit_newmap_maxplayers_tip" />
+	<instance name="simple_tooltip_floater" tip_id="newmap_texturescale" width="18.0h" valign="top" textalign="left" label="mapedit_newmap_texturescalse_tip" />
+	<instance name="simple_tooltip_floater" tip_id="newmap_modifiers" width="18.0h" valign="top" textalign="left" label="mapedit_newmap_modifiers_tip" />
+	
+	<!-- Scripts -->
+	<instance name="simple_tooltip_floater" tip_id="scripts_existing" width="18.0h" valign="top" textalign="left" label="mapedit_scripts_existing_tip" />
+	<instance name="simple_tooltip_floater" tip_id="scripts_new" width="22.0h" valign="top" textalign="left" label="mapedit_scripts_edit_tip" />
+	
+	<!-- Textures -->
+	<instance name="simple_tooltip_floater" tip_id="paint_pri_color" width="25.0h" valign="top" textalign="left" label="mapedit_texture_pricolor_tip" />
+	<instance name="simple_tooltip_floater" tip_id="paint_sec_color" width="25.0h" valign="top" textalign="left" label="mapedit_texture_seccolor_tip" />
+	<instance name="simple_tooltip_floater" tip_id="texture_tip" width="18.0h" valign="top" textalign="left" label="mapedit_texture_tip" />
+	<instance name="simple_tooltip_floater" tip_id="colorswatch_tip" width="18.0h" valign="top" textalign="left" label="mapedit_colorswatch_tip" />
+	
+	<!-- Entitites -->
+	<instance name="generic_tooltip_floater" tip_id="entitymode_tip" valign="top" title="mapedit_entity_mode" label="mapedit_entity_mode_tip" />	
+	<instance name="simple_tooltip_floater" tip_id="treemode_model" width="18.0h" x="0.5h" align="left" valign="bottom" textalign="left" label="mapedit_entity_tree_model_tip" />	
+	<instance name="simple_tooltip_floater" tip_id="entity_name" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_entity_name" />
+	<instance name="simple_tooltip_floater" tip_id="entity_team" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_entity_team" />
+	<instance name="simple_tooltip_floater" tip_id="entity_lvl" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_entity_level" />
+	<instance name="simple_tooltip_floater" tip_id="entity_type" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_entity_type" />
+	<instance name="simple_tooltip_floater" tip_id="entity_model" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_entity_model" />
+	<instance name="simple_tooltip_floater" tip_id="entity_skin" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_entity_skin" />
+	<instance name="simple_tooltip_floater" tip_id="entity_target0" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_entity_target0" />
+	<instance name="simple_tooltip_floater" tip_id="entity_target1" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_entity_target1" />
+	<instance name="simple_tooltip_floater" tip_id="entity_target2" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_entity_target2" />
+	<instance name="simple_tooltip_floater" tip_id="entity_target3" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_entity_target3" />
+	<instance name="simple_tooltip_floater" tip_id="entity_target4" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_entity_target4" />
+	<instance name="simple_tooltip_floater" tip_id="entity_config" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_entity_config" />
+	
+	<!-- Sounds -->
+	<instance name="simple_tooltip_floater" tip_id="sound_path" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_sound_path" />
+	<instance name="simple_tooltip_floater" tip_id="sound_volume" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_sound_volume" />	
+	<instance name="simple_tooltip_floater" tip_id="sound_selected" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_sound_selected_sound_tip" />
+	<instance name="simple_tooltip_floater" tip_id="sound_selected_vol" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_sound_selected_volume_tip" />
+	<instance name="simple_tooltip_floater" tip_id="sound_selected_falloff" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_sound_selected_falloff_tip" />
+	<instance name="simple_tooltip_floater" tip_id="sound_selected_min" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_sound_selected_minloop_tip" />
+	<instance name="simple_tooltip_floater" tip_id="sound_selected_max" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_sound_selected_maxloop_tip" />
+	
+	<!-- Enviro -->
+	<instance name="simple_tooltip_floater" tip_id="enviro_tod" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_enviro_tod_tip" />
+	<instance name="simple_tooltip_floater" tip_id="enviro_entity_ambient" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_enviro_entity_ambient_tip" />
+	<instance name="simple_tooltip_floater" tip_id="enviro_entity_sun" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_enviro_entity_sun_tip" />
+	<instance name="simple_tooltip_floater" tip_id="enviro_terrain_ambient" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_enviro_terrain_ambient_tip" />
+	<instance name="simple_tooltip_floater" tip_id="enviro_terrain_sun" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_enviro_terrain_sun_tip" />	
+	<instance name="simple_tooltip_floater" tip_id="enviro_sun_altitude_tip" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_enviro_sun_altitude_tip" />
+	<instance name="simple_tooltip_floater" tip_id="enviro_sun_azimuth_tip" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_enviro_sun_azimuth_tip" />
+	<instance name="simple_tooltip_floater" tip_id="enviro_sun_spritecolor_tip" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_enviro_sun_spritecolor_tip" />
+	<instance name="simple_tooltip_floater" tip_id="enviro_sun_enabled_tip" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_enviro_sun_enabled_tip" />
+	<instance name="simple_tooltip_floater" tip_id="enviro_fog_mode_tip" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_enviro_fog_mode_tip" />
+	<instance name="simple_tooltip_floater" tip_id="enviro_fog_scale_tip" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_enviro_fog_scale_tip" />
+	<instance name="simple_tooltip_floater" tip_id="enviro_fog_density_tip" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_enviro_fog_density_tip" />
+	<instance name="simple_tooltip_floater" tip_id="enviro_fog_near_tip" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_enviro_fog_near_tip" />
+	<instance name="simple_tooltip_floater" tip_id="enviro_fog_far_tip" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_enviro_fog_far_tip" />
+	<instance name="simple_tooltip_floater" tip_id="enviro_fog_color_tip" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_enviro_fog_color_tip" />
+	<instance name="simple_tooltip_floater" tip_id="enviro_sky_bg_color_tip" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_enviro_sky_bg_color_tip" />
+	<instance name="simple_tooltip_floater" tip_id="enviro_sky_fg_color_tip" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_enviro_sky_fg_color_tip" />
+	<instance name="simple_tooltip_floater" tip_id="enviro_sky_skin_tip" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_enviro_sky_skin_tip" />
+	<instance name="simple_tooltip_floater" tip_id="enviro_sky_enabled_tip" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_enviro_sky_enabled_tip" />
+	<instance name="simple_tooltip_floater" tip_id="enviro_cloud_tex_tip" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_enviro_cloud_tex_tip" />
+	<instance name="simple_tooltip_floater" tip_id="enviro_cloud_scale_tip" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_enviro_cloud_scale_tip" />
+	<instance name="simple_tooltip_floater" tip_id="enviro_cloud_spdX_tip" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_enviro_cloud_spdX_tip" />
+	<instance name="simple_tooltip_floater" tip_id="enviro_cloud_spdY_tip" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_enviro_cloud_spdY_tip" />
+	<instance name="simple_tooltip_floater" tip_id="enviro_cloud_proj_tip" width="18.0h" x="-0.2h" align="right" valign="top" textalign="left" label="mapedit_enviro_cloud_proj_tip" />
+	
+	<!-- Occluders -->
+	<instance name="simple_tooltip_nowrap" tip_id="occluderselect_face_tip" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_occluderselect_face_tip" />
+	<instance name="simple_tooltip_nowrap" tip_id="occluderselect_vertex_tip" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_occluderselect_vertex_tip" />
+	<instance name="simple_tooltip_nowrap" tip_id="occludersplit_tip" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_occludersplit_tip" />
+	<instance name="generic_tooltip_floater" tip_id="occluderselect_tip" valign="top" title="mapedit_occluder_select" label="mapedit_occluder_select_tip" />
+	
+	<!-- Cliffs -->
+	<instance name="generic_tooltip_floater" tip_id="ramp_clear_tip" valign="top" title="mapedit_cliff_cliff_height" label="mapedit_cliff_cliff_height_tip" />
+	<instance name="simple_tooltip_floater" tip_id="ramp_cliff_face_tip" x="-0.5h" width="20.0h" valign="bottom" align="right" textalign="left" label="mapedit_cliff_face_tip" />
+	<instance name="simple_tooltip_floater" tip_id="ramp_variation_tip" x="-0.5h" width="20.0h" valign="bottom" align="right" textalign="left" label="mapedit_cliff_var_tip" />
+	<instance name="simple_tooltip_nowrap" tip_id="variation_random_tip" x="1.5h" y="-1.7h" valign="top" font="dyn_9" label="mapedit_cliff_random_var_tip" />
+	
+	<!-- Misc -->
+	<instance name="simple_tooltip_floater" tip_id="pin_properties" width="20.0h" valign="top" textalign="left" label="mapedit_pin_properties" />
+	<instance name="simple_tooltip_floater" tip_id="snap_tip" width="17.0h" valign="top" textalign="left" label="mapedit_snap_top" />
+	<instance name="simple_tooltip_floater" tip_id="selection_lock_tip" width="19.0h" valign="top" textalign="left" label="mapedit_lock_tip" />
+	
+	
+	<!-- Texture - Layers -->
+	<floater
+		name="texture_layer_tip"
+		x="2.2h" y="-0.5h"
+		width="25.0h"
+		align="left"
+		valign="top"
+		color="invisible"
+		visible="false"
+		passivechildren="true"
+		grow="true"
+		onshow="forcetofront();"
+	>
+		<frame texture="/ui/frames/tooltip_bg.tga" color="0 0 0 .8" borderthickness=".6h" />
+		<frame texture="/ui/frames/roundframe.tga" color="#A0A0A0" borderthickness=".6h" />			
+			<panel y="0.6h" grow="true" width="-1.8h" align="center" float="bottom">			
+				<label fity="true" fitypadding="0.1h" font="dyn_10" noclick="1" color="#ffab01" shadow="1">mapedit_texture_layers</label>				
+				<label fity="true" fitypadding="0.8h" font="dyn_10" noclick="1" color="1 1 1 1" shadow="1" wrap="1">Textures may be applied to two separate layers. Textures behave differently on each layer, outlined below. Click the eyeball icon to show or hide a layer.</label>				
+				<label fity="true" fitypadding="0.1h" font="dyn_10" noclick="1" color="#ffab01" shadow="1">mapedit_texture_layer1</label>				
+				<label fity="true" fitypadding="0.5h" font="dyn_10" noclick="1" color="1 1 1 1" shadow="1" wrap="1">mapedit_texture_layer1_info</label>				
+				<label fity="true" fitypadding="0.1h" font="dyn_10" noclick="1" color="#ffab01" shadow="1">mapedit_texture_layer2</label>				
+				<label fity="true" fitypadding="1.0h" font="dyn_10" noclick="1" color="1 1 1 1" shadow="1" wrap="1">mapedit_texture_layer2_info</label>				
+			</panel>			
+	</floater>
+		
+</package>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+			
+	
+				<model
+					
+					model="areaspin.mdf"
+					anim="idle"
+					startscale="1.65"
+					midscale="1.55"
+					endscale="1.25"
+					expirelife="600"
+					startparticlealpha="1"
+					endparticlealpha="0"
+					life="6000"
+					yawspeed="360"
+					position="0 0 10"
+					roll="0"
+					directionalspace="world"
+				>
+
+					<template name="spirits">
+						<twopointtrailemitter
+							bone_a="{bone01}"
+							bone_b="{bone02}"
+							spawnrate="150"
+							minparticlelife="400"
+							maxparticlelife="1200"
+							texpostime="400"
+							texposscale="100"
+							texstretchscale="1"
+							material="/shared/effects/materials/mysticenergy2.material"
+							minexpirelife="200"
+							maxexpirelife="500"
+							startparticlecolor="0 .5 0"
+							midparticlecolor="0 .2 .2"
+							endparticlecolor="0 0 0"
+							midparticlecolorpos=".7"
+							subframepose="true"
+						>
+							<particle
+							/>
+						</twopointtrailemitter>
+						
+						
+					</template>
+					
+					<instance name="spirits" bone01="_bone_fx_1" bone02="_bone_fx_3" />
+					<instance name="spirits" bone01="_bone_fx_2" bone02="_bone_fx_4" />
+					
+					<simpleemitter	
+				bone="_bone_fx_1"
+				position="0 10 0"			
+				spawnrate="250"
+				particlelife="500"
+				gravity="0"
+				offsetsphere="0 0 0"
+				drag="0"
+				acceleration="0"
+				direction="0 0 0"
+				material="/shared/effects/materials/mysticenergy2.material"
+			>
+					<particle 
+						startcolor="0 .3 0"
+						midcolor="0 .1 0"
+						endcolor="0 0 0"
+						midcolorpos="0.4"				
+						minangle="0"
+						maxangle="360"
+						startsize="20"
+								
+						endsize="0"
+						startalpha=".8"
+						
+						minanglespeed="-90"
+						maxanglespeed="90"
+						
+					/>			
+			</simpleemitter>
+					
+				</model>
+				<billboard
+					
+						life="1000"
+						loop="true"
+						startcolor=".0 .2 .0"
+						endcolor="0 0 0"
+						startalpha="1.0"
+						midalpha="1.0"
+						endalpha="0.0"
+						midalphapos="0.75"
+						startparam="0.05"
+						endparam="0.0"
+						startsize="250"
+						midsize="530"
+						endsize="250"
+						midsizepos=".4"
+						depthbias="-30"
+						position="0 0 0"
+						material="/shared/effects/materials/whitedot.material"
+						lockup="true"
+						pitch="90"
+					/>
+			
+				
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

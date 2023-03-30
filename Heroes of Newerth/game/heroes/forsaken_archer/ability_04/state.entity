@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_ForsakenArcher_Ability4"
+
+	icon="icon.tga"
+	
+	impactinterval="500"
+	
+	passiveeffect="effects/cast.effect"
+	
+	effecttype=""
+>
+	<onframe>
+		<areaofeffect
+			global="true"
+			targetselection="all"
+			targetscheme="my_pseudo_pets"
+		>
+			<applystate name="State_ForsakenArcher_Ability3_Pet_Aggro" continuous="true" timeout="frametime" />
+		</areaofeffect>
+	</onframe>
+
+	<onimpact>
+		<playanim name="ability_4" target="source_entity" />
+		<spawnaffector name="Affector_ForsakenArcher_Ability4" target="source_position" distance="175" param="1"/>
+	</onimpact>
+
+</state>

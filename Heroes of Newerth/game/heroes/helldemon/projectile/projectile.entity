@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_HellDemon_Attack"
+
+	speed="900"
+	gravity="1000"
+
+	modelscale="1.85"
+	model="effects/model.mdf"
+	traileffect="effects/trail.effect"
+	
+	casteffect="effects/cast.effect"
+	impacteffect="effects/impact.effect"
+>
+</projectile>

@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect persistent="1">
+	<definitions>
+
+		
+		<particlesystem name="system0" space="world" scale="1.2">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2200"
+				volume=".85"
+				sample="../sounds/cast.wav"
+			/>
+	
+			<orbiteremitter
+				
+				spawnrate="221"
+				count="10"
+				particlelife="1000"
+				gravity="0.0"
+				minspeed=".8"
+				maxspeed="1.5"
+				acceleration="0" 
+				drag="0.0"
+				minangle="-90" 
+				maxangle="90" 
+				position="0.0 0.0 20" 
+				origin="1.0 1 230" 
+				orbit="1.0 0.0 1.0" 
+				direction="0.0 0.0 1.0" 
+				offset="3.14 0 20"
+				cylindrical="false" 
+				material="/shared/effects/materials/note_1.material"
+				
+			>
+				<particle
+					color="0 1 .2"
+					midcolorpos="0.5"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					frame="0"
+					framespeed="8"		
+					minscale="7.5"
+					maxscale="24.5"								
+					turn="true"
+				/>
+			</orbiteremitter>
+		
+			<orbiteremitter
+				
+				spawnrate="221"
+				count="10"
+				particlelife="1000"
+				gravity="0.0"
+				minspeed=".8"
+				maxspeed="1.5"
+				acceleration="0" 
+				drag="0.0"
+				minangle="-90" 
+				maxangle="90" 
+				position="0.0 0.0 20" 
+				origin="1.0 1 230" 
+				orbit="1.0 0.0 1.0" 
+				direction="0.0 0.0 1.0" 
+				offset="3.14 0 20"
+				cylindrical="false" 
+				material="/shared/effects/materials/note_2.material"
+				
+			>
+				<particle
+					color="0.3 .4 1"
+					midcolorpos="0.5"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					frame="0"
+					framespeed="8"		
+					minscale="6.5"
+					maxscale="24.5"								
+					turn="true"
+				/>
+			</orbiteremitter>	
+
+
+
+			<orbiteremitter
+				
+				spawnrate="221"
+				count="10"
+				particlelife="1000"
+				gravity="0.0"
+				minspeed=".8"
+				maxspeed="1.5"
+				acceleration="0" 
+				drag="0.0"
+				minangle="-90" 
+				maxangle="90" 
+				position="0.0 0.0 20" 
+				origin="1.0 1 230" 
+				orbit="1.0 0.0 1.0" 
+				direction="0.0 0.0 1.0" 
+				offset="3.14 0 20"
+				cylindrical="false" 
+				material="/shared/effects/materials/note_3.material"
+				
+			>
+				<particle
+					color="0 .5 1"
+					midcolorpos="0.5"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					frame="0"
+					framespeed="8"		
+					minscale="7.5"
+					maxscale="24.5"								
+					turn="true"
+				/>
+			</orbiteremitter>
+
+			
+			<simpleemitter
+				count="144"
+				particlelife="300"				
+				spawnrate="1130"
+				minspeed="480"
+				maxspeed="730"
+
+				minangle="90"
+				maxangle="100"
+				direction="0 0 -1"
+				particledirectionalspace="local"
+				material="/shared/effects/materials/water_splash.material"
+				offsetsphere="20 20 20"
+				position="0 0 80"
+		
+			>
+
+				<particle 
+					startcolor=".2  1 .6"
+					endcolor="1 0 1"
+					startsize="00"
+					minendsize="50"				
+					maxendsize="180"
+					startalpha="0"
+					midalpha=".6"
+					endalpha="0"
+					turn="true"
+
+				/>
+			</simpleemitter>	
+			
+		
+			
+			<light
+				falloffstart="150"
+				falloffend="500"
+				life="350"			
+				startcolor="2 4 8"			
+				endcolor="0 0 0"
+				position="0 0 40"	
+			/>
+			
+			
+				
+			<billboard
+				delay="60"
+				position="0 0 50"
+				life="250"
+				color="0 1 1"
+				endcolor="0"
+				startsize="125"
+				endsize="800"
+				material="/shared/effects/materials/stomp_01.material"
+				lockup="1"
+				pitch="90"
+			/>	
+
+			<billboard
+				delay="60"
+				position="0 0 50"
+				life="250"
+				color="1 1 1"
+				startalpha="1"
+				endalpha="0"
+				startsize="125"
+				endsize="600"
+				material="/shared/effects/materials/splatter_blend.material"
+				lockup="1"
+				pitch="90"
+			/>	
+
+			<simpleemitter
+				life="1300"
+				position="0 0 50"			
+				spawnrate="5000"
+				depthbias="-100"
+				particlelife="200"
+				count="5"
+				direction="0 0 1"
+				offsetsphere="10"	
+          		material="/shared/effects/materials/smash_add.material"
+         	>
+				<particle 
+					minanglespeed="-180"
+					maxanglespeed="180"
+					minangle="0"
+					maxangle="360"
+					startcolor="0"
+					midcolor="0 0.4 1"
+					endcolor="0"
+					midcolorpos="0.25"
+					startsize="140"
+					endsize="375"				
+				
+				/>
+			</simpleemitter>
+
+			<billboard
+				delay="0"
+				position="0 0 50"
+				life="200"
+				startalpha="1.0"				
+				endalpha="0"
+				startparam="0.15"
+				endparam="0.0"				
+				startsize="150"
+				endsize="550"
+				material="/shared/effects/materials/refract_bubble.material"
+			/>
+			
+			
+			<simpleemitter	
+				life="300"			
+				position="0 0 60"
+				spawnrate="1225"
+				particlelife="1000"					
+				minspeed="10.0"
+				maxspeed="410"
+				drag="0.01"
+				inheritvelocity=".25"
+				offsetsphere="10 10 10"
+				gravity="2"
+				material="/shared/effects/materials/bub.material"
+			>
+				<particle	
+					color=".3 1 1"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-80"
+					maxanglespeed="80"
+					startsize="20"
+					endsize="0"					
+					depthbias="-160"
+				/>
+			</simpleemitter>
+
+			
+		
+			<simpleemitter
+				count="44"
+				particlelife="300"				
+				spawnrate="1130"
+				minspeed="480"
+				maxspeed="730"
+
+				minangle="90"
+				maxangle="100"
+				direction="0 0 -1"
+				particledirectionalspace="local"
+				material="/shared/effects/materials/refract_bubble.material"
+				offsetsphere="20 20 20"
+				position="0 0 80"
+		
+			>
+
+				<particle 
+					color="1  1 1 "
+					startsize="00"
+					minendsize="50"				
+					maxendsize="180"
+					startalpha="0"
+					midalpha=".4"
+					endalpha="0"
+					turn="true"
+					param="0.02"
+				/>
+			</simpleemitter>			
+			<billboard
+				delay="0"
+				position="0 0 50"
+				life="250"
+				color="1 1 0"
+				endcolor="0"
+				startsize="425"
+				endsize="800"
+				material="/shared/effects/materials/whitedot.material"
+				lockup="1"
+				pitch="90"
+			/>			
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

@@ -1,0 +1,33 @@
+Import(['getCPPFiles', 'env', 'project', 'build_type', 'arch'])
+
+# precompiled header
+env['Gch'] = env.GchSh(target = '../../k2map_common.h.gch/'+build_type+'-'+arch, source = '../k2map_common.h')[0]
+
+# libs to link against
+if build_type == 'debug':
+	env.Append(LIBS=['k0_debug-'+arch, 'xml2', 'z'])
+else:
+	env.Append(LIBS=['k0-'+arch, 'xml2', 'z'])
+
+# cpp defines
+env.Append(CPPDEFINES = [''])
+
+# library search path
+env.Append(LIBPATH = ['#./../k0/'+build_type+'-'+arch])
+
+# runtime lib path
+env.Append(LINKFLAGS = '-z origin -Wl,--enable-new-dtags')
+env.Append(RPATH = [ Literal('\\$$ORIGIN/libs-'+arch), Literal('\\$$ORIGIN') ])
+
+# source files
+src = ['k2validator.cpp']
+
+# create the binary, dependencies, install to game dir, target
+if build_type == 'debug':
+	binname = project+'_debug-'+arch
+	env.Program(target = binname, source = src)
+	Alias(project + '-' + build_type + '-' + arch, binname)
+else:
+	binname = project+'-'+arch
+	env.SplitProgram(target = [binname, binname+'.dbg'], source = src)
+	Alias(project + '-' + build_type + '-' + arch, [binname, binname+'.dbg'])

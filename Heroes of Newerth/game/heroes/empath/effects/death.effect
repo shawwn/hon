@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="1.0">
+
+		<!-- fairy's flowers -->
+			<terrainemitter
+				spawnrate="4"
+				expirelife="600"
+				gravity="0"
+				range="80"
+				position="0 -175 0"
+			>
+				<particle
+				>
+					<model
+						life="5000"
+						color=".7 .7 1"
+						model="/heroes/fairy/effects/model.mdf"
+						anim="default_1"
+						loop="false"
+						scale="1"
+						
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".5"
+					/>
+				</particle>
+			</terrainemitter>
+				
+			
+			
+				<!--grass-->
+		<terrainemitter
+				position="0 -175 0"
+				material="/shared/effects/materials/grass.material"
+				spawnrate="400"
+				count="60"
+				range="75"
+				direction="0 0 1"
+				minangle="-30"
+				maxangle="30"
+				particlelife="15000"
+
+				
+			>
+				<particle
+					minyaw="0"
+					maxyaw="360"
+					minroll="-10"
+					maxroll="10"
+					lockright="true"
+					lockup="true"
+					color="2 2 2"
+					startsize="0"
+					midsize="45"
+					endsize="45"
+					midsizepos=".3"
+					flare="true"
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+				
+				/>
+			</terrainemitter>
+	<!-- end flowers -->
+		
+			<simpleemitter
+				spawnrate="10"
+				count="12"
+				gravity="0"
+				speed="0.0"
+				drag="0.0"
+				offsetsphere="80 80  0"
+				direction="0 1 0.1"
+				position="0 -175 0"
+				minangle="-30"
+				maxangle="30"
+			>
+				<particle
+					turn="true"
+					
+				>
+					<model
+						expirelife="500"
+						model="/buildings/hellbourne/main/effects/flower/model.mdf"
+						anim="idle"
+						minstartscale=".2"
+						maxstartscale=".4"
+						minendscale=".2"
+						maxendscale=".4"
+						position="0.0 0.0 0.0"
+						directionalspace="local"
+						minyaw="45"
+						maxyaw="360"
+						minroll="0"
+						maxroll="20"
+						minpitch="0"
+						maxpitch="20"
+						color="1 .6 0"
+					/>
+				</particle>
+			</simpleemitter>
+			
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+

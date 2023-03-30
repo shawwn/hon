@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect  deferred="1">
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+		
+			<model
+				parentmodel="true"
+				parentskeleton="true"
+				startcolor="5 1 1"
+				endcolor="0"
+				material="/shared/effects/materials/shell4.material"
+				scale="1.1"
+				startalpha="1"
+				endalpha="0"
+				expirelife="1000"
+			/>
+
+			<simpleemitter
+				spawnrate="50"
+				count="5"
+				particlelife="5500"
+				offsetsphere="0 25 0"
+				position="0 0 0"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+			>
+				<particle
+				turn="true"
+				>
+					<model
+						position="0 0 0"
+						startscale="1"
+						endscale=".5"
+						life="500"
+						model="../../projectile/effects/bullet/bullet.mdf"
+						anim="ability_1"
+						startcolor="1 1 1"
+						endcolor="0 0 0"
+						startalpha=".1"
+						endalpha="0"
+					>
+					</model>	
+					
+				</particle>
+			</simpleemitter>
+
+			<simpleemitter
+				spawnrate="15"
+				particlelife="250"
+				position="0 0 0"
+				material="/shared/effects/materials/shieldstarfish.material"
+				particledirectionalspace="local"
+				offsetdirection="0 0 0"
+				offsetradial="0"
+			>
+				<particle 
+					minangle="-15"
+					maxangle="-15"
+					minanglespeed="0"
+					startcolor="1 .5 .3"
+					endcolor="0 0 0"
+					maxanglespeed="00"
+					startframe="0"
+					endframe="1"
+					startsize="150"
+					endsize="250"
+					startalpha=".3"
+					midalpha=".3"
+					endalpha="0"
+					midalphapos=".5"
+					lockup="true"
+					lockright="1"
+					pitch="0"
+					flare="0"
+					yaw="00"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				spawnrate="20"
+				particlelife="250"
+				position="0 0 0"
+				material="/shared/effects/materials/refract_swell.material"
+				particledirectionalspace="local"
+				offsetdirection="0 0 0"
+				offsetradial="0"
+				param=".4"
+			>
+				<particle
+					startsize="250"
+					endsize="500"
+					param="0.5"
+					startalpha=".5"
+					midalpha=".5"
+					endalpha="0"
+					midalphapos=".5"
+					lockup="true"
+					lockright="1"
+					pitch="0"
+					flare="0"
+					yaw="00"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				spawnrate="1000"
+				count="1"
+				particlelife="5500"
+				offsetsphere="0 25 0"
+				position="0 0 0"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+			>
+				<particle>
+					<billboard
+						life="550"
+						startcolor="0.4 0.2 0.05"
+						midcolor="0.4 0.2 0.05"
+						endcolor="0"
+						startsize="350"
+						endsize="0"
+						depthbias="-50"
+						material="/shared/effects/materials/whitedot.material"
+						position="0 0 25"
+					/>
+					
+					<billboard
+						position="0 0 50"
+						delay="0"
+						life="350"
+						param="0.1"	
+						startsize="150"
+						endsize="300"
+						startalpha="0"
+						midalpha=".5"
+						endalpha="0"				
+						depthbias="0"
+						material="/shared/effects/materials/refract_swell.material"
+						lockup="1"
+						lockright="1"
+						pitch="90"
+					/>
+					
+					<billboard
+						position="0 0 50"
+						delay="175"
+						life="350"
+						param="0.1"	
+						startsize="150"
+						endsize="300"
+						startalpha="0"
+						midalpha=".5"
+						endalpha="0"				
+						depthbias="0"
+						material="/shared/effects/materials/refract_swell.material"
+						lockup="1"
+						lockright="1"
+						pitch="90"
+					/>
+				</particle>
+			</simpleemitter>
+			
+			<groundsprite 
+				scale="3.5"
+				expirelife="150"
+				startcolor=".25 .1 0"
+				endcolor=" 0 0 0"
+				material="/shared/effects/materials/whitedot_ground.material"
+			/>
+			
+			<simpleemitter
+				minangle="-90"
+				maxangle="-90"
+				spawnrate="150"
+				minparticlelife="250"
+				maxparticlelife="1000"
+				speed="1000"
+				drag="0.1"
+				gravity="-1"
+				offsetsphere="10 10 0"
+				material="/shared/effects/materials/smoke_particle.material"
+			>
+				<particle
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="-150"
+					maxanglespeed="150"
+					turn="1"
+					startcolor=".8 .8 .8"
+					endcolor="0 0 0"
+					startsize="40"
+					minendscale="10"
+					maxendscale="20"
+					startalpha="1"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+	  
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+
+

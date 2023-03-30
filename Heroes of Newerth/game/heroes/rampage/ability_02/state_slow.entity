@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Rampage_Ability2_Slow"
+	
+	icon="icon.tga"
+	passiveeffect=""
+
+	movespeed="-35,-50,-65,-80"
+>
+	<onframe />
+</state>

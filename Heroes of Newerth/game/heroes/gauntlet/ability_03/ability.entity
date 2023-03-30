@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Gauntlet3"
+	
+	icon="icon.tga"
+	statuseffecttooltip="State_Gauntlet_Ability3"
+	statuseffecttooltip2="State_Gauntlet_Ability3_Self"
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+	actiontype="passive"
+	
+	maxcharges="20,25,30,35"
+	modifierkey="gauntlet_slowfist"
+>
+	<onattackimpact />
+	<onimpact />
+	
+	<onlearn>
+		<setcharges a="0"/>
+		<applystate name="State_Gauntlet_Ability3_Charges" target="source_entity" continuous="true" proxy="this_entity" />
+	</onlearn>
+	
+	<onupgrade>
+		<applystate name="State_Gauntlet_Ability3_Charges" target="source_entity" continuous="true" proxy="this_entity" />
+	</onupgrade>
+
+	<modifier key="attack" modpriority="60" exclusive="true"
+		statuseffecttooltip="State_Gauntlet_Ability3"
+	>
+		<onattackimpact>
+			<compare a="combat_attackability" b="0" op="eq">
+				<cantarget targetscheme="enemy_units" effecttype="Physical">
+					<setvar0 a="target_attackdamage" b="charges" op="mult" />
+                    <setvar0 a="var0" b="0.01" op="mult" />
+					<setvar0 a="var0" b="3" op="div" />
+                    <applystate name="State_Gauntlet_Ability3" owner="this_owner_entity" duration="4000" pushentity="true"/>
+                    <addcharges entity="stack_entity" count="charges" timed="true"/>
+                    <applystate name="State_Gauntlet_Ability3_Enemy_Damage" owner="this_owner_entity" duration="4000" pushentity="true"/>
+                    <addcharges entity="stack_entity" count="var0" timed="true"/>
+                    <applystate name="State_Gauntlet_Ability3_Self" target="source_entity" owner="this_owner_entity" duration="4000" pushentity="true"/>
+                    <addcharges entity="stack_entity" count="var0" timed="true"/>
+					<targettype type="hero">
+						<setcharges a="0"/>
+					</targettype>
+				</cantarget>
+			</compare>
+		</onattackimpact>
+	</modifier>
+</ability>

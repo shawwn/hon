@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+    name="State_Gauntlet_Ability3_Enemy_Damage"
+    
+    icon="icon.tga"
+    effecttype="StatusDebuff"
+    
+    passiveeffect="effects/state_enemy.effect"
+    
+    damagepercharge="-3"
+>
+    
+</state>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_SandWraith1"
+
+	icon="icon.tga"
+	
+	anim="ability_1"
+	casttime="1330"
+	castactiontime="300"
+	
+	statuseffecttooltip="State_SandWraith_Ability1_Path"
+	statuseffecttooltip2="State_SandWraith_Ability1_Debuff"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_dual"
+	targetradius="150"
+	casteffecttype="Magic"
+	targetscheme="enemy_heroes"
+	casteffect="effects/cast.effect"
+	
+	novoiceresponse="true"
+	
+	manacost="130,140,150,160"
+	cooldowntime="16000"
+
+	range="2000"
+	forcerange="2000"
+	allowoutofboundscast="true"
+>
+	<onimpact>
+		<applystate name="State_SandWraith_Ability1_Self_Antiwalking" target="source_entity" duration="12000" />
+		<playeffect effect="effects/cast_impact.effect" source="source_entity" target="source_entity"/>
+		<condition test="target_entity != 0">
+			<spawnprojectile name="Projectile_SandWraith_Ability1_Track" source="source_entity" target="target_entity" bind="stack_entity" proxy="stack_entity" offset="0 60 0" pushentity="true" noresponse="true" />
+			<spawnaffector name="Affector_SandWraith_Ability1" target="stack_entity" />
+			<spawnaffector name="Affector_SandWraith_Ability1_Vision" target="stack_entity" />
+		</condition>
+		<else>
+			<spawnprojectile name="Projectile_SandWraith_Ability1" source="source_entity" target="target_position" bind="stack_entity" proxy="stack_entity" offset="0 60 0" pushentity="true" />
+			<spawnaffector name="Affector_SandWraith_Ability1" target="stack_entity" />
+			<spawnaffector name="Affector_SandWraith_Ability1_Vision" target="stack_entity" />
+		</else>
+	</onimpact>
+</ability>

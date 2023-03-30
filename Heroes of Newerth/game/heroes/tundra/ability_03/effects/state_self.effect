@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="">
+	<definitions>
+		<particlesystem name="system0" space="world" scale=".8">
+
+			<twopointemitter
+				bone_a="_bone_weaponattach"
+				bone_b="_bone_weapon3"
+				spawnrate="50"
+				particlelife="1000"
+				angle="0.0"
+				offsetsphere="5 8 5"
+				material="/shared/effects/materials/flame.material"
+			>
+				<particle
+					startcolor="0.0 0.0 0.0"
+					midcolor=".2 .3 1"
+					endcolor="-1 "
+					midcolorpos="0.5"
+					startalpha="1.0"
+					endalpha="1.0"
+					maxangle="360"
+					minanglespeed="-45"
+					maxanglespeed="45"
+					minendsize="25"
+					startsize="5"
+					maxendsize="40"
+					flare="true"
+					startanchor="1"
+					endanchor=".7"
+					
+				/>
+				<particle
+					startcolor="0.0 0.0 0.0"
+					midcolor=".25 .5 1"
+					endcolor="-1 "
+					midcolorpos="0.5"
+					startalpha="1.0"
+					endalpha="1.0"
+					maxangle="360"
+					minanglespeed="-45"
+					maxanglespeed="45"
+					minendsize="25"
+					startsize="5"
+					maxendsize="35"
+					flare="true"
+					startanchor="1"
+					endanchor=".7"
+					
+				/>
+			</twopointemitter>
+
+			<simpleemitter
+				bone="_bone_weapon3"
+				spawnrate="10"
+				minparticlelife="1000"
+				maxparticlelife="2000"
+				gravity="0"
+				drag="0"
+				position="0 0 0"
+				offsetsphere="1 1 0"
+				material="/shared/effects/materials/phantom_smoke_10.material"
+			>
+				<particle 
+					maxangle="360"
+					minanglespeed="-6"
+					maxanglespeed="6"
+					startcolor="0 0 0"
+					midcolor=".1 .1 .25"
+					endcolor="0 0 0"
+					startsize="0"
+					midsize="70"
+					endsize="0"
+					endanchor="0"
+					stickiness="1"
+				/>
+			</simpleemitter>
+
+			<twopointemitter
+				bone_a="_bone_weapon2"
+				bone_b="_bone_weapon3"
+				spawnrate="140"
+				particlelife="300"
+				offsetsphere="2"
+				material="/shared/effects/materials/femme_lightning_01.material"
+			>
+				<particle
+					startcolor="0.0 0.0 0.0"
+					midcolor=".1 0.8 1"
+					endcolor="0 "
+					midcolorpos="0.5"
+					startalpha="1.0"
+					endalpha="1.0"
+					maxangle="360"
+					minanglespeed="-45"
+					maxanglespeed="45"
+					minendsize="5"
+					startsize="5"
+					maxendsize="15"
+					flare="true"
+					anchor="1"
+				/>
+				<particle
+					startcolor="0.0 0.0 0.0"
+					midcolor=".1 .2 1"
+					endcolor="0 "
+					midcolorpos="0.5"
+					startalpha="1.0"
+					endalpha="1.0"
+					maxangle="360"
+					minanglespeed="-45"
+					maxanglespeed="45"
+					minendsize="5"
+					startsize="25"
+					maxendsize="15"
+					flare="true"
+					anchor="1"
+				/>
+			</twopointemitter>
+
+			<beam
+				bone_a="_bone_weapon3"
+				bone_b="_bone_weapon1"
+				startsize="100"
+				endsize="110"
+				loop="true"
+				life="150"
+				startcolor="0 0 .5"
+				midcolor="0 0 .7"
+				endcolor="0 0 .5"
+				midcolorpos=".8"
+				material="/shared/effects/materials/bow_glow_03.material"
+				framespeed="5"
+				depthbias="-30"
+				anchor="1"
+			/>
+			
+			<beam
+				bone_a="_bone_weapon3"
+				bone_b="_bone_weapon1"
+				startsize="85"
+				midsize="95"
+				endsize="85"
+				loop="true"
+				life="150"
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="1 1 1"
+				material="/shared/effects/materials/bow_glow_03.material"
+				framespeed="5"
+				depthbias="-30"
+				anchor="1"
+			/>
+			
+			<beam
+				bone_a="_bone_weapon3"
+				bone_b="_bone_weapon1"
+				startsize="50"
+				midsize="65"
+				endsize="50"
+				loop="true"
+				life="150"
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="1 1 1"
+				material="/shared/effects/materials/bow_glow_03.material"
+				framespeed="5"
+				depthbias="-30"
+				anchor="1"
+			/>
+			
+			<twopointtrailemitter
+				bone_a="_bone_weapon3"
+				bone_b="_bone_weaponattach"
+				spawnrate="300"
+				particlelife="150"
+				subframepose="1"
+				material="/shared/effects/materials/femme_lightning_01.material"
+			>
+				<particle 
+					
+					startalpha="1.0" 
+					endalpha="0.0" 
+					startcolor=".25" 
+					endcolor="0"
+					anchor="1"
+				/>
+			</twopointtrailemitter>
+
+			<trailemitter
+				bone="_bone_weaponattach"
+				spawnrate="100"
+				particlelife="100"
+				texpostime="100"
+			 	texposscale="0.0"
+			 	texstretchscale=".4"
+				material="/shared/effects/materials/dragon_01.material"
+			>
+				<particle
+					 startcolor="1 1 1"
+					 midcolor=".5 .5 .5"
+					 endcolor="0"
+					 startsize="40"
+					 endsize="30"
+			 />
+
+			</trailemitter>
+
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

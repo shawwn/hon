@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_Dampeer"
+
+	team="Hellbourne"
+	icon="icon.tga"
+	portrait="icon.tga"
+	model="model.mdf"
+	skin=""
+	
+	passiveeffect=""
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="sounds/voice/select_%.wav"
+	selectedflavorsound="sounds/voice/select_flavour_%.wav"
+	confirmmovesound="sounds/voice/move_%.wav"
+	confirmattacksound="sounds/voice/attack_%.wav"
+	nomanasound="sounds/voice/no_mana.wav"
+	cooldownsound="sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="sounds/voice/taunt_prior.wav"
+	tauntkillsound="sounds/voice/taunt_after.wav"
+	
+	preglobalscale="1.8"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="112"
+	boundsradius="24"
+	selectionradius="44"
+	targetoffset="0 0 64"
+	
+	infoheight="180"
+	movespeed="305"
+	turnrate="540"
+	turnsmoothing="0.08"
+
+	maxhealth="150"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="-0.68"
+	magicarmor="5.5"
+
+	inventory0="Ability_Dampeer1"
+	inventory1="Ability_Dampeer2"
+	inventory2="Ability_Dampeer3"
+	inventory3="Ability_Dampeer4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8="Ability_Taunt"
+
+	attackduration="1000"
+	attackactiontime="330"
+	attackcooldown="1700"
+	attackdamagemin="27"
+	attackdamagemax="33"
+	attacknumanims="2"
+	attackoffset="0 50 170"
+	attackprojectile=""
+	attackrange="128"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="effects/impact.effect"
+	attacktype="melee"
+	combattype="Hero"
+
+	aggrorange="800"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="Agility"
+	strength="21"
+	strengthperlevel="2"
+	agility="24"
+	agilityperlevel="2.9"
+	intelligence="16"
+	intelligenceperlevel="1.4"
+	
+	previewmodel="preview.mdf"
+	previewpos="0 0 -50"
+	previewangles="0 0 0"
+	previewscale="1.75"
+>
+	<recommendeditem name="Item_ManaPotion" />
+	<recommendeditem name="Item_RunesOfTheBlight" />
+	<recommendeditem name="Item_HealthPotion" />
+	<recommendeditem name="Item_HomecomingStone" />
+	<recommendeditem name="Item_LoggersHatchet" />
+	
+	<recommendeditem name="Item_Soulscream" />
+	<recommendeditem name="Item_EnhancedMarchers" />
+	<recommendeditem name="Item_IronShield" />
+	<recommendeditem name="Item_BloodChalice" />
+	<recommendeditem name="Item_Immunity" />
+	
+	<recommendeditem name="Item_SpellShards" />
+	<recommendeditem name="Item_StrengthAgility" />
+	<recommendeditem name="Item_Protect" />
+	<recommendeditem name="Item_LifeSteal4" />
+	<recommendeditem name="Item_DaemonicBreastplate" />
+	
+	<onspawn>
+		<condition test="not_hasstate State_Dampeer_Ability1_Souls" >
+			<applystate name="State_Dampeer_Ability1_Souls" continuous="true" />
+		</condition>
+	</onspawn>
+	
+	<modifier key="Dampeer_Soul_1" priority="100"
+		passiveeffect="effects/soul1.effect"
+	/>
+	
+	<modifier key="Dampeer_Soul_2" priority="100"
+		passiveeffect="effects/soul2.effect"
+	/>
+	
+		<modifier key="Dampeer_Soul_3" priority="100"
+		passiveeffect="effects/soul3.effect"
+	/>
+
+	<modifier key="Alt" modpriority="1"
+		altavatar="true"
+		
+		icon="alt/icon.tga"
+		portrait="alt/icon.tga"
+		model="alt/model.mdf"
+		
+		previewmodel="alt/preview.mdf"
+		previewpos="0 0 -50"
+		previewangles="0 0 0"
+		previewscale="1.75"
+	>
+	</modifier>
+</hero>

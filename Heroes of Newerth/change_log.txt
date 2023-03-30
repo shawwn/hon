@@ -1,0 +1,66 @@
+Welcome to Heroes of Newerth
+
+*** For support, visit http://www.heroesofnewerth.com/
+
+*** Report any bugs via the website
+
+*** Discuss the game on the forums at http://forums.heroesofnewerth.com
+
+Version 2.0.6.1
+-------------
+- Fixed Helga Hammerstorm icon
+
+Version 2.0.6
+-------------
+- Added a new Alt Avatar for Gladiator: Adventure Gladiator
+- Added a new Alt Avatar for Hammerstorm: Helga Hammerstorm
+
+- Based on player feedback and data from the last month of matches significant improvements to the MM algorithm have been made which should result in matches being much more balanced
+- Groups waiting more than a few minutes in the queue should now find themselves being placed into a fair match much sooner than previously
+* This also includes groups with very high or very low MMR that were having to wait much longer than the average queue times
+
+- Added more icons and another bundle
+- Vote kick has been re-added to the game
+* A kick vote against someone can only be called once every 3 minutes
+- Concede now only requires 4/5 "Yes" votes after 30 minutes instead of normal 5/5
+- Fixed a bunch of console errors
+- Fixed an issue on the hero selection screen for the Hellbourne team
+* Part of the UI was overlapping the hero selected circle and causing issues
+- Can now click store item icons to view bundle/avatar/announcer preview windows
+- Add Romanian language to system bar language selection combobox
+- Tweak to progression interface to display 4-digit cumulative stats
+- Added a "Back" button [back to player stats] for match stats panel when clicking to view another player's stats for a particular match
+- Fixed the AFK kick vote to indicate that it is team only
+
+- Items in the shop now show their total cost by default
+* To see just the recipe cost, hold down control with the shop open
+- Wards now have a 'Timer' bar above them that shows how much time is left at a glance
+- Fixed a bug where Striders could get charges while on cooldown
+
+- Re-recorded Gladiator's voice
+
+Version 2.0.5
+-------------
+- Added new Alt Avatar for Arachna, "Queen Arachna"
+- Added new Flags, Icons, and Bundles
+- Fixed up Chipper recommended items
+- "Ownage" now only plays on the fifth team kill streak, not all kills five or greater
+
+- Fixed weather effects stopping when joining a new game
+- Fixed Alt Avatars being selected during hero loading
+- Fixed a crash when someone selected an invalid Alt Avatar
+- The Wards stat is now Wards Places instead of Wards Bought
+
+Striders
+- Now begins to lose charges (and consequently, speed) when you are within 900 units of a visible enemy hero
+* The max number of charges is lowered by 1 for every 100 units closer you are to an enemy hero
+
+Dampeer
+- Fixed some abilities playing through fog
+- No longer invulnerable when charging at someone
+
+Legionnaire
+- Fixed the no damage charge bug
+
+Keeper of the Forest
+- Stealth is now removed when the attack completes, not when it starts

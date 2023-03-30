@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_PuppetMaster_Ability4"
+	
+	
+	icon="icon.tga"
+	
+	passiveeffect="ragdoll/state.effect"
+	effecttype=""
+
+	alwaystransmitdata="true"
+
+>
+	<onframe />
+	<onexpired>
+		<kill target="proxy_entity" source="" />
+	</onexpired>
+
+</state>

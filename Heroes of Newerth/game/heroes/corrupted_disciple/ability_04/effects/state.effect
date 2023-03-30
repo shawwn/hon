@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1" useentityeffectscale="1">
+	<definitions>
+
+		<particlesystem name="bridge" space="world" scale="1">
+
+			<sound
+				soundloop="true"
+				fadein="300"
+				fadeout="500"
+				volume=".3" 
+				sample="../sounds/state.wav"
+				linearfalloff="true"
+				falloffstart="200"
+				falloffend="1400"
+			/>
+
+		<template name="beam">
+			<beam			
+				bone_a="_bone_fx_{a}"
+				bone_b="_bone_fx_{b}"
+				size="{size}"
+				color=".8 .3 1"	
+				delay="{delay}"
+				material="/shared/effects/materials/femme_lightning_10.material"
+				startframe="{frame}"
+				framespeed="5"
+			/>
+			
+
+			<billboard
+				 bone="_bone_fx_{b}"
+				 material="/shared/effects/materials/whitedot.material"
+				 size="32"
+				 color=".3 0 .5"	
+				 depthbias="-20"
+			/>		
+		</template>
+
+		<instance name="beam" a="13" b="14" size="26" frame=".8" delay="0"/>
+		<instance name="beam" a="13" b="05"  size="26" frame=".3" delay="0"/>		
+		<instance name="beam" a="13" b="03" size="26" frame=".6" delay="0"/>
+		<instance name="beam" a="13" b="01" size="26" frame=".1" delay="0"/>			
+		<instance name="beam" a="13" b="15" size="26" frame=".8" delay="0"/>	
+		
+		<instance name="beam" a="13" b="11" size="26" frame=".6" delay="0"/>
+		<instance name="beam" a="13" b="08" size="26" frame=".1" delay="0"/>
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="bridge" />
+		  
+		<waitfordeath instance="instance0" />
+		
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

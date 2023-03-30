@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="deathExplosionLarge">
+	<definitions>
+	
+		<modifier
+			name="modifier0"
+			color="1 1 1"
+			alpha="0"
+			
+		/>		
+		
+	
+		<particlesystem name="system0" space="entity" >
+
+	
+			<model
+				model="/heroes/accursed/effects/death.mdf"
+				anim="idle"
+				color="0.2 0.2 0.2"
+			/>
+	
+	
+      </particlesystem>
+   </definitions>
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<spawnmodifier instance="instance1" modifier="modifier0"/>  
+	
+	<waitfordeath instance="instance0" />
+	<wait duration="20000"/>
+	<!-- <die /> -->
+</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->

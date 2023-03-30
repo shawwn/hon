@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="smoke_screen" deferred="true">
+	<definitions>
+		<particlesystem name="system0" space="entity" scale="1.8">
+
+		<sound
+			linearfalloff="true" 
+			falloffstart="1000"
+			falloffend="2500"
+			volume="0.8" 
+			sample="/heroes/hantumon/ability_01/sounds/ability_01.wav"
+			fadein="100"
+			fadeout="9000"
+		/>
+			
+		<simpleemitter		
+			spawnrate="20"			
+			particlelife="1900"			
+			gravity="-.2"
+			speed="40"
+			drag=".01"
+			acceleration="0"
+			position="0 0 65"
+
+			material="/shared/effects/materials/neb_blend.material"
+			offsetsphere="70 70 60"
+			minangle="265"
+			maxangle="265"
+			direction="0 0 -1"
+			offsetdirection="0 0 0"
+			offsetradial="0 0 0"
+		>
+			<particle 
+					maxangle="360"			
+					minanglespeed="-24"
+					maxanglespeed="24"					
+					scale="5"					
+					color=".05 0 .1"	
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".2"
+					startsize="45"					
+					endsize="110"	
+					
+				lockup="true"
+				lockright="false"
+				pitch="90"
+				yaw="0"					
+			/>
+		</simpleemitter>			
+			
+			
+			
+		<simpleemitter		
+			spawnrate="10"			
+			particlelife="1900"			
+			gravity="-.2"
+			speed="40"
+			drag=".01"
+			acceleration="0"
+			position="0 0 65"
+
+			material="/shared/effects/materials/smoke_particle.material"
+			offsetsphere="130 120 60"
+			minangle="265"
+			maxangle="265"
+			direction="0 0 -1"
+			offsetdirection="0 0 0"
+			offsetradial="0 0 0"
+		>
+
+
+			<particle 
+				minangle="0"
+				maxangle="360"
+				minanglespeed="-20"
+				maxanglespeed="30"
+
+				startcolor=".3 .3 1"
+				midcolor=".3 .3 1"
+				endcolor=".3 .3 1"
+				midcolorpos=".8"
+
+				startframe="0"
+				endframe="1"
+				startsize="75"
+				midsize="75"
+				endsize="175"
+				midsizepos=".05"					
+				
+				startalpha=".0"
+				midalpha=".4"
+				endalpha="0"
+
+				midalphapos=".5"
+				startstickiness="0"
+				endstickiness="0"
+
+				lockup="true"
+				lockright="false"
+				pitch="90"
+				yaw="0"				
+				
+
+			/>
+
+
+
+
+
+		</simpleemitter>
+
+		<simpleemitter
+		
+			spawnrate="10"
+			
+			particlelife="2000"			
+			gravity="-1"
+			speed="130"
+			drag=".01"
+			acceleration="0"
+			position="0 0 15"
+
+			material="/shared/effects/materials/smoke_25.material"
+			offsetsphere="5 5 0"
+			minangle="265"
+			maxangle="265"
+			direction="0 0 -1"
+			offsetdirection="0 0 0"
+			offsetradial="0 0 0"
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="360"
+				minanglespeed="-20"
+				maxanglespeed="30"
+
+				startcolor=".3 .3 1"
+				midcolor=".3 .3 1"
+				endcolor="0 0 0"
+				midcolorpos=".8"
+
+				startframe="0"
+				endframe="1"
+				startsize="15"
+				midsize="37.5"
+				endsize="75"
+				midsizepos=".05"	
+				
+				
+				startalpha=".0"
+				midalpha=".45"
+				endalpha="0"
+
+				midalphapos=".1"
+				startstickiness="0"
+				endstickiness="0"
+
+				lockup="true"
+				lockright="false"
+				pitch="90"
+				yaw="0"
+			/>
+
+			<particle 
+				minangle="0"
+				maxangle="-360"
+				minanglespeed="-30"
+				maxanglespeed="30"
+
+				startcolor="0 0 0"
+				midcolor="0 0 0"
+				endcolor="0 0 0"
+				midcolorpos=".8"
+
+				startframe="0"
+				endframe="1"
+				startsize="1"
+				midsize="35"
+				endsize="65"
+				midsizepos=".05"	
+				
+				
+				startalpha="0"
+				midalpha=".5"
+				endalpha="0"
+
+				midalphapos=".1"
+				startstickiness="0"
+				endstickiness="0"
+				lockup="true"
+				lockright="false"
+				pitch="90"
+				yaw="0"
+
+			/>
+		</simpleemitter>
+
+		<simpleemitter
+		
+			spawnrate="2"
+			
+			particlelife="1200"			
+			gravity="4"
+			speed="8"
+			drag="0"
+			acceleration="8"
+			position="0 0 125"
+
+
+			material="/shared/effects/materials/stomp_02.material"
+			offsetsphere="0 0 0"
+			minangle="0"
+			maxangle="0"
+			direction="0 0 -1"
+			offsetdirection="0 0 0"
+			offsetradial="0 0 0"
+		>
+			<particle 
+				minangle="0"
+				maxangle="360"
+				minanglespeed="25"
+				maxanglespeed="25"
+				startcolor="0 0 0"
+				midcolor=".6 .625 1"
+				endcolor=".1 0 0"
+				midcolorpos=".5"
+
+				startframe="0"
+				endframe="0"
+
+				startsize="50"
+				midsize="150"
+				endsize="225"
+				midsizepos=".5"
+
+				startalpha="0"
+				midalpha=".3"
+				endalpha="0"
+				midalphapos=".5"
+				startstickiness="0"
+				endstickiness="0"
+				lockup="true"
+				lockright="false"
+				pitch="90"
+				yaw="0"
+			/>
+
+
+			</simpleemitter> 
+
+		
+			
+		<simpleemitter
+		
+			spawnrate="10"
+			
+			particlelife="1900"			
+			gravity="-.2"
+			speed="40"
+			drag=".01"
+			acceleration="0"
+			position="0 0 65"
+
+			material="/shared/effects/materials/neb_add.material"
+			offsetsphere="111 111 60"
+			minangle="265"
+			maxangle="265"
+			direction="0 0 -1"
+			offsetdirection="0 0 0"
+			offsetradial="0 0 0"
+		>
+
+
+	
+			<particle 
+				maxangle="360"			
+				minanglespeed="-44"
+				maxanglespeed="44"
+				
+				scale="5"					
+				startcolor="0 0 0"
+				midcolor=".1 .1 .2"	
+				endcolor=" 0 0 0 "	
+				startalpha="1"
+				endalpha="0"
+				
+				startsize="35"
+				endsize="110"					
+
+				lockup="true"
+				lockright="false"
+				pitch="90"
+				yaw="0"
+			/>
+
+
+	
+
+		</simpleemitter>
+			
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

@@ -1,0 +1,22 @@
+Ability 1:
+----------
+Targets a point and releases a wave of magical damage.
+
+
+Ability 2:
+----------
+Targets an area, stunning and damaging enemy units.
+
+
+Ability 3:
+----------
+Passive. Improves your attack animation time and your spell animation and cast times as well as attack speed.
+
+
+Ultimate:
+----------
+Releases a bolt of energy, dealing heavy damage to an enemy unit.
+
+
+
+Intelligence/Ranged

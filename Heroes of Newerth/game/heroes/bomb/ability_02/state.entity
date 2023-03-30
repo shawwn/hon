@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Bombardier_Ability2"
+
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+	effecttype="StatusDebuff"
+	
+	movespeedslowstart="0.40,0.50,0.60,0.70"
+	movespeedslowmid="0.20,0.25,0.30,0.35"
+	movespeedslowend="0.0"
+	movespeedslowmidpos="0.33"
+>
+
+</state>

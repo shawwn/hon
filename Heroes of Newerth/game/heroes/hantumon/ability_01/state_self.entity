@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Hantumon_Ability1_Self"
+
+	icon="icon.tga"
+	passiveeffect=""
+	
+	nothreat="true"
+	
+	effecttype="StatusBuff"
+	
+	modifierkey="NightHoundInCloud"
+>
+</state>

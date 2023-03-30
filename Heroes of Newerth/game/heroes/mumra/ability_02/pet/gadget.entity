@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Mumra_Ability2"
+	
+	
+	
+	icon="icon.tga"
+	portrait="icon.tga"
+	model="model.mdf"
+	skin=""
+	
+	passiveeffect="effects/impact.effect"
+	spawneffect=""
+	respawneffect=""
+	isselectable="true"
+	iscontrollable="false"
+	invulnerable="false"
+	selectsound=""
+	orderconfirmedsound=""
+	spawnanim="spawn_1"
+	
+	maxhealth="3"
+	healthregen="0"
+	maxmana="0"
+	manaregen="0"
+	
+	preglobalscale="2.205"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="64"
+	boundsradius="45"
+	selectionradius="48"
+	targetoffset="0 0 0"
+	deniable="true"
+
+	canrotate="false"
+	ismobile="false"
+	isflying="false"
+	clearvision="false"
+	drawonmap="false"
+	
+	immunity="GadgetImmunity"
+	
+	deathnumanims="1"
+	deathanim="death_%"
+	
+	expirenumanims="1"
+	expireanim="expire_%"
+	
+	attacktype="none"
+	
+	lifetime="3000,4000,5000,6000"
+	corpsetime="1"
+	corpsefadetime="1"
+	
+	blocking="true"
+>
+	<onspawn>
+		<spawnaffector name="Affector_Mumra_Ability2" owner="this_owner_entity" proxy="this_entity"/>
+	</onspawn>
+	
+	<ondamaged>
+		<changedamage b="1" op="min"/>
+		<condition test="entity_type Hero_Mumra">
+			<changedamage b="3" op="max"/>
+		</condition>
+	</ondamaged>
+</gadget>

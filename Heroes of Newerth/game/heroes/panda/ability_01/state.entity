@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Panda_Ability1"
+	
+	icon="icon.tga"
+	passiveeffect=""
+	basedamagemultiplier="0.15,0.25,0.35,0.45"
+
+	stunned="true"
+
+	ishidden="true"
+
+	unitwalking="true"
+	effecttype=""
+>
+	<onexpired>
+		<playanim name="idle" target="source_entity" />
+	</onexpired>
+</state>

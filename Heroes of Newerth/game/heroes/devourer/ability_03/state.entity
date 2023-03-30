@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Devourer_Ability3"
+
+	
+	ishidden="true"
+	icon="icon.tga"
+	
+>
+	<onkilled>
+		<condition target="source_entity" test="not_target_type illusion">
+			<condition test="not_target_type self" target="target_entity" source="this_inflictor_entity">
+				<adjuststrength entity="this_spawner_entity" value="1" />
+			</condition>
+		</condition>
+	</onkilled>
+	<onframe />
+</state>

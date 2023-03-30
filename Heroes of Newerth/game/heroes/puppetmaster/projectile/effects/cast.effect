@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" deferred="1">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="1">			
+			
+			<template name="trail">				
+				<trailemitter
+										
+					bone="{bone}"					
+					spawnrate="20"					
+					startminparticlelife="50"
+					startmaxparticlelife="50"		
+					
+					endminparticlelife="1"
+					endmaxparticlelife="1" 
+					inheritvelocity="0"
+					texpostime="50"
+					texposscale="1"
+					texstretchscale="0"	
+					
+					material="/shared/effects/materials/arrow_trail.material"
+				>
+					<particle 
+						startcolor=".5 .3 0" 
+						midcolor=".3 .1 0"
+						endcolor="0 0 0"
+						startsize="10"
+						endsize="0"
+					/>
+				</trailemitter>	
+			</template>
+			
+			<model 
+				bone="Bip01 R Hand"		
+				life="400"
+				scale="1.5"
+				startalpha="0"
+				midalpha="1"
+				endalpha="1"
+				midalphapos=".8"
+				startcolor="1 1 1"
+				midcolor="5 5 1"
+				endcolor="1 1 1"				
+				model="projectile.mdf"
+				anim="idle.clip"			
+			>
+			
+				<instance name="trail"   bone="_bone_1" />
+				<instance name="trail"   bone="_bone_2" />
+				<instance name="trail"   bone="_bone_3" />
+				<instance name="trail"   bone="_bone_4" />
+			</model>
+		
+
+			
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" /> 
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

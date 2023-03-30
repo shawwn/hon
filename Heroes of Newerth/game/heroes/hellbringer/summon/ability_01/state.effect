@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" useentityscale="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="entity" scale=".3" useentityscale="true">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="1200"
+				volume="0.35" 
+				soundloop="true"
+				fadein="200"
+				fadeout="300"
+				sample="/shared/sounds/effects/torch.wav"
+			/>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				spawnrate="10"
+				particlelife="1200"
+				minspeed="0"
+				maxspeed="300"
+				drag="0.07"
+				depthbias="-50"
+				offsetsphere="30"
+				angle="20"
+				material="/shared/effects/materials/dust_smoke_10.material"
+			>
+				<particle
+					maxangle="360"
+					minanglespeed="-150"
+					maxanglespeed="150"
+					color="0.2"
+					minstartsize="10"
+					maxstartsize="25"
+					endsize="70"
+					startalpha="1"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				spawnrate="20"
+				minparticlelife="0"
+				maxparticlelife="1200"
+				minspeed="0"
+				maxspeed="1000"
+				drag="0.07"
+				depthbias="-50"
+				offsetsphere="30"
+				angle="30"
+				material="/shared/effects/materials/flame.material"
+			>
+				<particle
+					maxangle="360"
+					minanglespeed="-150"
+					maxanglespeed="150"
+					startcolor="1 0.6 .5"
+					endcolor="0 0 0"
+					minstartsize="10"
+					maxstartsize="25"
+					endsize="50"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				spawnrate="35"
+				minparticlelife="0"
+				maxparticlelife="1000"
+				minspeed="0"
+				maxspeed="1500"
+				drag="0.07"
+				angle="70"
+				offsetsphere="25"
+				material="/shared/effects/materials/femme_fire_01.material"
+			>
+				<particle
+					minangle="-40"
+					maxangle="40"
+					minanglespeed="-150"
+					maxanglespeed="150"
+					turn="1"
+					startcolor="1 1 0"
+					midcolorpos="0.1"
+					midcolor=".7 .4 0"
+					endcolor="-1"
+					minstartsize="25"
+					maxstartsize="45"
+					minendscale="5"
+					maxendscale="8"
+					endstickiness=".1"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				spawnrate="10"
+				particlelife="2000"
+				minspeed="0"
+				maxspeed="1500"
+				drag="0.035"
+				offsetsphere="15"
+				material="/shared/effects/materials/refract_outsplash.material"
+			>
+				<particle
+					color="1 1 1"
+					startalpha="1.0"
+					endalpha="0.0"
+					maxangle="360"
+					anglespeed="-90"
+					startsize="50"
+					endsize="70"
+					param=".1"
+					depthbias="-130"
+				/>
+			</simpleemitter>
+
+			<billboard
+				startcolor=".2 .1 0"
+				endcolor="0"
+				size="65"
+				bone="_bone_centerofchest"
+				depthbias="-120"
+				material="/shared/effects/materials/whitedot.material"
+			/>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+		<waitfordeath instance="instance0"/>
+	</thread>
+
+</effect>

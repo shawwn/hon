@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="aphotic_shield" deferred="1">
+	<definitions>
+
+		
+		
+		<particlesystem name="system0" space="world" scale="1">
+		
+	
+
+		<simpleemitter
+			bone="_bone_centerofchest"
+			delay="0"
+			count="1"
+			particlelife="500"				
+			spawnrate="110"
+			speed="10"
+			gravity="0"
+			direction="0 0 1"
+			minangle="0"			
+			maxangle="12"			
+			material="/shared/effects/materials/venom_splash.material"
+			offsetsphere="0 0 0"
+			position="0 0 0"	
+		>
+			<particle 
+				color=".8 1 .2"
+				startsize="00"
+				turn="1"			
+				maxendsize="170"
+				startalpha="0"
+				midalpha="1"
+				endalpha="0"
+				
+			/>
+		</simpleemitter>		
+			
+			<simpleemitter	
+				particlelife="3000"				
+				spawnrate="4"
+				speed="0"
+				gravity="0"
+				direction="0 0 0"			
+				
+				particledirectionalspace="local"
+				
+				offsetsphere="30 30 0"
+				position="0 0 0"	
+			>
+				<particle> 
+					<groundsprite
+						life="2000"						
+						material="/shared/effects/materials/splatter_blend.material"
+
+						minsize="5"
+						maxsize="40"
+						position="0 0 0"
+						color=".2 .4 .0"
+											
+						midcolorpos=".1"
+						startalpha="1"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".1"
+							
+					/>						
+				</particle>			
+				
+			</simpleemitter>				
+		
+			<simpleemitter		
+				spawnrate="20"
+					
+				particlelife="800"			
+				gravity="25"
+				speed="300"
+				drag=".02"
+				acceleration="0"
+				position="0 0 0"
+				timenudge="-100"
+				material="/shared/effects/materials/poison_09.material"
+				offsetsphere="1 1 1"
+				minangle="160"
+				maxangle="160"
+				direction="0 0 -1"
+				offsetdirection="0 0 0"
+				offsetradial="0 0 0"
+			>
+
+				<particle 
+					minangle="0"
+					maxangle="0"
+					minanglespeed="0"
+					maxanglespeed="0"
+					startcolor="1 1 1"
+					midcolor="1 1 1"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					startframe="0"
+					endframe="1"
+					startsize="1"
+					midsize="35"
+					endsize="70"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					midalphapos=".5"
+					startstickiness=".2"
+					endstickiness="0"
+
+				/>
+
+			</simpleemitter>
+
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

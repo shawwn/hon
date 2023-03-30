@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" deferred="true">
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+
+<!-- light ray -->
+			<simpleemitter
+				delay="150"
+				life="100"
+				spawnrate="60"
+				count="1"
+				particlelife="300"			
+				gravity="0"
+				speed="0"
+				drag="0"
+				acceleration="0"
+				position="0 0 205"
+				material="/shared/effects/materials/spirit_19.material"
+				offsetsphere="0 0 0"
+				minangle="0"
+				maxangle="0"
+				direction="0 0 0"
+				offsetdirection="0 0 0"
+				offsetradial="0 0 0"
+			>
+				<particle 
+
+					minangle="0"
+					maxangle="0"
+					minanglespeed="0"
+					maxanglespeed="0"
+					startcolor=".5 0 0"
+					midcolor=".5 .5 0"
+					endcolor="0 0 0"
+					midcolorpos=".5"
+					startframe="0"
+					endframe="1"
+					startwidth="5"
+					endwidth="15"
+					height="2424"
+					startalpha="0"
+					midalpha=".1"
+					endalpha="0"
+					midalphapos=".8"
+					startstickiness="0"
+					endstickiness="0"
+					lockup="true"
+					lockright="false"
+				/>
+			</simpleemitter>
+		
+
+
+			<billboard
+
+				position="0 0 15"
+				life="200"
+				color="1 1 0"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="1.0"
+				startparam="0.02"
+				endparam="0.0"
+				midalphapos="0.25"
+				startsize="10"
+				endsize="50"
+				material="/shared/effects/materials/refract_bubble.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+			/>
+	-->		
+			<billboard
+
+				position="0 0 15"
+				life="150"
+				color="1 1 1"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="1.0"
+				startparam="0.5"
+				endparam="0.0"
+				midalphapos="0.25"
+				startsize="10"
+				endsize="70"
+				material="/shared/effects/materials/refract_pinch.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+			/>
+
+			<billboard
+
+				color="1 .5 0"
+				position="0 0 15"
+				material="/shared/effects/materials/flare_02.material"
+				startsize="10"
+				endsize="60"
+				depthbias="-80"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+				life="250"
+			/>
+
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		
+		<wait duration="1800"/>
+		<!-- <camerashake2 scale="10" radius="1000" duration="750" frequency="25" /> -->
+
+      		<waitfordeath instance="instance0" />
+		
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

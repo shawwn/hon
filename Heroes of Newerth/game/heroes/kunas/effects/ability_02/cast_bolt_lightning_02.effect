@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="cast_bolt_lightning_02">
+	<definitions>
+		<particlesystem name="system0" space="entity">
+
+
+			<beam
+
+				life="450"
+				bone_a="_bone_fx_03"
+				bone_b="_bone_fx_03"
+
+
+				position_a="0 0 560"
+				size="65"
+				color="1 1 1"
+				alpha="1.0"
+				material="/shared/effects/materials/femme_lightning_10.material"
+
+				framespeed="1.75"
+
+			/>
+
+			<beam
+
+				life="450"
+				bone_a="_bone_fx_03"
+				bone_b="_bone_fx_03"
+
+
+				position_a="0 0 560"
+				size="50"
+				color=".5 .5 .5"
+				alpha="1.0"
+				material="/shared/effects/materials/femme_lightning_10.material"
+
+				framespeed="1.75"
+
+			/>
+
+
+			<beam
+
+				life="450"
+				bone_a="_bone_fx_03"
+				bone_b="_bone_fx_03"
+
+
+				position_a="0 0 560"
+				size="87.5"
+				color="1 1 1"
+				alpha="1.0"
+				material="/shared/effects/materials/femme_lightning_06.material"
+
+				framespeed="1.75"
+
+			/>
+
+
+
+
+
+        
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

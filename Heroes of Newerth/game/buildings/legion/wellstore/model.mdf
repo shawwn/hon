@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="model.max" file="high.model" type="K2" >
+	<spawnevent cmd="starteffect effects/goodwell_store.effect 0"/>
+
+	<anim name="idle" clip="clips/default_1.clip" fps="30" loop="true" loopbackframe="1"/>
+	
+</model>

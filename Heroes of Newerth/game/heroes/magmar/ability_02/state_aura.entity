@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Magmar_Ability2_Aura"
+	ishidden="true"
+
+	displaylevel="true"
+>
+	<aura
+		state="State_Magmar_Ability2"
+		radius="200"
+		targetscheme="self"
+		duration="600,900,1200,1500"
+	/>
+</state>

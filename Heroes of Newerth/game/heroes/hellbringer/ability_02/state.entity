@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Hellbringer_Ability2"
+
+	icon="icon.tga"
+	passiveeffect="state.effect"
+	displaylevel="true"
+	deniable="true"
+	
+	effecttype="StatusDebuff"
+	impactinterval="1000"
+	maxcharges="8"
+>
+	<onframe />
+	
+	<onimpact>
+		<addcharges />
+		<damage effecttype="Magic DOT" amount="10" b="charges" op="mult" />
+		<popup name="poison" a="result" source="target_entity" target="source_entity" />
+		<condition test="charges eq 8">
+			<setcharges a="0" />
+		</condition>
+	</onimpact>
+</state>

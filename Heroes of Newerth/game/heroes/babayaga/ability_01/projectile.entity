@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_BabaYaga_Ability1"
+
+	speed="1000"
+	gravity="1000"
+
+	modelscale="1.7"
+	model="effects/bat2.mdf"
+	
+	traileffect="effects/trail.effect"
+
+	effectscale="2.0"
+	impacteffect=""
+>
+</projectile>

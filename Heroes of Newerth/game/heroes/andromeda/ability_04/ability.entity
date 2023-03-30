@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Andromeda4"
+
+	icon="icon.tga"
+	
+	anim="ability_4"
+	casttime="800"
+	castactiontime="300"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+	
+	actiontype="target_entity"
+	casteffecttype="Physical Push"
+	targetscheme="enemy_and_willing_ally_heroes"
+	casteffect="effects/cast.effect"
+	
+	manacost="100,150,200"
+	cooldowntime="45000"
+	
+	range="750,975,1200"
+>
+	<onimpact >
+		<spawnaffector name="Affector_Andromeda_Ability4" target="source_entity" />
+		<spawnaffector name="Affector_Andromeda_Ability4" target="target_entity" />
+		<spawnunit name="Gadget_Andromeda_Ability4" target="source_position" pushentity="true" />
+		<playeffect effect="effects/appear.effect" source="source_position" occlude="true"/>
+		<playeffect effect="effects/beam.effect" source="source_position" target="target_position" occlude="true"/>
+		
+		<unbind target="source_entity" />
+		<unbind target="target_entity" />
+		<teleport source="source_entity" target="target_position" interpolate="false" />
+		<teleport source="target_entity" target="stack_position" interpolate="false" />
+		<disjoint target="source_entity" />
+		<disjoint target="target_entity" />
+		<playeffect effect="effects/appear.effect" source="source_position"/>
+	</onimpact>
+	
+	<modifier key="ult_boost" modpriority="100"
+		displayname="true"
+		cooldowntime="10000"
+	/>
+</ability>

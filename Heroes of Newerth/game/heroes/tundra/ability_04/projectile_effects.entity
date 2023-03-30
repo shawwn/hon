@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Tundra_Ability4_Effects"
+
+	speed="4000"
+	
+	modelscale="1.0"
+	model="/shared/models/invis.mdf"
+	
+	effectscale="1.0"
+	traileffect="effects/ability_04.effect"
+	
+	canturn="false"
+	flying="true"
+	flyheight="100"
+>
+</projectile>

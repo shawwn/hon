@@ -1,0 +1,14 @@
+Scripts + patches to build the toolchains:
+
+Scripts put together with help from crosstool (http://kegel.com/crosstool) and cross-lfs (http://cross-lfs.org).
+
+Patches taken (& adapted when necessary) from crosstool & cross-lfs.
+
+Sources (place in the sources directory) can be found at:
+
+http://www.kernel.org/pub/linux/kernel/v2.6/linux-2.6.23.12.tar.bz2
+http://ftp.gnu.org/gnu/binutils/binutils-2.18.tar.bz2
+http://ftp.gnu.org/gnu/glibc/glibc-2.3.4.tar.bz2
+http://ftp.gnu.org/gnu/gcc/gcc-4.2.2/gcc-4.2.2.tar.bz2
+
+Of course, it is just easier to use one of the already built toolchain I put on cvs ;)

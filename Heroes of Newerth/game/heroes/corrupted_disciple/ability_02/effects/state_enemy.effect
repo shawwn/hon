@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" useentityeffectscale="1">
+
+	<definitions>
+
+		<particlesystem name="system0" space="entity" scale="0.65">
+
+			<sound
+				soundloop="true"
+				fadein="100"
+				fadeout="400"
+				volume=".3" 
+				sample="../sounds/state.wav"
+				linearfalloff="true"
+				falloffstart="200"
+				falloffend="1400"
+			/>
+
+			<model
+				bone="_bone_overhead"
+				model="spin.mdf"
+				anim="idle"
+				expirelife="1000"
+				startscale="1.0"
+				endscale="0"
+			>
+				<beam					
+					bone_b="_bone_1"
+					bone_a="_bone_2"
+					
+					size="35"
+					color="1 .2 .8"					
+					alpha="1.0"
+					material="/shared/effects/materials/femme_lightning_10.material"
+					startframe=".6"
+					framespeed="5"
+				/>				
+				<beam
+					
+			
+					bone_b="_bone_2"
+					bone_a="_bone_3"
+					
+					size="35"
+					color="1 .2 .8"					
+					alpha="1.0"
+					material="/shared/effects/materials/femme_lightning_10.material"
+					startframe=".6"
+					framespeed="5"
+				/>	
+				<beam
+					bone_b="_bone_1"
+					bone_a="_bone_3"
+					
+					size="35"
+					color="1 .2 .8"					
+					alpha="1.0"
+					material="/shared/effects/materials/femme_lightning_10.material"
+					startframe=".6"
+					framespeed="5"
+				/>	
+
+
+				<beam					
+					bone_b="_bone_1"
+					bone_a="_bone_2"
+					
+					size="35"
+					color="1 .2 .8"					
+					alpha="1.0"
+					material="/shared/effects/materials/femme_lightning_10.material"
+					startframe=".3"
+					framespeed="5"
+				/>				
+				<beam
+					
+			
+					bone_b="_bone_2"
+					bone_a="_bone_3"
+					
+					size="35"
+					color="1 .2 .8"					
+					alpha="1.0"
+					material="/shared/effects/materials/femme_lightning_10.material"
+					startframe=".2"
+					framespeed="5"
+				/>	
+				<beam
+					bone_b="_bone_1"
+					bone_a="_bone_3"
+					
+					size="35"
+					color="1 .2 .8"					
+					alpha="1.0"
+					material="/shared/effects/materials/femme_lightning_10.material"
+					startframe=".7"
+					framespeed="5"
+				/>	
+
+				<simpleemitter
+					
+					spawnrate="103"
+					bone="_bone_1"
+					particlelife="500"			
+					gravity="-1.5"
+					speed="4"
+					offsetsphere="34 100 0"
+					position="0 0 0"
+					
+					material="/shared/effects/materials/whitedot.material"
+				>						
+					<particle 
+						startcolor="0 0 0"
+						midcolor="1 .2 .8"
+						endcolor="1 1  1"
+						size="3"
+						endsize="4"
+						startstickiness="0"
+						endstickiness="1"			
+					/>	
+					<particle 
+						startcolor="0 0 0"
+						midcolor="1 .5 .8"
+						endcolor="1 1  1"
+						size="8"
+						endsize="8"
+						startstickiness="0"
+						endstickiness="1"			
+					/>	
+					<particle 
+						startcolor="0 0 0"
+						midcolor="1 .7 .8"
+						endcolor="1 1  1"
+						size="3"
+						endsize="4"
+						startstickiness="0"
+						endstickiness="1"			
+					/>	
+					<particle 
+						startcolor="0 0 0"
+						midcolor="1 .5 .8"
+						endcolor="1 1  1"
+						size="8"
+						endsize="8"
+						startstickiness="0"
+						endstickiness="1"			
+					/>	
+					<particle 
+						startcolor="0 0 0"
+						midcolor="1 .6 .8"
+						endcolor="1 1  1"
+						size="3"
+						endsize="4"
+						startstickiness="0"
+						endstickiness="1"			
+					/>	
+					<particle 
+						
+						startcolor="0 0 0"
+						midcolor="1 .8 .8"
+						endcolor="1 1  1"
+						size="8"
+						endsize="8"
+						startstickiness="0"
+						endstickiness="1"			
+					/>				
+					<particle 
+						size="85"
+						color=".1 0 .051"
+						startstickiness="0"
+						endstickiness="1"			
+					/>	
+					
+				</simpleemitter>
+				<simpleemitter
+					
+					spawnrate="103"
+					bone="_bone_2"
+					particlelife="500"			
+					gravity="-1.5"
+					speed="4"
+					offsetsphere="34 100 0"
+					position="0 0 0"
+					
+					material="/shared/effects/materials/whitedot.material"
+				>						
+					<particle 
+						startcolor="0 0 0"
+						midcolor="1 .2 .8"
+						endcolor="1 1  1"
+						size="3"
+						endsize="4"
+						startstickiness="0"
+						endstickiness="1"			
+					/>	
+					<particle 
+						startcolor="0 0 0"
+						midcolor="1 .5 .8"
+						endcolor="1 1  1"
+						size="8"
+						endsize="8"
+						startstickiness="0"
+						endstickiness="1"			
+					/>	
+					<particle 
+						startcolor="0 0 0"
+						midcolor="1 .7 .8"
+						endcolor="1 1  1"
+						size="3"
+						endsize="4"
+						startstickiness="0"
+						endstickiness="1"			
+					/>	
+					<particle 
+						startcolor="0 0 0"
+						midcolor="1 .5 .8"
+						endcolor="1 1  1"
+						size="8"
+						endsize="8"
+						startstickiness="0"
+						endstickiness="1"			
+					/>	
+					<particle 
+						startcolor="0 0 0"
+						midcolor="1 .6 .8"
+						endcolor="1 1  1"
+						size="3"
+						endsize="4"
+						startstickiness="0"
+						endstickiness="1"			
+					/>	
+					<particle 
+						
+						startcolor="0 0 0"
+						midcolor="1 .8 .8"
+						endcolor="1 1  1"
+						size="8"
+						endsize="8"
+						startstickiness="0"
+						endstickiness="1"			
+					/>				
+					<particle 
+						size="85"
+						color=".1 0 .051"
+						startstickiness="0"
+						endstickiness="1"			
+					/>	
+					
+				</simpleemitter>
+				<simpleemitter
+					
+					spawnrate="103"
+					bone="_bone_3"
+					particlelife="500"			
+					gravity="-1.5"
+					speed="4"
+					offsetsphere="34 100 0"
+					position="0 0 0"
+					
+					material="/shared/effects/materials/whitedot.material"
+				>						
+					<particle 
+						startcolor="0 0 0"
+						midcolor="1 .2 .8"
+						endcolor="1 1  1"
+						size="3"
+						endsize="4"
+						startstickiness="0"
+						endstickiness="1"			
+					/>	
+					<particle 
+						startcolor="0 0 0"
+						midcolor="1 .5 .8"
+						endcolor="1 1  1"
+						size="8"
+						endsize="8"
+						startstickiness="0"
+						endstickiness="1"			
+					/>	
+					<particle 
+						startcolor="0 0 0"
+						midcolor="1 .7 .8"
+						endcolor="1 1  1"
+						size="3"
+						endsize="4"
+						startstickiness="0"
+						endstickiness="1"			
+					/>	
+					<particle 
+						startcolor="0 0 0"
+						midcolor="1 .5 .8"
+						endcolor="1 1  1"
+						size="8"
+						endsize="8"
+						startstickiness="0"
+						endstickiness="1"			
+					/>	
+					<particle 
+						startcolor="0 0 0"
+						midcolor="1 .6 .8"
+						endcolor="1 1  1"
+						size="3"
+						endsize="4"
+						startstickiness="0"
+						endstickiness="1"			
+					/>	
+					<particle 
+						
+						startcolor="0 0 0"
+						midcolor="1 .8 .8"
+						endcolor="1 1  1"
+						size="8"
+						endsize="8"
+						startstickiness="0"
+						endstickiness="1"			
+					/>				
+					<particle 
+						size="85"
+						color=".1 0 .051"
+						startstickiness="0"
+						endstickiness="1"			
+					/>	
+					
+				</simpleemitter>
+			
+			</model>
+		
+			<billboard
+				
+				bone="_bone_root_of_ball"
+				material="/shared/effects/materials/whitedot.material"	
+				startscale="1"
+				endscale="3"
+				startcolor="0 0 0 "
+				midcolor=".2 .3 1"
+				endcolor="0 0 0 "
+				depthbias="00"
+				position="0 22  0"
+			/>
+			<billboard
+				
+				bone="_bone_root_of_ball"
+				material="/shared/effects/materials/whitedot.material"	
+				startscale="1"
+				endscale="2"
+				startcolor="0 0 0 "
+				midcolor=".2 .3 1"
+				endcolor="0 0 0 "
+				depthbias="-300"
+				position="0 22  0h"
+			/>
+
+			
+		
+			
+			
+			
+
+		</particlesystem>
+	
+		<particlesystem name="system1" space="world" scale="1.5">
+
+		
+	
+			
+		</particlesystem>
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnparticlesystem instance="instance1" particlesystem="system1" />
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+	</thread>
+
+</effect>

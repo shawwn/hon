@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Malphas2"
+
+	
+	
+	
+	icon="/heroes/accursed/ability_04/icon.tga"
+	
+	anim="ability_2"
+	casttime="1700"
+	castactiontime="500"
+
+	maxlevel="3"
+
+	actiontype="target_position"
+	casteffecttype="Magic"
+	targetscheme="enemy_units"
+	casteffect="ability.effect"
+	
+	manacost="200"
+	cooldowntime="6000"
+	
+	range="400"
+>
+	<onimpact >
+		<spawnaffector name="Affector_Malphas_Ability2" target="source_position"/>
+	</onimpact>
+</ability>

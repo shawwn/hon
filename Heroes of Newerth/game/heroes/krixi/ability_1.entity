@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Krixi1"
+
+	
+	
+	icon="icons/ability_1.tga"
+	
+	anim="ability_1"
+	casttime="1000"
+	castactiontime="500"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_entity"
+	targetscheme="enemy_units"
+	casteffecttype="Magic"
+	
+	manacost="90,100,110,120"
+	cooldowntime="6000"
+	
+	range="800"
+	impacteffect="effects/ability_01/ability_01.effect"
+	
+	modifierkey="Krixi_Ability1_1,Krixi_Ability1_2,Krixi_Ability1_3,Krixi_Ability1_4"
+>
+	<onimpact>
+		<applystate name="State_Stunned" duration="600"/>
+		<damage effecttype="Magic" amount="75,150,225,300"/>
+	</onimpact>
+</ability>

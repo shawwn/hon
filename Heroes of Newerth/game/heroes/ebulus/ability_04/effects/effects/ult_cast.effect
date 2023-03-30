@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="ult_cast">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="1.35">
+
+
+
+		<groundsprite
+				life="1200"
+				delay="200"
+				material="/shared/effects/materials/shieldstarfish.material"
+
+
+				startsize="0"
+				midsize="100"
+				endsize="200"
+
+
+
+				position="0 0 0"
+
+				startcolor=".6 1 0"
+				midcolor=".6 1 0"
+				endcolor="0 0 0"
+				midcolorpos=".1"
+
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".1"
+				
+		/>
+
+		<groundsprite
+				life="1200"
+				delay="300"
+				material="/shared/effects/materials/shieldstarfish.material"
+
+
+				startsize="0"
+				midsize="100"
+				endsize="200"
+
+
+
+				position="0 0 0"
+
+				startcolor=".8 1 0"
+				midcolor=".8 1 0"
+				endcolor="0 0 0"
+				midcolorpos=".1"
+
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".1"
+				
+		/>
+
+
+
+		<simpleemitter
+		
+			spawnrate="100"
+			count="45"
+			
+			particlelife="1200"			
+			gravity="5"
+			speed="120"
+			drag="0.01"
+			acceleration="0"
+			position="0 0 50"
+			
+			material="/shared/effects/materials/poison_14.material"
+			offsetsphere="5 5 5"
+			minangle="100"
+			maxangle="100"
+			direction="0 0 -1"
+			offsetdirection="0 0 0"
+			offsetradial="0 0 0"
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="360"
+				minanglespeed="0"
+				maxanglespeed="20"
+				startcolor=".8 1 .8"
+				midcolor=".8 1 .8"
+				endcolor="0 0 0"
+				midcolorpos=".2"
+
+				startframe="0"
+				endframe="1"
+				startsize="1"
+				midsize="45"
+				endsize="90"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".2"
+
+				startstickiness=".2"
+				endstickiness="0"
+
+			/>
+
+
+			<particle 
+				minangle="0"
+				maxangle="-360"
+				minanglespeed="0"
+				maxanglespeed="20"
+				startcolor=".8 1 .8"
+				midcolor=".8 1 .8"
+				endcolor="0 0 0"
+				midcolorpos=".2"
+
+				startframe="0"
+				endframe="1"
+				startsize="1"
+				midsize="40"
+				endsize="80"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".5"
+
+				startstickiness=".2"
+				endstickiness="0"
+
+			/>
+
+
+		</simpleemitter>
+
+
+		<simpleemitter
+		
+			spawnrate="150"
+			count="15"
+			
+			particlelife="800"			
+			gravity="25"
+			speed="300"
+			drag="0.01"
+			acceleration="0"
+			position="0 0 0"
+			
+			material="/shared/effects/materials/poison_14.material"
+			offsetsphere="1 1 1"
+			minangle="140"
+			maxangle="140"
+			direction="0 0 -1"
+			offsetdirection="0 0 0"
+			offsetradial="0 50 0"
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="360"
+				minanglespeed="0"
+				maxanglespeed="20"
+				startcolor=".8 1 .8"
+				midcolor=".8 1 .8"
+				endcolor="0 0 0"
+				midcolorpos=".2"
+
+				startframe="0"
+				endframe="1"
+				startsize="15"
+				midsize="30"
+				endsize="60"
+				startalpha="0"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".2"
+
+				startstickiness=".2"
+				endstickiness="0"
+
+			/>
+
+
+			<particle 
+				minangle="0"
+				maxangle="-360"
+				minanglespeed="0"
+				maxanglespeed="20"
+				startcolor=".8 1 .8"
+				midcolor=".8 1 .8"
+				endcolor="0 0 0"
+				midcolorpos=".2"
+
+				startframe="0"
+				endframe="1"
+				startsize="15"
+				midsize="30"
+				endsize="40"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".5"
+
+				startstickiness=".2"
+				endstickiness="0"
+
+			/>
+
+
+		</simpleemitter>
+
+		<simpleemitter
+			life="3000"
+			delay="200"
+			spawnrate="400"
+			count="45"
+			
+			minparticlelife="800"	
+			maxparticlelife="1300"		
+			gravity="20"
+			speed="480"
+			drag=".02"
+			acceleration="0"
+			position="0 0 0"
+			
+			material="/shared/effects/materials/poison_14.material"
+			offsetsphere="10 10 20"
+			minangle="160"
+			maxangle="160"
+			direction="0 0 -1"
+			offsetdirection="0 0 0"
+			offsetradial="0 0 0"
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="360"
+				minanglespeed="0"
+				maxanglespeed="60"
+				startcolor=".8 1 .8"
+				midcolor=".8 1 .8"
+				endcolor="0 0 0"
+				midcolorpos=".2"
+
+				startframe="0"
+				endframe="1"
+				startsize="1"
+				midsize="35"
+				endsize="70"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".1"
+
+				startstickiness=".2"
+				endstickiness="0"
+
+			/>
+
+
+			<particle 
+				minangle="0"
+				maxangle="-360"
+				minanglespeed="0"
+				maxanglespeed="60"
+				startcolor=".8 1 .8"
+				midcolor=".8 1 .8"
+				endcolor="0 0 0"
+				midcolorpos=".2"
+
+				startframe="0"
+				endframe="1"
+				startsize="1"
+				midsize="35"
+				endsize="70"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".5"
+
+				startstickiness=".2"
+				endstickiness="0"
+
+			/>
+
+
+			<particle 
+				minangle="0"
+				maxangle="360"
+				minanglespeed="0"
+				maxanglespeed="-60"
+				startcolor=".8 1 .8"
+				midcolor=".8 1 .8"
+				endcolor="0 0 0"
+				midcolorpos=".2"
+
+				startframe="0"
+				endframe="1"
+				startsize="1"
+				midsize="25"
+				endsize="50"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".1"
+
+				startstickiness=".2"
+				endstickiness="0"
+
+			/>
+
+
+			<particle 
+				minangle="0"
+				maxangle="-360"
+				minanglespeed="0"
+				maxanglespeed="-60"
+				startcolor=".8 1 .8"
+				midcolor=".8 1 .8"
+				endcolor="0 0 0"
+				midcolorpos=".2"
+
+				startframe="0"
+				endframe="1"
+				startsize="1"
+				midsize="25"
+				endsize="50"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".5"
+
+				startstickiness=".2"
+				endstickiness="0"
+
+			/>
+
+
+
+		</simpleemitter>
+
+		<simpleemitter
+			life="3000"
+			delay="300"
+			spawnrate="250"
+			count="20"
+			
+			particlelife="1400"			
+			gravity="50"
+			speed="920"
+			drag=".0075"
+			acceleration="0"
+			position="0 0 0"
+			
+			material="/shared/effects/materials/poison_14.material"
+			offsetsphere="3 3 3"
+			minangle="178"
+			maxangle="178"
+			direction="0 0 -1"
+			offsetdirection="0 0 0"
+			offsetradial="0 0 0"
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="360"
+				minanglespeed="0"
+				maxanglespeed="20"
+				startcolor=".8 1 .8"
+				midcolor=".8 1 .8"
+				endcolor="0 0 0"
+				midcolorpos=".2"
+
+				startframe="0"
+				endframe="1"
+				startsize="1"
+				midsize="20"
+				endsize="30"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".5"
+
+				startstickiness=".2"
+				endstickiness="0"
+
+				
+			/>
+
+			<particle 
+				minangle="0"
+				maxangle="360"
+				minanglespeed="0"
+				maxanglespeed="-20"
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="0 0 0"
+				midcolorpos=".2"
+
+				startframe="0"
+				endframe="1"
+				startsize="1"
+				midsize="25"
+				endsize="50"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".5"
+
+				startstickiness=".2"
+				endstickiness="0"
+
+				
+			/>
+
+		</simpleemitter>
+
+
+
+
+		<simpleemitter
+		
+			spawnrate="150"
+			count="10"
+			
+			particlelife="1000"			
+			gravity="25"
+			speed="500"
+			drag=".02"
+			acceleration="0"
+			position="0 0 0"
+			
+			material="/shared/effects/materials/poison_14.material"
+			offsetsphere="1 1 1"
+			minangle="175"
+			maxangle="175"
+			direction="0 0 -1"
+			offsetdirection="0 0 0"
+			offsetradial="0 0 0"
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+				maxanglespeed="0"
+				startcolor=".8 1 .8"
+				midcolor=".8 1 .8"
+				endcolor="0 0 0"
+				midcolorpos=".2"
+
+				startframe="0"
+				endframe="1"
+				startsize="1"
+				midsize="20"
+				endsize="40"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".5"
+
+				startstickiness=".2"
+				endstickiness="0"		
+
+			/>
+
+		</simpleemitter>
+
+		
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

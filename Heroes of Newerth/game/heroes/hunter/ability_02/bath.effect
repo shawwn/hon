@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect>
+	<definitions>
+		<particlesystem name="system0" space="world">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume=".7"
+				sample="/heroes/hunter/ability_02/sounds/ability_02_grunt.wav"
+			/>
+			<model
+				life="800"
+				parentmodel="true"
+				parentskeleton="true"
+				startcolor=".5 0 0"
+				endcolor="0 0 0"
+				material="/shared/effects/materials/shell.material"
+				scale="1"
+			/>
+			
+		<simpleemitter
+			delay="0"
+			count="2"
+			particlelife="1100"				
+			spawnrate="11"
+			speed="220"
+			gravity="20"
+			direction="0 0 1"
+			minangle="0"
+			
+			maxangle="15"
+			particledirectionalspace="local"
+			material="/shared/effects/materials/venom_splash.material"
+			offsetsphere="11 11 0"
+			position="0 0 44"
+		>
+			<particle 
+				startsize="20"
+			
+				endsize="100"
+				color=".7 0 0"					
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+			/>
+		</simpleemitter>
+			
+		</particlesystem>
+			
+		<modifier
+			life="500"
+			name="modifier0"
+			startcolor="1 1 1"
+			midcolor=".5 0  0"
+			endcolor="1 1 1"
+			midcolorpos="0.2"
+		/>
+		
+
+
+
+		
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+

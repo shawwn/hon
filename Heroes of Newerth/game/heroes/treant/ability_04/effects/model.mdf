@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="overgrowtharearoots.max" file="aoeroots.model" type="K2"  >
+<anim name="idle" clip="clips/default_1.clip"  minstartframe="1" maxstartframe="33" fps="40" loop="false"/>
+</model>

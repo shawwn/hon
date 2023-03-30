@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Empath_Ability3_More_Titties"
+
+	
+	radius="400"
+	
+	targetselection="all"
+	targetscheme="other_ally_heroes"
+	effecttype="Magic"
+	maximpactspertarget="1"
+
+	
+>
+	<onspawn>
+		
+	</onspawn>
+
+	<onimpact>
+		<heal a="0.16,0.24,0.32,0.40" b="param" op="mult" />
+		<playeffect effect="effects/cast.effect" source="target_entity" />
+		<printdebuginfo />
+	</onimpact>
+	
+</affector>

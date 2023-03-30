@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" useentityeffectsscale="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale=".85">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="1000"
+				falloffend="2500"
+				volume="1"
+				sample="../sounds/impact_%.wav"
+			/>
+
+			<sound
+				linearfalloff="true"
+				falloffstart="0"
+				falloffend="1500"
+				volume=".5"
+				sample="/heroes/rocky/sounds/impact_%.wav"
+			/>
+
+			<groundsprite
+				life="1500"
+				material="/shared/effects/materials/earth_cracks_02.material"
+				minsize="65"
+				maxsize="115"
+				color="1"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos="0.8"
+				maxyaw="360"
+			/>
+
+			<groundsprite
+				life="1500"
+				material="/shared/effects/materials/ground_smash_overlay.material"
+				minsize="35"
+				maxsize="45"
+				color="1"
+				startalpha=".8"
+				midalpha=".8"
+				endalpha="0"
+				midalphapos="0.8"
+				maxyaw="360"
+			/>
+				
+			<debris
+				position="0 0 10"
+				minscale=".15"
+				maxscale=".35"
+				life="2000"
+				model="/shared/effects/models/debris/debris.mdf"
+				anim="idle"
+				minspeed="800.0"
+				maxspeed="1700.0"
+				minrotationspeed="300.0"
+				maxrotationspeed="1200.0"
+				gravity="80.0"
+				drag="0.004"
+				color=".4 .45 .42"
+				minangle="0"
+				maxangle="120"
+				collide="true"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="0.0"
+				midalphapos="0.95"
+				bounce="0.5"
+				reflect="0.6"
+				animpose="false"
+			/>
+
+			<simpleemitter
+				minparticlelife="500"
+				maxparticlelife="1400"
+				spawnrate="555"
+				count="8"
+				life="300"
+				gravity="5"
+				speed="250"
+				material="/shared/effects/materials/dust.material"
+				offsetsphere="40"
+				angle="10"
+				position="0 0 20"
+				direction="0 0 1"
+				drag="0.15"
+				depthbias="-50"
+			>
+				<particle 
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-50"
+					maxanglespeed="50"
+					color=".44 .42 .4"
+					maxstartsize="60"
+					minstartsize="20"
+					endsize="300"
+					startalpha=".5"
+					endalpha="0"
+				/>
+				<particle 
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-120"
+					maxanglespeed="120"
+					color=".74 .72 .7"
+					startsize="30"
+					endsize="200"
+					startalpha=".9"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				minparticlelife="800"
+				maxparticlelife="1400"
+				spawnrate="555"
+				count="6"
+				life="500"
+				gravity="10"
+				speed="150"
+				material="/shared/effects/materials/dust_explosion.material"
+				offsetsphere="10 10 10"
+				angle="90"
+				position="0 0 40"
+				direction="0 0 1"
+				drag="0.1"
+				depthbias="-30"
+			>
+				<particle 
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-100"
+					maxanglespeed="100"
+					color=".43 .4 .4"
+					startsize="45"
+					endsize="160"
+					startalpha=".3"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				minparticlelife="500"
+				maxparticlelife="1200"
+				spawnrate="555"
+				count="6"
+				life="500"
+				speed="25"
+				material="/shared/effects/materials/dust_puff.material"
+				offsetsphere="45"
+				position="0 0 30"
+				direction="0 0 1"
+				depthbias="-20"
+			>
+				<particle 
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-100"
+					maxanglespeed="100"
+					color=".5"
+					startsize="15"
+					endsize="160"
+					startalpha=".3"
+					endalpha="0"
+				/>
+				<particle 
+					minangle="-360"
+					maxangle="360"
+					minanglespeed="-30"
+					maxanglespeed="30"
+					color=".3"
+					startsize="75"
+					endsize="120"
+					startalpha=".8"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

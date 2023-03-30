@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="purgeEffect" deferred="true" useentityeffectsscale="true">
+	<definitions>
+	
+
+
+			<template name="beam">
+				<beam
+					life="100"
+					
+					bone_a="_bone_fx_{a}"
+					bone_b="_bone_fx_{b}"
+					size="{size}"
+					startcolor="0 .6 .7"	
+					endcolor="0 0 0 " 	 
+					
+					material="/shared/effects/materials/femme_lightning_10.material"
+					startframe="{frame}"
+					framespeed="5"
+				/>
+			
+				<billboard
+				life="100"
+				 bone="_bone_fx_{a}"
+				 material="/shared/effects/materials/whitedot.material"
+				 size="{size}"
+				 color="0 .2 .2"	
+				 
+				/>
+				<billboard
+				life="100"
+				 bone="_bone_fx_{b}"
+				 material="/shared/effects/materials/whitedot.material"
+				 size="{size}"
+				 color="0 .2 .2"			
+				/>		
+				
+				
+			
+			</template>
+	
+
+
+
+		<particlesystem name="system1" space="world" scale="1.0">
+
+		
+			<instance name="beam" a="28" b="12" size="26" frame=".8"/>
+			<instance name="beam" a="08" b="26"  size="26" frame=".3"/>
+			<instance name="beam" a="06" b="29" size="26" frame=".2"/>
+			<instance name="beam" a="24" b="62" size="26" frame=".6"/>
+			<instance name="beam" a="05" b="21" size="26" frame=".1"/>	
+			<instance name="beam" a="09" b="32" size="26" frame=".2"/>				
+	
+		
+		</particlesystem>
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnparticlesystem instance="instance1" particlesystem="system1" />	
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+	</thread>
+</effect>
+
+
+
+
+
+
+

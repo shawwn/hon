@@ -1,0 +1,22 @@
+Ability 1:
+----------
+Targets an enemy unit. Releases a lightning that goes to many enemy units dealing magical damage.
+
+
+Ability 2:
+----------
+Targets an enemy unit, transforms him into a critter. This changes your base movement speed to the critters movement speed. This interrupts channeling abilities. While a critter, you cannot cast spells or attack.
+
+
+Ability 3:
+----------
+Targets an enemy unit and binds him. This is a channeling spell. The target cannot move, cast or attack (including items). Deals damage over time. 
+
+
+Ultimate:
+----------
+Summons many magic immune 'wards' that deal damage.
+
+
+
+Intelligence/Ranged

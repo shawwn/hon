@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_SandWraith_Ability4"
+
+	ishidden="true"
+	
+>
+	<onexpired>
+		<applystate name="State_SandWraith_Ability4_AbilitySwitch" target="this_owner_entity" duration="4900,5900,6900" />
+	</onexpired>
+</state>

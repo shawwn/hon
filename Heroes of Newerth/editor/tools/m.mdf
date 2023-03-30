@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="" file="m.model" type="K2">
+	<skin name="red">
+		<reference material="m_red.material"/>
+	</skin>
+	<skin name="yellow">
+		<reference material="m_yellow.material"/>
+	</skin>
+	<skin name="green">
+		<reference material="m_green.material"/>
+	</skin>
+	<skin name="purple">
+		<reference material="m_purple.material"/>
+	</skin>
+	<anim name="idle" clip="m.clip" loop="true"/>
+</model>

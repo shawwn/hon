@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="beetleleg.max" file="areaarm.model" type="K2"  >
+<anim name="idle" clip="areaarm.clip" loop="false" fps="60"/>
+</model>

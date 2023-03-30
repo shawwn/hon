@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1" useentityeffectscale="1">
+	<definitions>
+	
+		<modifier
+			name="modifier0"
+			startcolor="0 0 0"
+			endcolor="0 0 0"
+			alpha=".5"
+		/>
+
+		<particlesystem name="system0" space="world" scale="1">
+		
+			<model
+				life="650"
+				parentmodel="true"
+				parentskeleton="true"
+				startcolor="0 1.5 3"
+				endcolor="0"
+				material="/shared/effects/materials/shell2.material"
+			/>
+			
+			<template name="sparks" >
+				<twopointemitter
+					life="400"
+					bone_a="{boneA}"
+					bone_b="{boneB}"
+					spawnrate="25"
+					particlelife="300"
+					offsetsphere="2"
+					material="/shared/effects/materials/femme_lightning_01.material"
+				>
+					<particle
+						startcolor="0.0 0.0 0.0"
+						midcolor=".25 .25 1"
+						endcolor="0 "
+						midcolorpos="0.5"
+						startalpha="1.0"
+						endalpha="1.0"
+						maxangle="360"
+						minanglespeed="-45"
+						maxanglespeed="45"
+						minendsize="30"
+						startsize="30"
+						maxendsize="70"
+						flare="true"
+						anchor="1"
+					/>
+					
+					<particle
+						startcolor="0 0 0"
+						midcolor=".6 .6 1"
+						endcolor="0 "
+						midcolorpos="0.5"
+						startalpha="1.0"
+						endalpha="1.0"
+						maxangle="360"
+						minanglespeed="-45"
+						maxanglespeed="45"
+						minendsize="30"
+						startsize="30"
+						maxendsize="65"
+						flare="true"
+						anchor="1"
+					/>
+				</twopointemitter>
+			</template>
+			
+			<instance name="sparks"  size="75" boneA="Bip01 L Hand" boneB="Bip01 L Forearm"/>
+			<instance name="sparks"  size="75" boneA="Bip01 R Hand" boneB="Bip01 R Forearm"/>
+			<instance name="sparks" size="75"  boneA="Bip01 L Thigh" boneB="Bip01 L Calf"/>
+			<instance name="sparks"  size="75"  boneA="Bip01 R Thigh" boneB="Bip01 R Calf"/>
+			<instance name="sparks"  size="75" boneA="Bip01 L Foot" boneB="Bip01 L Calf"/>
+			<instance name="sparks"  size="75" boneA="Bip01 R Foot" boneB="Bip01 R Calf"/>	
+			<instance name="sparks" size="75"  boneA="Bip01 Neck" boneB="_bone_head"/>
+		
+			<simpleemitter
+				timenudge="2000"
+				bone="_bone_centerofchest"
+				spawnrate="5"
+				minparticlelife="1000"
+				maxparticlelife="1500"
+				gravity="5"
+				drag=".25"
+				position="0 0 5"
+				offsetsphere="10 10 50"
+				material="/shared/effects/materials/phantom_black.material"
+			>
+				<particle
+					maxangle="360"
+					minanglespeed="-6"
+					maxanglespeed="6"
+					color="0 0 0"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					startsize="0"
+					endsize="275"
+				/>
+			</simpleemitter>
+			
+			<template name="trails">
+				<trailemitter
+					bone="{bone}"
+					spawnrate="{spawnrate}"
+					startminparticlelife="{life}"
+					startmaxparticlelife="{life}"
+					gravity="15"
+					drag=".1"
+					endminparticlelife="1"
+					endmaxparticlelife="1" 
+					texpostime="{life}"
+					texposscale="0"
+					texstretchscale="1"
+					speed="1"
+					position="{position}"
+					material="/shared/effects/materials/arrow_trail_blend.material"
+					inheritvelocity=".25"
+					limitinheritvelocity="500"
+				>
+					<particle
+						startcolor="0 0 0"
+						endcolor="0 0 0"
+						startsize="30"
+						midsize="15"
+						endsize="2"
+						startalpha=".65"
+						endalpha="0"
+					/>
+				</trailemitter>
+			</template>
+			
+			<instance name="trails" spawnrate="120" life="300" position="0 0 0" bone="_bone_righthand"/>
+			<instance name="trails" spawnrate="120" life="300" position="0 0 0" bone="_bone_lefthand"/>
+			<instance name="trails" spawnrate="40" life="500" position="0 0 0" bone="Bip01 R Clavicle"/>
+			<instance name="trails" spawnrate="40" life="500" position="0 0 0" bone="Bip01 L Clavicle"/>
+			<instance name="trails" spawnrate="40" life="200" position="0 0 0" bone="Bip01 R Forearm"/>
+			<instance name="trails" spawnrate="40" life="200" position="0 0 0" bone="Bip01 L Forearm"/>
+			<instance name="trails" spawnrate="40" life="200" position="0 0 0" bone="Bip01 R Upperarm"/>
+			<instance name="trails" spawnrate="40" life="200" position="0 0 0" bone="Bip01 L Upperarm"/>
+			<instance name="trails" spawnrate="40" life="200" position="0 0 0" bone="Bip01 Spine3"/>
+
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

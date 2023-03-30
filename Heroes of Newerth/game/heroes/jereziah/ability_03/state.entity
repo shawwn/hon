@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Jereziah_Ability3"
+
+	passiveeffect=""
+	
+	icon="icon.tga"
+	
+	movespeedslow="0.07,0.14,0.21,0.28"
+>
+</state>

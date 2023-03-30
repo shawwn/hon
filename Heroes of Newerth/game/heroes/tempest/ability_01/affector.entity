@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Tempest_Ability1"
+
+	radius="0"
+	
+	maxintervals="1,2,2,3"
+	targetselection="all"
+	targetscheme="visible_enemy_units"
+	effecttype="Magic"
+	impactinterval="2000"
+	effect=""
+	impacteffect=""
+>
+	<oninterval>
+        <cantarget effecttype="Magic" targetscheme="visible_enemy_units" ignoreinvulnerable="false">
+			<applystate name="State_Stunned" duration="1000" />
+			<damage effecttype="Magic" amount="30,40,65,80" />
+			<playeffect effect="effects/stun.effect" source="target_entity" />
+		</cantarget>
+	</oninterval>
+</affector>

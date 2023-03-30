@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Krixi2"
+
+	icon="icons/ability_2.tga"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	casteffecttype="Physical"
+	actiontype="toggle"
+	frontqueue="true"
+	inheritmovement="true"
+	noninterrupting="true"
+	manacost="0"
+	toggleoffmanacost="0"
+	cooldowntime="1000"
+	
+	noresponse="true"
+>
+	<onimpact />
+
+	<onattackimpact
+		priority="999"
+		activateonbounces="true"
+	>
+		<bounce count="1,2,3,4" range="500" damagemult="0.65" targetscheme="visible_enemy_objects" seek="closest" maxbouncespertarget="1"/>
+	</onattackimpact>
+	
+	<modifier key="Ability_Krixi2_active" condition="toggle_active" modpriority="100"
+	>
+		<onattackimpact
+			priority="999"
+			activateonbounces="true"
+		>
+			<condition test="target_type hero">
+				<bounce count="1,2,3,4" range="500" damagemult="0.65" targetscheme="visible_enemy_heroes" seek="closest" maxbouncespertarget="1"/>
+			</condition>
+		</onattackimpact>
+	</modifier>
+</ability>

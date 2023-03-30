@@ -1,0 +1,12 @@
+There are a few components to a unit's attack damage. 
+
+Primary Damage:
+---------------
+-Base Damage: This is the damage provided by your hero damage dice as well as damaged given from your primary attribute.
+
+-Bonus Damage: This is the bonus you get from various items and abilities, like buriza gives +75, this would be placed here.
+
+Secondary Damage:
+------------------
+-Bonus Damage: This is the bonus damage you get from things like MKB bonus damage proc.
+

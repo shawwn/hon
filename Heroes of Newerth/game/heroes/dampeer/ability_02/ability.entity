@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Dampeer2"
+	
+	icon="icon.tga"
+	
+	anim="ability_2"
+	casttime="200"
+	castactiontime="100"
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+	
+	activatescheme="movement"
+	actiontype="target_entity"
+	targetradius="175"
+	casteffecttype="Magic"
+	targetscheme="enemy_units"
+	manacost="75"
+	cooldowntime="20000,16000,12000,8000"
+	
+	casteffect="effects/walk.effect"
+	
+	range="600"
+>
+	<onimpact>
+		<spawnprojectile name="Projectile_Dampeer_Ability2" unbindondeath="true" source="source_entity" target="target_entity" bind="source_entity" bindstate="State_Dampeer_Ability2_Self" bindturn="true" />
+	</onimpact>
+	
+	<modifier key="Dampeer_Soul_1" modpriority="100">
+		<onimpact>
+			<spawnprojectile name="Projectile_Dampeer_Ability2" unbindondeath="true" source="source_entity" target="target_entity" bind="source_entity" bindstate="State_Dampeer_Ability2_Self" bindturn="true" />
+		</onimpact>
+	</modifier>
+	
+	
+	<modifier key="Dampeer_Soul_2" modpriority="100">
+		<onimpact>
+			<spawnprojectile name="Projectile_Dampeer_Ability2" unbindondeath="true" source="source_entity" target="target_entity" bind="source_entity" bindstate="State_Dampeer_Ability2_Self" bindturn="true" />
+		</onimpact>
+	</modifier>
+	
+	
+	<modifier key="Dampeer_Soul_3" modpriority="100">
+		<onimpact>
+			<spawnprojectile name="Projectile_Dampeer_Ability2" unbindondeath="true" source="source_entity" target="target_entity" bind="source_entity" bindstate="State_Dampeer_Ability2_Self" bindturn="true" />
+		</onimpact>
+	</modifier>
+</ability>

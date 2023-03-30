@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<modifier
+			life="10000"
+			color="1 1 1"
+			alpha="0"
+		/>
+	
+		<particlesystem name="system0" space="world" scale="2.0">
+
+			<sound
+				delay="600"
+				linearfalloff="true"
+				falloffstart="0"
+				falloffend="2200"
+				volume="1"
+				sample="../../sounds/shield_off.wav"
+			/>
+
+			<sound
+				linearfalloff="true"
+				falloffstart="0"
+				falloffend="2200"
+				volume="0.55"
+				sample="../../sounds/shield_death.wav"
+			/>
+
+		<simpleemitter
+			count="1"
+			spawnrate="1000"
+			angle="0"
+			direction="0 1 0"
+			particledirectionalspace="local"
+		>
+			<particle
+			>
+				<model
+					life="10"
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					model="model.mdf"
+					anim="death_1"
+					directionalspace="global"
+					scale=".5"
+				/>
+			</particle>
+		</simpleemitter>
+		
+		<simpleemitter
+			count="1"
+			spawnrate="1000"
+			angle="0"
+			direction="0 1 0"
+			particledirectionalspace="local"
+		>
+			<particle
+			>
+				<model
+					life="5500"
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+					model="model.mdf"
+					anim="death_1"
+					directionalspace="global"
+					scale=".5"
+				>
+
+			<simpleemitter
+				life="2000"
+				bone="Box19"
+				spawnrate="170"
+				minparticlelife="100"
+				maxparticlelife="400"
+				minspeed="0"
+				maxspeed="12"
+				offsetsphere="7"
+				depthbias="-10"
+				material="/shared/effects/materials/femme_lightning_01.material"
+			>
+				<particle
+					angle="360"
+					startcolor="0 .5 1"
+					endcolor="0"
+					size="10"
+					minendscale="1"
+					maxendscale="6"
+					flare="1"
+					endheight="1"
+					turn="1"
+					minanglespeed="-50"
+					maxanglespeed="50"
+					anchor="1"
+				/>
+				<particle
+					angle="360"
+					startcolor="0 .5 1"
+					endcolor="0"
+					size="10"
+					minendscale="1"
+					maxendscale="6"
+					height="2"
+					turn="1"
+					minanglespeed="-50"
+					maxanglespeed="50"
+					anchor="1"
+				/>
+				<particle
+					angle="360"
+					startcolor="0 .5 1"
+					endcolor="0"
+					size="4"
+					minendscale="1"
+					maxendscale="6"
+					height="1"
+					turn="1"
+					minanglespeed="-50"
+					maxanglespeed="50"
+					anchor="1"
+				/>
+			</simpleemitter>
+
+			<twopointemitter
+				bone_a="Box17"
+				bone_b="_bone_fx_05"
+				life="2000"
+				spawnrate="200"
+				minparticlelife="100"
+				maxparticlelife="400"
+				minspeed="0"
+				maxspeed="12"
+				offsetsphere="2"
+				depthbias="-10"
+				material="/shared/effects/materials/femme_lightning_01.material"
+			>
+				<particle
+					angle="360"
+					startcolor="0 .5 1"
+					endcolor="0"
+					size="10"
+					minendscale="1"
+					maxendscale="3"
+					flare="1"
+					endheight="1"
+					turn="1"
+					minanglespeed="-50"
+					maxanglespeed="50"
+					anchor="1"
+				/>
+				<particle
+					angle="360"
+					startcolor="0 .5 1"
+					endcolor="0"
+					size="10"
+					minendscale="1"
+					maxendscale="3"
+					height="2"
+					turn="1"
+					minanglespeed="-50"
+					maxanglespeed="50"
+					anchor="1"
+				/>
+				<particle
+					angle="360"
+					startcolor="0 .5 1"
+					endcolor="0"
+					size="4"
+					minendscale="1"
+					maxendscale="3"
+					height="1"
+					turn="1"
+					minanglespeed="-50"
+					maxanglespeed="50"
+					anchor="1"
+				/>
+			</twopointemitter>
+
+			<billboard
+				life="1200"
+				bone="Box19"
+				material="/shared/effects/materials/whitedot.material"
+				size="70"
+				startcolor="0 .2 .4"
+				endcolor="0"
+				expirelife="200"			
+				depthbias="-40"
+			/>
+					
+			<beam
+				life="2000"
+				bone_a="_bone_fx_03"
+				bone_b="_bone_fx_05"
+				size="40"
+				startcolor="0 .5 1"
+				midcolor="0 .5 1"
+				endcolor="0"
+				material="/shared/effects/materials/femme_lightning_06.material"
+				framespeed="1"
+			/>
+					
+			<beam
+				life="2000"
+				bone_a="_bone_fx_03"
+				bone_b="_bone_fx_05"
+				size="60"
+				startcolor="0 .6 1"
+				midcolor="0 .6 1"
+				endcolor="0"
+				material="/shared/effects/materials/femme_lightning_06.material"
+				framespeed="3"
+			/>
+
+			<simpleemitter
+				bone="Box19"
+				spawnrate="35"
+				life="4000"
+				minparticlelife="500"
+				maxparticlelife="5000"
+				angle="30"
+				gravity="-1"
+				material="/shared/effects/materials/smoke_particle.material"
+				inheritvelocity="0.01"
+				offsetsphere="20"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-50"
+					maxanglespeed="50"
+					color=".6"
+					size="6"
+					startscale="5"
+					endscale="15"
+					midsizepos=".2"
+					startalpha="0"
+					midalpha=".2"
+					endalpha="0"
+					midalphapos=".2"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				timenudge="2000"
+				bone="Box01"
+				spawnrate="35"
+				life="4000"
+				minparticlelife="500"
+				maxparticlelife="5750"
+				angle="30"
+				gravity="-1"
+				material="/shared/effects/materials/smoke_particle.material"
+				inheritvelocity="0.01"
+				offsetsphere="20"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-50"
+					maxanglespeed="50"
+					startcolor=".6"
+					size="4"
+					startscale="5"
+					endscale="15"
+					midsizepos=".2"
+					startalpha="0"
+					midalpha=".2"
+					endalpha="0"
+					midalphapos=".2"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				life="100"
+				position="0 0 35"
+				spawnrate="10000"
+				count="20"
+				minparticlelife="200"
+				maxparticlelife="400"
+				minspeed="0"
+				maxspeed="22"
+				offsetsphere="20"
+				depthbias="-40"
+				material="/shared/effects/materials/soul_projectile2.material"
+			>
+				<particle
+					maxangle="360"
+					startcolor="2"
+					endcolor="0"
+					size="10"
+					minendscale="4"
+					maxendscale="6"
+					endheight="4"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				life="200"
+				position="0 0 35"
+				spawnrate="170"
+				minparticlelife="500"
+				maxparticlelife="1000"
+				minspeed="20"
+				maxspeed="212"
+				drag=".1"
+				gravity="5"
+				offsetsphere="10"
+				depthbias="-40"
+				material="/shared/effects/materials/spark_10.material"
+			>
+				<particle
+					turn="1"
+					startcolor="1"
+					endcolor="0"
+					size="2"
+					minendscale="2"
+					maxendscale="6"
+					startheightdistort=".05"
+				/>
+				<particle
+					turn="1"
+					startcolor="1 .6 .2"
+					endcolor="0"
+					size="2"
+					minendscale="2"
+					maxendscale="4"
+				/>
+			</simpleemitter>
+
+			<template name="sparks">
+				<simpleemitter
+					life="300"
+					bone="{bone}"
+					spawnrate="170"
+					minparticlelife="500"
+					maxparticlelife="1000"
+					minspeed="20"
+					maxspeed="112"
+					drag=".1"
+					gravity="5"
+					offsetsphere="10"
+					depthbias="-40"
+					material="/shared/effects/materials/spark_10.material"
+				>
+					<particle
+						turn="1"
+						startcolor="1"
+						endcolor="0"
+						size="2"
+						minendscale="2"
+						maxendscale="6"
+					/>
+					<particle
+						turn="1"
+						startcolor="1 .6 .2"
+						endcolor="0"
+						size="2"
+						minendscale="2"
+						maxendscale="4"
+					/>
+				</simpleemitter>
+
+				<billboard
+					life="500"
+					bone="{bone}"
+					material="/shared/effects/materials/whitedot.material"
+					size="170"
+					startcolor=".5 .2 0"
+					endcolor="0"
+					expirelife="200"			
+				 	depthbias="-60"
+				/>
+			</template>
+
+			<instance name="sparks" bone="Box017"/>
+			<instance name="sparks" bone="Box05"/>
+			<instance name="sparks" bone="Box019"/>
+
+			<billboard
+				life="600"
+				position="0 0 35"
+				material="/shared/effects/materials/whitedot.material"
+				size="160"
+				startcolor=".7 .3 0"
+				endcolor="0"
+				expirelife="200"			
+				depthbias="-40"
+			/>
+
+			</model>
+			</particle>
+			</simpleemitter>
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance1" particlesystem="system0" />
+		<spawnmodifier instance="instance0"/>
+		<waitfordeath  instance="instance0"/>
+		<waitfordeath  instance="instance1"/>
+	</thread>
+
+</effect>

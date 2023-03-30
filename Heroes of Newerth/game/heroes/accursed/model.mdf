@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="rig.max" file="high.model" type="K2" high="high.model" med="med.model" low="low.model" >
+	
+	<anim name="idle" clip="clips/default_1.clip" loop="true">
+		<startevent cmd="PlaySoundLoopingLinear /heroes/accursed/sounds/idle.wav 200 1400 .1 0 100 300"/>
+	</anim>
+
+	<anim name="portrait" clip="clips/portrait.clip" loop="true"/>
+	
+	<anim name="item_1" clip="clips/item_1.clip"/>
+	
+	<anim name="ability_1" clip="clips/ability_2.clip"/>
+
+	<anim name="ability_2" clip="clips/ability_1.clip"/>
+
+	<anim name="ability_4" clip="clips/ability_4.clip"/>
+
+	<anim name="attack_1" clip="clips/attack_1.clip" fps="100" loop="false">
+		<frameevent frame="12" cmd="PlaySoundLinear /heroes/accursed/sounds/move_%.wav 0 800 .3"/>
+		<frameevent frame="11" cmd="PlaySoundLinear /heroes/hiro/sounds/attack_%.wav 400 2000 .65"/>
+	</anim>
+	
+	<anim name="attack_2" clip="clips/attack_2.clip" fps="100" loop="false">
+		<frameevent frame="12" cmd="PlaySoundLinear /heroes/accursed/sounds/move_%.wav 0 800 .3"/>>
+		<frameevent frame="8" cmd="PlaySoundLinear /heroes/hiro/sounds/attack_%.wav 400 2000 .65"/>
+	</anim>	
+	
+	<anim name="attack_3" clip="clips/attack_2.clip" fps="100" loop="false">
+		<frameevent frame="1" cmd="PlaySoundLinear /heroes/accursed/sounds/attack_grunt_%.wav 500 2000 .6"/>
+		<frameevent frame="12" cmd="PlaySoundLinear /heroes/accursed/sounds/move_%.wav 0 800 .3"/>
+		<frameevent frame="11" cmd="PlaySoundLinear /heroes/hiro/sounds/attack_%.wav 400 2000 .65"/>
+	</anim>
+
+	<anim name="ability_3_attack_1" clip="clips/attack_1.clip" fps="100" loop="false">
+		<frameevent frame="12" cmd="PlaySoundLinear /heroes/accursed/sounds/move_%.wav 0 800 .3"/>
+		<frameevent frame="11" cmd="PlaySoundLinear /heroes/accursed/sounds/attack_%.wav 400 2000 .65"/>
+	</anim>
+	
+	<anim name="ability_3_attack_2" clip="clips/attack_2.clip" fps="100" loop="false">
+		<frameevent frame="12" cmd="PlaySoundLinear /heroes/accursed/sounds/move_%.wav 0 800 .3"/>>
+		<frameevent frame="8" cmd="PlaySoundLinear /heroes/accursed/sounds/attack_%.wav 400 2000 .65"/>
+	</anim>	
+	
+	<anim name="ability_3_attack_3" clip="clips/attack_2.clip" fps="100" loop="false">
+		<frameevent frame="12" cmd="PlaySoundLinear /heroes/accursed/sounds/move_%.wav 0 800 .3"/>
+		<frameevent frame="11" cmd="PlaySoundLinear /heroes/accursed/sounds/attack_%.wav 400 2000 .65"/>
+	</anim>
+	
+	<anim name="walk_1" clip="clips/walk_1.clip" fps="28" loop="true">
+		<frameevent frame="1" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="6" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="11" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="16" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		
+		<startevent cmd="PlaySoundLinear /heroes/accursed/sounds/move.wav 200 1700 0.3"/>		
+		<frameevent frame="1" cmd="StartEffect /shared/effects/footstep_l_#GetTerrainType()#.effect"/>
+		<frameevent frame="8" cmd="PlaySoundLinear /heroes/accursed/sounds/move_%.wav 0 800 .3"/>
+		<frameevent frame="11" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+		<frameevent frame="21" cmd="PlaySoundLinear /heroes/accursed/sounds/move_%.wav 0 800 .3"/>
+	</anim>
+	
+	<anim name="taunt_1" clip="clips/taunt_1.clip">
+		<frameevent frame="27" cmd="StartEffect /heroes/femmeflame/projectile/impact.effect"/>
+	</anim>
+	
+	<anim name="bored_1" clip="clips/bored_1.clip"/>
+	
+	<anim name="death_1" clip="clips/death_1.clip" loop="true" loopbackframe="120">
+		<frameevent frame="1" cmd="PlaySoundLinear /heroes/accursed/sounds/death.wav 800 1500"/>
+		<frameevent frame="1" cmd="StartEffect effects/death.effect 1"/>
+		<frameevent frame="4" cmd="starteffect effects/fireSkeleton.effect"/>
+		<endevent cmd="StopEffect 1" />
+		<endevent cmd="Stopsound 0"/>
+	</anim>
+	
+	<anim name="knock_1" clip="clips/knock_1.clip" loop="true" loopbackframe="-1"/>
+	
+	<anim name="getup_1" clip="clips/getup_1.clip"/>		
+	
+</model>

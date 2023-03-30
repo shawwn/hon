@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_HellDemon_Ability2"
+	
+	icon="icon.tga"
+>
+	<onframe>
+		<setvar0 a="target_maxhealth" b="0.004,0.006,0.008,.01" op="mult" />
+		<setvar1 a="var0" b="-1" op="mult" />
+		<setvar2 a="var1" b="frametime" op="mult" />
+		<changehealth a="var2" />
+		<condition test="target_health lt 1">
+			<kill target="target_entity" />
+		</condition>
+	</onframe>
+
+	<modifier key="helldemon_healthaura" condition="hero" modpriority="100"
+		passiveeffect="effects/aura.effect"
+	/>
+</state>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect useentityeffectscale="1" deferred="1">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="2.4">			
+				
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2200"
+				volume=".45"
+				sample="../../sounds/impact_%.wav"
+			/>		
+		
+			<simpleemitter
+				bone="_bone_centerofchest"
+				spawnrate="90"
+				count="45"
+				life="250"
+				yawspeed="360"
+				particlelife="600"
+				position="0 0 0"
+				offsetsphere="10 10 25"
+				material="/shared/effects/materials/mysticenergy.material"
+			>
+				<particle
+					minangle="0"
+					maxangle="180"
+					startcolor="0 0 0"
+					midcolor=".5 .2 0.0"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					maxanglespeed="30"
+					startsize="0"
+					
+					endsize="100"
+					
+					lockup="true"
+					
+				/>
+			</simpleemitter>
+
+		
+
+			<billboard	
+				bone="_bone_centerofchest"
+				material="/shared/effects/materials/whitedot.material"
+				startcolor=".6 .2 .1"
+				endcolor="0 0 0"
+				startsize="0"
+				endsize="150"
+				depthbias="-120"
+				life="600"
+			/>
+			<billboard	
+				bone="_bone_centerofchest"
+				material="/shared/effects/materials/star_03.material"
+				startcolor=".6 .6 .1"
+				endcolor="0 0 0"
+				startsize="0"
+				endsize="150"
+				depthbias="-120"
+				life="300"
+			/>
+		
+			
+			
+	
+
+			
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" /> 
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

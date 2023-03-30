@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="purgeEffect" deferred="true" useentityeffectsscale="true">
+	<definitions>
+		<particlesystem name="system0" space="entity" scale="1.1">
+			
+			<billboard
+				delay="100"
+				life="1000"	
+				bone="_bone_righthand"
+				material="/shared/effects/materials/whitedot.material"
+				startcolor="0 0 0"
+				midcolor="0 .5 1"
+				endcolor="0 0 0"
+				size="35"
+				depthbias="-30"
+				loop="true"
+			/>	
+			
+			<billboard
+				delay="100"
+				life="1000"	
+				bone="_bone_lefthand"
+				material="/shared/effects/materials/whitedot.material"
+				startcolor="0 0 0"
+				midcolor="0 .5 1"
+				endcolor="0 0 0"
+				size="35"
+				depthbias="-30"
+				loop="true"
+			/>	
+			
+			<billboard
+				delay="100"
+				life="1000"	
+				bone="_bone_centerofchest"
+				material="/shared/effects/materials/whitedot.material"
+				startcolor="0 .25 .5"
+				midcolor="0 .5 1"
+				endcolor="0 .25 .5"
+				size="50"
+				depthbias="-30"
+				loop="true"
+			/>
+
+			<model
+				life="1000"
+				bone="_bone_centerofchest"
+				position="0 0 0"			
+				model="../../ability_04/effects/orb.mdf"
+				anim="idle"
+				startscale=".1"
+				midscale=".175"
+				endscale=".1"
+				loop="true"
+				alpha=".2"
+			/>
+
+			<simpleemitter
+				timenudge="1000"
+				bone="_bone_centerofchest"			
+         		spawnrate="15"				
+				minparticlelife="1500"
+          		maxparticlelife="3000"
+          		gravity="0"
+          		drag="0"
+				position="0 0 0"
+				offsetsphere="20 20 0"
+				material="/shared/effects/materials/phantom_smoke_17.material"
+			>
+  				<particle 
+					maxangle="360"			
+					minanglespeed="-6"
+					maxanglespeed="6"
+					startcolor="0 0 0"
+					midcolor=".02 .02 .035"
+					endcolor="0 0 0"
+					startalpha="1 1 1"
+					endalpha="0 0 0"
+					startsize="0"
+					endsize="175"
+					endanchor="0"
+					stickiness="1"
+				/>
+        	</simpleemitter>
+
+		</particlesystem>
+			
+			
+		<particlesystem name="system1" space="world" scale="1.1">
+			
+			<simpleemitter
+				bone="_bone_overhead"
+				spawnrate="3"
+				particlelife="1000"
+				gravity="1"
+				speed="5"
+				drag="0"
+				acceleration="0"
+				position="0 0 0"
+				offsetsphere="0 0 0"
+				material="/shared/effects/materials/heathaze.material"
+				inheritvelocity=".1"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					startparam="0"
+					midparam=".1"
+					endparam="0"
+					startcolor="1 1 1"
+					frame=".1"
+					startalpha="0"
+					midalpha=".25"
+					endalpha="0"
+					midalphapos=".5"
+					startsize="35" 
+					endsize="60"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+			timenudge="2000"
+				bone="_bone_overhead"
+         		spawnrate="5"
+				minparticlelife="1500"
+          		maxparticlelife="3000"
+          		gravity="10"
+          		drag=".25"
+				position="0 0 0"
+				offsetsphere="10 10 0"
+				material="/shared/effects/materials/phantom_smoke_04.material"
+			>
+  				<particle 
+					maxangle="360"
+					minanglespeed="-6"
+					maxanglespeed="6"
+					startcolor="0 0 0"
+					midcolor="0 .15 .3"
+					endcolor="0 0 0"
+					startsize="0"
+					endsize="165"
+					startanchor="1"
+					endanchor="1"
+				/>
+        	</simpleemitter>
+
+			<billboard
+				bone="_bone_centerofchest"
+				life="1000"
+				startalpha=".1"
+				midalpha=".35"
+				endalpha=".1"
+				startparam=".5"
+				midparam=".5"
+				endparam=".5"
+				startsize="128"
+				midsize="400"
+				endsize="128"
+				depthbias="-40"
+				scale=".25"
+				material="/shared/effects/materials/refract_ripple.material"
+				loop="true"
+			/>
+			
+				<billboard
+					material="/shared/effects/materials/fresnel_blend.material"
+					bone="_bone_centerofchest"
+					expirelife="500"
+					startcolor="0 .15 .2"
+					endcolor="0 0 0"
+					alpha="0"
+					position="0 0 0"
+					size="60"
+				/>
+				<billboard
+					material="/shared/effects/materials/corona_07.material"
+					bone="_bone_centerofchest"
+					expirelife="500"
+					startcolor="0 .15 .2"
+					endcolor="0 0 0"
+					alpha="0"
+					position="0 0 0"
+					size="60"
+				/>
+				<billboard
+					material="/shared/effects/materials/fresnel.material"
+					bone="_bone_centerofchest"
+					expirelife="500"
+					startcolor="0 .15 .2"
+					alpha="0"
+					endcolor="0 0 0"
+					position="0 0 0"
+					size="60"
+				/>
+			
+		</particlesystem>
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnparticlesystem instance="instance1" particlesystem="system1" />	
+		<waitfordeath instance="instance0" />
+		<waitfordeath instance="instance1" />
+	</thread>
+</effect>
+
+
+
+
+
+
+

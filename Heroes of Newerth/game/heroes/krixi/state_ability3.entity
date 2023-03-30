@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Krixi_Ability3"
+
+	
+	
+	icon="icons/ability_3.tga"
+	passiveeffect="effects/ability_03/ability_03.effect"
+	displaylevel="true"
+	
+	basedamagemultiplier="0.06,0.13,0.20,0.27"
+	
+
+>
+</state>

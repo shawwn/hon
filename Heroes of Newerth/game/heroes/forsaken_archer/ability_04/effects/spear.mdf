@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="ultprojectile.max" file="spear.model" type="K2" >
+<anim name="idle" clip="spear.clip" fps="90" loop="1"/>
+</model>

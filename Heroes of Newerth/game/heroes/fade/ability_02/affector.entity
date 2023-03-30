@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Fade_Ability2"
+
+	radius="150"
+	arc="180"
+	
+	speed="1600"
+	
+	lifetime="500"
+	maximpactspertarget="1"
+	targetselection="all"
+	targetscheme="enemy_heroes"
+	effecttype="Magic"
+	persist="true"
+	effect="effects/cast_mana_drain.effect"
+>
+	<onspawn>
+		<setparam entity="this_entity" a="0" />
+	</onspawn>
+	
+	<onimpact>
+		<playeffect effect="effects/birth.effect" source="target_entity" target="" />
+		<spawnillusion owner="source_entity" source="target_entity" count="1" lifetime="8000" receivedamagemultiplier="1" inflictdamagemultiplier="0" pushentity="true" proxy="target_entity" /> 
+		<order command="attack" force="true" forceduration="8000" source="stack_entity" target="target_entity" />
+		<applystate name="State_Fade_Ability2_CountAttacks" target="stack_entity" proxy="target_entity" duration="8000" />
+		<applystate name="State_Fade_Ability2_ExpirePet" target="target_entity" proxy="stack_entity" duration="8000" />
+		<setvar1 a="param" b="1" op="add" />
+		<setparam entity="this_entity" a="var1" />
+		<applystate name="State_Fade_Ability2_Manaburn" duration="1000" />
+	</onimpact>
+	
+	<onexpired>
+		<areaofeffect
+			radius="99999"
+			targetselection="all"
+			targetscheme="enemy_heroes"
+			effecttype=""
+		>
+			<condition test="hasstate State_Fade_Ability2_Manaburn">
+				<setvar1 a="1,2,3,4" b="param" op="mult" />
+				<setvar2 a="7,14,21,28" b="var1" op="sub" />
+				<setvar3 a="2,4,6,8" b="var2" op="max" />
+				<setvar1 a="var3" b="100" op="div" />
+				<setvar0 a="target_maxmana" b="var1" op="mult" />
+				<takemana amount="1" b="var0" op="mult" />
+				<condition test="result gt 0">
+					<popup name="manaburn" source="target_entity" target="source_entity" a="result" />
+				</condition>
+				<expirestate name="State_Fade_Ability2_Manaburn" />
+			</condition>
+		</areaofeffect>
+	</onexpired>
+	
+	<modifier key="fadeshadowmode" modpriority="100"
+		effect="effects/cast.effect"
+	>	
+		<onimpact>
+			<applystate name="State_Fade_Ability2_Stunned" duration="1000,1500,2000,2500" />	
+			<playeffect effect="effects/birth.effect" source="target_entity" target="" />
+			<spawnillusion owner="source_entity" source="target_entity" count="1" lifetime="8000" receivedamagemultiplier="1" inflictdamagemultiplier="0" pushentity="true" proxy="target_entity" /> 
+			<order command="attack" force="true" forceduration="8000" source="stack_entity" target="target_entity" />
+			<applystate name="State_Fade_Ability2_CountAttacks" target="stack_entity" proxy="target_entity" duration="8000" />
+			<applystate name="State_Fade_Ability2_ExpirePet" target="target_entity" proxy="stack_entity" duration="8000" />
+		</onimpact>
+	</modifier>
+</affector>

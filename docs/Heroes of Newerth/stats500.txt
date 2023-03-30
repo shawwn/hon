@@ -1,0 +1,63 @@
+Parsed logs from match 570,000-599,999
+Logs start on 2009/01/08 at version 1.31
+Logs end on 2009/02/08 at version 1.32
+
+"Total" is the total number of match IDs seen, this is actually slightly larger than the number of log files. I haven't identified the exact cause yet, but there are some cases where if a game doesn't start it will not start a new log file. This may simply be from the host disbanding the games, but this accounts for a good deal of missing logs.
+
+"Start" is the percentage of match IDs that made it to the start of the game.
+"End" is the percentage of games that started that had a corresponfing tag for the game ending. I'm not sure why this is not 100%
+"Concede" is the percentage of games that started that ended with a successful concede vote.
+"Full" is the percentage of games that started as a standard 5v5 (for most statistics those are the only ones i'm interested in).
+"Leaver" is the percentage of games that started and had a player disconnect and not reconnect before the end. Since the log doesn't specifically include terminations, this might be slightly inflated but should be close to accurate.
+"PSR" is the mean of all PSR values seen... this very roughly indicates the average rating (being above 1500 possibly indicates a bit of inflation, or maybe just that higher PSR players play more often).
+
+For heroes, the first column is percent of completed games they appeared in.
+The second column is the average PSR of the person playing them.
+The third column is the percentage of games that they were on the winning team.
+
+Total: 23724 Start: 64.2% End: 92.5% Concede: 46.7% Full: 56.9% Leaver: 38.8% PSR: 1568
+  Accursed:       18.9% 1563 53.9%
+  Arachna:        26.9% 1581 60.5%
+  Armadon:         9.4% 1572 49.3%
+  Behemoth:       16.3% 1565 52.2%
+  Chronos:        11.6% 1561 42.7%
+  Defiler:        18.0% 1580 59.0%
+  Devourer:       17.9% 1570 48.0%
+  DwarfMagi:      16.0% 1569 52.6%
+  Ebulus:         18.6% 1564 52.3%
+  Electrician:    17.3% 1577 50.8%
+  Fairy:          14.5% 1572 47.2%
+  Frosty:         17.6% 1561 51.1%
+  Hammerstorm:    14.2% 1564 48.9%
+  Hantumon:       23.2% 1558 46.1%
+  Hellbringer:    13.2% 1567 51.1%
+  Hiro:           29.0% 1562 49.4%
+  Hunter:         21.4% 1562 50.3%
+  Javaras:        16.8% 1567 47.8%
+  Jereziah:       25.3% 1574 57.0%
+  Kraken:         11.8% 1560 46.7%
+  Krixi:          24.4% 1561 51.7%
+  Kunas:          34.6% 1567 53.7%
+  Legionnaire:    22.9% 1566 47.1%
+  Mumra:          14.5% 1572 54.2%
+  Nomad:           0.0% 1589 80.0%
+  Ophelia:         7.2% 1569 46.4%
+  Pestilence:     19.0% 1575 59.6%
+  PollywogPriest: 14.7% 1564 47.2%
+  Predator:       16.1% 1569 50.5%
+  PuppetMaster:   16.5% 1574 48.7%
+  Pyromancer:     26.8% 1562 50.4%
+  Rocky:          14.6% 1564 50.9%
+  Scar:           23.7% 1562 47.4%
+  Scout:          37.6% 1562 45.7%
+  Shaman:         13.9% 1579 56.9%
+  Soulstealer:    15.2% 1568 48.3%
+  Tempest:        11.9% 1569 52.5%
+  Treant:         10.6% 1565 43.9%
+  Valkyrie:       35.8% 1576 54.4%
+  Vanya:          11.4% 1565 42.7%
+  Voodoo:         14.3% 1573 48.9%
+  WolfMan:        11.6% 1553 46.8%
+  Xalynx:         20.7% 1565 51.7%
+  Yogi:            8.4% 1562 42.3%
+  Zephyr:         10.8% 1579 47.9%

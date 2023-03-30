@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="ability_04_impact">
+	<definitions>
+
+		<trailemitter
+			name="emitter0"
+			spawnrate="25"
+			particlelife="500"
+			texpostime="500"
+			texposscale="0"
+			texstretchscale="1"
+			material="/shared/effects/materials/arrow_trail.material"
+		>
+			<particle
+				startcolor="0 .25 0"
+				midcolor="0 .25 0"
+				endcolor="0 0 0"
+				startsize="0"
+				midsize="10"
+				endsize="0"
+				midsizepos="0.2"
+		/>
+		</trailemitter>
+
+		<particlesystem name="system0" space="world" useentityeffectscale="true" scale="1">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2500"
+				volume="0.7" 
+				sample="../sounds/impact.wav"
+			/>
+
+
+			<!-- green smoke -->
+			<simpleemitter
+				delay="0"
+				spawnrate="2000"
+				count="20"
+				minparticlelife="1500"
+				maxparticlelife="2500"
+				gravity="0"
+				maxspeed="10"
+				position="0 0 0"
+				drag="0.01"
+				material="/shared/effects/materials/dust_smoke_02.material"
+				offsetsphere="30 30 0"
+			>
+				<particle
+					minangle="0"
+					maxangle="0"
+					minanglespeed="0"
+					startcolor="0 .5 0"
+					endcolor="0 0 0"
+					maxanglespeed="10"
+					endanglespeed="0"
+					endanglespeedpos="0.1"
+					startsize="0"
+					midsize="50"
+					endsize="100"
+					startalpha=".4"
+					midalpha=".25"
+					endalpha="0"
+					midalphapos="0.5"
+				/>
+			</simpleemitter>
+
+			<billboard
+				bone="_bone_center"
+				life="1250"
+				startcolor="0 .5 0"
+				endcolor="0 0 0"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="0.0"
+				midalphapos="0.75"
+				startparam="0.05"
+				endparam="0.0"
+				startsize="000"
+				endsize="125"
+				midsizepos=".4"
+				depthbias="0"
+				position="0 0 0"
+				material="/shared/effects/materials/shieldstarfish.material"
+				lockup="true"
+				pitch="90"
+			/>
+			
+			<billboard
+				bone="_bone_center"
+				delay="100"
+				life="1250"
+				startcolor="0 .5 0"
+				endcolor="0 0 0"
+				startalpha="1.0"
+				midalpha="1.0"
+				endalpha="0.0"
+				midalphapos="0.75"
+				startparam="0.05"
+				endparam="0.0"
+				startsize="000"
+				endsize="75"
+				midsizepos=".4"
+				depthbias="0"
+				position="0 0 0"
+				material="/shared/effects/materials/shieldstarfish.material"
+				lockup="true"
+				pitch="90"
+			/>
+			
+			<simpleemitter
+				count="25"
+				bone="_bone_center"
+				spawnrate="1000"
+				minparticlelife="1000"
+				maxparticlelife="1500"
+				gravity="0"
+				offsetsphere="25 25 25"
+				drag="0"
+				acceleration="0"
+				direction="0 0 0"
+				material="/shared/effects/materials/phantom_smoke_04.material"
+				inheritvelocity=".5"
+			>
+				<particle 
+					startcolor="0 0 0"
+					midcolor="0 .5 0"
+					endcolor="0 0 0"
+					midcolorpos="0.4"
+					minangle="0"
+					maxangle="360"
+					startsize="50"
+					midsize="25"
+					endsize="10"
+					startalpha=".2 .2 .2"
+					midsizepos=".8"
+					minanglespeed="-90"
+					maxanglespeed="90"
+					anchor=".25"
+					/>
+			</simpleemitter>
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<spawnmodifier instance="instance1" modifier="modifier0"/>
+	<waitfordeath instance="instance0" />
+	<waitfordeath instance="instance1" />
+	</thread>
+</effect>

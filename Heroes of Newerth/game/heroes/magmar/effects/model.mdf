@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="lavapuddleDeath01.max" file="model.model" type="K2" >
+	<anim name="idle" clip="default_1.clip">
+		<frameevent frame="1" cmd="starteffect death_lava.effect 0"/>
+		
+	</anim>
+</model>

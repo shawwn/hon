@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="impact">
+	<definitions>
+		<particlesystem name="system0" space="world">
+
+		<simpleemitter
+     
+			bone="_bone_centerofchest"
+			spawnrate="8"
+			count="2"
+			gravity="-2"
+			particlelife="1000"			
+			acceleration="50"
+			
+			offsetsphere=".2 .2 .2"
+			material="/shared/effects/materials/fireball_01.material"
+        >
+
+			<particle 
+				minangle="-360"
+				maxangle="360"
+				minanglespeed="0"
+				startcolor=".3 .3 0"
+				midcolor=".3 .3 0"
+				endcolor="0 0 0"
+				midcolorpos=".4"
+				maxanglespeed="00"
+
+				startframe="0"
+				endframe="1"
+
+				startsize="70"
+				midsize="60"
+				endsize="25"
+				midsizepos=".8"
+
+				startalpha="0"
+				midalpha=".2"
+				endalpha=".2"
+				midalphapos=".5"
+		/>
+
+			<particle 
+				minangle="-360"
+				maxangle="360"
+				minanglespeed="0"
+				startcolor=".2 .1 0"
+				midcolor=".2 .1 0"
+				endcolor="0 0 0"
+				midcolorpos=".1"
+				maxanglespeed="00"
+
+				startframe="0"
+				endframe="1"
+
+				startsize="5"
+				midsize="3"
+				endsize="1"
+				midsizepos=".8"
+
+				startalpha="0"
+				midalpha=".2"
+				endalpha=".2"
+				midalphapos=".5"
+			/>
+
+		</simpleemitter>		
+		
+		
+		
+		
+		
+
+
+		<simpleemitter
+		
+			spawnrate="500"
+			bone="_bone_centerofchest"
+			count="4"
+			particlelife="1000"			
+			gravity="6"
+			minspeed="25"
+			maxspeed="50"
+			drag=".02"
+			acceleration="0"
+			position="0 0 0"
+
+			material="/shared/effects/materials/spark_10.material"
+			offsetsphere="0 0 0"
+			minangle="0"
+			maxangle="135"
+			direction="0 0 0"
+			offsetdirection="0 0 0"
+			offsetradial="0 0 0"
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+				maxanglespeed="0"
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="0 0 0"
+				midcolorpos=".2"
+
+				startframe="0"
+				endframe="1"
+				startsize="16"
+				midsize="10"
+				endsize="6"
+				startalpha="0"
+				midalpha=".7"
+				endalpha="0"
+				midalphapos=".5"
+				startstickiness=".3"
+				endstickiness="0"
+
+				turn="true"
+			/>
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+				maxanglespeed="0"
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="0 0 0"
+				midcolorpos=".2"
+
+				startframe="0"
+				endframe="1"
+				startsize="5"
+				midsize="3"
+				endsize="1"
+				startalpha="0"
+				midalpha=".7"
+				endalpha="0"
+				midalphapos=".5"
+				startstickiness=".3"
+				endstickiness="0"
+
+				turn="true"
+			/>
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+				maxanglespeed="0"
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="0 0 0"
+				midcolorpos=".2"
+
+				startframe="0"
+				endframe="1"
+				startsize="1"
+				midsize="12"
+				endsize=".1"
+				startalpha="0"
+				midalpha=".7"
+				endalpha="0"
+				midalphapos=".5"
+				startstickiness=".3"
+				endstickiness="0"
+
+				turn="true"
+			/>
+
+
+		</simpleemitter>
+
+		
+		
+
+
+		<simpleemitter
+		
+			spawnrate="250"
+			bone="_bone_centerofchest"
+			count="4"
+			particlelife="1000"			
+			gravity="1"
+			minspeed="0"
+			maxspeed="10"
+			drag=".02"
+			acceleration="0"
+			position="0 0 0"
+
+			material="/shared/effects/materials/spark_10.material"
+			offsetsphere="0 0 0"
+			minangle="0"
+			maxangle="135"
+			direction="0 0 0"
+			offsetdirection="0 0 0"
+			offsetradial="0 0 0"
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+				maxanglespeed="0"
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="0 0 0"
+				midcolorpos=".2"
+
+				startframe="0"
+				endframe="1"
+				startsize="16"
+				midsize="10"
+				endsize="6"
+				startalpha="0"
+				midalpha=".7"
+				endalpha="0"
+				midalphapos=".5"
+				startstickiness=".3"
+				endstickiness="0"
+
+				turn="true"
+			/>
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+				maxanglespeed="0"
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="0 0 0"
+				midcolorpos=".2"
+
+				startframe="0"
+				endframe="1"
+				startsize="10"
+				midsize="6"
+				endsize="1"
+				startalpha="0"
+				midalpha=".7"
+				endalpha="0"
+				midalphapos=".5"
+				startstickiness=".3"
+				endstickiness="0"
+
+				turn="true"
+			/>
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+				maxanglespeed="0"
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="0 0 0"
+				midcolorpos=".2"
+
+				startframe="0"
+				endframe="1"
+				startsize=".5"
+				midsize="6"
+				endsize=".1"
+				startalpha="0"
+				midalpha=".7"
+				endalpha="0"
+				midalphapos=".5"
+				startstickiness=".3"
+				endstickiness="0"
+
+				turn="true"
+			/>
+
+
+		</simpleemitter>
+
+
+
+
+
+
+
+
+
+		<simpleemitter
+			life="1800"
+			delay="0"
+			spawnrate="250"
+			bone="_bone_centerofchest"
+			count="10"
+			particlelife="1200"			
+			gravity="24"
+			minspeed="220"
+			maxspeed="780"
+			drag=".02"
+			acceleration="0"
+			position="0 0 0"
+
+			material="/shared/effects/materials/spark_10.material"
+			offsetsphere="0 0 0"
+			minangle="-10"
+			maxangle="20"
+			direction="0 0 1"
+			offsetdirection="0 0 0"
+			offsetradial="0 0 0"
+
+			directionalspace="global"
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+				maxanglespeed="0"
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="0 0 0"
+				midcolorpos=".2"
+
+				startframe="0"
+				endframe="1"
+				startsize="24"
+				midsize="12"
+				endsize="6"
+				startalpha="0"
+				midalpha=".7"
+				endalpha="0"
+				midalphapos=".5"
+				startstickiness=".3"
+				endstickiness="0"
+
+				turn="true"
+			/>
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+				maxanglespeed="0"
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="0 0 0"
+				midcolorpos=".2"
+
+				startframe="0"
+				endframe="1"
+				startsize="16"
+				midsize="8"
+				endsize="1"
+				startalpha="0"
+				midalpha=".7"
+				endalpha="0"
+				midalphapos=".5"
+				startstickiness=".3"
+				endstickiness="0"
+
+				turn="true"
+			/>
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+				maxanglespeed="0"
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="0 0 0"
+				midcolorpos=".2"
+
+				startframe="0"
+				endframe="1"
+				startsize="1"
+				midsize="12"
+				endsize=".1"
+				startalpha="0"
+				midalpha=".7"
+				endalpha="0"
+				midalphapos=".5"
+				startstickiness=".3"
+				endstickiness="0"
+
+				turn="true"
+			/>
+
+
+		</simpleemitter>
+
+
+		<simpleemitter
+			life="1600"
+			delay="300"
+			spawnrate="500"
+			bone="_bone_centerofchest"
+			count="5"
+			particlelife="1600"			
+			gravity="10"
+			minspeed="100"
+			maxspeed="300"
+			drag=".02"
+			acceleration="0"
+			position="0 0 0"
+
+			material="/shared/effects/materials/fire_11.material"
+			offsetsphere="1 1 1"
+			minangle="-10"
+			maxangle="20"
+			direction="0 0 1"
+			offsetdirection="0 0 0"
+			offsetradial="0 0 0"
+
+			directionalspace="global"
+		>
+
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+				maxanglespeed="0"
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="0 0 0"
+				midcolorpos=".4"
+
+				startframe="0"
+				endframe="1"
+				startsize="30"
+				midsize="15"
+				endsize="6"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".5"
+				startstickiness=".3"
+				endstickiness="0"
+
+				turn="true"
+			/>
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+				maxanglespeed="0"
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="0 0 0"
+				midcolorpos=".4"
+
+				startframe="0"
+				endframe="1"
+				startsize="24"
+				midsize="12"
+				endsize="1"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".5"
+				startstickiness=".3"
+				endstickiness="0"
+
+				turn="true"
+			/>
+			<particle 
+				minangle="0"
+				maxangle="0"
+				minanglespeed="0"
+				maxanglespeed="0"
+				startcolor="1 1 1"
+				midcolor="1 1 1"
+				endcolor="0 0 0"
+				midcolorpos=".4"
+
+				startframe="0"
+				endframe="1"
+				startsize="1"
+				midsize="12"
+				endsize=".1"
+				startalpha="1"
+				midalpha="1"
+				endalpha="0"
+				midalphapos=".5"
+				startstickiness=".3"
+				endstickiness="0"
+
+				turn="true"
+			/>
+
+
+		</simpleemitter>
+
+
+		<simpleemitter
+		
+			spawnrate="30"
+			bone="_bone_centerofchest"
+			count="4"
+			particlelife="1300"			
+			gravity="-6"
+			speed="1"
+			drag=".02"
+			acceleration="0"
+			position="0 0 0"
+			timenudge="-200"
+			material="/shared/effects/materials/smoke_particle.material"
+			offsetsphere="7 7 7"
+			minangle="235"
+			maxangle="315"
+			direction="0 0 0"
+		>
+
+			<particle 
+				minangle="-15"
+				maxangle="-15"
+				minanglespeed="0"
+				startcolor="1 .5 0"
+				midcolor=".2 .1 0"
+				endcolor="0 0 0"
+				midcolorpos=".3"
+				maxanglespeed="00"
+				startframe="0"
+				endframe="1"
+				startsize="60"
+				midsize="30"
+				endsize="15"
+				midsizepos=".5"
+				startalpha="0"
+				midalpha=".3"
+				endalpha="0"
+				midalphapos=".5"
+				startstickiness="0"
+				endstickiness="0"
+			/>
+		</simpleemitter>
+
+
+
+
+		
+
+
+
+
+
+
+		
+
+        
+      </particlesystem>
+   </definitions>
+   <thread>
+      <spawnparticlesystem instance="instance0" particlesystem="system0" />
+      <waitfordeath instance="instance0" />
+      <!-- <die /> -->
+   </thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

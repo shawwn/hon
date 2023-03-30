@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Magmar_Ability1_Toss"
+
+	gravity="5000"
+	lifetime="500"
+	useexactlifetime="true"
+>
+</projectile>

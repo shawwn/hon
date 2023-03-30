@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" useentityeffectscale="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+
+			<billboard
+				life="400"
+				position="0 135 95"
+				material="/shared/effects/materials/starlight.material"
+				startcolor="0 .2 .6"
+				endcolor="0"
+				size="100"
+				depthbias="-30"
+			/>
+
+			<billboard
+				life="400"
+				position="0 135 95"
+				material="/shared/effects/materials/whitedot.material"
+				startcolor="0 .5 0"
+				endcolor="0"
+				size="160"
+				depthbias="-30"
+			/>
+
+			<billboard
+				life="300"
+				position="0 135 95"
+				material="/shared/effects/materials/whitedot.material"
+				startcolor="1"
+				endcolor="0"
+				size="50"
+				depthbias="-30"
+			/>
+
+			<simpleemitter
+				delay="-150"
+				spawnrate="25"
+				position="0 135 95"
+				life="200"
+				particlelife="300"			
+				offsetsphere="20"
+          			material="/shared/effects/materials/stomp_01.material"
+         		>
+				<particle 
+					minangle="-180"
+					maxangle="180"
+					startcolor="0 1 .2"
+					endcolor="0 0 .2  "
+					startsize="50"
+					endsize="250"
+					endflare="1"
+					anchor="1"
+				/>
+        		 </simpleemitter>
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->

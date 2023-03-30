@@ -1,0 +1,26 @@
+The UI for persistant stats is driven by one command and numerous triggers.
+
+The command to retrieve stats for a player is:
+
+ShowStats <name>
+
+where <name> is the name of a player currently in the game.
+
+This command will only work if that player is authenticated and has a valid account ID.
+
+Once this is run, it will trigger several UI Triggers:
+
+PersistantExperience
+PersistantWins
+PersistantLosses
+PersistantTies
+PersistantKills
+PersistantDeaths
+PersistantAssists
+PersistantSouls
+PersistantRazed
+PersistantPlayerDamage
+PersistantBuildingDamage
+PersistantNPCDamage
+
+The parameter for the triggers specifies the value. More will be added soon.

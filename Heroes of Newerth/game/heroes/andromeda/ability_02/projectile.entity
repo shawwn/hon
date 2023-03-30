@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Andromeda_Ability2"
+
+	speed="1400"
+	gravity="0"
+	flying="true"
+	flyheight="100"
+	modelscale="2.5"
+	model="/shared/models/invis.mdf"
+	traileffect="effects/trail.effect"
+	effectscale="2.0"
+	impacteffect="effects/ability_01/projectile/effects/ability_01_impact.effect"
+>
+	<onspawn>
+		<spawnunit name="Gadget_Andromeda_Ability2_Reveal" count="1" target="target_position" pushentity="true" />
+		<setproxy entity="this_entity" target="stack_entity" />
+		<bind target="proxy_entity" vertical="true" />
+	</onspawn>
+	<onimpact>
+		<kill target="proxy_entity" source="" />
+	</onimpact>
+</projectile>

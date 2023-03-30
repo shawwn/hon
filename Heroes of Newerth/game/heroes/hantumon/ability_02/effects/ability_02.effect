@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect persistent="true" useentityeffectscale="true">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="1.2">
+		
+		
+			<simpleemitter
+				life="101"
+				count="5"
+				delay="800"
+				particlelife="2000"
+				spawnrate="100"
+				speed="0"
+				gravity="0"
+				direction="0 0 1"
+				particledirectionalspace="local"
+				minangle="0"
+				maxangle="30"
+				offsetsphere="88 88 0"
+				position="0 0 0"	
+			>
+				<particle> 
+					<groundsprite
+						life="2000"
+						material="/shared/effects/materials/splatter_blend.material"
+						scale=".2"
+						minyaw="-360"	
+						maxyaw="360"
+						minsize="110"
+						maxsize="160"
+						position="0 0 0"
+						color=".5 0 0"
+						midcolorpos=".1"
+						startalpha=".6"
+						endalpha="0"
+						midalphapos=".1"
+					/>						
+				</particle>
+			</simpleemitter>
+			
+		
+			<simpleemitter
+				delay="200"
+				life="201"
+				particlelife="1200"
+				spawnrate="40"
+				speed="120"
+				gravity="10"
+				direction="0 0 1"
+				particledirectionalspace="local"
+				minangle="0"
+				maxangle="30"		
+				material="/shared/effects/materials/splatter_blend.material"
+				offsetsphere="0 0 0"
+				position="0 0 59"	
+			>
+				<particle 
+					minanglespeed="-100"
+					maxanglespeed="100"
+					minangle="-360"
+					maxangle="360"
+					color=".5 0 0"
+					startsize="20"
+					minendsize="40"
+					maxendsize="80"
+					startalpha=".6"
+					endalpha="0"
+				/>
+			</simpleemitter>
+			
+			
+			<simpleemitter
+				count="1"
+				delay="200"
+				particlelife="400"
+				speed="520"
+				gravity="55"
+				direction="0 1 0"
+				minangle="0"
+				maxangle="22"
+				life="2000"
+				offsetsphere="0 0 0"
+				position="0 0 59"
+			>
+				<particle>
+					<simpleemitter
+						particlelife="700"
+						spawnrate="40"
+						gravity="2"
+						minspeed="22"
+						maxspeed="33"
+						material="/shared/effects/materials/splatter_blend.material"
+					>
+						<particle 
+							minangle="-360"
+							maxangle="360"
+							angle="180"
+							color=".33 0 0 "
+							anglespeed="20"
+							frame=".5"
+							startsize="20"
+							maxendsize="80"
+							startalpha="1"
+							endalpha="0"
+						/>
+					</simpleemitter>
+				</particle>
+			</simpleemitter>
+			
+
+			<simpleemitter
+				delay="200"
+				count="3"
+				particlelife="800"
+				spawnrate="30"
+				speed="80"
+				direction="0 0 1"
+				minangle="0"
+				maxangle="12"
+				particledirectionalspace="local"
+				material="/shared/effects/materials/venom_splash.material"
+				offsetsphere="0 0 0"
+				position="0 0 59"
+			>
+				<particle 
+					color=".5 0 0"
+					startsize="00"
+					minendsize="40"				
+					maxendsize="80"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					turn="true"
+				/>
+			</simpleemitter>
+			
+			
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

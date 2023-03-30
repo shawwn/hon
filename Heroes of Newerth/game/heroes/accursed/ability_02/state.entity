@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Accursed_Ability2"
+
+	icon="icon.tga"
+	passiveeffect="effects/state.effect"
+	effecttype="StatusBuff"
+	
+	displaylevel="true"
+>
+	<ondamaged>
+		<absorbdamage max="110,140,170,200">
+			<playeffect effect="effects/ability.effect" source="source_entity" target="" />
+			<spawnaffector name="Affector_Accursed_Ability2" owner="this_inflictor_entity" target="source_position" />
+			<expire />
+		</absorbdamage>
+	</ondamaged>
+
+	<onrefresh>
+		<setaccumulator value="0" />
+	</onrefresh>
+	
+	<onframe />
+</state>

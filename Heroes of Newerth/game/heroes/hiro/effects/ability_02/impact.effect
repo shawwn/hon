@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="impact" useentityeffectscale="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" useentityeffectscale="true" scale="1.5">
+	
+			<simpleemitter
+				bone="_bone_centerofchest"
+				spawnrate="2000"
+				count="15"
+				minparticlelife="500"
+				maxparticlelife="1000"
+				gravity="10"
+				minspeed="250"
+				maxspeed="550"
+				drag=".13"
+				offsetsphere="30"
+				depthbias="-10"
+				material="/shared/effects/materials/blood1.material"
+			>
+				<particle
+					minangle="0"
+					maxangle="360"
+					color=".5"
+					maxanglespeed="20"
+					minanglespeed="-20"
+					startsize="10"
+					minendsize="35"
+					maxendsize="45"
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+				/>
+  				<particle
+					minangle="0"
+					maxangle="360"
+					color=".3"
+					maxanglespeed="55"
+					minanglespeed="-55"
+					startsize="10"
+					minendsize="55"
+					maxendsize="85"
+					startalpha="1"
+					midalpha=".8"
+					endalpha="0"
+				/>
+				<particle
+					minangle="0"
+					maxangle="360"
+					color=".4"
+					maxanglespeed="10"
+					minanglespeed="-10"
+					startsize="30"
+					minendsize="5"
+					maxendsize="10"
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<billboard
+				life="400"
+				bone="_bone_centerofchest"
+				startsize="45"
+				endsize="220"
+				material="/shared/effects/materials/blood_08.material"
+				startalpha="1"
+				endalpha="0"
+				depthbias="20"
+			/>
+			
+			<simpleemitter
+				minangle="-90"
+				maxangle="-90"
+				bone="_bone_centerofchest"
+				life="400"
+				spawnrate="650"
+				count="10"
+				minparticlelife="500"
+				maxparticlelife="1000"
+				speed="20"
+				drag="0.05"
+				offsetsphere="15"
+				depthbias="-40"
+				material="/shared/effects/materials/phantom_smoke_04.material"
+			>
+				<particle
+					minangle="-180"
+					maxangle="180"
+					minanglespeed="-150"
+					maxanglespeed="150"
+					turn="1"
+					startcolor=".5 .5 .5"
+					midcolor=".6 .3 .1"
+					endcolor="0"
+					midcolorpos=".2"
+					startsize="20"
+					startstickiness="0"
+					maxendstickiness="1"
+					minendscale="6"
+					maxendscale="10"
+				/>
+			</simpleemitter>
+
+		</particlesystem>
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->

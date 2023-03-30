@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Engineer2"
+
+	icon="icon.tga"
+	statuseffecttooltip="State_Engineer_Ability2_Suppression"
+	
+	anim="ability_2"
+	casttime="300"
+	castactiontime="0"
+	
+	inheritmovement="true"
+	frontqueue="true"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_vector"
+	targetmaterial="/shared/materials/vector_cast_indicator_turret.material"
+	targetradius="700"
+	
+	casteffecttype="Physical"
+	targetscheme="enemy_units"
+	casteffect=""
+	
+	manacost="100"
+	cooldowntime="22000"
+
+	range="800"
+>
+	<onimpact>
+		<spawnunit name="Gadget_Engineer_Ability2_Target" target="delta_position" pushentity="true" />
+		<spawnprojectile name="Projectile_Engineer_Ability2" source="source_entity" target="target_position" proxy="stack_entity" />
+	</onimpact>
+</ability>

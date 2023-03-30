@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_SandWraith_Ability4_Sight"
+
+	ishidden="true"
+	
+>
+	<aura
+		gadget="Gadget_SandWraith_Ability4"
+		radius="0"
+		targetscheme="self"
+	/>
+	
+	<onframe>
+		<targettype target="this_proxy_entity" type="alive" />
+		<else>
+			<expire />
+		</else>
+	</onframe>
+</state>

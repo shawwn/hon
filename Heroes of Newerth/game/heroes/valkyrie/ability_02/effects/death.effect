@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect>
+	<definitions>
+	
+		<particlesystem name="system0" space="entity" scale=".8">
+
+			<simpleemitter
+				life="250"
+				position="0 0 40"
+				spawnrate="35"		
+				particlelife="600"			
+				speed="30"
+				material="/shared/effects/materials/smokering.material"
+				offsetsphere="15"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-40"
+					maxanglespeed="-40"
+					startcolor=".35 .3 .1"
+					endcolor="0"		
+					startsize="50"
+					endsize="200"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				life="250"
+				position="0 0 40"
+				spawnrate="35"		
+				maxparticlelife="600"			
+				speed="130"
+				material="/shared/effects/materials/femme_lightning_01.material"
+				offsetsphere="15"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-140"
+					maxanglespeed="-140"
+					startcolor=".35 .3 .1"
+					endcolor="0"		
+					startsize="50"
+					endsize="200"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				life="250"
+				position="50 0 40"
+				spawnrate="15"		
+				particlelife="1000"			
+				speed="30"
+				material="/shared/effects/materials/refract_wave.material"
+				offsetsphere="45 45 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-40"
+					maxanglespeed="-40"
+					startalpha=".5"
+					endalpha="0"
+					startsize="60"
+					endsize="200"
+					startparam="0.25"
+					endparam="0.0"						
+				/>
+			</simpleemitter>
+			
+			<billboard
+				position="0 0 40"
+				material="/shared/effects/materials/corona_06.material"
+				startcolor=".7 .6 .25"
+				endcolor="0 0 0"
+				life="300"
+				startsize="0"
+				endsize="300"
+				lockup="1"
+				pitch="90"
+			/>
+<!--
+			<simpleemitter
+			count="1"
+				life="250"
+				position="0 0 0"
+				spawnrate="15"		
+				particlelife="1000"			
+				material="/shared/effects/materials/refract_wave.material"
+				offsetsphere="0 0 0"
+			>
+				<particle>
+					<billboard
+						position="0 0 40"
+						material="/shared/effects/materials/corona_06.material"
+						startcolor="1 1 1"
+						endcolor="0 0 0"
+						life="300"
+						startsize="0"
+						endsize="450"
+						lockup="true"
+						pitch="90"
+						roll="90"
+						width="50"
+					/>
+
+					<billboard
+						position="0 0 40"
+						material="/shared/effects/materials/corona_06.material"
+						startcolor="1 1 1"
+						endcolor="0 0 0"
+						life="300"
+						startsize="0"
+						endsize="450"
+						lockup="true"
+						pitch="90"
+						roll="270"
+						width="50"
+					/>	
+				</particle>
+			</simpleemitter>
+-->
+	
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<spawnmodifier instance="instance1" modifier="modifier0"/>  
+		<waitfordeath instance="instance0" />
+		<wait duration="20000"/>
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->

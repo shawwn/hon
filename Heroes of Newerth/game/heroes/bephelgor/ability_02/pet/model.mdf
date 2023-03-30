@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="rig.max" file="high.model" type="K2" high="high.model" med="med.model" low="low.model" >
+
+	<anim name="spawn_1" clip="clips/birth_1.clip" loop="0">
+		<frameevent frame="1" cmd="StartEffect effects/spawn.effect"/>
+	</anim>
+
+	<anim name="idle" clip="clips/default_1.clip" fps="30" loop="true" minstartframe="0" maxstartframe="-1" />
+	
+	<anim name="portrait" clip="clips/portrait_1.clip" loop="true"/>
+	
+	<anim name="spawn_1" clip="clips/spawn_1.clip" fps="30" loop="false" blendtime="200"/>
+	
+	<anim name="attack_1" clip="clips/attack_1.clip" fps="30" loop="false" blendtime="200">
+		<frameevent frame="6" cmd="PlaySoundLinear /shared/sounds/attacks/attack_light_sword_%.wav 400 2000 .5"/>
+	</anim>
+	
+	<anim name="attack_2" clip="clips/attack_2.clip" fps="30" loop="false" blendtime="200">
+		<frameevent frame="6" cmd="PlaySoundLinear /shared/sounds/attacks/attack_light_sword_%.wav 400 2000 .5"/>
+		<frameevent frame="6" cmd="PlaySoundLinear sounds/attack_grunt_%.wav 400 2000 .5"/>
+	</anim>
+	
+	<anim name="walk_1" clip="clips/walk_1.clip" fps="40" loop="true">
+		<frameevent frame="2" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="7" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="14" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		<frameevent frame="19" cmd="StartEffect /shared/effects/waterhack#GetTerrainType()#.effect"/>
+		
+		<frameevent frame="2" cmd="StartEffect /shared/effects/footstep_l_#GetTerrainType()#.effect"/>
+		<frameevent frame="14" cmd="StartEffect /shared/effects/footstep_r_#GetTerrainType()#.effect"/>
+	</anim>
+
+	<anim name="death_1" clip="clips/death_1.clip" fps="30" loop="true" loopbackframe="-1">
+		<frameevent frame="1" cmd="PlaySoundLinear sounds/death.wav 400 2000 .5"/>
+	</anim>
+		
+</model>

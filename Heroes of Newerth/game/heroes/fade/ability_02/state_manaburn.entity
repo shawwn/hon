@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Fade_Ability2_Manaburn"
+	
+	icon="icon.tga"
+	passiveeffect="effects/state_rings_mana.effect"
+
+	ishidden="true"
+
+	effecttype=""
+>
+
+</state>

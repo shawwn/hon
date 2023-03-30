@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="death">
+	<definitions>
+
+		<groundsprite
+			name="emitter0"
+			life="2500"
+			material="/shared/effects/materials/blob_overlay.material"
+			minsize="10"
+			maxsize="30"
+			minyaw="-360"
+			maxyaw="360"
+			startcolor=".5 .5 .5"
+			endcolor=".4 .25 0"
+			startalpha=".2"
+			midalpha=".2"
+			endalpha="0"
+		/>
+
+		<groundsprite
+			name="emitter1"
+			life="2500"
+			material="/shared/effects/materials/magma_overlay.material"
+			minsize="10"
+			maxsize="35"
+			minyaw="-360"
+			maxyaw="360"
+			startcolor="1 .5 0"
+			endcolor="1 .5 0"
+			startalpha=".5"
+			midalpha=".5"
+			endalpha="0"
+		/>
+		
+		<terrainemitter
+			name="emitter2"
+			life="1000"
+			spawnrate="10"
+			minparticlelife="500"
+			maxparticlelife="3000"
+			offsetsphere="15 15 0"
+			gravity="-.1"
+			depthbias="-20"
+			material="/shared/effects/materials/bubble_add.material"
+		>
+			<particle
+				startcolor="1 1 0"
+				endcolor="0"
+				startsize="0"
+				midsize="2"
+				endsize="0"
+				minscale="2"
+				maxscale="5"
+				minangle="0"
+				maxangle="360"
+				minanglespeed="20"
+				maxanglespeed="-20"
+			/>
+		</terrainemitter>
+		
+		<groundsprite
+			name="emitter3"
+			life="2500"
+			material="/shared/effects/materials/magma_overlay.material"
+			minsize="10"
+			maxsize="25"
+			minyaw="-360"
+			maxyaw="360"
+			startcolor="1 .5 0"
+			endcolor="1 .5 0"
+			startalpha=".5"
+			midalpha=".5"
+			endalpha="0"
+		/>
+		
+		<particlesystem name="system0" space="entity" scale=".8">
+
+			<!--blob overlay-->
+			<simpleemitter
+				delay="100"
+				bone="_bone_fx_06"
+				life="600"
+				startspawnrate="15"
+				endspawnrate="75"
+				offsetsphere="20 40 0"
+				position="0 50 0"
+				particlelife="3000"
+			>
+				<particle
+					emitter="emitter0"
+				/>
+			</simpleemitter>
+			
+			<!--magma out-->
+			<simpleemitter
+				delay="100"
+				bone="_bone_fx_06"
+				life="600"
+				startspawnrate="45"
+				endspawnrate="100"
+				offsetsphere="10 35 0"
+				position="0 45 10"
+				particlelife="3000"
+			>
+				<particle
+					emitter="emitter1"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="_bone_fx_06"
+				spawnrate="200"
+				count="155"
+				particlelife="500"
+				gravity="20"
+				speed="80"
+				drag=".01"
+				acceleration="0.0"
+				position="0 0 -7"
+				offsetsphere="0 0 0"
+				material="/shared/effects/materials/magma1.material"
+				delay="200"
+				minangle="-30"
+				maxangle="30"
+				direction="-.5 1 0"
+				offsetdirection="0 0 0"
+				offsetradial="0 0 0"
+				particledirectionalspace="local"
+				
+			>
+				<particle 
+					minangle="-360"
+					maxangle="360"
+					angle="180"
+					color="1 .5 0"
+					frame=".5"
+					startsize="20"
+					midsize="10"
+					minendsize="25"
+					maxendsize="60"
+					startalpha="1"
+					midalpha=".8"
+					endalpha="0"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				delay="10"
+				bone="_bone_fx_05"
+				spawnrate="480"
+				life="80"
+				particlelife="500"
+				gravity="0"
+				speed="0"
+				drag=".01"
+				acceleration="0.0"
+				position="0 0 0"
+				offsetsphere="0 0 0"
+				material="/shared/effects/materials/magma1.material"
+				mininheritvelocity=".00"
+				maxinheritvelocity=".1"
+			>
+				<particle
+					minangle="-360"
+					maxangle="360"
+					angle="180"
+					color="1 .5 0"
+					anglespeed="20"
+					frame=".5"
+					startsize="20"
+					maxendsize="80"
+					startalpha="1"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				delay="10"
+				bone="_bone_fx_05"
+				spawnrate="250"
+				life="80"
+				particlelife="500"
+				gravity="0"
+				speed="0"
+				drag=".01"
+				acceleration="0.0"
+				position="0 0 0"
+				offsetsphere="10 35 0"
+				material="/shared/effects/materials/magma1.material"
+				mininheritvelocity=".00"
+				maxinheritvelocity=".1"
+			>
+				<particle 
+					minangle="-360"
+					maxangle="360"
+					angle="180"
+					color="1 .5 0"
+					anglespeed="20"
+					frame=".5"
+					startsize="20"
+					maxendsize="50"
+					startalpha="1"
+					endalpha="0"
+				/>
+			</simpleemitter>
+			
+			<billboard
+				bone="_bone_fx_06"
+				delay="50"
+				life="1000"
+				startcolor="1 .55 0"
+				midcolorpos=".8"
+				endcolor="0"
+				size="50"
+				depthbias="-50"
+				material="/shared/effects/materials/whitedot.material"
+				lockup="1"
+				pitch="90"
+				maxroll="360"
+				position="0 0 0"
+			/>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+
+			<simpleemitter
+				life="1000"
+				spawnrate="10"
+				particlelife="7500"
+				maxspeed="2"
+				offsetsphere="0 0 0"
+			>
+				<particle>
+					<groundsprite
+						life="2000"
+						material="/shared/effects/materials/blob_overlay.material"
+						startsize="35"
+						endsize="50"
+						maxyaw="360"
+						startcolor="1"
+						midcolorpos=".2"
+						endcolor=".2 .25 0"
+						minyawspeed="-10"
+						maxyawspeed="10"
+						startalpha="0"
+						midalpha="1"
+						midalphapos=".75"
+						endalpha="0"
+					/>
+				</particle>
+			</simpleemitter>
+			
+			<simpleemitter
+				life="1000"
+				spawnrate="10"
+				particlelife="7500"
+				maxspeed="2"
+				offsetsphere="25 25 0"
+			>
+				<particle>
+					<groundsprite
+						life="2000"
+						material="/shared/effects/materials/blood_pool.material"
+						startsize="15"
+						endsize="35"
+						maxyaw="360"
+						startcolor="1"
+						midcolorpos=".2"
+						endcolor=".2 .25 0"
+						minyawspeed="-10"
+						maxyawspeed="10"
+						startalpha="0"
+						midalpha=".75"
+						midalphapos=".75"
+						endalpha="0"
+					/>
+				</particle>
+			</simpleemitter>
+
+			<simpleemitter
+				life="2000"
+				spawnrate="25"
+				minparticlelife="500"
+				maxparticlelife="750"
+				offsetsphere="25 25 20"
+				gravity="-.1"
+				depthbias="-20"
+				material="/shared/effects/materials/bubble_add.material"
+			>
+				<particle
+					startcolor="1 1 0"
+					endcolor="0"
+					startsize="0"
+					midsize="3"
+					endsize="0"
+					minscale="2"
+					maxscale="5"
+					minangle="0"
+					maxangle="360"
+					minanglespeed="20"
+					maxanglespeed="-20"
+				/>
+			</simpleemitter>
+			
+			
+			<!--magma offsetsphere-->
+			<simpleemitter
+				delay="100"
+				life="800"
+				startspawnrate="45"
+				endspawnrate="100"
+				offsetsphere="40 40 0"
+				position="0 0 10"
+				particlelife="10000"
+			>
+				<particle
+					emitter="emitter3"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				life="750"
+				delay="1750"
+				spawnrate="75"
+				minparticlelife="500"
+				maxparticlelife="750"
+				offsetsphere="45 45 20"
+				gravity="-.1"
+				depthbias="-20"
+				material="/shared/effects/materials/bubble_add.material"
+			>
+				<particle
+					startcolor="1 1 0"
+					endcolor="0"
+					startsize="0"
+					midsize="3"
+					endsize="0"
+					minscale="2"
+					maxscale="5"
+					minangle="0"
+					maxangle="360"
+					minanglespeed="20"
+					maxanglespeed="-20"
+				/>
+			</simpleemitter>
+
+			<billboard
+				life="4000"
+				startcolor=".2 .02 0"
+				midcolorpos=".8"
+				endcolor="0"
+				size="150"
+				depthbias="-50"
+				material="/shared/effects/materials/whitedot.material"
+				lockup="1"
+				pitch="90"
+				maxroll="360"
+				position="0 0 10"
+			/>
+			
+			<simpleemitter
+				count="1"
+				spawnrate="5000"
+				particlelife="2600"
+				acceleration="0.0"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+			>
+				<particle
+					turn="1"
+				>
+					<model
+						position="0 -25 5"
+						life="3500"
+						anim="idle"
+						model="belly_gibs/model.mdf"
+						startscale=".3"
+						endscale=".3"
+						startcolor="1 .5 .5"
+						midcolor="1 .5 .25"
+						endcolor="1 .5 .25"
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".1"
+						midcolorpos=".2"
+					>
+						<template name="goo">
+							<beam
+								expirelife="500"
+								minlife="2000"
+								maxlife="2500"
+								bone_a="{a}"
+								bone_b="{b}"
+								color="{colorz}"
+								size="{sizez}"
+								startalpha="1"
+								midalpha="1"
+								endalpha="0"
+								position="0 0 0"
+								position_b="0 0 0"
+								material="/shared/effects/materials/goo.material"
+							/>
+						</template>
+						
+						<instance name="goo" a="Box01" b="Box02" colorz=".4 0 0" sizez="50"/>
+						<instance name="goo" a="Box03" b="Box04" colorz=".4 0 0" sizez="50"/>
+						<instance name="goo" a="Box05" b="Box06" colorz=".25 0 0" sizez="20"/>
+						<instance name="goo" a="Box07" b="Box08" colorz=".25 0 0" sizez="50"/>
+						<instance name="goo" a="Box09" b="Box10" colorz=".25 0 0" sizez="50"/>
+						<instance name="goo" a="Box10" b="Box11" colorz=".25 0 0" sizez="50"/>
+						
+						<template name="delayedBloodSplats">
+							<simpleemitter
+								delay="500"
+								count="25"
+								bone="{boner}"
+								life="5000"
+								particlelife="950"				
+								spawnrate="25"
+								speed="180"
+								gravity="22"
+								minangle="0"
+								maxangle="30"
+								material="/shared/effects/materials/blood1.material"
+								offsetsphere="25 25 0"
+								position="0 0 0"
+						
+							>
+								<particle 
+									minanglespeed="-100"
+									maxanglespeed="100"
+									minangle="0"
+									maxangle="360"
+									color=".3 0 0"
+									startsize="100"			
+									endsize="200"
+									startalpha="0"
+									midalpha="1"
+									endalpha="0"
+								/>
+							</simpleemitter>	
+						</template>
+						
+						<instance name="delayedBloodSplats" boner="Box01"/>
+						<instance name="delayedBloodSplats" boner="Box02"/>
+						<instance name="delayedBloodSplats" boner="Box03"/>
+						
+						<template name="DelayedBloodPools">
+							<simpleemitter
+									bone="{boner}"
+								delay="1000"
+								life="500"
+								spawnrate="10"
+								particlelife="7500"
+								maxspeed="2"
+								offsetsphere="10 10 0"
+							>
+								<particle>
+									<groundsprite
+										life="1500"
+										material="/shared/effects/materials/blood_pool.material"
+										startsize="10"
+										endsize="18"
+										maxyaw="360"
+										startcolor=".3"
+										midcolorpos=".5"
+										endcolor=".1"
+										minyawspeed="-10"
+										maxyawspeed="10"
+										startalpha="0"
+										midalpha=".425"
+										endalpha="0"
+									/>
+								</particle>
+							</simpleemitter>
+						</template>
+						
+						<instance name="DelayedBloodPools" boner="Box01"/>
+						<instance name="DelayedBloodPools" boner="Box02"/>
+						<instance name="DelayedBloodPools" boner="Box03"/>
+						<instance name="DelayedBloodPools" boner="Box04"/>
+						<instance name="DelayedBloodPools" boner="Box05"/>
+						<instance name="DelayedBloodPools" boner="Box06"/>
+						<instance name="DelayedBloodPools" boner="Box07"/>
+						<instance name="DelayedBloodPools" boner="Box08"/>
+						<instance name="DelayedBloodPools" boner="Box09"/>
+						<instance name="DelayedBloodPools" boner="Box10"/>
+						
+					</model>
+						
+					
+				</particle>
+			</simpleemitter>
+			
+			<simpleemitter
+				count="1"
+				spawnrate="5000"
+				particlelife="2600"
+				acceleration="0.0"
+				minangle="0"
+				maxangle="0"
+				direction="0 1 0"
+			>
+				<particle
+					turn="1"
+				>
+					<model
+						position="0 -25 5"
+						life="3500"
+						anim="idle"
+						model="belly_gibs/model.mdf"
+						startscale=".45"
+						endscale=".45"
+						startcolor="1 .5 .5"
+						midcolor="1 .5 .25"
+						endcolor="1 .5 .25"
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".1"
+						midcolorpos=".2"
+					>
+					
+						<template name="moreGoo">
+							<beam
+								expirelife="500"
+								minlife="2000"
+								maxlife="2500"
+								bone_a="{a}"
+								bone_b="{b}"
+								color="{colorz}"
+								size="{sizez}"
+								startalpha="1"
+								midalpha="1"
+								endalpha="0"
+								position="0 0 0"
+								position_b="0 0 0"
+								material="/shared/effects/materials/goo.material"
+							/>
+						</template>
+						
+						<instance name="moreGoo" a="Box01" b="Box02" colorz=".4 0 0" sizez="50"/>
+						<instance name="moreGoo" a="Box03" b="Box04" colorz=".4 0 0" sizez="50"/>
+						<instance name="moreGoo" a="Box05" b="Box06" colorz=".25 0 0" sizez="20"/>
+						<instance name="moreGoo" a="Box07" b="Box08" colorz=".25 0 0" sizez="50"/>
+						<instance name="moreGoo" a="Box09" b="Box10" colorz=".25 0 0" sizez="50"/>
+						<instance name="moreGoo" a="Box10" b="Box11" colorz=".25 0 0" sizez="50"/>
+						
+						<template name="moreDelayedBloodSplats">
+							<simpleemitter
+								delay="500"
+								count="25"
+								bone="{boner}"
+								life="5000"
+								particlelife="950"				
+								spawnrate="25"
+								speed="180"
+								gravity="22"
+								minangle="0"
+								maxangle="30"
+								material="/shared/effects/materials/blood1.material"
+								offsetsphere="25 25 0"
+								position="0 0 0"
+						
+							>
+								<particle 
+									minanglespeed="-100"
+									maxanglespeed="100"
+									minangle="0"
+									maxangle="360"
+									color=".3 0 0"
+									startsize="100"			
+									endsize="200"
+									startalpha="0"
+									midalpha="1"
+									endalpha="0"
+								/>
+							</simpleemitter>	
+						</template>
+						
+						<instance name="moreDelayedBloodSplats" boner="Box01"/>
+						<instance name="moreDelayedBloodSplats" boner="Box02"/>
+						<instance name="moreDelayedBloodSplats" boner="Box03"/>
+						
+						<template name="moreDelayedBloodPools">
+							<simpleemitter
+									bone="{boner}"
+								delay="1000"
+								life="500"
+								spawnrate="10"
+								particlelife="7500"
+								maxspeed="2"
+								offsetsphere="10 10 0"
+							>
+								<particle>
+									<groundsprite
+										life="1500"
+										material="/shared/effects/materials/blood_pool.material"
+										startsize="10"
+										endsize="18"
+										maxyaw="360"
+										startcolor=".3"
+										midcolorpos=".5"
+										endcolor=".1"
+										minyawspeed="-10"
+										maxyawspeed="10"
+										startalpha="0"
+										midalpha=".425"
+										endalpha="0"
+									/>
+								</particle>
+							</simpleemitter>
+						</template>
+						
+						<instance name="moreDelayedBloodPools" boner="Box01"/>
+						<instance name="moreDelayedBloodPools" boner="Box02"/>
+						<instance name="moreDelayedBloodPools" boner="Box03"/>
+						<instance name="moreDelayedBloodPools" boner="Box04"/>
+						<instance name="moreDelayedBloodPools" boner="Box05"/>
+						<instance name="moreDelayedBloodPools" boner="Box06"/>
+						<instance name="moreDelayedBloodPools" boner="Box07"/>
+						<instance name="moreDelayedBloodPools" boner="Box08"/>
+						<instance name="moreDelayedBloodPools" boner="Box09"/>
+						<instance name="moreDelayedBloodPools" boner="Box10"/>
+						
+					</model>
+				</particle>
+			</simpleemitter>
+			
+			<simpleemitter
+				timenudge="500"
+				bone="Bip01 Spine2"
+				spawnrate="150"
+				count="175"
+				particlelife="2500"
+				gravity="10"
+				speed="150"
+				drag=".01"
+				acceleration="25"
+				position="0 0 -10"
+				offsetsphere="5 5 10"
+				material="/shared/effects/materials/blood1.material"
+				delay="200"
+				minangle="-30"
+				maxangle="30"
+				direction="-.5 1 0"
+				offsetdirection="0 0 0"
+				offsetradial="0 0 0"
+				particledirectionalspace="local"
+			>
+				<particle
+					minangle="-360"
+					maxangle="360"
+					angle="180"
+					color=".5 0 0"
+					frame=".5"
+					startsize="22"
+					midsize="17"
+					minendsize="30"
+					maxendsize="60"
+					startalpha="1"
+					midalpha=".75"
+					endalpha="0"
+					midalpapos=".15"
+				/>
+			</simpleemitter>
+
+
+
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<!--overlay startalpha="1" endalpha="0" duration="1000" material="/shared/effects/textures/blood1.tga"/-->
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

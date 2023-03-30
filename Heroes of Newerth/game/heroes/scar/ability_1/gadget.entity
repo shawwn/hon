@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Scar_Ability1"
+	
+	
+	
+	icon=""
+	portrait=""
+	model=""
+	
+	preglobalscale="1"
+	modelscale="1"
+	effectscale="1"
+	boundsheight="0"
+	boundsradius="0"
+	isselectable="false"
+	selectionradius="0"
+	targetoffset="0 0 0"
+
+	canrotate="false"
+	ismobile="false"
+
+	attacktype="none"
+	combattype="Ranged"
+
+	sightrangeday="0"
+	sightrangenight="0"
+	unitwalking="true"
+	canattack="false"
+	deathtime="0"
+	corpsetime="0"
+	
+	invulnerable="true"
+	flying="false"
+	drawonmap="false"
+	
+
+
+>
+	<onspawn>
+		<spawnaffector name="Affector_Scar_Ability1" target="this_entity" owner="this_owner_entity" />	
+	</onspawn>
+
+
+</gadget>

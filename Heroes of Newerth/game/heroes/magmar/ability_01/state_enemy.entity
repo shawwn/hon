@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Magmar_Ability1_Enemy"
+	
+	icon="icon.tga"
+	passiveeffect="effects/impact.effect"
+	ishidden="true"
+	
+	stunned="true"
+	impactinterval="450"
+	
+	immunitytype="AttackImmunity"
+>
+	<onimpact>
+		<applystate name="State_Stunned" duration="1650"/>
+		<damage effecttype="Magic" amount="100,160,220,280"/>
+	</onimpact>
+</state>

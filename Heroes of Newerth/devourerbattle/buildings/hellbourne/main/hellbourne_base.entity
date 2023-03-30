@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<building
+	name="Building_HellbourneBase"
+
+	icon="icon.tga"
+	portrait="icon.tga"
+	model="model.mdf"
+	skin=""
+	
+	unittype="MainBaseStructure"
+	
+	passiveeffect=""
+	destroyedsound=""
+	lowhealtheffect=""
+	lowhealthsound=""
+	selectsound=""
+	
+	preglobalscale="0.5"
+	modelscale="1.0"
+	effectscale="2.0"
+	boundsheight="128"
+	boundsradius="0"
+	selectionradius="128"
+	targetoffset="0 0 128"
+
+	maxhealth="10000"
+	healthregen="0"
+
+	armor="15"
+	magicarmor="0"
+
+	attacktype="none"
+	combattype="Structure"
+	immunity="DisableImmunity"
+
+	aggrorange="800"
+	sightrangeday="900"
+	sightrangenight="600"
+	drawonmap="true"
+	isbase="true"
+	
+	sharedinventory0="Ability_Glyph_Hellbourne"
+	sharedremoteshopaccess="Shop_Supplies Shop_Accessories Shop_Weapons Shop_Relics Shop_Recipes1 Shop_Recipes2 Shop_Recipes3 Shop_Recipes4 Shop_Recipes5"
+>
+</building>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Treant_Ability3"
+
+	icon="icon.tga"
+	passiveeffect="effects/armor.effect"
+
+	armor="3,6,9,12"
+	healthregen="1,2,3,4"
+	
+	effecttype="StatusBuff"
+>
+</state>

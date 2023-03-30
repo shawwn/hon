@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_SandWraith_Ability1"
+
+	speed="857.14"
+	gravity="0"
+
+	modelscale="1.5"
+	model="effects/skull.mdf"
+	traileffect="effects/trail.effect"
+	canturn="0"
+	flying="true"
+	flyheight="90"
+	
+	touchradius="120"
+	maxtouchespertarget="1"
+	touchtargetscheme="organic_enemy_units"
+	toucheffecttype="Physical"
+>
+	<onspawn />
+	
+	<onimpact />
+	
+	<ontouch>
+		<playeffect effect="effects/impact.effect" target="target_entity" source="target_entity" />
+		<damage effecttype="Magic" amount="50,100,150,200" />
+	</ontouch>
+</projectile>

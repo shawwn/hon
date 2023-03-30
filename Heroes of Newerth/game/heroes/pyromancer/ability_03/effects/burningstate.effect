@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" useentityeffectscale="true">
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+
+			
+			
+
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				spawnrate="10"
+				particlelife="1000"
+				minspeed="0"
+				maxspeed="100"
+				drag="0.035"
+				offsetsphere="15"
+				material="/shared/effects/materials/refract_outsplash.material"
+			>
+				<particle
+					startalpha=".3"
+					endalpha="0.0"
+					maxangle="360"
+					anglespeed="-90"
+					startsize="20"
+					endsize="70"
+					param=".15"
+					depthbias="-30"
+				/>
+			</simpleemitter>
+			
+		</particlesystem>
+
+
+		<particlesystem name="system1" space="world" scale="1">
+
+			
+		
+
+			<simpleemitter
+				bone="_bone_overhead"
+				spawnrate="40"
+				particlelife="600"
+				gravity="-10"
+				speed="10"
+				drag=".003"
+				acceleration="00"
+				
+				material="/shared/effects/materials/flame.material"
+				offsetsphere="10 10 0"
+				minangle="0"
+				maxangle="0"
+				direction="0 0 0"
+			>
+				<particle 
+					minangle="0"
+					maxangle="180"
+					minanglespeed="50"
+					startcolor=".4 .3 .0"
+					midcolor=".3 .3 .0"
+					endcolor=".4 .2 .0"
+					midcolorpos="1"
+					maxanglespeed="0"
+					startsize="20"
+					midsize="65"
+					endsize="10"
+					startalpha=".1"
+					midalpha=".3"
+					endalpha="0"
+					startanchor="1"
+					endanchor=".5"
+				/>
+			</simpleemitter>
+
+		
+			
+			<billboard
+								bone="_bone_overhead"
+								expirelife="250"
+								color=".8 .8 .8"
+							
+								depthbias="-52"
+								position="0 0 0"
+								size="25"
+								material="/shared/effects/materials/black_spot2.material"
+							/>	
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0"/>
+
+		<spawnparticlesystem instance="instance1" particlesystem="system1"/>
+		<waitfordeath instance="instance0"/>
+		<waitfordeath instance="instance1"/>
+		
+	</thread>
+
+</effect>

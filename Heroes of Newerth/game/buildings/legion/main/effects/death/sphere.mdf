@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="death.max" file="sphere.model" type="K2" >
+	
+	<anim name="idle" clip="clips/sphere.clip" fps="15" loop="true" >
+	</anim>	
+
+	
+</model>
+

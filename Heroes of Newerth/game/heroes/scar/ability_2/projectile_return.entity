@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Scar_Ability2_Return"
+
+	speed="3200"
+	gravity="0"
+
+	modelscale="1.0"
+	model=""
+	
+	canturn="false"
+	flying="true"
+	flyheight="0"
+
+>
+	
+	<onimpact>
+		<delete target="proxy_entity" />
+	</onimpact>
+</projectile>

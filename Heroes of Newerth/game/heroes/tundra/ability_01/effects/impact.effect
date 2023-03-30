@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="" deferred="true" persistent="1" useentityeffectscale="1">
+	<definitions>
+	
+		<modifier
+			name="modifier0"
+			life="250"
+			startcolor="2 .5 .5"
+			endcolor="1"
+		/>
+	
+		<particlesystem name="system0" space="world" scale="1.25">
+		
+			<model
+				life="350"
+				anim="idle"
+				model="model.mdf"
+				color="1 1 1"
+				startalpha="1"
+				midalpha="1"
+				endalpha="1"
+				midalphapos=".75"
+				startscale="0"
+				midscale=".75"
+				endscale=".75"
+				midscalepos=".75"
+				position="0 0 0"
+			>
+			</model>
+
+			<simpleemitter
+				count="15"
+				bone="_bone_overhead"
+				life="500"
+				minparticlelife="500"
+				maxparticlelife="750"
+				spawnrate="1000"
+				speed="75"
+				gravity="-1"
+				minangle="0"
+				maxangle="30"
+				material="/shared/effects/materials/blood1.material"
+				offsetsphere="10 10 0"
+				position="0 0 0"
+			>
+				<particle 
+					minanglespeed="-100"
+					maxanglespeed="100"
+					minangle="-60"
+					maxangle="60"
+					color=".5 0 0"
+					startsize="25"
+					endsize="75"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				count="25"
+				bone="_bone_head"
+				minparticlelife="200"
+				maxparticlelife="350"
+				spawnrate="75"
+				speed="75"
+				gravity="-50"
+				minangle="0"
+				maxangle="5"
+				material="/shared/effects/materials/white_splash.material"
+				offsetsphere="0 0 0"
+				position="0 0 -25"
+			>
+				<particle 
+					lockup="true"
+					lockright="true"
+					color="1 0 0"
+					startsize="0"
+					endsize="50"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				count="25"
+				bone="_bone_overhead"
+				life="500"
+				particlelife="800"
+				spawnrate="100"
+				speed="350"
+				gravity="0"
+				minangle="0"
+				maxangle="30"
+				direction="0 0 0"
+				material="/shared/effects/materials/blood1.material"
+				offsetsphere="25 25 0"
+				position="0 0 0"
+			>
+				<particle 
+					minanglespeed="-100"
+					maxanglespeed="100"
+					minangle="-60"
+					maxangle="60"
+					color=".3 0 0"
+					startsize="25"
+					endsize="75"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+				/>
+				<particle 
+					minanglespeed="-100"
+					maxanglespeed="100"
+					minangle="-60"
+					maxangle="60"
+					color=".5 0 0"
+					startsize="25"
+					endsize="75"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+				/>
+			</simpleemitter>
+			
+			<billboard
+				bone="_bone_overhead"
+				position="0 0 0"
+				delay="0"
+				life="350"
+				param="0.1"	
+				startsize="25"
+				endsize="75"
+				startalpha="0"
+				midalpha=".4"
+				endalpha="0"				
+				depthbias="-50"
+				material="/shared/effects/materials/refract_swell.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+			/>
+			
+			<billboard
+				bone="_bone_overhead"
+				position="0 0 0"
+				delay="175"
+				life="350"
+				param="0.1"	
+				startsize="25"
+				endsize="75"
+				startalpha="0"
+				midalpha=".4"
+				endalpha="0"				
+				depthbias="-50"
+				material="/shared/effects/materials/refract_swell.material"
+				lockup="1"
+				lockright="1"
+				pitch="90"
+			/>
+
+		</particlesystem>
+	</definitions>
+
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+	<spawnmodifier instance="instance1" modifier="modifier0"/>  
+	<waitfordeath instance="instance0" />
+</thread>
+
+</effect>
+
+
+
+
+
+
+

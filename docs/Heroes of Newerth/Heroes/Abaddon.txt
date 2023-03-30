@@ -1,0 +1,11 @@
+Ability 1: Aphotic Shield
+Description: Creates a shield on target allied unit. It will absorb a certain amount of damage before exploding and releasing that damage to enemy units.
+
+Ability 2: Frostmourne
+Description: When he attacks an enemy unit with his sword,  he inflicts it with a magical debuff. The target will be slowed briefly and any unit that attacks it will move and attack faster.
+
+Ability 3: Death Coil
+Description: At the cost of some of his life force, he releases a dark energy on target enemy unit, damaging it.
+
+Ultimate: Borrowed Time
+Description: When abaddon drops below a certain hitpoint level, he will remove all negative buffs on him and will heal instead of taking damage for the duration of this buff.

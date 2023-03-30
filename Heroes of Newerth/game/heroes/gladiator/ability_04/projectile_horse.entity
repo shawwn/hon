@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Gladiator_Ability4_Horse"
+
+	speed="750"
+	gravity="0"
+
+	modelscale="1.4"
+	model="chariot/horse/horse.mdf"
+	traileffect="effects/horse_trail.effect"
+	canturn="false"
+	flying="true"
+	flyheight="0"
+	deatheffect=""
+>
+	<onimpact>
+		<kill target="proxy_entity" source="" />
+	</onimpact>
+</projectile>

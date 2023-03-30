@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="attack_projectile" deferred="true">
+	<definitions>
+		<particlesystem name="system0" space="world" scale="1">
+	
+
+	
+			<groundsprite
+					delay="500"
+					life="4600"
+					
+					material="/shared/effects/materials/blood_pool_white.material"
+					color=".3 .3 0"							
+					startscale="0"
+					endscale="1.5"
+					position="20 90 0"
+					
+					
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+			/>
+			
+			<simpleemitter
+				life="4000"
+				spawnrate="20"
+				particlelife="2000"
+				gravity="-.2"
+				speed="10"
+				drag="0.07"
+				acceleration="0.0"		
+				mintimenudge="0"
+				maxtimenudge="1000"
+				position="0 80 30"
+				material="/shared/effects/materials/smoke_particle.material"
+				offsetsphere="20 50 15"
+				inheritvelocity=".5"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-30"
+					color=".3 .3 .1"
+					maxanglespeed="30"
+					startsize="50"
+					endsize="80"
+					startalpha="0"
+					midalpha=".4"
+					endalpha="0"
+					midalphapos=".2"
+					startanchor="0"
+					endanchor="0"					
+				 />			
+
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-50"
+					color=".8 .8 .2"
+					maxanglespeed="50"
+					startsize="50"
+					endsize="80"
+					startalpha="0"
+					midalpha=".4"
+					endalpha="0"
+					midalphapos=".2"
+					startanchor="0"
+					endanchor="0"
+					
+				 />					 
+			</simpleemitter>	
+			
+			
+		
+			
+			<orbiteremitter
+				life="1000"
+				timenudge="2000"
+				spawnrate="10"
+				particlelife="4000"
+				gravity="0.0"
+				minspeed=".8"
+				maxspeed="1.5"
+				acceleration="0" 
+				drag="0.0"
+				minangle="-90" 
+				maxangle="90" 
+				position="0.0 80.0 20" 
+				origin="1.0 1 30" 
+				orbit="1.0 0.0 1.0" 
+				direction="0.0 0.0 1.0" 
+				offset="3.14 0 20"
+				cylindrical="false" 
+				material="/shared/effects/materials/fly.material"
+				
+			>
+				<particle
+					color=".7 .7 .7"
+					midcolorpos="0.5"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"
+					frame="0"
+					framespeed="8"		
+					minscale="1"
+					maxscale="2.5"								
+					turn="true"
+				/>
+			</orbiteremitter>
+			<orbiteremitter
+				life="1000"
+				timenudge="2000"
+				spawnrate="10"
+				particlelife="4000"
+				gravity="0.0"
+				minspeed=".8"
+				maxspeed="1.5"
+				acceleration="0" 
+				drag="0.0"
+				minangle="-90" 
+				maxangle="90" 
+				position="0.0 80.0 70" 
+				origin="1.0 1 20" 
+				orbit="1.0 0.0 1.0" 
+				direction="0.0 0.0 -1.0" 
+				offset="3.14 0 20"
+				cylindrical="false" 
+				material="/shared/effects/materials/fly.material"
+			>
+				<particle
+					color=".7 .7 .7"
+					midcolorpos="0.5"
+					startalpha="0"
+					midalpha="1"
+					endalpha="0"					
+					frame="0"
+					framespeed="8"					
+					minscale="1"
+					maxscale="3"
+					turn="1"
+				/>
+			</orbiteremitter>				
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="glaive.max" file="model.model" type="K2" high="model.model" med="model.model" low="model.model">
+	<anim name="idle" clip="clips/default_1.clip" loop="true">
+	</anim>
+	
+</model>

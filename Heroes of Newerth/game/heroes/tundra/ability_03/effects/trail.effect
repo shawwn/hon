@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="1">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale="1">
+
+			<sound
+				linearfalloff="true" 
+				falloffstart="0"
+				falloffend="2500"
+				volume="1"
+				sample="../sounds/cast.wav"
+				life="4000"
+			/>
+
+		
+			<terrainemitter					
+				spawnrate="23"					
+				startrange="24"
+				endrange="24"
+				particlelife="2000"				
+			>
+				<particle>
+
+					
+					<model						
+						minyaw="-16"
+						maxyaw="16"
+						
+						minpitch="-15"
+						maxpitch="-15"
+						
+						minroll="-15"
+						maxroll="15"
+						
+						life="1000"
+						model="/heroes/tundra/ability_01/effects/model.mdf"
+						anim="idle"
+						
+						minscale="0.2"
+						maxscale="0.3"
+						
+					/>
+					<groundsprite	
+						
+						life="700"
+						material="/shared/effects/materials/ground_ice.material"
+						minsize="80"
+						maxsize="152"			
+						
+						minyaw="-360"
+						maxyaw="360"
+					
+						color="1.0 1.0 1.0"
+						startalpha="0"
+						midalpha="0.6"
+						endalpha="0"
+						midalphapos=".1"
+						position="0 0 0"
+					/>				
+				</particle>
+			</terrainemitter>
+
+
+			
+			<simpleemitter
+				spawnrate="15"
+				particlelife="3850"
+
+				
+			>
+				<particle>
+
+									
+					<simpleemitter					
+						count="3"										
+						particlelife="2600"	
+						material="/shared/effects/materials/smoke_01.material"
+						offsetsphere="50 50 0"
+						minangle="0"
+						maxangle="360"
+						gravity="-2"
+						speed="10"
+						depthbias="-60"	
+						collide="1"				
+					>
+
+						<particle 
+							minangle="0"
+							maxangle="0"
+							minanglespeed="-30"	
+							maxanglespeed="40"
+							color=".4 .6 .7"							
+							startsize="150"						
+							endsize="180"								
+							startalpha=".2"
+							midalpha=".14"
+							endalpha="0"
+							midalphpos=".01"							
+
+							
+						/>
+					</simpleemitter>				
+					
+				</particle>
+			</simpleemitter>
+
+
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

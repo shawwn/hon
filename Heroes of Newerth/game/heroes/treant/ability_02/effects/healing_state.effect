@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true" useentityeffectscale="true">
+	<definitions>
+		<particlesystem name="system0" space="world" scale=".5">
+
+
+			<template name="glowboards">
+				
+			
+				
+
+				<billboard	
+					
+					material="/shared/effects/materials/whitedot.material"
+					position="0 0 {pos1}"
+					startsize="{startsize}"
+					midsize="{midsize}"
+					endsize="{startsize}"
+					
+					color=".15 .075 .0"
+					lockup="true"
+					lockright="true"
+					pitch="90"
+					life="2000"
+					loop="true"
+					depthbias="-280"
+				/>	
+				</template>
+				
+				<instance name="glowboards" midsize="200" startsize="150" pos1="0"/>
+				<instance name="glowboards" midsize="200" startsize="150" pos1="-100"/>
+			
+				
+				<simpleemitter	
+					
+					spawnrate="2"
+					particlelife="1400"
+							
+					acceleration="50"
+					position="0 0 -50"
+
+					depthbias="-230"
+					material="/shared/effects/materials/rad_add.material"
+					offsetsphere="0 0 0"
+					minangle="0"
+					maxangle="360"
+					direction="0 0 0"
+					particledirectionalspace="local"
+					
+				>
+
+					<particle 
+						minangle="-120"
+						maxangle="120"
+						minanglespeed="100"
+
+						startcolor="0 0 0"
+						midcolor=".1 .055 0"
+						endcolor="0 0 0"
+						midcolorpos=".7"
+
+						maxanglespeed="0"
+						startframe="0"
+						endframe="1"				
+						
+						
+							
+						size="250"
+						midsizepos=".7"		
+
+						startalpha="0"
+						midalpha="1"
+						endalpha="0"
+						midalphapos=".7"
+						anchor="1"
+					/>
+				</simpleemitter>
+
+
+			
+		</particlesystem>
+	</definitions>
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+		<!-- <die /> -->
+	</thread>
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][position] -->
+

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="ability_02">
+
+	<definitions>
+	
+
+	
+			<trailemitter
+				name="trail_01"
+				life="1000"
+				
+				spawnrate="30"
+				startminparticlelife="1000"
+				startmaxparticlelife="1000"		
+				
+				endminparticlelife="1"
+				endmaxparticlelife="1" 
+				texpostime="2000"
+			 	texposscale="1.8"
+			 	texstretchscale="0"
+				position="0 0 0"
+				material="/shared/effects/materials/arrow_trail.material"
+			>
+				<particle
+					startcolor="0 1 1"
+					midcolor=".1 .5 1"
+					endcolor=".4 0 .4"
+					startsize="0"
+									
+					midsize="7"
+					endsize="0"
+					
+					midcolorpos=".1"
+					midsizepos=".1"
+					
+				/>
+			</trailemitter>	
+
+			
+	
+		<particlesystem name="system0" space="world" scale="1.5">
+
+			
+			<trackeremitter
+				
+				count="12"			
+	
+				targetbone="_bone_righthand"
+				
+				
+				tracktype="angular"
+				trackspeed="11.0" 				
+				drag="0"
+				spawnrate="250"
+				particlelife="1000"
+				gravity="-50"
+				offsetsphere="115 115 40"
+				minspeed="110.0"
+				maxspeed="520.0"
+				
+				targetposition="0 0 0"
+				
+				acceleration="30.0"
+				direction="0.0 0.0 1.0"
+				material="/shared/effects/materials/arrow_trail.material"
+				inheritvelocity="0.0"
+				distancelife="true"
+			>
+				<particle		
+						
+						emitter0="trail_01"
+				/>
+				
+				
+			</trackeremitter>			
+		
+		
+
+	
+			<simpleemitter 
+				count="20"
+         		spawnrate="22"				
+				minparticlelife="800"
+          		maxparticlelife="1500"
+          		gravity="0"
+          		drag="0"
+				speed="20220"
+				position="0 0 0"
+				offsetsphere="0 0 0"
+          			material="/shared/effects/materials/neb_add.material"
+      			  >
+  				<particle 
+					maxangle="360"			
+					minanglespeed="-6"
+					maxanglespeed="6"
+					scale="5"					
+					startcolor="0 0 0"
+					midcolor=".2 .2  .2"
+					endcolor="0 0 0"
+					midcolorpos=".2"
+					
+					startsize="15"
+					
+					endsize="45"
+					
+				/>
+        	</simpleemitter>	
+	
+			
+			
+			<billboard
+				bone="_bone_righthand"
+				life="500"
+				color="1.0 1.0 1.0"
+
+				midalphapos="0.25"
+				
+				param="0.1555"	
+				
+				startsize="2"
+				endsize="164"
+				startalpha="0"
+				midalpha=".9"
+				endalpha="0"				
+				
+				depthbias="-49"
+				position="0 0 20"
+				material="/shared/effects/materials/refract_ring.material"
+				lockup="0"
+				pitch="0"
+			/>	
+			
+			
+		
+			
+		
+			
+			
+	</particlesystem>
+</definitions>
+
+<thread>
+	<spawnparticlesystem instance="instance0" particlesystem="system0" />
+
+	<waitfordeath instance="instance0" />
+	<!-- <die /> -->
+</thread>
+
+</effect>
+
+<!-- [min|max][start|mid|end]property[speed][pos] -->
+
+
+
+
+
+
+

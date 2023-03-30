@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Legionnaire4"
+
+	
+	
+	icon="icon.tga"
+	
+	anim="ability_4"
+	casttime="800"
+	castactiontime="300"
+	casteffect="effects/cast.effect"
+	
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_entity"
+	targetscheme="organic_enemy_units"
+	casteffecttype="Physical"
+	
+	manacost="120,160,200"
+	cooldowntime="75000,65000,55000"
+	novoiceresponse="true"
+	
+	range="175"
+>
+	<onimpact >
+		<pushstack a="300,450,625" />
+		<condition test="target_health lt result">
+			<kill target="target_entity" />
+			<playeffect effect="effects/impact.effect" source="target_entity"/>
+		</condition>
+		<damage effecttype="Magic" amount="150,250,350" />
+	</onimpact>
+
+</ability>

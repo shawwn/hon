@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect deferred="true">
+
+	<definitions>
+
+		<particlesystem name="system0" space="world" scale=".5" entityeffectscale="true">
+
+			<simpleemitter
+				bone="_bone_centerofchest"
+				particlelife="1300"				
+				spawnrate="15"
+				minspeed="0"
+				maxspeed="20"
+				gravity="10"
+				direction="0 0 1"
+
+				drag="0.01"
+				material="/shared/effects/materials/whitewater_02.material"
+				offsetsphere="25 25 50"
+				position="0 0 00"
+				inheritvelocity=".25"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-60"
+					maxanglespeed="60"
+					startsize="40"
+					endsize="150"
+					startcolor=".3 .5 .6"	
+					endcolor="0"				
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+
+				/>
+			</simpleemitter>
+
+			<simpleemitter
+				bone="Bip01 R Hand"
+				particlelife="1300"				
+				spawnrate="10"
+				minspeed="0"
+				maxspeed="20"
+				gravity="10"
+				direction="0 0 1"
+
+				drag="0.01"
+				material="/shared/effects/materials/whitewater_02.material"
+				offsetsphere="25 25 30"
+				position="0 0 0"
+				inheritvelocity=".25"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-60"
+					maxanglespeed="60"
+					startsize="40"
+					endsize="20"
+					startcolor=".3 .5 .6"	
+					endcolor="0"				
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+
+				/>
+			</simpleemitter>
+			
+			<simpleemitter
+				bone="Bip01 L Hand"
+				particlelife="1300"				
+				spawnrate="10"
+				minspeed="0"
+				maxspeed="20"
+				gravity="10"
+				direction="0 0 1"
+
+				drag="0.01"
+				material="/shared/effects/materials/whitewater_02.material"
+				offsetsphere="25 25 30"
+				position="0 0 0"
+				inheritvelocity=".25"
+			>
+				<particle 
+					minangle="0"
+					maxangle="360"
+					minanglespeed="-60"
+					maxanglespeed="60"
+					startsize="40"
+					endsize="20"
+					startcolor=".3 .5 .6"	
+					endcolor="0"				
+					startalpha="1"
+					midalpha="1"
+					endalpha="0"
+
+				/>
+			</simpleemitter>			
+
+			<billboard
+				bone="_bone_centerofchest"
+				material="/shared/effects/materials/whitedot_blend.material"
+				color=".1 .3 .5"				
+				size="80"
+				
+				depthbias="-50"
+			/>	
+
+			<billboard
+				bone="_bone_head"
+				material="/shared/effects/materials/whitedot_blend.material"
+				color=".2 .5 .7"				
+				size="50"
+				
+				depthbias="-50"
+			/>	
+			<billboard
+				bone="Bip01 R Hand"
+				material="/shared/effects/materials/whitedot_blend.material"
+				color=".2 .5 .7"				
+				size="50"
+				
+				depthbias="-50"
+			/>		
+			<billboard
+				bone="Bip01 L Hand"
+				material="/shared/effects/materials/whitedot_blend.material"
+				color=".2 .5 .7"				
+				size="50"
+				
+				depthbias="-50"
+			/>	
+		</particlesystem>
+
+	</definitions>
+
+	<thread>
+		<spawnparticlesystem instance="instance0" particlesystem="system0" />
+		<waitfordeath instance="instance0" />
+	</thread>
+
+</effect>

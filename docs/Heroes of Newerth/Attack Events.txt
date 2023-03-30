@@ -1,0 +1,1 @@
+For now we will start with two phases of triggered attack events. Pre-damage and post-damage

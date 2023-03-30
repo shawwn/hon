@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Treant_Ability2_Enemy_Reflect"
+
+	icon="icon.tga"
+	ishidden="true"
+>
+	<oninflict>
+		<applystate name="State_Treant_Ability2_Sight_Self" continuous="true" target="source_entity" source="target_entity" owner="target_entity" inflictor="target_entity" />
+	</oninflict>
+	<onexpired>
+		<expirestate name="State_Treant_Ability2_Sight_Self" target="source_entity"/>
+	</onexpired>
+</state>
