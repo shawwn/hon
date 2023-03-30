@@ -1,0 +1,3 @@
+# This folder contains a couple .tif files that are >100MB, which
+# github blocks. I've converted them to .png using `convert`.
+/art/Concept Art/FINISHED CONCEPT PAINTINGS1/split_reason_high_res/*.tif
